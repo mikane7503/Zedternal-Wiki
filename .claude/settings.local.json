@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python build.py)",
+      "Bash(python -c ' *)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\yss19\\\\Claude\\\\Projects\\\\Zedternal Unlimited Website\\\\.claude\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 -c ' *)",
+      "Bash(pip install *)",
+      "Bash(python -c \"from PIL import Image; im = Image.open\\('ZedternalRBPerkpackage_Resources/Texture2D/PERK_X_AGONY.tga'\\); print\\(im.size, im.mode\\)\")",
+      "Bash(mkdir -p site/icons)"
+    ]
+  }
+}

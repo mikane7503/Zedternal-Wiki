@@ -1,0 +1,238 @@
+{
+  "advancedPerks": {
+    "Agony": {
+      "tag": "적절",
+      "note": "특이 OP/Trash 없음. TemporalRupture는 헤드샷 처치 시 확률적으로 ZED타임 관련 부가 효과가 발동하는 것으로 추정되며(퍽 자체가 ZED타임 특화), 수치가 낮아 위험도는 낮음.",
+      "grade": "S"
+    },
+    "Archangel": {
+      "tag": "적절",
+      "note": "치유 특화, 이번 재조사에서 특이사항 없음.",
+      "grade": "A"
+    },
+    "Artificer": {
+      "tag": "적절",
+      "note": "유지 판정. MasterworkTechnique/Soulbound의 '마일스톤'은 퍽 설명(무기로 100킬 달성마다 보너스)에 근거해 '무기별 100킬 단위'로 해석 — 점진적 성장형이라 극단적이지 않음.",
+      "grade": "B"
+    },
+    "Bulwark": {
+      "tag": "적절",
+      "note": "유지 판정. 피해/체력/아머 전부 +30% 클램프로 안정적.",
+      "grade": "B"
+    },
+    "Cinder": {
+      "tag": "적절 (너프 완료)",
+      "note": "ScorchedEarth 스킬이 전체 300개 스킬 중 최고 이상값(+250%)이었으나 +100%로 너프 완료.",
+      "grade": "A"
+    },
+    "Cryophilite": {
+      "tag": "OP 소지",
+      "note": "FrostbiteArrows의 최대 스택 수가 INI에 명시되어 있지 않음 — 상한 없는 스택형 DoT는 장기전에서 스노우볼될 가능성이 높아 'OP 소지'로 판단. 단일 스킬 이슈로 퍽 전체가 무너질 정도는 아님.",
+      "grade": "S"
+    },
+    "Daredevil": {
+      "tag": "적절 (너프 완료)",
+      "note": "FullMetalJacket 관통 +300%가 Support 관통 패시브·스킬과 교차 스택 시 사실상 무제한이라 +150%로 너프 완료.",
+      "grade": "A"
+    },
+    "Detonator": {
+      "tag": "적절 (설계상)",
+      "note": "핵심 로직은 확인 완료. 패시브 2종(DamagePerLevel/SpareAmmoPerLevel)만 'ZedternalUnlimited_Balance' ini 파일 부재로 조정 불가 — 설계 자체는 문제 없음.",
+      "grade": "A"
+    },
+    "ForgeWarden": {
+      "tag": "적절",
+      "note": "유지 판정.",
+      "grade": "B"
+    },
+    "Frost": {
+      "tag": "적절 (너프 완료)",
+      "note": "레벨당 해석 확정 후 방치값(0.10 → +200%)이 발견되어 +50%로 너프 완료했고, 이후 전체 밸런스 재조정으로 현재는 Lv20 기준 +25%까지 추가 조정됨.",
+      "grade": "A"
+    },
+    "Gambit": {
+      "tag": "OP 소지",
+      "note": "웨이브마다 챌린지 성공 시 영구 스탯이 무한 누적되고 승수 스킬(×2~×3)까지 중첩 가능. 보상값이 순수 하드코딩이라 조정 불가 — 장기전(엔들리스)에서 위험.",
+      "grade": "S"
+    },
+    "Gambler": {
+      "tag": "적절",
+      "note": "유지 판정. 경제 퍼크로서 기존 도쉬 밸런스 기준과 부합.",
+      "grade": "B"
+    },
+    "Haunted": {
+      "tag": "미확인",
+      "note": "이 퍽의 진짜 힘은 누구도 정확히 알지 못합니다. 확인된 자료가 없어 등급을 매길 수조차 없습니다.",
+      "grade": "?"
+    },
+    "Headhunter": {
+      "tag": "적절",
+      "note": "유지 판정. 경제 퍼크.",
+      "grade": "B"
+    },
+    "Hivemind": {
+      "tag": "적절",
+      "note": "특이사항 없음.",
+      "grade": "A"
+    },
+    "Hollow": {
+      "tag": "적절",
+      "note": "즉사 계열 효과가 내장되어 있으나 특이 OP 판정은 없음.",
+      "grade": "B"
+    },
+    "Hydra": {
+      "tag": "적절 (너프 완료)",
+      "note": "CascadingMassacre+HuntDown 스택 합산이 +125%까지 나와 패시브 너프 취지를 훼손해 +65%로 조정 완료.",
+      "grade": "A"
+    },
+    "Maniac": {
+      "tag": "적절 (너프 완료)",
+      "note": "수류탄 스킬 4종(Elmo/MadBomber/SlowCooker/ArmedAndDangerous) 동시 장착 시 +260%였으나 +145%로 너프 완료. 오퍼 Demolitionist 수류탄 스택 문제의 재발 위험이 있던 항목.",
+      "grade": "A"
+    },
+    "Medusa": {
+      "tag": "적절",
+      "note": "특이사항 없음.",
+      "grade": "B"
+    },
+    "Metronome": {
+      "tag": "적절",
+      "note": "위상 순환 시스템. 특이 OP/Trash 없음.",
+      "grade": "C"
+    },
+    "Omen": {
+      "tag": "적절",
+      "note": "유지 판정.",
+      "grade": "A"
+    },
+    "Parasite": {
+      "tag": "적절",
+      "note": "유지 판정.",
+      "grade": "A"
+    },
+    "Predator": {
+      "tag": "확정 OP (전체 최고 위험)",
+      "note": "좀비별 '트로피' 드랍 → 3세트 완성 시 5개 슬롯에 영구 보너스가 무한 중첩되는 시스템. 완전 하드코딩이라 소스 패치 없이는 근본 수정 불가. 보조 스킬 TrophyHoarder/WildHunt만 INI로 완화 완료. 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있음 — 반드시 인지 필요.",
+      "grade": "SS"
+    },
+    "Pyrokinetic": {
+      "tag": "적절 (너프 완료)",
+      "note": "레벨당 해석 확정 후 방치값(0.10 → +200%)이 발견되어 +50%로 너프 완료했고, 이후 전체 밸런스 재조정으로 현재는 Lv20 기준 +25%까지 추가 조정됨. ConsumingFlame 스킬은 T1/T2 값이 모두 0인 버그로 추정 — 개발 확인 필요하나 밸런스에 영향 없음(효과 자체가 발동 안 함).",
+      "grade": "A"
+    },
+    "Reaper": {
+      "tag": "적절",
+      "note": "즉사 확률 5%는 하드코딩(대형 ZED 포함, 진짜 보스만 제외). Level10DamageBonus는 기존에 이미 너프 반영되었고, 최근 전체 조정으로 현재 Lv20 기준 +12.5%.",
+      "grade": "A"
+    },
+    "Riot": {
+      "tag": "적절",
+      "note": "특이사항 없음.",
+      "grade": "B"
+    },
+    "Scavenger": {
+      "tag": "적절",
+      "note": "특이사항 없음.",
+      "grade": "B"
+    },
+    "Shapeshifter": {
+      "tag": "OP 소지",
+      "note": "Rank20+ Mimicry가 웨이브마다 영구 버프를 1개씩 추가(최대 15개, 전 스탯 동시 강화). 'ZedternalUnlimited_Balance' ini 파일 부재로 조정 불가. 보조 스킬 PrimordialVigor의 DR 누적(-37.5%)은 -22.5%로 너프 완료.",
+      "grade": "S"
+    },
+    "SpecialAgent": {
+      "tag": "적절",
+      "note": "유지 판정. 스킬 10개가 전부 동일 패턴(좀비 타입별 데미지로 추정).",
+      "grade": "B"
+    },
+    "Symbiote": {
+      "tag": "적절",
+      "note": "특이사항 없음.",
+      "grade": "A"
+    },
+    "Taskmaster": {
+      "tag": "적절",
+      "note": "특이사항 없음.",
+      "grade": "B"
+    },
+    "TimeTraveler": {
+      "tag": "적절 (상향 완료)",
+      "note": "유지 판정이자 최종 커퍼(Lv20) 상향 대상 중 하나 — 전 속성 상향 조정되었으나, 이후 전체 밸런스 재조정으로 현재 Lv20 기준 +15%.",
+      "grade": "A"
+    },
+    "Tycoon": {
+      "tag": "적절",
+      "note": "HODLing의 InterestRate(0.25)는 패시브 CompoundInterestRate(10%)와 중첩되더라도 도쉬(재화)에만 영향을 주는 경제 효과라 전투 밸런스 리스크는 낮음 — 적절로 판단.",
+      "grade": "C"
+    },
+    "Venomancer": {
+      "tag": "적절 (너프 완료)",
+      "note": "유지 판정. 레벨당 해석 확정 후 방치값(0.10 → +200%)이 발견되어 +50%로 너프 완료했고, 이후 전체 밸런스 재조정으로 현재는 Lv20 기준 +25%까지 추가 조정됨.",
+      "grade": "A"
+    },
+    "Voodoo": {
+      "tag": "적절 (고위험 설계)",
+      "note": "스킬 6개가 전부 '체력 -X% 소모형'. 엔진 레벨 클램프(Cap_MinHealth=1, KFZedternalUnlimited.ini DKConfig_PlayerCaps에 명시)가 최소 체력 1을 보장하므로 자멸은 불가능 — 여러 개 동시 장착 시 극단적으로 낮은 체력의 하이리스크-하이리턴 빌드가 되도록 의도된 설계로 판단.",
+      "grade": "A"
+    },
+    "Warlord": {
+      "tag": "적절",
+      "note": "유지 판정. 단, 소속 무기 스킬 LuckySalvage는 transient 킬카운트(웨이브 종료 시 자동 리셋)로 인해 Trash 확정 — 구제 불가.",
+      "grade": "A"
+    },
+    "Wendigo": {
+      "tag": "적절",
+      "note": "특이사항 없음.",
+      "grade": "B"
+    }
+  },
+  "skillNotes": {
+    "Agony": {
+      "TemporalRupture": "헤드샷 처치 확률(25%/50%)만 명시되어 있고 대상 효과 필드명은 없으나, 퍽 컨셉(ZED타임 특화) 및 캡스톤 설명(헤드샷 시 ZED타임 연장)과 연계된 효과로 추정."
+    },
+    "Artificer": {
+      "MasterworkTechnique": "'PerMilestone' 성장식은 퍽 설명 기준 '무기별 100킬 단위'로 해석 — 점진적 성장형이라 위험도 낮음.",
+      "Soulbound": "MasterworkTechnique와 동일한 마일스톤(무기별 100킬 단위) 기준으로 해석."
+    },
+    "Cinder": {
+      "ScorchedEarth": "✅ 너프 완료: Damage T2가 +250%(전체 300개 스킬 중 최고 이상값)였다가 +100%로 정상화됨."
+    },
+    "Cryophilite": {
+      "FrostbiteArrows": "⚠️ OP 소지: DamagePerStack의 최대 스택 수(MaxStacks)가 INI에 없어 무한 누적 가능성 — 장기전에서 모니터링 권장.",
+      "WintersSwiftness": "🐛 경미한 버그 추정: T2의 WeaponSwitchSpeed(0.4)가 T1(0.5)보다 낮음 — 정상적인 업그레이드라면 T2가 더 높아야 함. 단, 전투 영향이 작은 유틸리티 수치라 우선순위는 낮음."
+    },
+    "Daredevil": {
+      "FullMetalJacket": "✅ 너프 완료: 관통 +300% → +150% (Support 관통 패시브·스킬과의 교차 스택 억제)."
+    },
+    "Hydra": {
+      "CascadingMassacre": "✅ 너프 완료: HuntDown과 합산 +125% → 각각 하향되어 총합 +65%.",
+      "HuntDown": "✅ 너프 완료: CascadingMassacre와 합산 +125% → 총합 +65%."
+    },
+    "Maniac": {
+      "ArmedAndDangerous": "✅ 너프 완료: 4개 수류탄 스킬 동시 장착 시 합산 +260% → +145%로 조정.",
+      "Elmo": "✅ 너프 완료: 위와 동일한 조정의 일부.",
+      "MadBomber": "✅ 너프 완료: 위와 동일한 조정의 일부.",
+      "SlowCooker": "✅ 너프 완료: 위와 동일한 조정의 일부."
+    },
+    "Predator": {
+      "TrophyHoarder": "✅ 완화 완료: T2도 슬롯 추가 없이 1개로 고정 (트로피 무한 중첩 억제 목적).",
+      "WildHunt": "✅ 완화 완료: T2도 드랍 간격 5초로 고정 (스택 가속 억제 목적)."
+    },
+    "Pyrokinetic": {
+      "ConsumingFlame": "🐛 버그 추정: Vampire 값이 T1/T2 모두 0 — 효과 자체가 발동하지 않아 밸런스 영향은 없음(사실상 Trash에 가까운 미완성 스킬)."
+    },
+    "Shapeshifter": {
+      "PrimordialVigor": "✅ 너프 완료: 15버프 전부 활성 시 DR -37.5% → -22.5%로 조정 (Mimicry 탱크성 심화 억제)."
+    },
+    "Tycoon": {
+      "HODLing": "InterestRate=0.25가 기존 패시브 CompoundInterestRate(10%)와 중첩되나, 도쉬(재화) 효과라 전투 밸런스에는 영향 없음 — 적절."
+    },
+    "Voodoo": {
+      "SoulStealer": "체력 30%/60% 차감이 있으나 엔진 클램프(Cap_MinHealth=1)가 하한을 보장해 자멸 불가 — 적절.",
+      "DealWithTheDevil": "T2가 두 지표 모두 개선됨(치유 페널티 -85%→-70%로 완화, 헤드샷 피해 +40%→+60%로 증가) — 정상적인 디럭스 업그레이드이며 이상값이 아님. 단, 게임 내 표준/디럭스 설명 문구는 치유 -80%/-60%, 헤드샷 +80%/+120%로 적혀 있어 현재 ini 수치와 맞지 않음 — 문구가 예전 값으로 남아있는 것으로 추정."
+    },
+    "Warlord": {
+      "LuckySalvage": "🗑️ Trash 확정: transient KillCount가 웨이브 종료 시 자동 리셋되어 사실상 발동하지 않음 — 구제 불가."
+    }
+  }
+}
