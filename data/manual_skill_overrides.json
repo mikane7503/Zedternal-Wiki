@@ -1,0 +1,15 @@
+{
+  "BloodRush": {
+    "name": "피의 질주",
+    "_note": "KOR ini의 UpgradeName이 SoulStealer(\"영혼 도둑\")와 동일하게 잘못 복사되어 있어 고유한 이름으로 대체함."
+  },
+  "NoStringsOnMe": {
+    "name": "자유로운 영혼",
+    "_note": "KOR ini에 UpgradeName이 번역되지 않고 영문 원문(\"No Strings On Me\")으로 남아있어 한국어 이름을 추가함."
+  },
+  "DeepReserves": {
+    "standardDesc": "<font color=\"#15d7fa\">탄창 용량</font>이 <font color=\"#77d914\">+25%</font>, <font color=\"#15d7fa\">예비 탄약</font>이 <font color=\"#77d914\">+20%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#15d7fa\">탄창 용량</font>이 <font color=\"#77d914\">+40%</font>, <font color=\"#15d7fa\">예비 탄약</font>이 <font color=\"#77d914\">+35%</font> 증가합니다.",
+    "_note": "KOR ini에 UpgradeName만 있고 설명 문구가 비어있어, ini 수치(MagCapacity 0.25/0.4, SpareAmmo 0.2/0.35)를 근거로 직접 작성함."
+  }
+}

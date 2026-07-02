@@ -60,7 +60,9 @@ function iconImg(perk, size) {
 }
 
 async function init() {
-  const res = await fetch("data/perks.json");
+  // no-cache: revalidate with the server every load so a freshly rebuilt
+  // perks.json is never masked by a stale browser-cached copy
+  const res = await fetch("data/perks.json", { cache: "no-cache" });
   DATA = await res.json();
   ADV_BY_KEY = Object.fromEntries(DATA.advancedPerks.map(p => [p.key, p]));
   BASE_BY_KEY = Object.fromEntries(DATA.basePerks.map(p => [p.key, p]));
@@ -333,6 +335,7 @@ function renderAdvDetail(key) {
     <div class="skill-item ${s.disabled ? "skill-disabled" : ""}">
       <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}${s.textFixed ? '<span class="patch-badge">값 보정됨</span>' : ""}</h4>
       ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
+      ${s.noData ? `<div class="empty-state" style="padding:10px">설명 데이터 없음 (하드코딩 시스템 — ini/지역화 파일에 수치나 문구가 전혀 없어 정확한 설명을 제공할 수 없습니다)</div>` : ""}
       ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
       ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
       ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
