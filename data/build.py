@@ -22,7 +22,7 @@ SKILL_MAP_MD = os.path.join(ROOT, "커퍼_스킬_원본데이터.md")
 MANUAL_BASE = os.path.join(ROOT, "data", "manual_base_perks.json")
 MANUAL_VERDICTS = os.path.join(ROOT, "data", "manual_verdicts.json")
 MANUAL_ROLES = os.path.join(ROOT, "data", "manual_role_descriptions.json")
-OUT_JSON = os.path.join(ROOT, "site", "data", "perks.json")
+OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
 
 SECTION_RE = re.compile(r"^\[(?:ZedternalRBPerkpackage\.)?(.+)\]$")
 
@@ -250,6 +250,69 @@ def build_stat_entries(kv_pairs, with_levels=False):
     return entries
 
 
+def split_tiers(raw_values):
+    """Split a skill's build_stat_entries() output (one entry per ini
+    occurrence, in file order) into a T1 view and a T2 view, one entry per
+    distinct key. A key that only appears once (a fixed value that doesn't
+    change between standard/deluxe) is reused for both tiers."""
+    by_key = {}
+    order = []
+    for entry in raw_values:
+        by_key.setdefault(entry["key"], []).append(entry)
+        if entry["key"] not in order:
+            order.append(entry["key"])
+    t1, t2 = [], []
+    for k in order:
+        vals = by_key[k]
+        t1.append(vals[0])
+        t2.append(vals[1] if len(vals) > 1 else vals[0])
+    return t1, t2
+
+
+# Only these three units are reconciled directly in the flavor text: their
+# in-text notation is unambiguous ("+50%", "6초", "500 도쉬"). "multiplier" is
+# sometimes written as "%" and sometimes as "N배" inconsistently, and
+# "distance"/"count" values aren't reliably distinguishable from unrelated
+# numbers in prose -- those are left as-is (verified=False) rather than risk
+# a wrong substitution.
+RECONCILE_UNIT_PATTERNS = {
+    "percent": re.compile(r"[+-]?\d+(?:\.\d+)?%"),
+    "seconds": re.compile(r"\d+(?:\.\d+)?\s*초"),
+    "currency": re.compile(r"[\d,]+(?:\.\d+)?\s*도쉬"),
+}
+
+
+def reconcile_skill_text(raw_text, tier_entries):
+    """Rewrite hardcoded numbers embedded in a skill's KOR-ini flavor text so
+    they match the currently-applied value in KFZedternalUnlimited.ini,
+    which is the authoritative source -- the KOR ini text is just the
+    original (possibly stale) game copy. Matches tokens to ini values
+    positionally, per unit type, in the order they appear; if the count of
+    tokens found doesn't exactly match the count of same-unit ini values,
+    the text is left untouched and reported as unverified rather than
+    guessed at.
+    """
+    if not raw_text:
+        return raw_text, True, False
+
+    queues = {unit: [e["display"] for e in tier_entries if e["unit"] == unit] for unit in RECONCILE_UNIT_PATTERNS}
+
+    # Atomic: only rewrite if every unit's token count in the text exactly
+    # matches its ini value count for this tier. A partial rewrite (some
+    # numbers fixed, some left stale) would be more misleading than leaving
+    # the whole string untouched.
+    for unit, pattern in RECONCILE_UNIT_PATTERNS.items():
+        if len(pattern.findall(raw_text)) != len(queues[unit]):
+            return raw_text, False, False
+
+    new_text = raw_text
+    for unit, pattern in RECONCILE_UNIT_PATTERNS.items():
+        q = queues[unit]
+        new_text = pattern.sub(lambda m, _q=q: _q.pop(0), new_text)
+
+    return new_text, True, new_text != raw_text
+
+
 # Skills whose KOR text explicitly states a stat is SACRIFICED/reduced
 # (e.g. Voodoo: "체력이 X% 감소하는 대신 피해량이 Y% 증가") or gives a literal
 # negative number ("-6%"), but whose ini only stores an unsigned magnitude.
@@ -271,35 +334,25 @@ SKILL_COST_STATS = {
 }
 
 
-def build_test_warning(verdict, is_patched, patch_note):
+def build_test_warning(verdict, is_patched):
     """A short 'currently being tested/monitored' banner for perks whose
-    balance status is notably in flux, phrased as a heads-up to players
-    rather than a raw changelog line."""
+    balance status is notably in flux, phrased as a heads-up to players.
+    Kept to a single lead sentence -- no raw ini patch-note dump."""
     tag = (verdict or {}).get("tag", "")
-    note = (verdict or {}).get("note", "")
 
     if "확정 OP" in tag:
-        lead = "🚨 경고! 이 퍼크는 밸런스 문제가 확정된 상태이며, 근본적인 수정 전까지는 매우 강력하게 작동할 수 있습니다."
-    elif "OP 소지" in tag:
-        lead = "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다."
-    elif "고위험 설계" in tag:
-        lead = "⚠️ 참고: 이 퍼크는 의도적인 고위험-고보상 설계이며, 극단적인 빌드 조합의 영향을 계속 확인 중입니다."
-    elif "너프 완료" in tag:
-        lead = "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다."
-    elif "상향 완료" in tag:
-        lead = "⚠️ 주의! 이 퍼크는 최근 약함(Trash) 우려로 인해 일부 수치가 상향 조정되어 테스트 중입니다."
-    elif is_patched:
-        lead = "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다."
-    else:
-        return None
-
-    # The full reasoning already lives in the "밸런스 판정" verdict box further
-    # down the page -- keep this top banner to the short heads-up sentence
-    # plus the raw patch note, so the two sections don't just repeat each other.
-    parts = [lead]
-    if patch_note:
-        parts.append(f"(패치 노트: {patch_note})")
-    return " ".join(parts)
+        return "🚨 경고! 이 퍼크는 밸런스 문제가 확정된 상태이며, 근본적인 수정 전까지는 매우 강력하게 작동할 수 있습니다."
+    if "OP 소지" in tag:
+        return "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다."
+    if "고위험 설계" in tag:
+        return "⚠️ 참고: 이 퍼크는 의도적인 고위험-고보상 설계이며, 극단적인 빌드 조합의 영향을 계속 확인 중입니다."
+    if "너프 완료" in tag:
+        return "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다."
+    if "상향 완료" in tag:
+        return "⚠️ 주의! 이 퍼크는 최근 약함(Trash) 우려로 인해 일부 수치가 상향 조정되어 테스트 중입니다."
+    if is_patched:
+        return "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다."
+    return None
 
 
 PLACEHOLDER_RE = re.compile(r"([+-]?)%x%(%)?")
@@ -374,6 +427,28 @@ def fill_percent_placeholders(raw_descriptions, passive_stats):
     return filled
 
 
+# Site-wide Korean terminology fixes applied to every string in the final
+# output, including raw text pulled straight from the KOR ini (which we
+# don't edit in place, since it's the mod's own localization asset).
+TERMINOLOGY_FIXES = [
+    ("퍽", "퍼크"),
+    ("도쐬", "도쉬"),
+    ("커맨도", "코만도"),
+]
+
+
+def normalize_terminology(value):
+    if isinstance(value, str):
+        for old, new in TERMINOLOGY_FIXES:
+            value = value.replace(old, new)
+        return value
+    if isinstance(value, list):
+        return [normalize_terminology(v) for v in value]
+    if isinstance(value, dict):
+        return {k: normalize_terminology(v) for k, v in value.items()}
+    return value
+
+
 def build():
     main_sections = parse_ini_generic(INI_MAIN)
     kor_sections = parse_kor_ini(INI_KOR)
@@ -419,18 +494,27 @@ def build():
                            for k, v in sini if k != "MODEVERSION"]
             raw_values = build_stat_entries(signed_sini)
             skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
+
+            t1_entries, t2_entries = split_tiers(raw_values)
+            std_raw, std_verified, std_fixed = reconcile_skill_text(
+                skor.get("StandardSkillUpgradeDescription"), t1_entries)
+            delx_raw, delx_verified, delx_fixed = reconcile_skill_text(
+                skor.get("DeluxeSkillUpgradeDescription"), t2_entries)
+
             skills.append({
                 "key": short,
                 "name": skor.get("UpgradeName", short),
-                "standardDesc": strip_font(skor.get("StandardSkillUpgradeDescription")),
-                "deluxeDesc": strip_font(skor.get("DeluxeSkillUpgradeDescription")),
-                "standardDescRaw": skor.get("StandardSkillUpgradeDescription"),
-                "deluxeDescRaw": skor.get("DeluxeSkillUpgradeDescription"),
+                "standardDesc": strip_font(std_raw),
+                "deluxeDesc": strip_font(delx_raw),
+                "standardDescRaw": std_raw,
+                "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
                 "note": skill_notes.get(short),
                 "isPatched": bool(skill_patch_note),
                 "patchNote": skill_patch_note or None,
+                "textFixed": std_fixed or delx_fixed,
+                "textVerified": std_verified and delx_verified,
             })
 
         rule = unlock_rules.get(key, {})
@@ -454,7 +538,7 @@ def build():
             "grade": (verdict or {}).get("grade"),
             "isPatched": is_patched,
             "patchNote": perk_patch_note or None,
-            "testWarning": build_test_warning(verdict, is_patched, perk_patch_note),
+            "testWarning": build_test_warning(verdict, is_patched),
             "icon": f"icons/{key.lower()}.png",
         })
 
@@ -485,7 +569,7 @@ def build():
             "unlocks": unlocks,
             "isPatched": base_is_patched,
             "patchNote": base_patch_note or None,
-            "testWarning": build_test_warning(None, base_is_patched, base_patch_note),
+            "testWarning": build_test_warning(None, base_is_patched),
             "icon": f"icons/{bkey.lower()}.png",
         })
 
@@ -498,6 +582,7 @@ def build():
             "totalSkills": sum(p["skillCount"] for p in advanced_perks),
         },
     }
+    data = normalize_terminology(data)
 
     os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
     with open(OUT_JSON, "w", encoding="utf-8") as f:

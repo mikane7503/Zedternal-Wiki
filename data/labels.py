@@ -54,7 +54,7 @@ WORD_MAP = {
     "on": "", "over": "", "pandemic": "전염병", "passive": "패시브",
     "penalty": "페널티", "penetration": "관통력", "per": "당",
     "percent": "퍼센트", "percentage": "퍼센트", "perfect": "완벽한",
-    "perk": "퍽", "permanent": "영구", "petrify": "석화", "phoenix": "불사조",
+    "perk": "퍼크", "permanent": "영구", "petrify": "석화", "phoenix": "불사조",
     "poison": "독", "power": "위력", "preserve": "보존", "probability": "확률",
     "proximity": "근접도", "pulse": "파동", "purchase": "구매", "radius": "범위",
     "range": "사거리", "rapid": "연속", "rate": "속도", "ratio": "비율",

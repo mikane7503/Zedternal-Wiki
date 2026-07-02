@@ -3,8 +3,37 @@ let ADV_BY_KEY = {};
 let BASE_BY_KEY = {};
 let OPEN_BASE_KEY = null;
 let SELECTED_ADV_KEY = null;
+let AURORA_VIEW = false;
+let SEARCH_INDEX = [];
+let SEARCH_RESULTS = [];
+let SEARCH_ACTIVE_IDX = -1;
 
 const LEVELS = [5, 10, 15, 20];
+
+// [ZedternalReborn.Config_Player] 원본 배율 (KFZedternalReborn_Game.ini 기준).
+// 표시값 = (실제값 + 1) / 2 로 절반만 반영해 서술합니다.
+const DAMAGE_GIVEN_STATS = [
+  { label: "화염 피해", real: 0.5 },
+  { label: "지면 화염 피해", real: 0.25 },
+  { label: "네이팜 피해", real: 0.35 },
+  { label: "폭발 피해", real: 0.45 },
+  { label: "폭발 파편 피해", real: 0.6 },
+  { label: "샷건 피해", real: 0.75 },
+  { label: "냉동건 피해", real: 1.3 },
+  { label: "냉기 피해", real: 0.25 },
+  { label: "메딕 수류탄(독성) 피해", real: 0.3 },
+  { label: "베기 피해", real: 0.75 },
+  { label: "관통 피해", real: 0.75 },
+  { label: "타격 피해", real: 0.75 },
+];
+const DAMAGE_TAKEN_STATS = [
+  { label: "허스크 자폭 피해", real: 0.75 },
+  { label: "플레쉬파운드 킹 가슴빔 피해", real: 0.75 },
+  { label: "한스 유탄 피해", real: 0.75 },
+  { label: "패트리아크 미사일 피해", real: 0.75 },
+  { label: "마트리아크 플라즈마포 피해", real: 0.6 },
+  { label: "근접무기 소지 중 전체 피해", real: 0.75 },
+];
 
 function el(tag, attrs = {}, children = []) {
   const node = document.createElement(tag);
@@ -36,17 +65,24 @@ async function init() {
   ADV_BY_KEY = Object.fromEntries(DATA.advancedPerks.map(p => [p.key, p]));
   BASE_BY_KEY = Object.fromEntries(DATA.basePerks.map(p => [p.key, p]));
 
-  document.getElementById("meta").textContent =
-    `오퍼(기본 퍽) ${DATA.meta.basePerkCount}개 · 커퍼(전직 퍽) ${DATA.meta.advancedPerkCount}개 · 전직 스킬 ${DATA.meta.totalSkills}개 수록`;
+  document.getElementById("meta").innerHTML =
+    `📢 <b>공지사항</b>: 이 위키에 기재된 수치가 현재 서버에 실제로 적용 중인 값입니다. 게임 클라이언트 내부 스킬 설명에 표시되는 수치는 오리지널 값이라 실제 값과 전혀 다릅니다. 정확한 현재 수치는 반드시 이 위키를 기준으로 확인하세요.`;
 
   renderSidebar();
   renderMainArea();
-  document.getElementById("searchBox").addEventListener("input", onSearch);
+  buildSearchIndex();
+  const searchBox = document.getElementById("searchBox");
+  searchBox.addEventListener("input", onSearch);
+  searchBox.addEventListener("keydown", onSearchKeydown);
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-wrap")) closeSearchResults();
+  });
 }
 
 function showBaseOverview(key) {
   OPEN_BASE_KEY = key;
   SELECTED_ADV_KEY = null;
+  AURORA_VIEW = false;
   renderSidebar();
   renderMainArea();
 }
@@ -55,14 +91,86 @@ function selectAdv(key) {
   const adv = ADV_BY_KEY[key];
   OPEN_BASE_KEY = adv.parentPerk;
   SELECTED_ADV_KEY = key;
+  AURORA_VIEW = false;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
 }
 
+function showBalanceAurora() {
+  AURORA_VIEW = true;
+  OPEN_BASE_KEY = null;
+  SELECTED_ADV_KEY = null;
+  renderSidebar();
+  renderMainArea();
+  document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
+}
+
+function auroraBarRow(stat, invert) {
+  const shown = (stat.real + 1) / 2;
+  const deviation = shown - 1;
+  const halfWidth = Math.min(50, (Math.abs(deviation) / 2) * 100);
+  const left = deviation >= 0 ? 50 : 50 - halfWidth;
+  // 기븐(내가 주는 피해)은 수치가 높을수록 버프, 테이큰(내가 받는 피해)은 수치가 낮을수록 버프 — 방향이 반대.
+  const isBuff = invert ? deviation < 0 : deviation > 0;
+  const color = Math.abs(deviation) < 0.001 ? "var(--text-dim)" : (isBuff ? "var(--green)" : "var(--red)");
+  return `
+    <div class="ba-row">
+      <div class="ba-row-label">${escapeHtml(stat.label)}</div>
+      <div class="ba-bar-track">
+        <div class="ba-bar-center"></div>
+        <div class="ba-bar-fill" style="left:${left}%;width:${halfWidth}%;background:${color}"></div>
+      </div>
+      <div class="ba-row-val">×${trimNum(shown)}</div>
+    </div>`;
+}
+
+function renderBalanceAuroraBox() {
+  const item = el("div", { class: `accordion-item balance-aurora-item ${AURORA_VIEW ? "open" : ""}` });
+
+  const header = el("div", { class: "accordion-header" }, [
+    el("span", { class: "ba-icon", text: "⚠️" }),
+    el("div", { class: "titles" }, [
+      el("h3", { text: "퍼크 밸런스 오로라" }),
+    ]),
+    el("span", { class: "chevron", text: "▸" }),
+  ]);
+  header.addEventListener("click", showBalanceAurora);
+  item.appendChild(header);
+  return item;
+}
+
+function renderBalanceAuroraDetail() {
+  const container = el("div", {});
+  container.innerHTML = `
+    <div class="detail-header">
+      <div class="ba-icon lg">⚠️</div>
+      <div class="detail-titles">
+        <h2>퍼크 밸런스 오로라</h2>
+      </div>
+    </div>
+
+    <div class="section-title">설명</div>
+    <div class="desc-line">
+      속성별로 내가 주는 피해와 받는 피해가 평소보다 얼마나 세거나 약한지 한눈에 볼 수 있는 표입니다.
+      막대가 가운데 기준선보다 오른쪽에서 초록색이면 유리한 쪽, 왼쪽에서 빨간색이면 불리한 쪽입니다.
+    </div>
+
+    <div class="section-title">대미지 기븐 (내가 주는 피해)</div>
+    ${DAMAGE_GIVEN_STATS.map(s => auroraBarRow(s, false)).join("")}
+
+    <div class="section-title">대미지 테이큰 (내가 받는 피해)</div>
+    ${DAMAGE_TAKEN_STATS.map(s => auroraBarRow(s, true)).join("")}
+  `;
+  const wrap = document.createDocumentFragment();
+  wrap.appendChild(container);
+  return wrap;
+}
+
 function renderSidebar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.innerHTML = "";
+  sidebar.appendChild(renderBalanceAuroraBox());
   for (const base of DATA.basePerks) {
     const isOpen = base.key === OPEN_BASE_KEY;
     const item = el("div", { class: `accordion-item ${isOpen ? "open" : ""}`, "data-basekey": base.key });
@@ -87,7 +195,6 @@ function renderSidebar() {
       const row = el("div", {
         class: `child-row ${adv.key === SELECTED_ADV_KEY ? "active" : ""}`,
         "data-advkey": adv.key,
-        "data-search": buildSearchCorpus(adv, base),
       }, [
         iconImg(adv, "sm"),
         el("span", { class: "lvl", text: `Lv${lvl}` }),
@@ -106,6 +213,10 @@ function renderMainArea() {
   const main = document.getElementById("mainArea");
   main.innerHTML = "";
 
+  if (AURORA_VIEW) {
+    main.appendChild(renderBalanceAuroraDetail());
+    return;
+  }
   if (SELECTED_ADV_KEY) {
     main.appendChild(renderAdvDetail(SELECTED_ADV_KEY));
     wireDetailEvents(main);
@@ -116,7 +227,7 @@ function renderMainArea() {
     wireDetailEvents(main);
     return;
   }
-  main.appendChild(el("div", { class: "empty-state", text: "왼쪽에서 오퍼(기본 퍽)를 선택하면 전직 트리가 펼쳐집니다." }));
+  main.appendChild(el("div", { class: "empty-state", text: "왼쪽에서 베이스 퍼크를 선택하면 전직 트리가 펼쳐집니다." }));
 }
 
 function wireDetailEvents(root) {
@@ -159,7 +270,6 @@ function renderBaseDetail(key) {
     const card = el("div", {
       class: "adv-card",
       "data-advkey": adv.key,
-      "data-search": buildSearchCorpus(adv, p),
     }, [
       iconImg(adv),
       el("div", { class: "adv-body" }, [
@@ -173,7 +283,6 @@ function renderBaseDetail(key) {
     grid.appendChild(card);
   }
 
-  const vClass = gradeToVerdictClass(p.grade);
   const basePatchWarning = p.testWarning ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "";
 
   container.innerHTML = `
@@ -181,7 +290,7 @@ function renderBaseDetail(key) {
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
-        <div class="subtitle">오퍼(기본 퍽)</div>
+        <div class="subtitle">베이스 퍼크</div>
       </div>
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
@@ -198,12 +307,6 @@ function renderBaseDetail(key) {
 
     <div class="section-title">전직 레벨별 수치</div>
     ${renderSliderSection(p.passiveStats, 20)}
-
-    <div class="section-title">밸런스 판정</div>
-    <div class="verdict-box v-${vClass}">
-      <b>등급 ${escapeHtml(p.grade || "-")}</b>
-      ${escapeHtml(p.summary || "")}
-    </div>
 
     <div class="section-title">전직 트리 (클릭해서 상세 보기)</div>
   `;
@@ -222,42 +325,31 @@ function renderAdvDetail(key) {
   const descNote = p.descriptions.length
     ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 전직 레벨 20(만렙) 기준입니다.</div>' : "";
 
-  const perkPatchWarning = p.testWarning ? `
-    <div class="patch-warning">${escapeHtml(p.testWarning)}
-    ${p.isPatched ? '<div style="margin-top:4px">설명 텍스트에 포함된 일부 수치는 패치 이전 값일 수 있으니, 실제 적용 수치는 아래 "전직 레벨별 수치" 표를 기준으로 확인하세요.</div>' : ""}</div>` : "";
+  const perkPatchWarning = p.testWarning ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "";
 
   const hasPassive = p.passiveStats.length > 0;
 
-  let verdictBlock = "";
-  if (p.verdict) {
-    const vClass = gradeToVerdictClass(p.grade);
-    verdictBlock = `
-      <div class="section-title">밸런스 판정</div>
-      <div class="verdict-box v-${vClass}">
-        <b>등급 ${escapeHtml(p.grade || "-")} · ${escapeHtml(p.verdict.tag)}</b>
-        ${escapeHtml(p.verdict.note)}
-      </div>`;
-  }
-
   const skillsHtml = p.skills.map(s => `
     <div class="skill-item">
-      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.isPatched ? '<span class="patch-badge">패치 반영됨</span>' : ""}</h4>
-      ${s.isPatched ? `<div style="font-size:11px;color:var(--orange);margin-bottom:4px">⚠️ 아래 표준/디럭스 설명 문구의 수치는 패치 이전 값일 수 있습니다. 실제 현재 수치는 하단 원본값을 확인하세요.</div>` : ""}
+      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.textFixed ? '<span class="patch-badge">값 보정됨</span>' : ""}</h4>
+      ${!s.textVerified ? `<div style="font-size:11px;color:var(--orange);margin-bottom:4px">⚠️ 이 설명 문구는 KFZedternalUnlimited.ini 값과 자동으로 대조되지 않았습니다. ${s.rawValues.length ? "실제 현재 수치는 하단 원본값을 확인하세요." : "이 스킬은 ini 설정값이 없어(하드코딩) 대조할 수 없습니다."}</div>` : ""}
       ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
       ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
       ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
-      <div class="rawvals">${s.rawValues.map(v => `${escapeHtml(v.label)}: ${v.display}`).join("  ·  ")}</div>
+      ${!s.textVerified && s.rawValues.length ? `<div class="rawvals">${s.rawValues.map(v => `${escapeHtml(v.label)}: ${v.display}`).join("  ·  ")}</div>` : ""}
     </div>
-  `).join("") || '<div class="empty-state" style="padding:10px">스킬 데이터 없음 (하드코딩 시스템)</div>';
+  `).join("") || (p.key === "Haunted"
+    ? '<div class="empty-state mystery" style="padding:10px">🌫️ 그 어떤 기록에도 남아있지 않다 — 이 존재의 진짜 힘을 알고 싶다면, 직접 웨이브 속에서 마주하는 수밖에 없다.</div>'
+    : '<div class="empty-state" style="padding:10px">스킬 데이터 없음 (하드코딩 시스템)</div>');
 
   const container = el("div", {});
   container.innerHTML = `
-    <div class="back-link" data-basekey="${p.parentPerk}">← ${parent ? escapeHtml(parent.name) : "오퍼"} 개요로</div>
+    <div class="back-link" data-basekey="${p.parentPerk}">← ${parent ? escapeHtml(parent.name) : "베이스 퍼크"} 개요로</div>
     <div class="detail-header">
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
-        <div class="subtitle">커퍼(전직 퍽) · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
+        <div class="subtitle">심화 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
       </div>
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
@@ -273,8 +365,6 @@ function renderAdvDetail(key) {
     ${descLines}
 
     ${hasPassive ? `<div class="section-title">전직 레벨별 수치</div>${renderSliderSection(p.passiveStats, 20)}` : ""}
-
-    ${verdictBlock}
 
     <div class="section-title">스킬 목록 (표준 / 디럭스)</div>
     <div class="skill-list">${skillsHtml}</div>
@@ -292,7 +382,7 @@ function renderSliderSection(passiveStats, maxLevel) {
   return `
     <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. 수치는 KFZedternalUnlimited.ini의 현재(패치 반영) 값 기준입니다.</div>
     <div class="level-slider-row">
-      <label for="levelSlider">퍽 레벨</label>
+      <label for="levelSlider">퍼크 레벨</label>
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">
       <span class="lvl-val" id="lvlValLabel">Lv ${maxLevel}</span>
     </div>
@@ -348,32 +438,123 @@ function gradeBadge(grade) {
   return `<span class="grade-badge ${gradeClass(grade)}">${escapeHtml(grade)}</span>`;
 }
 
-function gradeToVerdictClass(grade) {
-  if (!grade) return "ok";
-  const g = grade.trim();
-  if (g === "SS" || g === "S") return "op";
-  if (g === "C") return "trash";
-  if (g === "?") return "mystery";
-  return "ok";
-}
-
 function escapeHtml(s) {
   if (s == null) return "";
   return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
-function onSearch(e) {
-  const q = e.target.value.trim().toLowerCase();
-  const cards = document.querySelectorAll("[data-advkey]");
-  if (!q) {
-    cards.forEach(c => c.classList.remove("dim", "hl"));
+function buildSearchIndex() {
+  SEARCH_INDEX = [];
+  for (const base of DATA.basePerks) {
+    SEARCH_INDEX.push({
+      type: "base",
+      navKey: base.key,
+      ownKey: base.key,
+      name: base.name,
+      sub: "베이스 퍼크",
+      search: `${base.name} ${base.key}`.toLowerCase(),
+    });
+  }
+  for (const adv of DATA.advancedPerks) {
+    const parent = BASE_BY_KEY[adv.parentPerk];
+    SEARCH_INDEX.push({
+      type: "adv",
+      navKey: adv.key,
+      ownKey: adv.key,
+      name: adv.name,
+      sub: `심화 퍼크 · ${parent ? parent.name : ""}`,
+      search: buildSearchCorpus(adv, parent || { name: "" }),
+    });
+    for (const s of adv.skills) {
+      SEARCH_INDEX.push({
+        type: "skill",
+        navKey: adv.key,
+        ownKey: s.key,
+        name: s.name,
+        sub: `스킬 · ${adv.name}`,
+        search: `${s.name} ${s.key} ${s.standardDesc || ""} ${s.deluxeDesc || ""}`.toLowerCase(),
+      });
+    }
+  }
+}
+
+// Ranked so an exact/prefix match on the item's own name or key (e.g. typing
+// "Predator") always outranks an incidental substring hit inside some other
+// perk's skill key (e.g. "ApexPredator" belongs to Hydra, not Predator).
+function searchMatches(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+  const tiers = [[], [], [], [], []];
+  for (const item of SEARCH_INDEX) {
+    const nameLower = item.name.toLowerCase();
+    const ownKeyLower = item.ownKey.toLowerCase();
+    if (nameLower === q || ownKeyLower === q) tiers[0].push(item);
+    else if (nameLower.startsWith(q)) tiers[1].push(item);
+    else if (ownKeyLower.startsWith(q)) tiers[2].push(item);
+    else if (ownKeyLower.includes(q)) tiers[3].push(item);
+    else if (item.search.includes(q)) tiers[4].push(item);
+  }
+  return tiers.flat().slice(0, 8);
+}
+
+function goToSearchResult(item) {
+  if (!item) return;
+  if (item.type === "base") showBaseOverview(item.navKey);
+  else selectAdv(item.navKey);
+  closeSearchResults();
+  document.getElementById("searchBox").blur();
+}
+
+function closeSearchResults() {
+  SEARCH_RESULTS = [];
+  SEARCH_ACTIVE_IDX = -1;
+  const box = document.getElementById("searchResults");
+  box.classList.remove("open");
+  box.innerHTML = "";
+}
+
+function renderSearchResults() {
+  const box = document.getElementById("searchResults");
+  if (!SEARCH_RESULTS.length) {
+    closeSearchResults();
     return;
   }
-  cards.forEach(c => {
-    const match = c.dataset.search && c.dataset.search.includes(q);
-    c.classList.toggle("hl", match);
-    c.classList.toggle("dim", !match);
+  box.innerHTML = SEARCH_RESULTS.map((item, i) => `
+    <div class="search-result-item ${i === SEARCH_ACTIVE_IDX ? "active" : ""}" data-idx="${i}">
+      <span class="sr-name">${escapeHtml(item.name)}</span>
+      <span class="sr-sub">${escapeHtml(item.sub)}</span>
+    </div>
+  `).join("");
+  box.classList.add("open");
+  box.querySelectorAll(".search-result-item").forEach(el => {
+    el.addEventListener("click", () => goToSearchResult(SEARCH_RESULTS[Number(el.dataset.idx)]));
   });
+}
+
+function onSearch(e) {
+  SEARCH_RESULTS = searchMatches(e.target.value);
+  SEARCH_ACTIVE_IDX = SEARCH_RESULTS.length ? 0 : -1;
+  renderSearchResults();
+}
+
+function onSearchKeydown(e) {
+  if (e.key === "ArrowDown") {
+    if (!SEARCH_RESULTS.length) return;
+    e.preventDefault();
+    SEARCH_ACTIVE_IDX = (SEARCH_ACTIVE_IDX + 1) % SEARCH_RESULTS.length;
+    renderSearchResults();
+  } else if (e.key === "ArrowUp") {
+    if (!SEARCH_RESULTS.length) return;
+    e.preventDefault();
+    SEARCH_ACTIVE_IDX = (SEARCH_ACTIVE_IDX - 1 + SEARCH_RESULTS.length) % SEARCH_RESULTS.length;
+    renderSearchResults();
+  } else if (e.key === "Enter") {
+    if (!SEARCH_RESULTS.length) return;
+    e.preventDefault();
+    goToSearchResult(SEARCH_RESULTS[Math.max(0, SEARCH_ACTIVE_IDX)]);
+  } else if (e.key === "Escape") {
+    closeSearchResults();
+  }
 }
 
 init();
