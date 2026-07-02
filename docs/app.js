@@ -330,8 +330,9 @@ function renderAdvDetail(key) {
   const hasPassive = p.passiveStats.length > 0;
 
   const skillsHtml = p.skills.map(s => `
-    <div class="skill-item">
-      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.textFixed ? '<span class="patch-badge">값 보정됨</span>' : ""}</h4>
+    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}">
+      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}${s.textFixed ? '<span class="patch-badge">값 보정됨</span>' : ""}</h4>
+      ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
       ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
       ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
       ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
@@ -364,12 +365,29 @@ function renderAdvDetail(key) {
 
     ${hasPassive ? `<div class="section-title">전직 레벨별 수치</div>${renderSliderSection(p.passiveStats, 20)}` : ""}
 
+    ${renderFixedStatsSection(p.fixedStats)}
+
     <div class="section-title">스킬 목록 (표준 / 디럭스)</div>
     <div class="skill-list">${skillsHtml}</div>
   `;
   const wrap = document.createDocumentFragment();
   wrap.appendChild(container);
   return wrap;
+}
+
+function renderFixedStatsSection(fixedStats) {
+  if (!fixedStats || !fixedStats.length) return "";
+  const rows = fixedStats.map(s => `
+    <div class="fixed-stat-row">
+      <span class="fixed-stat-label">${escapeHtml(s.label)}</span>
+      <span class="fixed-stat-val">${s.display}</span>
+      ${s.capstoneLevel ? `<span class="capstone-badge">Lv${s.capstoneLevel} 캡스톤</span>` : ""}
+    </div>`).join("");
+  return `
+    <div class="section-title">고정 효과 (레벨과 무관하게 일정)</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">⚠ 아래 수치는 레벨업으로 커지지 않는 고정값입니다. "Lv10/20 캡스톤"은 해당 레벨에 도달하는 순간 1회 적용되는 효과입니다.</div>
+    <div class="fixed-stat-list">${rows}</div>
+  `;
 }
 
 function renderSliderSection(passiveStats, maxLevel) {

@@ -18,7 +18,7 @@ from labels import translate_key, classify_unit_group, format_value_as
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INI_MAIN = os.path.join(ROOT, "KFZedternalUnlimited.ini")
 INI_KOR = os.path.join(ROOT, "ZedternalRBPerkpackage.KOR.ini")
-SKILL_MAP_MD = os.path.join(ROOT, "커퍼_스킬_원본데이터.md")
+INI_UPGRADES = os.path.join(ROOT, "KFZedternalReborn_Upgrades.ini")
 MANUAL_BASE = os.path.join(ROOT, "data", "manual_base_perks.json")
 MANUAL_VERDICTS = os.path.join(ROOT, "data", "manual_verdicts.json")
 MANUAL_ROLES = os.path.join(ROOT, "data", "manual_role_descriptions.json")
@@ -117,70 +117,6 @@ def strip_font(s):
     return s
 
 
-PERK_HEADER_RE = re.compile(r"^##\s+DKUpgrade_Perk_(\w+)")
-BOLD_SKILL_RE = re.compile(r"\*\*DKUpgrade_Skill_(\w+)\*\*")
-
-
-def parse_skill_grouping(path):
-    """perk_key -> [skill_short_name, ...] extracted from the balance-notes markdown."""
-    with open(path, encoding="utf-8-sig") as f:
-        text = f.read()
-
-    # Cut off the "orphan sections" tail, not relevant to grouping
-    text = text.split("## 고아 섹션")[0]
-
-    blocks = re.split(r"(?=^## DKUpgrade_Perk_)", text, flags=re.M)
-    grouping = {}
-    for block in blocks:
-        hm = PERK_HEADER_RE.match(block)
-        if not hm:
-            continue
-        perk_key = hm.group(1)
-        names = []
-        for line in block.splitlines():
-            line = line.strip()
-            if not line.startswith("-"):
-                continue
-            bold = BOLD_SKILL_RE.findall(line)
-            if bold:
-                names.extend(bold)
-                continue
-            # compact inline formats, e.g. "- Name1: a=b | Name2: c=d"
-            # or "- NameA, NameB, NameC — 전부 X=Y"
-            body = line[1:].strip()
-            if "—" in body:
-                body = body.split("—")[0]
-            segments = body.split("|") if "|" in body else body.split(",")
-            for seg in segments:
-                seg = seg.strip()
-                if not seg:
-                    continue
-                # drop trailing (...) annotations
-                seg = re.sub(r"\([^)]*\)", "", seg).strip()
-                seg = seg.replace("**", "")
-                # take part before ':' or '=' (whichever comes first) as the skill name
-                split_pos = len(seg)
-                for sep in (":", "="):
-                    idx = seg.find(sep)
-                    if idx != -1:
-                        split_pos = min(split_pos, idx)
-                name = seg[:split_pos].strip()
-                # drop trailing warning glyphs/emoji and whitespace
-                name = re.sub(r"[^A-Za-z0-9]+$", "", name.split()[0]) if name.split() else ""
-                # sanity: skill short names are single CamelCase words
-                if re.match(r"^[A-Za-z][A-Za-z0-9]*$", name):
-                    names.append(name)
-        # de-dup, preserve order
-        seen = set()
-        uniq = []
-        for n in names:
-            if n not in seen:
-                seen.add(n)
-                uniq.append(n)
-        grouping[perk_key] = uniq
-    return grouping
-
-
 UNLOCK_RULE_RE = re.compile(
     r'PerkUnlockRules=\(PerkName="DKUpgrade_Perk_(\w+)",Req1Perk="WMUpgrade_Perk_(\w+)",Req1Level=(\d+)'
 )
@@ -196,6 +132,32 @@ def parse_unlock_rules(main_sections):
         adv, base, lvl = m.group(1), m.group(2), int(m.group(3))
         rules[adv] = {"parentPerk": base, "unlockLevel": lvl}
     return rules
+
+
+DK_SKILL_REGISTRY_RE = re.compile(
+    r'([#;])?SkillUpgrade_Upgrade=\(PerkPath="ZedternalRBPerkpackage\.DKUpgrade_Perk_(\w+)",'
+    r'SkillPath="ZedternalRBPerkpackage\.DKUpgrade_Skill_(\w+)"\)(?:\s*;\s*(.*))?'
+)
+
+
+def parse_dk_skill_registry(path):
+    """[ZedternalReborn.Config_SkillUpgrade] is the game's own authoritative
+    roster of which skills belong to which advanced (DK) perk -- including
+    entries the mod authors have commented out (with '#' or ';') to disable
+    a skill in-game while leaving its KOR text/ini config in place. Returns
+    perk_key -> [(skill_short_name, is_disabled, disabled_note_or_None), ...]
+    in file order.
+    """
+    registry = {}
+    with open(path, encoding="utf-8-sig") as f:
+        for raw in f:
+            m = DK_SKILL_REGISTRY_RE.match(raw.strip())
+            if not m:
+                continue
+            disabled = bool(m.group(1))
+            perk, skill, note = m.group(2), m.group(3), m.group(4)
+            registry.setdefault(perk, []).append((skill, disabled, note))
+    return registry
 
 
 def to_num(s):
@@ -370,6 +332,7 @@ def build_test_warning(verdict, is_patched):
 
 
 PLACEHOLDER_RE = re.compile(r"([+-]?)%x%(%)?")
+CAPSTONE_LINE_RE = re.compile(r"^(?:<font[^>]*>)?레벨\s*\d+:")
 
 
 def determine_stat_signs(raw_descriptions, stat_count):
@@ -411,6 +374,13 @@ def fill_percent_placeholders(raw_descriptions, passive_stats):
     description order -- this mirrors how the mod's own authors wrote the
     two lists side by side (verified: works cleanly for every perk with 2-3
     leading %x% stats, e.g. Cinder's FireDamagePerLevel/BurningTargetDamagePerLevel).
+
+    A '%x%' inside a "레벨 N:" capstone line is a different animal though --
+    it describes a fixed or per-stack bonus for that one-shot ability (e.g.
+    Parasite's "흡수된 적 1명당 +%x%%"), not something that grows with overall
+    perk level. Filling it with the usual "레벨업당 ... 만렙 ..." framing
+    produces nonsense (that one ballooned to a literal "+8000%"), so those
+    get a plain flat value instead.
     """
     stats_queue = list(passive_stats)
     filled = []
@@ -419,6 +389,8 @@ def fill_percent_placeholders(raw_descriptions, passive_stats):
             filled.append(d)
             continue
 
+        is_capstone_line = bool(CAPSTONE_LINE_RE.match(d))
+
         # Some descriptions state their own hard cap in prose, e.g.
         # "...(최대 30%)" -- the game clamps the runtime value there even
         # though the raw per-level*20 arithmetic would exceed it (Bulwark:
@@ -426,7 +398,15 @@ def fill_percent_placeholders(raw_descriptions, passive_stats):
         cap_match = re.search(r"최대[^0-9]{0,20}?([\d.]+)%", strip_font(d))
         cap = float(cap_match.group(1)) if cap_match else None
 
-        def _sub(match, _queue=stats_queue, _cap=cap):
+        def _sub(match, _queue=stats_queue, _cap=cap, _capstone=is_capstone_line):
+            if _capstone:
+                # The ini's field order doesn't reliably line up with a
+                # placeholder embedded mid-capstone (verified: Parasite's
+                # "흡수된 적 1명당 +%x%%" would otherwise consume the wrong
+                # queue entry and print a nonsense number). Point at the
+                # accurate value in the "고정 효과" section instead of
+                # guessing which fixed stat it is.
+                return "(정확한 수치는 아래 '고정 효과' 참고)"
             if not _queue:
                 sign = match.group(1) or "+"
                 return f"{sign}?(하드코딩·비공개)"
@@ -463,10 +443,73 @@ def normalize_terminology(value):
     return value
 
 
+def split_scaling_and_fixed_stats(passive_stats, raw_descriptions):
+    """A perk's DKUpgrade_Perk_X ini section isn't uniformly a set of
+    per-level-scaling passives -- the KOR text only ever treats the first
+    N fields (one per '%x%' placeholder) as growing with perk level. Any
+    fields after that are one-shot capstone bonuses (Level10Foo/Level20Bar)
+    or flat constants (a fixed drop chance, a flat pickup amount) that the
+    site was previously running through the same "value * selected level"
+    slider math as the real passives -- e.g. Scavenger's fixed 30-ammo pickup
+    was shown as "600" at Lv20. Split them so only genuine passives get the
+    per-level treatment; the rest are reported as constant values.
+    """
+    # Only count placeholders in the leading, non-capstone lines -- a '%x%'
+    # inside a "레벨 N:" capstone description (e.g. Parasite's per-siphoned-
+    # enemy damage bonus) is a per-stack/fixed value for that ability, not
+    # another genuinely level-scaling passive.
+    scaling_count = sum(
+        len(PLACEHOLDER_RE.findall(d)) for d in raw_descriptions if not CAPSTONE_LINE_RE.match(d)
+    )
+    scaling, fixed = [], []
+    for i, stat in enumerate(passive_stats):
+        if i < scaling_count:
+            stat["scaling"] = True
+            scaling.append(stat)
+        else:
+            stat["scaling"] = False
+            # These aren't "per level" at all -- lv10/lv20 would otherwise
+            # imply linear growth that doesn't happen, so just mirror the
+            # flat value so any leftover consumer sees a constant.
+            stat["lv10"] = stat["value"]
+            stat["lv20"] = stat["value"]
+            stat["lv10Display"] = stat["display"]
+            stat["lv20Display"] = stat["display"]
+            level_match = re.match(r"Level(\d+)", stat["key"])
+            stat["capstoneLevel"] = int(level_match.group(1)) if level_match else None
+            fixed.append(stat)
+    return scaling, fixed
+
+
+def reconcile_perk_descriptions(raw_descriptions, filled_descriptions, fixed_stats):
+    """Beyond the '%x%'-templated lines, a perk's capstone/flavor description
+    lines (levels 10/20, passive utility text) often hardcode a number that
+    drifts from the ini after a balance pass -- same issue as skill text.
+    Reconcile them the same way, but only apply the result if every fixed
+    stat's notation matches atomically across the *combined* candidate
+    lines; otherwise leave the original wording untouched rather than risk
+    losing the flavor text for an uncertain guess.
+    """
+    candidate_idx = [
+        i for i, d in enumerate(raw_descriptions)
+        if "%x%" not in d and CAPSTONE_LINE_RE.match(d)
+    ]
+    if not candidate_idx or not fixed_stats:
+        return filled_descriptions
+    joined = "\x00".join(filled_descriptions[i] for i in candidate_idx)
+    new_joined, ok, _ = reconcile_skill_text(joined, fixed_stats)
+    if not ok:
+        return filled_descriptions
+    result = list(filled_descriptions)
+    for idx, part in zip(candidate_idx, new_joined.split("\x00")):
+        result[idx] = part
+    return result
+
+
 def build():
     main_sections = parse_ini_generic(INI_MAIN)
     kor_sections = parse_kor_ini(INI_KOR)
-    grouping = parse_skill_grouping(SKILL_MAP_MD)
+    dk_skill_registry = parse_dk_skill_registry(INI_UPGRADES)
     unlock_rules = parse_unlock_rules(main_sections)
     patch_notes = parse_patch_notes(INI_MAIN)
 
@@ -491,15 +534,17 @@ def build():
                      for (k, v), sign in zip(filtered_kv, signs)]
         passive_stats = build_stat_entries(signed_kv, with_levels=True)
         filled_descriptions = fill_percent_placeholders(raw_descs, passive_stats)
+        scaling_stats, fixed_stats = split_scaling_and_fixed_stats(passive_stats, raw_descs)
+        filled_descriptions = reconcile_perk_descriptions(raw_descs, filled_descriptions, fixed_stats)
         descriptions = [
-            {"raw": d, "text": strip_font(d), "isCapstone": bool(re.match(r"^<font[^>]*>레벨 \d+:", d)) or d.startswith("레벨")}
+            {"raw": d, "text": strip_font(d), "isCapstone": bool(CAPSTONE_LINE_RE.match(d)) or d.startswith("레벨")}
             for d in filled_descriptions
         ]
         perk_patch_note = "; ".join(patch_notes.get(f"DKUpgrade_Perk_{key}", []))
 
         skill_notes = manual_verdicts.get("skillNotes", {}).get(key, {})
         skills = []
-        for short in grouping.get(key, []):
+        for short, is_disabled, disabled_note in dk_skill_registry.get(key, []):
             skill_section = f"DKUpgrade_Skill_{short}"
             skor = kor_sections.get(skill_section, {})
             sini = main_sections.get(skill_section, [])
@@ -540,6 +585,8 @@ def build():
                 "isPatched": bool(skill_patch_note),
                 "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
+                "disabled": is_disabled,
+                "disabledNote": disabled_note,
             })
 
         rule = unlock_rules.get(key, {})
@@ -553,7 +600,8 @@ def build():
             "parentPerk": rule.get("parentPerk"),
             "unlockLevel": rule.get("unlockLevel"),
             "hasIniConfig": bool(ini_kv),
-            "passiveStats": passive_stats,
+            "passiveStats": scaling_stats,
+            "fixedStats": fixed_stats,
             "role": role_desc.get("role"),
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
