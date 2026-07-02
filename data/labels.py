@@ -262,7 +262,12 @@ def format_value_as(value, unit):
         return str(value)
     if unit == "percent":
         pct = value * 100
-        s = f"{pct:.1f}".rstrip("0").rstrip(".")
+        # Two decimals, not one: after the 2026-07-02 global passive halving
+        # many real ini values land on quarter-percent steps (0.0075 →
+        # +0.75%, 0.0025 → +0.25%) and one-decimal rounding displayed them
+        # as +0.8%/+0.2% -- a wiki whose whole point is exact ini numbers
+        # shouldn't round them.
+        s = f"{pct:.2f}".rstrip("0").rstrip(".")
         sign = "+" if value >= 0 else ""
         return f"{sign}{s}%"
     if unit == "multiplier":

@@ -420,7 +420,8 @@ body {
 }
 .skill-item h4 { margin: 0 0 6px; font-size: 14px; }
 .skill-item .std, .skill-item .delx { font-size: 13px; margin: 3px 0; }
-.skill-item .std b, .skill-item .delx b { color: var(--text-dim); font-weight: 600; margin-right: 4px; }
+.skill-item .std b { color: var(--text-dim); font-weight: 600; margin-right: 4px; }
+.skill-item .delx b { color: var(--gold); font-weight: 800; margin-right: 4px; }
 .skill-item .skillnote { margin-top: 6px; font-size: 12px; color: var(--orange); }
 
 .skill-item.skill-disabled {

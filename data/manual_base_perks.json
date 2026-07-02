@@ -17,16 +17,6 @@
         "skill": "BerserkerRage",
         "issue": "아머가 남아있으면 발동하지 않음 — 초반 웨이브에 사실상 사장",
         "severity": "warn"
-      },
-      {
-        "skill": "Brawler",
-        "issue": "T2 피해 감소 +25%로 상향 완료 (과거 +10%뿐이던 문제는 이미 해결됨)",
-        "severity": "ok"
-      },
-      {
-        "skill": "Spartan",
-        "issue": "ZED타임 중 발사속도 +80%(T2)로 하향 완료 (과거 +120%였던 과도한 수치는 이미 정상화됨)",
-        "severity": "ok"
       }
     ]
   },
@@ -61,7 +51,7 @@
     "grade": "C",
     "summary": "폭발 화력이 베이스 퍼크 중 최상위. 수류탄 피해 스택이 최악 조합 시 기본 대비 ×4.5배까지 중첩되어 밸런스 조정이 필요할 만큼 강력함.",
     "role": "수류탄과 폭발물의 피해량을 크게 증폭시켜, 대형 제드까지 빠르게 정리하게 해주는 <font color=\"#FFD700\">광역 딜러</font> 퍼크입니다.",
-    "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+190%(약 ×2.9배)</font>까지 중첩됩니다. 과거 GrenadeDamage 패시브가 여러 차례 하향 조정되어(Lv10 기준 +150%→+80%→+40%) 현재는 예전만큼 극단적이지 않습니다.",
+    "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+190%(약 ×2.9배)</font>까지 중첩됩니다.",
     "strengths": [
       "폭발물 특화 화력이 베이스 퍼크 중 최상위",
       "LZDamage/GrenadeDamage 패시브로 대형 제드 처리 능력 우수"
@@ -69,18 +59,13 @@
     "weaknesses": [
       {
         "skill": "GrenadeDamage 패시브",
-        "issue": "Lv10 기준 +40%로 여러 차례 하향 조정됨(과거 +150%→+80%→+40%). Bombardier/DestroyerOfWorlds/QuickFuse(각 +50%)와 가산해도 현재는 총 +190% 수준으로 완화됨",
+        "issue": "Lv10 기준 +40%. Bombardier/DestroyerOfWorlds/QuickFuse(각 +50%)와 가산 시 총 +190% 수준",
         "severity": "watch"
       },
       {
         "skill": "Bombardier + QuickFuse + DestroyerOfWorlds",
         "issue": "3개 모두 수류탄 전용 피해 스킬 — 빌드 다양성 부재",
         "severity": "watch"
-      },
-      {
-        "skill": "SonicResistantRounds",
-        "issue": "T2 음파 피해 -60%로 하향 완료 (과거 -100% 완전 면역이었던 문제는 이미 해결됨)",
-        "severity": "ok"
       }
     ]
   },
@@ -97,11 +82,6 @@
     ],
     "weaknesses": [
       {
-        "skill": "Hemoglobin",
-        "issue": "T1 고정 피해 30, T2 100으로 상향 완료 (과거 T1 10이던 사실상 무의미한 수치는 이미 해결됨)",
-        "severity": "ok"
-      },
-      {
         "skill": "AcidicRounds / Napalm",
         "issue": "두 스킬 로직이 사실상 동일(확률 DoT) — 개성 차별화 부족",
         "severity": "watch"
@@ -116,28 +96,13 @@
   "Firebug": {
     "name": "파이어버그",
     "grade": "B",
-    "summary": "화염/DoT 피해가 강력한 편이나, 과거 발견된 여러 과최적화 스킬은 이미 하향 조정되어 현재는 안정화된 상태.",
+    "summary": "화염/DoT 피해가 강력한 편이며 현재는 안정화된 상태.",
     "role": "화염과 지속피해(DoT)를 크게 증폭시켜, 좀비 무리를 태워버리게 해주는 <font color=\"#FFD700\">광역 소각 딜러</font> 퍼크입니다.",
-    "endgame": "Lv20에 Combustion, Barbecue, HeatWaves 스킬을 모두 채우면 <font color=\"#15d7fa\">화염/DoT 피해량</font>이 크게 늘어난 강력한 소각 딜러가 완성됩니다. 과거 발견된 이상값(Combustion T2 +120%, Barbecue DoT ×3.0, HeatWaves +200% 등)은 모두 하향 조정되어 현재는 정상 범위입니다.",
+    "endgame": "Lv20에 Combustion, Barbecue, HeatWaves 스킬을 모두 채우면 <font color=\"#15d7fa\">화염/DoT 피해량</font>이 크게 늘어난 강력한 소각 딜러가 완성됩니다.",
     "strengths": [
       "화염 특화 지속딜과 광역 제어력이 베이스 퍼크 중 최상위"
     ],
     "weaknesses": [
-      {
-        "skill": "Combustion",
-        "issue": "T2 +50%로 하향 완료 (`DefaultDamage × Damage[lvl-1] × upgLevel` 공식상 과거 +120%까지 폭증하던 문제는 이미 해결됨)",
-        "severity": "ok"
-      },
-      {
-        "skill": "Barbecue",
-        "issue": "T2 DoT 배율 ×2.5로 하향 완료 (과거 ×3.0이던 문제는 이미 해결됨)",
-        "severity": "ok"
-      },
-      {
-        "skill": "HeatWaves",
-        "issue": "T2 지면 화염 피해 +150%로 하향 완료 (과거 +200%였던 문제는 이미 해결됨)",
-        "severity": "ok"
-      },
       {
         "skill": "BringTheHeat",
         "issue": "화염 명중마다 배율 누적(FireBonus=1.4) — 스택 상한 확인 필요",
@@ -200,11 +165,6 @@
         "skill": "FrozenHeadPopper",
         "issue": "Probability=0.03 고정(레벨 무관) — T1/T2 차별화 없음",
         "severity": "watch"
-      },
-      {
-        "skill": "Hunter",
-        "issue": "T2 HP+60 회복으로 상향 완료 (과거 +40이던 문제는 이미 해결됨)",
-        "severity": "ok"
       }
     ]
   },
@@ -236,16 +196,16 @@
   "SWAT": {
     "name": "SWAT",
     "grade": "A",
-    "summary": "아머와 총기 피해 저항을 크게 늘려주는 생존 특화 퍼크. 과거 과도했던 RiotShield 저항은 이미 하향 조정됨.",
+    "summary": "아머와 총기 피해 저항을 크게 늘려주는 생존 특화 퍼크.",
     "role": "아머 최대치와 총기 피해 저항을 크게 늘려, 최전선에서도 오래 버틸 수 있는 생존력을 보장해주는 <font color=\"#FFD700\">최전방 방어</font> 퍼크입니다.",
-    "endgame": "Lv10에 HeavyArmor, AssaultArmor, RiotShield를 전부 채우면 <font color=\"#15d7fa\">아머</font>가 기본 대비 2배 이상 늘어나고 총기 피해도 상당히 경감되어, 최전선에서 오래 버틸 수 있는 수준에 도달합니다. 과거 과도했던 RiotShield 총기 저항(-90%)은 -60%로 이미 하향 조정되었습니다.",
+    "endgame": "Lv10에 HeavyArmor, AssaultArmor, RiotShield를 전부 채우면 <font color=\"#15d7fa\">아머</font>가 기본 대비 2배 이상 늘어나고 총기 피해도 상당히 경감되어, 최전선에서 오래 버틸 수 있는 수준에 도달합니다.",
     "strengths": [
       "최상위권 생존력, 아머 관리 특화"
     ],
     "weaknesses": [
       {
         "skill": "RiotShield",
-        "issue": "T2 총기 피해 -60%로 하향 완료 (과거 -90%였던 문제는 이미 해결됨). 다만 패시브 Armor+50%, HeavyArmor T2+75%, AssaultArmor T2(웨이브마다 아머 충전)와 합산 시 여전히 생존력이 매우 높음",
+        "issue": "T2 총기 피해 -60%. 패시브 Armor+50%, HeavyArmor T2+75%, AssaultArmor T2(웨이브마다 아머 충전)와 합산 시 생존력이 매우 높음",
         "severity": "watch"
       },
       {

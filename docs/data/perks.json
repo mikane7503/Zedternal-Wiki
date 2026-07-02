@@ -54,16 +54,6 @@
      "skill": "BerserkerRage",
      "issue": "아머가 남아있으면 발동하지 않음 — 초반 웨이브에 사실상 사장",
      "severity": "warn"
-    },
-    {
-     "skill": "Brawler",
-     "issue": "T2 피해 감소 +25%로 상향 완료 (과거 +10%뿐이던 문제는 이미 해결됨)",
-     "severity": "ok"
-    },
-    {
-     "skill": "Spartan",
-     "issue": "ZED타임 중 발사속도 +80%(T2)로 하향 완료 (과거 +120%였던 과도한 수치는 이미 정상화됨)",
-     "severity": "ok"
     }
    ],
    "unlocks": [
@@ -176,7 +166,7 @@
    "grade": "C",
    "summary": "폭발 화력이 베이스 퍼크 중 최상위. 수류탄 피해 스택이 최악 조합 시 기본 대비 ×4.5배까지 중첩되어 밸런스 조정이 필요할 만큼 강력함.",
    "role": "수류탄과 폭발물의 피해량을 크게 증폭시켜, 대형 제드까지 빠르게 정리하게 해주는 <font color=\"#FFD700\">광역 딜러</font> 퍼크입니다.",
-   "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+190%(약 ×2.9배)</font>까지 중첩됩니다. 과거 GrenadeDamage 패시브가 여러 차례 하향 조정되어(Lv10 기준 +150%→+80%→+40%) 현재는 예전만큼 극단적이지 않습니다.",
+   "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+190%(약 ×2.9배)</font>까지 중첩됩니다.",
    "passiveStats": [
     {
      "key": "Cfg_LZDamage",
@@ -219,18 +209,13 @@
    "weaknesses": [
     {
      "skill": "GrenadeDamage 패시브",
-     "issue": "Lv10 기준 +40%로 여러 차례 하향 조정됨(과거 +150%→+80%→+40%). Bombardier/DestroyerOfWorlds/QuickFuse(각 +50%)와 가산해도 현재는 총 +190% 수준으로 완화됨",
+     "issue": "Lv10 기준 +40%. Bombardier/DestroyerOfWorlds/QuickFuse(각 +50%)와 가산 시 총 +190% 수준",
      "severity": "watch"
     },
     {
      "skill": "Bombardier + QuickFuse + DestroyerOfWorlds",
      "issue": "3개 모두 수류탄 전용 피해 스킬 — 빌드 다양성 부재",
      "severity": "watch"
-    },
-    {
-     "skill": "SonicResistantRounds",
-     "issue": "T2 음파 피해 -60%로 하향 완료 (과거 -100% 완전 면역이었던 문제는 이미 해결됨)",
-     "severity": "ok"
     }
    ],
    "unlocks": [
@@ -279,7 +264,7 @@
      "label": "체력",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.125,
      "lv20": 0.25,
      "lv10Display": "+12.5%",
@@ -303,11 +288,6 @@
     "팀 생존 기여도 최상위권"
    ],
    "weaknesses": [
-    {
-     "skill": "Hemoglobin",
-     "issue": "T1 고정 피해 30, T2 100으로 상향 완료 (과거 T1 10이던 사실상 무의미한 수치는 이미 해결됨)",
-     "severity": "ok"
-    },
     {
      "skill": "AcidicRounds / Napalm",
      "issue": "두 스킬 로직이 사실상 동일(확률 DoT) — 개성 차별화 부족",
@@ -350,9 +330,9 @@
    "key": "Firebug",
    "name": "파이어버그",
    "grade": "B",
-   "summary": "화염/DoT 피해가 강력한 편이나, 과거 발견된 여러 과최적화 스킬은 이미 하향 조정되어 현재는 안정화된 상태.",
+   "summary": "화염/DoT 피해가 강력한 편이며 현재는 안정화된 상태.",
    "role": "화염과 지속피해(DoT)를 크게 증폭시켜, 좀비 무리를 태워버리게 해주는 <font color=\"#FFD700\">광역 소각 딜러</font> 퍼크입니다.",
-   "endgame": "Lv20에 Combustion, Barbecue, HeatWaves 스킬을 모두 채우면 <font color=\"#15d7fa\">화염/DoT 피해량</font>이 크게 늘어난 강력한 소각 딜러가 완성됩니다. 과거 발견된 이상값(Combustion T2 +120%, Barbecue DoT ×3.0, HeatWaves +200% 등)은 모두 하향 조정되어 현재는 정상 범위입니다.",
+   "endgame": "Lv20에 Combustion, Barbecue, HeatWaves 스킬을 모두 채우면 <font color=\"#15d7fa\">화염/DoT 피해량</font>이 크게 늘어난 강력한 소각 딜러가 완성됩니다.",
    "passiveStats": [
     {
      "key": "Cfg_Damage",
@@ -392,21 +372,6 @@
     "화염 특화 지속딜과 광역 제어력이 베이스 퍼크 중 최상위"
    ],
    "weaknesses": [
-    {
-     "skill": "Combustion",
-     "issue": "T2 +50%로 하향 완료 (`DefaultDamage × Damage[lvl-1] × upgLevel` 공식상 과거 +120%까지 폭증하던 문제는 이미 해결됨)",
-     "severity": "ok"
-    },
-    {
-     "skill": "Barbecue",
-     "issue": "T2 DoT 배율 ×2.5로 하향 완료 (과거 ×3.0이던 문제는 이미 해결됨)",
-     "severity": "ok"
-    },
-    {
-     "skill": "HeatWaves",
-     "issue": "T2 지면 화염 피해 +150%로 하향 완료 (과거 +200%였던 문제는 이미 해결됨)",
-     "severity": "ok"
-    },
     {
      "skill": "BringTheHeat",
      "issue": "화염 명중마다 배율 누적(FireBonus=1.4) — 스택 상한 확인 필요",
@@ -583,11 +548,6 @@
      "skill": "FrozenHeadPopper",
      "issue": "Probability=0.03 고정(레벨 무관) — T1/T2 차별화 없음",
      "severity": "watch"
-    },
-    {
-     "skill": "Hunter",
-     "issue": "T2 HP+60 회복으로 상향 완료 (과거 +40이던 문제는 이미 해결됨)",
-     "severity": "ok"
     }
    ],
    "unlocks": [
@@ -708,9 +668,9 @@
    "key": "SWAT",
    "name": "SWAT",
    "grade": "A",
-   "summary": "아머와 총기 피해 저항을 크게 늘려주는 생존 특화 퍼크. 과거 과도했던 RiotShield 저항은 이미 하향 조정됨.",
+   "summary": "아머와 총기 피해 저항을 크게 늘려주는 생존 특화 퍼크.",
    "role": "아머 최대치와 총기 피해 저항을 크게 늘려, 최전선에서도 오래 버틸 수 있는 생존력을 보장해주는 <font color=\"#FFD700\">최전방 방어</font> 퍼크입니다.",
-   "endgame": "Lv10에 HeavyArmor, AssaultArmor, RiotShield를 전부 채우면 <font color=\"#15d7fa\">아머</font>가 기본 대비 2배 이상 늘어나고 총기 피해도 상당히 경감되어, 최전선에서 오래 버틸 수 있는 수준에 도달합니다. 과거 과도했던 RiotShield 총기 저항(-90%)은 -60%로 이미 하향 조정되었습니다.",
+   "endgame": "Lv10에 HeavyArmor, AssaultArmor, RiotShield를 전부 채우면 <font color=\"#15d7fa\">아머</font>가 기본 대비 2배 이상 늘어나고 총기 피해도 상당히 경감되어, 최전선에서 오래 버틸 수 있는 수준에 도달합니다.",
    "passiveStats": [
     {
      "key": "Cfg_Armor",
@@ -752,7 +712,7 @@
    "weaknesses": [
     {
      "skill": "RiotShield",
-     "issue": "T2 총기 피해 -60%로 하향 완료 (과거 -90%였던 문제는 이미 해결됨). 다만 패시브 Armor+50%, HeavyArmor T2+75%, AssaultArmor T2(웨이브마다 아머 충전)와 합산 시 여전히 생존력이 매우 높음",
+     "issue": "T2 총기 피해 -60%. 패시브 Armor+50%, HeavyArmor T2+75%, AssaultArmor T2(웨이브마다 아머 충전)와 합산 시 생존력이 매우 높음",
      "severity": "watch"
     },
     {
@@ -964,7 +924,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BugFixing",
@@ -995,7 +956,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Deflector",
@@ -1026,7 +988,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FLAK",
@@ -1057,7 +1020,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Fencer",
@@ -1088,7 +1052,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.300000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Indifferent",
@@ -1119,7 +1084,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.300000; 구 0.600000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NoiseCancelling",
@@ -1150,7 +1116,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.150000; 구 0.300000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SteelSkin",
@@ -1181,7 +1148,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.150000; 구 0.300000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Stoic",
@@ -1212,7 +1180,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.150000; 구 0.300000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ThickSkin",
@@ -1243,7 +1212,8 @@
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -1271,11 +1241,11 @@
      "label": "레벨 당 근접 피해량",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.0125,
      "lv20": 0.0125,
-     "lv10Display": "+1.2%",
-     "lv20Display": "+1.2%",
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
      "scaling": false,
      "capstoneLevel": null
     },
@@ -1297,11 +1267,11 @@
      "label": "레벨 당 공격 속도",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.0075,
      "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
      "scaling": false,
      "capstoneLevel": null
     },
@@ -1427,18 +1397,18 @@
    "endgame": "레벨당 <font color=\"#15d7fa\">근접 피해+공격 속도</font>가 누적되고, 스킬로 스택형 보너스(AdrenalineRush, ChainFury 등)를 쌓으면 웨이브 후반으로 갈수록 근접 화력이 눈덩이처럼 강해지는 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#FF4500\">브롤러즈 엣지:</font> 레벨당 <font color=\"#FFB347\">근접 공격력</font> <font color=\"#FFFFFF\">+6%</font>, <font color=\"#FFB347\">피해 저항</font> <font color=\"#FFFFFF\">+2%</font>, <font color=\"#FFB347\">공격 속도</font> <font color=\"#FFFFFF\">+2%</font>",
-     "text": "브롤러즈 엣지: 레벨당 근접 공격력 +6%, 피해 저항 +2%, 공격 속도 +2%",
+     "raw": "<font color=\"#FF4500\">브롤러즈 엣지:</font> 레벨당 <font color=\"#FFB347\">근접 공격력</font> <font color=\"#FFFFFF\">+1.25%</font>, <font color=\"#FFB347\">피해 저항</font> <font color=\"#FFFFFF\">+0.5%</font>, <font color=\"#FFB347\">공격 속도</font> <font color=\"#FFFFFF\">+0.75%</font>",
+     "text": "브롤러즈 엣지: 레벨당 근접 공격력 +1.25%, 피해 저항 +0.5%, 공격 속도 +0.75%",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">격돌의 한가운데</font> - 5m 이내의 적 하나당 근접 공격력이 8%, 피해 저항이 5% 증가합니다 (최대 5명).",
-     "text": "레벨 10: 격돌의 한가운데 - 5m 이내의 적 하나당 근접 공격력이 8%, 피해 저항이 5% 증가합니다 (최대 5명).",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">격돌의 한가운데</font> - 5m 이내의 적 하나당 근접 공격력이 1%, 피해 저항이 2.5% 증가합니다 (최대 5명).",
+     "text": "레벨 10: 격돌의 한가운데 - 5m 이내의 적 하나당 근접 공격력이 1%, 피해 저항이 2.5% 증가합니다 (최대 5명).",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">폭동 진압</font> - 주변에 적이 <font color=\"#FFFFFF\">3명 이상</font>일 경우 <font color=\"#FFB347\">넘어짐에 면역</font>이 되며, <font color=\"#FFFFFF\">5명 이상</font>일 경우 이동 속도가 <font color=\"#FFFFFF\">+30%</font>, 공격 속도가 <font color=\"#FFFFFF\">+20%</font> 증가합니다.",
-     "text": "레벨 20: 폭동 진압 - 주변에 적이 3명 이상일 경우 넘어짐에 면역이 되며, 5명 이상일 경우 이동 속도가 +30%, 공격 속도가 +20% 증가합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">폭동 진압</font> - 주변에 적이 <font color=\"#FFFFFF\">3명 이상</font>일 경우 <font color=\"#FFB347\">넘어짐에 면역</font>이 되며, <font color=\"#FFFFFF\">5명 이상</font>일 경우 이동 속도가 <font color=\"#FFFFFF\">+15%</font>, 공격 속도가 <font color=\"#FFFFFF\">+10%</font> 증가합니다.",
+     "text": "레벨 20: 폭동 진압 - 주변에 적이 3명 이상일 경우 넘어짐에 면역이 되며, 5명 이상일 경우 이동 속도가 +15%, 공격 속도가 +10% 증가합니다.",
      "isCapstone": true
     },
     {
@@ -1505,15 +1475,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BatteringRam",
      "name": "공성퇴",
-     "standardDesc": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1초",
-     "deluxeDesc": "질주 저항력: +30% · 충전 피해량: +300% · 충전 시간창: 1.5초",
-     "standardDescRaw": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1초",
-     "deluxeDescRaw": "질주 저항력: +30% · 충전 피해량: +300% · 충전 시간창: 1.5초",
+     "standardDesc": "돌격: 질주 중 피해 저항이 +20% 증가합니다. 질주를 멈춘 후 1초 이내에 가하는 첫 근접 공격은 피해량이 2배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
+     "deluxeDesc": "돌격: 질주 중 피해 저항이 +30% 증가합니다. 질주를 멈춘 후 1.5초 이내에 가하는 첫 근접 공격은 피해량이 3배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
+     "standardDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 +20% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 2배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 +30% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1.5초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 3배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
      "rawValues": [
       {
        "key": "SprintResistance",
@@ -1564,7 +1535,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ChainFury",
@@ -1623,7 +1595,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Counterforce",
@@ -1668,7 +1641,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CrowdSurge",
@@ -1769,7 +1743,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Deadlock",
@@ -1814,15 +1789,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HoldTheLine",
      "name": "전선을 유지하세요",
-     "standardDesc": "전선 사수: 제자리에 멈춰 서 있는 동안 근접 공격력이 +30% 증가하고 피해 저항이 +8.3% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
-     "deluxeDesc": "전선 사수: 천천히 이동하거나 멈춰 서 있는 동안 근접 공격력이 +50% 증가하고 피해 저항이 +13.3% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
-     "standardDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">제자리에 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +30% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +8.3% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">천천히 이동하거나 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +50% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +13.3% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
+     "standardDesc": "전선 사수: 제자리에 멈춰 서 있는 동안 근접 공격력이 +30% 증가하고 피해 저항이 +8.33% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
+     "deluxeDesc": "전선 사수: 천천히 이동하거나 멈춰 서 있는 동안 근접 공격력이 +50% 증가하고 피해 저항이 +13.33% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
+     "standardDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">제자리에 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +30% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +8.33% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">천천히 이동하거나 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +50% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +13.33% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
      "rawValues": [
       {
        "key": "MeleeDamageBonus",
@@ -1843,14 +1819,14 @@
        "label": "저항력 보너스",
        "value": 0.083333,
        "unit": "percent",
-       "display": "+8.3%"
+       "display": "+8.33%"
       },
       {
        "key": "ResistanceBonus",
        "label": "저항력 보너스",
        "value": 0.133333,
        "unit": "percent",
-       "display": "+13.3%"
+       "display": "+13.33%"
       }
      ],
      "hasKorText": true,
@@ -1859,15 +1835,16 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.250000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NoSurrender",
      "name": "항복하지 않음",
-     "standardDesc": "항복 금지: 체력이 +5% 미만일 때 피해 저항이 +8.3% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 25 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
-     "deluxeDesc": "항복 금지: 체력이 +10% 미만일 때 피해 저항이 +11.7% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 40 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
-     "standardDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+5% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +8.3% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 25 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+10% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +11.7% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 40 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
+     "standardDesc": "항복 금지: 체력이 +5% 미만일 때 피해 저항이 +8.33% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 25 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
+     "deluxeDesc": "항복 금지: 체력이 +10% 미만일 때 피해 저항이 +11.67% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 40 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
+     "standardDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+5% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +8.33% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 25 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+10% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +11.67% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 40 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
      "rawValues": [
       {
        "key": "HPThreshold",
@@ -1902,14 +1879,14 @@
        "label": "저항력",
        "value": 0.083333,
        "unit": "percent",
-       "display": "+8.3%"
+       "display": "+8.33%"
       },
       {
        "key": "Resistance",
        "label": "저항력",
        "value": 0.116667,
        "unit": "percent",
-       "display": "+11.7%"
+       "display": "+11.67%"
       }
      ],
      "hasKorText": true,
@@ -1918,7 +1895,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.250000; 구 0.350000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PainEcho",
@@ -1977,7 +1955,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Shockwave",
@@ -2008,7 +1987,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 자동 광역 넘어뜨리기(\"지진 스킬\", 근접3-5킬마다 5-7m 전체 넘어뜨림)"
+     "disabledNote": "2026-07-02 제거: 자동 광역 넘어뜨리기(\"지진 스킬\", 근접3-5킬마다 5-7m 전체 넘어뜨림)",
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -2090,11 +2070,11 @@
    "skills": [
     {
      "key": "BloodRush",
-     "name": "영혼 도둑",
-     "standardDesc": "체력: -30% · 연사 속도: +30%",
-     "deluxeDesc": "체력: -50% · 연사 속도: +50%",
-     "standardDescRaw": "체력: -30% · 연사 속도: +30%",
-     "deluxeDescRaw": "체력: -50% · 연사 속도: +50%",
+     "name": "피의 질주",
+     "standardDesc": "최대 체력이 30 감소하는 대신, 모든 무기의 발사 속도가 +30% 증가합니다.",
+     "deluxeDesc": "최대 체력이 50 감소하는 대신, 모든 무기의 발사 속도가 +50% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">30</font> 감소하는 대신, 모든 무기의 <font color=\"#42e087\">발사 속도</font>가 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">50</font> 감소하는 대신, 모든 무기의 <font color=\"#42e087\">발사 속도</font>가 <font color=\"#84d6d0\">+50%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2131,7 +2111,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DealWithTheDevil",
@@ -2171,20 +2152,21 @@
       }
      ],
      "hasKorText": true,
-     "note": "T2가 두 지표 모두 개선됨(치유 페널티 -85%→-70%로 완화, 헤드샷 피해 +40%→+60%로 증가) — 정상적인 디럭스 업그레이드이며 이상값이 아님. 단, 게임 내 표준/디럭스 설명 문구는 치유 -80%/-60%, 헤드샷 +80%/+120%로 적혀 있어 현재 ini 수치와 맞지 않음 — 문구가 예전 값으로 남아있는 것으로 추정.",
+     "note": null,
      "isPatched": false,
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NoStringsOnMe",
-     "name": "No Strings On Me",
-     "standardDesc": "체력: -40% · 가속: +15%",
-     "deluxeDesc": "체력: -60% · 가속: +30%",
-     "standardDescRaw": "체력: -40% · 가속: +15%",
-     "deluxeDescRaw": "체력: -60% · 가속: +30%",
+     "name": "자유로운 영혼",
+     "standardDesc": "최대 체력이 40 감소하지만, ZED를 처치할 때마다 이동 속도가 +15% 증가합니다.",
+     "deluxeDesc": "최대 체력이 60 감소하지만, ZED를 처치할 때마다 이동 속도가 +30% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">+15%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">60</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2221,15 +2203,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "OdeToGreed",
      "name": "탐욕에 대한 송가",
-     "standardDesc": "체력: -25% · 도쉬: 250 도쉬",
-     "deluxeDesc": "체력: -50% · 도쉬: 500 도쉬",
-     "standardDescRaw": "체력: -25% · 도쉬: 250 도쉬",
-     "deluxeDescRaw": "체력: -50% · 도쉬: 500 도쉬",
+     "standardDesc": "최대 체력이 25 감소하는 대신, 각 웨이브 시작 시 250 도쉬를 획득합니다.",
+     "deluxeDesc": "최대 체력이 50 감소하는 대신, 각 웨이브 시작 시 500 도쉬를 획득합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">25</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">250 도쉬</font>를 획득합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">50</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">500 도쉬</font>를 획득합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2264,17 +2247,18 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PainSplit",
      "name": "통증 분할",
-     "standardDesc": "체력: -5% · 치유: +35%",
-     "deluxeDesc": "체력: -10% · 치유: +50%",
-     "standardDescRaw": "체력: -5% · 치유: +35%",
-     "deluxeDescRaw": "체력: -10% · 치유: +50%",
+     "standardDesc": "최대 체력이 5 감소하는 대신, 자신이 받는 모든 치유량이 +35% 증가합니다.",
+     "deluxeDesc": "최대 체력이 10 감소하는 대신, 자신이 받는 모든 치유량이 +50% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">+35%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">+50%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2311,14 +2295,15 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PinpointAccuracy",
      "name": "핀포인트 정확도",
-     "standardDesc": "체력: -10% · 반동: +50% · 흔들림: +50%",
+     "standardDesc": "최대 체력이 10 감소하지만, 모든 무기의 반동이 +50% 감소하고 무기 흔들림이 줄어듭니다.",
      "deluxeDesc": "체력: -25% · 반동: +75% · 흔들림: +100%",
-     "standardDescRaw": "체력: -10% · 반동: +50% · 흔들림: +50%",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하지만, 모든 무기의 <font color=\"#42e087\">반동</font>이 <font color=\"#84d6d0\">+50%</font> 감소하고 <font color=\"#84d6d0\">무기 흔들림</font>이 줄어듭니다.",
      "deluxeDescRaw": "체력: -25% · 반동: +75% · 흔들림: +100%",
      "rawValues": [
       {
@@ -2370,15 +2355,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PowerTransfer",
      "name": "전력 전송",
-     "standardDesc": "체력: -5% · 피해량: +15%",
-     "deluxeDesc": "체력: -10% · 피해량: +30%",
-     "standardDescRaw": "체력: -5% · 피해량: +15%",
-     "deluxeDescRaw": "체력: -10% · 피해량: +30%",
+     "standardDesc": "최대 체력이 5 감소하지만, 소총 무기의 피해량이 +15% 증가합니다.",
+     "deluxeDesc": "최대 체력이 10 감소하지만, 소총 무기의 피해량이 +30% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">+15%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2415,7 +2401,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Reaper",
@@ -2446,15 +2433,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SoulStealer",
      "name": "영혼 도둑",
-     "standardDesc": "체력: -30% · 도쉬: 2 도쉬",
-     "deluxeDesc": "체력: -60% · 도쉬: 4 도쉬",
-     "standardDescRaw": "체력: -30% · 도쉬: 2 도쉬",
-     "deluxeDescRaw": "체력: -60% · 도쉬: 4 도쉬",
+     "standardDesc": "최대 체력이 30 감소하지만, ZED를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
+     "deluxeDesc": "최대 체력이 60 감소하지만, ZED를 처치할 때마다 4 도쉬를 추가로 획득합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">30</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">2 도쉬</font>를 추가로 획득합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">60</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">4 도쉬</font>를 추가로 획득합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2489,17 +2477,18 @@
      "note": "체력 30%/60% 차감이 있으나 엔진 클램프(Cap_MinHealth=1)가 하한을 보장해 자멸 불가 — 적절.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Triskelion",
      "name": "트리스켈리온",
-     "standardDesc": "체력: -5% · 피해량: +30%",
-     "deluxeDesc": "체력: -10% · 피해량: +60%",
-     "standardDescRaw": "체력: -5% · 피해량: +30%",
-     "deluxeDescRaw": "체력: -10% · 피해량: +60%",
+     "standardDesc": "최대 체력이 5 감소하는 대신, 모든 무기의 속성(원소) 피해량이 +30% 증가합니다.",
+     "deluxeDesc": "최대 체력이 10 감소하는 대신, 모든 무기의 속성(원소) 피해량이 +60% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">+60%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2536,7 +2525,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -2743,7 +2733,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Arachnophobia",
@@ -2774,7 +2765,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Extinguisher",
@@ -2805,7 +2797,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GoreFasting",
@@ -2836,7 +2829,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Muted",
@@ -2867,7 +2861,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Pounded",
@@ -2898,7 +2893,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "RestrainingOrder",
@@ -2929,7 +2925,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Technophobe",
@@ -2960,7 +2957,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Untouchable",
@@ -2991,7 +2989,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Weightwatcher",
@@ -3022,7 +3021,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -3215,7 +3215,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BattlefieldAwareness",
@@ -3246,15 +3247,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DeepReserves",
      "name": "심층 매장량",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
+     "standardDesc": "탄창 용량이 +25%, 예비 탄약이 +20% 증가합니다.",
+     "deluxeDesc": "탄창 용량이 +40%, 예비 탄약이 +35% 증가합니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">탄창 용량</font>이 <font color=\"#77d914\">+25%</font>, <font color=\"#15d7fa\">예비 탄약</font>이 <font color=\"#77d914\">+20%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">탄창 용량</font>이 <font color=\"#77d914\">+40%</font>, <font color=\"#15d7fa\">예비 탄약</font>이 <font color=\"#77d914\">+35%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "MagCapacity",
@@ -3291,7 +3293,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HuntersInstinct",
@@ -3350,7 +3353,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "IronFortress",
@@ -3381,7 +3385,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "LuckySalvage",
@@ -3397,7 +3402,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "LuckyShot",
@@ -3428,29 +3434,30 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SuppressiveFire",
      "name": "진압 사격",
-     "standardDesc": "소총의 연사 속도가 +10.7% 증가하고 탄 퍼짐이 +20% 감소합니다.",
-     "deluxeDesc": "소총의 연사 속도가 +16.7% 증가하고 탄 퍼짐이 +35% 감소합니다.",
-     "standardDescRaw": "소총의 <font color=\"#15d7fa\">연사 속도</font>가 <font color=\"#77d914\">+10.7%</font> 증가하고 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">+20%</font> 감소합니다.",
-     "deluxeDescRaw": "소총의 <font color=\"#15d7fa\">연사 속도</font>가 <font color=\"#77d914\">+16.7%</font> 증가하고 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">+35%</font> 감소합니다.",
+     "standardDesc": "소총의 연사 속도가 +10.71% 증가하고 탄 퍼짐이 +20% 감소합니다.",
+     "deluxeDesc": "소총의 연사 속도가 +16.67% 증가하고 탄 퍼짐이 +35% 감소합니다.",
+     "standardDescRaw": "소총의 <font color=\"#15d7fa\">연사 속도</font>가 <font color=\"#77d914\">+10.71%</font> 증가하고 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">+20%</font> 감소합니다.",
+     "deluxeDescRaw": "소총의 <font color=\"#15d7fa\">연사 속도</font>가 <font color=\"#77d914\">+16.67%</font> 증가하고 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">+35%</font> 감소합니다.",
      "rawValues": [
       {
        "key": "RateOfFireInv",
        "label": "연사 속도",
        "value": 0.1071,
        "unit": "percent",
-       "display": "+10.7%"
+       "display": "+10.71%"
       },
       {
        "key": "RateOfFireInv",
        "label": "연사 속도",
        "value": 0.1667,
        "unit": "percent",
-       "display": "+16.7%"
+       "display": "+16.67%"
       },
       {
        "key": "SpreadReduction",
@@ -3473,7 +3480,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SymbioticRounds",
@@ -3532,7 +3540,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ThermalDrill",
@@ -3591,7 +3600,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -3723,13 +3733,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">트윈 스트라이크</font> - 공격 시 <font color=\"#FFFFFF\">45%</font> 확률로 <font color=\"#FF9933\">두 번 명중</font>합니다.",
-     "text": "레벨 10: 트윈 스트라이크 - 공격 시 45% 확률로 두 번 명중합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">트윈 스트라이크</font> - 공격 시 <font color=\"#FFFFFF\">25%</font> 확률로 <font color=\"#FF9933\">두 번 명중</font>합니다.",
+     "text": "레벨 10: 트윈 스트라이크 - 공격 시 25% 확률로 두 번 명중합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">분노 모드</font> - 75킬마다 <font color=\"#FFFFFF\">8초 동안</font> <font color=\"#FFFFFF\">분노 모드</font>가 발동합니다: 연사 속도 <font color=\"#FFFFFF\">+100%</font> 및 피해량 <font color=\"#FFFFFF\">3배</font>.",
-     "text": "레벨 20: 분노 모드 - 75킬마다 8초 동안 분노 모드가 발동합니다: 연사 속도 +100% 및 피해량 3배.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">분노 모드</font> - 75킬마다 <font color=\"#FFFFFF\">8초 동안</font> <font color=\"#FFFFFF\">분노 모드</font>가 발동합니다: 연사 속도 <font color=\"#FFFFFF\">+100%</font> 및 피해량 <font color=\"#FFFFFF\">3.3배</font>.",
+     "text": "레벨 20: 분노 모드 - 75킬마다 8초 동안 분노 모드가 발동합니다: 연사 속도 +100% 및 피해량 3.3배.",
      "isCapstone": true
     }
    ],
@@ -3770,7 +3780,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Bloodthirst",
@@ -3801,7 +3812,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CascadingMassacre",
@@ -3841,12 +3853,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: HuntDown과 합산 +125% → 각각 하향되어 총합 +65%.",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 0.08/0.15(5스택+75%) → 5스택+40%. HuntDown과 합산 시 Hydra FuryMode 너프(3배→1.2배) 취지 훼손 방지",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "EndlessRampage",
@@ -3877,7 +3890,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HuntDown",
@@ -3910,12 +3924,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: CascadingMassacre와 합산 +125% → 총합 +65%.",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 0.05/0.10(5스택+50%) → 5스택+25%. CascadingMassacre와 합산 시 최대 +65%로 억제(구 +125%)",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "LernaeanImmortality",
@@ -3953,15 +3968,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Overkill",
      "name": "과잉살",
-     "standardDesc": "초과 휴대 배율: ×0.5 · 최대 저장된 피해량: 500",
-     "deluxeDesc": "초과 휴대 배율: ×0.75 · 최대 저장된 피해량: 500",
-     "standardDescRaw": "초과 휴대 배율: ×0.5 · 최대 저장된 피해량: 500",
-     "deluxeDescRaw": "초과 휴대 배율: ×0.75 · 최대 저장된 피해량: 500",
+     "standardDesc": "적을 처치하고 남은 잉여(초과) 피해량의 +50%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
+     "deluxeDesc": "적을 처치하고 남은 잉여(초과) 피해량의 +75%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
+     "standardDescRaw": "적을 처치하고 남은 잉여(초과) 피해량의 +50%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
+     "deluxeDescRaw": "적을 처치하고 남은 잉여(초과) 피해량의 +75%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
      "rawValues": [
       {
        "key": "ExcessCarryMult",
@@ -3991,7 +4007,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PrimalRoar",
@@ -4029,15 +4046,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 자동 광역 넘어뜨리기(25킬마다 6-10m 전체 스턴/넘어뜨림)"
+     "disabledNote": "2026-07-02 제거: 자동 광역 넘어뜨리기(25킬마다 6-10m 전체 스턴/넘어뜨림)",
+     "noData": false
     },
     {
      "key": "ReflectedFury",
      "name": "반사된 분노",
-     "standardDesc": "피해량 반사 배율: ×0.5 · 재사용 대기시간: 10초 · 폭발 범위: 400",
-     "deluxeDesc": "피해량 반사 배율: ×1 · 재사용 대기시간: 10초 · 폭발 범위: 400",
-     "standardDescRaw": "피해량 반사 배율: ×0.5 · 재사용 대기시간: 10초 · 폭발 범위: 400",
-     "deluxeDescRaw": "피해량 반사 배율: ×1 · 재사용 대기시간: 10초 · 폭발 범위: 400",
+     "standardDesc": "피격 시, 받은 피해의 +50%만큼을 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 10초.",
+     "deluxeDesc": "피격 시, 받은 피해의 +100%를 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 10초.",
+     "standardDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">+50%</font>만큼을 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">10초</font>.",
+     "deluxeDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">+100%</font>를 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">10초</font>.",
      "rawValues": [
       {
        "key": "DamageReflectMult",
@@ -4074,7 +4092,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SymphonyOfSlaughter",
@@ -4133,7 +4152,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -4261,7 +4281,7 @@
     }
    ],
    "role": "<font color=\"#FFD700\">ZED타임</font> 중 이동속도와 피해량을 대폭 증폭시켜주고, 무제한으로 ZED타임을 늘리는 능력까지 부여하는 최종 코만도 심화 퍼크입니다.",
-   "endgame": "Lv20 이동속도+30%, <font color=\"#15d7fa\">ZED타임 피해+25%</font>, 무제한 ZED타임 연장 캡스톤까지 갖추면 ZED타임 한 번으로 웨이브 전체를 정리할 수 있는 시간 조작형 극딜러가 완성됩니다. (게임 내 캡스톤 설명 문구는 과거 수치인 +60%/+50%로 표기되어 있어 ini 최신값과 차이가 있을 수 있습니다.)",
+   "endgame": "Lv20 이동속도+30%, <font color=\"#15d7fa\">ZED타임 피해+25%</font>, 무제한 ZED타임 연장 캡스톤까지 갖추면 ZED타임 한 번으로 웨이브 전체를 정리할 수 있는 시간 조작형 극딜러가 완성됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#9632ff\">시간 가속도:</font> <font color=\"#d8b0ff\">ZED 타임 중 이동 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -4274,13 +4294,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">시간의 숙련</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+40%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+30%</font>. 헤드샷 시 <font color=\"#FFFFFF\">30%</font> 확률로 <font color=\"#d8b0ff\">ZED 타임이 연장</font>됩니다.",
-     "text": "레벨 10: 시간의 숙련 - 이동 속도 +40%, ZED 타임 중 피해량 +30%. 헤드샷 시 30% 확률로 ZED 타임이 연장됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">시간의 숙련</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+20%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+15%</font>. 헤드샷 시 <font color=\"#FFFFFF\">30%</font> 확률로 <font color=\"#d8b0ff\">ZED 타임이 연장</font>됩니다.",
+     "text": "레벨 10: 시간의 숙련 - 이동 속도 +20%, ZED 타임 중 피해량 +15%. 헤드샷 시 30% 확률로 ZED 타임이 연장됩니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">타임 뱅커</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+60%</font> (정상 속도), <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+50%</font>. <font color=\"#d8b0ff\">무제한 연장 가능</font>. ZED 타임 <font color=\"#FFFFFF\">120초</font> 유지 시 <font color=\"#FFFFFF\">500 도쉬</font>를 획득합니다.",
-     "text": "레벨 20: 타임 뱅커 - 이동 속도 +60% (정상 속도), ZED 타임 중 피해량 +50%. 무제한 연장 가능. ZED 타임 120초 유지 시 500 도쉬를 획득합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">타임 뱅커</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> (정상 속도), <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+25%</font>. <font color=\"#d8b0ff\">무제한 연장 가능</font>. ZED 타임 <font color=\"#FFFFFF\">120초</font> 유지 시 <font color=\"#FFFFFF\">500 도쉬</font>를 획득합니다.",
+     "text": "레벨 20: 타임 뱅커 - 이동 속도 +30% (정상 속도), ZED 타임 중 피해량 +25%. 무제한 연장 가능. ZED 타임 120초 유지 시 500 도쉬를 획득합니다.",
      "isCapstone": true
     }
    ],
@@ -4314,15 +4334,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "AgonizingPresence",
      "name": "고통스러운 존재",
-     "standardDesc": "휘청임 보너스: +25% · 넉다운 보너스: +25% · 넉다운 잔여: +25%",
-     "deluxeDesc": "휘청임 보너스: +50% · 넉다운 보너스: +50% · 넉다운 잔여: +25%",
-     "standardDescRaw": "휘청임 보너스: +25% · 넉다운 보너스: +25% · 넉다운 잔여: +25%",
-     "deluxeDescRaw": "휘청임 보너스: +50% · 넉다운 보너스: +50% · 넉다운 잔여: +25%",
+     "standardDesc": "ZED 타임 동안 가하는 공격의 비틀거림 및 넉다운 효과가 +25% 증가합니다.",
+     "deluxeDesc": "ZED 타임 동안 가하는 공격의 비틀거림 및 넉다운 효과가 +50% 증가합니다. ZED 타임이 끝난 후에도 넉다운 보너스는 +25%로 유지됩니다.",
+     "standardDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 가하는 공격의 <font color=\"#FFFFFF\">비틀거림</font> 및 <font color=\"#FFFFFF\">넉다운</font> 효과가 <font color=\"#d8b0ff\">+25%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 가하는 공격의 <font color=\"#FFFFFF\">비틀거림</font> 및 <font color=\"#FFFFFF\">넉다운</font> 효과가 <font color=\"#d8b0ff\">+50%</font> 증가합니다. ZED 타임이 끝난 후에도 넉다운 보너스는 <font color=\"#d8b0ff\">+25%</font>로 유지됩니다.",
      "rawValues": [
       {
        "key": "StumbleBonus",
@@ -4366,7 +4387,8 @@
      "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.500000; 구 1.000000; 구 0.500000; 구 1.000000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ChronoCarapace",
@@ -4404,7 +4426,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Chronoshift",
@@ -4435,7 +4458,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "EternalSuffering",
@@ -4466,7 +4490,8 @@
      "patchNote": "CC 남발 축소(2026-07-02), 구 0.400000; 구 0.800000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PhantomPain",
@@ -4482,7 +4507,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PocketDimension",
@@ -4527,7 +4553,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TemporalAbsolution",
@@ -4543,7 +4570,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TemporalRupture",
@@ -4574,7 +4602,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TemporalSiphon",
@@ -4619,7 +4648,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "WarpPhase",
@@ -4650,7 +4680,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 11,
@@ -4699,7 +4730,7 @@
    ],
    "fixedStats": [],
    "role": "수류탄 피해량을 여러 스킬로 겹겹이 증폭시켜주는 <font color=\"#FFD700\">수류탄 특화</font> 폭발 스페셜리스트입니다.",
-   "endgame": "Elmo, MadBomber, SlowCooker, ArmedAndDangerous 스킬을 전부 채우면 <font color=\"#15d7fa\">수류탄 피해</font>가 크게 중첩되도록 설계되어 있었으나, 베이스 퍼크 Demolitionist의 수류탄 스택 문제 재발을 막기 위해 이미 하향 조정된 상태입니다.",
+   "endgame": "Elmo, MadBomber, SlowCooker, ArmedAndDangerous 스킬을 전부 채우면 <font color=\"#15d7fa\">수류탄 피해</font>가 크게 중첩되는 폭발 특화 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "모든 <font color=\"#15d7fa\">수류탄 피해량</font>이 <font color=\"#77d914\">레벨업당 +20% · 만렙(Lv20) +400%</font> 증가합니다.",
@@ -4737,12 +4768,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: 4개 수류탄 스킬 동시 장착 시 합산 +260% → +145%로 조정.",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 0.3/0.5 → Maniac 수류탄계열 4스킬 동시장착 시 Demo 패시브(+80%) 위 중첩 억제 (worst-case 가정, 인게임 확인 권장)",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Arsonist",
@@ -4773,7 +4805,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BargainHunter",
@@ -4804,7 +4837,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Dauntless",
@@ -4835,7 +4869,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Elmo",
@@ -4861,12 +4896,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: 위와 동일한 조정의 일부.",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 0.5/1.0 → Maniac 4종 스킬 중 최고값이라 우선 하향 (worst-case 가정, 인게임 확인 권장)",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Fanatic",
@@ -4897,7 +4933,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Fireproof",
@@ -4913,7 +4950,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MadBomber",
@@ -4939,12 +4977,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: 위와 동일한 조정의 일부.",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 0.3/0.6 → Maniac 수류탄계열 중첩 억제",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SafetyFirst",
@@ -4960,7 +4999,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SlowCooker",
@@ -4986,12 +5026,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: 위와 동일한 조정의 일부.",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 0.25/0.5 → Maniac 수류탄계열 중첩 억제. 4스킬 T2합 2.6(+260%)→1.45(+145%)로 조정",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -5139,7 +5180,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Bellows",
@@ -5170,7 +5212,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ChainReaction",
@@ -5201,7 +5244,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Crucible",
@@ -5232,7 +5276,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "EmberHarvest",
@@ -5277,7 +5322,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "EternalForge",
@@ -5293,7 +5339,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "InfernoRounds",
@@ -5338,7 +5385,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Ironclad",
@@ -5369,7 +5417,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Pyroclasm",
@@ -5400,7 +5449,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SlagArmor",
@@ -5431,7 +5481,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TemperedSteel",
@@ -5462,7 +5513,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 11,
@@ -5486,7 +5538,7 @@
    "passiveStats": [],
    "fixedStats": [],
    "role": "처치할 때마다 카운터를 쌓아, 임계치에 도달하면 일정 시간 동안 처치하는 적을 전부 <font color=\"#FFD700\">연쇄 폭발</font>시켜주는 강력한 트리거형 퍼크입니다.",
-   "endgame": "핵심 로직은 설계상 적절하나, 패시브 2종(<font color=\"#15d7fa\">피해/여분탄약 성장치</font>)이 밸런스 조정용 ini 파일 부재로 현재 조정 불가 상태입니다.",
+   "endgame": "패시브 2종(<font color=\"#15d7fa\">피해/여분탄약 성장치</font>)은 레벨에 관계없이 고정된 수치로 적용됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">모든 무기 피해량</font> <font color=\"#FFFFFF\">+?(하드코딩·비공개)</font>",
@@ -5551,7 +5603,7 @@
      "label": "전투 준비태세",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -5631,13 +5683,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">치유의 오라</font> - <font color=\"#FFFFFF\">6m</font> 이내의 아군이 <font color=\"#FFFFFF\">초당 1 HP</font>를 회복합니다.",
-     "text": "레벨 10: 치유의 오라 - 6m 이내의 아군이 초당 1 HP를 회복합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">치유의 오라</font> - <font color=\"#FFFFFF\">6m</font> 이내의 아군이 <font color=\"#FFFFFF\">초당 0.25 HP</font>를 회복합니다.",
+     "text": "레벨 10: 치유의 오라 - 6m 이내의 아군이 초당 0.25 HP를 회복합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">기적의 회복</font> - 치유 시 <font color=\"#FFFFFF\">15%</font> 확률로 대상의 체력을 <font color=\"#00FF7F\">완전히 회복</font>시킵니다.",
-     "text": "레벨 20: 기적의 회복 - 치유 시 15% 확률로 대상의 체력을 완전히 회복시킵니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">기적의 회복</font> - 치유 시 <font color=\"#FFFFFF\">5%</font> 확률로 대상의 체력을 <font color=\"#00FF7F\">완전히 회복</font>시킵니다.",
+     "text": "레벨 20: 기적의 회복 - 치유 시 5% 확률로 대상의 체력을 완전히 회복시킵니다.",
      "isCapstone": true
     }
    ],
@@ -5671,15 +5723,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DivineFortitude",
      "name": "신성한 용기",
-     "standardDesc": "체력 보너스: +10% · 방어력 보너스: +10%",
-     "deluxeDesc": "체력 보너스: +25% · 방어력 보너스: +25%",
-     "standardDescRaw": "체력 보너스: +10% · 방어력 보너스: +10%",
-     "deluxeDescRaw": "체력 보너스: +25% · 방어력 보너스: +25%",
+     "standardDesc": "최대 체력과 최대 방어력이 +10% 증가합니다.",
+     "deluxeDesc": "디럭스. 최대 체력 및 최대 방어력이 +25% 증가합니다.",
+     "standardDescRaw": "최대 체력과 최대 방어력이 +10% 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> <font color=\"#ff6666\">최대 체력</font> 및 <font color=\"#4444ff\">최대 방어력</font>이 <font color=\"#eeeeff\">+25%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "HealthBonus",
@@ -5716,29 +5769,30 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HolyResilience",
      "name": "신성한 회복력",
-     "standardDesc": "잃은 체력에 비례하여 최대 +3.3%의 피해 저항을 얻습니다.",
-     "deluxeDesc": "디럭스. 잃은 체력에 비례하여 최대 +8.3%의 피해 저항을 얻습니다.",
-     "standardDescRaw": "잃은 체력에 비례하여 최대 <font color=\"#eeeeff\">+3.3%</font>의 <font color=\"#87ceeb\">피해 저항</font>을 얻습니다.",
-     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 잃은 체력에 비례하여 최대 <font color=\"#eeeeff\">+8.3%</font>의 <font color=\"#87ceeb\">피해 저항</font>을 얻습니다.",
+     "standardDesc": "잃은 체력에 비례하여 최대 +3.33%의 피해 저항을 얻습니다.",
+     "deluxeDesc": "디럭스. 잃은 체력에 비례하여 최대 +8.33%의 피해 저항을 얻습니다.",
+     "standardDescRaw": "잃은 체력에 비례하여 최대 <font color=\"#eeeeff\">+3.33%</font>의 <font color=\"#87ceeb\">피해 저항</font>을 얻습니다.",
+     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 잃은 체력에 비례하여 최대 <font color=\"#eeeeff\">+8.33%</font>의 <font color=\"#87ceeb\">피해 저항</font>을 얻습니다.",
      "rawValues": [
       {
        "key": "MaxResistance",
        "label": "최대 저항력",
        "value": 0.033333,
        "unit": "percent",
-       "display": "+3.3%"
+       "display": "+3.33%"
       },
       {
        "key": "MaxResistance",
        "label": "최대 저항력",
        "value": 0.083333,
        "unit": "percent",
-       "display": "+8.3%"
+       "display": "+8.33%"
       }
      ],
      "hasKorText": true,
@@ -5747,7 +5801,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.100000; 구 0.250000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MartyrBlessing",
@@ -5792,7 +5847,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "OverflowingGrace",
@@ -5805,16 +5861,16 @@
       {
        "key": "ArmorGrant",
        "label": "방어력 부여",
-       "value": 3,
+       "value": 1,
        "unit": "count",
-       "display": "3"
+       "display": "1"
       },
       {
        "key": "ArmorGrant",
        "label": "방어력 부여",
-       "value": 8,
+       "value": 2,
        "unit": "count",
-       "display": "8"
+       "display": "2"
       }
      ],
      "hasKorText": true,
@@ -5823,29 +5879,30 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PhoenixPrayer",
      "name": "피닉스 기도",
-     "standardDesc": "아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 +25%를 보너스 도쉬로 환산하여 획득합니다.",
-     "deluxeDesc": "디럭스. 아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 +50%를 보너스 도쉬로 환산하여 획득합니다.",
-     "standardDescRaw": "아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 <font color=\"#eeeeff\">+25%</font>를 <font color=\"#ffd700\">보너스 도쉬</font>로 환산하여 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 <font color=\"#eeeeff\">+50%</font>를 <font color=\"#ffd700\">보너스 도쉬</font>로 환산하여 획득합니다.",
+     "standardDesc": "아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 +15%를 보너스 도쉬로 환산하여 획득합니다.",
+     "deluxeDesc": "디럭스. 아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 +30%를 보너스 도쉬로 환산하여 획득합니다.",
+     "standardDescRaw": "아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 <font color=\"#eeeeff\">+15%</font>를 <font color=\"#ffd700\">보너스 도쉬</font>로 환산하여 획득합니다.",
+     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 <font color=\"#eeeeff\">+30%</font>를 <font color=\"#ffd700\">보너스 도쉬</font>로 환산하여 획득합니다.",
      "rawValues": [
       {
        "key": "DoshConversion",
        "label": "도쉬 전환",
-       "value": 0.25,
+       "value": 0.15,
        "unit": "percent",
-       "display": "+25%"
+       "display": "+15%"
       },
       {
        "key": "DoshConversion",
        "label": "도쉬 전환",
-       "value": 0.5,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+30%"
       }
      ],
      "hasKorText": true,
@@ -5854,7 +5911,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SanctifiedRounds",
@@ -5885,7 +5943,8 @@
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.200000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TriageExpert",
@@ -5905,16 +5964,16 @@
       {
        "key": "HealthThreshold",
        "label": "체력 임계값",
-       "value": 50,
+       "value": 200,
        "unit": "count",
-       "display": "50"
+       "display": "200"
       },
       {
        "key": "HealthThreshold",
        "label": "체력 임계값",
-       "value": 25,
+       "value": 100,
        "unit": "count",
-       "display": "25"
+       "display": "100"
       }
      ],
      "hasKorText": true,
@@ -5923,7 +5982,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "UnwaveringFaith",
@@ -5939,7 +5999,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "WingsOfMercy",
@@ -5991,7 +6052,8 @@
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.200000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -6057,11 +6119,11 @@
      "label": "단계 당 신경 네트워크 피해량",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.0125,
      "lv20": 0.0125,
-     "lv10Display": "+1.2%",
-     "lv20Display": "+1.2%",
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
      "scaling": false,
      "capstoneLevel": null
     },
@@ -6145,7 +6207,7 @@
     }
    ],
    "role": "근처 팀원 전체의 피해량과 재장전 속도를 함께 끌어올려주는 <font color=\"#FFD700\">공생체 컨셉</font> 팀 버프 퍼크입니다.",
-   "endgame": "Lv20 군중 집단 캡스톤(20킬마다 발동하는 팀 버프)까지 채우면 파티 전체의 전투력을 순간적으로 크게 끌어올리는 팀 버퍼가 완성됩니다. (캡스톤 발동 시 버프 수치는 게임 내 문구 기준이며, 레벨당 패시브 성장치는 최근 조정으로 과거 대비 절반 수준입니다.)",
+   "endgame": "Lv20 군중 집단 캡스톤(20킬마다 발동하는 팀 버프)까지 채우면 파티 전체의 전투력을 순간적으로 크게 끌어올리는 팀 버퍼가 완성됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#32FF32\">시냅스 연결:</font> 10m 이내 팀원의 <font color=\"#7FFF7F\">피해량</font> <font color=\"#FFFFFF\">레벨업당 +0.5% · 만렙(Lv20) +10%</font>",
@@ -6158,13 +6220,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#32FF32\">벌집 이동:</font> <font color=\"#7FFF7F\">공생체 진화 단계당</font> 팀원의 <font color=\"#7FFF7F\">이동 속도</font> <font color=\"#FFFFFF\">+1%</font> (10m 이내)",
-     "text": "벌집 이동: 공생체 진화 단계당 팀원의 이동 속도 +1% (10m 이내)",
+     "raw": "<font color=\"#32FF32\">벌집 이동:</font> <font color=\"#7FFF7F\">공생체 진화 단계당</font> 팀원의 <font color=\"#7FFF7F\">이동 속도</font> <font color=\"#FFFFFF\">+0.5%</font> (10m 이내)",
+     "text": "벌집 이동: 공생체 진화 단계당 팀원의 이동 속도 +0.5% (10m 이내)",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">신경망</font> - <font color=\"#FFFFFF\">10m</font> 이내 팀원의 피해량이 <font color=\"#7FFF7F\">공생체 진화 단계</font>마다 <font color=\"#FFFFFF\">+0.5%</font>씩 증가합니다 (최대 <font color=\"#FFFFFF\">+1.2%</font>).",
-     "text": "레벨 10: 신경망 - 10m 이내 팀원의 피해량이 공생체 진화 단계마다 +0.5%씩 증가합니다 (최대 +1.2%).",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">신경망</font> - <font color=\"#FFFFFF\">5m</font> 이내 팀원의 피해량이 <font color=\"#7FFF7F\">공생체 진화 단계</font>마다 <font color=\"#FFFFFF\">+1.25%</font>씩 증가합니다 (최대 <font color=\"#FFFFFF\">+12.5%</font>).",
+     "text": "레벨 10: 신경망 - 5m 이내 팀원의 피해량이 공생체 진화 단계마다 +1.25%씩 증가합니다 (최대 +12.5%).",
      "isCapstone": true
     },
     {
@@ -6188,15 +6250,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "EmpathicLink",
      "name": "공감 링크",
      "standardDesc": "고통이 하이브마인드의 신경망에 분산됩니다. 모든 출처로부터 받는 피해가 +5% 감소합니다.",
-     "deluxeDesc": "고통이 하이브마인드의 신경망에 분산됩니다. 모든 출처로부터 받는 피해가 +8.3% 감소합니다.",
+     "deluxeDesc": "고통이 하이브마인드의 신경망에 분산됩니다. 모든 출처로부터 받는 피해가 +8.33% 감소합니다.",
      "standardDescRaw": "고통이 <font color=\"#9370DB\">하이브마인드의 신경망</font>에 분산됩니다. 모든 출처로부터 받는 피해가 <font color=\"#00FF7F\">+5% 감소</font>합니다.",
-     "deluxeDescRaw": "고통이 <font color=\"#9370DB\">하이브마인드의 신경망</font>에 분산됩니다. 모든 출처로부터 받는 피해가 <font color=\"#00FF7F\">+8.3% 감소</font>합니다.",
+     "deluxeDescRaw": "고통이 <font color=\"#9370DB\">하이브마인드의 신경망</font>에 분산됩니다. 모든 출처로부터 받는 피해가 <font color=\"#00FF7F\">+8.33% 감소</font>합니다.",
      "rawValues": [
       {
        "key": "DamageReduction",
@@ -6210,7 +6273,7 @@
        "label": "피해량 감소",
        "value": 0.083333,
        "unit": "percent",
-       "display": "+8.3%"
+       "display": "+8.33%"
       }
      ],
      "hasKorText": true,
@@ -6219,7 +6282,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02, 필드명 누락분 추가발견), 구 0.150000; 구 0.250000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Hivesight",
@@ -6250,7 +6314,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "InfestedRounds",
@@ -6323,7 +6388,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Mitosis",
@@ -6336,16 +6402,16 @@
       {
        "key": "KillThreshold",
        "label": "필요 처치 수",
-       "value": 20,
+       "value": 30,
        "unit": "count",
-       "display": "20"
+       "display": "30"
       },
       {
        "key": "KillThreshold",
        "label": "필요 처치 수",
-       "value": 15,
+       "value": 20,
        "unit": "count",
-       "display": "15"
+       "display": "20"
       }
      ],
      "hasKorText": true,
@@ -6354,7 +6420,8 @@
      "patchNote": "메딕트리 정밀조사(2026-07-02): 즉시 완전재장전(예비탄약 소모) 트리거를 더 어렵게, 구 15; 구 10",
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NeuralFeedback",
@@ -6392,7 +6459,8 @@
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.150000; 구 0.300000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ParasiticBloom",
@@ -6437,7 +6505,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PheromoneTrail",
@@ -6475,7 +6544,8 @@
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.150000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "RegenerativeMembrane",
@@ -6491,29 +6561,30 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SymbioticRestoration",
      "name": "공생 복원",
-     "standardDesc": "아군을 치료하면 자신의 치유량의 +25%만큼 방어력이 회복됩니다.",
-     "deluxeDesc": "아군을 치료하면 자신의 치유량의 +50%만큼 방어력이 회복됩니다.",
-     "standardDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+25%</font>만큼 <font color=\"#4444ff\">방어력</font>이 회복됩니다.",
-     "deluxeDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+50%</font>만큼 <font color=\"#4444ff\">방어력</font>이 회복됩니다.",
+     "standardDesc": "아군을 치료하면 자신의 치유량의 +12.5%만큼 방어력이 회복됩니다.",
+     "deluxeDesc": "아군을 치료하면 자신의 치유량의 +25%만큼 방어력이 회복됩니다.",
+     "standardDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+12.5%</font>만큼 <font color=\"#4444ff\">방어력</font>이 회복됩니다.",
+     "deluxeDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+25%</font>만큼 <font color=\"#4444ff\">방어력</font>이 회복됩니다.",
      "rawValues": [
+      {
+       "key": "ArmorPercent",
+       "label": "방어력 퍼센트",
+       "value": 0.125,
+       "unit": "percent",
+       "display": "+12.5%"
+      },
       {
        "key": "ArmorPercent",
        "label": "방어력 퍼센트",
        "value": 0.25,
        "unit": "percent",
        "display": "+25%"
-      },
-      {
-       "key": "ArmorPercent",
-       "label": "방어력 퍼센트",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
       }
      ],
      "hasKorText": true,
@@ -6522,7 +6593,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -6561,7 +6633,7 @@
      "label": "레벨 당 치유 받는",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -6754,8 +6826,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">흡수 네트워크</font> - 모든 피해에 <font color=\"#B40028\">흡수</font> 효과가 적용됩니다. 흡수된 적 1명당 <font color=\"#FFFFFF\">(정확한 수치는 아래 '고정 효과' 참고)</font>의 추가 피해량을 얻습니다 (최대 <font color=\"#FFFFFF\">8명</font>). 아군을 치유할 때, 흡수된 적에게도 치유량의 <font color=\"#FFFFFF\">50%</font>만큼 피해를 줍니다.",
-     "text": "레벨 10: 흡수 네트워크 - 모든 피해에 흡수 효과가 적용됩니다. 흡수된 적 1명당 (정확한 수치는 아래 '고정 효과' 참고)의 추가 피해량을 얻습니다 (최대 8명). 아군을 치유할 때, 흡수된 적에게도 치유량의 50%만큼 피해를 줍니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">흡수 네트워크</font> - 모든 피해에 <font color=\"#B40028\">흡수</font> 효과가 적용됩니다. 흡수된 적 1명당 <font color=\"#FFFFFF\">+2%</font>의 추가 피해량을 얻습니다 (최대 <font color=\"#FFFFFF\">8명</font>). 아군을 치유할 때, 흡수된 적에게도 치유량의 <font color=\"#FFFFFF\">25%</font>만큼 피해를 줍니다.",
+     "text": "레벨 10: 흡수 네트워크 - 모든 피해에 흡수 효과가 적용됩니다. 흡수된 적 1명당 +2%의 추가 피해량을 얻습니다 (최대 8명). 아군을 치유할 때, 흡수된 적에게도 치유량의 25%만큼 피해를 줍니다.",
      "isCapstone": true
     },
     {
@@ -6822,15 +6894,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BloodShield",
      "name": "블러드 쉴드",
      "standardDesc": "혈액 보호막: 체력이 +2% 미만일 때, 쌓인 사이펀(흡수) 스택을 모두 소모하여 스택당 +30%의 피해 저항을 6초간 얻습니다. 웨이브당 한 번만 발동합니다.",
-     "deluxeDesc": "[디럭스] 블러드 쉴드: 체력이 +3.3% 미만일 때, 쌓인 사이펀 스택을 모두 소모하여 스택당 +30%의 피해 저항을 10초간 얻습니다. 웨이브당 한 번만 발동합니다.",
+     "deluxeDesc": "[디럭스] 블러드 쉴드: 체력이 +3.33% 미만일 때, 쌓인 사이펀 스택을 모두 소모하여 스택당 +30%의 피해 저항을 10초간 얻습니다. 웨이브당 한 번만 발동합니다.",
      "standardDescRaw": "<font color=\"#B40028\">혈액 보호막:</font> 체력이 <font color=\"#FFFFFF\">+2%</font> 미만일 때, 쌓인 사이펀(흡수) 스택을 모두 소모하여 스택당 <font color=\"#FFFFFF\">+30%</font>의 피해 저항을 <font color=\"#FFFFFF\">6초</font>간 얻습니다. 웨이브당 한 번만 발동합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">블러드 쉴드:</font> 체력이 <font color=\"#FFFFFF\">+3.3%</font> 미만일 때, 쌓인 사이펀 스택을 모두 소모하여 스택당 <font color=\"#FFFFFF\">+30%</font>의 피해 저항을 <font color=\"#FFFFFF\">10초</font>간 얻습니다. 웨이브당 한 번만 발동합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">블러드 쉴드:</font> 체력이 <font color=\"#FFFFFF\">+3.33%</font> 미만일 때, 쌓인 사이펀 스택을 모두 소모하여 스택당 <font color=\"#FFFFFF\">+30%</font>의 피해 저항을 <font color=\"#FFFFFF\">10초</font>간 얻습니다. 웨이브당 한 번만 발동합니다.",
      "rawValues": [
       {
        "key": "DRPerSiphon",
@@ -6844,7 +6917,7 @@
        "label": "흡수 당 피해 감소",
        "value": 0.033333,
        "unit": "percent",
-       "display": "+3.3%"
+       "display": "+3.33%"
       },
       {
        "key": "ShieldDuration",
@@ -6874,7 +6947,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.060000; 구 0.100000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Contagion",
@@ -6919,15 +6993,16 @@
      "patchNote": "광역피해 남발 축소(2026-07-02), 구 300.000000; 구 500.000000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CrimsonBond",
      "name": "크림슨 본드",
-     "standardDesc": "크림슨 본드: 아군을 치유하면 10초간 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 +50% 효율로 치유를 제공합니다.",
-     "deluxeDesc": "[디럭스] 크림슨 본드: 아군을 치유하면 15초간 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 +100% 효율로 치유를 제공합니다.",
-     "standardDescRaw": "<font color=\"#B40028\">크림슨 본드:</font> 아군을 치유하면 <font color=\"#FFFFFF\">10초간</font> 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 <font color=\"#FFFFFF\">+50%</font> 효율로 치유를 제공합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">크림슨 본드:</font> 아군을 치유하면 <font color=\"#FFFFFF\">15초간</font> 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 <font color=\"#FFFFFF\">+100%</font> 효율로 치유를 제공합니다.",
+     "standardDesc": "크림슨 본드: 아군을 치유하면 10초간 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 +15% 효율로 치유를 제공합니다.",
+     "deluxeDesc": "[디럭스] 크림슨 본드: 아군을 치유하면 15초간 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 +30% 효율로 치유를 제공합니다.",
+     "standardDescRaw": "<font color=\"#B40028\">크림슨 본드:</font> 아군을 치유하면 <font color=\"#FFFFFF\">10초간</font> 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 <font color=\"#FFFFFF\">+15%</font> 효율로 치유를 제공합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">크림슨 본드:</font> 아군을 치유하면 <font color=\"#FFFFFF\">15초간</font> 혈연이 맺어집니다. 본인의 생명력 흡수 효과가 결속된 아군에게도 <font color=\"#FFFFFF\">+30%</font> 효율로 치유를 제공합니다.",
      "rawValues": [
       {
        "key": "BondDuration",
@@ -6946,16 +7021,16 @@
       {
        "key": "LifeStealShare",
        "label": "생명 흡수 공유",
-       "value": 0.5,
+       "value": 0.15,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+15%"
       },
       {
        "key": "LifeStealShare",
        "label": "생명 흡수 공유",
-       "value": 1.0,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+100%"
+       "display": "+30%"
       }
      ],
      "hasKorText": true,
@@ -6964,7 +7039,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "EssenceDrain",
@@ -6995,7 +7071,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "LeechField",
@@ -7061,7 +7138,8 @@
      "patchNote": "광역피해 남발 축소(2026-07-02), 구 600.000000; 구 800.000000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "LifeTap",
@@ -7092,7 +7170,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SiphonCascade",
@@ -7105,16 +7184,16 @@
       {
        "key": "BurstRadius",
        "label": "버스트 범위",
-       "value": 250.0,
+       "value": 125.0,
        "unit": "distance",
-       "display": "250"
+       "display": "125"
       },
       {
        "key": "BurstRadius",
        "label": "버스트 범위",
-       "value": 400.0,
+       "value": 200.0,
        "unit": "distance",
-       "display": "400"
+       "display": "200"
       }
      ],
      "hasKorText": true,
@@ -7123,29 +7202,30 @@
      "patchNote": "광역피해 남발 축소(2026-07-02), 구 500.000000; 구 800.000000",
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SymbioticReload",
      "name": "공생적 재장전",
-     "standardDesc": "공생 재장전: 아군을 치료하면 현재 무기 탄창 용량의 +30%가 예비 탄약으로 회복됩니다.",
-     "deluxeDesc": "[디럭스] 공생 재장전: 아군을 치료하면 현재 무기 탄창 용량의 +50%가 예비 탄약으로 회복됩니다.",
-     "standardDescRaw": "<font color=\"#B40028\">공생 재장전:</font> 아군을 치료하면 현재 무기 탄창 용량의 <font color=\"#FFFFFF\">+30%</font>가 예비 탄약으로 회복됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">공생 재장전:</font> 아군을 치료하면 현재 무기 탄창 용량의 <font color=\"#FFFFFF\">+50%</font>가 예비 탄약으로 회복됩니다.",
+     "standardDesc": "공생 재장전: 아군을 치료하면 현재 무기 탄창 용량의 +15%가 예비 탄약으로 회복됩니다.",
+     "deluxeDesc": "[디럭스] 공생 재장전: 아군을 치료하면 현재 무기 탄창 용량의 +30%가 예비 탄약으로 회복됩니다.",
+     "standardDescRaw": "<font color=\"#B40028\">공생 재장전:</font> 아군을 치료하면 현재 무기 탄창 용량의 <font color=\"#FFFFFF\">+15%</font>가 예비 탄약으로 회복됩니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">공생 재장전:</font> 아군을 치료하면 현재 무기 탄창 용량의 <font color=\"#FFFFFF\">+30%</font>가 예비 탄약으로 회복됩니다.",
      "rawValues": [
+      {
+       "key": "MagRestorePercent",
+       "label": "탄창 복구 퍼센트",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
       {
        "key": "MagRestorePercent",
        "label": "탄창 복구 퍼센트",
        "value": 0.3,
        "unit": "percent",
        "display": "+30%"
-      },
-      {
-       "key": "MagRestorePercent",
-       "label": "탄창 복구 퍼센트",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
       }
      ],
      "hasKorText": true,
@@ -7154,7 +7234,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Transfusion",
@@ -7199,7 +7280,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -7250,7 +7332,7 @@
      "label": "관통력 보너스",
      "value": 0.0175,
      "unit": "percent",
-     "display": "+1.8%",
+     "display": "+1.75%",
      "lv10": 0.175,
      "lv20": 0.35,
      "lv10Display": "+17.5%",
@@ -7313,7 +7395,7 @@
     }
    ],
    "role": "치유 능력은 유지한 채 재장전 속도와 관통력까지 크게 얹어주는 <font color=\"#FFD700\">최종 필드메딕</font> 형태입니다.",
-   "endgame": "Lv20 기준 <font color=\"#15d7fa\">재장전+30%, 관통+35%</font>까지 갖추면 힐러이면서도 상당한 총기 화력을 겸비하는 하이브리드 빌드가 완성됩니다. (레벨당 성장치는 최근 조정으로 과거 대비 절반 수준입니다.)",
+   "endgame": "Lv20 기준 <font color=\"#15d7fa\">재장전+30%, 관통+35%</font>까지 갖추면 힐러이면서도 상당한 총기 화력을 겸비하는 하이브리드 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#00FF7F\">공생 효율:</font> <font color=\"#7FFF7F\">재장전 속도</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -7405,7 +7487,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BiomassRecycling",
@@ -7436,7 +7519,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CellularRedundancy",
@@ -7467,7 +7551,8 @@
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.080000; 구 0.150000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DesperateSymbiosis",
@@ -7512,7 +7597,8 @@
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.400000; 구 0.650000; 구조적 결함 수정: T2가 T1보다 페널티 낮았음(트레이드오프 실종) → T2는 페널티도 더 크게, 구 0.100000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FleshWeaving",
@@ -7585,7 +7671,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MetabolicOverdrive",
@@ -7616,7 +7703,8 @@
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.500000; 구 1.000000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MuscleFiberEnhancement",
@@ -7661,7 +7749,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ParasiticBond",
@@ -7706,7 +7795,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SurvivalInstinct",
@@ -7765,7 +7855,8 @@
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.200000; 구 0.350000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SymbioticEfficiency",
@@ -7810,7 +7901,8 @@
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.250000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -7849,7 +7941,7 @@
      "label": "피해량 계수",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.125,
      "lv20": 0.25,
      "lv10Display": "+12.5%",
@@ -7861,7 +7953,7 @@
      "label": "피해량",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.125,
      "lv20": 0.25,
      "lv10Display": "+12.5%",
@@ -7885,7 +7977,7 @@
     }
    ],
    "role": "화염 피해량을 레벨마다 착실하게 증폭시켜주는 <font color=\"#FFD700\">파이어버그 1차 전직</font>입니다.",
-   "endgame": "레벨당 해석 확정 후 방치값이 발견되어 한 차례 +50%로 정상화되었고, 최근 전체적인 밸런스 재조정으로 Lv20 기준 <font color=\"#15d7fa\">+25%</font>까지 다시 조정되었습니다. ConsumingFlame 스킬은 값이 0인 버그로 확인되어 실질적으로 작동하지 않습니다.",
+   "endgame": "레벨당 화염 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. ConsumingFlame 스킬은 값이 0인 버그로 확인되어 실질적으로 작동하지 않습니다.",
    "descriptions": [
     {
      "raw": "모든 무기가 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 확률로 사격 시 <font color=\"#ffa000\">테르밋탄</font>을 발사합니다.",
@@ -7961,7 +8053,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Blaze",
@@ -8006,7 +8099,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ChosenOfTheSun",
@@ -8051,7 +8145,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ConsumingFlame",
@@ -8077,12 +8172,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "🐛 버그 추정: Vampire 값이 T1/T2 모두 0 — 효과 자체가 발동하지 않아 밸런스 영향은 없음(사실상 Trash에 가까운 미완성 스킬).",
+     "note": "Vampire 값이 T1/T2 모두 0으로 설정되어 있어 흡혈 효과가 발동하지 않습니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Flashpoint",
@@ -8098,7 +8194,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Forger",
@@ -8143,15 +8240,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Heatstroke",
      "name": "열사병",
-     "standardDesc": "피해량 증가: +10% · 피해량 계수: +10%",
-     "deluxeDesc": "피해량 증가: +20% · 피해량 계수: +20%",
-     "standardDescRaw": "피해량 증가: +10% · 피해량 계수: +10%",
-     "deluxeDescRaw": "피해량 증가: +20% · 피해량 계수: +20%",
+     "standardDesc": "모든 무기가 타격 시 열사병 효과를 적용하여, ZED를 태우고 약간의 화염 피해를 입힙니다. 추가로 전체 화염 피해량이 +10% 증가합니다.",
+     "deluxeDesc": "모든 무기가 타격 시 열사병 효과를 적용하여, ZED를 강하게 태우고 강력한 화염 피해를 입힙니다. 추가로 전체 화염 피해량이 +20% 증가합니다.",
+     "standardDescRaw": "모든 무기가 타격 시 <font color=\"e80948\">열사병</font> 효과를 적용하여, ZED를 태우고 <font color=\"#e85009\">약간의 화염 피해</font>를 입힙니다. 추가로 전체 <font color=\"#e80948\">화염 피해량</font>이 <font color=\"#e85009\">+10%</font> 증가합니다.",
+     "deluxeDescRaw": "모든 무기가 타격 시 <font color=\"e80948\">열사병</font> 효과를 적용하여, ZED를 강하게 태우고 <font color=\"#e85009\">강력한 화염 피해</font>를 입힙니다. 추가로 전체 <font color=\"#e80948\">화염 피해량</font>이 <font color=\"#e85009\">+20%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "DamageInc",
@@ -8188,7 +8286,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SearingGaze",
@@ -8233,7 +8332,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TrialByFire",
@@ -8278,7 +8378,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Wildfire",
@@ -8309,7 +8410,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -8489,7 +8591,7 @@
     }
    ],
    "role": "불타는 적이 많아질수록 화염 피해가 계속 불어나고, 죽음도 회피시켜주는 <font color=\"#FFD700\">스노우볼형 화염 딜러</font>입니다.",
-   "endgame": "Lv20 피닉스 프로토콜 캡스톤(웨이브당 1회 죽음 회피+<font color=\"#15d7fa\">10초 무적</font>)까지 채우면 생존력까지 갖춘 최상급 화염 딜러가 완성되며, 과거 최고 이상값이었던 ScorchedEarth 스킬은 이미 정상화되었습니다. 레벨당 화염 피해 성장치는 최근 전체 조정으로 과거 대비 절반 수준(Lv20 기준 화염 피해 +30%)입니다.",
+   "endgame": "Lv20 피닉스 프로토콜 캡스톤(웨이브당 1회 죽음 회피+<font color=\"#15d7fa\">10초 무적</font>)까지 채우면 생존력까지 갖춘 최상급 화염 딜러가 완성됩니다. 레벨당 화염 피해가 착실히 증가해 Lv20 기준 화염 피해 +30%에 도달합니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#FF6400\">화염 폭발:</font> <font color=\"#FF8C32\">화염 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -8502,18 +8604,18 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FF6400\">잔여 화염:</font> 5랭크당 <font color=\"#FF8C32\">화상 지속 시간</font> <font color=\"#FFFFFF\">+0.2초</font>",
-     "text": "잔여 화염: 5랭크당 화상 지속 시간 +0.2초",
+     "raw": "<font color=\"#FF6400\">잔여 화염:</font> 5랭크당 <font color=\"#FF8C32\">화상 지속 시간</font> <font color=\"#FFFFFF\">+0.5초</font>",
+     "text": "잔여 화염: 5랭크당 화상 지속 시간 +0.5초",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">공생 시너지</font> - 불타는 적 한 명당 화염 피해량이 <font color=\"#FFFFFF\">+5%</font> 증가합니다 (최대 <font color=\"#FFFFFF\">10명</font>). 화염 확산 속도가 <font color=\"#FFFFFF\">30%</font> 증가하며, 불타는 적은 화염 저항력이 <font color=\"#FFFFFF\">-10%</font> 감소합니다.",
-     "text": "레벨 10: 공생 시너지 - 불타는 적 한 명당 화염 피해량이 +5% 증가합니다 (최대 10명). 화염 확산 속도가 30% 증가하며, 불타는 적은 화염 저항력이 -10% 감소합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">공생 시너지</font> - 불타는 적 한 명당 화염 피해량이 <font color=\"#FFFFFF\">+2.5%</font> 증가합니다 (최대 <font color=\"#FFFFFF\">10명</font>). 화염 확산 속도가 <font color=\"#FFFFFF\">15%</font> 증가하며, 불타는 적은 화염 저항력이 <font color=\"#FFFFFF\">-5%</font> 감소합니다.",
+     "text": "레벨 10: 공생 시너지 - 불타는 적 한 명당 화염 피해량이 +2.5% 증가합니다 (최대 10명). 화염 확산 속도가 15% 증가하며, 불타는 적은 화염 저항력이 -5% 감소합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">피닉스 프로토콜</font> - 화염으로 적 100마리 처치 시 영구적으로 화염 피해량이 1% 증가합니다. 웨이브당 한 번 죽음을 회피하며 <font color=\"#FFFFFF\">10초 동안 무적</font>이 됩니다.",
-     "text": "레벨 20: 피닉스 프로토콜 - 화염으로 적 100마리 처치 시 영구적으로 화염 피해량이 1% 증가합니다. 웨이브당 한 번 죽음을 회피하며 10초 동안 무적이 됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">피닉스 프로토콜</font> - 화염으로 적 100마리 처치 시 영구적으로 화염 피해량이 0.5% 증가합니다. 웨이브당 한 번 죽음을 회피하며 <font color=\"#FFFFFF\">10초 동안 받는 피해 50% 감소</font> 상태가 됩니다.",
+     "text": "레벨 20: 피닉스 프로토콜 - 화염으로 적 100마리 처치 시 영구적으로 화염 피해량이 0.5% 증가합니다. 웨이브당 한 번 죽음을 회피하며 10초 동안 받는 피해 50% 감소 상태가 됩니다.",
      "isCapstone": true
     }
    ],
@@ -8522,9 +8624,9 @@
      "key": "AshenBulwark",
      "name": "애쉬불워크",
      "standardDesc": "화염, 독성, 음파 속성 공격으로 받는 피해가 +10% 감소합니다.",
-     "deluxeDesc": "화염, 독성, 음파 속성 공격으로 받는 피해가 +21.7% 감소합니다.",
+     "deluxeDesc": "화염, 독성, 음파 속성 공격으로 받는 피해가 +21.67% 감소합니다.",
      "standardDescRaw": "<font color=\"#84d6d0\">화염</font>, <font color=\"#42e087\">독성</font>, <font color=\"#42e087\">음파</font> 속성 공격으로 받는 피해가 <font color=\"#42e087\">+10%</font> 감소합니다.",
-     "deluxeDescRaw": "<font color=\"#84d6d0\">화염</font>, <font color=\"#42e087\">독성</font>, <font color=\"#42e087\">음파</font> 속성 공격으로 받는 피해가 <font color=\"#42e087\">+21.7%</font> 감소합니다.",
+     "deluxeDescRaw": "<font color=\"#84d6d0\">화염</font>, <font color=\"#42e087\">독성</font>, <font color=\"#42e087\">음파</font> 속성 공격으로 받는 피해가 <font color=\"#42e087\">+21.67%</font> 감소합니다.",
      "rawValues": [
       {
        "key": "Resistance",
@@ -8538,7 +8640,7 @@
        "label": "저항력",
        "value": 0.216667,
        "unit": "percent",
-       "display": "+21.7%"
+       "display": "+21.67%"
       }
      ],
      "hasKorText": true,
@@ -8547,7 +8649,8 @@
      "patchNote": "신더 저항 1/3 축소(2026-07-02), 구 0.300000; 구 0.650000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Conflagration",
@@ -8578,7 +8681,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Cremation",
@@ -8623,7 +8727,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FireEater",
@@ -8654,7 +8759,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Meltdown",
@@ -8685,7 +8791,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MoltenCore",
@@ -8730,7 +8837,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Pyre",
@@ -8761,7 +8869,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ScorchedEarth",
@@ -8787,12 +8896,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: Damage T2가 +250%(전체 300개 스킬 중 최고 이상값)였다가 +100%로 정상화됨.",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 1.0/2.5 (+250%, 전체 스킬 중 최고 이상값) → +100%로 정상화. Pyre(+120%) 동시장착 시 화염피해 합산 과도 방지",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SearingFocus",
@@ -8837,7 +8947,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ThermalLance",
@@ -8868,7 +8979,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -8889,28 +9001,27 @@
    "parentPerk": "Gunslinger",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Dosh",
      "label": "도쉬",
      "value": 1,
      "unit": "currency",
      "display": "1 도쉬",
-     "lv10": 1,
-     "lv20": 1,
-     "lv10Display": "1 도쉬",
-     "lv20Display": "1 도쉬",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 10,
+     "lv20": 20,
+     "lv10Display": "10 도쉬",
+     "lv20Display": "20 도쉬",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "특정 조건의 헤드샷 처치마다 두둑한 도쉬를 얹어주는 <font color=\"#FFD700\">경제형</font> 퍼크입니다.",
    "endgame": "14개의 <font color=\"#15d7fa\">도쉬 보상 스킬</font>을 조합하면 전투를 하면서 동시에 상당한 부수입을 얻는 경제 특화 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "헤드샷으로 처치할 때마다 <font color=\"#77d914\">%x 도쉬</font>를 획득합니다.",
-     "text": "헤드샷으로 처치할 때마다 %x 도쉬를 획득합니다.",
+     "raw": "헤드샷으로 처치할 때마다 <font color=\"#77d914\">레벨업당 +1 · 만렙(Lv20) +20 도쉬</font>를 획득합니다.",
+     "text": "헤드샷으로 처치할 때마다 레벨업당 +1 · 만렙(Lv20) +20 도쉬를 획득합니다.",
      "isCapstone": false
     }
    ],
@@ -8944,7 +9055,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CeaseAndDesist",
@@ -8975,7 +9087,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Clotbuster",
@@ -9006,7 +9119,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Dietician",
@@ -9037,7 +9151,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Feminist",
@@ -9068,7 +9183,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Firefighter",
@@ -9099,7 +9215,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GorefastSlayer",
@@ -9130,7 +9247,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Kingslayer",
@@ -9161,7 +9279,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NoCloneZone",
@@ -9192,7 +9311,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NoWomanNoCry",
@@ -9223,7 +9343,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NoiseComplaint",
@@ -9254,7 +9375,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SomeoneYourOwnSize",
@@ -9285,7 +9407,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SupersizeMe",
@@ -9316,7 +9439,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TexasChainsawMassacre",
@@ -9347,7 +9471,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 14,
@@ -9467,7 +9592,7 @@
     }
    ],
    "role": "전체 피해량과 이동속도를 함께 얹어주고, 일정 확률로 적을 그 자리에서 즉사시켜버리는 <font color=\"#FFD700\">히트 앤 런형</font> 퍼크입니다.",
-   "endgame": "Lv10 전체 피해+12.5% 캡스톤(과거 +25%에서 최근 조정)과 <font color=\"#15d7fa\">5% 확률 즉사</font>(대형 제드 포함, 진짜 보스 제외)를 갖추면 기동성과 순간 처치력을 겸비한 딜러가 완성됩니다.",
+   "endgame": "Lv10 전체 피해+12.5% 캡스톤과 <font color=\"#15d7fa\">5% 확률 즉사</font>(대형 제드 포함, 진짜 보스 제외)를 갖추면 기동성과 순간 처치력을 겸비한 딜러가 완성됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#CC0000\">죽음의 정밀도:</font> <font color=\"#FF6666\">치명타 확률</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -9485,8 +9610,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">리퍼의 승천</font> - <font color=\"#FF6666\">추가 피해량</font> <font color=\"#FFFFFF\">+50%</font>",
-     "text": "레벨 10: 리퍼의 승천 - 추가 피해량 +50%",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">리퍼의 승천</font> - <font color=\"#FF6666\">추가 피해량</font> <font color=\"#FFFFFF\">+12.5%</font>",
+     "text": "레벨 10: 리퍼의 승천 - 추가 피해량 +12.5%",
      "isCapstone": true
     },
     {
@@ -9530,7 +9655,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DeathlessFury",
@@ -9575,7 +9701,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DeathSentence",
@@ -9620,7 +9747,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DeathsGaze",
@@ -9651,7 +9779,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GrimTithe",
@@ -9682,7 +9811,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "LastBreath",
@@ -9741,7 +9871,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MementoMori",
@@ -9772,7 +9903,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SoulChain",
@@ -9817,7 +9949,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SoulOverflow",
@@ -9848,7 +9981,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "VeilWalker",
@@ -9893,7 +10027,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -9920,7 +10055,163 @@
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Heal",
+     "label": "치유",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "KnockdownPower",
+     "label": "넉다운 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "MagSize",
+     "label": "탄창 크기",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "MeleeAttackSpeed",
+     "label": "근접 공격 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Penetration",
+     "label": "관통력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "RateOfFire",
+     "label": "연사 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Recoil",
+     "label": "반동",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "ReloadRate",
+     "label": "재장전 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "SpareAmmo",
+     "label": "여분 탄약",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "StumblePower",
+     "label": "휘청임 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "StunPower",
+     "label": "기절 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Speed",
+     "label": "속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Spread",
+     "label": "탄퍼짐",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -9928,179 +10219,9 @@
      "scaling": true
     }
    ],
-   "fixedStats": [
-    {
-     "key": "Heal",
-     "label": "치유",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "KnockdownPower",
-     "label": "넉다운 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "MagSize",
-     "label": "탄창 크기",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "MeleeAttackSpeed",
-     "label": "근접 공격 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Penetration",
-     "label": "관통력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "RateOfFire",
-     "label": "연사 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Recoil",
-     "label": "반동",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReloadRate",
-     "label": "재장전 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SpareAmmo",
-     "label": "여분 탄약",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "StumblePower",
-     "label": "휘청임 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "StunPower",
-     "label": "기절 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Speed",
-     "label": "속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Spread",
-     "label": "탄퍼짐",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    }
-   ],
+   "fixedStats": [],
    "role": "피해·치유·탄창·관통·재장전·이동까지 거의 모든 능력치를 골고루 끌어올려주는 <font color=\"#FFD700\">최종 건슬링거</font> 심화 퍼크입니다.",
-   "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어(최근 전체 조정으로 과거 +30%에서 절반 수준), 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
+   "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어, 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
@@ -10108,8 +10229,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#77d914\">+%x초</font> 연장됩니다.",
-     "text": "ZED 타임 지속 시간이 +%x초 연장됩니다.",
+     "raw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#77d914\">+?(하드코딩·비공개)초</font> 연장됩니다.",
+     "text": "ZED 타임 지속 시간이 +?(하드코딩·비공개)초 연장됩니다.",
      "isCapstone": false
     }
    ],
@@ -10143,15 +10264,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HighNoon",
      "name": "정오",
-     "standardDesc": "배율: ×1.5",
-     "deluxeDesc": "배율: ×3",
-     "standardDescRaw": "배율: ×1.5",
-     "deluxeDescRaw": "배율: ×3",
+     "standardDesc": "ZED 타임 동안 재장전 속도가 +150% 증가합니다.",
+     "deluxeDesc": "ZED 타임 동안 재장전 속도가 +300% 증가합니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">+150%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">+300%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Mod",
@@ -10174,7 +10296,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Minuteman",
@@ -10190,7 +10313,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Pandemic",
@@ -10235,7 +10359,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Shifter",
@@ -10251,7 +10376,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TemporalFracture",
@@ -10267,7 +10393,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TimeHealsAllWounds",
@@ -10298,7 +10425,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TimeSpiral",
@@ -10343,7 +10471,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Timeburst",
@@ -10359,7 +10488,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Timewalk",
@@ -10404,7 +10534,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -10536,8 +10667,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">전장 약탈자</font> - 처치 시 <font color=\"#FFFFFF\">+10%</font> 확률로 예비 탄약을 <font color=\"#FFFFFF\">20</font> 획득하며, <font color=\"#F0C868\">은폐한 적</font>을 볼 수 있습니다.",
-     "text": "레벨 10: 전장 약탈자 - 처치 시 +10% 확률로 예비 탄약을 20 획득하며, 은폐한 적을 볼 수 있습니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">전장 약탈자</font> - 처치 시 <font color=\"#FFFFFF\">10%</font> 확률로 예비 탄약을 <font color=\"#FFFFFF\">30</font> 획득하며, <font color=\"#F0C868\">은폐한 적</font>을 볼 수 있습니다.",
+     "text": "레벨 10: 전장 약탈자 - 처치 시 10% 확률로 예비 탄약을 30 획득하며, 은폐한 적을 볼 수 있습니다.",
      "isCapstone": true
     },
     {
@@ -10609,7 +10740,8 @@
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.300000; 구 0.600000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "AmmoSiphon",
@@ -10640,7 +10772,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BottomlessReserves",
@@ -10671,15 +10804,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ChainFeed",
      "name": "체인 피드",
-     "standardDesc": "탄창 상한 배율: ×1.5",
-     "deluxeDesc": "탄창 상한 배율: ×2",
-     "standardDescRaw": "탄창 상한 배율: ×1.5",
-     "deluxeDescRaw": "탄창 상한 배율: ×2",
+     "standardDesc": "체인 피드: 적을 처치할 때마다 장착 중인 탄창에 +1발이 추가되며, 이는 최대 탄창 용량을 초과하여 장전될 수 있습니다. (기본 한도의 최대 +150%까지).",
+     "deluxeDesc": "체인 피드: 적을 처치할 때마다 장착 중인 탄창에 +1발이 추가되며, 이는 최대 탄창 용량을 초과하여 장전될 수 있습니다. (기본 한도의 최대 +200%까지).",
+     "standardDescRaw": "<font color=\"#DAA520\">체인 피드:</font> 적을 처치할 때마다 장착 중인 탄창에 <font color=\"#87CEEB\">+1발</font>이 추가되며, 이는 <font color=\"#FFFFFF\">최대 탄창 용량을 초과하여</font> 장전될 수 있습니다. (기본 한도의 최대 <font color=\"#FF4444\">+150%</font>까지).",
+     "deluxeDescRaw": "<font color=\"#FFD700\">체인 피드:</font> 적을 처치할 때마다 장착 중인 탄창에 <font color=\"#87CEEB\">+1발</font>이 추가되며, 이는 <font color=\"#FFFFFF\">최대 탄창 용량을 초과하여</font> 장전될 수 있습니다. (기본 한도의 최대 <font color=\"#FF4444\">+200%</font>까지).",
      "rawValues": [
       {
        "key": "MagCapMultiplier",
@@ -10702,7 +10836,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DesperateMeasures",
@@ -10733,7 +10868,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "JuryRig",
@@ -10778,7 +10914,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "OneManArmy",
@@ -10809,7 +10946,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "QuickHands",
@@ -10854,7 +10992,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "WarProfiteer",
@@ -10892,7 +11031,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Windfall",
@@ -10923,7 +11063,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -10950,7 +11091,163 @@
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Heal",
+     "label": "치유",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "KnockdownPower",
+     "label": "넉다운 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "MagSize",
+     "label": "탄창 크기",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "MeleeAttackSpeed",
+     "label": "근접 공격 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Penetration",
+     "label": "관통력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "RateOfFire",
+     "label": "연사 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Recoil",
+     "label": "반동",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "ReloadRate",
+     "label": "재장전 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "SpareAmmo",
+     "label": "여분 탄약",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "StumblePower",
+     "label": "휘청임 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "StunPower",
+     "label": "기절 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Speed",
+     "label": "속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Spread",
+     "label": "탄퍼짐",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -10958,177 +11255,7 @@
      "scaling": true
     }
    ],
-   "fixedStats": [
-    {
-     "key": "Heal",
-     "label": "치유",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "KnockdownPower",
-     "label": "넉다운 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "MagSize",
-     "label": "탄창 크기",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "MeleeAttackSpeed",
-     "label": "근접 공격 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Penetration",
-     "label": "관통력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "RateOfFire",
-     "label": "연사 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Recoil",
-     "label": "반동",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReloadRate",
-     "label": "재장전 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SpareAmmo",
-     "label": "여분 탄약",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "StumblePower",
-     "label": "휘청임 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "StunPower",
-     "label": "기절 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Speed",
-     "label": "속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Spread",
-     "label": "탄퍼짐",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    }
-   ],
+   "fixedStats": [],
    "role": "피해·치유·탄창·관통·재장전 등 8가지 능력치를 동시에 골고루 끌어올려주는 <font color=\"#FFD700\">만능형 SWAT</font> 전직입니다.",
    "endgame": "레벨당 <font color=\"#15d7fa\">8개 속성</font>이 동시에 성장해(Lv20 기준 각 +15%), 어떤 무기·상황에도 대응 가능한 올라운더형 빌드가 완성됩니다.",
    "descriptions": [
@@ -11168,7 +11295,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Deadshot",
@@ -11199,7 +11327,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HammerShot",
@@ -11230,7 +11359,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HippocraticOath",
@@ -11261,7 +11391,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Marathon",
@@ -11306,7 +11437,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Overpower",
@@ -11322,7 +11454,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": true
     },
     {
      "key": "Resourceful",
@@ -11353,7 +11486,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SurgicalPrecision",
@@ -11384,7 +11518,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Tank",
@@ -11400,7 +11535,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": true
     },
     {
      "key": "ThreadTheNeedle",
@@ -11431,7 +11567,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -11470,7 +11607,7 @@
      "label": "피해량",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.125,
      "lv20": 0.25,
      "lv10Display": "+12.5%",
@@ -11492,7 +11629,7 @@
    ],
    "fixedStats": [],
    "role": "동결 효과의 피해와 지속시간을 함께 늘려 제드를 얼려 무력화시켜주는 <font color=\"#FFD700\">냉기 특화</font> 퍼크입니다.",
-   "endgame": "레벨당 해석 확정 후 방치값이 발견되어 한 차례 +50%로 정상화되었고, 최근 전체 밸런스 재조정으로 Lv20 기준 <font color=\"#15d7fa\">+25%</font>까지 다시 조정되었습니다. 동결 효과 지속시간과 피해를 동시에 강화해 제드 무리를 얼려 안전하게 처리하는 빌드가 완성됩니다.",
+   "endgame": "레벨당 동결 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. 동결 효과 지속시간과 피해를 동시에 강화해 제드 무리를 얼려 안전하게 처리하는 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "모든 무기가 <font color=\"#77d914\">레벨업당 +0.2% · 만렙(Lv20) +4%</font> 확률로 타격 시 <font color=\"#0bf1f1\">눈사태</font>를 발생시킵니다.",
@@ -11540,7 +11677,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "AspectOfYmir",
@@ -11585,7 +11723,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BlackIce",
@@ -11616,7 +11755,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Blizzard",
@@ -11647,7 +11787,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Cryosynthesis",
@@ -11678,7 +11819,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FrozenHeart",
@@ -11716,7 +11858,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Giantsbane",
@@ -11761,7 +11904,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HarshConditions",
@@ -11792,7 +11936,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Hypothermia",
@@ -11823,7 +11968,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ImmovableObject",
@@ -11854,7 +12000,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "RegenerativeRounds",
@@ -11899,7 +12046,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 11,
@@ -11926,7 +12074,7 @@
      "label": "기본 피해량",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -11938,7 +12086,7 @@
      "label": "헤드샷 피해량",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.125,
      "lv20": 0.25,
      "lv10Display": "+12.5%",
@@ -12018,8 +12166,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">얼음 화살</font> - 헤드샷으로 10킬을 달성할 때마다 다음 사격 시 <font color=\"#FFFFFF\">+500%</font>의 피해량이 충전됩니다.",
-     "text": "레벨 10: 얼음 화살 - 헤드샷으로 10킬을 달성할 때마다 다음 사격 시 +500%의 피해량이 충전됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">얼음 화살</font> - 헤드샷으로 10킬을 달성할 때마다 다음 사격 시 <font color=\"#FFFFFF\">+200%</font>의 피해량이 충전됩니다.",
+     "text": "레벨 10: 얼음 화살 - 헤드샷으로 10킬을 달성할 때마다 다음 사격 시 +200%의 피해량이 충전됩니다.",
      "isCapstone": true
     },
     {
@@ -12058,15 +12206,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BitterChill",
      "name": "비터 칠",
-     "standardDesc": "기절: +7.5% · 속박: +7.5%",
-     "deluxeDesc": "기절: +15% · 속박: +15%",
-     "standardDescRaw": "기절: +7.5% · 속박: +7.5%",
-     "deluxeDescRaw": "기절: +15% · 속박: +15%",
+     "standardDesc": "겨울의 무게가 목표물을 짓누릅니다. 공격의 기절력과 속박력이 +7.5% 증가합니다.",
+     "deluxeDesc": "겨울의 무게가 목표물을 짓누릅니다. 공격의 기절력과 속박력이 +15% 증가합니다.",
+     "standardDescRaw": "겨울의 무게가 목표물을 짓누릅니다. 공격의 <font color=\"#87CEEB\">기절력</font>과 <font color=\"#15d7fa\">속박력</font>이 <font color=\"#77d914\">+7.5%</font> 증가합니다.",
+     "deluxeDescRaw": "겨울의 무게가 목표물을 짓누릅니다. 공격의 <font color=\"#87CEEB\">기절력</font>과 <font color=\"#15d7fa\">속박력</font>이 <font color=\"#77d914\">+15%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Stun",
@@ -12103,7 +12252,8 @@
      "patchNote": "CC 남발 축소(2026-07-02), 구 0.150000; 구 0.300000; 구 0.150000; 구 0.300000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CrystalClarity",
@@ -12134,7 +12284,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Fimbulwinter",
@@ -12165,7 +12316,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FrostbiteArrows",
@@ -12191,12 +12343,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "⚠️ OP 소지: DamagePerStack의 최대 스택 수(MaxStacks)가 INI에 없어 무한 누적 가능성 — 장기전에서 모니터링 권장.",
+     "note": "DamagePerStack의 최대 스택 수(MaxStacks)가 INI에 명시되어 있지 않아 무한 누적이 가능합니다 — 장기전에서 특히 강력합니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GlacialEndurance",
@@ -12227,7 +12380,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "IceArmor",
@@ -12258,15 +12412,16 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Permafrost",
      "name": "영구동토층",
-     "standardDesc": "반동: +30% · 탄퍼짐: +30%",
-     "deluxeDesc": "반동: +60% · 탄퍼짐: +60%",
-     "standardDescRaw": "반동: +30% · 탄퍼짐: +30%",
-     "deluxeDescRaw": "반동: +60% · 탄퍼짐: +60%",
+     "standardDesc": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. 반동과 탄 퍼짐이 +30% 감소합니다.",
+     "deluxeDesc": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. 반동과 탄 퍼짐이 +60% 감소합니다.",
+     "standardDescRaw": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. <font color=\"#87CEEB\">반동</font>과 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">+30%</font> 감소합니다.",
+     "deluxeDescRaw": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. <font color=\"#87CEEB\">반동</font>과 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">+60%</font> 감소합니다.",
      "rawValues": [
       {
        "key": "Recoil",
@@ -12303,7 +12458,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "QuiverMastery",
@@ -12334,7 +12490,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "WintersSwiftness",
@@ -12374,12 +12531,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "🐛 경미한 버그 추정: T2의 WeaponSwitchSpeed(0.4)가 T1(0.5)보다 낮음 — 정상적인 업그레이드라면 T2가 더 높아야 함. 단, 전투 영향이 작은 유틸리티 수치라 우선순위는 낮음.",
+     "note": null,
      "isPatched": false,
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -12406,7 +12564,7 @@
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -12418,7 +12576,7 @@
      "label": "피해량 머리",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -12440,7 +12598,7 @@
    ],
    "fixedStats": [],
    "role": "샤프슈터/건슬링거 무기의 피해량과 헤드샷 피해를 동시에 끌어올려주는 <font color=\"#FFD700\">1차 전직</font>입니다.",
-   "endgame": "Lv20 관통력 보너스까지 채우면 헤드샷 위주의 관통 사격 빌드가 완성되며, 과거 Support 관통력과 교차 스택되어 문제였던 <font color=\"#15d7fa\">FullMetalJacket</font> 스킬은 이미 조정되었습니다.",
+   "endgame": "Lv20 관통력 보너스까지 채우면 헤드샷 위주의 관통 사격 빌드가 완성되며, <font color=\"#15d7fa\">FullMetalJacket</font> 스킬로 관통력을 한층 더 끌어올릴 수 있습니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#476d5c\">Sharpshooter</font> 및 <font color=\"#476d5c\">Gunslinger</font> 무기의 <font color=\"#15d7fa\">피해량</font>이 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
@@ -12462,10 +12620,10 @@
     {
      "key": "CloseCall",
      "name": "아슬아슬한 순간",
-     "standardDesc": "피해량: +30% · 저항력: +6.7%",
-     "deluxeDesc": "피해량: +60% · 저항력: +13.3%",
-     "standardDescRaw": "피해량: +30% · 저항력: +6.7%",
-     "deluxeDescRaw": "피해량: +60% · 저항력: +13.3%",
+     "standardDesc": "피해량: +30% · 저항력: +6.67%",
+     "deluxeDesc": "피해량: +60% · 저항력: +13.33%",
+     "standardDescRaw": "피해량: +30% · 저항력: +6.67%",
+     "deluxeDescRaw": "피해량: +60% · 저항력: +13.33%",
      "rawValues": [
       {
        "key": "Damage",
@@ -12486,14 +12644,14 @@
        "label": "저항력",
        "value": 0.066667,
        "unit": "percent",
-       "display": "+6.7%"
+       "display": "+6.67%"
       },
       {
        "key": "Resistance",
        "label": "저항력",
        "value": 0.133333,
        "unit": "percent",
-       "display": "+13.3%"
+       "display": "+13.33%"
       }
      ],
      "hasKorText": true,
@@ -12502,7 +12660,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.200000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DeadeyeMomentum",
@@ -12533,7 +12692,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FullMetalJacket",
@@ -12559,12 +12719,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: 관통 +300% → +150% (Support 관통 패시브·스킬과의 교차 스택 억제).",
+     "note": null,
      "isPatched": true,
      "patchNote": "구 1.5/3.0(+300%) → +150%. Support 관통패시브(+150%)+Penetrator스킬(+200%)과 교차스택 시 관통 사실상 무제한이 되는 것 방지",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GlassCannon",
@@ -12609,29 +12770,30 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ImpenetrableSkin",
      "name": "노미더",
-     "standardDesc": "방어력이 없을 때 받는 피해가 +3.3% 감소하며, 클롯에게 잡히지 않습니다.",
-     "deluxeDesc": "방어력이 없을 때 받는 피해가 +6.7% 감소하며, 클롯에게 잡히지 않습니다.",
-     "standardDescRaw": "방어력이 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+3.3%</font> 감소하며, 클롯에게 잡히지 않습니다.",
-     "deluxeDescRaw": "방어력이 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+6.7%</font> 감소하며, 클롯에게 잡히지 않습니다.",
+     "standardDesc": "방어력이 없을 때 받는 피해가 +3.33% 감소하며, 클롯에게 잡히지 않습니다.",
+     "deluxeDesc": "방어력이 없을 때 받는 피해가 +6.67% 감소하며, 클롯에게 잡히지 않습니다.",
+     "standardDescRaw": "방어력이 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+3.33%</font> 감소하며, 클롯에게 잡히지 않습니다.",
+     "deluxeDescRaw": "방어력이 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+6.67%</font> 감소하며, 클롯에게 잡히지 않습니다.",
      "rawValues": [
       {
        "key": "Resistance",
        "label": "저항력",
        "value": 0.033333,
        "unit": "percent",
-       "display": "+3.3%"
+       "display": "+3.33%"
       },
       {
        "key": "Resistance",
        "label": "저항력",
        "value": 0.066667,
        "unit": "percent",
-       "display": "+6.7%"
+       "display": "+6.67%"
       }
      ],
      "hasKorText": true,
@@ -12640,7 +12802,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.100000; 구 0.200000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Primed",
@@ -12671,7 +12834,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Resilience",
@@ -12702,7 +12866,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ShowOff",
@@ -12718,7 +12883,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": true
     },
     {
      "key": "TrueShot",
@@ -12734,7 +12900,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": true
     },
     {
      "key": "Untouchable",
@@ -12765,7 +12932,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -12792,7 +12960,7 @@
      "label": "추적 피해량 보너스",
      "value": 0.0175,
      "unit": "percent",
-     "display": "+1.8%",
+     "display": "+1.75%",
      "lv10": 0.175,
      "lv20": 0.35,
      "lv10Display": "+17.5%",
@@ -12804,7 +12972,7 @@
      "label": "이동 속도",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -12853,7 +13021,7 @@
     }
    ],
    "role": "매복한 채 가하는 첫 공격의 피해량을 폭발적으로 늘려주는 <font color=\"#FFD700\">헌터형 저격</font> 퍼크입니다.",
-   "endgame": "완벽한 매복 보너스와 <font color=\"#15d7fa\">정점 스토커 보너스</font>를 갖추면 첫 발 기습에 압도적인 피해를 실어보내는 저격형 암살자 빌드가 완성됩니다. (게임 내 캡스톤 문구는 +100%/+70%로 표기되어 있으나, 최근 전체 조정으로 레벨당 성장치는 과거 대비 절반 수준입니다.)",
+   "endgame": "완벽한 매복 보너스와 <font color=\"#15d7fa\">정점 스토커 보너스</font>를 갖추면 첫 발 기습에 압도적인 피해를 실어보내는 저격형 암살자 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#4682B4\">포식자의 인내심:</font> 5초 이상 사격하지 않은 후 첫 타격의 <font color=\"#87CEEB\">피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.75% · 만렙(Lv20) +35%</font>",
@@ -12871,13 +13039,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">완벽한 매복</font> - 사격하지 않고 <font color=\"#FFFFFF\">10초</font> 대기 시 첫 공격이 <font color=\"#FFFFFF\">+200%</font>의 <font color=\"#87CEEB\">피해</font>를 입힙니다.",
-     "text": "레벨 10: 완벽한 매복 - 사격하지 않고 10초 대기 시 첫 공격이 +200%의 피해를 입힙니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">완벽한 매복</font> - 사격하지 않고 <font color=\"#FFFFFF\">10초</font> 대기 시 첫 공격이 <font color=\"#FFFFFF\">+50%</font>의 <font color=\"#87CEEB\">피해</font>를 입힙니다.",
+     "text": "레벨 10: 완벽한 매복 - 사격하지 않고 10초 대기 시 첫 공격이 +50%의 피해를 입힙니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">에이펙스 스토커</font> - 30초 이상 피해를 받지 않으면 다음 공격에 <font color=\"#FFFFFF\">+150%</font>의 <font color=\"#87CEEB\">피해량</font> 보너스가 적용됩니다.",
-     "text": "레벨 20: 에이펙스 스토커 - 30초 이상 피해를 받지 않으면 다음 공격에 +150%의 피해량 보너스가 적용됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">에이펙스 스토커</font> - 30초 이상 피해를 받지 않으면 다음 공격에 <font color=\"#FFFFFF\">+35%</font>의 <font color=\"#87CEEB\">피해량</font> 보너스가 적용됩니다.",
+     "text": "레벨 20: 에이펙스 스토커 - 30초 이상 피해를 받지 않으면 다음 공격에 +35%의 피해량 보너스가 적용됩니다.",
      "isCapstone": true
     }
    ],
@@ -12925,7 +13093,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DeathChill",
@@ -12956,7 +13125,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FaminesTouch",
@@ -12987,29 +13157,30 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FrozenHide",
      "name": "냉동 가죽",
-     "standardDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +6.7% 감소합니다.",
-     "deluxeDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +16.7% 감소합니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+6.7%</font> 감소합니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+16.7%</font> 감소합니다.",
+     "standardDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +6.67% 감소합니다.",
+     "deluxeDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +16.67% 감소합니다.",
+     "standardDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+6.67%</font> 감소합니다.",
+     "deluxeDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+16.67%</font> 감소합니다.",
      "rawValues": [
       {
        "key": "Resistance",
        "label": "저항력",
        "value": 0.066667,
        "unit": "percent",
-       "display": "+6.7%"
+       "display": "+6.67%"
       },
       {
        "key": "Resistance",
        "label": "저항력",
        "value": 0.166667,
        "unit": "percent",
-       "display": "+16.7%"
+       "display": "+16.67%"
       }
      ],
      "hasKorText": true,
@@ -13018,7 +13189,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.200000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HoardersCache",
@@ -13049,15 +13221,16 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Isolation",
      "name": "격리",
      "standardDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +5% 증가합니다.",
-     "deluxeDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +13.3% 증가합니다.",
+     "deluxeDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +13.33% 증가합니다.",
      "standardDescRaw": "<font color=\"#4682B4\">고립:</font> <font color=\"#F0F8FF\">15미터</font> 이내에 아군이 아무도 없을 때 <font color=\"#87CEEB\">피해 저항이</font> <font color=\"#FFFFFF\">+5%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">고립:</font> <font color=\"#F0F8FF\">15미터</font> 이내에 아군이 아무도 없을 때 <font color=\"#87CEEB\">피해 저항이</font> <font color=\"#FFFFFF\">+13.3%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#4682B4\">고립:</font> <font color=\"#F0F8FF\">15미터</font> 이내에 아군이 아무도 없을 때 <font color=\"#87CEEB\">피해 저항이</font> <font color=\"#FFFFFF\">+13.33%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Resistance",
@@ -13071,7 +13244,7 @@
        "label": "저항력",
        "value": 0.133333,
        "unit": "percent",
-       "display": "+13.3%"
+       "display": "+13.33%"
       }
      ],
      "hasKorText": true,
@@ -13080,7 +13253,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.150000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Mimicry",
@@ -13111,7 +13285,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PatientReload",
@@ -13142,7 +13317,8 @@
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.200000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PredatorsFocus",
@@ -13180,7 +13356,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "RavenousStrikes",
@@ -13211,7 +13388,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Territorial",
@@ -13242,7 +13420,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TrophyHunt",
@@ -13273,7 +13452,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 12,
@@ -13300,7 +13480,7 @@
      "label": "레벨 당 피해량",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -13312,7 +13492,7 @@
      "label": "레벨 당 재장전",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.075,
      "lv20": 0.15,
      "lv10Display": "+7.5%",
@@ -13494,11 +13674,11 @@
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.0075,
      "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
      "scaling": false,
      "capstoneLevel": null
     }
@@ -13507,8 +13687,8 @@
    "endgame": "3세트를 완성하면 트로피가 <font color=\"#15d7fa\">5개 슬롯에 무한 중첩</font>되는 완전 하드코딩 시스템이라, 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있는 전체 최고 위험 퍼크입니다. 반드시 인지하고 사용해야 합니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#CC8800\">사냥꾼의 본능:</font> 등급당 <font color=\"#FF6666\">모든 피해량</font> <font color=\"#FFFFFF\">+1.5%%</font>",
-     "text": "사냥꾼의 본능: 등급당 모든 피해량 +1.5%%",
+     "raw": "<font color=\"#CC8800\">사냥꾼의 본능:</font> 등급당 <font color=\"#FF6666\">모든 피해량</font> <font color=\"#FFFFFF\">+0.75%%</font>",
+     "text": "사냥꾼의 본능: 등급당 모든 피해량 +0.75%%",
      "isCapstone": false
     },
     {
@@ -13547,8 +13727,8 @@
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">트로피 마스터</font> - 트로피 드롭률이 <font color=\"#FFFFFF\">+0.8%%</font>로 고정되며, 모든 <font color=\"#87CEEB\">세트 보너스가 두 배로 증가합니다</font>. <font color=\"#FFD700\">전설의 사냥꾼</font> 세트에 <font color=\"#FF6666\">최대 체력 +50</font>이 추가됩니다.",
-     "text": "레벨 20: 트로피 마스터 - 트로피 드롭률이 +0.8%%로 고정되며, 모든 세트 보너스가 두 배로 증가합니다. 전설의 사냥꾼 세트에 최대 체력 +50이 추가됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">트로피 마스터</font> - 트로피 드롭률이 <font color=\"#FFFFFF\">5%%</font>로 고정되며, 모든 <font color=\"#87CEEB\">세트 보너스가 두 배로 증가합니다</font>. <font color=\"#FFD700\">전설의 사냥꾼</font> 세트에 <font color=\"#FF6666\">최대 체력 +50</font>이 추가됩니다.",
+     "text": "레벨 20: 트로피 마스터 - 트로피 드롭률이 5%%로 고정되며, 모든 세트 보너스가 두 배로 증가합니다. 전설의 사냥꾼 세트에 최대 체력 +50이 추가됩니다.",
      "isCapstone": true
     }
    ],
@@ -13582,7 +13762,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CarrionHarvest",
@@ -13627,7 +13808,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DiversifiedCollection",
@@ -13658,7 +13840,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FeedingFrenzy",
@@ -13689,7 +13872,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MountedTrophies",
@@ -13734,7 +13918,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Taxidermist",
@@ -13765,7 +13950,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TrophyHoarder",
@@ -13791,12 +13977,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 완화 완료: T2도 슬롯 추가 없이 1개로 고정 (트로피 무한 중첩 억제 목적).",
+     "note": "T2도 슬롯 추가 없이 1개로 고정되어 있어 트로피 중첩이 제한됩니다.",
      "isPatched": true,
      "patchNote": "구 1/2 → T2도 1로 고정. Predator 트로피 무한중첩 시스템(하드코딩, 확정OP) 완화를 위한 유일한 INI 개입점",
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TrophyMagnetism",
@@ -13827,7 +14014,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TrophyShield",
@@ -13858,7 +14046,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "WildHunt",
@@ -13884,12 +14073,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 완화 완료: T2도 드랍 간격 5초로 고정 (스택 가속 억제 목적).",
+     "note": "T2도 드랍 간격이 5초로 고정되어 있어 스택 속도가 제한됩니다.",
      "isPatched": true,
      "patchNote": "구 5/3 → T2도 5로 고정. 트로피 드랍 가속 억제 (Predator 확정OP 완화)",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -14085,11 +14275,11 @@
      "label": "공명 교차 보너스",
      "value": 0.0025,
      "unit": "percent",
-     "display": "+0.2%",
+     "display": "+0.25%",
      "lv10": 0.0025,
      "lv20": 0.0025,
-     "lv10Display": "+0.2%",
-     "lv20Display": "+0.2%",
+     "lv10Display": "+0.25%",
+     "lv20Display": "+0.25%",
      "scaling": false,
      "capstoneLevel": null
     }
@@ -14113,8 +14303,8 @@
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">공명</font> - <font color=\"#FFD700\">재련된</font> 무기로 처치한 적의 수가 두 배로 계산됩니다. 숙련된 무기 하나당 <font color=\"#FFFFFF\">+0.2%</font>의 피해량이 <font color=\"#FFD700\">모든 무기</font>에 적용됩니다.",
-     "text": "레벨 20: 공명 - 재련된 무기로 처치한 적의 수가 두 배로 계산됩니다. 숙련된 무기 하나당 +0.2%의 피해량이 모든 무기에 적용됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">공명</font> - <font color=\"#FFD700\">재련된</font> 무기로 처치한 적의 수가 두 배로 계산됩니다. 숙련된 무기 하나당 <font color=\"#FFFFFF\">+0.25%</font>의 피해량이 <font color=\"#FFD700\">모든 무기</font>에 적용됩니다.",
+     "text": "레벨 20: 공명 - 재련된 무기로 처치한 적의 수가 두 배로 계산됩니다. 숙련된 무기 하나당 +0.25%의 피해량이 모든 무기에 적용됩니다.",
      "isCapstone": true
     },
     {
@@ -14167,7 +14357,8 @@
      "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.300000; 구 0.600000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "AnvilsEcho",
@@ -14205,7 +14396,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GildedTouch",
@@ -14278,7 +14470,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HardenedPlate",
@@ -14309,7 +14502,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MasterworkTechnique",
@@ -14340,7 +14534,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Overforge",
@@ -14378,7 +14573,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "QuenchingStrike",
@@ -14416,7 +14612,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Reclamation",
@@ -14461,7 +14658,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ShatterPoint",
@@ -14506,7 +14704,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Soulbound",
@@ -14551,7 +14750,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -14574,42 +14774,41 @@
    "hasIniConfig": true,
    "passiveStats": [
     {
-     "key": "Doodle",
-     "label": "낙서",
-     "value": 40,
-     "unit": "count",
-     "display": "40",
-     "lv10": 400,
-     "lv20": 800,
-     "lv10Display": "400",
-     "lv20Display": "800",
+     "key": "Dosh",
+     "label": "도쉬",
+     "value": 14,
+     "unit": "currency",
+     "display": "14 도쉬",
+     "lv10": 140,
+     "lv20": 280,
+     "lv10Display": "140 도쉬",
+     "lv20Display": "280 도쉬",
      "scaling": true
-    }
-   ],
-   "fixedStats": [
+    },
     {
      "key": "Chance",
      "label": "발동 확률",
      "value": 0.02,
      "unit": "percent",
      "display": "+2%",
-     "lv10": 0.02,
-     "lv20": 0.02,
-     "lv10Display": "+2%",
-     "lv20Display": "+2%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
-     "key": "Dosh",
-     "label": "도쉬",
-     "value": 14,
-     "unit": "currency",
-     "display": "14 도쉬",
-     "lv10": 14,
-     "lv20": 14,
-     "lv10Display": "14 도쉬",
-     "lv20Display": "14 도쉬",
+     "key": "Doodle",
+     "label": "낙서",
+     "value": 40,
+     "unit": "count",
+     "display": "40",
+     "lv10": 40,
+     "lv20": 40,
+     "lv10Display": "40",
+     "lv20Display": "40",
      "scaling": false,
      "capstoneLevel": null
     }
@@ -14618,13 +14817,13 @@
    "endgame": "웨이브 종료 도쉬 보너스와 확률성 스킬(<font color=\"#15d7fa\">Jackpot</font> 등)을 조합하면 전투와 동시에 상당한 도쉬 수입을 기대할 수 있는 경제 특화 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "매 <font color=\"#15d7fa\">웨이브</font> 종료 시 <font color=\"#77d914\">%x 도쉬</font>를 획득합니다.",
-     "text": "매 웨이브 종료 시 %x 도쉬를 획득합니다.",
+     "raw": "매 <font color=\"#15d7fa\">웨이브</font> 종료 시 <font color=\"#77d914\">레벨업당 +14 · 만렙(Lv20) +280 도쉬</font>를 획득합니다.",
+     "text": "매 웨이브 종료 시 레벨업당 +14 · 만렙(Lv20) +280 도쉬를 획득합니다.",
      "isCapstone": false
     },
     {
-     "raw": "헤드샷으로 처치할 때마다 <font color=\"#77d914\">레벨업당 +4000% · 만렙(Lv20) +80000%</font> 확률로 <font color=\"#77d914\">1 도쉬</font>를 획득합니다.",
-     "text": "헤드샷으로 처치할 때마다 레벨업당 +4000% · 만렙(Lv20) +80000% 확률로 1 도쉬를 획득합니다.",
+     "raw": "헤드샷으로 처치할 때마다 <font color=\"#77d914\">레벨업당 +2% · 만렙(Lv20) +40%</font> 확률로 <font color=\"#77d914\">1 도쉬</font>를 획득합니다.",
+     "text": "헤드샷으로 처치할 때마다 레벨업당 +2% · 만렙(Lv20) +40% 확률로 1 도쉬를 획득합니다.",
      "isCapstone": false
     }
    ],
@@ -14672,7 +14871,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "DoubleDown",
@@ -14717,7 +14917,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FieryGambit",
@@ -14762,7 +14963,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GrenadeConjurer",
@@ -14793,7 +14995,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "IcyGambit",
@@ -14838,7 +15041,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Jackpot",
@@ -14883,7 +15087,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "LuckyPop",
@@ -14928,7 +15133,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NarrowEscape",
@@ -14959,7 +15165,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "StrokeOfLuck",
@@ -15004,7 +15211,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ToxicGambit",
@@ -15049,7 +15257,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -15090,11 +15299,11 @@
      "label": "돌격 관통력",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.0125,
      "lv20": 0.0125,
-     "lv10Display": "+1.2%",
-     "lv20Display": "+1.2%",
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
      "scaling": false,
      "capstoneLevel": null
     },
@@ -15129,11 +15338,11 @@
      "label": "탄력 속도",
      "value": 0.0075,
      "unit": "percent",
-     "display": "+0.8%",
+     "display": "+0.75%",
      "lv10": 0.0075,
      "lv20": 0.0075,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
      "scaling": false,
      "capstoneLevel": null
     },
@@ -15207,11 +15416,11 @@
      "label": "스택 당 영구 보너스",
      "value": 0.0025,
      "unit": "percent",
-     "display": "+0.2%",
+     "display": "+0.25%",
      "lv10": 0.0025,
      "lv20": 0.0025,
-     "lv10Display": "+0.2%",
-     "lv20Display": "+0.2%",
+     "lv10Display": "+0.25%",
+     "lv20Display": "+0.25%",
      "scaling": false,
      "capstoneLevel": null
     }
@@ -15225,28 +15434,28 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#ff4444\">돌격</font>: 레벨당 피해량 <font color=\"#FFFFFF\">+3%</font> 및 관통력 <font color=\"#FFFFFF\">+5%</font>. 동기화 조건: <font color=\"#FFFFFF\">헤드샷 처치</font>.",
-     "text": "돌격: 레벨당 피해량 +3% 및 관통력 +5%. 동기화 조건: 헤드샷 처치.",
+     "raw": "<font color=\"#ff4444\">돌격</font>: 레벨당 피해량 <font color=\"#FFFFFF\">+1.5%</font> 및 관통력 <font color=\"#FFFFFF\">+1.25%</font>. 동기화 조건: <font color=\"#FFFFFF\">헤드샷 처치</font>.",
+     "text": "돌격: 레벨당 피해량 +1.5% 및 관통력 +1.25%. 동기화 조건: 헤드샷 처치.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#44ddff\">템포</font>: 레벨당 재장전 속도 <font color=\"#FFFFFF\">+2%</font> 및 연사 속도 <font color=\"#FFFFFF\">+2%</font>. 동기화 조건: <font color=\"#FFFFFF\">빠른 연속 처치</font> (3초 이내).",
-     "text": "템포: 레벨당 재장전 속도 +2% 및 연사 속도 +2%. 동기화 조건: 빠른 연속 처치 (3초 이내).",
+     "raw": "<font color=\"#44ddff\">템포</font>: 레벨당 재장전 속도 <font color=\"#FFFFFF\">+1%</font> 및 연사 속도 <font color=\"#FFFFFF\">+1%</font>. 동기화 조건: <font color=\"#FFFFFF\">빠른 연속 처치</font> (3초 이내).",
+     "text": "템포: 레벨당 재장전 속도 +1% 및 연사 속도 +1%. 동기화 조건: 빠른 연속 처치 (3초 이내).",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#44ff44\">모멘텀</font>: 레벨당 이동 속도 <font color=\"#FFFFFF\">+1.5%</font> 및 무기 전환 속도 <font color=\"#FFFFFF\">+3%</font>. 동기화 조건: <font color=\"#FFFFFF\">이동 중 처치</font>.",
-     "text": "모멘텀: 레벨당 이동 속도 +1.5% 및 무기 전환 속도 +3%. 동기화 조건: 이동 중 처치.",
+     "raw": "<font color=\"#44ff44\">모멘텀</font>: 레벨당 이동 속도 <font color=\"#FFFFFF\">+0.75%</font> 및 무기 전환 속도 <font color=\"#FFFFFF\">+1.5%</font>. 동기화 조건: <font color=\"#FFFFFF\">이동 중 처치</font>.",
+     "text": "모멘텀: 레벨당 이동 속도 +0.75% 및 무기 전환 속도 +1.5%. 동기화 조건: 이동 중 처치.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#ffaa22\">BASTION</font>: 레벨당 근접 피해량 <font color=\"#FFFFFF\">+4%</font>, 처치 시 <font color=\"#FFFFFF\">1 HP 회복</font>, 피해 저항 <font color=\"#FFFFFF\">15%</font>. 동기화 조건: <font color=\"#FFFFFF\">근거리 처치</font> (5m 미만).",
-     "text": "BASTION: 레벨당 근접 피해량 +4%, 처치 시 1 HP 회복, 피해 저항 15%. 동기화 조건: 근거리 처치 (5m 미만).",
+     "raw": "<font color=\"#ffaa22\">BASTION</font>: 레벨당 근접 피해량 <font color=\"#FFFFFF\">+1%</font>, 처치 시 <font color=\"#FFFFFF\">1 HP 회복</font>, 피해 저항 <font color=\"#FFFFFF\">15%</font>. 동기화 조건: <font color=\"#FFFFFF\">근거리 처치</font> (5m 미만).",
+     "text": "BASTION: 레벨당 근접 피해량 +1%, 처치 시 1 HP 회복, 피해 저항 15%. 동기화 조건: 근거리 처치 (5m 미만).",
      "isCapstone": false
     },
     {
-     "raw": "각 위상과 일치하는 조건으로 <font color=\"#FFFFFF\">5회 동기화 처치</font>를 달성하면, 해당 위상에 <font color=\"#77d914\">영구적인 +1%</font> 중첩 보너스가 부여됩니다.",
-     "text": "각 위상과 일치하는 조건으로 5회 동기화 처치를 달성하면, 해당 위상에 영구적인 +1% 중첩 보너스가 부여됩니다.",
+     "raw": "각 위상과 일치하는 조건으로 <font color=\"#FFFFFF\">5회 동기화 처치</font>를 달성하면, 해당 위상에 <font color=\"#77d914\">영구적인 +0.25%</font> 중첩 보너스가 부여됩니다.",
+     "text": "각 위상과 일치하는 조건으로 5회 동기화 처치를 달성하면, 해당 위상에 영구적인 +0.25% 중첩 보너스가 부여됩니다.",
      "isCapstone": false
     },
     {
@@ -15330,7 +15539,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "FluxState",
@@ -15361,7 +15571,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GeneticMemory",
@@ -15392,7 +15603,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Monomorph",
@@ -15423,7 +15635,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "OverclockedForm",
@@ -15468,7 +15681,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PolymorphicSynthesis",
@@ -15513,7 +15727,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PrimordialVigor",
@@ -15539,12 +15754,13 @@
       }
      ],
      "hasKorText": true,
-     "note": "✅ 너프 완료: 15버프 전부 활성 시 DR -37.5% → -22.5%로 조정 (Mimicry 탱크성 심화 억제).",
+     "note": "15버프 전부 활성 시 피해 감소 총합은 -22.5%로 제한됩니다.",
      "isPatched": true,
      "patchNote": "구 0.015/0.025(15버프 전부 활성 시 -37.5%) → -22.5%로 완화. Mimicry(기존 확정OP)의 탱크성 심화 억제",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ResidualForm",
@@ -15589,7 +15805,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SurplusForm",
@@ -15605,7 +15822,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "VolatileShift",
@@ -15664,7 +15882,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 10,
@@ -15703,7 +15922,7 @@
      "label": "피해량 계수",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.125,
      "lv20": 0.25,
      "lv10Display": "+12.5%",
@@ -15715,7 +15934,7 @@
      "label": "피해량",
      "value": 0.0125,
      "unit": "percent",
-     "display": "+1.2%",
+     "display": "+1.25%",
      "lv10": 0.125,
      "lv20": 0.25,
      "lv10Display": "+12.5%",
@@ -15739,7 +15958,7 @@
     }
    ],
    "role": "독 피해량을 레벨마다 착실하게 증폭시켜주는 <font color=\"#FFD700\">생존전문가 1차 전직</font>입니다.",
-   "endgame": "레벨당 해석 확정 후 방치값이 발견되어 한 차례 +50%로 정상화되었고, 최근 전체 밸런스 재조정으로 Lv20 기준 <font color=\"#15d7fa\">+25%</font>까지 다시 조정되었습니다. 독 계열 화기와 함께 사용하면 안정적인 지속 피해 빌드가 완성됩니다.",
+   "endgame": "레벨당 독 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. 독 계열 화기와 함께 사용하면 안정적인 지속 피해 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "모든 무기가 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 확률로 적을 <font color=\"#8fce00\">신경독</font>에 중독시킵니다.",
@@ -15787,7 +16006,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Blight",
@@ -15825,7 +16045,8 @@
      "patchNote": "CC 남발 축소(2026-07-02), 구 15.000000(자동발동형); 구 30.000000; 구 20.000000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "EnvenomedArsenal",
@@ -15856,7 +16077,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Miasma",
@@ -15872,7 +16094,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Necrosis",
@@ -15903,7 +16126,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Outbreak",
@@ -15919,7 +16143,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Putrefaction",
@@ -15950,7 +16175,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SymbioticToxin",
@@ -15981,7 +16207,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ToxicAbsorption",
@@ -16012,7 +16239,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ToxicOverload",
@@ -16028,7 +16256,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 중독사망 연쇄폭발(\"독성과부하\"), INI값 없어 하드코딩 추정이라 완전 잠금으로 처리"
+     "disabledNote": "2026-07-02 제거: 중독사망 연쇄폭발(\"독성과부하\"), INI값 없어 하드코딩 추정이라 완전 잠금으로 처리",
+     "noData": false
     },
     {
      "key": "VenomousRiposte",
@@ -16044,7 +16273,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "VenomWeave",
@@ -16060,7 +16290,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": true
     }
    ],
    "skillCount": 12,
@@ -16224,7 +16455,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CurseOfStone",
@@ -16269,7 +16501,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GorgonsCurse",
@@ -16314,7 +16547,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GorgonsLegacy",
@@ -16359,7 +16593,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "Metamorphosis",
@@ -16418,7 +16653,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "NestOfVipers",
@@ -16477,14 +16713,15 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "PetrifyingPresence",
      "name": "석화시키는 존재",
-     "standardDesc": "석화하는 존재: 공격 시 +10% 확률로 적을 석화시킵니다(비틀거림 효과가 두 배가 됩니다).",
+     "standardDesc": "석화 확률: +10% · 휘청임 배율: ×2 · 피해량 배율: ×0",
      "deluxeDesc": "석화 확률: +20% · 휘청임 배율: ×2 · 피해량 배율: ×0.5",
-     "standardDescRaw": "<font color=\"#8B008B\">석화하는 존재:</font> 공격 시 <font color=\"#FFFFFF\">+10% 확률</font>로 적을 <font color=\"#FFD700\">석화</font>시킵니다(<font color=\"#FF6666\">비틀거림 효과가 두 배</font>가 됩니다).",
+     "standardDescRaw": "석화 확률: +10% · 휘청임 배율: ×2 · 피해량 배율: ×0",
      "deluxeDescRaw": "석화 확률: +20% · 휘청임 배율: ×2 · 피해량 배율: ×0.5",
      "rawValues": [
       {
@@ -16536,7 +16773,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SerpentineReflexes",
@@ -16581,15 +16819,16 @@
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.250000; 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ShedSkin",
      "name": "허물",
-     "standardDesc": "피해량 발동: 100 · 피해량 저항력: +6.7% · 버프 지속시간: 8초",
-     "deluxeDesc": "피해량 발동: 100 · 피해량 저항력: +13.3% · 버프 지속시간: 12초",
-     "standardDescRaw": "피해량 발동: 100 · 피해량 저항력: +6.7% · 버프 지속시간: 8초",
-     "deluxeDescRaw": "피해량 발동: 100 · 피해량 저항력: +13.3% · 버프 지속시간: 12초",
+     "standardDesc": "피해량 발동: 100 · 피해량 저항력: +6.67% · 버프 지속시간: 8초",
+     "deluxeDesc": "피해량 발동: 100 · 피해량 저항력: +13.33% · 버프 지속시간: 12초",
+     "standardDescRaw": "피해량 발동: 100 · 피해량 저항력: +6.67% · 버프 지속시간: 8초",
+     "deluxeDescRaw": "피해량 발동: 100 · 피해량 저항력: +13.33% · 버프 지속시간: 12초",
      "rawValues": [
       {
        "key": "DamageTrigger",
@@ -16610,14 +16849,14 @@
        "label": "피해량 저항력",
        "value": 0.066667,
        "unit": "percent",
-       "display": "+6.7%"
+       "display": "+6.67%"
       },
       {
        "key": "DamageResistance",
        "label": "피해량 저항력",
        "value": 0.133333,
        "unit": "percent",
-       "display": "+13.3%"
+       "display": "+13.33%"
       },
       {
        "key": "BuffDuration",
@@ -16640,7 +16879,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.200000; 구 0.400000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "SnakesCoil",
@@ -16685,7 +16925,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ToxicAura",
@@ -16730,29 +16971,30 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ToxicImmunity",
      "name": "독성 면역",
-     "standardDesc": "독성 면역: 독 피해 저항력을 +8.3% 얻습니다.",
-     "deluxeDesc": "독 저항력: +16.7%",
-     "standardDescRaw": "<font color=\"#8B008B\">독성 면역:</font> <font color=\"#00FF00\">독 피해 저항력</font>을 <font color=\"#FFFFFF\">+8.3%</font> 얻습니다.",
-     "deluxeDescRaw": "독 저항력: +16.7%",
+     "standardDesc": "독성 면역: 독 피해 저항력을 +8.33% 얻습니다.",
+     "deluxeDesc": "독 저항력: +16.67%",
+     "standardDescRaw": "<font color=\"#8B008B\">독성 면역:</font> <font color=\"#00FF00\">독 피해 저항력</font>을 <font color=\"#FFFFFF\">+8.33%</font> 얻습니다.",
+     "deluxeDescRaw": "독 저항력: +16.67%",
      "rawValues": [
       {
        "key": "PoisonResistance",
        "label": "독 저항력",
        "value": 0.083333,
        "unit": "percent",
-       "display": "+8.3%"
+       "display": "+8.33%"
       },
       {
        "key": "PoisonResistance",
        "label": "독 저항력",
        "value": 0.166667,
        "unit": "percent",
-       "display": "+16.7%"
+       "display": "+16.67%"
       }
      ],
      "hasKorText": true,
@@ -16761,7 +17003,8 @@
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.250000(블로트 가스 등 직결); 구 0.500000",
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "VenomExtraction",
@@ -16806,7 +17049,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 13,
@@ -16831,13 +17075,13 @@
     {
      "key": "RoundStipend",
      "label": "라운드 지원금",
-     "value": -20.0,
+     "value": 20.0,
      "unit": "count",
-     "display": "-20",
-     "lv10": -200.0,
-     "lv20": -400.0,
-     "lv10Display": "-200",
-     "lv20Display": "-400",
+     "display": "20",
+     "lv10": 200.0,
+     "lv20": 400.0,
+     "lv10Display": "200",
+     "lv20Display": "400",
      "scaling": true
     },
     {
@@ -16851,22 +17095,21 @@
      "lv10Display": "-8%",
      "lv20Display": "-16%",
      "scaling": true
-    }
-   ],
-   "fixedStats": [
+    },
     {
      "key": "CostCutting",
      "label": "비용 절감",
-     "value": 0.01,
+     "value": -0.01,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "display": "-1%",
+     "lv10": -0.1,
+     "lv20": -0.2,
+     "lv10Display": "-10%",
+     "lv20Display": "-20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "CompoundInterestRate",
      "label": "복리 이자 속도",
@@ -16895,31 +17138,31 @@
     }
    ],
    "role": "복리 이자가 눈덩이처럼 불어나 시간이 지날수록 도쉬 수입이 기하급수적으로 늘어나게 만들어주는 <font color=\"#FFD700\">최상급 경제형</font> 퍼크입니다.",
-   "endgame": "복리 이자, 라운드 지원금, 긴급환매 등 스킬을 조합하면 시간이 갈수록 기하급수적으로 불어나는 <font color=\"#15d7fa\">도쉬 수입</font>을 얻는 투자형 빌드가 완성됩니다. HODLing 스킬의 이자 중첩 여부는 확인이 필요합니다.",
+   "endgame": "복리 이자, 라운드 지원금, 긴급환매 등 스킬을 조합하면 시간이 갈수록 기하급수적으로 불어나는 <font color=\"#15d7fa\">도쉬 수입</font>을 얻는 투자형 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">라운드 지원금:</font> 각 웨이브 종료 시 <font color=\"#90EE90\">추가 지급금</font> <font color=\"#FFFFFF\">+%x</font>",
-     "text": "라운드 지원금: 각 웨이브 종료 시 추가 지급금 +%x",
+     "raw": "<font color=\"#FFD700\">라운드 지원금:</font> 각 웨이브 종료 시 <font color=\"#90EE90\">추가 지급금</font> <font color=\"#FFFFFF\">레벨업당 +20 · 만렙(Lv20) +400</font>",
+     "text": "라운드 지원금: 각 웨이브 종료 시 추가 지급금 레벨업당 +20 · 만렙(Lv20) +400",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FFD700\">대량 할인:</font> 상점 <font color=\"#90EE90\">아이템 가격</font> <font color=\"#FFFFFF\">레벨업당 -2000% · 만렙(Lv20) -40000%</font> 감소",
-     "text": "대량 할인: 상점 아이템 가격 레벨업당 -2000% · 만렙(Lv20) -40000% 감소",
+     "raw": "<font color=\"#FFD700\">대량 할인:</font> 상점 <font color=\"#90EE90\">아이템 가격</font> <font color=\"#FFFFFF\">레벨업당 -0.8% · 만렙(Lv20) -16%</font> 감소",
+     "text": "대량 할인: 상점 아이템 가격 레벨업당 -0.8% · 만렙(Lv20) -16% 감소",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FFD700\">비용 절감:</font> <font color=\"#90EE90\">무기 및 장비 업그레이드 비용</font> <font color=\"#FFFFFF\">레벨업당 -0.8% · 만렙(Lv20) -16%</font> 감소",
-     "text": "비용 절감: 무기 및 장비 업그레이드 비용 레벨업당 -0.8% · 만렙(Lv20) -16% 감소",
+     "raw": "<font color=\"#FFD700\">비용 절감:</font> <font color=\"#90EE90\">무기 및 장비 업그레이드 비용</font> <font color=\"#FFFFFF\">레벨업당 -1% · 만렙(Lv20) -20%</font> 감소",
+     "text": "비용 절감: 무기 및 장비 업그레이드 비용 레벨업당 -1% · 만렙(Lv20) -20% 감소",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">복리</font> - 웨이브 종료 시 현재 소지한 <font color=\"#90EE90\">도쉬</font>의 <font color=\"#FFFFFF\">10%</font>를 이자로 획득합니다.",
-     "text": "레벨 10: 복리 - 웨이브 종료 시 현재 소지한 도쉬의 10%를 이자로 획득합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">복리</font> - 웨이브 종료 시 현재 소지한 <font color=\"#90EE90\">도쉬</font>의 <font color=\"#FFFFFF\">+10%</font>를 이자로 획득합니다.",
+     "text": "레벨 10: 복리 - 웨이브 종료 시 현재 소지한 도쉬의 +10%를 이자로 획득합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">적대적 인수</font> - 보스 등장 시 모든 팀원의 현재 <font color=\"#90EE90\">도쉬</font> 중 <font color=\"#FFFFFF\">25%</font>를 흡수하여 자신의 것으로 만듭니다.",
-     "text": "레벨 20: 적대적 인수 - 보스 등장 시 모든 팀원의 현재 도쉬 중 25%를 흡수하여 자신의 것으로 만듭니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">적대적 인수</font> - 보스 등장 시 모든 팀원의 현재 <font color=\"#90EE90\">도쉬</font> 중 <font color=\"#FFFFFF\">+20%</font>를 흡수하여 자신의 것으로 만듭니다.",
+     "text": "레벨 20: 적대적 인수 - 보스 등장 시 모든 팀원의 현재 도쉬 중 +20%를 흡수하여 자신의 것으로 만듭니다.",
      "isCapstone": true
     },
     {
@@ -16958,7 +17201,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "BulkPurchasing",
@@ -16989,7 +17233,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "CorporateBailout",
@@ -17020,7 +17265,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "GoldenParachute",
@@ -17051,7 +17297,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HODLing",
@@ -17089,7 +17336,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HighRiskInvestment",
@@ -17120,7 +17368,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "HouseEdge",
@@ -17151,7 +17400,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "InsiderTrading",
@@ -17182,7 +17432,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "MercenaryContract",
@@ -17227,7 +17478,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "ProfitSharing",
@@ -17258,7 +17510,8 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     },
     {
      "key": "TaxLoopholes",
@@ -17296,7 +17549,8 @@
      "patchNote": null,
      "textFixed": true,
      "disabled": false,
-     "disabledNote": null
+     "disabledNote": null,
+     "noData": false
     }
    ],
    "skillCount": 11,

@@ -194,42 +194,24 @@
       "MasterworkTechnique": "'PerMilestone' 성장식은 퍼크 설명 기준 '무기별 100킬 단위'로 해석 — 점진적 성장형이라 위험도 낮음.",
       "Soulbound": "MasterworkTechnique와 동일한 마일스톤(무기별 100킬 단위) 기준으로 해석."
     },
-    "Cinder": {
-      "ScorchedEarth": "✅ 너프 완료: Damage T2가 +250%(전체 300개 스킬 중 최고 이상값)였다가 +100%로 정상화됨."
-    },
     "Cryophilite": {
-      "FrostbiteArrows": "⚠️ OP 소지: DamagePerStack의 최대 스택 수(MaxStacks)가 INI에 없어 무한 누적 가능성 — 장기전에서 모니터링 권장.",
-      "WintersSwiftness": "🐛 경미한 버그 추정: T2의 WeaponSwitchSpeed(0.4)가 T1(0.5)보다 낮음 — 정상적인 업그레이드라면 T2가 더 높아야 함. 단, 전투 영향이 작은 유틸리티 수치라 우선순위는 낮음."
-    },
-    "Daredevil": {
-      "FullMetalJacket": "✅ 너프 완료: 관통 +300% → +150% (Support 관통 패시브·스킬과의 교차 스택 억제)."
-    },
-    "Hydra": {
-      "CascadingMassacre": "✅ 너프 완료: HuntDown과 합산 +125% → 각각 하향되어 총합 +65%.",
-      "HuntDown": "✅ 너프 완료: CascadingMassacre와 합산 +125% → 총합 +65%."
-    },
-    "Maniac": {
-      "ArmedAndDangerous": "✅ 너프 완료: 4개 수류탄 스킬 동시 장착 시 합산 +260% → +145%로 조정.",
-      "Elmo": "✅ 너프 완료: 위와 동일한 조정의 일부.",
-      "MadBomber": "✅ 너프 완료: 위와 동일한 조정의 일부.",
-      "SlowCooker": "✅ 너프 완료: 위와 동일한 조정의 일부."
+      "FrostbiteArrows": "DamagePerStack의 최대 스택 수(MaxStacks)가 INI에 명시되어 있지 않아 무한 누적이 가능합니다 — 장기전에서 특히 강력합니다."
     },
     "Predator": {
-      "TrophyHoarder": "✅ 완화 완료: T2도 슬롯 추가 없이 1개로 고정 (트로피 무한 중첩 억제 목적).",
-      "WildHunt": "✅ 완화 완료: T2도 드랍 간격 5초로 고정 (스택 가속 억제 목적)."
+      "TrophyHoarder": "T2도 슬롯 추가 없이 1개로 고정되어 있어 트로피 중첩이 제한됩니다.",
+      "WildHunt": "T2도 드랍 간격이 5초로 고정되어 있어 스택 속도가 제한됩니다."
     },
     "Pyrokinetic": {
-      "ConsumingFlame": "🐛 버그 추정: Vampire 값이 T1/T2 모두 0 — 효과 자체가 발동하지 않아 밸런스 영향은 없음(사실상 Trash에 가까운 미완성 스킬)."
+      "ConsumingFlame": "Vampire 값이 T1/T2 모두 0으로 설정되어 있어 흡혈 효과가 발동하지 않습니다."
     },
     "Shapeshifter": {
-      "PrimordialVigor": "✅ 너프 완료: 15버프 전부 활성 시 DR -37.5% → -22.5%로 조정 (Mimicry 탱크성 심화 억제)."
+      "PrimordialVigor": "15버프 전부 활성 시 피해 감소 총합은 -22.5%로 제한됩니다."
     },
     "Tycoon": {
       "HODLing": "InterestRate=0.25가 기존 패시브 CompoundInterestRate(10%)와 중첩되나, 도쉬(재화) 효과라 전투 밸런스에는 영향 없음 — 적절."
     },
     "Voodoo": {
-      "SoulStealer": "체력 30%/60% 차감이 있으나 엔진 클램프(Cap_MinHealth=1)가 하한을 보장해 자멸 불가 — 적절.",
-      "DealWithTheDevil": "T2가 두 지표 모두 개선됨(치유 페널티 -85%→-70%로 완화, 헤드샷 피해 +40%→+60%로 증가) — 정상적인 디럭스 업그레이드이며 이상값이 아님. 단, 게임 내 표준/디럭스 설명 문구는 치유 -80%/-60%, 헤드샷 +80%/+120%로 적혀 있어 현재 ini 수치와 맞지 않음 — 문구가 예전 값으로 남아있는 것으로 추정."
+      "SoulStealer": "체력 30%/60% 차감이 있으나 엔진 클램프(Cap_MinHealth=1)가 하한을 보장해 자멸 불가 — 적절."
     }
   }
 }
