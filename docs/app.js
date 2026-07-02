@@ -332,11 +332,9 @@ function renderAdvDetail(key) {
   const skillsHtml = p.skills.map(s => `
     <div class="skill-item">
       <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.textFixed ? '<span class="patch-badge">값 보정됨</span>' : ""}</h4>
-      ${!s.textVerified ? `<div style="font-size:11px;color:var(--orange);margin-bottom:4px">⚠️ 이 설명 문구는 KFZedternalUnlimited.ini 값과 자동으로 대조되지 않았습니다. ${s.rawValues.length ? "실제 현재 수치는 하단 원본값을 확인하세요." : "이 스킬은 ini 설정값이 없어(하드코딩) 대조할 수 없습니다."}</div>` : ""}
       ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
       ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
       ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
-      ${!s.textVerified && s.rawValues.length ? `<div class="rawvals">${s.rawValues.map(v => `${escapeHtml(v.label)}: ${v.display}`).join("  ·  ")}</div>` : ""}
     </div>
   `).join("") || (p.key === "Haunted"
     ? '<div class="empty-state mystery" style="padding:10px">🌫️ 그 어떤 기록에도 남아있지 않다 — 이 존재의 진짜 힘을 알고 싶다면, 직접 웨이브 속에서 마주하는 수밖에 없다.</div>'

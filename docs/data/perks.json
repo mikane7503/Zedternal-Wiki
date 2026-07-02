@@ -958,8 +958,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "BugFixing",
@@ -988,8 +987,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Deflector",
@@ -1018,8 +1016,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "FLAK",
@@ -1048,8 +1045,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Fencer",
@@ -1078,8 +1074,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Indifferent",
@@ -1108,8 +1103,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "NoiseCancelling",
@@ -1138,8 +1132,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SteelSkin",
@@ -1168,8 +1161,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Stoic",
@@ -1198,8 +1190,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ThickSkin",
@@ -1228,8 +1219,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -1464,16 +1454,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "BatteringRam",
      "name": "공성퇴",
-     "standardDesc": "돌격: 질주 중 피해 저항이 20% 증가합니다. 질주를 멈춘 후 1초 이내에 가하는 첫 근접 공격은 피해량이 2배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
-     "deluxeDesc": "돌격: 질주 중 피해 저항이 30% 증가합니다. 질주를 멈춘 후 1.5초 이내에 가하는 첫 근접 공격은 피해량이 3배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
-     "standardDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 20% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 2배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 30% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1.5초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 3배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
+     "standardDesc": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1초",
+     "deluxeDesc": "질주 저항력: +30% · 충전 피해량: +300% · 충전 시간창: 1.5초",
+     "standardDescRaw": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1초",
+     "deluxeDescRaw": "질주 저항력: +30% · 충전 피해량: +300% · 충전 시간창: 1.5초",
      "rawValues": [
       {
        "key": "SprintResistance",
@@ -1522,16 +1511,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "ChainFury",
      "name": "체인 퓨리",
-     "standardDesc": "체인 퓨리: 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: 근접 공격력 3% 증가. 10체인 도달 시: 관통력 2 증가. 절대 공격을 멈추지 마세요.",
-     "deluxeDesc": "체인 퓨리: 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: 근접 공격력 5% 증가. 7체인 도달 시: 관통력 3 증가. 절대 공격을 멈추지 마세요.",
-     "standardDescRaw": "<font color=\"#edb82a\">체인 퓨리:</font> 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: <font color=\"#FF4500\">근접 공격력 3% 증가</font>. 10체인 도달 시: <font color=\"#FFD700\">관통력 2 증가</font>. <font color=\"#AAAAAA\">절대 공격을 멈추지 마세요.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">체인 퓨리:</font> 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: <font color=\"#FF4500\">근접 공격력 5% 증가</font>. 7체인 도달 시: <font color=\"#FFD700\">관통력 3 증가</font>. <font color=\"#AAAAAA\">절대 공격을 멈추지 마세요.</font>",
+     "standardDesc": "스택 당 피해량: +3% · 관통력 임계값: 10 · 관통력 보너스: +200%",
+     "deluxeDesc": "스택 당 피해량: +5% · 관통력 임계값: 7 · 관통력 보너스: +300%",
+     "standardDescRaw": "스택 당 피해량: +3% · 관통력 임계값: 10 · 관통력 보너스: +200%",
+     "deluxeDescRaw": "스택 당 피해량: +5% · 관통력 임계값: 7 · 관통력 보너스: +300%",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -1580,16 +1568,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Counterforce",
      "name": "반격력",
-     "standardDesc": "카운터포스: 받는 피해를 저장합니다(50% 변환, 최대 200 누적). 다음번 근접 공격 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. 방출 후 10초의 재사용 대기시간이 있습니다.",
-     "deluxeDesc": "카운터포스: 받는 피해를 저장합니다(80% 변환, 최대 350 누적). 다음번 근접 공격 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. 방출 후 10초의 재사용 대기시간이 있습니다.",
-     "standardDescRaw": "<font color=\"#edb82a\">카운터포스:</font> 받는 피해를 저장합니다(<font color=\"#FF4500\">50%</font> 변환, 최대 <font color=\"#FFFFFF\">200</font> 누적). 다음번 <font color=\"#FF4500\">근접 공격</font> 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. <font color=\"#AAAAAA\">방출 후 10초의 재사용 대기시간이 있습니다.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">카운터포스:</font> 받는 피해를 저장합니다(<font color=\"#FF4500\">80%</font> 변환, 최대 <font color=\"#FFFFFF\">350</font> 누적). 다음번 <font color=\"#FF4500\">근접 공격</font> 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. <font color=\"#AAAAAA\">방출 후 10초의 재사용 대기시간이 있습니다.</font>",
+     "standardDesc": "전환 속도: +50% · 최대 저장된 피해량: 200",
+     "deluxeDesc": "전환 속도: +80% · 최대 저장된 피해량: 350",
+     "standardDescRaw": "전환 속도: +50% · 최대 저장된 피해량: 200",
+     "deluxeDescRaw": "전환 속도: +80% · 최대 저장된 피해량: 350",
      "rawValues": [
       {
        "key": "ConversionRate",
@@ -1624,16 +1611,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "CrowdSurge",
      "name": "군중 밀집",
-     "standardDesc": "군중의 폭발: 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 5 중첩, 스택당 8초 지속). 스택당: 이동 속도 5% 증가. 3스택 이상: 은신한 적 감지 가능. 5스택: 무기 전환 속도 증가.",
-     "deluxeDesc": "군중의 폭발: 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 5 중첩, 스택당 12초 지속). 스택당: 이동 속도 7% 증가. 2스택 이상: 은신한 적 감지 가능. 4스택: 무기 전환 속도 증가.",
-     "standardDescRaw": "<font color=\"#edb82a\">군중의 폭발:</font> 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 <font color=\"#FFFFFF\">5</font> 중첩, 스택당 <font color=\"#AAAAAA\">8초 지속</font>). 스택당: <font color=\"#32CD32\">이동 속도 5% 증가</font>. 3스택 이상: <font color=\"#FFD700\">은신한 적 감지 가능</font>. 5스택: <font color=\"#87CEEB\">무기 전환 속도 증가</font>.",
-     "deluxeDescRaw": "<font color=\"#edb82a\">군중의 폭발:</font> 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 <font color=\"#FFFFFF\">5</font> 중첩, 스택당 <font color=\"#AAAAAA\">12초 지속</font>). 스택당: <font color=\"#32CD32\">이동 속도 7% 증가</font>. 2스택 이상: <font color=\"#FFD700\">은신한 적 감지 가능</font>. 4스택: <font color=\"#87CEEB\">무기 전환 속도 증가</font>.",
+     "standardDesc": "스택 당 속도: +5% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 8초",
+     "deluxeDesc": "스택 당 속도: +7% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 12초",
+     "standardDescRaw": "스택 당 속도: +5% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 8초",
+     "deluxeDescRaw": "스택 당 속도: +7% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 12초",
      "rawValues": [
       {
        "key": "SpeedPerStack",
@@ -1724,8 +1710,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Deadlock",
@@ -1768,8 +1753,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "HoldTheLine",
@@ -1812,8 +1796,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "NoSurrender",
@@ -1870,16 +1853,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "PainEcho",
      "name": "통증 에코",
-     "standardDesc": "고통의 메아리: 받은 피해의 10%를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 +5% 증가합니다(최대 5명, 최대 반사율 35%). 저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.",
-     "deluxeDesc": "고통의 메아리: 받은 피해의 15%를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 +8% 증가합니다(최대 5명, 최대 반사율 55%). 저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.",
-     "standardDescRaw": "<font color=\"#edb82a\">고통의 메아리:</font> <font color=\"#FF4500\">받은 피해의 10%</font>를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 <font color=\"#FFD700\">+5% 증가</font>합니다(최대 5명, 최대 반사율 <font color=\"#FFFFFF\">35%</font>). <font color=\"#AAAAAA\">저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">고통의 메아리:</font> <font color=\"#FF4500\">받은 피해의 15%</font>를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 <font color=\"#FFD700\">+8% 증가</font>합니다(최대 5명, 최대 반사율 <font color=\"#FFFFFF\">55%</font>). <font color=\"#AAAAAA\">저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.</font>",
+     "standardDesc": "기본 반사: +10% · 적 당 반사: +5% · 최대 적 보너스: 5",
+     "deluxeDesc": "기본 반사: +15% · 적 당 반사: +8% · 최대 적 보너스: 5",
+     "standardDescRaw": "기본 반사: +10% · 적 당 반사: +5% · 최대 적 보너스: 5",
+     "deluxeDescRaw": "기본 반사: +15% · 적 당 반사: +8% · 최대 적 보너스: 5",
      "rawValues": [
       {
        "key": "BaseReflection",
@@ -1928,8 +1910,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Shockwave",
@@ -1958,8 +1939,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     }
    ],
    "skillCount": 10,
@@ -2038,10 +2018,10 @@
     {
      "key": "BloodRush",
      "name": "영혼 도둑",
-     "standardDesc": "최대 체력이 5 감소하는 대신, 모든 무기의 발사 속도가 50% 증가합니다.",
-     "deluxeDesc": "최대 체력이 10 감소하는 대신, 모든 무기의 발사 속도가 100% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, 모든 무기의 <font color=\"#42e087\">발사 속도</font>가 <font color=\"#84d6d0\">50%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하는 대신, 모든 무기의 <font color=\"#42e087\">발사 속도</font>가 <font color=\"#84d6d0\">100%</font> 증가합니다.",
+     "standardDesc": "체력: -30% · 연사 속도: +30%",
+     "deluxeDesc": "체력: -50% · 연사 속도: +50%",
+     "standardDescRaw": "체력: -30% · 연사 속도: +30%",
+     "deluxeDescRaw": "체력: -50% · 연사 속도: +50%",
      "rawValues": [
       {
        "key": "Health",
@@ -2076,8 +2056,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "DealWithTheDevil",
@@ -2120,16 +2099,15 @@
      "note": "T2가 두 지표 모두 개선됨(치유 페널티 -85%→-70%로 완화, 헤드샷 피해 +40%→+60%로 증가) — 정상적인 디럭스 업그레이드이며 이상값이 아님. 단, 게임 내 표준/디럭스 설명 문구는 치유 -80%/-60%, 헤드샷 +80%/+120%로 적혀 있어 현재 ini 수치와 맞지 않음 — 문구가 예전 값으로 남아있는 것으로 추정.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "NoStringsOnMe",
      "name": "No Strings On Me",
-     "standardDesc": "최대 체력이 40 감소하지만, ZED를 처치할 때마다 이동 속도가 15% 증가합니다.",
-     "deluxeDesc": "최대 체력이 60 감소하지만, ZED를 처치할 때마다 이동 속도가 30% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">15%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">60</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">30%</font> 증가합니다.",
+     "standardDesc": "체력: -40% · 가속: +15%",
+     "deluxeDesc": "체력: -60% · 가속: +30%",
+     "standardDescRaw": "체력: -40% · 가속: +15%",
+     "deluxeDescRaw": "체력: -60% · 가속: +30%",
      "rawValues": [
       {
        "key": "Health",
@@ -2164,16 +2142,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "OdeToGreed",
      "name": "탐욕에 대한 송가",
-     "standardDesc": "최대 체력이 25 감소하는 대신, 각 웨이브 시작 시 250 도쉬를 획득합니다.",
-     "deluxeDesc": "최대 체력이 50 감소하는 대신, 각 웨이브 시작 시 500 도쉬를 획득합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">25</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">250 도쉬</font>를 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">50</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">500 도쉬</font>를 획득합니다.",
+     "standardDesc": "체력: -25% · 도쉬: 250 도쉬",
+     "deluxeDesc": "체력: -50% · 도쉬: 500 도쉬",
+     "standardDescRaw": "체력: -25% · 도쉬: 250 도쉬",
+     "deluxeDescRaw": "체력: -50% · 도쉬: 500 도쉬",
      "rawValues": [
       {
        "key": "Health",
@@ -2208,16 +2185,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "PainSplit",
      "name": "통증 분할",
-     "standardDesc": "최대 체력이 5 감소하는 대신, 자신이 받는 모든 치유량이 75% 증가합니다.",
-     "deluxeDesc": "최대 체력이 5 감소하는 대신, 자신이 받는 모든 치유량이 100% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">75%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">100%</font> 증가합니다.",
+     "standardDesc": "체력: -5% · 치유: +35%",
+     "deluxeDesc": "체력: -10% · 치유: +50%",
+     "standardDescRaw": "체력: -5% · 치유: +35%",
+     "deluxeDescRaw": "체력: -10% · 치유: +50%",
      "rawValues": [
       {
        "key": "Health",
@@ -2252,16 +2228,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "PinpointAccuracy",
      "name": "핀포인트 정확도",
-     "standardDesc": "최대 체력이 10 감소하지만, 모든 무기의 반동이 50% 감소하고 무기 흔들림이 줄어듭니다.",
-     "deluxeDesc": "최대 체력이 25 감소하지만, 모든 무기의 반동이 75% 감소하고 무기 흔들림이 완전히 사라집니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하지만, 모든 무기의 <font color=\"#42e087\">반동</font>이 <font color=\"#84d6d0\">50%</font> 감소하고 <font color=\"#84d6d0\">무기 흔들림</font>이 줄어듭니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">25</font> 감소하지만, 모든 무기의 <font color=\"#42e087\">반동</font>이 <font color=\"#84d6d0\">75%</font> 감소하고 <font color=\"#84d6d0\">무기 흔들림</font>이 완전히 사라집니다.",
+     "standardDesc": "체력: -10% · 반동: +50% · 흔들림: +50%",
+     "deluxeDesc": "체력: -25% · 반동: +75% · 흔들림: +100%",
+     "standardDescRaw": "체력: -10% · 반동: +50% · 흔들림: +50%",
+     "deluxeDescRaw": "체력: -25% · 반동: +75% · 흔들림: +100%",
      "rawValues": [
       {
        "key": "Health",
@@ -2310,16 +2285,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "PowerTransfer",
      "name": "전력 전송",
-     "standardDesc": "최대 체력이 5 감소하지만, 소총 무기의 피해량이 15% 증가합니다.",
-     "deluxeDesc": "최대 체력이 10 감소하지만, 소총 무기의 피해량이 30% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">15%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">30%</font> 증가합니다.",
+     "standardDesc": "체력: -5% · 피해량: +15%",
+     "deluxeDesc": "체력: -10% · 피해량: +30%",
+     "standardDescRaw": "체력: -5% · 피해량: +15%",
+     "deluxeDescRaw": "체력: -10% · 피해량: +30%",
      "rawValues": [
       {
        "key": "Health",
@@ -2354,8 +2328,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Reaper",
@@ -2384,16 +2357,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "SoulStealer",
      "name": "영혼 도둑",
-     "standardDesc": "최대 체력이 30 감소하지만, ZED를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "최대 체력이 60 감소하지만, ZED를 처치할 때마다 4 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">30</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">2 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">60</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">4 도쉬</font>를 추가로 획득합니다.",
+     "standardDesc": "체력: -30% · 도쉬: 2 도쉬",
+     "deluxeDesc": "체력: -60% · 도쉬: 4 도쉬",
+     "standardDescRaw": "체력: -30% · 도쉬: 2 도쉬",
+     "deluxeDescRaw": "체력: -60% · 도쉬: 4 도쉬",
      "rawValues": [
       {
        "key": "Health",
@@ -2428,16 +2400,15 @@
      "note": "체력 30%/60% 차감이 있으나 엔진 클램프(Cap_MinHealth=1)가 하한을 보장해 자멸 불가 — 적절.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Triskelion",
      "name": "트리스켈리온",
-     "standardDesc": "최대 체력이 5 감소하는 대신, 모든 무기의 속성(원소) 피해량이 30% 증가합니다.",
-     "deluxeDesc": "최대 체력이 10 감소하는 대신, 모든 무기의 속성(원소) 피해량이 60% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">30%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">60%</font> 증가합니다.",
+     "standardDesc": "체력: -5% · 피해량: +30%",
+     "deluxeDesc": "체력: -10% · 피해량: +60%",
+     "standardDescRaw": "체력: -5% · 피해량: +30%",
+     "deluxeDescRaw": "체력: -10% · 피해량: +60%",
      "rawValues": [
       {
        "key": "Health",
@@ -2472,8 +2443,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -2661,8 +2631,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Arachnophobia",
@@ -2691,8 +2660,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Extinguisher",
@@ -2721,8 +2689,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "GoreFasting",
@@ -2751,8 +2718,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Muted",
@@ -2781,8 +2747,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Pounded",
@@ -2811,8 +2776,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "RestrainingOrder",
@@ -2841,8 +2805,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Technophobe",
@@ -2871,8 +2834,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Untouchable",
@@ -2901,8 +2863,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Weightwatcher",
@@ -2931,8 +2892,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -3113,8 +3073,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "BattlefieldAwareness",
@@ -3143,8 +3102,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "DeepReserves",
@@ -3187,8 +3145,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "HuntersInstinct",
@@ -3245,8 +3202,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "IronFortress",
@@ -3275,8 +3231,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "LuckySalvage",
@@ -3290,8 +3245,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": false
     },
     {
      "key": "SuppressiveFire",
@@ -3334,16 +3288,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SymbioticRounds",
      "name": "공생 라운드",
-     "standardDesc": "소총 헤드샷 처치 시 35% 확률로 1발이 탄창으로 반환됩니다. 중형 및 대형 ZED 처치 시 15% 확률로 2발의 보너스 예비 탄약이 제공됩니다.",
-     "deluxeDesc": "소총 헤드샷 처치 시 50% 확률로 탄창에 1발이 회복됩니다. 중형 및 대형 ZED 처치 시 25% 확률로 3발의 보너스 예비 탄약을 획득합니다. 탄창이 25% 미만일 때 15%의 추가 회복 확률을 얻습니다.",
-     "standardDescRaw": "소총 헤드샷 처치 시 <font color=\"#77d914\">35%</font> 확률로 <font color=\"#15d7fa\">1발</font>이 탄창으로 반환됩니다. 중형 및 대형 ZED 처치 시 <font color=\"#ff3399\">15%</font> 확률로 <font color=\"#77d914\">2발의 보너스 예비 탄약</font>이 제공됩니다.",
-     "deluxeDescRaw": "소총 헤드샷 처치 시 <font color=\"#77d914\">50%</font> 확률로 탄창에 <font color=\"#15d7fa\">1발</font>이 회복됩니다. 중형 및 대형 ZED 처치 시 <font color=\"#ff3399\">25%</font> 확률로 <font color=\"#77d914\">3발의 보너스 예비 탄약</font>을 획득합니다. 탄창이 <font color=\"#ffcc00\">25%</font> 미만일 때 <font color=\"#ffcc00\">15%</font>의 추가 회복 확률을 얻습니다.",
+     "standardDesc": "탄약 회복 확률: +35% · 치명타 노획 확률: +15% · 보너스 탄약 량: +200%",
+     "deluxeDesc": "탄약 회복 확률: +50% · 치명타 노획 확률: +25% · 보너스 탄약 량: +300%",
+     "standardDescRaw": "탄약 회복 확률: +35% · 치명타 노획 확률: +15% · 보너스 탄약 량: +200%",
+     "deluxeDescRaw": "탄약 회복 확률: +50% · 치명타 노획 확률: +25% · 보너스 탄약 량: +300%",
      "rawValues": [
       {
        "key": "AmmoRecoveryChance",
@@ -3392,8 +3345,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "ThermalDrill",
@@ -3450,8 +3402,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 9,
@@ -3615,8 +3566,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Bloodthirst",
@@ -3645,16 +3595,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "CascadingMassacre",
      "name": "연쇄 학살",
-     "standardDesc": "2초 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 +8% (최대 5스택, +40%).",
-     "deluxeDesc": "2초 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 +15% (최대 5스택, +75%).",
-     "standardDescRaw": "<font color=\"#ffff00\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 <font color=\"#ff3399\">+8%</font> (최대 <font color=\"#ff3399\">5</font>스택, <font color=\"#ff3399\">+40%</font>).",
-     "deluxeDescRaw": "<font color=\"#ffff00\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 <font color=\"#ff3399\">+15%</font> (최대 <font color=\"#ff3399\">5</font>스택, <font color=\"#ff3399\">+75%</font>).",
+     "standardDesc": "스택 당 피해량: +5% · 최대 스택 수: 5 · 스택 지속시간: 2초",
+     "deluxeDesc": "스택 당 피해량: +8% · 최대 스택 수: 5 · 스택 지속시간: 2초",
+     "standardDescRaw": "스택 당 피해량: +5% · 최대 스택 수: 5 · 스택 지속시간: 2초",
+     "deluxeDescRaw": "스택 당 피해량: +8% · 최대 스택 수: 5 · 스택 지속시간: 2초",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -3689,16 +3638,15 @@
      "note": "✅ 너프 완료: HuntDown과 합산 +125% → 각각 하향되어 총합 +65%.",
      "isPatched": true,
      "patchNote": "구 0.08/0.15(5스택+75%) → 5스택+40%. HuntDown과 합산 시 Hydra FuryMode 너프(3배→1.2배) 취지 훼손 방지",
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "EndlessRampage",
      "name": "끝없는 광란",
-     "standardDesc": "ZED 타임이 +50% 더 오래 지속됩니다.",
-     "deluxeDesc": "ZED 타임이 +100% 더 오래 지속됩니다.",
-     "standardDescRaw": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+50%</font> 더 오래 지속됩니다.",
-     "deluxeDescRaw": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+100%</font> 더 오래 지속됩니다.",
+     "standardDesc": "ZED타임 연장: 0.5초",
+     "deluxeDesc": "ZED타임 연장: 1초",
+     "standardDescRaw": "ZED타임 연장: 0.5초",
+     "deluxeDescRaw": "ZED타임 연장: 1초",
      "rawValues": [
       {
        "key": "ZedTimeExtension",
@@ -3719,16 +3667,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "HuntDown",
      "name": "헌트 다운",
-     "standardDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 +5%씩 증가합니다. 최대 5 스택(+25%)까지 중첩됩니다.",
-     "deluxeDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 +10%씩 증가합니다. 최대 5 스택(+50%)까지 중첩됩니다.",
-     "standardDescRaw": "동일한 적을 연속해서 공격하면 타격당 피해량이 <font color=\"#ff3399\">+5%</font>씩 증가합니다. 최대 <font color=\"#ffff00\">5</font> 스택(<font color=\"#ff3399\">+25%</font>)까지 중첩됩니다.",
-     "deluxeDescRaw": "동일한 적을 연속해서 공격하면 타격당 피해량이 <font color=\"#ff3399\">+10%</font>씩 증가합니다. 최대 <font color=\"#ffff00\">5</font> 스택(<font color=\"#ff3399\">+50%</font>)까지 중첩됩니다.",
+     "standardDesc": "스택 당 피해량: +3% · 최대 스택 수: 5",
+     "deluxeDesc": "스택 당 피해량: +5% · 최대 스택 수: 5",
+     "standardDescRaw": "스택 당 피해량: +3% · 최대 스택 수: 5",
+     "deluxeDescRaw": "스택 당 피해량: +5% · 최대 스택 수: 5",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -3756,8 +3703,7 @@
      "note": "✅ 너프 완료: CascadingMassacre와 합산 +125% → 총합 +65%.",
      "isPatched": true,
      "patchNote": "구 0.05/0.10(5스택+50%) → 5스택+25%. CascadingMassacre와 합산 시 최대 +65%로 억제(구 +125%)",
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "LernaeanImmortality",
@@ -3793,16 +3739,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Overkill",
      "name": "과잉살",
-     "standardDesc": "적을 처치하고 남은 잉여(초과) 피해량의 50%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
-     "deluxeDesc": "적을 처치하고 남은 잉여(초과) 피해량의 75%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
-     "standardDescRaw": "적을 처치하고 남은 잉여(초과) 피해량의 50%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
-     "deluxeDescRaw": "적을 처치하고 남은 잉여(초과) 피해량의 75%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관)",
+     "standardDesc": "초과 휴대 배율: ×0.5 · 최대 저장된 피해량: 500",
+     "deluxeDesc": "초과 휴대 배율: ×0.75 · 최대 저장된 피해량: 500",
+     "standardDescRaw": "초과 휴대 배율: ×0.5 · 최대 저장된 피해량: 500",
+     "deluxeDescRaw": "초과 휴대 배율: ×0.75 · 최대 저장된 피해량: 500",
      "rawValues": [
       {
        "key": "ExcessCarryMult",
@@ -3830,8 +3775,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "PrimalRoar",
@@ -3867,16 +3811,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "ReflectedFury",
      "name": "반사된 분노",
-     "standardDesc": "피격 시, 받은 피해의 50%만큼을 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 10초.",
-     "deluxeDesc": "피격 시, 받은 피해의 100%를 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 10초.",
-     "standardDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">50%</font>만큼을 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">10초</font>.",
-     "deluxeDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">100%</font>를 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">10초</font>.",
+     "standardDesc": "피해량 반사 배율: ×0.5 · 재사용 대기시간: 10초 · 폭발 범위: 400",
+     "deluxeDesc": "피해량 반사 배율: ×1 · 재사용 대기시간: 10초 · 폭발 범위: 400",
+     "standardDescRaw": "피해량 반사 배율: ×0.5 · 재사용 대기시간: 10초 · 폭발 범위: 400",
+     "deluxeDescRaw": "피해량 반사 배율: ×1 · 재사용 대기시간: 10초 · 폭발 범위: 400",
      "rawValues": [
       {
        "key": "DamageReflectMult",
@@ -3911,8 +3854,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SymphonyOfSlaughter",
@@ -3969,8 +3911,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -4133,16 +4074,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "AgonizingPresence",
      "name": "고통스러운 존재",
-     "standardDesc": "ZED 타임 동안 가하는 공격의 비틀거림 및 넉다운 효과가 +50% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 가하는 공격의 비틀거림 및 넉다운 효과가 +100% 증가합니다. ZED 타임이 끝난 후에도 넉다운 보너스는 +50%로 유지됩니다.",
-     "standardDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 가하는 공격의 <font color=\"#FFFFFF\">비틀거림</font> 및 <font color=\"#FFFFFF\">넉다운</font> 효과가 <font color=\"#d8b0ff\">+50%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 가하는 공격의 <font color=\"#FFFFFF\">비틀거림</font> 및 <font color=\"#FFFFFF\">넉다운</font> 효과가 <font color=\"#d8b0ff\">+100%</font> 증가합니다. ZED 타임이 끝난 후에도 넉다운 보너스는 <font color=\"#d8b0ff\">+50%</font>로 유지됩니다.",
+     "standardDesc": "휘청임 보너스: +50% · 넉다운 보너스: +50% · 넉다운 잔여: +50%",
+     "deluxeDesc": "휘청임 보너스: +100% · 넉다운 보너스: +100% · 넉다운 잔여: +50%",
+     "standardDescRaw": "휘청임 보너스: +50% · 넉다운 보너스: +50% · 넉다운 잔여: +50%",
+     "deluxeDescRaw": "휘청임 보너스: +100% · 넉다운 보너스: +100% · 넉다운 잔여: +50%",
      "rawValues": [
       {
        "key": "StumbleBonus",
@@ -4184,16 +4124,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "ChronoCarapace",
      "name": "크로노-갑각",
-     "standardDesc": "ZED 타임 동안 모든 출처로부터 받는 피해가 30% 감소합니다.",
-     "deluxeDesc": "ZED 타임 동안 받는 피해가 50% 감소합니다. 지속적인 보호: ZED 타임이 끝난 후에도 3초 동안 받는 피해가 15% 감소합니다.",
-     "standardDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 모든 출처로부터 받는 피해가 <font color=\"#d8b0ff\">30%</font> 감소합니다.",
-     "deluxeDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 받는 피해가 <font color=\"#d8b0ff\">50%</font> 감소합니다. <font color=\"#FFFFFF\">지속적인 보호:</font> ZED 타임이 끝난 후에도 <font color=\"#d8b0ff\">3초</font> 동안 받는 피해가 <font color=\"#d8b0ff\">15%</font> 감소합니다.",
+     "standardDesc": "제드 시간 피해 감소: +30% · 잔류 피해 감소: +15%",
+     "deluxeDesc": "제드 시간 피해 감소: +50% · 잔류 피해 감소: +15%",
+     "standardDescRaw": "제드 시간 피해 감소: +30% · 잔류 피해 감소: +15%",
+     "deluxeDescRaw": "제드 시간 피해 감소: +50% · 잔류 피해 감소: +15%",
      "rawValues": [
       {
        "key": "ZedTimeDR",
@@ -4221,16 +4160,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Chronoshift",
      "name": "크로노시프트",
-     "standardDesc": "크로노시프트 능력을 잠금 해제합니다. 사용 시 5초 동안 ZED 타임을 즉시 발동합니다. 재사용 대기시간: 90초.",
-     "deluxeDesc": "크로노시프트(디럭스) 능력을 잠금 해제합니다. 사용 시 8초 동안 ZED 타임을 즉시 발동합니다. 재사용 대기시간: 90초.",
-     "standardDescRaw": "<font color=\"#66cc00\">크로노시프트</font> 능력을 잠금 해제합니다. 사용 시 <font color=\"#00ffff\">5초</font> 동안 <font color=\"#ffaa33\">ZED 타임</font>을 즉시 발동합니다. 재사용 대기시간: <font color=\"#ff9900\">90초</font>.",
-     "deluxeDescRaw": "<font color=\"#66cc00\">크로노시프트(디럭스)</font> 능력을 잠금 해제합니다. 사용 시 <font color=\"#00ffff\">8초</font> 동안 <font color=\"#ffaa33\">ZED 타임</font>을 즉시 발동합니다. 재사용 대기시간: <font color=\"#ff9900\">90초</font>.",
+     "standardDesc": "제드 시간 지속시간: 5초",
+     "deluxeDesc": "제드 시간 지속시간: 8초",
+     "standardDescRaw": "제드 시간 지속시간: 5초",
+     "deluxeDescRaw": "제드 시간 지속시간: 8초",
      "rawValues": [
       {
        "key": "ZedTimeDurations",
@@ -4251,8 +4189,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "EternalSuffering",
@@ -4281,16 +4218,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "PocketDimension",
      "name": "포켓 치수",
-     "standardDesc": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 +3 증가하고, 수류탄 소지 한도가 +1개 증가합니다.",
-     "deluxeDesc": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 +5 증가하고, 수류탄 소지 한도가 +2개 증가합니다. 모든 투사체 무기는 절대 불발되지 않습니다.",
-     "standardDescRaw": "<font color=\"#9632ff\">공생체 내부의 공간을 비틉니다.</font> 소지 무게 한도가 <font color=\"#d8b0ff\">+3</font> 증가하고, 수류탄 소지 한도가 <font color=\"#d8b0ff\">+1</font>개 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#9632ff\">공생체 내부의 공간을 비틉니다.</font> 소지 무게 한도가 <font color=\"#d8b0ff\">+5</font> 증가하고, 수류탄 소지 한도가 <font color=\"#d8b0ff\">+2</font>개 증가합니다. 모든 투사체 무기는 <font color=\"#FFFFFF\">절대 불발되지 않습니다.</font>",
+     "standardDesc": "중량 보너스: 3 · 수류탄 보너스: +100%",
+     "deluxeDesc": "중량 보너스: 5 · 수류탄 보너스: +200%",
+     "standardDescRaw": "중량 보너스: 3 · 수류탄 보너스: +100%",
+     "deluxeDescRaw": "중량 보너스: 5 · 수류탄 보너스: +200%",
      "rawValues": [
       {
        "key": "WeightBonus",
@@ -4325,8 +4261,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "TemporalRupture",
@@ -4355,8 +4290,7 @@
      "note": "헤드샷 처치 확률(25%/50%)만 명시되어 있고 대상 효과 필드명은 없으나, 퍼크 컨셉(ZED타임 특화) 및 캡스톤 설명(헤드샷 시 ZED타임 연장)과 연계된 효과로 추정.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "TemporalSiphon",
@@ -4399,8 +4333,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "WarpPhase",
@@ -4429,8 +4362,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     }
    ],
    "skillCount": 9,
@@ -4517,8 +4449,7 @@
      "note": "✅ 너프 완료: 4개 수류탄 스킬 동시 장착 시 합산 +260% → +145%로 조정.",
      "isPatched": true,
      "patchNote": "구 0.3/0.5 → Maniac 수류탄계열 4스킬 동시장착 시 Demo 패시브(+80%) 위 중첩 억제 (worst-case 가정, 인게임 확인 권장)",
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Arsonist",
@@ -4547,8 +4478,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "BargainHunter",
@@ -4577,8 +4507,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Dauntless",
@@ -4607,8 +4536,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Elmo",
@@ -4637,8 +4565,7 @@
      "note": "✅ 너프 완료: 위와 동일한 조정의 일부.",
      "isPatched": true,
      "patchNote": "구 0.5/1.0 → Maniac 4종 스킬 중 최고값이라 우선 하향 (worst-case 가정, 인게임 확인 권장)",
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Fanatic",
@@ -4667,8 +4594,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "MadBomber",
@@ -4697,8 +4623,7 @@
      "note": "✅ 너프 완료: 위와 동일한 조정의 일부.",
      "isPatched": true,
      "patchNote": "구 0.3/0.6 → Maniac 수류탄계열 중첩 억제",
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SlowCooker",
@@ -4727,8 +4652,7 @@
      "note": "✅ 너프 완료: 위와 동일한 조정의 일부.",
      "isPatched": true,
      "patchNote": "구 0.25/0.5 → Maniac 수류탄계열 중첩 억제. 4스킬 T2합 2.6(+260%)→1.45(+145%)로 조정",
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 8,
@@ -4866,8 +4790,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Bellows",
@@ -4896,8 +4819,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ChainReaction",
@@ -4926,8 +4848,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Crucible",
@@ -4956,15 +4877,14 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "EmberHarvest",
      "name": "엠버 하비스트",
-     "standardDesc": "웨이브 종료 시 수류탄 +1개를 획득합니다.",
+     "standardDesc": "추가 수류탄: 1 · 탄약 복구: +0%",
      "deluxeDesc": "웨이브 종료 시 수류탄 +3개를 획득하고, 모든 무기의 탄약을 +15% 보충합니다.",
-     "standardDescRaw": "웨이브 종료 시 수류탄 <font color=\"#e85009\">+1</font>개를 획득합니다.",
+     "standardDescRaw": "추가 수류탄: 1 · 탄약 복구: +0%",
      "deluxeDescRaw": "웨이브 종료 시 수류탄 <font color=\"#e85009\">+3</font>개를 획득하고, 모든 무기의 <font color=\"#e80948\">탄약</font>을 <font color=\"#e85009\">+15%</font> 보충합니다.",
      "rawValues": [
       {
@@ -5000,16 +4920,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "InfernoRounds",
      "name": "인페르노 라운드",
-     "standardDesc": "화염 속성이 아닌 공격도 명중 시 화상 지속 피해를 입힐 확률이 생깁니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
-     "deluxeDesc": "화염 속성이 아닌 공격도 명중 시 화상 지속 피해를 입힐 확률이 높아지며, 입히는 화상 피해량이 더욱 강력해집니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
-     "standardDescRaw": "화염 속성이 아닌 공격도 명중 시 <font color=\"#e80948\">화상 지속 피해</font>를 입힐 확률이 생깁니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
-     "deluxeDescRaw": "화염 속성이 아닌 공격도 명중 시 <font color=\"#e80948\">화상 지속 피해</font>를 입힐 확률이 높아지며, 입히는 화상 피해량이 <font color=\"#e85009\">더욱 강력</font>해집니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
+     "standardDesc": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
+     "deluxeDesc": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
+     "standardDescRaw": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
+     "deluxeDescRaw": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
      "rawValues": [
       {
        "key": "InfernoProbability",
@@ -5044,8 +4963,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Ironclad",
@@ -5074,16 +4992,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Pyroclasm",
      "name": "화산쇄설류",
-     "standardDesc": "30초마다 다음번에 가하는 화염 또는 폭발 속성 공격의 피해량이 +50% 증가합니다.",
-     "deluxeDesc": "18초마다 다음번에 가하는 화염 또는 폭발 속성 공격의 피해량이 +125% 증가합니다.",
-     "standardDescRaw": "30초마다 다음번에 가하는 화염 또는 폭발 속성 공격의 피해량이 +50% 증가합니다.",
-     "deluxeDescRaw": "18초마다 다음번에 가하는 화염 또는 폭발 속성 공격의 피해량이 +125% 증가합니다.",
+     "standardDesc": "피해량 보너스: +50%",
+     "deluxeDesc": "피해량 보너스: +125%",
+     "standardDescRaw": "피해량 보너스: +50%",
+     "deluxeDescRaw": "피해량 보너스: +125%",
      "rawValues": [
       {
        "key": "DamageBonus",
@@ -5104,8 +5021,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SlagArmor",
@@ -5134,8 +5050,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "TemperedSteel",
@@ -5164,8 +5079,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -5360,16 +5274,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "DivineFortitude",
      "name": "신성한 용기",
-     "standardDesc": "최대 체력과 최대 방어력이 10% 증가합니다.",
-     "deluxeDesc": "디럭스. 최대 체력 및 최대 방어력이 25% 증가합니다.",
-     "standardDescRaw": "최대 체력과 최대 방어력이 10% 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> <font color=\"#ff6666\">최대 체력</font> 및 <font color=\"#4444ff\">최대 방어력</font>이 <font color=\"#eeeeff\">25%</font> 증가합니다.",
+     "standardDesc": "체력 보너스: +10% · 방어력 보너스: +10%",
+     "deluxeDesc": "체력 보너스: +25% · 방어력 보너스: +25%",
+     "standardDescRaw": "체력 보너스: +10% · 방어력 보너스: +10%",
+     "deluxeDescRaw": "체력 보너스: +25% · 방어력 보너스: +25%",
      "rawValues": [
       {
        "key": "HealthBonus",
@@ -5404,8 +5317,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "HolyResilience",
@@ -5434,16 +5346,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "MartyrBlessing",
      "name": "순교자의 축복",
-     "standardDesc": "아군을 치유할 때마다 5%의 피해 저항력을 얻습니다. 최대 10%까지 중첩되며 시간이 지남에 따라 감소합니다.",
-     "deluxeDesc": "디럭스. 아군을 치유할 때마다 10%의 피해 저항력을 얻습니다. 최대 25%까지 중첩되며 시간이 지남에 따라 감소합니다.",
-     "standardDescRaw": "아군을 치유할 때마다 <font color=\"#eeeeff\">5%</font>의 피해 저항력을 얻습니다. 최대 <font color=\"#eeeeff\">10%</font>까지 중첩되며 시간이 지남에 따라 감소합니다.",
-     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유할 때마다 <font color=\"#eeeeff\">10%</font>의 피해 저항력을 얻습니다. 최대 <font color=\"#eeeeff\">25%</font>까지 중첩되며 시간이 지남에 따라 감소합니다.",
+     "standardDesc": "치유 당 보호막: 5 · 최대 보호막: 10",
+     "deluxeDesc": "치유 당 보호막: 10 · 최대 보호막: 25",
+     "standardDescRaw": "치유 당 보호막: 5 · 최대 보호막: 10",
+     "deluxeDescRaw": "치유 당 보호막: 10 · 최대 보호막: 25",
      "rawValues": [
       {
        "key": "ShieldPerHeal",
@@ -5478,8 +5389,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "OverflowingGrace",
@@ -5508,8 +5418,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "PhoenixPrayer",
@@ -5538,16 +5447,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SanctifiedRounds",
      "name": "성스러운 라운드",
-     "standardDesc": "아군을 치유한 직후, 5초 동안 자신의 피해량이 20% 증가합니다.",
-     "deluxeDesc": "디럭스. 아군을 치유한 직후, 5초 동안 자신의 피해량이 50% 증가합니다.",
-     "standardDescRaw": "아군을 치유한 직후, <font color=\"#eeeeff\">5초</font> 동안 자신의 <font color=\"#ff4444\">피해량이 20%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유한 직후, <font color=\"#eeeeff\">5초</font> 동안 자신의 <font color=\"#ff4444\">피해량이 50%</font> 증가합니다.",
+     "standardDesc": "피해량: +20%",
+     "deluxeDesc": "피해량: +50%",
+     "standardDescRaw": "피해량: +20%",
+     "deluxeDescRaw": "피해량: +50%",
      "rawValues": [
       {
        "key": "Damage",
@@ -5568,8 +5476,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "TriageExpert",
@@ -5605,8 +5512,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "WingsOfMercy",
@@ -5656,8 +5562,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 9,
@@ -5847,16 +5752,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Hivesight",
      "name": "하이브사이트",
-     "standardDesc": "적의 체력 바를 볼 수 있습니다.",
-     "deluxeDesc": "적의 체력 바를 볼 수 있으며, 은폐한 ZED를 훨씬 더 멀리서 감지할 수 있습니다.",
-     "standardDescRaw": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있습니다.",
-     "deluxeDescRaw": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있으며, 은폐한 ZED를 훨씬 더 멀리서 감지할 수 있습니다.",
+     "standardDesc": "은신 탐지 보너스: +50%",
+     "deluxeDesc": "은신 탐지 보너스: +200%",
+     "standardDescRaw": "은신 탐지 보너스: +50%",
+     "deluxeDescRaw": "은신 탐지 보너스: +200%",
      "rawValues": [
       {
        "key": "CloakDetectionBonus",
@@ -5877,8 +5781,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "InfestedRounds",
@@ -5949,8 +5852,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Mitosis",
@@ -5979,15 +5881,14 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "NeuralFeedback",
      "name": "신경 피드백",
-     "standardDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려줍니다.",
+     "standardDesc": "반사 퍼센트: +15% · 디럭스 치유 퍼센트: +50%",
      "deluxeDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 +30%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 +50%만큼 자신의 체력을 회복합니다.",
-     "standardDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려줍니다.",
+     "standardDescRaw": "반사 퍼센트: +15% · 디럭스 치유 퍼센트: +50%",
      "deluxeDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 +30%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 +50%만큼 자신의 체력을 회복합니다.",
      "rawValues": [
       {
@@ -6016,8 +5917,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "ParasiticBloom",
@@ -6060,16 +5960,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "PheromoneTrail",
      "name": "페로몬 트레일",
-     "standardDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도가 +15% 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
-     "deluxeDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도 +30% 및 재장전 속도 +15% 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
-     "standardDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#FFFFFF\">+15%</font> 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
-     "deluxeDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> 및 <font color=\"#42e087\">재장전 속도</font> <font color=\"#FFFFFF\">+15%</font> 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "standardDesc": "속도 보너스: +15% · 디럭스 재장전 보너스: +15%",
+     "deluxeDesc": "속도 보너스: +30% · 디럭스 재장전 보너스: +15%",
+     "standardDescRaw": "속도 보너스: +15% · 디럭스 재장전 보너스: +15%",
+     "deluxeDescRaw": "속도 보너스: +30% · 디럭스 재장전 보너스: +15%",
      "rawValues": [
       {
        "key": "SpeedBonus",
@@ -6097,8 +5996,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SymbioticRestoration",
@@ -6127,8 +6025,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 8,
@@ -6396,8 +6293,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "BloodShield",
@@ -6447,8 +6343,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Contagion",
@@ -6491,8 +6386,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "CrimsonBond",
@@ -6535,8 +6429,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "EssenceDrain",
@@ -6565,16 +6458,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "LeechField",
      "name": "거머리장",
-     "standardDesc": "흡혈장: 제자리에 2초 동안 서 있으면 주변에 흡혈 오라를 생성합니다. 오라 내의 적은 초당 8의 피해를 입으며, 당신은 입힌 피해의 50%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
-     "deluxeDesc": "[디럭스] 흡혈장: 제자리에 2초 동안 서 있으면 주변에 강력한 흡혈 오라를 생성합니다. 오라 내의 적은 초당 15의 피해를 입으며, 당신은 입힌 피해의 100%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
-     "standardDescRaw": "<font color=\"#B40028\">흡혈장:</font> 제자리에 2초 동안 서 있으면 주변에 흡혈 오라를 생성합니다. 오라 내의 적은 초당 8의 피해를 입으며, 당신은 입힌 피해의 50%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">흡혈장:</font> 제자리에 2초 동안 서 있으면 주변에 강력한 흡혈 오라를 생성합니다. 오라 내의 적은 초당 15의 피해를 입으며, 당신은 입힌 피해의 100%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
+     "standardDesc": "장 범위: 600 · 틱 당 피해량: 8 · 치유량 비율: +50% · 정지 지연: 2",
+     "deluxeDesc": "장 범위: 800 · 틱 당 피해량: 15 · 치유량 비율: +100% · 정지 지연: 2",
+     "standardDescRaw": "장 범위: 600 · 틱 당 피해량: 8 · 치유량 비율: +50% · 정지 지연: 2",
+     "deluxeDescRaw": "장 범위: 800 · 틱 당 피해량: 15 · 치유량 비율: +100% · 정지 지연: 2",
      "rawValues": [
       {
        "key": "FieldRadius",
@@ -6630,16 +6522,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "LifeTap",
      "name": "라이프 탭",
-     "standardDesc": "생명력 흡수: 흡수(사이펀)된 적 한 명당 의료 다트 재충전 시간이 -6% 감소합니다. (8명 흡수 시 최대 -48%)",
-     "deluxeDesc": "[디럭스] 생명력 흡수: 흡수(사이펀)된 적 한 명당 의료 다트 재충전 시간이 -10% 감소합니다. (8명 흡수 시 최대 -80%)",
-     "standardDescRaw": "<font color=\"#B40028\">생명력 흡수:</font> <font color=\"#FF6464\">흡수(사이펀)된</font> 적 한 명당 의료 다트 재충전 시간이 <font color=\"#FFFFFF\">-6%</font> 감소합니다. (8명 흡수 시 최대 <font color=\"#FFFFFF\">-48%</font>)",
-     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">생명력 흡수:</font> <font color=\"#FF6464\">흡수(사이펀)된</font> 적 한 명당 의료 다트 재충전 시간이 <font color=\"#FFFFFF\">-10%</font> 감소합니다. (8명 흡수 시 최대 <font color=\"#FFFFFF\">-80%</font>)",
+     "standardDesc": "흡수 당 재충전 감소: -6%",
+     "deluxeDesc": "흡수 당 재충전 감소: -10%",
+     "standardDescRaw": "흡수 당 재충전 감소: -6%",
+     "deluxeDescRaw": "흡수 당 재충전 감소: -10%",
      "rawValues": [
       {
        "key": "RechargeReductionPerSiphon",
@@ -6660,8 +6551,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SiphonCascade",
@@ -6690,8 +6580,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "SymbioticReload",
@@ -6720,8 +6609,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Transfusion",
@@ -6764,8 +6652,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     }
    ],
    "skillCount": 10,
@@ -6956,8 +6843,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "BiomassRecycling",
@@ -6986,8 +6872,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "CellularRedundancy",
@@ -7016,16 +6901,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "DesperateSymbiosis",
      "name": "절망적인 공생",
-     "standardDesc": "체력이 50% 미만일 때는 40%의 추가 피해를 주지만, 체력이 75% 이상일 때는 15%의 추가 피해를 받습니다.",
-     "deluxeDesc": "체력이 50% 미만일 때는 65%의 추가 피해를 주지만, 체력이 75% 이상일 때는 10%의 추가 피해를 받습니다.",
-     "standardDescRaw": "체력이 50% 미만일 때는 40%의 추가 피해를 주지만, 체력이 75% 이상일 때는 15%의 추가 피해를 받습니다.",
-     "deluxeDescRaw": "체력이 50% 미만일 때는 65%의 추가 피해를 주지만, 체력이 75% 이상일 때는 10%의 추가 피해를 받습니다.",
+     "standardDesc": "피해량 보너스: +40% · 페널티: +15%",
+     "deluxeDesc": "피해량 보너스: +65% · 페널티: +10%",
+     "standardDescRaw": "피해량 보너스: +40% · 페널티: +15%",
+     "deluxeDescRaw": "피해량 보너스: +65% · 페널티: +10%",
      "rawValues": [
       {
        "key": "DamageBonus",
@@ -7060,8 +6944,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "FleshWeaving",
@@ -7132,8 +7015,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "MetabolicOverdrive",
@@ -7162,16 +7044,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "MuscleFiberEnhancement",
      "name": "근섬유 강화",
-     "standardDesc": "공생체가 생체 섬유로 근육 조직을 강화합니다. 근접 공격력 +40%, 소지 무게 제한 +5, 이동 속도 +3%.",
-     "deluxeDesc": "공생체가 생체 섬유로 근육 조직을 대폭 강화합니다. 근접 공격력 +80%, 소지 무게 제한 +10, 이동 속도 +5%.",
-     "standardDescRaw": "공생체가 생체 섬유로 근육 조직을 강화합니다. <font color='#9370DB'>근접 공격력</font> <font color='#00FF7F'>+40%</font>, <font color='#9370DB'>소지 무게 제한</font> <font color='#00FF7F'>+5</font>, <font color='#9370DB'>이동 속도</font> <font color='#00FF7F'>+3%</font>.",
-     "deluxeDescRaw": "공생체가 생체 섬유로 근육 조직을 대폭 강화합니다. <font color='#9370DB'>근접 공격력</font> <font color='#00FF7F'>+80%</font>, <font color='#9370DB'>소지 무게 제한</font> <font color='#00FF7F'>+10</font>, <font color='#9370DB'>이동 속도</font> <font color='#00FF7F'>+5%</font>.",
+     "standardDesc": "근접 피해량 증폭: +40% · 중량 한도 증가: 5",
+     "deluxeDesc": "근접 피해량 증폭: +80% · 중량 한도 증가: 10",
+     "standardDescRaw": "근접 피해량 증폭: +40% · 중량 한도 증가: 5",
+     "deluxeDescRaw": "근접 피해량 증폭: +80% · 중량 한도 증가: 10",
      "rawValues": [
       {
        "key": "MeleeDamageBoost",
@@ -7206,8 +7087,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "ParasiticBond",
@@ -7250,8 +7130,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "SurvivalInstinct",
@@ -7308,8 +7187,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SymbioticEfficiency",
@@ -7352,8 +7230,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -7443,10 +7320,10 @@
     {
      "key": "Backdraft",
      "name": "백드래프트",
-     "standardDesc": "당신은 ZED 타임의 영향을 받지 않고 정상적인 속도로 이동 및 공격할 수 있습니다.",
-     "deluxeDesc": "당신은 ZED 타임의 영향을 받지 않고 정상적인 속도로 이동 및 공격할 수 있으며, ZED 타임 지속 시간이 50% 연장됩니다.",
-     "standardDescRaw": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있습니다.",
-     "deluxeDescRaw": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있으며, <font color=\"#e80948\">ZED 타임 지속 시간</font>이 <font color=\"#e85009\">50%</font> 연장됩니다.",
+     "standardDesc": "연사 속도: +50% · 특수 속도: +20% · 제드 시간 연장: 0초",
+     "deluxeDesc": "연사 속도: +80% · 특수 속도: +35% · 제드 시간 연장: 0.5초",
+     "standardDescRaw": "연사 속도: +50% · 특수 속도: +20% · 제드 시간 연장: 0초",
+     "deluxeDescRaw": "연사 속도: +80% · 특수 속도: +35% · 제드 시간 연장: 0.5초",
      "rawValues": [
       {
        "key": "FireRate",
@@ -7495,8 +7372,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Blaze",
@@ -7539,8 +7415,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ChosenOfTheSun",
@@ -7583,8 +7458,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ConsumingFlame",
@@ -7613,8 +7487,7 @@
      "note": "🐛 버그 추정: Vampire 값이 T1/T2 모두 0 — 효과 자체가 발동하지 않아 밸런스 영향은 없음(사실상 Trash에 가까운 미완성 스킬).",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Forger",
@@ -7657,16 +7530,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Heatstroke",
      "name": "열사병",
-     "standardDesc": "모든 무기가 타격 시 열사병 효과를 적용하여, ZED를 태우고 약간의 화염 피해를 입힙니다. 추가로 전체 화염 피해량이 10% 증가합니다.",
-     "deluxeDesc": "모든 무기가 타격 시 열사병 효과를 적용하여, ZED를 강하게 태우고 강력한 화염 피해를 입힙니다. 추가로 전체 화염 피해량이 20% 증가합니다.",
-     "standardDescRaw": "모든 무기가 타격 시 <font color=\"e80948\">열사병</font> 효과를 적용하여, ZED를 태우고 <font color=\"#e85009\">약간의 화염 피해</font>를 입힙니다. 추가로 전체 <font color=\"#e80948\">화염 피해량</font>이 <font color=\"#e85009\">10%</font> 증가합니다.",
-     "deluxeDescRaw": "모든 무기가 타격 시 <font color=\"e80948\">열사병</font> 효과를 적용하여, ZED를 강하게 태우고 <font color=\"#e85009\">강력한 화염 피해</font>를 입힙니다. 추가로 전체 <font color=\"#e80948\">화염 피해량</font>이 <font color=\"#e85009\">20%</font> 증가합니다.",
+     "standardDesc": "피해량 증가: +10% · 피해량 계수: +10%",
+     "deluxeDesc": "피해량 증가: +20% · 피해량 계수: +20%",
+     "standardDescRaw": "피해량 증가: +10% · 피해량 계수: +10%",
+     "deluxeDescRaw": "피해량 증가: +20% · 피해량 계수: +20%",
      "rawValues": [
       {
        "key": "DamageInc",
@@ -7701,16 +7573,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SearingGaze",
      "name": "타오르는 시선",
-     "standardDesc": "화염 무기로 조준(아이언 사이트) 시 은폐한 ZED와 적의 체력 바를 볼 수 있습니다. 추가로 헤드샷 피해량이 30% 증가합니다.",
-     "deluxeDesc": "화염 무기로 조준(아이언 사이트) 시 은폐한 ZED와 적의 체력 바를 볼 수 있습니다. 추가로 헤드샷 피해량이 60% 증가하며, 은폐 감지 범위가 대폭 늘어납니다.",
-     "standardDescRaw": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">30%</font> 증가합니다.",
-     "deluxeDescRaw": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">60%</font> 증가하며, <font color=\"#e80948\">은폐 감지 범위</font>가 대폭 늘어납니다.",
+     "standardDesc": "헤드샷 피해량: +30% · 은신 사거리: +50%",
+     "deluxeDesc": "헤드샷 피해량: +60% · 은신 사거리: +150%",
+     "standardDescRaw": "헤드샷 피해량: +30% · 은신 사거리: +50%",
+     "deluxeDescRaw": "헤드샷 피해량: +60% · 은신 사거리: +150%",
      "rawValues": [
       {
        "key": "HeadshotDamage",
@@ -7745,8 +7616,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "TrialByFire",
@@ -7789,8 +7659,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Wildfire",
@@ -7819,8 +7688,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 9,
@@ -8032,8 +7900,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Conflagration",
@@ -8062,8 +7929,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Cremation",
@@ -8106,8 +7972,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "FireEater",
@@ -8136,8 +8001,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Meltdown",
@@ -8166,8 +8030,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "MoltenCore",
@@ -8210,8 +8073,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Pyre",
@@ -8240,8 +8102,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ScorchedEarth",
@@ -8270,8 +8131,7 @@
      "note": "✅ 너프 완료: Damage T2가 +250%(전체 300개 스킬 중 최고 이상값)였다가 +100%로 정상화됨.",
      "isPatched": true,
      "patchNote": "구 1.0/2.5 (+250%, 전체 스킬 중 최고 이상값) → +100%로 정상화. Pyre(+120%) 동시장착 시 화염피해 합산 과도 방지",
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SearingFocus",
@@ -8314,8 +8174,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ThermalLance",
@@ -8344,8 +8203,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -8392,10 +8250,10 @@
     {
      "key": "AmishParadise",
      "name": "아미쉬 파라다이스",
-     "standardDesc": "DAR을 처치할 때마다 8 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "DAR을 처치할 때마다 12 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#66cc00\">DAR</font>을 처치할 때마다 <font color=\"#ff3399\">8</font> 도쉬를 추가로 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#66cc00\">DAR</font>을 처치할 때마다 <font color=\"#ff3399\">12</font> 도쉬를 추가로 획득합니다.",
+     "standardDesc": "도쉬: 12 도쉬",
+     "deluxeDesc": "도쉬: 16 도쉬",
+     "standardDescRaw": "도쉬: 12 도쉬",
+     "deluxeDescRaw": "도쉬: 16 도쉬",
      "rawValues": [
       {
        "key": "Dosh",
@@ -8416,15 +8274,14 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "CeaseAndDesist",
      "name": "중지 및 금지",
-     "standardDesc": "스토커를 처치할 때마다 추가 도쉬를 획득합니다.",
+     "standardDesc": "도쉬: 3 도쉬",
      "deluxeDesc": "스토커를 처치할 때마다 4 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#f923be\">스토커</font>를 처치할 때마다 <font color=\"#66cc00\">추가 도쉬</font>를 획득합니다.",
+     "standardDescRaw": "도쉬: 3 도쉬",
      "deluxeDescRaw": "<font color=\"#f923be\">스토커</font>를 처치할 때마다 <font color=\"#66cc00\">4 도쉬</font>를 추가로 획득합니다.",
      "rawValues": [
       {
@@ -8446,16 +8303,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Clotbuster",
      "name": "클로트버스터",
-     "standardDesc": "클롯을 처치할 때마다 1 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "클롯을 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#66cc00\">클롯</font>을 처치할 때마다 <font color=\"#ff3399\">1</font> 도쉬를 추가로 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#66cc00\">클롯</font>을 처치할 때마다 <font color=\"#ff3399\">2</font> 도쉬를 추가로 획득합니다.",
+     "standardDesc": "도쉬: 2 도쉬",
+     "deluxeDesc": "도쉬: 3 도쉬",
+     "standardDescRaw": "도쉬: 2 도쉬",
+     "deluxeDescRaw": "도쉬: 3 도쉬",
      "rawValues": [
       {
        "key": "Dosh",
@@ -8476,16 +8332,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Dietician",
      "name": "영양사",
-     "standardDesc": "블로트를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "블로트를 처치할 때마다 4 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#66cc00\">블로트</font>를 처치할 때마다 <font color=\"#ff3399\">2</font> 도쉬를 추가로 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#66cc00\">블로트</font>를 처치할 때마다 <font color=\"#ff3399\">4</font> 도쉬를 추가로 획득합니다.",
+     "standardDesc": "도쉬: 4 도쉬",
+     "deluxeDesc": "도쉬: 7 도쉬",
+     "standardDescRaw": "도쉬: 4 도쉬",
+     "deluxeDescRaw": "도쉬: 7 도쉬",
      "rawValues": [
       {
        "key": "Dosh",
@@ -8506,15 +8361,14 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Feminist",
      "name": "페미니스트",
-     "standardDesc": "패트리아크를 처치할 때마다 추가 도쉬를 얻습니다.",
+     "standardDesc": "도쉬: 200 도쉬",
      "deluxeDesc": "패트리아크를 처치할 때마다 400 도쉬를 추가로 얻습니다.",
-     "standardDescRaw": "<font color=\"#66cc00\">패트리아크</font>를 처치할 때마다 <font color=\"#ff3399\">추가 도쉬</font>를 얻습니다.",
+     "standardDescRaw": "도쉬: 200 도쉬",
      "deluxeDescRaw": "<font color=\"#66cc00\">패트리아크</font>를 처치할 때마다 <font color=\"#ff3399\">400 도쉬</font>를 추가로 얻습니다.",
      "rawValues": [
       {
@@ -8536,16 +8390,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Firefighter",
      "name": "소방관",
-     "standardDesc": "허스크를 처치할 때마다 3 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "허스크를 처치할 때마다 6 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#66cc00\">허스크</font>를 처치할 때마다 <font color=\"#ff3399\">3</font> 도쉬를 추가로 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#66cc00\">허스크</font>를 처치할 때마다 <font color=\"#ff3399\">6</font> 도쉬를 추가로 획득합니다.",
+     "standardDesc": "도쉬: 5 도쉬",
+     "deluxeDesc": "도쉬: 8 도쉬",
+     "standardDescRaw": "도쉬: 5 도쉬",
+     "deluxeDescRaw": "도쉬: 8 도쉬",
      "rawValues": [
       {
        "key": "Dosh",
@@ -8566,16 +8419,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "GorefastSlayer",
      "name": "고어패스트 슬레이어",
-     "standardDesc": "고어패스트를 처치할 때마다 1 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "고어패스트를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#66cc00\">고어패스트</font>를 처치할 때마다 <font color=\"#ff3399\">1</font> 도쉬를 추가로 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#66cc00\">고어패스트</font>를 처치할 때마다 <font color=\"#ff3399\">2</font> 도쉬를 추가로 획득합니다.",
+     "standardDesc": "도쉬: 3 도쉬",
+     "deluxeDesc": "도쉬: 4 도쉬",
+     "standardDescRaw": "도쉬: 3 도쉬",
+     "deluxeDescRaw": "도쉬: 4 도쉬",
      "rawValues": [
       {
        "key": "Dosh",
@@ -8596,8 +8448,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Kingslayer",
@@ -8626,15 +8477,14 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "NoCloneZone",
      "name": "클론 영역 없음",
-     "standardDesc": "한스 볼터를 처치할 때마다 추가 도쉬를 획득합니다.",
+     "standardDesc": "도쉬: 200 도쉬",
      "deluxeDesc": "한스 볼터를 처치할 때마다 400 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#ff3399\">한스 볼터</font>를 처치할 때마다 <font color=\"#66cc00\">추가 도쉬</font>를 획득합니다.",
+     "standardDescRaw": "도쉬: 200 도쉬",
      "deluxeDescRaw": "<font color=\"#ff3399\">한스 볼터</font>를 처치할 때마다 <font color=\"#66cc00\">400 도쉬</font>를 추가로 획득합니다.",
      "rawValues": [
       {
@@ -8656,8 +8506,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "NoWomanNoCry",
@@ -8686,8 +8535,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "NoiseComplaint",
@@ -8716,8 +8564,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SomeoneYourOwnSize",
@@ -8746,8 +8593,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SupersizeMe",
@@ -8776,8 +8622,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "TexasChainsawMassacre",
@@ -8806,8 +8651,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 14,
@@ -8980,8 +8824,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "DeathSentence",
@@ -9024,16 +8867,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "DeathlessFury",
      "name": "불멸의 분노",
-     "standardDesc": "불멸의 분노: ZED 타임 동안 무기 모션 속도가 +30% 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 ZED 타임이 연장됩니다 (+1초).",
-     "deluxeDesc": "불멸의 분노: ZED 타임 동안 무기 모션 속도가 +75% 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 ZED 타임이 연장됩니다 (+3초).",
-     "standardDescRaw": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+1초</font>).",
-     "deluxeDescRaw": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+75%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+3초</font>).",
+     "standardDesc": "제드 시간 보너스: 0.3초 · ZED타임 연장: 1초",
+     "deluxeDesc": "제드 시간 보너스: 0.75초 · ZED타임 연장: 3초",
+     "standardDescRaw": "제드 시간 보너스: 0.3초 · ZED타임 연장: 1초",
+     "deluxeDescRaw": "제드 시간 보너스: 0.75초 · ZED타임 연장: 3초",
      "rawValues": [
       {
        "key": "ZedTimeBonus",
@@ -9068,8 +8910,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "DeathsGaze",
@@ -9098,16 +8939,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "GrimTithe",
      "name": "그림 십일조",
-     "standardDesc": "그림 십일조: 킬당 2 도쉬씩 누적되어, 웨이브 종료 시 일시불로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
-     "deluxeDesc": "그림 십일조: 킬당 5 도쉬씩 누적되어, 웨이브 종료 시 일시불로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
-     "standardDescRaw": "<font color=\"#CC0000\">그림 십일조:</font> 킬당 <font color=\"#FFFFFF\">2</font> <font color=\"#FFD700\">도쉬</font>씩 누적되어, 웨이브 종료 시 <font color=\"#FFAA00\">일시불</font>로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
-     "deluxeDescRaw": "<font color=\"#CC0000\">그림 십일조:</font> 킬당 <font color=\"#FFFFFF\">5</font> <font color=\"#FFD700\">도쉬</font>씩 누적되어, 웨이브 종료 시 <font color=\"#FFAA00\">일시불</font>로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
+     "standardDesc": "처치당 도쉬: 2 도쉬",
+     "deluxeDesc": "처치당 도쉬: 4 도쉬",
+     "standardDescRaw": "처치당 도쉬: 2 도쉬",
+     "deluxeDescRaw": "처치당 도쉬: 4 도쉬",
      "rawValues": [
       {
        "key": "DoshPerKill",
@@ -9128,8 +8968,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "LastBreath",
@@ -9186,8 +9025,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "MementoMori",
@@ -9216,16 +9054,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "SoulChain",
      "name": "소울 체인",
-     "standardDesc": "영혼의 사슬: 5초 이내에 연속으로 처치할 때마다 스택이 1개씩 쌓입니다. 스택당 피해량이 5% 증가합니다(최대 5스택). 처치하지 못하면 5초 후에 스택이 초기화됩니다.",
-     "deluxeDesc": "영혼의 사슬: 5초 이내에 연속으로 처치할 때마다 스택이 1개씩 쌓입니다. 스택당 피해량이 8% 증가합니다(최대 8스택). 처치하지 못하면 5초 후에 스택이 초기화됩니다.",
-     "standardDescRaw": "<font color=\"#CC0000\">영혼의 사슬:</font> 5초 이내에 연속으로 처치할 때마다 스택이 1개씩 쌓입니다. 스택당 피해량이 5% 증가합니다(최대 5스택). 처치하지 못하면 5초 후에 스택이 초기화됩니다.",
-     "deluxeDescRaw": "<font color=\"#CC0000\">영혼의 사슬:</font> 5초 이내에 연속으로 처치할 때마다 스택이 1개씩 쌓입니다. 스택당 피해량이 8% 증가합니다(최대 8스택). 처치하지 못하면 5초 후에 스택이 초기화됩니다.",
+     "standardDesc": "스택 당 피해량: +5% · 최대 스택 수: 5",
+     "deluxeDesc": "스택 당 피해량: +8% · 최대 스택 수: 8",
+     "standardDescRaw": "스택 당 피해량: +5% · 최대 스택 수: 5",
+     "deluxeDescRaw": "스택 당 피해량: +8% · 최대 스택 수: 8",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -9260,8 +9097,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SoulOverflow",
@@ -9290,8 +9126,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "VeilWalker",
@@ -9334,8 +9169,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     }
    ],
    "skillCount": 10,
@@ -9554,16 +9388,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "HighNoon",
      "name": "정오",
-     "standardDesc": "ZED 타임 동안 재장전 속도가 150% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 재장전 속도가 300% 증가합니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">150%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">300%</font> 증가합니다.",
+     "standardDesc": "배율: ×1.5",
+     "deluxeDesc": "배율: ×3",
+     "standardDescRaw": "배율: ×1.5",
+     "deluxeDescRaw": "배율: ×3",
      "rawValues": [
       {
        "key": "Mod",
@@ -9584,16 +9417,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Pandemic",
      "name": "팬데믹",
-     "standardDesc": "당신의 무기가 위험한 독을 모든 ZED에게 광범위하게 퍼뜨립니다.",
-     "deluxeDesc": "당신의 무기가 치명적인 독을 모든 ZED에게 광범위하게 퍼뜨립니다.",
-     "standardDescRaw": "당신의 무기가 위험한 <font color=\"#15d7fa\">독</font>을 모든 ZED에게 광범위하게 퍼뜨립니다.",
-     "deluxeDescRaw": "당신의 무기가 치명적인 <font color=\"#15d7fa\">독</font>을 모든 ZED에게 광범위하게 퍼뜨립니다.",
+     "standardDesc": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +20%",
+     "deluxeDesc": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +50%",
+     "standardDescRaw": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +20%",
+     "deluxeDescRaw": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +50%",
      "rawValues": [
       {
        "key": "PandemicProbability",
@@ -9628,8 +9460,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "TimeHealsAllWounds",
@@ -9658,16 +9489,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "TimeSpiral",
      "name": "시간 나선",
-     "standardDesc": "ZED 타임 동안 무한 탄약이 적용되며 발사 속도가 약간 빨라집니다.",
-     "deluxeDesc": "ZED 타임 동안 무한 탄약이 적용되며 발사 속도가 훨씬 더 빨라집니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">무한 탄약</font>이 적용되며 발사 속도가 약간 빨라집니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">무한 탄약</font>이 적용되며 발사 속도가 훨씬 더 빨라집니다.",
+     "standardDesc": "연사 속도: +10% · 특수 속도: +40%",
+     "deluxeDesc": "연사 속도: +20% · 특수 속도: +80%",
+     "standardDescRaw": "연사 속도: +10% · 특수 속도: +40%",
+     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +80%",
      "rawValues": [
       {
        "key": "FireRate",
@@ -9702,16 +9532,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Timewalk",
      "name": "타임워크",
-     "standardDesc": "ZED 타임 동안 이동 속도가 50% 더 빨라집니다.",
-     "deluxeDesc": "ZED 타임 동안 이동 속도가 100% 더 빨라집니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 이동 속도가 <font color=\"#77d914\">50%</font> 더 빨라집니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 이동 속도가 <font color=\"#77d914\">100%</font> 더 빨라집니다.",
+     "standardDesc": "연사 속도: +10% · 특수 속도: +50%",
+     "deluxeDesc": "연사 속도: +20% · 특수 속도: +100%",
+     "standardDescRaw": "연사 속도: +10% · 특수 속도: +50%",
+     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +100%",
      "rawValues": [
       {
        "key": "FireRate",
@@ -9746,8 +9575,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     }
    ],
    "skillCount": 6,
@@ -9937,8 +9765,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "AmmoSiphon",
@@ -9967,8 +9794,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "BottomlessReserves",
@@ -9997,16 +9823,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "ChainFeed",
      "name": "체인 피드",
-     "standardDesc": "체인 피드: 적을 처치할 때마다 장착 중인 탄창에 +1발이 추가되며, 이는 최대 탄창 용량을 초과하여 장전될 수 있습니다. (기본 한도의 최대 150%까지).",
-     "deluxeDesc": "체인 피드: 적을 처치할 때마다 장착 중인 탄창에 +1발이 추가되며, 이는 최대 탄창 용량을 초과하여 장전될 수 있습니다. (기본 한도의 최대 200%까지).",
-     "standardDescRaw": "<font color=\"#DAA520\">체인 피드:</font> 적을 처치할 때마다 장착 중인 탄창에 <font color=\"#87CEEB\">+1발</font>이 추가되며, 이는 <font color=\"#FFFFFF\">최대 탄창 용량을 초과하여</font> 장전될 수 있습니다. (기본 한도의 최대 <font color=\"#FF4444\">150%</font>까지).",
-     "deluxeDescRaw": "<font color=\"#FFD700\">체인 피드:</font> 적을 처치할 때마다 장착 중인 탄창에 <font color=\"#87CEEB\">+1발</font>이 추가되며, 이는 <font color=\"#FFFFFF\">최대 탄창 용량을 초과하여</font> 장전될 수 있습니다. (기본 한도의 최대 <font color=\"#FF4444\">200%</font>까지).",
+     "standardDesc": "탄창 상한 배율: ×1.5",
+     "deluxeDesc": "탄창 상한 배율: ×2",
+     "standardDescRaw": "탄창 상한 배율: ×1.5",
+     "deluxeDescRaw": "탄창 상한 배율: ×2",
      "rawValues": [
       {
        "key": "MagCapMultiplier",
@@ -10027,8 +9852,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "DesperateMeasures",
@@ -10057,8 +9881,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "JuryRig",
@@ -10101,8 +9924,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "OneManArmy",
@@ -10131,8 +9953,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "QuickHands",
@@ -10175,8 +9996,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "WarProfiteer",
@@ -10212,8 +10032,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Windfall",
@@ -10242,8 +10061,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -10457,8 +10275,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Deadshot",
@@ -10487,8 +10304,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "HammerShot",
@@ -10517,8 +10333,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "HippocraticOath",
@@ -10547,16 +10362,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Marathon",
      "name": "마라톤",
-     "standardDesc": "ZED 타임 동안 이동 속도가 40% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 이동 속도가 80% 증가합니다.",
-     "standardDescRaw": "ZED 타임 동안 <font color=\"#ff3399\">이동 속도</font>가 <font color=\"#66cc00\">40%</font> 증가합니다.",
-     "deluxeDescRaw": "ZED 타임 동안 <font color=\"#ff3399\">이동 속도</font>가 <font color=\"#66cc00\">80%</font> 증가합니다.",
+     "standardDesc": "연사 속도: +20% · 특수 속도: +40%",
+     "deluxeDesc": "연사 속도: +40% · 특수 속도: +80%",
+     "standardDescRaw": "연사 속도: +20% · 특수 속도: +40%",
+     "deluxeDescRaw": "연사 속도: +40% · 특수 속도: +80%",
      "rawValues": [
       {
        "key": "FireRate",
@@ -10591,8 +10405,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Resourceful",
@@ -10621,8 +10434,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SurgicalPrecision",
@@ -10651,8 +10463,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ThreadTheNeedle",
@@ -10681,8 +10492,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 8,
@@ -10785,8 +10595,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "AspectOfYmir",
@@ -10829,8 +10638,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "BlackIce",
@@ -10859,8 +10667,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Blizzard",
@@ -10889,8 +10696,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Cryosynthesis",
@@ -10919,8 +10725,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "FrozenHeart",
@@ -10956,8 +10761,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Giantsbane",
@@ -11000,8 +10804,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "HarshConditions",
@@ -11030,16 +10833,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Hypothermia",
      "name": "저체온증",
-     "standardDesc": "모든 무기가 타격 시 저체온증 효과를 적용하여, ZED의 속도를 늦추고 소량의 피해를 지속해서 입힙니다.",
-     "deluxeDesc": "모든 무기가 타격 시 저체온증 효과를 적용하여, ZED의 속도를 늦추고 중간 정도의 피해를 지속해서 입힙니다.",
-     "standardDescRaw": "모든 무기가 타격 시 <font color=\"#0bf1f1\">저체온증</font> 효과를 적용하여, ZED의 속도를 늦추고 <font color=\"#15d7fa\">소량의 피해</font>를 지속해서 입힙니다.",
-     "deluxeDescRaw": "모든 무기가 타격 시 <font color=\"#0bf1f1\">저체온증</font> 효과를 적용하여, ZED의 속도를 늦추고 <font color=\"#15d7fa\">중간 정도의 피해</font>를 지속해서 입힙니다.",
+     "standardDesc": "피해량 계수: +5%",
+     "deluxeDesc": "피해량 계수: +10%",
+     "standardDescRaw": "피해량 계수: +5%",
+     "deluxeDescRaw": "피해량 계수: +10%",
      "rawValues": [
       {
        "key": "DamageFactor",
@@ -11060,8 +10862,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "ImmovableObject",
@@ -11090,16 +10891,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "RegenerativeRounds",
      "name": "재생 라운드",
-     "standardDesc": "예비 탄약이 100% 증가하고, 탄약 상자 획득 시 채워지는 탄약량이 100% 증가합니다.",
-     "deluxeDesc": "예비 탄약이 200% 증가하고, 탄약 상자 획득 시 채워지는 탄약량이 200% 증가합니다.",
-     "standardDescRaw": "<font color=\"#0bf1f1\">예비 탄약</font>이 100% 증가하고, 탄약 상자 획득 시 채워지는 탄약량이 <font color=\"#0bf1f1\">100% 증가</font>합니다.",
-     "deluxeDescRaw": "<font color=\"#0bf1f1\">예비 탄약</font>이 200% 증가하고, 탄약 상자 획득 시 채워지는 탄약량이 <font color=\"#0bf1f1\">200% 증가</font>합니다.",
+     "standardDesc": "탄약: 1 · 여분 탄약: 1",
+     "deluxeDesc": "탄약: 2 · 여분 탄약: 2",
+     "standardDescRaw": "탄약: 1 · 여분 탄약: 1",
+     "deluxeDescRaw": "탄약: 2 · 여분 탄약: 2",
      "rawValues": [
       {
        "key": "Ammo",
@@ -11134,8 +10934,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     }
    ],
    "skillCount": 11,
@@ -11257,10 +11056,10 @@
     {
      "key": "AvalancheProtocol",
      "name": "눈사태 프로토콜",
-     "standardDesc": "적을 처치하면 주변 8m 내의 모든 적이 5의 피해를 입고 5초 동안 속도가 느려집니다.",
-     "deluxeDesc": "적을 처치하면 주변 8m 내의 모든 적이 10의 피해를 입고 5초 동안 속도가 느려집니다.",
-     "standardDescRaw": "적을 처치하면 주변 <font color=\"#77d914\">8m</font> 내의 모든 적이 <font color=\"#15d7fa\">5의 피해</font>를 입고 <font color=\"#FFAA33\">5초</font> 동안 속도가 <font color=\"#87CEEB\">느려집니다.</font>",
-     "deluxeDescRaw": "적을 처치하면 주변 <font color=\"#77d914\">8m</font> 내의 모든 적이 <font color=\"#15d7fa\">10의 피해</font>를 입고 <font color=\"#FFAA33\">5초</font> 동안 속도가 <font color=\"#87CEEB\">느려집니다.</font>",
+     "standardDesc": "눈사태 피해량: +250%",
+     "deluxeDesc": "눈사태 피해량: +500%",
+     "standardDescRaw": "눈사태 피해량: +250%",
+     "deluxeDescRaw": "눈사태 피해량: +500%",
      "rawValues": [
       {
        "key": "AvalancheDamage",
@@ -11281,16 +11080,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "BitterChill",
      "name": "비터 칠",
-     "standardDesc": "겨울의 무게가 목표물을 짓누릅니다. 공격의 기절력과 속박력이 30% 증가합니다.",
-     "deluxeDesc": "겨울의 무게가 목표물을 짓누릅니다. 공격의 기절력과 속박력이 75% 증가합니다.",
-     "standardDescRaw": "겨울의 무게가 목표물을 짓누릅니다. 공격의 <font color=\"#87CEEB\">기절력</font>과 <font color=\"#15d7fa\">속박력</font>이 <font color=\"#77d914\">30%</font> 증가합니다.",
-     "deluxeDescRaw": "겨울의 무게가 목표물을 짓누릅니다. 공격의 <font color=\"#87CEEB\">기절력</font>과 <font color=\"#15d7fa\">속박력</font>이 <font color=\"#77d914\">75%</font> 증가합니다.",
+     "standardDesc": "기절: +15% · 속박: +15%",
+     "deluxeDesc": "기절: +30% · 속박: +30%",
+     "standardDescRaw": "기절: +15% · 속박: +15%",
+     "deluxeDescRaw": "기절: +30% · 속박: +30%",
      "rawValues": [
       {
        "key": "Stun",
@@ -11325,8 +11123,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "CrystalClarity",
@@ -11355,8 +11152,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Fimbulwinter",
@@ -11385,8 +11181,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "FrostbiteArrows",
@@ -11415,16 +11210,15 @@
      "note": "⚠️ OP 소지: DamagePerStack의 최대 스택 수(MaxStacks)가 INI에 없어 무한 누적 가능성 — 장기전에서 모니터링 권장.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "GlacialEndurance",
      "name": "빙하 내구성",
-     "standardDesc": "ZED 타임 지속 시간이 2초 연장되며, 연장된 시간 동안 가하는 피해량이 100% 증가합니다.",
-     "deluxeDesc": "ZED 타임 지속 시간이 4초 연장되며, 연장된 시간 동안 가하는 피해량이 100% 증가합니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">2초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">4초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
+     "standardDesc": "ZED타임 연장: 2초",
+     "deluxeDesc": "ZED타임 연장: 4초",
+     "standardDescRaw": "ZED타임 연장: 2초",
+     "deluxeDescRaw": "ZED타임 연장: 4초",
      "rawValues": [
       {
        "key": "ZedTimeExtension",
@@ -11445,16 +11239,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "IceArmor",
      "name": "얼음 갑옷",
-     "standardDesc": "전투 중이 아닐 때 10의 추가 방어력을 얻으며, 이 방어력은 3초마다 1씩 재생됩니다.",
-     "deluxeDesc": "전투 중이 아닐 때 20의 추가 방어력을 얻으며, 이 방어력은 3초마다 1씩 재생됩니다.",
-     "standardDescRaw": "전투 중이 아닐 때 <font color=\"#87CEEB\">10</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
-     "deluxeDescRaw": "전투 중이 아닐 때 <font color=\"#87CEEB\">20</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
+     "standardDesc": "방어력 보너스: 10",
+     "deluxeDesc": "방어력 보너스: 20",
+     "standardDescRaw": "방어력 보너스: 10",
+     "deluxeDescRaw": "방어력 보너스: 20",
      "rawValues": [
       {
        "key": "ArmorBonus",
@@ -11475,16 +11268,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Permafrost",
      "name": "영구동토층",
-     "standardDesc": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. 반동과 탄 퍼짐이 30% 감소합니다.",
-     "deluxeDesc": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. 반동과 탄 퍼짐이 60% 감소합니다.",
-     "standardDescRaw": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. <font color=\"#87CEEB\">반동</font>과 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">30%</font> 감소합니다.",
-     "deluxeDescRaw": "절대 영도의 고요함이 당신의 조준을 안정시킵니다. <font color=\"#87CEEB\">반동</font>과 <font color=\"#15d7fa\">탄 퍼짐</font>이 <font color=\"#77d914\">60%</font> 감소합니다.",
+     "standardDesc": "반동: +30% · 탄퍼짐: +30%",
+     "deluxeDesc": "반동: +60% · 탄퍼짐: +60%",
+     "standardDescRaw": "반동: +30% · 탄퍼짐: +30%",
+     "deluxeDescRaw": "반동: +60% · 탄퍼짐: +60%",
      "rawValues": [
       {
        "key": "Recoil",
@@ -11519,16 +11311,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "QuiverMastery",
      "name": "화살통 숙련",
-     "standardDesc": "모든 활과 석궁 무기의 예비 탄약 용량이 75% 증가합니다.",
-     "deluxeDesc": "모든 활과 석궁 무기의 예비 탄약 용량이 150% 증가합니다.",
-     "standardDescRaw": "모든 <font color=\"#77d914\">활과 석궁</font> 무기의 <font color=\"#87CEEB\">예비 탄약 용량</font>이 <font color=\"#15d7fa\">75%</font> 증가합니다.",
-     "deluxeDescRaw": "모든 <font color=\"#77d914\">활과 석궁</font> 무기의 <font color=\"#87CEEB\">예비 탄약 용량</font>이 <font color=\"#15d7fa\">150%</font> 증가합니다.",
+     "standardDesc": "여분 탄약: 1",
+     "deluxeDesc": "여분 탄약: 2",
+     "standardDescRaw": "여분 탄약: 1",
+     "deluxeDescRaw": "여분 탄약: 2",
      "rawValues": [
       {
        "key": "SpareAmmo",
@@ -11549,8 +11340,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "WintersSwiftness",
@@ -11593,8 +11383,7 @@
      "note": "🐛 경미한 버그 추정: T2의 WeaponSwitchSpeed(0.4)가 T1(0.5)보다 낮음 — 정상적인 업그레이드라면 T2가 더 높아야 함. 단, 전투 영향이 작은 유틸리티 수치라 우선순위는 낮음.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -11673,10 +11462,10 @@
     {
      "key": "CloseCall",
      "name": "아슬아슬한 순간",
-     "standardDesc": "체력이 25% 미만일 때 가하는 피해량이 30% 증가하고, 받는 피해가 20% 감소합니다.",
-     "deluxeDesc": "체력이 25% 미만일 때 가하는 피해량이 60% 증가하고, 받는 피해가 40% 감소합니다.",
-     "standardDescRaw": "체력이 <font color=\"#be4d25\">25% 미만</font>일 때 가하는 피해량이 <font color=\"#ff3399\">30%</font> 증가하고, 받는 피해가 <font color=\"#66cc00\">20%</font> 감소합니다.",
-     "deluxeDescRaw": "체력이 <font color=\"#be4d25\">25% 미만</font>일 때 가하는 피해량이 <font color=\"#ff3399\">60%</font> 증가하고, 받는 피해가 <font color=\"#66cc00\">40%</font> 감소합니다.",
+     "standardDesc": "피해량: +30% · 저항력: +20%",
+     "deluxeDesc": "피해량: +60% · 저항력: +40%",
+     "standardDescRaw": "피해량: +30% · 저항력: +20%",
+     "deluxeDescRaw": "피해량: +60% · 저항력: +40%",
      "rawValues": [
       {
        "key": "Damage",
@@ -11711,8 +11500,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "DeadeyeMomentum",
@@ -11741,8 +11529,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "FullMetalJacket",
@@ -11771,8 +11558,7 @@
      "note": "✅ 너프 완료: 관통 +300% → +150% (Support 관통 패시브·스킬과의 교차 스택 억제).",
      "isPatched": true,
      "patchNote": "구 1.5/3.0(+300%) → +150%. Support 관통패시브(+150%)+Penetrator스킬(+200%)과 교차스택 시 관통 사실상 무제한이 되는 것 방지",
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "GlassCannon",
@@ -11815,8 +11601,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ImpenetrableSkin",
@@ -11845,8 +11630,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Primed",
@@ -11875,8 +11659,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Resilience",
@@ -11905,8 +11688,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 7,
@@ -12055,16 +11837,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "DeathChill",
      "name": "데스 칠",
-     "standardDesc": "죽음의 냉기: 5번째 처치마다 대상의 시체에서 냉기 폭발이 일어납니다. 처치 카운트는 8초 후에 초기화됩니다.",
-     "deluxeDesc": "죽음의 냉기: 3번째 처치마다 대상의 시체에서 강력한 냉동 폭발이 일어납니다. 처치 카운트는 8초 후에 초기화됩니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">죽음의 냉기:</font> 5번째 처치마다 대상의 시체에서 <font color=\"#FFFFFF\">냉기 폭발</font>이 일어납니다. 처치 카운트는 <font color=\"#F0F8FF\">8초</font> 후에 초기화됩니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">죽음의 냉기:</font> 3번째 처치마다 대상의 시체에서 <font color=\"#FFFFFF\">강력한 냉동 폭발</font>이 일어납니다. 처치 카운트는 <font color=\"#F0F8FF\">8초</font> 후에 초기화됩니다.",
+     "standardDesc": "필요 처치 수: 5",
+     "deluxeDesc": "필요 처치 수: 3",
+     "standardDescRaw": "필요 처치 수: 5",
+     "deluxeDescRaw": "필요 처치 수: 3",
      "rawValues": [
       {
        "key": "KillThreshold",
@@ -12085,15 +11866,14 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "FaminesTouch",
      "name": "기근의 손길",
-     "standardDesc": "기근의 손길: 체력이 50% 미만인 좀비에게 20%의 추가 피해를 입힙니다.",
+     "standardDesc": "피해량: +20%",
      "deluxeDesc": "기근의 손길: 체력이 +50% 미만인 좀비에게 대폭 증가된 추가 피해를 입힙니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">기근의 손길:</font> 체력이 <font color=\"#FFFFFF\">50% 미만</font>인 좀비에게 <font color=\"#F0F8FF\">20%</font>의 <font color=\"#87CEEB\">추가 피해</font>를 입힙니다.",
+     "standardDescRaw": "피해량: +20%",
      "deluxeDescRaw": "<font color=\"#4682B4\">기근의 손길:</font> 체력이 <font color=\"#FFFFFF\">+50% 미만</font>인 좀비에게 대폭 증가된 <font color=\"#87CEEB\">추가 피해</font>를 입힙니다.",
      "rawValues": [
       {
@@ -12115,8 +11895,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "FrozenHide",
@@ -12145,8 +11924,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "HoardersCache",
@@ -12175,8 +11953,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Isolation",
@@ -12205,8 +11982,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Mimicry",
@@ -12235,8 +12011,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "PatientReload",
@@ -12265,16 +12040,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "PredatorsFocus",
      "name": "포식자의 초점",
-     "standardDesc": "프레데터의 초점: 정조준(아이언 사이트) 시 반동이 25% 감소하고 무기 흔들림이 줄어듭니다.",
-     "deluxeDesc": "프레데터의 초점: 정조준(아이언 사이트) 시 반동이 50% 감소하고 무기 흔들림이 완전히 사라집니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">프레데터의 초점:</font> 정조준(아이언 사이트) 시 <font color=\"#87CEEB\">반동</font>이 <font color=\"#FFFFFF\">25%</font> 감소하고 무기 흔들림이 줄어듭니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">프레데터의 초점:</font> 정조준(아이언 사이트) 시 <font color=\"#87CEEB\">반동</font>이 <font color=\"#FFFFFF\">50%</font> 감소하고 무기 흔들림이 완전히 사라집니다.",
+     "standardDesc": "반동: +25% · 흔들림: +11%",
+     "deluxeDesc": "반동: +50% · 흔들림: +11%",
+     "standardDescRaw": "반동: +25% · 흔들림: +11%",
+     "deluxeDescRaw": "반동: +50% · 흔들림: +11%",
      "rawValues": [
       {
        "key": "Recoil",
@@ -12302,16 +12076,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "RavenousStrikes",
      "name": "굶주린 공격",
-     "standardDesc": "굶주린 공격: 좀비를 처치하면 5초 동안 다음 공격의 피해량이 +25% 증가합니다.",
-     "deluxeDesc": "굶주린 공격: 좀비를 처치하면 5초 동안 다음 공격의 피해량이 +60% 증가합니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">굶주린 공격:</font> 좀비를 처치하면 <font color=\"#F0F8FF\">5초</font> 동안 다음 공격의 <font color=\"#87CEEB\">피해량</font>이 <font color=\"#FFFFFF\">+25%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">굶주린 공격:</font> 좀비를 처치하면 <font color=\"#F0F8FF\">5초</font> 동안 다음 공격의 <font color=\"#87CEEB\">피해량</font>이 <font color=\"#FFFFFF\">+60%</font> 증가합니다.",
+     "standardDesc": "피해량: +25%",
+     "deluxeDesc": "피해량: +60%",
+     "standardDescRaw": "피해량: +25%",
+     "deluxeDescRaw": "피해량: +60%",
      "rawValues": [
       {
        "key": "Damage",
@@ -12332,8 +12105,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Territorial",
@@ -12362,8 +12134,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "TrophyHunt",
@@ -12392,8 +12163,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     }
    ],
    "skillCount": 12,
@@ -12651,10 +12421,10 @@
     {
      "key": "ApexMark",
      "name": "에이펙스 마크",
-     "standardDesc": "에이펙스 마크: 보스를 처치하면 3초 동안 모든 좀비의 트로피 드롭률이 100%로 고정됩니다.",
-     "deluxeDesc": "에이펙스 마크: 보스를 처치하면 5초 동안 모든 좀비의 트로피 드롭률이 100%로 고정됩니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">에이펙스 마크:</font> <font color=\"#FF6666\">보스</font>를 처치하면 <font color=\"#FFFFFF\">3초</font> 동안 모든 좀비의 트로피 드롭률이 <font color=\"#87CEEB\">100%</font>로 고정됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">에이펙스 마크:</font> <font color=\"#FF6666\">보스</font>를 처치하면 <font color=\"#FFFFFF\">5초</font> 동안 모든 좀비의 트로피 드롭률이 <font color=\"#87CEEB\">100%</font>로 고정됩니다.",
+     "standardDesc": "지속시간: 3초",
+     "deluxeDesc": "지속시간: 5초",
+     "standardDescRaw": "지속시간: 3초",
+     "deluxeDescRaw": "지속시간: 5초",
      "rawValues": [
       {
        "key": "Duration",
@@ -12675,8 +12445,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "CarrionHarvest",
@@ -12719,8 +12488,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "DiversifiedCollection",
@@ -12749,16 +12517,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "FeedingFrenzy",
      "name": "먹이 쟁탈전",
-     "standardDesc": "먹이 광란: 트로피를 획득하면 6초 동안 발사 속도가 +30% 증가합니다.",
-     "deluxeDesc": "먹이 광란: 트로피를 획득하면 6초 동안 발사 속도가 +60% 증가합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">먹이 광란:</font> 트로피를 획득하면 <font color=\"#87CEEB\">6초</font> 동안 <font color=\"#FF6666\">발사 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">먹이 광란:</font> 트로피를 획득하면 <font color=\"#87CEEB\">6초</font> 동안 <font color=\"#FF6666\">발사 속도</font>가 <font color=\"#FFFFFF\">+60%</font> 증가합니다.",
+     "standardDesc": "연사 속도 보너스: +30%",
+     "deluxeDesc": "연사 속도 보너스: +60%",
+     "standardDescRaw": "연사 속도 보너스: +30%",
+     "deluxeDescRaw": "연사 속도 보너스: +60%",
      "rawValues": [
       {
        "key": "FireRateBonus",
@@ -12779,8 +12546,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "MountedTrophies",
@@ -12823,16 +12589,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Taxidermist",
      "name": "박제사",
-     "standardDesc": "박제사: 20% 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 보존됩니다. 중첩 시: 20% 확률로 인벤토리의 무작위 트로피 수량이 +1 증가합니다.",
-     "deluxeDesc": "박제사: 40% 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 보존됩니다. 중첩 시: 40% 확률로 인벤토리의 무작위 트로피 수량이 +1 증가합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">박제사:</font> <font color=\"#FFFFFF\">20%</font> 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 <font color=\"#87CEEB\">보존</font>됩니다. 중첩 시: <font color=\"#FFFFFF\">20%</font> 확률로 인벤토리의 무작위 트로피 수량이 <font color=\"#87CEEB\">+1</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">박제사:</font> <font color=\"#FFFFFF\">40%</font> 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 <font color=\"#87CEEB\">보존</font>됩니다. 중첩 시: <font color=\"#FFFFFF\">40%</font> 확률로 인벤토리의 무작위 트로피 수량이 <font color=\"#87CEEB\">+1</font> 증가합니다.",
+     "standardDesc": "보존 확률: +20%",
+     "deluxeDesc": "보존 확률: +40%",
+     "standardDescRaw": "보존 확률: +20%",
+     "deluxeDescRaw": "보존 확률: +40%",
      "rawValues": [
       {
        "key": "PreserveChance",
@@ -12853,8 +12618,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "TrophyHoarder",
@@ -12883,8 +12647,7 @@
      "note": "✅ 완화 완료: T2도 슬롯 추가 없이 1개로 고정 (트로피 무한 중첩 억제 목적).",
      "isPatched": true,
      "patchNote": "구 1/2 → T2도 1로 고정. Predator 트로피 무한중첩 시스템(하드코딩, 확정OP) 완화를 위한 유일한 INI 개입점",
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "TrophyMagnetism",
@@ -12913,8 +12676,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "TrophyShield",
@@ -12943,16 +12705,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "WildHunt",
      "name": "야생 사냥",
-     "standardDesc": "와일드 헌트: 획득하는 5번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 보너스 중복 효과를 얻습니다.",
-     "deluxeDesc": "와일드 헌트: 획득하는 모든 3번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 보너스 중복 효과를 얻습니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">와일드 헌트:</font> 획득하는 5번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 <font color=\"#87CEEB\">보너스 중복</font> 효과를 얻습니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">와일드 헌트:</font> 획득하는 모든 3번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 <font color=\"#87CEEB\">보너스 중복</font> 효과를 얻습니다.",
+     "standardDesc": "트로피 간격: 5초",
+     "deluxeDesc": "트로피 간격: 5초",
+     "standardDescRaw": "트로피 간격: 5초",
+     "deluxeDescRaw": "트로피 간격: 5초",
      "rawValues": [
       {
        "key": "TrophyInterval",
@@ -12973,8 +12734,7 @@
      "note": "✅ 완화 완료: T2도 드랍 간격 5초로 고정 (스택 가속 억제 목적).",
      "isPatched": true,
      "patchNote": "구 5/3 → T2도 5로 고정. 트로피 드랍 가속 억제 (Predator 확정OP 완화)",
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -13222,16 +12982,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "AnvilsEcho",
      "name": "앤빌의 메아리",
-     "standardDesc": "5번째 공격마다 환영의 메아리를 발사하여 +50%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "3번째 공격마다 환영의 메아리를 발사하여 +50%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "<font color=\"#FFFFFF\">5번째 공격</font>마다 <font color=\"#FFD700\">환영의 메아리</font>를 발사하여 <font color=\"#FFFFFF\">+50%</font>의 추가 피해를 입힙니다.",
-     "deluxeDescRaw": "<font color=\"#FFFFFF\">3번째 공격</font>마다 <font color=\"#FFD700\">환영의 메아리</font>를 발사하여 <font color=\"#FFFFFF\">+50%</font>의 추가 피해를 입힙니다.",
+     "standardDesc": "타격 간격: 5초 · 메아리 피해량: +50%",
+     "deluxeDesc": "타격 간격: 3초 · 메아리 피해량: +50%",
+     "standardDescRaw": "타격 간격: 5초 · 메아리 피해량: +50%",
+     "deluxeDescRaw": "타격 간격: 3초 · 메아리 피해량: +50%",
      "rawValues": [
       {
        "key": "HitInterval",
@@ -13259,8 +13018,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "GildedTouch",
@@ -13331,8 +13089,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "HardenedPlate",
@@ -13361,8 +13118,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "MasterworkTechnique",
@@ -13391,8 +13147,7 @@
      "note": "'PerMilestone' 성장식은 퍼크 설명 기준 '무기별 100킬 단위'로 해석 — 점진적 성장형이라 위험도 낮음.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Overforge",
@@ -13428,8 +13183,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "QuenchingStrike",
@@ -13465,8 +13219,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Reclamation",
@@ -13509,8 +13262,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "ShatterPoint",
@@ -13553,8 +13305,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Soulbound",
@@ -13597,8 +13348,7 @@
      "note": "MasterworkTechnique와 동일한 마일스톤(무기별 100킬 단위) 기준으로 해석.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     }
    ],
    "skillCount": 10,
@@ -13710,8 +13460,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "DoubleDown",
@@ -13754,8 +13503,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "FieryGambit",
@@ -13798,8 +13546,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "GrenadeConjurer",
@@ -13828,8 +13575,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "IcyGambit",
@@ -13872,16 +13618,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Jackpot",
      "name": "잭팟",
-     "standardDesc": "ZED를 처치할 때마다 0.05% 확률로 잭팟이 터져 300 도쉬를 획득합니다.",
-     "deluxeDesc": "ZED를 처치할 때마다 1% 확률로 잭팟이 터져 600 도쉬를 획득합니다.",
-     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">0.05% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">300 도쉬</font>를 획득합니다.",
-     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">1% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">600 도쉬</font>를 획득합니다.",
+     "standardDesc": "발동 확률: +0.5% · 잭팟: 350",
+     "deluxeDesc": "발동 확률: +1% · 잭팟: 700",
+     "standardDescRaw": "발동 확률: +0.5% · 잭팟: 350",
+     "deluxeDescRaw": "발동 확률: +1% · 잭팟: 700",
      "rawValues": [
       {
        "key": "Chance",
@@ -13916,8 +13661,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "LuckyPop",
@@ -13960,8 +13704,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "NarrowEscape",
@@ -13990,8 +13733,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "StrokeOfLuck",
@@ -14034,8 +13776,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ToxicGambit",
@@ -14078,8 +13819,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 10,
@@ -14310,10 +14050,10 @@
     {
      "key": "ChimeraProtocol",
      "name": "키메라 프로토콜",
-     "standardDesc": "키메라 프로토콜: 현재 활성화된 버프 카테고리 1개당 피해량이 +5% 증가합니다 (4개 모두 활성화 시 최대 +20%).",
-     "deluxeDesc": "키메라 프로토콜: 현재 활성화된 버프 카테고리 1개당 피해량이 +8% 증가합니다 (4개 모두 활성화 시 최대 +32%).",
-     "standardDescRaw": "<font color=\"#c77dff\">키메라 프로토콜:</font> 현재 활성화된 버프 카테고리 1개당 피해량이 <font color=\"#FFFFFF\">+5%</font> 증가합니다 (4개 모두 활성화 시 최대 <font color=\"#FFFFFF\">+20%</font>).",
-     "deluxeDescRaw": "<font color=\"#c77dff\">키메라 프로토콜:</font> 현재 활성화된 버프 카테고리 1개당 피해량이 <font color=\"#FFFFFF\">+8%</font> 증가합니다 (4개 모두 활성화 시 최대 <font color=\"#FFFFFF\">+32%</font>).",
+     "standardDesc": "카테고리 당 피해량: +5%",
+     "deluxeDesc": "카테고리 당 피해량: +8%",
+     "standardDescRaw": "카테고리 당 피해량: +5%",
+     "deluxeDescRaw": "카테고리 당 피해량: +8%",
      "rawValues": [
       {
        "key": "DamagePerCategory",
@@ -14334,8 +14074,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "FluxState",
@@ -14364,8 +14103,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "GeneticMemory",
@@ -14394,8 +14132,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Monomorph",
@@ -14424,8 +14161,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "OverclockedForm",
@@ -14468,16 +14204,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "PolymorphicSynthesis",
      "name": "다형성 합성",
-     "standardDesc": "다형성 합성: 현재 활성화된 유틸리티 버프 1개당 +1의 관통력을 얻습니다. 현재 활성화된 공격력 버프 1개당 예비 탄약이 +8% 증가합니다.",
-     "deluxeDesc": "다형성 합성: 현재 활성화된 유틸리티 버프 1개당 +2의 관통력을 얻습니다. 현재 활성화된 공격력 버프 1개당 예비 탄약이 +15% 증가합니다.",
-     "standardDescRaw": "<font color=\"#c77dff\">다형성 합성:</font> 현재 활성화된 <font color=\"#e0aaff\">유틸리티 버프</font> 1개당 <font color=\"#FFFFFF\">+1</font>의 관통력을 얻습니다. 현재 활성화된 <font color=\"#e0aaff\">공격력 버프</font> 1개당 예비 탄약이 <font color=\"#FFFFFF\">+8%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#c77dff\">다형성 합성:</font> 현재 활성화된 <font color=\"#e0aaff\">유틸리티 버프</font> 1개당 <font color=\"#FFFFFF\">+2</font>의 관통력을 얻습니다. 현재 활성화된 <font color=\"#e0aaff\">공격력 버프</font> 1개당 예비 탄약이 <font color=\"#FFFFFF\">+15%</font> 증가합니다.",
+     "standardDesc": "유틸리티 버프 당 관통력: +100% · 공격 버프 당 여분 탄약: +8%",
+     "deluxeDesc": "유틸리티 버프 당 관통력: +200% · 공격 버프 당 여분 탄약: +15%",
+     "standardDescRaw": "유틸리티 버프 당 관통력: +100% · 공격 버프 당 여분 탄약: +8%",
+     "deluxeDescRaw": "유틸리티 버프 당 관통력: +200% · 공격 버프 당 여분 탄약: +15%",
      "rawValues": [
       {
        "key": "PenetrationPerUtilityBuff",
@@ -14512,8 +14247,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "PrimordialVigor",
@@ -14542,8 +14276,7 @@
      "note": "✅ 너프 완료: 15버프 전부 활성 시 DR -37.5% → -22.5%로 조정 (Mimicry 탱크성 심화 억제).",
      "isPatched": true,
      "patchNote": "구 0.015/0.025(15버프 전부 활성 시 -37.5%) → -22.5%로 완화. Mimicry(기존 확정OP)의 탱크성 심화 억제",
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ResidualForm",
@@ -14586,8 +14319,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "VolatileShift",
@@ -14644,8 +14376,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     }
    ],
    "skillCount": 9,
@@ -14759,8 +14490,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Blight",
@@ -14796,16 +14526,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "EnvenomedArsenal",
      "name": "독이 든 무기고",
-     "standardDesc": "무기를 교체하면 다음 3번의 공격이 확정적으로 독 효과를 적용합니다. 무기 전환 속도가 25% 빨라집니다.",
-     "deluxeDesc": "무기를 교체하면 다음 5번의 공격이 확정적으로 독 효과를 적용합니다. 무기 전환 속도가 25% 빨라집니다.",
-     "standardDescRaw": "무기를 교체하면 다음 <font color=\"#399c0e\">3번의 공격이 확정적으로 독 효과</font>를 적용합니다. <font color=\"#ebd402\">무기 전환 속도가 25% 빨라집니다</font>.",
-     "deluxeDescRaw": "무기를 교체하면 다음 <font color=\"#b346ea\">5번의 공격이 확정적으로 독 효과</font>를 적용합니다. <font color=\"#ebd402\">무기 전환 속도가 25% 빨라집니다</font>.",
+     "standardDesc": "독 피해량: 10",
+     "deluxeDesc": "독 피해량: 20",
+     "standardDescRaw": "독 피해량: 10",
+     "deluxeDescRaw": "독 피해량: 20",
      "rawValues": [
       {
        "key": "PoisonDamage",
@@ -14826,8 +14555,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "Necrosis",
@@ -14856,8 +14584,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "Putrefaction",
@@ -14886,8 +14613,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "SymbioticToxin",
@@ -14916,8 +14642,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "ToxicAbsorption",
@@ -14946,8 +14671,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     }
    ],
    "skillCount": 7,
@@ -15074,10 +14798,10 @@
     {
      "key": "AthenasWrath",
      "name": "아테나의 분노",
-     "standardDesc": "아테나의 분노: 지난 10초 이내에 자신에게 피해를 입힌 적에게 +50%의 피해를 입힙니다.",
-     "deluxeDesc": "아테나의 분노(디럭스): 지난 10초 이내에 자신에게 피해를 입힌 적에게 +75%의 피해를 입히며, 이 효과는 동일한 유형의 모든 적에게 적용됩니다.",
-     "standardDescRaw": "<font color=\"#8B008B\">아테나의 분노:</font> 지난 <font color=\"#FFFFFF\">10초</font> 이내에 자신에게 <font color=\"#FF6666\">피해를 입힌</font> 적에게 <font color=\"#FFFFFF\">+50%</font>의 피해를 입힙니다.",
-     "deluxeDescRaw": "<font color=\"#8B008B\">아테나의 분노(디럭스):</font> 지난 <font color=\"#FFFFFF\">10초</font> 이내에 자신에게 <font color=\"#FF6666\">피해를 입힌</font> 적에게 <font color=\"#FFFFFF\">+75%</font>의 피해를 입히며, 이 효과는 <font color=\"#FFFFFF\">동일한 유형의 모든 적에게 적용됩니다.</font>",
+     "standardDesc": "피해량 보너스: +50%",
+     "deluxeDesc": "피해량 보너스: +75%",
+     "standardDescRaw": "피해량 보너스: +50%",
+     "deluxeDescRaw": "피해량 보너스: +75%",
      "rawValues": [
       {
        "key": "DamageBonus",
@@ -15098,16 +14822,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "CurseOfStone",
      "name": "돌의 저주",
-     "standardDesc": "돌의 저주: 적 타격 시 3% 확률로 적에게 저주를 내립니다. 저주받은 적은 5초 동안 모든 출처로부터 두 배의 피해를 받습니다.",
-     "deluxeDesc": "돌의 저주(디럭스): 적 타격 시 5% 확률로 적에게 저주를 내립니다. 저주받은 적은 5초 동안 모든 출처로부터 두 배의 피해를 받습니다. 저주받은 적이 죽으면 주변 적에게 저주가 퍼집니다.",
-     "standardDescRaw": "<font color=\"#8B008B\">돌의 저주:</font> 적 타격 시 <font color=\"#FFFFFF\">3% 확률</font>로 적에게 <font color=\"#FFD700\">저주</font>를 내립니다. 저주받은 적은 <font color=\"#FFFFFF\">5초</font> 동안 모든 출처로부터 <font color=\"#FF6666\">두 배의 피해</font>를 받습니다.",
-     "deluxeDescRaw": "<font color=\"#8B008B\">돌의 저주(디럭스):</font> 적 타격 시 <font color=\"#FFFFFF\">5% 확률</font>로 적에게 <font color=\"#FFD700\">저주</font>를 내립니다. 저주받은 적은 <font color=\"#FFFFFF\">5초</font> 동안 모든 출처로부터 <font color=\"#FF6666\">두 배의 피해</font>를 받습니다. <font color=\"#FFD700\">저주받은 적이 죽으면 주변 적에게 저주가 퍼집니다.</font>",
+     "standardDesc": "저주 확률: +3% · 저주 피해량 배율: ×1",
+     "deluxeDesc": "저주 확률: +5% · 저주 피해량 배율: ×1",
+     "standardDescRaw": "저주 확률: +3% · 저주 피해량 배율: ×1",
+     "deluxeDescRaw": "저주 확률: +5% · 저주 피해량 배율: ×1",
      "rawValues": [
       {
        "key": "CurseChance",
@@ -15142,16 +14865,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "GorgonsCurse",
      "name": "고르곤의 저주",
-     "standardDesc": "고르곤의 저주: 받는 피해가 +25% 증가하지만, 가하는 피해가 +50% 증가합니다.",
-     "deluxeDesc": "고르곤의 저주(디럭스): 받는 피해가 +50% 증가하지만, 가하는 피해가 +100% 증가합니다.",
-     "standardDescRaw": "<font color=\"#8B008B\">고르곤의 저주:</font> 받는 피해가 <font color=\"#FF6666\">+25%</font> 증가하지만, 가하는 피해가 <font color=\"#66FF66\">+50%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#8B008B\">고르곤의 저주(디럭스):</font> 받는 피해가 <font color=\"#FF6666\">+50%</font> 증가하지만, 가하는 피해가 <font color=\"#66FF66\">+100%</font> 증가합니다.",
+     "standardDesc": "피해량 배율: ×0.4 · 피해량 받는 배율: ×0.4",
+     "deluxeDesc": "피해량 배율: ×0.8 · 피해량 받는 배율: ×0.8",
+     "standardDescRaw": "피해량 배율: ×0.4 · 피해량 받는 배율: ×0.4",
+     "deluxeDescRaw": "피해량 배율: ×0.8 · 피해량 받는 배율: ×0.8",
      "rawValues": [
       {
        "key": "DamageMultiplier",
@@ -15186,8 +14908,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "GorgonsLegacy",
@@ -15230,8 +14951,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "Metamorphosis",
@@ -15288,16 +15008,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "NestOfVipers",
      "name": "독사의 둥지",
      "standardDesc": "독사의 둥지: 5초 이상 제자리에 가만히 서 있으면 독구름이 생성되어 4m 이내의 적에게 초당 3의 피해를 입힙니다.",
-     "deluxeDesc": "독사의 둥지(디럭스): 3초 이상 제자리에 가만히 서 있으면 독구름이 생성되어 6m 이내의 적에게 초당 5의 피해를 입힙니다. 추가로, 움직이더라도 구름이 10초 동안 당신을 따라다닙니다.",
+     "deluxeDesc": "발동 시간: 3초 · 구름 사거리: 600 · 구름 피해량: 5",
      "standardDescRaw": "<font color=\"#8B008B\">독사의 둥지:</font> <font color=\"#FFFFFF\">5초 이상</font> 제자리에 가만히 서 있으면 <font color=\"#00FF00\">독구름</font>이 생성되어 <font color=\"#FFFFFF\">4m</font> 이내의 적에게 <font color=\"#FFFFFF\">초당 3의 피해</font>를 입힙니다.",
-     "deluxeDescRaw": "<font color=\"#8B008B\">독사의 둥지(디럭스):</font> <font color=\"#FFFFFF\">3초 이상</font> 제자리에 가만히 서 있으면 <font color=\"#00FF00\">독구름</font>이 생성되어 <font color=\"#FFFFFF\">6m</font> 이내의 적에게 <font color=\"#FFFFFF\">초당 5의 피해</font>를 입힙니다. 추가로, 움직이더라도 <font color=\"#FFD700\">구름이 10초 동안 당신을 따라다닙니다.</font>",
+     "deluxeDescRaw": "발동 시간: 3초 · 구름 사거리: 600 · 구름 피해량: 5",
      "rawValues": [
       {
        "key": "TriggerTime",
@@ -15346,16 +15065,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "PetrifyingPresence",
      "name": "석화시키는 존재",
      "standardDesc": "석화하는 존재: 공격 시 +10% 확률로 적을 석화시킵니다(비틀거림 효과가 두 배가 됩니다).",
-     "deluxeDesc": "석화하는 존재(디럭스): 공격 시 20% 확률로 적을 석화시킵니다(비틀거림 효과가 두 배가 됩니다). 추가로, 석화된 적은 모든 공격으로부터 +50%의 추가 피해를 받습니다.",
+     "deluxeDesc": "석화 확률: +20% · 휘청임 배율: ×2 · 피해량 배율: ×0.5",
      "standardDescRaw": "<font color=\"#8B008B\">석화하는 존재:</font> 공격 시 <font color=\"#FFFFFF\">+10% 확률</font>로 적을 <font color=\"#FFD700\">석화</font>시킵니다(<font color=\"#FF6666\">비틀거림 효과가 두 배</font>가 됩니다).",
-     "deluxeDescRaw": "<font color=\"#8B008B\">석화하는 존재(디럭스):</font> 공격 시 <font color=\"#FFFFFF\">20% 확률</font>로 적을 <font color=\"#FFD700\">석화</font>시킵니다(<font color=\"#FF6666\">비틀거림 효과가 두 배</font>가 됩니다). 추가로, 석화된 적은 모든 공격으로부터 <font color=\"#66FF66\">+50%</font>의 추가 피해를 받습니다.",
+     "deluxeDescRaw": "석화 확률: +20% · 휘청임 배율: ×2 · 피해량 배율: ×0.5",
      "rawValues": [
       {
        "key": "PetrifyChance",
@@ -15404,8 +15122,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SerpentineReflexes",
@@ -15448,16 +15165,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "ShedSkin",
      "name": "허물",
-     "standardDesc": "허물 벗기: 3초 이내에 50 이상의 피해를 입으면, 8초 동안 50%의 피해 저항을 얻습니다 (재사용 대기시간 30초).",
-     "deluxeDesc": "허물 벗기(디럭스): 3초 이내에 25 이상의 피해를 입으면, 12초 동안 75%의 피해 저항을 얻습니다 (재사용 대기시간 20초).",
-     "standardDescRaw": "<font color=\"#8B008B\">허물 벗기:</font> 3초 이내에 <font color=\"#FFFFFF\">50 이상</font>의 피해를 입으면, <font color=\"#FFFFFF\">8초 동안 50%의 피해 저항</font>을 얻습니다 (재사용 대기시간 30초).",
-     "deluxeDescRaw": "<font color=\"#8B008B\">허물 벗기(디럭스):</font> 3초 이내에 <font color=\"#FFFFFF\">25 이상</font>의 피해를 입으면, <font color=\"#FFFFFF\">12초 동안 75%의 피해 저항</font>을 얻습니다 (재사용 대기시간 20초).",
+     "standardDesc": "피해량 발동: 100 · 피해량 저항력: +20% · 버프 지속시간: 8초",
+     "deluxeDesc": "피해량 발동: 100 · 피해량 저항력: +40% · 버프 지속시간: 12초",
+     "standardDescRaw": "피해량 발동: 100 · 피해량 저항력: +20% · 버프 지속시간: 8초",
+     "deluxeDescRaw": "피해량 발동: 100 · 피해량 저항력: +40% · 버프 지속시간: 12초",
      "rawValues": [
       {
        "key": "DamageTrigger",
@@ -15506,8 +15222,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "SnakesCoil",
@@ -15550,8 +15265,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ToxicAura",
@@ -15594,16 +15308,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "ToxicImmunity",
      "name": "독성 면역",
      "standardDesc": "독성 면역: 독 피해 저항력을 +25% 얻습니다.",
-     "deluxeDesc": "독성 면역(디럭스): 독에 완전히 면역되며, 독 피해를 받을 때 오히려 체력을 회복합니다.",
+     "deluxeDesc": "독 저항력: +50%",
      "standardDescRaw": "<font color=\"#8B008B\">독성 면역:</font> <font color=\"#00FF00\">독 피해 저항력</font>을 <font color=\"#FFFFFF\">+25%</font> 얻습니다.",
-     "deluxeDescRaw": "<font color=\"#8B008B\">독성 면역(디럭스):</font> <font color=\"#FFD700\">독에 완전히 면역</font>되며, <font color=\"#00FF00\">독 피해를 받을 때 오히려 체력을 회복</font>합니다.",
+     "deluxeDescRaw": "독 저항력: +50%",
      "rawValues": [
       {
        "key": "PoisonResistance",
@@ -15624,16 +15337,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "VenomExtraction",
      "name": "독 추출",
-     "standardDesc": "독 추출: 독에 걸린 적을 처치하면 10초 동안 피해량이 10% 증가합니다.",
-     "deluxeDesc": "독 추출(디럭스): 독에 걸린 적을 처치하면 10초 동안 피해량이 20% 증가하며, 이는 최대 5회까지 중첩됩니다 (최대 100%).",
-     "standardDescRaw": "<font color=\"#8B008B\">독 추출:</font> <font color=\"#00FF00\">독에 걸린 적을 처치하면 <font color=\"#FFFFFF\">10초 동안 피해량이 10% 증가</font>합니다.</font>",
-     "deluxeDescRaw": "<font color=\"#8B008B\">독 추출(디럭스):</font> <font color=\"#00FF00\">독에 걸린 적을 처치하면 <font color=\"#FFFFFF\">10초 동안 피해량이 20% 증가</font>하며, 이는 <font color=\"#FFD700\">최대 5회까지 중첩됩니다</font> (최대 100%).</font>",
+     "standardDesc": "피해량 보너스: +10% · 최대 스택 수: 1",
+     "deluxeDesc": "피해량 보너스: +20% · 최대 스택 수: 5",
+     "standardDescRaw": "피해량 보너스: +10% · 최대 스택 수: 1",
+     "deluxeDescRaw": "피해량 보너스: +20% · 최대 스택 수: 5",
      "rawValues": [
       {
        "key": "DamageBonus",
@@ -15668,8 +15380,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     }
    ],
    "skillCount": 13,
@@ -15809,8 +15520,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "BulkPurchasing",
@@ -15839,8 +15549,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "CorporateBailout",
@@ -15869,8 +15578,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "GoldenParachute",
@@ -15899,8 +15607,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "HODLing",
@@ -15936,16 +15643,15 @@
      "note": "InterestRate=0.25가 기존 패시브 CompoundInterestRate(10%)와 중첩되나, 도쉬(재화) 효과라 전투 밸런스에는 영향 없음 — 적절.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "HighRiskInvestment",
      "name": "고위험 투자",
-     "standardDesc": "상점에서 한 번에 2500 도쉬 이상을 지출할 때마다 10% 확률로 지불한 금액을 그대로 환불받습니다.",
-     "deluxeDesc": "상점에서 한 번에 1500 도쉬 이상을 지출할 때마다 10% 확률로 지불한 금액을 그대로 환불받습니다.",
-     "standardDescRaw": "상점에서 한 번에 <font color=\"#ff3399\">2500</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
-     "deluxeDescRaw": "상점에서 한 번에 <font color=\"#ff3399\">1500</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
+     "standardDesc": "최소 구매 량: 4,000",
+     "deluxeDesc": "최소 구매 량: 3,000",
+     "standardDescRaw": "최소 구매 량: 4,000",
+     "deluxeDescRaw": "최소 구매 량: 3,000",
      "rawValues": [
       {
        "key": "MinPurchaseAmount",
@@ -15966,16 +15672,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "HouseEdge",
      "name": "하우스 엣지",
-     "standardDesc": "매 30번째 킬마다 슬롯머신이 발동됩니다: 80% 꽝, 15% +50 도쉬, 4% +150 도쉬, 1% +300 도쉬.",
-     "deluxeDesc": "매 30번째 킬마다 슬롯머신이 발동됩니다: 60% 꽝, 25% +50 도쉬, 10% +150 도쉬, 5% +300 도쉬.",
-     "standardDescRaw": "매 <font color=\"#ffaa33\">30번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">80% 꽝</font>, <font color=\"#ffaa33\">15% +50 도쉬</font>, <font color=\"#ff6600\">4% +150 도쉬</font>, <font color=\"#ff0000\">1% +300 도쉬</font>.",
-     "deluxeDescRaw": "매 <font color=\"#ffaa33\">30번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">60% 꽝</font>, <font color=\"#ffaa33\">25% +50 도쉬</font>, <font color=\"#ff6600\">10% +150 도쉬</font>, <font color=\"#ff0000\">5% +300 도쉬</font>.",
+     "standardDesc": "슬롯 머신 발동: 25",
+     "deluxeDesc": "슬롯 머신 발동: 20",
+     "standardDescRaw": "슬롯 머신 발동: 25",
+     "deluxeDescRaw": "슬롯 머신 발동: 20",
      "rawValues": [
       {
        "key": "SlotMachineTrigger",
@@ -15996,8 +15701,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     },
     {
      "key": "InsiderTrading",
@@ -16026,8 +15730,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "MercenaryContract",
@@ -16070,8 +15773,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
-     "textVerified": true
+     "textFixed": true
     },
     {
      "key": "ProfitSharing",
@@ -16100,16 +15802,15 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": true
+     "textFixed": false
     },
     {
      "key": "TaxLoopholes",
      "name": "세금 허점",
-     "standardDesc": "5000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
-     "deluxeDesc": "5000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다.",
-     "standardDescRaw": "5000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
-     "deluxeDescRaw": "5000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다.",
+     "standardDesc": "세금 환급 량: 150 · 소비 임계값: 6,000",
+     "deluxeDesc": "세금 환급 량: 300 · 소비 임계값: 6,000",
+     "standardDescRaw": "세금 환급 량: 150 · 소비 임계값: 6,000",
+     "deluxeDescRaw": "세금 환급 량: 300 · 소비 임계값: 6,000",
      "rawValues": [
       {
        "key": "TaxRefundAmount",
@@ -16137,8 +15838,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
-     "textVerified": false
+     "textFixed": true
     }
    ],
    "skillCount": 11,

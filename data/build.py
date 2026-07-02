@@ -313,6 +313,20 @@ def reconcile_skill_text(raw_text, tier_entries):
     return new_text, True, new_text != raw_text
 
 
+def build_ini_only_text(tier_entries):
+    """Fallback for when reconcile_skill_text() can't safely patch the
+    original KOR flavor sentence in place (e.g. one sentence covers several
+    ini keys, or the text phrases a value as "N배" while the ini treats it
+    as a percent -- both real cases found in this data). Rather than leave
+    stale/mismatched numbers on the page, drop the flavor prose entirely and
+    show a plain line built only from KFZedternalUnlimited.ini, which is the
+    single source of truth per project policy -- the KOR ini is flavor text
+    only, never authoritative for numbers."""
+    if not tier_entries:
+        return None
+    return " · ".join(f"{e['label']}: {e['display']}" for e in tier_entries)
+
+
 # Skills whose KOR text explicitly states a stat is SACRIFICED/reduced
 # (e.g. Voodoo: "체력이 X% 감소하는 대신 피해량이 Y% 증가") or gives a literal
 # negative number ("-6%"), but whose ini only stores an unsigned magnitude.
@@ -496,10 +510,22 @@ def build():
             skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
 
             t1_entries, t2_entries = split_tiers(raw_values)
-            std_raw, std_verified, std_fixed = reconcile_skill_text(
-                skor.get("StandardSkillUpgradeDescription"), t1_entries)
-            delx_raw, delx_verified, delx_fixed = reconcile_skill_text(
-                skor.get("DeluxeSkillUpgradeDescription"), t2_entries)
+            std_orig = skor.get("StandardSkillUpgradeDescription")
+            delx_orig = skor.get("DeluxeSkillUpgradeDescription")
+            std_raw, std_ok, std_fixed = reconcile_skill_text(std_orig, t1_entries)
+            delx_raw, delx_ok, delx_fixed = reconcile_skill_text(delx_orig, t2_entries)
+
+            # If the flavor sentence couldn't be safely patched in place,
+            # drop it in favor of a plain ini-only line -- never show
+            # KOR-original numbers that might not match KFZedternalUnlimited.ini.
+            if not std_ok:
+                fallback = build_ini_only_text(t1_entries)
+                if fallback:
+                    std_raw, std_fixed = fallback, True
+            if not delx_ok:
+                fallback = build_ini_only_text(t2_entries)
+                if fallback:
+                    delx_raw, delx_fixed = fallback, True
 
             skills.append({
                 "key": short,
@@ -514,7 +540,6 @@ def build():
                 "isPatched": bool(skill_patch_note),
                 "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
-                "textVerified": std_verified and delx_verified,
             })
 
         rule = unlock_rules.get(key, {})
