@@ -11,5 +11,10 @@
     "standardDesc": "<font color=\"#15d7fa\">탄창 용량</font>이 <font color=\"#77d914\">+25%</font>, <font color=\"#15d7fa\">예비 탄약</font>이 <font color=\"#77d914\">+20%</font> 증가합니다.",
     "deluxeDesc": "<font color=\"#15d7fa\">탄창 용량</font>이 <font color=\"#77d914\">+40%</font>, <font color=\"#15d7fa\">예비 탄약</font>이 <font color=\"#77d914\">+35%</font> 증가합니다.",
     "_note": "KOR ini에 UpgradeName만 있고 설명 문구가 비어있어, ini 수치(MagCapacity 0.25/0.4, SpareAmmo 0.2/0.35)를 근거로 직접 작성함."
+  },
+  "HouseEdge": {
+    "standardDesc": "매 <font color=\"#ffaa33\">25번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">80% 꽝</font>, <font color=\"#ffaa33\">15% +50 도쉬</font>, <font color=\"#ff6600\">4% +150 도쉬</font>, <font color=\"#ff0000\">1% +300 도쉬</font>.",
+    "deluxeDesc": "매 <font color=\"#ffaa33\">20번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">60% 꽝</font>, <font color=\"#ffaa33\">25% +50 도쉬</font>, <font color=\"#ff6600\">10% +150 도쉬</font>, <font color=\"#ff0000\">5% +300 도쉬</font>.",
+    "_note": "KOR ini는 '30번째 킬'로 적혀 있으나 KFZedternalUnlimited.ini의 SlotMachineTrigger=25(표준)/20(디럭스)가 현재 적용값. 확률 배분은 하드코딩이라 KOR 문구 유지."
   }
 }

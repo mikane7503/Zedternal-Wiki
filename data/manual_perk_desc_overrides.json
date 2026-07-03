@@ -53,5 +53,8 @@
   },
   "Hollow": {
     "3": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">공허 숙련</font> - 고유 잠금 해제 아이템 하나당 할로우 무기 피해량이 <font color=\"#FFFFFF\">+1%</font> 증가합니다."
+  },
+  "Gambit": {
+    "3": "보상은 <font color=\"#77d914\">퍼크 레벨</font>에 비례하여 증가하며, <font color=\"#FF6666\">피해량</font> · <font color=\"#FFD700\">도쉬</font> · <font color=\"#77d914\">이동 속도</font> 보너스로 지급됩니다. 피해량과 이동 속도는 게임이 끝날 때까지 영구 누적됩니다."
   }
 }

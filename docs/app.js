@@ -366,6 +366,12 @@ function renderAdvDetail(key) {
     ${descNote}
     ${descLines}
 
+    ${(p.extraSections || []).map(sec => `
+      <div class="section-title">${escapeHtml(sec.title)}</div>
+      ${sec.note ? `<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">${escapeHtml(sec.note)}</div>` : ""}
+      ${sec.html}
+    `).join("")}
+
     ${hasPassive ? `<div class="section-title">전직 레벨별 수치</div>${renderSliderSection(p.passiveStats, 20)}` : ""}
 
     ${renderFixedStatsSection(p.fixedStats)}

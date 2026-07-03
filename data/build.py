@@ -24,6 +24,7 @@ MANUAL_VERDICTS = os.path.join(ROOT, "data", "manual_verdicts.json")
 MANUAL_ROLES = os.path.join(ROOT, "data", "manual_role_descriptions.json")
 MANUAL_SKILL_OVERRIDES = os.path.join(ROOT, "data", "manual_skill_overrides.json")
 MANUAL_PERK_DESCS = os.path.join(ROOT, "data", "manual_perk_desc_overrides.json")
+MANUAL_PERK_EXTRAS = os.path.join(ROOT, "data", "manual_perk_extras.json")
 OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
 
 SECTION_RE = re.compile(r"^\[(?:ZedternalRBPerkpackage\.)?(.+)\]$")
@@ -860,6 +861,8 @@ def build():
         manual_skill_overrides = json.load(f)
     with open(MANUAL_PERK_DESCS, encoding="utf-8") as f:
         manual_perk_descs = json.load(f)
+    with open(MANUAL_PERK_EXTRAS, encoding="utf-8") as f:
+        manual_perk_extras = json.load(f)
 
     # ---- advanced perks (커퍼 / DK) ----
     adv_keys = sorted({k[len("DKUpgrade_Perk_"):] for k in kor_sections if k.startswith("DKUpgrade_Perk_")})
@@ -895,8 +898,15 @@ def build():
         perk_patch_note = "; ".join(patch_notes.get(f"DKUpgrade_Perk_{key}", []))
 
         skill_notes = manual_verdicts.get("skillNotes", {}).get(key, {})
+        perk_extras = manual_perk_extras.get(key, {})
+        # Skills confirmed to exist in the perk's game code + KOR sections
+        # but absent from the Config_SkillUpgrade registry (e.g. Gambit's
+        # entire hardcoded skill set) -- run them through the exact same
+        # pipeline as registry skills.
+        skill_roster = list(dk_skill_registry.get(key, []))
+        skill_roster += [(short, False, None) for short in perk_extras.get("skills", [])]
         skills = []
-        for short, is_disabled, disabled_note in dk_skill_registry.get(key, []):
+        for short, is_disabled, disabled_note in skill_roster:
             skill_section = f"DKUpgrade_Skill_{short}"
             skor = kor_sections.get(skill_section, {})
             sini = main_sections.get(skill_section, [])
@@ -979,6 +989,7 @@ def build():
             "isPatched": is_patched,
             "patchNote": perk_patch_note or None,
             "testWarning": build_test_warning(verdict, is_patched),
+            "extraSections": perk_extras.get("extraSections", []),
             "icon": f"icons/{key.lower()}.png",
         })
 
