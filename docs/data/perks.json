@@ -398,7 +398,7 @@
   {
    "key": "Gunslinger",
    "name": "건슬링거",
-   "grade": "A",
+   "grade": "S",
    "summary": "패시브가 약하지만 스킬 투자로 화력을 보완하는 타입. 기동성/버스트는 우수하나 기본기가 아쉬움.",
    "role": "권총의 연사력과 이동속도·재장전 속도를 동시에 크게 끌어올려주는 <font color=\"#FFD700\">기동성 중심 딜러</font> 퍼크입니다.",
    "endgame": "Lv20에 FirstBlood, ShootAndRun 등을 채우면 연속 킬 누적 최대 5배 피해와 킬 후 <font color=\"#15d7fa\">이동속도+재장전 속도</font> 버프로 뛰어난 기동성과 버스트 딜을 확보하지만, 패시브 피해량 자체는 베이스 퍼크 중 최하위권이라 스킬 투자 없이는 화력이 아쉽습니다.",
@@ -467,18 +467,18 @@
     },
     {
      "level": 10,
+     "perk": "TimeTraveler",
+     "name": "시간 여행자"
+    },
+    {
+     "level": 15,
      "perk": "Gambit",
      "name": "갬빗"
     },
     {
-     "level": 15,
+     "level": 20,
      "perk": "Reaper",
      "name": "사신"
-    },
-    {
-     "level": 20,
-     "perk": "TimeTraveler",
-     "name": "시간 여행자"
     }
    ],
    "isPatched": true,
@@ -1226,6 +1226,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.020000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": true,
    "extraSections": [],
    "icon": "icons/bulwark.png"
   },
@@ -1235,20 +1236,18 @@
    "parentPerk": "Berserker",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "MeleeDamagePerLevel",
      "label": "레벨 당 근접 피해량",
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
     },
     {
      "key": "DamageResistancePerLevel",
@@ -1256,12 +1255,11 @@
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.005,
-     "lv20": 0.005,
-     "lv10Display": "+0.5%",
-     "lv20Display": "+0.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
     },
     {
      "key": "AttackSpeedPerLevel",
@@ -1269,13 +1267,14 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "DamagePerNearbyEnemy",
      "label": "근처 적 당 피해량",
@@ -1422,10 +1421,10 @@
     {
      "key": "AdrenalineRush",
      "name": "아드레날린 러시",
-     "standardDesc": "아드레날린 질주 피해를 입을 때마다 아드레날린 스택이 쌓입니다 (최대 5). 스택당: 이동 속도 +3%, 공격 속도 +4%. 이 스택은 시간이 지남에 따라 감소합니다. 고통은 곧 연료입니다.",
-     "deluxeDesc": "아드레날린 질주 피해를 입을 때마다 아드레날린 스택이 쌓입니다 (최대 8). 스택당: 이동 속도 +4%, 공격 속도 +5%. 이 스택은 시간이 지남에 따라 감소합니다. 고통은 곧 연료입니다.",
-     "standardDescRaw": "<font color=\"#edb82a\">아드레날린 질주</font> 피해를 입을 때마다 <font color=\"#FFFFFF\">아드레날린</font> 스택이 쌓입니다 (최대 <font color=\"#FFFFFF\">5</font>). 스택당: <font color=\"#32CD32\">이동 속도 +3%</font>, <font color=\"#FFD700\">공격 속도 +4%</font>. 이 스택은 시간이 지남에 따라 감소합니다. <font color=\"#AAAAAA\">고통은 곧 연료입니다.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">아드레날린 질주</font> 피해를 입을 때마다 <font color=\"#FFFFFF\">아드레날린</font> 스택이 쌓입니다 (최대 <font color=\"#FFFFFF\">8</font>). 스택당: <font color=\"#32CD32\">이동 속도 +4%</font>, <font color=\"#FFD700\">공격 속도 +5%</font>. 이 스택은 시간이 지남에 따라 감소합니다. <font color=\"#AAAAAA\">고통은 곧 연료입니다.</font>",
+     "standardDesc": "아드레날린 질주 피해를 입을 때마다 아드레날린 스택이 쌓입니다 (최대 5). 스택당: 이동 속도 +2%, 공격 속도 +2%. 이 스택은 시간이 지남에 따라 감소합니다. 고통은 곧 연료입니다.",
+     "deluxeDesc": "아드레날린 질주 피해를 입을 때마다 아드레날린 스택이 쌓입니다 (최대 8). 스택당: 이동 속도 +3%, 공격 속도 +3%. 이 스택은 시간이 지남에 따라 감소합니다. 고통은 곧 연료입니다.",
+     "standardDescRaw": "<font color=\"#edb82a\">아드레날린 질주</font> 피해를 입을 때마다 <font color=\"#FFFFFF\">아드레날린</font> 스택이 쌓입니다 (최대 <font color=\"#FFFFFF\">5</font>). 스택당: <font color=\"#32CD32\">이동 속도 +2%</font>, <font color=\"#FFD700\">공격 속도 +2%</font>. 이 스택은 시간이 지남에 따라 감소합니다. <font color=\"#AAAAAA\">고통은 곧 연료입니다.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">아드레날린 질주</font> 피해를 입을 때마다 <font color=\"#FFFFFF\">아드레날린</font> 스택이 쌓입니다 (최대 <font color=\"#FFFFFF\">8</font>). 스택당: <font color=\"#32CD32\">이동 속도 +3%</font>, <font color=\"#FFD700\">공격 속도 +3%</font>. 이 스택은 시간이 지남에 따라 감소합니다. <font color=\"#AAAAAA\">고통은 곧 연료입니다.</font>",
      "rawValues": [
       {
        "key": "MaxStacks",
@@ -1437,9 +1436,16 @@
       {
        "key": "MaxStacks",
        "label": "최대 스택 수",
-       "value": 8,
+       "value": 7,
        "unit": "count",
-       "display": "8"
+       "display": "7"
+      },
+      {
+       "key": "SpeedPerStack",
+       "label": "스택 당 속도",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
       },
       {
        "key": "SpeedPerStack",
@@ -1449,32 +1455,25 @@
        "display": "+3%"
       },
       {
-       "key": "SpeedPerStack",
-       "label": "스택 당 속도",
-       "value": 0.04,
+       "key": "AttackSpeedPerStack",
+       "label": "스택 당 공격 속도",
+       "value": 0.02,
        "unit": "percent",
-       "display": "+4%"
+       "display": "+2%"
       },
       {
        "key": "AttackSpeedPerStack",
        "label": "스택 당 공격 속도",
-       "value": 0.04,
+       "value": 0.03,
        "unit": "percent",
-       "display": "+4%"
-      },
-      {
-       "key": "AttackSpeedPerStack",
-       "label": "스택 당 공격 속도",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
+       "display": "+3%"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1482,11 +1481,18 @@
     {
      "key": "BatteringRam",
      "name": "공성퇴",
-     "standardDesc": "돌격: 질주 중 피해 저항이 +20% 증가합니다. 질주를 멈춘 후 1초 이내에 가하는 첫 근접 공격은 피해량이 2배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
-     "deluxeDesc": "돌격: 질주 중 피해 저항이 +30% 증가합니다. 질주를 멈춘 후 1.5초 이내에 가하는 첫 근접 공격은 피해량이 3배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
-     "standardDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 +20% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 2배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 +30% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1.5초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 3배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
+     "standardDesc": "질주 저항력: +10% · 충전 피해량: +150% · 충전 시간창: 1초",
+     "deluxeDesc": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1.5초",
+     "standardDescRaw": "질주 저항력: +10% · 충전 피해량: +150% · 충전 시간창: 1초",
+     "deluxeDescRaw": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1.5초",
      "rawValues": [
+      {
+       "key": "SprintResistance",
+       "label": "질주 저항력",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
       {
        "key": "SprintResistance",
        "label": "질주 저항력",
@@ -1495,11 +1501,11 @@
        "display": "+20%"
       },
       {
-       "key": "SprintResistance",
-       "label": "질주 저항력",
-       "value": 0.3,
+       "key": "ChargeDamage",
+       "label": "충전 피해량",
+       "value": 1.5,
        "unit": "percent",
-       "display": "+30%"
+       "display": "+150%"
       },
       {
        "key": "ChargeDamage",
@@ -1507,13 +1513,6 @@
        "value": 2.0,
        "unit": "percent",
        "display": "+200%"
-      },
-      {
-       "key": "ChargeDamage",
-       "label": "충전 피해량",
-       "value": 3.0,
-       "unit": "percent",
-       "display": "+300%"
       },
       {
        "key": "ChargeWindow",
@@ -1542,24 +1541,24 @@
     {
      "key": "ChainFury",
      "name": "체인 퓨리",
-     "standardDesc": "스택 당 피해량: +3% · 관통력 임계값: 10 · 관통력 보너스: +200%",
-     "deluxeDesc": "스택 당 피해량: +5% · 관통력 임계값: 7 · 관통력 보너스: +300%",
-     "standardDescRaw": "스택 당 피해량: +3% · 관통력 임계값: 10 · 관통력 보너스: +200%",
-     "deluxeDescRaw": "스택 당 피해량: +5% · 관통력 임계값: 7 · 관통력 보너스: +300%",
+     "standardDesc": "스택 당 피해량: +1% · 관통력 임계값: 10 · 관통력 보너스: +200%",
+     "deluxeDesc": "스택 당 피해량: +1.5% · 관통력 임계값: 10 · 관통력 보너스: +300%",
+     "standardDescRaw": "스택 당 피해량: +1% · 관통력 임계값: 10 · 관통력 보너스: +200%",
+     "deluxeDescRaw": "스택 당 피해량: +1.5% · 관통력 임계값: 10 · 관통력 보너스: +300%",
      "rawValues": [
       {
        "key": "DamagePerStack",
        "label": "스택 당 피해량",
-       "value": 0.03,
+       "value": 0.01,
        "unit": "percent",
-       "display": "+3%"
+       "display": "+1%"
       },
       {
        "key": "DamagePerStack",
        "label": "스택 당 피해량",
-       "value": 0.05,
+       "value": 0.015,
        "unit": "percent",
-       "display": "+5%"
+       "display": "+1.5%"
       },
       {
        "key": "PenetrationThreshold",
@@ -1571,9 +1570,9 @@
       {
        "key": "PenetrationThreshold",
        "label": "관통력 임계값",
-       "value": 7,
+       "value": 10,
        "unit": "count",
-       "display": "7"
+       "display": "10"
       },
       {
        "key": "PenetrationBonus",
@@ -1602,24 +1601,31 @@
     {
      "key": "Counterforce",
      "name": "반격력",
-     "standardDesc": "전환 속도: +50% · 최대 저장된 피해량: 200",
-     "deluxeDesc": "전환 속도: +80% · 최대 저장된 피해량: 350",
-     "standardDescRaw": "전환 속도: +50% · 최대 저장된 피해량: 200",
-     "deluxeDescRaw": "전환 속도: +80% · 최대 저장된 피해량: 350",
+     "standardDesc": "전환 속도: +30% · 최대 저장된 피해량: 100",
+     "deluxeDesc": "전환 속도: +70% · 최대 저장된 피해량: 200",
+     "standardDescRaw": "전환 속도: +30% · 최대 저장된 피해량: 100",
+     "deluxeDescRaw": "전환 속도: +70% · 최대 저장된 피해량: 200",
      "rawValues": [
       {
        "key": "ConversionRate",
        "label": "전환 속도",
-       "value": 0.5,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+30%"
       },
       {
        "key": "ConversionRate",
        "label": "전환 속도",
-       "value": 0.8,
+       "value": 0.7,
        "unit": "percent",
-       "display": "+80%"
+       "display": "+70%"
+      },
+      {
+       "key": "MaxStoredDamage",
+       "label": "최대 저장된 피해량",
+       "value": 100,
+       "unit": "count",
+       "display": "100"
       },
       {
        "key": "MaxStoredDamage",
@@ -1627,13 +1633,6 @@
        "value": 200,
        "unit": "count",
        "display": "200"
-      },
-      {
-       "key": "MaxStoredDamage",
-       "label": "최대 저장된 피해량",
-       "value": 350,
-       "unit": "count",
-       "display": "350"
       }
      ],
      "hasKorText": true,
@@ -1648,24 +1647,24 @@
     {
      "key": "CrowdSurge",
      "name": "군중 밀집",
-     "standardDesc": "스택 당 속도: +5% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 8초",
-     "deluxeDesc": "스택 당 속도: +7% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 12초",
-     "standardDescRaw": "스택 당 속도: +5% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 8초",
-     "deluxeDescRaw": "스택 당 속도: +7% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 12초",
+     "standardDesc": "스택 당 속도: +2% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 6초",
+     "deluxeDesc": "스택 당 속도: +4% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 9초",
+     "standardDescRaw": "스택 당 속도: +2% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 6초",
+     "deluxeDescRaw": "스택 당 속도: +4% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 9초",
      "rawValues": [
       {
        "key": "SpeedPerStack",
        "label": "스택 당 속도",
-       "value": 0.05,
+       "value": 0.02,
        "unit": "percent",
-       "display": "+5%"
+       "display": "+2%"
       },
       {
        "key": "SpeedPerStack",
        "label": "스택 당 속도",
-       "value": 0.07,
+       "value": 0.04,
        "unit": "percent",
-       "display": "+7%"
+       "display": "+4%"
       },
       {
        "key": "MaxStacks",
@@ -1726,16 +1725,16 @@
       {
        "key": "StackDuration",
        "label": "스택 지속시간",
-       "value": 8.0,
+       "value": 6.0,
        "unit": "seconds",
-       "display": "8초"
+       "display": "6초"
       },
       {
        "key": "StackDuration",
        "label": "스택 지속시간",
-       "value": 12.0,
+       "value": 9.0,
        "unit": "seconds",
-       "display": "12초"
+       "display": "9초"
       }
      ],
      "hasKorText": true,
@@ -1796,11 +1795,18 @@
     {
      "key": "HoldTheLine",
      "name": "전선을 유지하세요",
-     "standardDesc": "전선 사수: 제자리에 멈춰 서 있는 동안 근접 공격력이 +30% 증가하고 피해 저항이 +8.33% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
-     "deluxeDesc": "전선 사수: 천천히 이동하거나 멈춰 서 있는 동안 근접 공격력이 +50% 증가하고 피해 저항이 +13.33% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
-     "standardDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">제자리에 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +30% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +8.33% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">천천히 이동하거나 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +50% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +13.33% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
+     "standardDesc": "전선 사수: 제자리에 멈춰 서 있는 동안 근접 공격력이 +15% 증가하고 피해 저항이 +10% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
+     "deluxeDesc": "전선 사수: 천천히 이동하거나 멈춰 서 있는 동안 근접 공격력이 +30% 증가하고 피해 저항이 +20% 증가합니다. 발을 단단히 디디고 적이 접근하도록 유도하세요.",
+     "standardDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">제자리에 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +15% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +10% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">전선 사수:</font> <font color=\"#87CEEB\">천천히 이동하거나 멈춰 서 있는 동안</font> <font color=\"#FF4500\">근접 공격력이 +30% 증가</font>하고 <font color=\"#4169E1\">피해 저항이 +20% 증가</font>합니다. <font color=\"#AAAAAA\">발을 단단히 디디고 적이 접근하도록 유도하세요.</font>",
      "rawValues": [
+      {
+       "key": "MeleeDamageBonus",
+       "label": "근접 피해량 보너스",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
       {
        "key": "MeleeDamageBonus",
        "label": "근접 피해량 보너스",
@@ -1809,25 +1815,18 @@
        "display": "+30%"
       },
       {
-       "key": "MeleeDamageBonus",
-       "label": "근접 피해량 보너스",
-       "value": 0.5,
+       "key": "ResistanceBonus",
+       "label": "저항력 보너스",
+       "value": 0.1,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+10%"
       },
       {
        "key": "ResistanceBonus",
        "label": "저항력 보너스",
-       "value": 0.083333,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+8.33%"
-      },
-      {
-       "key": "ResistanceBonus",
-       "label": "저항력 보너스",
-       "value": 0.133333,
-       "unit": "percent",
-       "display": "+13.33%"
+       "display": "+20%"
       }
      ],
      "hasKorText": true,
@@ -1842,18 +1841,11 @@
     {
      "key": "NoSurrender",
      "name": "항복하지 않음",
-     "standardDesc": "항복 금지: 체력이 +5% 미만일 때 피해 저항이 +8.33% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 25 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
-     "deluxeDesc": "항복 금지: 체력이 +10% 미만일 때 피해 저항이 +11.67% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 40 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
-     "standardDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+5% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +8.33% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 25 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
-     "deluxeDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+10% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +11.67% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 40 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
+     "standardDesc": "항복 금지: 체력이 +10% 미만일 때 피해 저항이 +15% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 25 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
+     "deluxeDesc": "항복 금지: 체력이 +15% 미만일 때 피해 저항이 +20% 증가하며, 이 상태에서 근접 공격으로 적을 처치하면 체력을 40 회복합니다. 죽이려면 두 번 죽여야 할 겁니다.",
+     "standardDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+10% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +15% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 25 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">항복 금지:</font> 체력이 <font color=\"#DC143C\">+15% 미만</font>일 때 <font color=\"#4169E1\">피해 저항이 +20% 증가</font>하며, 이 상태에서 근접 공격으로 적을 처치하면 <font color=\"#32CD32\">체력을 40 회복</font>합니다. <font color=\"#AAAAAA\">죽이려면 두 번 죽여야 할 겁니다.</font>",
      "rawValues": [
-      {
-       "key": "HPThreshold",
-       "label": "체력 임계값",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
       {
        "key": "HPThreshold",
        "label": "체력 임계값",
@@ -1862,32 +1854,39 @@
        "display": "+10%"
       },
       {
-       "key": "HealPerKill",
-       "label": "처치 당 치유",
-       "value": 25,
-       "unit": "count",
-       "display": "25"
+       "key": "HPThreshold",
+       "label": "체력 임계값",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
       },
       {
        "key": "HealPerKill",
        "label": "처치 당 치유",
-       "value": 40,
+       "value": 15,
        "unit": "count",
-       "display": "40"
+       "display": "15"
+      },
+      {
+       "key": "HealPerKill",
+       "label": "처치 당 치유",
+       "value": 20,
+       "unit": "count",
+       "display": "20"
       },
       {
        "key": "Resistance",
        "label": "저항력",
-       "value": 0.083333,
+       "value": 0.15,
        "unit": "percent",
-       "display": "+8.33%"
+       "display": "+15%"
       },
       {
        "key": "Resistance",
        "label": "저항력",
-       "value": 0.116667,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+11.67%"
+       "display": "+20%"
       }
      ],
      "hasKorText": true,
@@ -1902,10 +1901,10 @@
     {
      "key": "PainEcho",
      "name": "통증 에코",
-     "standardDesc": "기본 반사: +10% · 적 당 반사: +5% · 최대 적 보너스: 5",
-     "deluxeDesc": "기본 반사: +15% · 적 당 반사: +8% · 최대 적 보너스: 5",
-     "standardDescRaw": "기본 반사: +10% · 적 당 반사: +5% · 최대 적 보너스: 5",
-     "deluxeDescRaw": "기본 반사: +15% · 적 당 반사: +8% · 최대 적 보너스: 5",
+     "standardDesc": "기본 반사: +10% · 적 당 반사: +3% · 최대 적 보너스: 5",
+     "deluxeDesc": "기본 반사: +15% · 적 당 반사: +5% · 최대 적 보너스: 5",
+     "standardDescRaw": "기본 반사: +10% · 적 당 반사: +3% · 최대 적 보너스: 5",
+     "deluxeDescRaw": "기본 반사: +15% · 적 당 반사: +5% · 최대 적 보너스: 5",
      "rawValues": [
       {
        "key": "BaseReflection",
@@ -1924,16 +1923,16 @@
       {
        "key": "ReflectionPerEnemy",
        "label": "적 당 반사",
-       "value": 0.05,
+       "value": 0.03,
        "unit": "percent",
-       "display": "+5%"
+       "display": "+3%"
       },
       {
        "key": "ReflectionPerEnemy",
        "label": "적 당 반사",
-       "value": 0.08,
+       "value": 0.05,
        "unit": "percent",
-       "display": "+8%"
+       "display": "+5%"
       },
       {
        "key": "MaxEnemyBonus",
@@ -2002,6 +2001,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.040→0.025→0.0125; 구 0.010000; 구 0.020→0.015→0.0075; 구 0.020000; 구 0.050000; 구 0.300000; 구 0.200000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": true,
    "extraSections": [],
    "icon": "icons/riot.png"
   },
@@ -2119,10 +2119,10 @@
     {
      "key": "DealWithTheDevil",
      "name": "악마와의 거래",
-     "standardDesc": "치유량이 -85% 감소하는 대신, 모든 무기의 헤드샷 피해량이 +40% 증가합니다.",
-     "deluxeDesc": "치유량이 -70% 감소하는 대신, 모든 무기의 헤드샷 피해량이 +60% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">치유량</font>이 -85% 감소하는 대신, <font color=\"#42e087\">모든 무기의 헤드샷 피해량</font>이 +40% 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">치유량</font>이 -70% 감소하는 대신, <font color=\"#42e087\">모든 무기의 헤드샷 피해량</font>이 +60% 증가합니다.",
+     "standardDesc": "치유량이 -85% 감소하는 대신, 모든 무기의 헤드샷 피해량이 +30% 증가합니다.",
+     "deluxeDesc": "치유량이 -70% 감소하는 대신, 모든 무기의 헤드샷 피해량이 +50% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">치유량</font>이 -85% 감소하는 대신, <font color=\"#42e087\">모든 무기의 헤드샷 피해량</font>이 +30% 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">치유량</font>이 -70% 감소하는 대신, <font color=\"#42e087\">모든 무기의 헤드샷 피해량</font>이 +50% 증가합니다.",
      "rawValues": [
       {
        "key": "Healing",
@@ -2141,16 +2141,16 @@
       {
        "key": "DamageHead",
        "label": "피해량 머리",
-       "value": 0.4,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+40%"
+       "display": "+30%"
       },
       {
        "key": "DamageHead",
        "label": "피해량 머리",
-       "value": 0.6,
+       "value": 0.5,
        "unit": "percent",
-       "display": "+60%"
+       "display": "+50%"
       }
      ],
      "hasKorText": true,
@@ -2165,10 +2165,10 @@
     {
      "key": "NoStringsOnMe",
      "name": "자유로운 영혼",
-     "standardDesc": "최대 체력이 40 감소하지만, ZED를 처치할 때마다 이동 속도가 +15% 증가합니다.",
-     "deluxeDesc": "최대 체력이 60 감소하지만, ZED를 처치할 때마다 이동 속도가 +30% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">+15%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">60</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
+     "standardDesc": "최대 체력이 40 감소하지만, ZED를 처치할 때마다 이동 속도가 +10% 증가합니다.",
+     "deluxeDesc": "최대 체력이 60 감소하지만, ZED를 처치할 때마다 이동 속도가 +20% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">+10%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">60</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#84d6d0\">+20%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
@@ -2187,16 +2187,16 @@
       {
        "key": "Haste",
        "label": "가속",
-       "value": 0.15,
+       "value": 0.1,
        "unit": "percent",
-       "display": "+15%"
+       "display": "+10%"
       },
       {
        "key": "Haste",
        "label": "가속",
-       "value": 0.3,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+30%"
+       "display": "+20%"
       }
      ],
      "hasKorText": true,
@@ -2211,24 +2211,24 @@
     {
      "key": "OdeToGreed",
      "name": "탐욕에 대한 송가",
-     "standardDesc": "최대 체력이 25 감소하는 대신, 각 웨이브 시작 시 250 도쉬를 획득합니다.",
-     "deluxeDesc": "최대 체력이 50 감소하는 대신, 각 웨이브 시작 시 500 도쉬를 획득합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">25</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">250 도쉬</font>를 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">50</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">500 도쉬</font>를 획득합니다.",
+     "standardDesc": "최대 체력이 50 감소하는 대신, 각 웨이브 시작 시 250 도쉬를 획득합니다.",
+     "deluxeDesc": "최대 체력이 80 감소하는 대신, 각 웨이브 시작 시 400 도쉬를 획득합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">50</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">250 도쉬</font>를 획득합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">80</font> 감소하는 대신, 각 웨이브 시작 시 <font color=\"#84d6d0\">400 도쉬</font>를 획득합니다.",
      "rawValues": [
-      {
-       "key": "Health",
-       "label": "체력",
-       "value": -0.25,
-       "unit": "percent",
-       "display": "-25%"
-      },
       {
        "key": "Health",
        "label": "체력",
        "value": -0.5,
        "unit": "percent",
        "display": "-50%"
+      },
+      {
+       "key": "Health",
+       "label": "체력",
+       "value": -0.8,
+       "unit": "percent",
+       "display": "-80%"
       },
       {
        "key": "Dosh",
@@ -2240,16 +2240,16 @@
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 500,
+       "value": 400,
        "unit": "currency",
-       "display": "500 도쉬"
+       "display": "400 도쉬"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2257,38 +2257,38 @@
     {
      "key": "PainSplit",
      "name": "통증 분할",
-     "standardDesc": "최대 체력이 5 감소하는 대신, 자신이 받는 모든 치유량이 +35% 증가합니다.",
-     "deluxeDesc": "최대 체력이 10 감소하는 대신, 자신이 받는 모든 치유량이 +50% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">+35%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">+50%</font> 증가합니다.",
+     "standardDesc": "최대 체력이 25 감소하는 대신, 자신이 받는 모든 치유량이 +25% 증가합니다.",
+     "deluxeDesc": "최대 체력이 40 감소하는 대신, 자신이 받는 모든 치유량이 +40% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">25</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">+25%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하는 대신, <font color=\"#42e087\">자신이 받는 모든 치유량</font>이 <font color=\"#84d6d0\">+40%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.05,
+       "value": -0.25,
        "unit": "percent",
-       "display": "-5%"
+       "display": "-25%"
       },
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.1,
+       "value": -0.4,
        "unit": "percent",
-       "display": "-10%"
+       "display": "-40%"
       },
       {
        "key": "Healing",
        "label": "치유",
-       "value": 0.35,
+       "value": 0.25,
        "unit": "percent",
-       "display": "+35%"
+       "display": "+25%"
       },
       {
        "key": "Healing",
        "label": "치유",
-       "value": 0.5,
+       "value": 0.4,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+40%"
       }
      ],
      "hasKorText": true,
@@ -2303,52 +2303,52 @@
     {
      "key": "PinpointAccuracy",
      "name": "핀포인트 정확도",
-     "standardDesc": "최대 체력이 10 감소하지만, 모든 무기의 반동이 +50% 감소하고 무기 흔들림이 줄어듭니다.",
-     "deluxeDesc": "체력: -25% · 반동: +75% · 흔들림: +100%",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하지만, 모든 무기의 <font color=\"#42e087\">반동</font>이 <font color=\"#84d6d0\">+50%</font> 감소하고 <font color=\"#84d6d0\">무기 흔들림</font>이 줄어듭니다.",
-     "deluxeDescRaw": "체력: -25% · 반동: +75% · 흔들림: +100%",
+     "standardDesc": "최대 체력이 20 감소하지만, 모든 무기의 반동이 +20% 감소하고 무기 흔들림이 줄어듭니다.",
+     "deluxeDesc": "최대 체력이 40 감소하지만, 모든 무기의 반동이 +40% 감소하고 무기 흔들림이 완전히 사라집니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">20</font> 감소하지만, 모든 무기의 <font color=\"#42e087\">반동</font>이 <font color=\"#84d6d0\">+20%</font> 감소하고 <font color=\"#84d6d0\">무기 흔들림</font>이 줄어듭니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하지만, 모든 무기의 <font color=\"#42e087\">반동</font>이 <font color=\"#84d6d0\">+40%</font> 감소하고 <font color=\"#84d6d0\">무기 흔들림</font>이 완전히 사라집니다.",
      "rawValues": [
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.1,
+       "value": -0.2,
        "unit": "percent",
-       "display": "-10%"
+       "display": "-20%"
       },
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.25,
+       "value": -0.4,
        "unit": "percent",
-       "display": "-25%"
+       "display": "-40%"
       },
       {
        "key": "Recoil",
        "label": "반동",
-       "value": 0.5,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+20%"
       },
       {
        "key": "Recoil",
        "label": "반동",
-       "value": 0.75,
+       "value": 0.4,
        "unit": "percent",
-       "display": "+75%"
+       "display": "+40%"
       },
       {
        "key": "Bob",
        "label": "흔들림",
-       "value": 0.5,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+20%"
       },
       {
        "key": "Bob",
        "label": "흔들림",
-       "value": 1.0,
+       "value": 0.4,
        "unit": "percent",
-       "display": "+100%"
+       "display": "+40%"
       }
      ],
      "hasKorText": true,
@@ -2363,24 +2363,24 @@
     {
      "key": "PowerTransfer",
      "name": "전력 전송",
-     "standardDesc": "최대 체력이 5 감소하지만, 소총 무기의 피해량이 +15% 증가합니다.",
-     "deluxeDesc": "최대 체력이 10 감소하지만, 소총 무기의 피해량이 +30% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">+15%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
+     "standardDesc": "최대 체력이 15 감소하지만, 소총 무기의 피해량이 +15% 증가합니다.",
+     "deluxeDesc": "최대 체력이 30 감소하지만, 소총 무기의 피해량이 +30% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">15</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">+15%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">30</font> 감소하지만, <font color=\"#42e087\">소총</font> 무기의 피해량이 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.05,
+       "value": -0.15,
        "unit": "percent",
-       "display": "-5%"
+       "display": "-15%"
       },
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.1,
+       "value": -0.3,
        "unit": "percent",
-       "display": "-10%"
+       "display": "-30%"
       },
       {
        "key": "Damage",
@@ -2441,24 +2441,24 @@
     {
      "key": "SoulStealer",
      "name": "영혼 도둑",
-     "standardDesc": "최대 체력이 30 감소하지만, ZED를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "최대 체력이 60 감소하지만, ZED를 처치할 때마다 4 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">30</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">2 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">60</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">4 도쉬</font>를 추가로 획득합니다.",
+     "standardDesc": "최대 체력이 25 감소하지만, ZED를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
+     "deluxeDesc": "최대 체력이 40 감소하지만, ZED를 처치할 때마다 3 도쉬를 추가로 획득합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">25</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">2 도쉬</font>를 추가로 획득합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하지만, ZED를 처치할 때마다 <font color=\"#84d6d0\">3 도쉬</font>를 추가로 획득합니다.",
      "rawValues": [
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.3,
+       "value": -0.25,
        "unit": "percent",
-       "display": "-30%"
+       "display": "-25%"
       },
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.6,
+       "value": -0.4,
        "unit": "percent",
-       "display": "-60%"
+       "display": "-40%"
       },
       {
        "key": "Dosh",
@@ -2470,16 +2470,16 @@
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 4,
+       "value": 3,
        "unit": "currency",
-       "display": "4 도쉬"
+       "display": "3 도쉬"
       }
      ],
      "hasKorText": true,
      "note": "체력 30%/60% 차감이 있으나 엔진 클램프(Cap_MinHealth=1)가 하한을 보장해 자멸 불가 — 적절.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2487,24 +2487,24 @@
     {
      "key": "Triskelion",
      "name": "트리스켈리온",
-     "standardDesc": "최대 체력이 5 감소하는 대신, 모든 무기의 속성(원소) 피해량이 +30% 증가합니다.",
-     "deluxeDesc": "최대 체력이 10 감소하는 대신, 모든 무기의 속성(원소) 피해량이 +60% 증가합니다.",
-     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">5</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">10</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">+60%</font> 증가합니다.",
+     "standardDesc": "최대 체력이 25 감소하는 대신, 모든 무기의 속성(원소) 피해량이 +30% 증가합니다.",
+     "deluxeDesc": "최대 체력이 40 감소하는 대신, 모든 무기의 속성(원소) 피해량이 +50% 증가합니다.",
+     "standardDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">25</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">+30%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#962ab9\">최대 체력</font>이 <font color=\"#cb1b43\">40</font> 감소하는 대신, <font color=\"#42e087\">모든 무기의 속성(원소) 피해량</font>이 <font color=\"#84d6d0\">+50%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.05,
+       "value": -0.25,
        "unit": "percent",
-       "display": "-5%"
+       "display": "-25%"
       },
       {
        "key": "Health",
        "label": "체력",
-       "value": -0.1,
+       "value": -0.4,
        "unit": "percent",
-       "display": "-10%"
+       "display": "-40%"
       },
       {
        "key": "Damage",
@@ -2516,9 +2516,9 @@
       {
        "key": "Damage",
        "label": "피해량",
-       "value": 0.6,
+       "value": 0.5,
        "unit": "percent",
-       "display": "+60%"
+       "display": "+50%"
       }
      ],
      "hasKorText": true,
@@ -2541,6 +2541,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100000; 구 0.100000; 구 0.100000",
    "testWarning": "⚠️ 참고: 이 퍼크는 의도적인 고위험-고보상 설계이며, 극단적인 빌드 조합의 영향을 계속 확인 중입니다.",
+   "balanceComplete": true,
    "extraSections": [],
    "icon": "icons/voodoo.png"
   },
@@ -2640,6 +2641,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/haunted.png"
   },
@@ -3039,6 +3041,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.030000; 구 0.030000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/specialagent.png"
   },
@@ -3619,6 +3622,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.020000; 구 0.020000; 구 0.020000; 구 0.020000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/warlord.png"
   },
@@ -4172,6 +4176,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.050000; 구 0.020000; 구 1.200000(+20%→+10%, 배율의 보너스분만 축소)",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/hydra.png"
   },
@@ -4701,6 +4706,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.400000; 구 0.300000; 구 0.600000; 구 0.500000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/agony.png"
   },
@@ -5053,6 +5059,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.400000; 구 0.100000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/maniac.png"
   },
@@ -5536,6 +5543,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.040000; 구 0.050000; 구 0.250000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/forgewarden.png"
   },
@@ -5587,6 +5595,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/detonator.png"
   },
@@ -6077,6 +6086,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.050000→0.030(이전)→0.015; 구 0.015000; 구 0.020000; 형제 스탯 대비 과도해 추가축소(2026-07-02), 구 0.500000(그 이전 구 1.000000); 구 0.100000(확률, 유지)",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/archangel.png"
   },
@@ -6619,6 +6629,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.020000; 구 0.010000; 광역피해 남발 축소(2026-07-02, 스택상한 불명이라 보수적으로 추가축소), 구 0.025000(그 이전 구 0.050000); 구 1000.000000; 구 0.200000; 형제 스탯(SwarmDamage/Movement) 대비 과도해 추가축소(2026-07-02), 구 0.250000(그 이전 구 0.500000); 구 0.150000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/hivemind.png"
   },
@@ -7307,6 +7318,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.015000; 구 0.040000; 구 0.500000; 광역피해 남발 축소(2026-07-02), 구 150.000000; 구 800.000000; 구 1.000000; 구 0.500000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/parasite.png"
   },
@@ -7929,6 +7941,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.020000; 구 0.050→0.025→0.035→0.0175; 구 0.500000; 구 0.300000; 구 0.250000; 구 100.000000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/symbiote.png"
   },
@@ -8439,6 +8452,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 구 0.100→0.025→0.0125; 구 0.500000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/pyrokinetic.png"
   },
@@ -9009,6 +9023,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.020000; 구 0.200000; 구 0.050000; 구 0.300000; 구 0.100000; 구 0.080000; 구 1.000000; 구 0.010000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/cinder.png"
   },
@@ -9502,14 +9517,524 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/headhunter.png"
+  },
+  {
+   "key": "TimeTraveler",
+   "name": "시간 여행자",
+   "parentPerk": "Gunslinger",
+   "unlockLevel": 10,
+   "hasIniConfig": true,
+   "passiveStats": [
+    {
+     "key": "Damage",
+     "label": "피해량",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Heal",
+     "label": "치유",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "KnockdownPower",
+     "label": "넉다운 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "MagSize",
+     "label": "탄창 크기",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "MeleeAttackSpeed",
+     "label": "근접 공격 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Penetration",
+     "label": "관통력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "RateOfFire",
+     "label": "연사 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Recoil",
+     "label": "반동",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "ReloadRate",
+     "label": "재장전 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "SpareAmmo",
+     "label": "여분 탄약",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "StumblePower",
+     "label": "휘청임 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "StunPower",
+     "label": "기절 위력",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Speed",
+     "label": "속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "Spread",
+     "label": "탄퍼짐",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [],
+   "role": "피해·치유·탄창·관통·재장전·이동까지 거의 모든 능력치를 골고루 끌어올려주는 <font color=\"#FFD700\">최종 건슬링거</font> 심화 퍼크입니다.",
+   "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어, 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
+   "descriptions": [
+    {
+     "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
+     "text": "무기의 모든 능력치가 레벨업당 +0.75% · 만렙(Lv20) +15% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#77d914\">+?(하드코딩·비공개)초</font> 연장됩니다.",
+     "text": "ZED 타임 지속 시간이 +?(하드코딩·비공개)초 연장됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "skills": [
+    {
+     "key": "BulletTime",
+     "name": "불릿 타임",
+     "standardDesc": "ZED 타임 동안 모든 무기의 피해량이 +30% 증가합니다.",
+     "deluxeDesc": "ZED 타임 동안 모든 무기의 피해량이 +60% 증가합니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 모든 무기의 피해량이 <font color=\"#77d914\">+30%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 모든 무기의 피해량이 <font color=\"#77d914\">+60%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해량",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HighNoon",
+     "name": "정오",
+     "standardDesc": "ZED 타임 동안 재장전 속도가 +50% 증가합니다.",
+     "deluxeDesc": "ZED 타임 동안 재장전 속도가 +100% 증가합니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">+50%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">+100%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "Mod",
+       "label": "배율",
+       "value": 0.5,
+       "unit": "multiplier",
+       "display": "×0.5"
+      },
+      {
+       "key": "Mod",
+       "label": "배율",
+       "value": 1.0,
+       "unit": "multiplier",
+       "display": "×1"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Minuteman",
+     "name": "미니트맨",
+     "standardDesc": "적의 체력 바를 볼 수 있으며, 체력이 35% 미만인 ZED에게 35%의 추가 피해를 줍니다.",
+     "deluxeDesc": "적의 체력 바를 볼 수 있으며, 체력이 35% 미만인 ZED에게 70%의 추가 피해를 줍니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">적의 체력 바</font>를 볼 수 있으며, 체력이 35% 미만인 ZED에게 <font color=\"#77d914\">35%</font>의 추가 피해를 줍니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">적의 체력 바</font>를 볼 수 있으며, 체력이 35% 미만인 ZED에게 <font color=\"#77d914\">70%</font>의 추가 피해를 줍니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Pandemic",
+     "name": "팬데믹",
+     "standardDesc": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +20%",
+     "deluxeDesc": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +50%",
+     "standardDescRaw": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +20%",
+     "deluxeDescRaw": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +50%",
+     "rawValues": [
+      {
+       "key": "PandemicProbability",
+       "label": "전염병 확률",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "PandemicDamageCap",
+       "label": "전염병 피해량 상한",
+       "value": 50.0,
+       "unit": "count",
+       "display": "50"
+      },
+      {
+       "key": "DamageFactor",
+       "label": "피해량 계수",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "DamageFactor",
+       "label": "피해량 계수",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Shifter",
+     "name": "시프터",
+     "standardDesc": "ZED 타임을 10회 추가로 연장할 수 있습니다.",
+     "deluxeDesc": "ZED 타임을 20회 추가로 연장할 수 있습니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>을 <font color=\"#77d914\">10회</font> 추가로 연장할 수 있습니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>을 <font color=\"#77d914\">20회</font> 추가로 연장할 수 있습니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "TemporalFracture",
+     "name": "시간적 골절",
+     "standardDesc": "ZED 타임 동안 이동 속도가 25% 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
+     "deluxeDesc": "ZED 타임 동안 이동 속도가 50% 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">이동 속도가 25%</font> 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">이동 속도가 50%</font> 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "TimeHealsAllWounds",
+     "name": "시간은 모든 상처를 치유한다",
+     "standardDesc": "의료용 주사기의 치유량과 재충전 속도가 최대 체력의 +30%만큼 비례하여 증가합니다.",
+     "deluxeDesc": "의료용 주사기의 치유량과 재충전 속도가 최대 체력의 +60%만큼 비례하여 증가합니다.",
+     "standardDescRaw": "의료용 주사기의 <font color=\"#15d7fa\">치유량</font>과 <font color=\"#15d7fa\">재충전 속도</font>가 최대 체력의 <font color=\"#77d914\">+30%</font>만큼 비례하여 증가합니다.",
+     "deluxeDescRaw": "의료용 주사기의 <font color=\"#15d7fa\">치유량</font>과 <font color=\"#15d7fa\">재충전 속도</font>가 최대 체력의 <font color=\"#77d914\">+60%</font>만큼 비례하여 증가합니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "보너스",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Bonus",
+       "label": "보너스",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "TimeSpiral",
+     "name": "시간 나선",
+     "standardDesc": "연사 속도: +10% · 특수 속도: +40%",
+     "deluxeDesc": "연사 속도: +20% · 특수 속도: +40%",
+     "standardDescRaw": "연사 속도: +10% · 특수 속도: +40%",
+     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +40%",
+     "rawValues": [
+      {
+       "key": "FireRate",
+       "label": "연사 속도",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "FireRate",
+       "label": "연사 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "SpecialRate",
+       "label": "특수 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "SpecialRate",
+       "label": "특수 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Timeburst",
+     "name": "타임버스트",
+     "standardDesc": "ZED 타임이 시작될 때 10m 반경 내의 모든 ZED를 넘어뜨립니다.",
+     "deluxeDesc": "ZED 타임이 시작될 때 20m 반경 내의 모든 ZED를 넘어뜨립니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>이 시작될 때 <font color=\"#77d914\">10m</font> 반경 내의 모든 ZED를 넘어뜨립니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>이 시작될 때 <font color=\"#77d914\">20m</font> 반경 내의 모든 ZED를 넘어뜨립니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": true,
+     "disabledNote": "2026-07-03 제거. 광역 스턴",
+     "noData": false
+    },
+    {
+     "key": "Timewalk",
+     "name": "타임워크",
+     "standardDesc": "연사 속도: +10% · 특수 속도: +25%",
+     "deluxeDesc": "연사 속도: +20% · 특수 속도: +50%",
+     "standardDescRaw": "연사 속도: +10% · 특수 속도: +25%",
+     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +50%",
+     "rawValues": [
+      {
+       "key": "FireRate",
+       "label": "연사 속도",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "FireRate",
+       "label": "연사 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "SpecialRate",
+       "label": "특수 속도",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "SpecialRate",
+       "label": "특수 속도",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
+   "verdict": {
+    "tag": "적절 (상향 완료)",
+    "note": "유지 판정이자 최종 심화 퍼크(Lv20) 상향 대상 중 하나 — 전 속성 상향 조정되었으나, 이후 전체 밸런스 재조정으로 현재 Lv20 기준 +15%.",
+    "grade": "A"
+   },
+   "grade": "A",
+   "isPatched": true,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010→0.015→0.0075 (14속성 전부 동일)",
+   "testWarning": "⚠️ 주의! 이 퍼크는 최근 약함(Trash) 우려로 인해 일부 수치가 상향 조정되어 테스트 중입니다.",
+   "balanceComplete": true,
+   "extraSections": [],
+   "icon": "icons/timetraveler.png"
   },
   {
    "key": "Gambit",
    "name": "갬빗",
    "parentPerk": "Gunslinger",
-   "unlockLevel": 10,
+   "unlockLevel": 15,
    "hasIniConfig": false,
    "passiveStats": [],
    "fixedStats": [],
@@ -9727,13 +10252,14 @@
    "skillCount": 10,
    "verdict": {
     "tag": "OP 소지",
-    "note": "웨이브마다 챌린지 성공 시 영구 스탯이 무한 누적되고 승수 스킬(×2~×3)까지 중첩 가능. 보상값이 순수 하드코딩이라 조정 불가 — 장기전(엔들리스)에서 위험.",
-    "grade": "A"
+    "note": "웨이브당 1회로 축적 속도는 제한되지만(실패해도 다음 웨이브로 넘어갈 뿐 하방 리스크는 낮음), 성장 자체에는 상한이 없고 승수 스킬(×2~×3)까지 중첩 가능. 보상값이 순수 하드코딩이라 조정 불가 — 장기전(엔들리스)에서 위험.",
+    "grade": "S"
    },
-   "grade": "A",
+   "grade": "S",
    "isPatched": false,
    "patchNote": null,
    "testWarning": "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다.",
+   "balanceComplete": false,
    "extraSections": [
     {
      "title": "갬빗 시스템 규칙",
@@ -9752,7 +10278,7 @@
    "key": "Reaper",
    "name": "사신",
    "parentPerk": "Gunslinger",
-   "unlockLevel": 15,
+   "unlockLevel": 20,
    "hasIniConfig": true,
    "passiveStats": [
     {
@@ -10251,522 +10777,15 @@
    "verdict": {
     "tag": "적절",
     "note": "즉사 확률 5%는 하드코딩(대형 ZED 포함, 진짜 보스만 제외). Level10DamageBonus는 기존에 이미 너프 반영되었고, 최근 전체 조정으로 현재 Lv20 기준 +12.5%.",
-    "grade": "S"
+    "grade": "SS"
    },
-   "grade": "S",
+   "grade": "SS",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030→0.020→0.010; 구 0.020000; 구 0.250000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/reaper.png"
-  },
-  {
-   "key": "TimeTraveler",
-   "name": "시간 여행자",
-   "parentPerk": "Gunslinger",
-   "unlockLevel": 20,
-   "hasIniConfig": true,
-   "passiveStats": [
-    {
-     "key": "Damage",
-     "label": "피해량",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "Heal",
-     "label": "치유",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "KnockdownPower",
-     "label": "넉다운 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "MagSize",
-     "label": "탄창 크기",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "MeleeAttackSpeed",
-     "label": "근접 공격 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "Penetration",
-     "label": "관통력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "RateOfFire",
-     "label": "연사 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "Recoil",
-     "label": "반동",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "ReloadRate",
-     "label": "재장전 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "SpareAmmo",
-     "label": "여분 탄약",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "StumblePower",
-     "label": "휘청임 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "StunPower",
-     "label": "기절 위력",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "Speed",
-     "label": "속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "Spread",
-     "label": "탄퍼짐",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [],
-   "role": "피해·치유·탄창·관통·재장전·이동까지 거의 모든 능력치를 골고루 끌어올려주는 <font color=\"#FFD700\">최종 건슬링거</font> 심화 퍼크입니다.",
-   "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어, 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
-   "descriptions": [
-    {
-     "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
-     "text": "무기의 모든 능력치가 레벨업당 +0.75% · 만렙(Lv20) +15% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#77d914\">+?(하드코딩·비공개)초</font> 연장됩니다.",
-     "text": "ZED 타임 지속 시간이 +?(하드코딩·비공개)초 연장됩니다.",
-     "isCapstone": false
-    }
-   ],
-   "skills": [
-    {
-     "key": "BulletTime",
-     "name": "불릿 타임",
-     "standardDesc": "ZED 타임 동안 모든 무기의 피해량이 +40% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 모든 무기의 피해량이 +80% 증가합니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 모든 무기의 피해량이 <font color=\"#77d914\">+40%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 모든 무기의 피해량이 <font color=\"#77d914\">+80%</font> 증가합니다.",
-     "rawValues": [
-      {
-       "key": "Damage",
-       "label": "피해량",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "Damage",
-       "label": "피해량",
-       "value": 0.8,
-       "unit": "percent",
-       "display": "+80%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "HighNoon",
-     "name": "정오",
-     "standardDesc": "ZED 타임 동안 재장전 속도가 +150% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 재장전 속도가 +300% 증가합니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">+150%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 재장전 속도가 <font color=\"#77d914\">+300%</font> 증가합니다.",
-     "rawValues": [
-      {
-       "key": "Mod",
-       "label": "배율",
-       "value": 1.5,
-       "unit": "multiplier",
-       "display": "×1.5"
-      },
-      {
-       "key": "Mod",
-       "label": "배율",
-       "value": 3.0,
-       "unit": "multiplier",
-       "display": "×3"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Minuteman",
-     "name": "미니트맨",
-     "standardDesc": "적의 체력 바를 볼 수 있으며, 체력이 35% 미만인 ZED에게 35%의 추가 피해를 줍니다.",
-     "deluxeDesc": "적의 체력 바를 볼 수 있으며, 체력이 35% 미만인 ZED에게 70%의 추가 피해를 줍니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">적의 체력 바</font>를 볼 수 있으며, 체력이 35% 미만인 ZED에게 <font color=\"#77d914\">35%</font>의 추가 피해를 줍니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">적의 체력 바</font>를 볼 수 있으며, 체력이 35% 미만인 ZED에게 <font color=\"#77d914\">70%</font>의 추가 피해를 줍니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Pandemic",
-     "name": "팬데믹",
-     "standardDesc": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +20%",
-     "deluxeDesc": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +50%",
-     "standardDescRaw": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +20%",
-     "deluxeDescRaw": "전염병 확률: +100% · 전염병 피해량 상한: 75 · 피해량 계수: +50%",
-     "rawValues": [
-      {
-       "key": "PandemicProbability",
-       "label": "전염병 확률",
-       "value": 1.0,
-       "unit": "percent",
-       "display": "+100%"
-      },
-      {
-       "key": "PandemicDamageCap",
-       "label": "전염병 피해량 상한",
-       "value": 75.0,
-       "unit": "count",
-       "display": "75"
-      },
-      {
-       "key": "DamageFactor",
-       "label": "피해량 계수",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "DamageFactor",
-       "label": "피해량 계수",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Shifter",
-     "name": "시프터",
-     "standardDesc": "ZED 타임을 10회 추가로 연장할 수 있습니다.",
-     "deluxeDesc": "ZED 타임을 20회 추가로 연장할 수 있습니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>을 <font color=\"#77d914\">10회</font> 추가로 연장할 수 있습니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>을 <font color=\"#77d914\">20회</font> 추가로 연장할 수 있습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "TemporalFracture",
-     "name": "시간적 골절",
-     "standardDesc": "ZED 타임 동안 이동 속도가 25% 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
-     "deluxeDesc": "ZED 타임 동안 이동 속도가 50% 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">이동 속도가 25%</font> 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">이동 속도가 50%</font> 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "TimeHealsAllWounds",
-     "name": "시간은 모든 상처를 치유한다",
-     "standardDesc": "의료용 주사기의 치유량과 재충전 속도가 최대 체력의 +30%만큼 비례하여 증가합니다.",
-     "deluxeDesc": "의료용 주사기의 치유량과 재충전 속도가 최대 체력의 +60%만큼 비례하여 증가합니다.",
-     "standardDescRaw": "의료용 주사기의 <font color=\"#15d7fa\">치유량</font>과 <font color=\"#15d7fa\">재충전 속도</font>가 최대 체력의 <font color=\"#77d914\">+30%</font>만큼 비례하여 증가합니다.",
-     "deluxeDescRaw": "의료용 주사기의 <font color=\"#15d7fa\">치유량</font>과 <font color=\"#15d7fa\">재충전 속도</font>가 최대 체력의 <font color=\"#77d914\">+60%</font>만큼 비례하여 증가합니다.",
-     "rawValues": [
-      {
-       "key": "Bonus",
-       "label": "보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "Bonus",
-       "label": "보너스",
-       "value": 0.6,
-       "unit": "percent",
-       "display": "+60%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "TimeSpiral",
-     "name": "시간 나선",
-     "standardDesc": "연사 속도: +10% · 특수 속도: +40%",
-     "deluxeDesc": "연사 속도: +20% · 특수 속도: +80%",
-     "standardDescRaw": "연사 속도: +10% · 특수 속도: +40%",
-     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +80%",
-     "rawValues": [
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 0.8,
-       "unit": "percent",
-       "display": "+80%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Timeburst",
-     "name": "타임버스트",
-     "standardDesc": "ZED 타임이 시작될 때 10m 반경 내의 모든 ZED를 넘어뜨립니다.",
-     "deluxeDesc": "ZED 타임이 시작될 때 20m 반경 내의 모든 ZED를 넘어뜨립니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>이 시작될 때 <font color=\"#77d914\">10m</font> 반경 내의 모든 ZED를 넘어뜨립니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>이 시작될 때 <font color=\"#77d914\">20m</font> 반경 내의 모든 ZED를 넘어뜨립니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Timewalk",
-     "name": "타임워크",
-     "standardDesc": "연사 속도: +10% · 특수 속도: +50%",
-     "deluxeDesc": "연사 속도: +20% · 특수 속도: +100%",
-     "standardDescRaw": "연사 속도: +10% · 특수 속도: +50%",
-     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +100%",
-     "rawValues": [
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 1.0,
-       "unit": "percent",
-       "display": "+100%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    }
-   ],
-   "skillCount": 10,
-   "verdict": {
-    "tag": "적절 (상향 완료)",
-    "note": "유지 판정이자 최종 심화 퍼크(Lv20) 상향 대상 중 하나 — 전 속성 상향 조정되었으나, 이후 전체 밸런스 재조정으로 현재 Lv20 기준 +15%.",
-    "grade": "A"
-   },
-   "grade": "A",
-   "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010→0.015→0.0075 (14속성 전부 동일)",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 약함(Trash) 우려로 인해 일부 수치가 상향 조정되어 테스트 중입니다.",
-   "extraSections": [],
-   "icon": "icons/timetraveler.png"
   },
   {
    "key": "Scavenger",
@@ -11295,6 +11314,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.020000; 구 0.010000; 구 0.350→0.250→0.125",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/scavenger.png"
   },
@@ -11800,6 +11820,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030→0.015→0.0075 (14속성 전부 동일)",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/taskmaster.png"
   },
@@ -12280,6 +12301,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 구 0.250000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/frost.png"
   },
@@ -12771,6 +12793,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000; 구 0.030→0.020→0.025→0.0125; 구 0.030000; 구 5.0→3.0→4.0→2.0",
    "testWarning": "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/cryophilite.png"
   },
@@ -13168,6 +13191,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000; 구 0.015000; 구 0.200→0.050→0.025",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/daredevil.png"
   },
@@ -13689,6 +13713,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.060→0.035→0.0175; 구 0.020→0.015→0.0075; 구 0.050→0.030→0.015; 구 1.000000; 구 0.700000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/wendigo.png"
   },
@@ -13883,6 +13908,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020→0.015→0.0075; 구 0.015000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/hollow.png"
   },
@@ -13892,22 +13918,21 @@
    "parentPerk": "Sharpshooter",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "좀비를 처치해 모은 트로피 세트로 영구 보너스를 겹겹이 쌓아 무한히 강해지게 만들어주는 <font color=\"#FFD700\">컬렉션형 최종 샤프슈터</font> 심화 퍼크입니다.",
    "endgame": "3세트를 완성하면 트로피가 <font color=\"#15d7fa\">5개 슬롯에 무한 중첩</font>되는 완전 하드코딩 시스템이라, 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있는 전체 최고 위험 퍼크입니다. 반드시 인지하고 사용해야 합니다.",
    "descriptions": [
@@ -14317,6 +14342,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000",
    "testWarning": "🚨 경고! 이 퍼크는 밸런스 문제가 확정된 상태이며, 근본적인 수정 전까지는 매우 강력하게 작동할 수 있습니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/predator.png"
   },
@@ -14990,6 +15016,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.010000; 구 0.010000; 구 0.005000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/artificer.png"
   },
@@ -15498,6 +15525,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/gambler.png"
   },
@@ -15507,20 +15535,18 @@
    "parentPerk": "Support",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "AssaultDamage",
      "label": "돌격 피해량",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "AssaultPenetration",
@@ -15528,12 +15554,11 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
     },
     {
      "key": "TempoReload",
@@ -15541,12 +15566,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "TempoRateOfFire",
@@ -15554,12 +15578,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "MomentumSpeed",
@@ -15567,12 +15590,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "MomentumWeaponSwitch",
@@ -15580,12 +15602,11 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "BastionDamage",
@@ -15593,13 +15614,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "BastionVampireHP",
      "label": "요새 흡혈 체력",
@@ -15708,6 +15730,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.050→0.025→0.0125; 구 0.020000; 구 0.020000; 구 0.015000; 구 0.030000; 구 0.040→0.020→0.010; 구 0.010→0.005→0.0025",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/metronome.png"
   },
@@ -16125,6 +16148,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/shapeshifter.png"
   },
@@ -16534,6 +16558,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 구 0.100→0.025→0.0125; 구 0.500000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/venomancer.png"
   },
@@ -17294,6 +17319,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030→0.020→0.010; 구 0.020000; 구 0.030000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/medusa.png"
   },
@@ -17795,6 +17821,7 @@
    "isPatched": true,
    "patchNote": "구 0.200000 (복리 20%→10%, KOR 기술값 일치)",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/tycoon.png"
   },
@@ -17888,6 +17915,7 @@
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.010000; 구 0.020000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/omen.png"
   }

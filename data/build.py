@@ -696,6 +696,36 @@ TERMINOLOGY_FIXES = [
 ]
 
 
+# Perks whose KOR text uses NO '%x%' templating anywhere, so
+# compute_placeholder_groups() finds zero placeholders and (without this
+# override) would dump every ini field into "fixed effects" -- including
+# fields that are genuinely per-level (Riot's *PerLevel fields; Metronome's
+# and Predator's "레벨당"/"등급당" wording). Value = how many of the perk's
+# LEADING ini fields (in file order) are real per-level scaling stats;
+# verified per perk against its own KOR sentences, not guessed:
+#   Riot: MeleeDamagePerLevel/DamageResistancePerLevel/AttackSpeedPerLevel
+#     grow with level ("레벨당ㅁ..."); DamagePerNearbyEnemy/ResistancePerNearbyEnemy
+#     scale with a *stack count* (nearby enemies), not perk level, so they
+#     stay in "fixed effects" alongside the genuinely constant thresholds.
+#   Metronome: each of the 4 phase lines states "레벨당" for its first stat
+#     (AssaultDamage, TempoReload, MomentumSpeed, BastionDamage) and, where
+#     present, a second stat in the same clause (AssaultPenetration,
+#     TempoRateOfFire, MomentumWeaponSwitch) -- BASTION's "피해 저항 15%" has
+#     no backing ini field at all, so its group stops at BastionDamage alone.
+#   Predator: "등급당 모든 피해량" -- its one and only ini field (Damage) is
+#     per-level; there's nothing left to be "fixed effects" for this perk.
+IMPLICIT_SCALING_COUNTS = {
+    "Riot": 3,
+    "Metronome": 7,
+    "Predator": 1,
+}
+
+# Advanced perks manually verified end-to-end against the current ini (every
+# number, every skill) -- shown with a "밸런싱 완료" badge instead of the
+# generic in-flux test warning. Hand-maintained list, not inferred.
+BALANCE_COMPLETE_PERKS = {"TimeTraveler", "Bulwark", "Riot", "Voodoo"}
+
+
 def normalize_terminology(value):
     if isinstance(value, str):
         for old, new in TERMINOLOGY_FIXES:
@@ -708,7 +738,7 @@ def normalize_terminology(value):
     return value
 
 
-def compute_placeholder_groups(passive_stats, raw_descriptions):
+def compute_placeholder_groups(passive_stats, raw_descriptions, implicit_scaling_count=0):
     """A perk's DKUpgrade_Perk_X ini section isn't uniformly a set of
     per-level-scaling passives -- the KOR text only ever treats some ini
     fields as growing with perk level, one group per leading (non-capstone)
@@ -748,6 +778,21 @@ def compute_placeholder_groups(passive_stats, raw_descriptions):
     equal-value fields; coincidental collisions observed in this data are
     always runs of exactly 2 -- so additionally require the equal-value run
     to be 3+ fields long before folding.
+
+    A handful of perks (Riot, Predator, Metronome) never use '%x%'
+    templating AT ALL -- every number in their KOR text is hardcoded
+    directly in the prose, including ones the mod's own field names or
+    "레벨당"/"등급당" (per level/per rank) wording confirm ARE meant to grow
+    with perk level (Riot: MeleeDamagePerLevel/DamageResistancePerLevel/
+    AttackSpeedPerLevel -- the "PerLevel" suffix says it outright). With
+    zero placeholders found, every single one of these perks' fields was
+    falling through to the "fixed" bucket below: the level slider
+    disappeared entirely, and the per-level RATE got displayed in the
+    "고정 효과" table as if it were a game-long constant instead of a
+    value that's meant to reach 20x that at Lv20. IMPLICIT_SCALING_COUNTS
+    (checked by the caller) gives the leading field count that's genuinely
+    per-level for these specific hardcoded-only perks, verified field by
+    field against each one's own KOR sentence.
     """
     groups = []
     i, n = 0, len(passive_stats)
@@ -778,6 +823,13 @@ def compute_placeholder_groups(passive_stats, raw_descriptions):
                         group.append(passive_stats[i])
                         i += 1
             groups.append(group)
+
+    if not groups and implicit_scaling_count:
+        for _ in range(min(implicit_scaling_count, n)):
+            stat = passive_stats[i]
+            stat["scaling"] = True
+            groups.append([stat])
+            i += 1
 
     fixed = []
     for stat in passive_stats[i:]:
@@ -878,7 +930,8 @@ def build():
                      for (k, v), sign in zip(filtered_kv, signs)]
         passive_stats = build_stat_entries(signed_kv, with_levels=True)
         passive_stats = reorder_placeholder_targets(passive_stats, raw_descs)
-        placeholder_groups, fixed_stats = compute_placeholder_groups(passive_stats, raw_descs)
+        placeholder_groups, fixed_stats = compute_placeholder_groups(
+            passive_stats, raw_descs, IMPLICIT_SCALING_COUNTS.get(key, 0))
         filled_descriptions = fill_percent_placeholders(raw_descs, placeholder_groups)
         scaling_stats = [stat for group in placeholder_groups for stat in group]
         filled_descriptions = reconcile_perk_descriptions(raw_descs, filled_descriptions, fixed_stats, placeholder_groups)
@@ -989,6 +1042,7 @@ def build():
             "isPatched": is_patched,
             "patchNote": perk_patch_note or None,
             "testWarning": build_test_warning(verdict, is_patched),
+            "balanceComplete": key in BALANCE_COMPLETE_PERKS,
             "extraSections": perk_extras.get("extraSections", []),
             "icon": f"icons/{key.lower()}.png",
         })

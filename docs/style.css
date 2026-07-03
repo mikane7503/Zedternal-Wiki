@@ -155,15 +155,18 @@ body {
   color: var(--orange);
   margin-bottom: 10px;
 }
-.patch-badge {
-  display: inline-block;
-  font-size: 10px;
-  color: var(--orange);
-  border: 1px solid rgba(255,153,51,0.4);
-  background: rgba(255,153,51,0.12);
-  border-radius: 999px;
-  padding: 1px 7px;
-  margin-left: 6px;
+.balance-complete-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,215,0,0.12);
+  border: 1px solid rgba(255,215,0,0.45);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 10px;
 }
 
 .meta-bar {

@@ -327,13 +327,15 @@ function renderAdvDetail(key) {
   const descNote = p.descriptions.length
     ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 전직 레벨 20(만렙) 기준입니다.</div>' : "";
 
-  const perkPatchWarning = p.testWarning ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "";
+  const perkPatchWarning = p.balanceComplete
+    ? '<div class="balance-complete-badge">✅ 밸런싱 완료 퍼크</div>'
+    : (p.testWarning ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "");
 
   const hasPassive = p.passiveStats.length > 0;
 
   const skillsHtml = p.skills.map(s => `
     <div class="skill-item ${s.disabled ? "skill-disabled" : ""}">
-      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}${s.textFixed ? '<span class="patch-badge">값 보정됨</span>' : ""}</h4>
+      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
       ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
       ${s.noData ? `<div class="empty-state" style="padding:10px">설명 데이터 없음 (하드코딩 시스템 — ini/지역화 파일에 수치나 문구가 전혀 없어 정확한 설명을 제공할 수 없습니다)</div>` : ""}
       ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
