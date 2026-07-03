@@ -4,9 +4,9 @@
    "key": "Berserker",
    "name": "버서커",
    "grade": "A",
-   "summary": "근접 탱커/딜러로 강점이 뚜렷하고 전반적으로 균형 잡힘. 스킬 2개(Brawler/Spartan)만 극단적.",
+   "summary": "근접 탱커/딜러로 강점이 뚜렷하고 전반적으로 균형 잡힘.",
    "role": "근접 무기 피해량과 최대 체력을 동시에 크게 끌어올려주는 <font color=\"#FFD700\">근접 탱커/딜러</font> 퍼크입니다. 적진 한복판에 뛰어들어도 버틸 수 있는 맷집까지 함께 부여합니다.",
-   "endgame": "Lv20에 모든 스킬을 디럭스로 채우면 근접 피해 +50%, <font color=\"#15d7fa\">최대 체력</font> +60%까지 확보되어 어지간해서는 죽지 않고 버티며 근접 화력만으로 웨이브를 정리할 수 있는 수준에 도달합니다. 다만 Brawler와 Spartan 스킬의 극단적인 성능 편차 때문에 안정적인 빌드 구성에는 주의가 필요합니다.",
+   "endgame": "Lv20에 모든 스킬을 디럭스로 채우면 근접 피해 +50%, <font color=\"#15d7fa\">최대 체력</font> +60%까지 확보되어 어지간해서는 죽지 않고 버티며 근접 화력만으로 웨이브를 정리할 수 있는 수준에 도달합니다.",
    "passiveStats": [
     {
      "key": "Cfg_Damage",
@@ -2432,8 +2432,8 @@
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
+     "disabled": true,
+     "disabledNote": "2026-07-02 제거: 대형ZED 처치마다 MaxHealth 영구누적(정수타입이라 소숫점 축소 불가, 워치독으로 리셋방지까지 하는 구조라 완전 제거가 유일한 해법",
      "noData": false
     },
     {
@@ -3714,8 +3714,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "연사 속도와 관통력을 크게 늘려주고, 조건을 채우면 화력이 3배로 폭발하는 분노 모드까지 부여하는 <font color=\"#FFD700\">기관총 특화</font> 퍼크입니다.",
-   "endgame": "Lv15 분노 모드 캡스톤(75킬마다 발동, <font color=\"#15d7fa\">연사+100%/피해 3배</font> 폭발)까지 채우면 짧은 시간 동안 압도적인 화력 폭발을 낼 수 있는 버스트형 극딜러가 됩니다.",
+   "role": "연사 속도와 관통력을 크게 늘려주고, 조건을 채우면 화력이 3배 이상으로 폭발하는 분노 모드까지 부여하는 <font color=\"#FFD700\">기관총 특화</font> 퍼크입니다.",
+   "endgame": "Lv20 분노 모드 캡스톤(75킬마다 발동, <font color=\"#15d7fa\">연사+100%/피해 3.3배</font> 폭발)까지 채우면 짧은 시간 동안 압도적인 화력 폭발을 낼 수 있는 버스트형 극딜러가 됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#FF6600\">하이드라의 분노:</font> <font color=\"#FF9933\">연사 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -4052,10 +4052,10 @@
     {
      "key": "ReflectedFury",
      "name": "반사된 분노",
-     "standardDesc": "피격 시, 받은 피해의 +50%만큼을 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 10초.",
-     "deluxeDesc": "피격 시, 받은 피해의 +100%를 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 10초.",
-     "standardDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">+50%</font>만큼을 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">10초</font>.",
-     "deluxeDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">+100%</font>를 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">10초</font>.",
+     "standardDesc": "피격 시, 받은 피해의 +50%만큼을 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 30초.",
+     "deluxeDesc": "피격 시, 받은 피해의 +100%를 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 30초.",
+     "standardDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">+50%</font>만큼을 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">30초</font>.",
+     "deluxeDescRaw": "피격 시, 받은 피해의 <font color=\"#ffff00\">+100%</font>를 반경 <font color=\"#ffff00\">4미터</font> 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: <font color=\"#aaaaaa\">30초</font>.",
      "rawValues": [
       {
        "key": "DamageReflectMult",
@@ -4074,9 +4074,9 @@
       {
        "key": "Cooldown",
        "label": "재사용 대기시간",
-       "value": 10.0,
+       "value": 30.0,
        "unit": "seconds",
-       "display": "10초"
+       "display": "30초"
       },
       {
        "key": "ExplosionRadius",
@@ -4088,8 +4088,8 @@
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "유저 지정값 너프(2026-07-02), 구 10.000000",
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
@@ -5345,17 +5345,17 @@
     {
      "key": "InfernoRounds",
      "name": "인페르노 라운드",
-     "standardDesc": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
-     "deluxeDesc": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
-     "standardDescRaw": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
-     "deluxeDescRaw": "지옥불 확률: +100% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
+     "standardDesc": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
+     "deluxeDesc": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
+     "standardDescRaw": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
+     "deluxeDescRaw": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
      "rawValues": [
       {
        "key": "InfernoProbability",
        "label": "지옥불 확률",
-       "value": 1.0,
+       "value": 0.5,
        "unit": "percent",
-       "display": "+100%"
+       "display": "+50%"
       },
       {
        "key": "InfernoDamageCap",
@@ -5381,8 +5381,8 @@
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "확률 너프(2026-07-02), 구 1.000000(100%확정발동이었음)",
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
@@ -5538,7 +5538,7 @@
    "passiveStats": [],
    "fixedStats": [],
    "role": "처치할 때마다 카운터를 쌓아, 임계치에 도달하면 일정 시간 동안 처치하는 적을 전부 <font color=\"#FFD700\">연쇄 폭발</font>시켜주는 강력한 트리거형 퍼크입니다.",
-   "endgame": "패시브 2종(<font color=\"#15d7fa\">피해/여분탄약 성장치</font>)은 레벨에 관계없이 고정된 수치로 적용됩니다.",
+   "endgame": "패시브 2종(<font color=\"#15d7fa\">피해/여분탄약 성장치</font>)은 레벨당 성장하지만, 수치가 게임 내부에 하드코딩되어 있어 정확한 값은 공개되어 있지 않습니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">모든 무기 피해량</font> <font color=\"#FFFFFF\">+?(하드코딩·비공개)</font>",
@@ -8591,7 +8591,7 @@
     }
    ],
    "role": "불타는 적이 많아질수록 화염 피해가 계속 불어나고, 죽음도 회피시켜주는 <font color=\"#FFD700\">스노우볼형 화염 딜러</font>입니다.",
-   "endgame": "Lv20 피닉스 프로토콜 캡스톤(웨이브당 1회 죽음 회피+<font color=\"#15d7fa\">10초 무적</font>)까지 채우면 생존력까지 갖춘 최상급 화염 딜러가 완성됩니다. 레벨당 화염 피해가 착실히 증가해 Lv20 기준 화염 피해 +30%에 도달합니다.",
+   "endgame": "Lv20 피닉스 프로토콜 캡스톤(웨이브당 1회 죽음 회피+<font color=\"#15d7fa\">10초 동안 받는 피해 50% 감소</font>)까지 채우면 생존력까지 갖춘 최상급 화염 딜러가 완성됩니다. 레벨당 화염 피해가 착실히 증가해 Lv20 기준 화염 피해 +30%에 도달합니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#FF6400\">화염 폭발:</font> <font color=\"#FF8C32\">화염 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -11256,8 +11256,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "피해·치유·탄창·관통·재장전 등 8가지 능력치를 동시에 골고루 끌어올려주는 <font color=\"#FFD700\">만능형 SWAT</font> 전직입니다.",
-   "endgame": "레벨당 <font color=\"#15d7fa\">8개 속성</font>이 동시에 성장해(Lv20 기준 각 +15%), 어떤 무기·상황에도 대응 가능한 올라운더형 빌드가 완성됩니다.",
+   "role": "피해·치유·탄창·관통·재장전 등 14가지 무기 능력치를 동시에 골고루 끌어올려주는 <font color=\"#FFD700\">만능형 SWAT</font> 전직입니다.",
+   "endgame": "레벨당 <font color=\"#15d7fa\">14개 속성</font>이 동시에 성장해(Lv20 기준 각 +15%), 어떤 무기·상황에도 대응 가능한 올라운더형 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
@@ -13687,8 +13687,8 @@
    "endgame": "3세트를 완성하면 트로피가 <font color=\"#15d7fa\">5개 슬롯에 무한 중첩</font>되는 완전 하드코딩 시스템이라, 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있는 전체 최고 위험 퍼크입니다. 반드시 인지하고 사용해야 합니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#CC8800\">사냥꾼의 본능:</font> 등급당 <font color=\"#FF6666\">모든 피해량</font> <font color=\"#FFFFFF\">+0.75%%</font>",
-     "text": "사냥꾼의 본능: 등급당 모든 피해량 +0.75%%",
+     "raw": "<font color=\"#CC8800\">사냥꾼의 본능:</font> 등급당 <font color=\"#FF6666\">모든 피해량</font> <font color=\"#FFFFFF\">+0.75%</font>",
+     "text": "사냥꾼의 본능: 등급당 모든 피해량 +0.75%",
      "isCapstone": false
     },
     {
@@ -13697,28 +13697,28 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#87CEEB\">티어 1 (2세트):</font> <font color=\"#FFD700\">스웜 브레이커</font> (클롯+크롤러: <font color=\"#FFFFFF\">이동 속도 +15%%</font>) / <font color=\"#FFD700\">블레이드 컬렉터</font> (고어패스트+스토커: <font color=\"#FFFFFF\">근접 공격력 +30%%</font>) / <font color=\"#FFD700\">프릭 쇼</font> (사이렌+허스크: <font color=\"#FFFFFF\">피해 저항 +25%%</font>) / <font color=\"#FFD700\">샐비지 런</font> (EDAR+블로트: <font color=\"#FFFFFF\">재장전 속도 +25%%</font>) / <font color=\"#FFD700\">대형 게임</font> (스크레이크+FP: <font color=\"#FFFFFF\">대형 좀비 피해량 +25%%</font>)",
-     "text": "티어 1 (2세트): 스웜 브레이커 (클롯+크롤러: 이동 속도 +15%%) / 블레이드 컬렉터 (고어패스트+스토커: 근접 공격력 +30%%) / 프릭 쇼 (사이렌+허스크: 피해 저항 +25%%) / 샐비지 런 (EDAR+블로트: 재장전 속도 +25%%) / 대형 게임 (스크레이크+FP: 대형 좀비 피해량 +25%%)",
+     "raw": "<font color=\"#87CEEB\">티어 1 (2세트):</font> <font color=\"#FFD700\">스웜 브레이커</font> (클롯+크롤러: <font color=\"#FFFFFF\">이동 속도 +15%</font>) / <font color=\"#FFD700\">블레이드 컬렉터</font> (고어패스트+스토커: <font color=\"#FFFFFF\">근접 공격력 +30%</font>) / <font color=\"#FFD700\">프릭 쇼</font> (사이렌+허스크: <font color=\"#FFFFFF\">피해 저항 +25%</font>) / <font color=\"#FFD700\">샐비지 런</font> (EDAR+블로트: <font color=\"#FFFFFF\">재장전 속도 +25%</font>) / <font color=\"#FFD700\">대형 게임</font> (스크레이크+FP: <font color=\"#FFFFFF\">대형 좀비 피해량 +25%</font>)",
+     "text": "티어 1 (2세트): 스웜 브레이커 (클롯+크롤러: 이동 속도 +15%) / 블레이드 컬렉터 (고어패스트+스토커: 근접 공격력 +30%) / 프릭 쇼 (사이렌+허스크: 피해 저항 +25%) / 샐비지 런 (EDAR+블로트: 재장전 속도 +25%) / 대형 게임 (스크레이크+FP: 대형 좀비 피해량 +25%)",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#87CEEB\">티어 2 (3세트):</font> <font color=\"#FFD700\">풀 스윕</font> (클롯+고어패스트+크롤러: <font color=\"#FFFFFF\">탄창 크기 +30%%</font>) / <font color=\"#FFD700\">나이트 스토커</font> (스토커+사이렌+EDAR: <font color=\"#FFFFFF\">무기 전환 속도 +40%%</font>) / <font color=\"#FFD700\">브루트 포스</font> (허스크+스크레이크+FP: <font color=\"#FFFFFF\">모든 피해량 +20%%</font>)",
-     "text": "티어 2 (3세트): 풀 스윕 (클롯+고어패스트+크롤러: 탄창 크기 +30%%) / 나이트 스토커 (스토커+사이렌+EDAR: 무기 전환 속도 +40%%) / 브루트 포스 (허스크+스크레이크+FP: 모든 피해량 +20%%)",
+     "raw": "<font color=\"#87CEEB\">티어 2 (3세트):</font> <font color=\"#FFD700\">풀 스윕</font> (클롯+고어패스트+크롤러: <font color=\"#FFFFFF\">탄창 크기 +30%</font>) / <font color=\"#FFD700\">나이트 스토커</font> (스토커+사이렌+EDAR: <font color=\"#FFFFFF\">무기 전환 속도 +40%</font>) / <font color=\"#FFD700\">브루트 포스</font> (허스크+스크레이크+FP: <font color=\"#FFFFFF\">모든 피해량 +20%</font>)",
+     "text": "티어 2 (3세트): 풀 스윕 (클롯+고어패스트+크롤러: 탄창 크기 +30%) / 나이트 스토커 (스토커+사이렌+EDAR: 무기 전환 속도 +40%) / 브루트 포스 (허스크+스크레이크+FP: 모든 피해량 +20%)",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#87CEEB\">티어 3 (보스+):</font> <font color=\"#FFD700\">킹 슬레이어</font> (보스+FP: <font color=\"#FFFFFF\">피해량 +50%%, 저항 +30%%, 잡기 면역</font>) / <font color=\"#FFD700\">에이펙스 프레데터</font> (보스+스크레이크: <font color=\"#FFFFFF\">피해량 +40%%, 이동 속도 +30%%, 적 체력 확인</font>) / <font color=\"#FFD700\">트로피 월</font> (보스+아무거나: <font color=\"#FFFFFF\">피해량 +30%%, 탄약 +50%%, 재장전 +30%%</font>)",
-     "text": "티어 3 (보스+): 킹 슬레이어 (보스+FP: 피해량 +50%%, 저항 +30%%, 잡기 면역) / 에이펙스 프레데터 (보스+스크레이크: 피해량 +40%%, 이동 속도 +30%%, 적 체력 확인) / 트로피 월 (보스+아무거나: 피해량 +30%%, 탄약 +50%%, 재장전 +30%%)",
+     "raw": "<font color=\"#87CEEB\">티어 3 (보스+):</font> <font color=\"#FFD700\">킹 슬레이어</font> (보스+FP: <font color=\"#FFFFFF\">피해량 +50%, 저항 +30%, 잡기 면역</font>) / <font color=\"#FFD700\">에이펙스 프레데터</font> (보스+스크레이크: <font color=\"#FFFFFF\">피해량 +40%, 이동 속도 +30%, 적 체력 확인</font>) / <font color=\"#FFD700\">트로피 월</font> (보스+아무거나: <font color=\"#FFFFFF\">피해량 +30%, 탄약 +50%, 재장전 +30%</font>)",
+     "text": "티어 3 (보스+): 킹 슬레이어 (보스+FP: 피해량 +50%, 저항 +30%, 잡기 면역) / 에이펙스 프레데터 (보스+스크레이크: 피해량 +40%, 이동 속도 +30%, 적 체력 확인) / 트로피 월 (보스+아무거나: 피해량 +30%, 탄약 +50%, 재장전 +30%)",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#87CEEB\">티어 4:</font> <font color=\"#FFD700\">전설의 사냥꾼</font> (보스+보스: <font color=\"#FFFFFF\">피해량 +75%%, 저항 +50%%, 속도 +50%%, 잡기 면역, 체력 확인, 최대 체력 +50</font>)",
-     "text": "티어 4: 전설의 사냥꾼 (보스+보스: 피해량 +75%%, 저항 +50%%, 속도 +50%%, 잡기 면역, 체력 확인, 최대 체력 +50)",
+     "raw": "<font color=\"#87CEEB\">티어 4:</font> <font color=\"#FFD700\">전설의 사냥꾼</font> (보스+보스: <font color=\"#FFFFFF\">피해량 +75%, 저항 +50%, 속도 +50%, 잡기 면역, 체력 확인, 최대 체력 +50</font>)",
+     "text": "티어 4: 전설의 사냥꾼 (보스+보스: 피해량 +75%, 저항 +50%, 속도 +50%, 잡기 면역, 체력 확인, 최대 체력 +50)",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#CC8800\">무한 사냥:</font> <font color=\"#FFFFFF\">3</font>세트를 완성한 후 트로피는 <font color=\"#FFD700\">무한히</font> 중첩되며 <font color=\"#FFFFFF\">5</font>개의 슬롯에 저장됩니다. (중첩당: <font color=\"#87CEEB\">클롯</font> 웨이브당 +1 도쉬 / <font color=\"#87CEEB\">크롤러</font> 속도 +1%% / <font color=\"#87CEEB\">고어패스트</font> 근접 공격력 +1%% / <font color=\"#87CEEB\">스토커</font> 탄창 용량 +1%% / <font color=\"#87CEEB\">블로트</font> 최대 체력 +1 / <font color=\"#87CEEB\">허스크</font> 받는 피해 -1%% / <font color=\"#87CEEB\">사이렌</font> 탄약 +5%% / <font color=\"#87CEEB\">EDAR</font> 헤드샷 피해 +10%% / <font color=\"#87CEEB\">스크레이크</font> 방어력 +5 / <font color=\"#87CEEB\">FP</font> 모든 피해량 +10%%)",
-     "text": "무한 사냥: 3세트를 완성한 후 트로피는 무한히 중첩되며 5개의 슬롯에 저장됩니다. (중첩당: 클롯 웨이브당 +1 도쉬 / 크롤러 속도 +1%% / 고어패스트 근접 공격력 +1%% / 스토커 탄창 용량 +1%% / 블로트 최대 체력 +1 / 허스크 받는 피해 -1%% / 사이렌 탄약 +5%% / EDAR 헤드샷 피해 +10%% / 스크레이크 방어력 +5 / FP 모든 피해량 +10%%)",
+     "raw": "<font color=\"#CC8800\">무한 사냥:</font> <font color=\"#FFFFFF\">3</font>세트를 완성한 후 트로피는 <font color=\"#FFD700\">무한히</font> 중첩되며 <font color=\"#FFFFFF\">5</font>개의 슬롯에 저장됩니다. (중첩당: <font color=\"#87CEEB\">클롯</font> 웨이브당 +1 도쉬 / <font color=\"#87CEEB\">크롤러</font> 속도 +1% / <font color=\"#87CEEB\">고어패스트</font> 근접 공격력 +1% / <font color=\"#87CEEB\">스토커</font> 탄창 용량 +1% / <font color=\"#87CEEB\">블로트</font> 최대 체력 +1 / <font color=\"#87CEEB\">허스크</font> 받는 피해 -1% / <font color=\"#87CEEB\">사이렌</font> 탄약 +5% / <font color=\"#87CEEB\">EDAR</font> 헤드샷 피해 +10% / <font color=\"#87CEEB\">스크레이크</font> 방어력 +5 / <font color=\"#87CEEB\">FP</font> 모든 피해량 +10%)",
+     "text": "무한 사냥: 3세트를 완성한 후 트로피는 무한히 중첩되며 5개의 슬롯에 저장됩니다. (중첩당: 클롯 웨이브당 +1 도쉬 / 크롤러 속도 +1% / 고어패스트 근접 공격력 +1% / 스토커 탄창 용량 +1% / 블로트 최대 체력 +1 / 허스크 받는 피해 -1% / 사이렌 탄약 +5% / EDAR 헤드샷 피해 +10% / 스크레이크 방어력 +5 / FP 모든 피해량 +10%)",
      "isCapstone": false
     },
     {
@@ -13727,8 +13727,8 @@
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">트로피 마스터</font> - 트로피 드롭률이 <font color=\"#FFFFFF\">5%%</font>로 고정되며, 모든 <font color=\"#87CEEB\">세트 보너스가 두 배로 증가합니다</font>. <font color=\"#FFD700\">전설의 사냥꾼</font> 세트에 <font color=\"#FF6666\">최대 체력 +50</font>이 추가됩니다.",
-     "text": "레벨 20: 트로피 마스터 - 트로피 드롭률이 5%%로 고정되며, 모든 세트 보너스가 두 배로 증가합니다. 전설의 사냥꾼 세트에 최대 체력 +50이 추가됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">트로피 마스터</font> - 트로피 드롭률이 <font color=\"#FFFFFF\">5%</font>로 고정되며, 모든 <font color=\"#87CEEB\">세트 보너스가 두 배로 증가합니다</font>. <font color=\"#FFD700\">전설의 사냥꾼</font> 세트에 <font color=\"#FF6666\">최대 체력 +50</font>이 추가됩니다.",
+     "text": "레벨 20: 트로피 마스터 - 트로피 드롭률이 5%로 고정되며, 모든 세트 보너스가 두 배로 증가합니다. 전설의 사냥꾼 세트에 최대 체력 +50이 추가됩니다.",
      "isCapstone": true
     }
    ],
@@ -16142,8 +16142,8 @@
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
+     "disabled": true,
+     "disabledNote": "2026-07-02 제거: 트리거 조건 없이 10~15초마다 자동 광역 독뎀, 수치 전부 var const라 INI 조정 자체가 불가능해 완전 제거가 유일한 해법",
      "noData": false
     },
     {

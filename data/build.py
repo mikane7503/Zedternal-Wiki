@@ -687,6 +687,11 @@ TERMINOLOGY_FIXES = [
     ("퍽", "퍼크"),
     ("도쐬", "도쉬"),
     ("커맨도", "코만도"),
+    # The mod's format strings escape a literal percent as '%%' (e.g.
+    # Predator's "+15%%"); the site renders raw text, so collapse them.
+    # Safe here: this pass runs on the final output dict, after every
+    # '%x%%' placeholder has already been filled.
+    ("%%", "%"),
 ]
 
 
