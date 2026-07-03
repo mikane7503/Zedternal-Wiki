@@ -327,9 +327,8 @@ function renderAdvDetail(key) {
   const descNote = p.descriptions.length
     ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 전직 레벨 20(만렙) 기준입니다.</div>' : "";
 
-  const perkPatchWarning = p.balanceComplete
-    ? '<div class="balance-complete-badge">✅ 밸런싱 완료 퍼크</div>'
-    : (p.testWarning ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "");
+  const balanceBadge = p.balanceComplete ? '<div class="balance-complete-badge">✅ 밸런싱 완료 퍼크</div>' : "";
+  const perkPatchWarning = (!p.balanceComplete && p.testWarning) ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "";
 
   const hasPassive = p.passiveStats.length > 0;
 
@@ -355,6 +354,7 @@ function renderAdvDetail(key) {
         <h2>${escapeHtml(p.name)}</h2>
         <div class="subtitle">심화 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
       </div>
+      ${balanceBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
 

@@ -16,5 +16,85 @@
     "standardDesc": "매 <font color=\"#ffaa33\">25번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">80% 꽝</font>, <font color=\"#ffaa33\">15% +50 도쉬</font>, <font color=\"#ff6600\">4% +150 도쉬</font>, <font color=\"#ff0000\">1% +300 도쉬</font>.",
     "deluxeDesc": "매 <font color=\"#ffaa33\">20번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">60% 꽝</font>, <font color=\"#ffaa33\">25% +50 도쉬</font>, <font color=\"#ff6600\">10% +150 도쉬</font>, <font color=\"#ff0000\">5% +300 도쉬</font>.",
     "_note": "KOR ini는 '30번째 킬'로 적혀 있으나 KFZedternalUnlimited.ini의 SlotMachineTrigger=25(표준)/20(디럭스)가 현재 적용값. 확률 배분은 하드코딩이라 KOR 문구 유지."
+  },
+  "BatteringRam": {
+    "standardDesc": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 10% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 1.5배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
+    "deluxeDesc": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 20% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1.5초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 2배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>"
+  },
+  "ChainFury": {
+    "standardDesc": "<font color=\"#edb82a\">체인 퓨리:</font> 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: <font color=\"#FF4500\">근접 공격력 1% 증가</font>. 10체인 도달 시: <font color=\"#FFD700\">관통력 2 증가</font>. <font color=\"#AAAAAA\">절대 공격을 멈추지 마세요.</font>",
+    "deluxeDesc": "<font color=\"#edb82a\">체인 퓨리:</font> 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: <font color=\"#FF4500\">근접 공격력 1.5% 증가</font>. 10체인 도달 시: <font color=\"#FFD700\">관통력 3 증가</font>. <font color=\"#AAAAAA\">절대 공격을 멈추지 마세요.</font>"
+  },
+  "Counterforce": {
+    "standardDesc": "<font color=\"#edb82a\">카운터포스:</font> 받는 피해를 저장합니다(<font color=\"#FF4500\">30%</font> 변환, 최대 <font color=\"#FFFFFF\">100</font> 누적). 다음번 <font color=\"#FF4500\">근접 공격</font> 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. <font color=\"#AAAAAA\">방출 후 10초의 재사용 대기시간이 있습니다.</font>",
+    "deluxeDesc": "<font color=\"#edb82a\">카운터포스:</font> 받는 피해를 저장합니다(<font color=\"#FF4500\">70%</font> 변환, 최대 <font color=\"#FFFFFF\">200</font> 누적). 다음번 <font color=\"#FF4500\">근접 공격</font> 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. <font color=\"#AAAAAA\">방출 후 10초의 재사용 대기시간이 있습니다.</font>"
+  },
+  "CrowdSurge": {
+    "standardDesc": "<font color=\"#edb82a\">군중의 폭발:</font> 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 <font color=\"#FFFFFF\">5</font> 중첩, 스택당 <font color=\"#AAAAAA\">6초 지속</font>). 스택당: <font color=\"#32CD32\">이동 속도 2% 증가</font>. 3스택 이상: <font color=\"#FFD700\">은신한 적 감지 가능</font>. 5스택: <font color=\"#87CEEB\">무기 전환 속도 증가</font>.",
+    "deluxeDesc": "<font color=\"#edb82a\">군중의 폭발:</font> 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 <font color=\"#FFFFFF\">5</font> 중첩, 스택당 <font color=\"#AAAAAA\">9초 지속</font>). 스택당: <font color=\"#32CD32\">이동 속도 4% 증가</font>. 2스택 이상: <font color=\"#FFD700\">은신한 적 감지 가능</font>. 4스택: <font color=\"#87CEEB\">무기 전환 속도 증가</font>."
+  },
+  "PainEcho": {
+    "standardDesc": "<font color=\"#edb82a\">고통의 메아리:</font> <font color=\"#FF4500\">받은 피해의 10%</font>를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 <font color=\"#FFD700\">+3% 증가</font>합니다(최대 5명, 최대 반사율 <font color=\"#FFFFFF\">25%</font>). <font color=\"#AAAAAA\">저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.</font>",
+    "deluxeDesc": "<font color=\"#edb82a\">고통의 메아리:</font> <font color=\"#FF4500\">받은 피해의 15%</font>를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 <font color=\"#FFD700\">+5% 증가</font>합니다(최대 5명, 최대 반사율 <font color=\"#FFFFFF\">40%</font>). <font color=\"#AAAAAA\">저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.</font>"
+  },
+  "SymbioticRounds": {
+    "standardDesc": "소총 헤드샷 처치 시 <font color=\"#77d914\">35%</font> 확률로 <font color=\"#15d7fa\">1발</font>이 탄창으로 반환됩니다. 중형 및 대형 ZED 처치 시 <font color=\"#ff3399\">15%</font> 확률로 <font color=\"#77d914\">2발의 보너스 예비 탄약</font>이 제공됩니다.",
+    "deluxeDesc": "소총 헤드샷 처치 시 <font color=\"#77d914\">50%</font> 확률로 탄창에 <font color=\"#15d7fa\">1발</font>이 회복됩니다. 중형 및 대형 ZED 처치 시 <font color=\"#ff3399\">25%</font> 확률로 <font color=\"#77d914\">3발의 보너스 예비 탄약</font>을 획득합니다. 탄창이 <font color=\"#ffcc00\">25%</font> 미만일 때 <font color=\"#ffcc00\">15%</font>의 추가 회복 확률을 얻습니다."
+  },
+  "CascadingMassacre": {
+    "standardDesc": "<font color=\"#ffff00\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 <font color=\"#ff3399\">+5%</font> (최대 <font color=\"#ff3399\">5</font>스택, <font color=\"#ff3399\">+25%</font>).",
+    "deluxeDesc": "<font color=\"#ffff00\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 <font color=\"#ff3399\">+8%</font> (최대 <font color=\"#ff3399\">5</font>스택, <font color=\"#ff3399\">+40%</font>)."
+  },
+  "HuntDown": {
+    "standardDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 <font color=\"#ff3399\">+3%</font>씩 증가합니다. 최대 <font color=\"#ffff00\">5</font> 스택(<font color=\"#ff3399\">+15%</font>)까지 중첩됩니다.",
+    "deluxeDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 <font color=\"#ff3399\">+5%</font>씩 증가합니다. 최대 <font color=\"#ffff00\">5</font> 스택(<font color=\"#ff3399\">+25%</font>)까지 중첩됩니다."
+  },
+  "ChronoCarapace": {
+    "standardDesc": "<font color=\"#9632ff\">ZED 타임</font> 동안 모든 출처로부터 받는 피해가 <font color=\"#d8b0ff\">30%</font> 감소합니다.",
+    "deluxeDesc": "<font color=\"#9632ff\">ZED 타임</font> 동안 받는 피해가 <font color=\"#d8b0ff\">50%</font> 감소합니다. <font color=\"#FFFFFF\">지속적인 보호:</font> ZED 타임이 끝난 후에도 <font color=\"#d8b0ff\">3초</font> 동안 받는 피해가 <font color=\"#d8b0ff\">15%</font> 감소합니다."
+  },
+  "PocketDimension": {
+    "standardDesc": "<font color=\"#9632ff\">공생체 내부의 공간을 비틉니다.</font> 소지 무게 한도가 <font color=\"#d8b0ff\">+3</font> 증가하고, 수류탄 소지 한도가 <font color=\"#d8b0ff\">+1</font>개 증가합니다.",
+    "deluxeDesc": "<font color=\"#9632ff\">공생체 내부의 공간을 비틉니다.</font> 소지 무게 한도가 <font color=\"#d8b0ff\">+5</font> 증가하고, 수류탄 소지 한도가 <font color=\"#d8b0ff\">+2</font>개 증가합니다. 모든 투사체 무기는 <font color=\"#FFFFFF\">절대 불발되지 않습니다.</font>"
+  },
+  "EmberHarvest": {
+    "standardDesc": "웨이브 종료 시 수류탄 <font color=\"#e85009\">+1</font>개를 획득합니다.",
+    "deluxeDesc": "웨이브 종료 시 수류탄 <font color=\"#e85009\">+3</font>개를 획득하고, 모든 무기의 <font color=\"#e80948\">탄약</font>을 <font color=\"#e85009\">15%</font> 보충합니다."
+  },
+  "InfernoRounds": {
+    "standardDesc": "화염 속성이 아닌 공격도 명중 시 <font color=\"#e80948\">화상 지속 피해</font>를 입힐 확률이 생깁니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
+    "deluxeDesc": "화염 속성이 아닌 공격도 명중 시 <font color=\"#e80948\">화상 지속 피해</font>를 입힐 확률이 높아지며, 입히는 화상 피해량이 <font color=\"#e85009\">더욱 강력</font>해집니다. 이 확률은 입힌 피해량에 비례하여 증가합니다."
+  },
+  "MartyrBlessing": {
+    "standardDesc": "아군을 치유할 때마다 <font color=\"#eeeeff\">5%</font>의 피해 저항력을 얻습니다. 최대 <font color=\"#eeeeff\">10%</font>까지 중첩되며 시간이 지남에 따라 감소합니다.",
+    "deluxeDesc": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유할 때마다 <font color=\"#eeeeff\">10%</font>의 피해 저항력을 얻습니다. 최대 <font color=\"#eeeeff\">25%</font>까지 중첩되며 시간이 지남에 따라 감소합니다."
+  },
+  "NeuralFeedback": {
+    "standardDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 7.5%를 공격자에게 독성 피해로 되돌려줍니다.",
+    "deluxeDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 25%만큼 자신의 체력을 회복합니다."
+  },
+  "PheromoneTrail": {
+    "standardDesc": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#FFFFFF\">+15%</font> 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+    "deluxeDesc": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> 및 <font color=\"#42e087\">재장전 속도</font> <font color=\"#FFFFFF\">+7.5%</font> 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다."
+  },
+  "LeechField": {
+    "standardDesc": "<font color=\"#B40028\">흡혈장:</font> 제자리에 2초 동안 서 있으면 주변에 흡혈 오라를 생성합니다. 오라 내의 적은 초당 8의 피해를 입으며, 당신은 입힌 피해의 50%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
+    "deluxeDesc": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">흡혈장:</font> 제자리에 2초 동안 서 있으면 주변에 강력한 흡혈 오라를 생성합니다. 오라 내의 적은 초당 15의 피해를 입으며, 당신은 입힌 피해의 100%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다."
+  },
+  "DesperateSymbiosis": {
+    "standardDesc": "체력이 50% 미만일 때는 30%의 추가 피해를 주지만, 체력이 75% 이상일 때는 15%의 추가 피해를 받습니다.",
+    "deluxeDesc": "체력이 50% 미만일 때는 50%의 추가 피해를 주지만, 체력이 75% 이상일 때는 20%의 추가 피해를 받습니다."
+  },
+  "MuscleFiberEnhancement": {
+    "standardDesc": "공생체가 생체 섬유로 근육 조직을 강화합니다. <font color='#9370DB'>근접 공격력</font> <font color='#00FF7F'>+40%</font>, <font color='#9370DB'>소지 무게 제한</font> <font color='#00FF7F'>+5</font>, <font color='#9370DB'>이동 속도</font> <font color='#00FF7F'>+3%</font>.",
+    "deluxeDesc": "공생체가 생체 섬유로 근육 조직을 대폭 강화합니다. <font color='#9370DB'>근접 공격력</font> <font color='#00FF7F'>+80%</font>, <font color='#9370DB'>소지 무게 제한</font> <font color='#00FF7F'>+10</font>, <font color='#9370DB'>이동 속도</font> <font color='#00FF7F'>+5%</font>."
+  },
+  "Backdraft": {
+    "standardDesc": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있습니다.",
+    "deluxeDesc": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있으며, <font color=\"#e80948\">ZED 타임 지속 시간</font>이 <font color=\"#e85009\">50%</font> 연장됩니다."
+  },
+  "SearingGaze": {
+    "standardDesc": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">30%</font> 증가합니다.",
+    "deluxeDesc": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">60%</font> 증가하며, <font color=\"#e80948\">은폐 감지 범위</font>가 대폭 늘어납니다."
   }
 }

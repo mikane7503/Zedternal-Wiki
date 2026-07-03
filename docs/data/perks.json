@@ -1481,10 +1481,10 @@
     {
      "key": "BatteringRam",
      "name": "공성퇴",
-     "standardDesc": "질주 저항력: +10% · 충전 피해량: +150% · 충전 시간창: 1초",
-     "deluxeDesc": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1.5초",
-     "standardDescRaw": "질주 저항력: +10% · 충전 피해량: +150% · 충전 시간창: 1초",
-     "deluxeDescRaw": "질주 저항력: +20% · 충전 피해량: +200% · 충전 시간창: 1.5초",
+     "standardDesc": "돌격: 질주 중 피해 저항이 10% 증가합니다. 질주를 멈춘 후 1초 이내에 가하는 첫 근접 공격은 피해량이 1.5배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
+     "deluxeDesc": "돌격: 질주 중 피해 저항이 20% 증가합니다. 질주를 멈춘 후 1.5초 이내에 가하는 첫 근접 공격은 피해량이 2배가 됩니다. 강하게 돌격하고, 무겁게 휘두르세요.",
+     "standardDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 10% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 1.5배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">돌격:</font> 질주 중 <font color=\"#4169E1\">피해 저항이 20% 증가</font>합니다. 질주를 멈춘 후 <font color=\"#FFFFFF\">1.5초</font> 이내에 가하는 첫 근접 공격은 <font color=\"#FF4500\">피해량이 2배</font>가 됩니다. <font color=\"#AAAAAA\">강하게 돌격하고, 무겁게 휘두르세요.</font>",
      "rawValues": [
       {
        "key": "SprintResistance",
@@ -1533,7 +1533,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1541,10 +1541,10 @@
     {
      "key": "ChainFury",
      "name": "체인 퓨리",
-     "standardDesc": "스택 당 피해량: +1% · 관통력 임계값: 10 · 관통력 보너스: +200%",
-     "deluxeDesc": "스택 당 피해량: +1.5% · 관통력 임계값: 10 · 관통력 보너스: +300%",
-     "standardDescRaw": "스택 당 피해량: +1% · 관통력 임계값: 10 · 관통력 보너스: +200%",
-     "deluxeDescRaw": "스택 당 피해량: +1.5% · 관통력 임계값: 10 · 관통력 보너스: +300%",
+     "standardDesc": "체인 퓨리: 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: 근접 공격력 1% 증가. 10체인 도달 시: 관통력 2 증가. 절대 공격을 멈추지 마세요.",
+     "deluxeDesc": "체인 퓨리: 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: 근접 공격력 1.5% 증가. 10체인 도달 시: 관통력 3 증가. 절대 공격을 멈추지 마세요.",
+     "standardDescRaw": "<font color=\"#edb82a\">체인 퓨리:</font> 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: <font color=\"#FF4500\">근접 공격력 1% 증가</font>. 10체인 도달 시: <font color=\"#FFD700\">관통력 2 증가</font>. <font color=\"#AAAAAA\">절대 공격을 멈추지 마세요.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">체인 퓨리:</font> 2초 이내에 연속으로 근접 공격을 적중시키면 콤보(체인)가 쌓입니다. 체인당: <font color=\"#FF4500\">근접 공격력 1.5% 증가</font>. 10체인 도달 시: <font color=\"#FFD700\">관통력 3 증가</font>. <font color=\"#AAAAAA\">절대 공격을 멈추지 마세요.</font>",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -1593,7 +1593,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1601,10 +1601,10 @@
     {
      "key": "Counterforce",
      "name": "반격력",
-     "standardDesc": "전환 속도: +30% · 최대 저장된 피해량: 100",
-     "deluxeDesc": "전환 속도: +70% · 최대 저장된 피해량: 200",
-     "standardDescRaw": "전환 속도: +30% · 최대 저장된 피해량: 100",
-     "deluxeDescRaw": "전환 속도: +70% · 최대 저장된 피해량: 200",
+     "standardDesc": "카운터포스: 받는 피해를 저장합니다(30% 변환, 최대 100 누적). 다음번 근접 공격 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. 방출 후 10초의 재사용 대기시간이 있습니다.",
+     "deluxeDesc": "카운터포스: 받는 피해를 저장합니다(70% 변환, 최대 200 누적). 다음번 근접 공격 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. 방출 후 10초의 재사용 대기시간이 있습니다.",
+     "standardDescRaw": "<font color=\"#edb82a\">카운터포스:</font> 받는 피해를 저장합니다(<font color=\"#FF4500\">30%</font> 변환, 최대 <font color=\"#FFFFFF\">100</font> 누적). 다음번 <font color=\"#FF4500\">근접 공격</font> 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. <font color=\"#AAAAAA\">방출 후 10초의 재사용 대기시간이 있습니다.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">카운터포스:</font> 받는 피해를 저장합니다(<font color=\"#FF4500\">70%</font> 변환, 최대 <font color=\"#FFFFFF\">200</font> 누적). 다음번 <font color=\"#FF4500\">근접 공격</font> 시 저장된 피해량이 모두 방출되어 보너스 피해로 들어갑니다. <font color=\"#AAAAAA\">방출 후 10초의 재사용 대기시간이 있습니다.</font>",
      "rawValues": [
       {
        "key": "ConversionRate",
@@ -1639,7 +1639,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1647,10 +1647,10 @@
     {
      "key": "CrowdSurge",
      "name": "군중 밀집",
-     "standardDesc": "스택 당 속도: +2% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 6초",
-     "deluxeDesc": "스택 당 속도: +4% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 9초",
-     "standardDescRaw": "스택 당 속도: +2% · 최대 스택 수: 5 · 은신 중 임계값: 3 · 전환 임계값: 5 · 전환 속도 보너스: +50% · 스택 지속시간: 6초",
-     "deluxeDescRaw": "스택 당 속도: +4% · 최대 스택 수: 5 · 은신 중 임계값: 2 · 전환 임계값: 4 · 전환 속도 보너스: +75% · 스택 지속시간: 9초",
+     "standardDesc": "군중의 폭발: 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 5 중첩, 스택당 6초 지속). 스택당: 이동 속도 2% 증가. 3스택 이상: 은신한 적 감지 가능. 5스택: 무기 전환 속도 증가.",
+     "deluxeDesc": "군중의 폭발: 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 5 중첩, 스택당 9초 지속). 스택당: 이동 속도 4% 증가. 2스택 이상: 은신한 적 감지 가능. 4스택: 무기 전환 속도 증가.",
+     "standardDescRaw": "<font color=\"#edb82a\">군중의 폭발:</font> 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 <font color=\"#FFFFFF\">5</font> 중첩, 스택당 <font color=\"#AAAAAA\">6초 지속</font>). 스택당: <font color=\"#32CD32\">이동 속도 2% 증가</font>. 3스택 이상: <font color=\"#FFD700\">은신한 적 감지 가능</font>. 5스택: <font color=\"#87CEEB\">무기 전환 속도 증가</font>.",
+     "deluxeDescRaw": "<font color=\"#edb82a\">군중의 폭발:</font> 근접 공격으로 적을 처치하면 이동 속도 스택이 쌓입니다(최대 <font color=\"#FFFFFF\">5</font> 중첩, 스택당 <font color=\"#AAAAAA\">9초 지속</font>). 스택당: <font color=\"#32CD32\">이동 속도 4% 증가</font>. 2스택 이상: <font color=\"#FFD700\">은신한 적 감지 가능</font>. 4스택: <font color=\"#87CEEB\">무기 전환 속도 증가</font>.",
      "rawValues": [
       {
        "key": "SpeedPerStack",
@@ -1741,7 +1741,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1901,10 +1901,10 @@
     {
      "key": "PainEcho",
      "name": "통증 에코",
-     "standardDesc": "기본 반사: +10% · 적 당 반사: +3% · 최대 적 보너스: 5",
-     "deluxeDesc": "기본 반사: +15% · 적 당 반사: +5% · 최대 적 보너스: 5",
-     "standardDescRaw": "기본 반사: +10% · 적 당 반사: +3% · 최대 적 보너스: 5",
-     "deluxeDescRaw": "기본 반사: +15% · 적 당 반사: +5% · 최대 적 보너스: 5",
+     "standardDesc": "고통의 메아리: 받은 피해의 10%를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 +3% 증가합니다(최대 5명, 최대 반사율 25%). 저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.",
+     "deluxeDesc": "고통의 메아리: 받은 피해의 15%를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 +5% 증가합니다(최대 5명, 최대 반사율 40%). 저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.",
+     "standardDescRaw": "<font color=\"#edb82a\">고통의 메아리:</font> <font color=\"#FF4500\">받은 피해의 10%</font>를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 <font color=\"#FFD700\">+3% 증가</font>합니다(최대 5명, 최대 반사율 <font color=\"#FFFFFF\">25%</font>). <font color=\"#AAAAAA\">저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.</font>",
+     "deluxeDescRaw": "<font color=\"#edb82a\">고통의 메아리:</font> <font color=\"#FF4500\">받은 피해의 15%</font>를 공격자에게 되돌려줍니다. 주변 적 1명당 반사량이 <font color=\"#FFD700\">+5% 증가</font>합니다(최대 5명, 최대 반사율 <font color=\"#FFFFFF\">40%</font>). <font color=\"#AAAAAA\">저들이 당신을 때리면, 저들 스스로도 피해를 입습니다.</font>",
      "rawValues": [
       {
        "key": "BaseReflection",
@@ -1953,7 +1953,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3494,10 +3494,10 @@
     {
      "key": "SymbioticRounds",
      "name": "공생 라운드",
-     "standardDesc": "탄약 회복 확률: +35% · 치명타 노획 확률: +15% · 보너스 탄약 량: +200%",
-     "deluxeDesc": "탄약 회복 확률: +50% · 치명타 노획 확률: +25% · 보너스 탄약 량: +300%",
-     "standardDescRaw": "탄약 회복 확률: +35% · 치명타 노획 확률: +15% · 보너스 탄약 량: +200%",
-     "deluxeDescRaw": "탄약 회복 확률: +50% · 치명타 노획 확률: +25% · 보너스 탄약 량: +300%",
+     "standardDesc": "소총 헤드샷 처치 시 35% 확률로 1발이 탄창으로 반환됩니다. 중형 및 대형 ZED 처치 시 15% 확률로 2발의 보너스 예비 탄약이 제공됩니다.",
+     "deluxeDesc": "소총 헤드샷 처치 시 50% 확률로 탄창에 1발이 회복됩니다. 중형 및 대형 ZED 처치 시 25% 확률로 3발의 보너스 예비 탄약을 획득합니다. 탄창이 25% 미만일 때 15%의 추가 회복 확률을 얻습니다.",
+     "standardDescRaw": "소총 헤드샷 처치 시 <font color=\"#77d914\">35%</font> 확률로 <font color=\"#15d7fa\">1발</font>이 탄창으로 반환됩니다. 중형 및 대형 ZED 처치 시 <font color=\"#ff3399\">15%</font> 확률로 <font color=\"#77d914\">2발의 보너스 예비 탄약</font>이 제공됩니다.",
+     "deluxeDescRaw": "소총 헤드샷 처치 시 <font color=\"#77d914\">50%</font> 확률로 탄창에 <font color=\"#15d7fa\">1발</font>이 회복됩니다. 중형 및 대형 ZED 처치 시 <font color=\"#ff3399\">25%</font> 확률로 <font color=\"#77d914\">3발의 보너스 예비 탄약</font>을 획득합니다. 탄창이 <font color=\"#ffcc00\">25%</font> 미만일 때 <font color=\"#ffcc00\">15%</font>의 추가 회복 확률을 얻습니다.",
      "rawValues": [
       {
        "key": "AmmoRecoveryChance",
@@ -3546,7 +3546,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3828,10 +3828,10 @@
     {
      "key": "CascadingMassacre",
      "name": "연쇄 학살",
-     "standardDesc": "스택 당 피해량: +5% · 최대 스택 수: 5 · 스택 지속시간: 2초",
-     "deluxeDesc": "스택 당 피해량: +8% · 최대 스택 수: 5 · 스택 지속시간: 2초",
-     "standardDescRaw": "스택 당 피해량: +5% · 최대 스택 수: 5 · 스택 지속시간: 2초",
-     "deluxeDescRaw": "스택 당 피해량: +8% · 최대 스택 수: 5 · 스택 지속시간: 2초",
+     "standardDesc": "2초 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 +5% (최대 5스택, +25%).",
+     "deluxeDesc": "2초 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 +8% (최대 5스택, +40%).",
+     "standardDescRaw": "<font color=\"#ffff00\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 <font color=\"#ff3399\">+5%</font> (최대 <font color=\"#ff3399\">5</font>스택, <font color=\"#ff3399\">+25%</font>).",
+     "deluxeDescRaw": "<font color=\"#ffff00\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 <font color=\"#ff3399\">+8%</font> (최대 <font color=\"#ff3399\">5</font>스택, <font color=\"#ff3399\">+40%</font>).",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -3866,7 +3866,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 0.08/0.15(5스택+75%) → 5스택+40%. HuntDown과 합산 시 Hydra FuryMode 너프(3배→1.2배) 취지 훼손 방지",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3906,10 +3906,10 @@
     {
      "key": "HuntDown",
      "name": "헌트 다운",
-     "standardDesc": "스택 당 피해량: +3% · 최대 스택 수: 5",
-     "deluxeDesc": "스택 당 피해량: +5% · 최대 스택 수: 5",
-     "standardDescRaw": "스택 당 피해량: +3% · 최대 스택 수: 5",
-     "deluxeDescRaw": "스택 당 피해량: +5% · 최대 스택 수: 5",
+     "standardDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 +3%씩 증가합니다. 최대 5 스택(+15%)까지 중첩됩니다.",
+     "deluxeDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 +5%씩 증가합니다. 최대 5 스택(+25%)까지 중첩됩니다.",
+     "standardDescRaw": "동일한 적을 연속해서 공격하면 타격당 피해량이 <font color=\"#ff3399\">+3%</font>씩 증가합니다. 최대 <font color=\"#ffff00\">5</font> 스택(<font color=\"#ff3399\">+15%</font>)까지 중첩됩니다.",
+     "deluxeDescRaw": "동일한 적을 연속해서 공격하면 타격당 피해량이 <font color=\"#ff3399\">+5%</font>씩 증가합니다. 최대 <font color=\"#ffff00\">5</font> 스택(<font color=\"#ff3399\">+25%</font>)까지 중첩됩니다.",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -3937,7 +3937,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 0.05/0.10(5스택+50%) → 5스택+25%. CascadingMassacre와 합산 시 최대 +65%로 억제(구 +125%)",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4405,10 +4405,10 @@
     {
      "key": "ChronoCarapace",
      "name": "크로노-갑각",
-     "standardDesc": "제드 시간 피해 감소: +30% · 잔류 피해 감소: +15%",
-     "deluxeDesc": "제드 시간 피해 감소: +50% · 잔류 피해 감소: +15%",
-     "standardDescRaw": "제드 시간 피해 감소: +30% · 잔류 피해 감소: +15%",
-     "deluxeDescRaw": "제드 시간 피해 감소: +50% · 잔류 피해 감소: +15%",
+     "standardDesc": "ZED 타임 동안 모든 출처로부터 받는 피해가 30% 감소합니다.",
+     "deluxeDesc": "ZED 타임 동안 받는 피해가 50% 감소합니다. 지속적인 보호: ZED 타임이 끝난 후에도 3초 동안 받는 피해가 15% 감소합니다.",
+     "standardDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 모든 출처로부터 받는 피해가 <font color=\"#d8b0ff\">30%</font> 감소합니다.",
+     "deluxeDescRaw": "<font color=\"#9632ff\">ZED 타임</font> 동안 받는 피해가 <font color=\"#d8b0ff\">50%</font> 감소합니다. <font color=\"#FFFFFF\">지속적인 보호:</font> ZED 타임이 끝난 후에도 <font color=\"#d8b0ff\">3초</font> 동안 받는 피해가 <font color=\"#d8b0ff\">15%</font> 감소합니다.",
      "rawValues": [
       {
        "key": "ZedTimeDR",
@@ -4436,7 +4436,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4525,10 +4525,10 @@
     {
      "key": "PocketDimension",
      "name": "포켓 치수",
-     "standardDesc": "중량 보너스: 3 · 수류탄 보너스: +100%",
-     "deluxeDesc": "중량 보너스: 5 · 수류탄 보너스: +200%",
-     "standardDescRaw": "중량 보너스: 3 · 수류탄 보너스: +100%",
-     "deluxeDescRaw": "중량 보너스: 5 · 수류탄 보너스: +200%",
+     "standardDesc": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 +3 증가하고, 수류탄 소지 한도가 +1개 증가합니다.",
+     "deluxeDesc": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 +5 증가하고, 수류탄 소지 한도가 +2개 증가합니다. 모든 투사체 무기는 절대 불발되지 않습니다.",
+     "standardDescRaw": "<font color=\"#9632ff\">공생체 내부의 공간을 비틉니다.</font> 소지 무게 한도가 <font color=\"#d8b0ff\">+3</font> 증가하고, 수류탄 소지 한도가 <font color=\"#d8b0ff\">+1</font>개 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#9632ff\">공생체 내부의 공간을 비틉니다.</font> 소지 무게 한도가 <font color=\"#d8b0ff\">+5</font> 증가하고, 수류탄 소지 한도가 <font color=\"#d8b0ff\">+2</font>개 증가합니다. 모든 투사체 무기는 <font color=\"#FFFFFF\">절대 불발되지 않습니다.</font>",
      "rawValues": [
       {
        "key": "WeightBonus",
@@ -4563,7 +4563,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5298,10 +5298,10 @@
     {
      "key": "EmberHarvest",
      "name": "엠버 하비스트",
-     "standardDesc": "추가 수류탄: 1 · 탄약 복구: +0%",
-     "deluxeDesc": "웨이브 종료 시 수류탄 +3개를 획득하고, 모든 무기의 탄약을 +15% 보충합니다.",
-     "standardDescRaw": "추가 수류탄: 1 · 탄약 복구: +0%",
-     "deluxeDescRaw": "웨이브 종료 시 수류탄 <font color=\"#e85009\">+3</font>개를 획득하고, 모든 무기의 <font color=\"#e80948\">탄약</font>을 <font color=\"#e85009\">+15%</font> 보충합니다.",
+     "standardDesc": "웨이브 종료 시 수류탄 +1개를 획득합니다.",
+     "deluxeDesc": "웨이브 종료 시 수류탄 +3개를 획득하고, 모든 무기의 탄약을 15% 보충합니다.",
+     "standardDescRaw": "웨이브 종료 시 수류탄 <font color=\"#e85009\">+1</font>개를 획득합니다.",
+     "deluxeDescRaw": "웨이브 종료 시 수류탄 <font color=\"#e85009\">+3</font>개를 획득하고, 모든 무기의 <font color=\"#e80948\">탄약</font>을 <font color=\"#e85009\">15%</font> 보충합니다.",
      "rawValues": [
       {
        "key": "ExtraGrenades",
@@ -5336,7 +5336,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5361,10 +5361,10 @@
     {
      "key": "InfernoRounds",
      "name": "인페르노 라운드",
-     "standardDesc": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
-     "deluxeDesc": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
-     "standardDescRaw": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +20%",
-     "deluxeDescRaw": "지옥불 확률: +50% · 지옥불 피해량 상한: 75 · 피해량 계수: +50%",
+     "standardDesc": "화염 속성이 아닌 공격도 명중 시 화상 지속 피해를 입힐 확률이 생깁니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
+     "deluxeDesc": "화염 속성이 아닌 공격도 명중 시 화상 지속 피해를 입힐 확률이 높아지며, 입히는 화상 피해량이 더욱 강력해집니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
+     "standardDescRaw": "화염 속성이 아닌 공격도 명중 시 <font color=\"#e80948\">화상 지속 피해</font>를 입힐 확률이 생깁니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
+     "deluxeDescRaw": "화염 속성이 아닌 공격도 명중 시 <font color=\"#e80948\">화상 지속 피해</font>를 입힐 확률이 높아지며, 입히는 화상 피해량이 <font color=\"#e85009\">더욱 강력</font>해집니다. 이 확률은 입힌 피해량에 비례하여 증가합니다.",
      "rawValues": [
       {
        "key": "InfernoProbability",
@@ -5399,7 +5399,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "확률 너프(2026-07-02), 구 1.000000(100%확정발동이었음)",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5827,10 +5827,10 @@
     {
      "key": "MartyrBlessing",
      "name": "순교자의 축복",
-     "standardDesc": "치유 당 보호막: 5 · 최대 보호막: 10",
-     "deluxeDesc": "치유 당 보호막: 10 · 최대 보호막: 25",
-     "standardDescRaw": "치유 당 보호막: 5 · 최대 보호막: 10",
-     "deluxeDescRaw": "치유 당 보호막: 10 · 최대 보호막: 25",
+     "standardDesc": "아군을 치유할 때마다 5%의 피해 저항력을 얻습니다. 최대 10%까지 중첩되며 시간이 지남에 따라 감소합니다.",
+     "deluxeDesc": "디럭스. 아군을 치유할 때마다 10%의 피해 저항력을 얻습니다. 최대 25%까지 중첩되며 시간이 지남에 따라 감소합니다.",
+     "standardDescRaw": "아군을 치유할 때마다 <font color=\"#eeeeff\">5%</font>의 피해 저항력을 얻습니다. 최대 <font color=\"#eeeeff\">10%</font>까지 중첩되며 시간이 지남에 따라 감소합니다.",
+     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유할 때마다 <font color=\"#eeeeff\">10%</font>의 피해 저항력을 얻습니다. 최대 <font color=\"#eeeeff\">25%</font>까지 중첩되며 시간이 지남에 따라 감소합니다.",
      "rawValues": [
       {
        "key": "ShieldPerHeal",
@@ -5865,7 +5865,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6448,10 +6448,10 @@
     {
      "key": "NeuralFeedback",
      "name": "신경 피드백",
-     "standardDesc": "반사 퍼센트: +7.5% · 디럭스 치유 퍼센트: +25%",
-     "deluxeDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 +15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 +25%만큼 자신의 체력을 회복합니다.",
-     "standardDescRaw": "반사 퍼센트: +7.5% · 디럭스 치유 퍼센트: +25%",
-     "deluxeDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 +15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 +25%만큼 자신의 체력을 회복합니다.",
+     "standardDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 7.5%를 공격자에게 독성 피해로 되돌려줍니다.",
+     "deluxeDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 25%만큼 자신의 체력을 회복합니다.",
+     "standardDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 7.5%를 공격자에게 독성 피해로 되돌려줍니다.",
+     "deluxeDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 25%만큼 자신의 체력을 회복합니다.",
      "rawValues": [
       {
        "key": "ReflectPercent",
@@ -6479,7 +6479,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.150000; 구 0.300000; 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6533,10 +6533,10 @@
     {
      "key": "PheromoneTrail",
      "name": "페로몬 트레일",
-     "standardDesc": "속도 보너스: +15% · 디럭스 재장전 보너스: +7.5%",
-     "deluxeDesc": "속도 보너스: +30% · 디럭스 재장전 보너스: +7.5%",
-     "standardDescRaw": "속도 보너스: +15% · 디럭스 재장전 보너스: +7.5%",
-     "deluxeDescRaw": "속도 보너스: +30% · 디럭스 재장전 보너스: +7.5%",
+     "standardDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도가 +15% 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "deluxeDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도 +30% 및 재장전 속도 +7.5% 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "standardDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#FFFFFF\">+15%</font> 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "deluxeDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> 및 <font color=\"#42e087\">재장전 속도</font> <font color=\"#FFFFFF\">+7.5%</font> 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
      "rawValues": [
       {
        "key": "SpeedBonus",
@@ -6564,7 +6564,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.150000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7101,10 +7101,10 @@
     {
      "key": "LeechField",
      "name": "거머리장",
-     "standardDesc": "장 범위: 300 · 틱 당 피해량: 8 · 치유량 비율: +50% · 정지 지연: 2",
-     "deluxeDesc": "장 범위: 400 · 틱 당 피해량: 15 · 치유량 비율: +100% · 정지 지연: 2",
-     "standardDescRaw": "장 범위: 300 · 틱 당 피해량: 8 · 치유량 비율: +50% · 정지 지연: 2",
-     "deluxeDescRaw": "장 범위: 400 · 틱 당 피해량: 15 · 치유량 비율: +100% · 정지 지연: 2",
+     "standardDesc": "흡혈장: 제자리에 2초 동안 서 있으면 주변에 흡혈 오라를 생성합니다. 오라 내의 적은 초당 8의 피해를 입으며, 당신은 입힌 피해의 50%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
+     "deluxeDesc": "[디럭스] 흡혈장: 제자리에 2초 동안 서 있으면 주변에 강력한 흡혈 오라를 생성합니다. 오라 내의 적은 초당 15의 피해를 입으며, 당신은 입힌 피해의 100%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
+     "standardDescRaw": "<font color=\"#B40028\">흡혈장:</font> 제자리에 2초 동안 서 있으면 주변에 흡혈 오라를 생성합니다. 오라 내의 적은 초당 8의 피해를 입으며, 당신은 입힌 피해의 50%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">흡혈장:</font> 제자리에 2초 동안 서 있으면 주변에 강력한 흡혈 오라를 생성합니다. 오라 내의 적은 초당 15의 피해를 입으며, 당신은 입힌 피해의 100%만큼 체력을 회복합니다. 움직이면 오라가 취소됩니다.",
      "rawValues": [
       {
        "key": "FieldRadius",
@@ -7160,7 +7160,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "광역피해 남발 축소(2026-07-02), 구 600.000000; 구 800.000000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7583,10 +7583,10 @@
     {
      "key": "DesperateSymbiosis",
      "name": "절망적인 공생",
-     "standardDesc": "피해량 보너스: +30% · 페널티: +15%",
-     "deluxeDesc": "피해량 보너스: +50% · 페널티: +20%",
-     "standardDescRaw": "피해량 보너스: +30% · 페널티: +15%",
-     "deluxeDescRaw": "피해량 보너스: +50% · 페널티: +20%",
+     "standardDesc": "체력이 50% 미만일 때는 30%의 추가 피해를 주지만, 체력이 75% 이상일 때는 15%의 추가 피해를 받습니다.",
+     "deluxeDesc": "체력이 50% 미만일 때는 50%의 추가 피해를 주지만, 체력이 75% 이상일 때는 20%의 추가 피해를 받습니다.",
+     "standardDescRaw": "체력이 50% 미만일 때는 30%의 추가 피해를 주지만, 체력이 75% 이상일 때는 15%의 추가 피해를 받습니다.",
+     "deluxeDescRaw": "체력이 50% 미만일 때는 50%의 추가 피해를 주지만, 체력이 75% 이상일 때는 20%의 추가 피해를 받습니다.",
      "rawValues": [
       {
        "key": "DamageBonus",
@@ -7621,7 +7621,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.400000; 구 0.650000; 구조적 결함 수정: T2가 T1보다 페널티 낮았음(트레이드오프 실종) → T2는 페널티도 더 크게, 구 0.100000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7735,10 +7735,10 @@
     {
      "key": "MuscleFiberEnhancement",
      "name": "근섬유 강화",
-     "standardDesc": "근접 피해량 증폭: +40% · 중량 한도 증가: 5",
-     "deluxeDesc": "근접 피해량 증폭: +80% · 중량 한도 증가: 10",
-     "standardDescRaw": "근접 피해량 증폭: +40% · 중량 한도 증가: 5",
-     "deluxeDescRaw": "근접 피해량 증폭: +80% · 중량 한도 증가: 10",
+     "standardDesc": "공생체가 생체 섬유로 근육 조직을 강화합니다. 근접 공격력 +40%, 소지 무게 제한 +5, 이동 속도 +3%.",
+     "deluxeDesc": "공생체가 생체 섬유로 근육 조직을 대폭 강화합니다. 근접 공격력 +80%, 소지 무게 제한 +10, 이동 속도 +5%.",
+     "standardDescRaw": "공생체가 생체 섬유로 근육 조직을 강화합니다. <font color='#9370DB'>근접 공격력</font> <font color='#00FF7F'>+40%</font>, <font color='#9370DB'>소지 무게 제한</font> <font color='#00FF7F'>+5</font>, <font color='#9370DB'>이동 속도</font> <font color='#00FF7F'>+3%</font>.",
+     "deluxeDescRaw": "공생체가 생체 섬유로 근육 조직을 대폭 강화합니다. <font color='#9370DB'>근접 공격력</font> <font color='#00FF7F'>+80%</font>, <font color='#9370DB'>소지 무게 제한</font> <font color='#00FF7F'>+10</font>, <font color='#9370DB'>이동 속도</font> <font color='#00FF7F'>+5%</font>.",
      "rawValues": [
       {
        "key": "MeleeDamageBoost",
@@ -7773,7 +7773,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8027,10 +8027,10 @@
     {
      "key": "Backdraft",
      "name": "백드래프트",
-     "standardDesc": "연사 속도: +50% · 특수 속도: +20% · 제드 시간 연장: 0초",
-     "deluxeDesc": "연사 속도: +80% · 특수 속도: +35% · 제드 시간 연장: 0.5초",
-     "standardDescRaw": "연사 속도: +50% · 특수 속도: +20% · 제드 시간 연장: 0초",
-     "deluxeDescRaw": "연사 속도: +80% · 특수 속도: +35% · 제드 시간 연장: 0.5초",
+     "standardDesc": "당신은 ZED 타임의 영향을 받지 않고 정상적인 속도로 이동 및 공격할 수 있습니다.",
+     "deluxeDesc": "당신은 ZED 타임의 영향을 받지 않고 정상적인 속도로 이동 및 공격할 수 있으며, ZED 타임 지속 시간이 50% 연장됩니다.",
+     "standardDescRaw": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있습니다.",
+     "deluxeDescRaw": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있으며, <font color=\"#e80948\">ZED 타임 지속 시간</font>이 <font color=\"#e85009\">50%</font> 연장됩니다.",
      "rawValues": [
       {
        "key": "FireRate",
@@ -8079,7 +8079,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8320,10 +8320,10 @@
     {
      "key": "SearingGaze",
      "name": "타오르는 시선",
-     "standardDesc": "헤드샷 피해량: +30% · 은신 사거리: +50%",
-     "deluxeDesc": "헤드샷 피해량: +60% · 은신 사거리: +150%",
-     "standardDescRaw": "헤드샷 피해량: +30% · 은신 사거리: +50%",
-     "deluxeDescRaw": "헤드샷 피해량: +60% · 은신 사거리: +150%",
+     "standardDesc": "화염 무기로 조준(아이언 사이트) 시 은폐한 ZED와 적의 체력 바를 볼 수 있습니다. 추가로 헤드샷 피해량이 30% 증가합니다.",
+     "deluxeDesc": "화염 무기로 조준(아이언 사이트) 시 은폐한 ZED와 적의 체력 바를 볼 수 있습니다. 추가로 헤드샷 피해량이 60% 증가하며, 은폐 감지 범위가 대폭 늘어납니다.",
+     "standardDescRaw": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">30%</font> 증가합니다.",
+     "deluxeDescRaw": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">60%</font> 증가하며, <font color=\"#e80948\">은폐 감지 범위</font>가 대폭 늘어납니다.",
      "rawValues": [
       {
        "key": "HeadshotDamage",
@@ -8358,7 +8358,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
