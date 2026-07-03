@@ -96,5 +96,85 @@
   "SearingGaze": {
     "standardDesc": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">30%</font> 증가합니다.",
     "deluxeDesc": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">60%</font> 증가하며, <font color=\"#e80948\">은폐 감지 범위</font>가 대폭 늘어납니다."
+  },
+  "Pandemic": {
+    "standardDesc": "당신의 무기가 위험한 <font color=\"#15d7fa\">독</font>을 모든 ZED에게 광범위하게 퍼뜨립니다.",
+    "deluxeDesc": "당신의 무기가 치명적인 <font color=\"#15d7fa\">독</font>을 모든 ZED에게 광범위하게 퍼뜨립니다."
+  },
+  "TimeSpiral": {
+    "standardDesc": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">무한 탄약</font>이 적용되며 발사 속도가 약간 빨라집니다.",
+    "deluxeDesc": "<font color=\"#15d7fa\">ZED 타임</font> 동안 <font color=\"#77d914\">무한 탄약</font>이 적용되며 발사 속도가 훨씬 더 빨라집니다."
+  },
+  "Timewalk": {
+    "standardDesc": "<font color=\"#15d7fa\">ZED 타임</font> 동안 이동 속도가 <font color=\"#77d914\">25%</font> 더 빨라집니다.",
+    "deluxeDesc": "<font color=\"#15d7fa\">ZED 타임</font> 동안 이동 속도가 <font color=\"#77d914\">50%</font> 더 빨라집니다."
+  },
+  "DeathlessFury": {
+    "standardDesc": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+1초</font>).",
+    "deluxeDesc": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+75%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+3초</font>)."
+  },
+  "SoulChain": {
+    "standardDesc": "<font color=\"#CC0000\">영혼의 사슬:</font> 5초 이내에 연속으로 처치할 때마다 스택이 1개씩 쌓입니다. 스택당 피해량이 5% 증가합니다(최대 5스택). 처치하지 못하면 5초 후에 스택이 초기화됩니다.",
+    "deluxeDesc": "<font color=\"#CC0000\">영혼의 사슬:</font> 5초 이내에 연속으로 처치할 때마다 스택이 1개씩 쌓입니다. 스택당 피해량이 8% 증가합니다(최대 8스택). 처치하지 못하면 5초 후에 스택이 초기화됩니다."
+  },
+  "Marathon": {
+    "standardDesc": "ZED 타임 동안 <font color=\"#ff3399\">이동 속도</font>가 <font color=\"#66cc00\">40%</font> 증가합니다.",
+    "deluxeDesc": "ZED 타임 동안 <font color=\"#ff3399\">이동 속도</font>가 <font color=\"#66cc00\">80%</font> 증가합니다."
+  },
+  "RegenerativeRounds": {
+    "standardDesc": "<font color=\"#0bf1f1\">예비 탄약</font>이 100% 증가하고, 탄약 상자 획득 시 채워지는 탄약량이 <font color=\"#0bf1f1\">100% 증가</font>합니다.",
+    "deluxeDesc": "<font color=\"#0bf1f1\">예비 탄약</font>이 200% 증가하고, 탄약 상자 획득 시 채워지는 탄약량이 <font color=\"#0bf1f1\">200% 증가</font>합니다."
+  },
+  "CloseCall": {
+    "standardDesc": "체력이 <font color=\"#be4d25\">25% 미만</font>일 때 가하는 피해량이 <font color=\"#ff3399\">30%</font> 증가하고, 받는 피해가 <font color=\"#66cc00\">6.67%</font> 감소합니다.",
+    "deluxeDesc": "체력이 <font color=\"#be4d25\">25% 미만</font>일 때 가하는 피해량이 <font color=\"#ff3399\">60%</font> 증가하고, 받는 피해가 <font color=\"#66cc00\">13.33%</font> 감소합니다."
+  },
+  "PredatorsFocus": {
+    "standardDesc": "<font color=\"#4682B4\">프레데터의 초점:</font> 정조준(아이언 사이트) 시 <font color=\"#87CEEB\">반동</font>이 <font color=\"#FFFFFF\">25%</font> 감소하고 무기 흔들림이 줄어듭니다.",
+    "deluxeDesc": "<font color=\"#4682B4\">프레데터의 초점:</font> 정조준(아이언 사이트) 시 <font color=\"#87CEEB\">반동</font>이 <font color=\"#FFFFFF\">50%</font> 감소하고 무기 흔들림이 완전히 사라집니다."
+  },
+  "AnvilsEcho": {
+    "standardDesc": "<font color=\"#FFFFFF\">5번째 공격</font>마다 <font color=\"#FFD700\">환영의 메아리</font>를 발사하여 <font color=\"#FFFFFF\">+50%</font>의 추가 피해를 입힙니다.",
+    "deluxeDesc": "<font color=\"#FFFFFF\">3번째 공격</font>마다 <font color=\"#FFD700\">환영의 메아리</font>를 발사하여 <font color=\"#FFFFFF\">+50%</font>의 추가 피해를 입힙니다."
+  },
+  "Jackpot": {
+    "standardDesc": "ZED를 처치할 때마다 <font color=\"#ff3399\">0.5% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">350 도쉬</font>를 획득합니다.",
+    "deluxeDesc": "ZED를 처치할 때마다 <font color=\"#ff3399\">1% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">700 도쉬</font>를 획득합니다."
+  },
+  "PolymorphicSynthesis": {
+    "standardDesc": "<font color=\"#c77dff\">다형성 합성:</font> 현재 활성화된 <font color=\"#e0aaff\">유틸리티 버프</font> 1개당 <font color=\"#FFFFFF\">+1</font>의 관통력을 얻습니다. 현재 활성화된 <font color=\"#e0aaff\">공격력 버프</font> 1개당 예비 탄약이 <font color=\"#FFFFFF\">+8%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#c77dff\">다형성 합성:</font> 현재 활성화된 <font color=\"#e0aaff\">유틸리티 버프</font> 1개당 <font color=\"#FFFFFF\">+2</font>의 관통력을 얻습니다. 현재 활성화된 <font color=\"#e0aaff\">공격력 버프</font> 1개당 예비 탄약이 <font color=\"#FFFFFF\">+15%</font> 증가합니다."
+  },
+  "Blight": {
+    "standardDesc": "공격 시 속박력이 <font color=\"#399c0e\">7.5</font> 증가합니다. 독성 피해를 입힐 경우 속박력이 <font color=\"#8fce00\">폭발적으로 증가</font>합니다.",
+    "deluxeDesc": "공격 시 속박력이 <font color=\"#b346ea\">15</font> 증가합니다. 독성 피해를 입힐 경우 속박력이 <font color=\"#8fce00\">폭발적으로 증가</font>합니다."
+  },
+  "CurseOfStone": {
+    "standardDesc": "<font color=\"#8B008B\">돌의 저주:</font> 적 타격 시 <font color=\"#FFFFFF\">3% 확률</font>로 적에게 <font color=\"#FFD700\">저주</font>를 내립니다. 저주받은 적은 <font color=\"#FFFFFF\">5초</font> 동안 모든 출처로부터 <font color=\"#FF6666\">두 배의 피해</font>를 받습니다.",
+    "deluxeDesc": "<font color=\"#8B008B\">돌의 저주(디럭스):</font> 적 타격 시 <font color=\"#FFFFFF\">5% 확률</font>로 적에게 <font color=\"#FFD700\">저주</font>를 내립니다. 저주받은 적은 <font color=\"#FFFFFF\">5초</font> 동안 모든 출처로부터 <font color=\"#FF6666\">두 배의 피해</font>를 받습니다. <font color=\"#FFD700\">저주받은 적이 죽으면 주변 적에게 저주가 퍼집니다.</font>"
+  },
+  "GorgonsCurse": {
+    "standardDesc": "<font color=\"#8B008B\">고르곤의 저주:</font> 받는 피해가 <font color=\"#FF6666\">+40%</font> 증가하지만, 가하는 피해가 <font color=\"#66FF66\">+40%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#8B008B\">고르곤의 저주(디럭스):</font> 받는 피해가 <font color=\"#FF6666\">+80%</font> 증가하지만, 가하는 피해가 <font color=\"#66FF66\">+80%</font> 증가합니다."
+  },
+  "NestOfVipers": {
+    "standardDesc": "<font color=\"#8B008B\">독사의 둥지:</font> <font color=\"#FFFFFF\">5초 이상</font> 제자리에 가만히 서 있으면 <font color=\"#00FF00\">독구름</font>이 생성되어 <font color=\"#FFFFFF\">4m</font> 이내의 적에게 <font color=\"#FFFFFF\">초당 3의 피해</font>를 입힙니다.",
+    "deluxeDesc": "<font color=\"#8B008B\">독사의 둥지(디럭스):</font> <font color=\"#FFFFFF\">3초 이상</font> 제자리에 가만히 서 있으면 <font color=\"#00FF00\">독구름</font>이 생성되어 <font color=\"#FFFFFF\">6m</font> 이내의 적에게 <font color=\"#FFFFFF\">초당 5의 피해</font>를 입힙니다. 추가로, 움직이더라도 <font color=\"#FFD700\">구름이 10초 동안 당신을 따라다닙니다.</font>"
+  },
+  "PetrifyingPresence": {
+    "standardDesc": "<font color=\"#8B008B\">석화하는 존재:</font> 공격 시 <font color=\"#FFFFFF\">10% 확률</font>로 적을 <font color=\"#FFD700\">석화</font>시킵니다(<font color=\"#FF6666\">비틀거림 효과가 두 배</font>가 됩니다).",
+    "deluxeDesc": "<font color=\"#8B008B\">석화하는 존재(디럭스):</font> 공격 시 <font color=\"#FFFFFF\">20% 확률</font>로 적을 <font color=\"#FFD700\">석화</font>시킵니다(<font color=\"#FF6666\">비틀거림 효과가 두 배</font>가 됩니다). 추가로, 석화된 적은 모든 공격으로부터 <font color=\"#66FF66\">+50%</font>의 추가 피해를 받습니다."
+  },
+  "ShedSkin": {
+    "standardDesc": "<font color=\"#8B008B\">허물 벗기:</font> 3초 이내에 <font color=\"#FFFFFF\">100 이상</font>의 피해를 입으면, <font color=\"#FFFFFF\">8초 동안 6.67%의 피해 저항</font>을 얻습니다 (재사용 대기시간 30초).",
+    "deluxeDesc": "<font color=\"#8B008B\">허물 벗기(디럭스):</font> 3초 이내에 <font color=\"#FFFFFF\">100 이상</font>의 피해를 입으면, <font color=\"#FFFFFF\">12초 동안 13.33%의 피해 저항</font>을 얻습니다 (재사용 대기시간 20초)."
+  },
+  "VenomExtraction": {
+    "standardDesc": "<font color=\"#8B008B\">독 추출:</font> <font color=\"#00FF00\">독에 걸린 적을 처치하면 <font color=\"#FFFFFF\">10초 동안 피해량이 10% 증가</font>합니다.</font>",
+    "deluxeDesc": "<font color=\"#8B008B\">독 추출(디럭스):</font> <font color=\"#00FF00\">독에 걸린 적을 처치하면 <font color=\"#FFFFFF\">10초 동안 피해량이 20% 증가</font>하며, 이는 <font color=\"#FFD700\">최대 5회까지 중첩됩니다</font> (최대 100%).</font>"
+  },
+  "TaxLoopholes": {
+    "standardDesc": "6000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
+    "deluxeDesc": "6000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다."
   }
 }
