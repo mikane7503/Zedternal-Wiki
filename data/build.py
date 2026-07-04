@@ -243,7 +243,13 @@ def split_tiers(raw_values):
 RECONCILE_UNIT_PATTERNS = {
     "percent": re.compile(r"[+-]?\d+(?:\.\d+)?%"),
     "seconds": re.compile(r"\d+(?:\.\d+)?\s*초"),
-    "currency": re.compile(r"[\d,]+(?:\.\d+)?\s*도쉬"),
+    # Lookahead-only: the number often sits in its own <font> span, closed
+    # before the literal "도쉬" label (e.g. "<font ...>8</font> 도쉬") -- a
+    # greedy match-and-replace of the whole span would eat that closing tag.
+    # Matching just the digits and leaving the label (and any tag) untouched
+    # keeps the surrounding markup intact; see the "currency" queue below,
+    # which supplies bare numbers instead of the full "N 도쉬" display string.
+    "currency": re.compile(r"[\d,]+(?:\.\d+)?(?=(?:</font>)?\s*도쉬)"),
 }
 
 HEALTH_BARE_RE = re.compile(r"(체력(?:</font>)?[^<>\d]*(?:<font[^>]*>)?)(\d+(?:\.\d+)?)(%?)")
@@ -401,7 +407,10 @@ def _attempt_reconcile(raw_text, tier_entries, percent_pattern, percent_display_
     queues = {
         "percent": [percent_display_fn(e) for e in percent_vals],
         "seconds": [e["display"] for e in tier_entries if e["unit"] == "seconds"],
-        "currency": [e["display"] for e in tier_entries if e["unit"] == "currency"],
+        # Bare number only -- the "currency" pattern above matches just the
+        # digits (see its lookahead comment), so the label text already in
+        # the sentence must be left in place, not duplicated.
+        "currency": [f"{e['value']:,.0f}" for e in tier_entries if e["unit"] == "currency"],
     }
     for unit, pattern in patterns.items():
         if len(pattern.findall(raw_text)) != len(queues[unit]):
@@ -723,7 +732,7 @@ IMPLICIT_SCALING_COUNTS = {
 # Advanced perks manually verified end-to-end against the current ini (every
 # number, every skill) -- shown with a "밸런싱 완료" badge instead of the
 # generic in-flux test warning. Hand-maintained list, not inferred.
-BALANCE_COMPLETE_PERKS = {"TimeTraveler", "Bulwark", "Riot", "Voodoo"}
+BALANCE_COMPLETE_PERKS = {"TimeTraveler", "Bulwark", "Riot", "Voodoo", "Headhunter", "Scavenger", "Taskmaster"}
 
 
 def normalize_terminology(value):

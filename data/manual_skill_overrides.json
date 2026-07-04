@@ -176,5 +176,144 @@
   "TaxLoopholes": {
     "standardDesc": "6000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
     "deluxeDesc": "6000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다."
+  },
+  "EndlessRampage": {
+    "standardDesc": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+50%</font> 더 오래 지속됩니다.",
+    "deluxeDesc": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+100%</font> 더 오래 지속됩니다.",
+    "_note": "KOR 원문 수치(50%/100%)가 이미 ZedTimeExtension=0.5/1.0과 일치. ZedTimeExtension 키가 다른 스킬(GlacialEndurance)에서는 초 단위로 쓰여 자동 분류가 seconds로 고정되는 바람에 조정 파이프라인이 실패해 수동 등록."
+  },
+  "Chronoshift": {
+    "standardDesc": "<font color=\"#66cc00\">크로노시프트</font> 능력을 잠금 해제합니다. 사용 시 <font color=\"#00ffff\">5초</font> 동안 <font color=\"#ffaa33\">ZED 타임</font>을 즉시 발동합니다. 재사용 대기시간: <font color=\"#ff9900\">90초</font>.",
+    "deluxeDesc": "<font color=\"#66cc00\">크로노시프트(디럭스)</font> 능력을 잠금 해제합니다. 사용 시 <font color=\"#00ffff\">8초</font> 동안 <font color=\"#ffaa33\">ZED 타임</font>을 즉시 발동합니다. 재사용 대기시간: <font color=\"#ff9900\">90초</font>.",
+    "_note": "KOR 원문 수치(5초/8초)가 ZedTimeDurations=5/8과 이미 일치. 재사용 대기시간 90초는 두 티어 공통 하드코딩 값이라 조정 파이프라인이 개수 불일치로 실패해 수동 등록."
+  },
+  "Pyroclasm": {
+    "standardDesc": "30초마다 다음번에 가하는 화염 또는 폭발 속성 공격의 피해량이 +50% 증가합니다.",
+    "deluxeDesc": "18초마다 다음번에 가하는 화염 또는 폭발 속성 공격의 피해량이 +125% 증가합니다.",
+    "_note": "KOR 원문 수치(+50%/+125%)가 DamageBonus=0.5/1.25와 이미 일치. 재사용 대기시간(30초/18초)이 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "SanctifiedRounds": {
+    "standardDesc": "아군을 치유한 직후, <font color=\"#eeeeff\">5초</font> 동안 자신의 <font color=\"#ff4444\">피해량이 10%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유한 직후, <font color=\"#eeeeff\">5초</font> 동안 자신의 <font color=\"#ff4444\">피해량이 25%</font> 증가합니다.",
+    "_note": "KOR 원문은 20%/50%였으나 KFZedternalUnlimited.ini의 Damage=0.1/0.25(메딕트리 정밀조사 축소, 2026-07-02, 구 0.2/0.5)로 절반 조정되어 10%/25%로 수정."
+  },
+  "Hivesight": {
+    "standardDesc": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있으며, 은신 탐지 범위가 <font color=\"#77d914\">+50%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있으며, 은신 탐지 범위가 <font color=\"#77d914\">+200%</font> 증가하여 훨씬 더 멀리서 은신한 ZED를 감지할 수 있습니다.",
+    "_note": "KOR 원문에 CloakDetectionBonus=0.5/2.0 수치가 아예 빠져 있어, 원문 문구를 유지하며 ini 값(+50%/+200%)을 직접 추가함."
+  },
+  "LifeTap": {
+    "standardDesc": "<font color=\"#B40028\">생명력 흡수:</font> <font color=\"#FF6464\">흡수(사이펀)된</font> 적 한 명당 의료 다트 재충전 시간이 <font color=\"#FFFFFF\">-6%</font> 감소합니다. (8명 흡수 시 최대 <font color=\"#FFFFFF\">-48%</font>)",
+    "deluxeDesc": "<font color=\"#FFD700\">[디럭스]</font> <font color=\"#B40028\">생명력 흡수:</font> <font color=\"#FF6464\">흡수(사이펀)된</font> 적 한 명당 의료 다트 재충전 시간이 <font color=\"#FFFFFF\">-10%</font> 감소합니다. (8명 흡수 시 최대 <font color=\"#FFFFFF\">-80%</font>)",
+    "_note": "KOR 원문 수치(-6%/-10%, 8명 누적 -48%/-80%)가 RechargeReductionPerSiphon=0.06/0.10과 이미 일치(0.06*8=0.48, 0.10*8=0.8). 문장 안에 퍼센트 토큰이 2개(단일값+누적값)라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "CeaseAndDesist": {
+    "standardDesc": "<font color=\"#f923be\">스토커</font>를 처치할 때마다 <font color=\"#66cc00\">1 도쉬</font>를 추가로 획득합니다.",
+    "deluxeDesc": "<font color=\"#f923be\">스토커</font>를 처치할 때마다 <font color=\"#66cc00\">2 도쉬</font>를 추가로 획득합니다.",
+    "_note": "KOR 원문 표준 설명에 수치가 아예 빠져 있어(\"추가 도쉬\"), 디럭스 설명과 같은 문형으로 Dosh=1(표준)/2(디럭스) 수치를 추가함."
+  },
+  "Feminist": {
+    "standardDesc": "<font color=\"#66cc00\">패트리아크</font>를 처치할 때마다 <font color=\"#ff3399\">200 도쉬</font>를 추가로 얻습니다.",
+    "deluxeDesc": "<font color=\"#66cc00\">패트리아크</font>를 처치할 때마다 <font color=\"#ff3399\">300 도쉬</font>를 추가로 얻습니다.",
+    "_note": "KOR 원문 표준 설명에 수치가 빠져 있어, Dosh=200(표준)/300(디럭스) 수치를 추가함."
+  },
+  "NoCloneZone": {
+    "standardDesc": "<font color=\"#ff3399\">한스 볼터</font>를 처치할 때마다 <font color=\"#66cc00\">200 도쉬</font>를 추가로 획득합니다.",
+    "deluxeDesc": "<font color=\"#ff3399\">한스 볼터</font>를 처치할 때마다 <font color=\"#66cc00\">300 도쉬</font>를 추가로 획득합니다.",
+    "_note": "KOR 원문 표준 설명에 수치가 빠져 있어, Dosh=200(표준)/300(디럭스) 수치를 추가함."
+  },
+  "GrimTithe": {
+    "standardDesc": "<font color=\"#CC0000\">그림 십일조:</font> 킬당 <font color=\"#FFFFFF\">2</font> <font color=\"#FFD700\">도쉬</font>씩 누적되어, 웨이브 종료 시 <font color=\"#FFAA00\">일시불</font>로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
+    "deluxeDesc": "<font color=\"#CC0000\">그림 십일조:</font> 킬당 <font color=\"#FFFFFF\">4</font> <font color=\"#FFD700\">도쉬</font>씩 누적되어, 웨이브 종료 시 <font color=\"#FFAA00\">일시불</font>로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
+    "_note": "KOR 원문 디럭스가 '5'였으나 DoshPerKill=2/4와 불일치하여 '4'로 수정."
+  },
+  "Resourceful": {
+    "standardDesc": "탄약 상자에서 획득하는 <font color=\"#ff3399\">탄약량</font>이 <font color=\"#66cc00\">100%</font> 증가합니다.",
+    "deluxeDesc": "탄약 상자에서 획득하는 <font color=\"#ff3399\">탄약량</font>이 <font color=\"#66cc00\">200%</font> 증가합니다.",
+    "_note": "KOR 원문은 250%/400%였으나 KFZedternalUnlimited.ini의 Ammo=1.0/2.0(구 2.5/4.0)로 조정되어 100%/200%로 수정."
+  },
+  "Hypothermia": {
+    "standardDesc": "모든 무기가 타격 시 <font color=\"#0bf1f1\">저체온증</font> 효과를 적용하여, ZED의 속도를 늦추고 초당 <font color=\"#15d7fa\">무기 피해량의 5%</font>만큼 지속 피해를 입힙니다.",
+    "deluxeDesc": "모든 무기가 타격 시 <font color=\"#0bf1f1\">저체온증</font> 효과를 적용하여, ZED의 속도를 늦추고 초당 <font color=\"#15d7fa\">무기 피해량의 10%</font>만큼 지속 피해를 입힙니다.",
+    "_note": "KOR 원문이 '소량의 피해'/'중간 정도의 피해'로만 서술되어 수치가 없어, DamageFactor=0.05/0.10 값을 직접 추가함."
+  },
+  "AvalancheProtocol": {
+    "standardDesc": "적을 처치하면 주변 <font color=\"#77d914\">8m</font> 내의 모든 적이 <font color=\"#15d7fa\">2.5의 피해</font>를 입고 <font color=\"#FFAA33\">5초</font> 동안 속도가 <font color=\"#87CEEB\">느려집니다.</font>",
+    "deluxeDesc": "적을 처치하면 주변 <font color=\"#77d914\">8m</font> 내의 모든 적이 <font color=\"#15d7fa\">5의 피해</font>를 입고 <font color=\"#FFAA33\">5초</font> 동안 속도가 <font color=\"#87CEEB\">느려집니다.</font>",
+    "_note": "KOR 원문은 5/10이었으나 AvalancheDamage=2.5/5와 정확히 2배 차이가 나 ini 기준으로 절반 수정."
+  },
+  "GlacialEndurance": {
+    "standardDesc": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">2초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">4초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
+    "_note": "KOR 원문 수치(2초/4초)가 ZedTimeExtension=2/4와 이미 일치. 두 티어 공통인 +100% 피해량은 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "IceArmor": {
+    "standardDesc": "전투 중이 아닐 때 <font color=\"#87CEEB\">10</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
+    "deluxeDesc": "전투 중이 아닐 때 <font color=\"#87CEEB\">20</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
+    "_note": "KOR 원문 수치(10/20)가 ArmorBonus=10/20과 이미 일치. 두 티어 공통인 '3초마다 1씩'이 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "QuiverMastery": {
+    "standardDesc": "모든 <font color=\"#77d914\">활과 석궁</font> 무기의 <font color=\"#87CEEB\">예비 탄약 용량</font>이 <font color=\"#15d7fa\">100%</font> 증가합니다.",
+    "deluxeDesc": "모든 <font color=\"#77d914\">활과 석궁</font> 무기의 <font color=\"#87CEEB\">예비 탄약 용량</font>이 <font color=\"#15d7fa\">200%</font> 증가합니다.",
+    "_note": "KOR 원문은 75%/150%였으나 SpareAmmo=1.0/2.0과 불일치하여 100%/200%로 수정."
+  },
+  "DeathChill": {
+    "standardDesc": "<font color=\"#4682B4\">죽음의 냉기:</font> 5번째 처치마다 대상의 시체에서 <font color=\"#FFFFFF\">냉기 폭발</font>이 일어납니다. 처치 카운트는 <font color=\"#F0F8FF\">8초</font> 후에 초기화됩니다.",
+    "deluxeDesc": "<font color=\"#4682B4\">죽음의 냉기:</font> 3번째 처치마다 대상의 시체에서 <font color=\"#FFFFFF\">강력한 냉동 폭발</font>이 일어납니다. 처치 카운트는 <font color=\"#F0F8FF\">8초</font> 후에 초기화됩니다.",
+    "_note": "KOR 원문 수치(5번째/3번째)가 KillThreshold=5/3과 이미 일치. 두 티어 공통인 '8초'가 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "FaminesTouch": {
+    "standardDesc": "<font color=\"#4682B4\">기근의 손길:</font> 체력이 <font color=\"#FFFFFF\">50% 미만</font>인 좀비에게 <font color=\"#F0F8FF\">20%</font>의 <font color=\"#87CEEB\">추가 피해</font>를 입힙니다.",
+    "deluxeDesc": "<font color=\"#4682B4\">기근의 손길:</font> 체력이 <font color=\"#FFFFFF\">50% 미만</font>인 좀비에게 <font color=\"#87CEEB\">50%</font>의 <font color=\"#F0F8FF\">추가 피해</font>를 입힙니다.",
+    "_note": "KOR 원문 디럭스가 '대폭 증가된'으로만 서술되어 수치가 없어 Damage=0.5 값을 직접 추가. 표준(체력 임계값 50% + 피해 보너스 20%)은 문장 내 퍼센트 토큰이 2개라 조정 파이프라인이 실패해 함께 수동 등록."
+  },
+  "RavenousStrikes": {
+    "standardDesc": "<font color=\"#4682B4\">굶주린 공격:</font> 좀비를 처치하면 <font color=\"#F0F8FF\">5초</font> 동안 다음 공격의 <font color=\"#87CEEB\">피해량</font>이 <font color=\"#FFFFFF\">+25%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#4682B4\">굶주린 공격:</font> 좀비를 처치하면 <font color=\"#F0F8FF\">5초</font> 동안 다음 공격의 <font color=\"#87CEEB\">피해량</font>이 <font color=\"#FFFFFF\">+60%</font> 증가합니다.",
+    "_note": "KOR 원문 수치(+25%/+60%)가 Damage=0.25/0.6과 이미 일치. 두 티어 공통인 '5초'가 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "ApexMark": {
+    "standardDesc": "<font color=\"#FFD700\">에이펙스 마크:</font> <font color=\"#FF6666\">보스</font>를 처치하면 <font color=\"#FFFFFF\">3초</font> 동안 모든 좀비의 트로피 드롭률이 <font color=\"#87CEEB\">100%</font>로 고정됩니다.",
+    "deluxeDesc": "<font color=\"#FFD700\">에이펙스 마크:</font> <font color=\"#FF6666\">보스</font>를 처치하면 <font color=\"#FFFFFF\">5초</font> 동안 모든 좀비의 트로피 드롭률이 <font color=\"#87CEEB\">100%</font>로 고정됩니다.",
+    "_note": "KOR 원문 수치(3초/5초)가 Duration=3/5와 이미 일치. 두 티어 공통인 '100%'가 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "FeedingFrenzy": {
+    "standardDesc": "<font color=\"#FFD700\">먹이 광란:</font> 트로피를 획득하면 <font color=\"#87CEEB\">6초</font> 동안 <font color=\"#FF6666\">발사 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#FFD700\">먹이 광란:</font> 트로피를 획득하면 <font color=\"#87CEEB\">6초</font> 동안 <font color=\"#FF6666\">발사 속도</font>가 <font color=\"#FFFFFF\">+60%</font> 증가합니다.",
+    "_note": "KOR 원문 수치(+30%/+60%)가 FireRateBonus=0.3/0.6과 이미 일치. 두 티어 공통인 '6초'가 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "Taxidermist": {
+    "standardDesc": "<font color=\"#FFD700\">박제사:</font> <font color=\"#FFFFFF\">20%</font> 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 <font color=\"#87CEEB\">보존</font>됩니다. 중첩 시: <font color=\"#FFFFFF\">20%</font> 확률로 인벤토리의 무작위 트로피 수량이 <font color=\"#87CEEB\">+1</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#FFD700\">박제사:</font> <font color=\"#FFFFFF\">40%</font> 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 <font color=\"#87CEEB\">보존</font>됩니다. 중첩 시: <font color=\"#FFFFFF\">40%</font> 확률로 인벤토리의 무작위 트로피 수량이 <font color=\"#87CEEB\">+1</font> 증가합니다.",
+    "_note": "KOR 원문 수치(20%/40%)가 PreserveChance=0.2/0.4와 이미 일치. 같은 값이 한 문장에 두 번 나와 조정 파이프라인이 개수 불일치로 실패해 수동 등록."
+  },
+  "WildHunt": {
+    "standardDesc": "<font color=\"#FFD700\">와일드 헌트:</font> 획득하는 5번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 <font color=\"#87CEEB\">보너스 중복</font> 효과를 얻습니다.",
+    "deluxeDesc": "<font color=\"#FFD700\">와일드 헌트:</font> 획득하는 모든 5번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 <font color=\"#87CEEB\">보너스 중복</font> 효과를 얻습니다.",
+    "_note": "KOR 원문 디럭스가 '3번째'였으나 TrophyInterval이 T2도 5로 고정(트로피 드랍 가속 억제, Predator 확정OP 완화)되어 '5번째'로 수정."
+  },
+  "ChimeraProtocol": {
+    "standardDesc": "<font color=\"#c77dff\">키메라 프로토콜:</font> 현재 활성화된 버프 카테고리 1개당 피해량이 <font color=\"#FFFFFF\">+5%</font> 증가합니다 (4개 모두 활성화 시 최대 <font color=\"#FFFFFF\">+20%</font>).",
+    "deluxeDesc": "<font color=\"#c77dff\">키메라 프로토콜:</font> 현재 활성화된 버프 카테고리 1개당 피해량이 <font color=\"#FFFFFF\">+8%</font> 증가합니다 (4개 모두 활성화 시 최대 <font color=\"#FFFFFF\">+32%</font>).",
+    "_note": "KOR 원문 수치(+5%/+8%, 4배 누적 +20%/+32%)가 DamagePerCategory=0.05/0.08과 이미 일치(4배 계산 포함). 문장 안에 퍼센트 토큰이 2개(단일값+누적값)라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "EnvenomedArsenal": {
+    "standardDesc": "무기를 교체하면 다음 <font color=\"#399c0e\">3번의 공격이 확정적으로 독 효과</font>를 적용합니다. <font color=\"#ebd402\">무기 전환 속도가 25% 빨라집니다</font>.",
+    "deluxeDesc": "무기를 교체하면 다음 <font color=\"#b346ea\">5번의 공격이 확정적으로 독 효과</font>를 적용합니다. <font color=\"#ebd402\">무기 전환 속도가 25% 빨라집니다</font>.",
+    "_note": "KOR 원문에 PoisonDamage 수치는 언급되지 않으며(3번/5번 공격 횟수와 25% 전환 속도만 서술), 두 티어 공통인 '25%'가 조정 파이프라인을 실패시켜 원문 그대로 수동 등록."
+  },
+  "AthenasWrath": {
+    "standardDesc": "<font color=\"#8B008B\">아테나의 분노:</font> 지난 <font color=\"#FFFFFF\">10초</font> 이내에 자신에게 <font color=\"#FF6666\">피해를 입힌</font> 적에게 <font color=\"#FFFFFF\">+50%</font>의 피해를 입힙니다.",
+    "deluxeDesc": "<font color=\"#8B008B\">아테나의 분노(디럭스):</font> 지난 <font color=\"#FFFFFF\">10초</font> 이내에 자신에게 <font color=\"#FF6666\">피해를 입힌</font> 적에게 <font color=\"#FFFFFF\">+75%</font>의 피해를 입히며, 이 효과는 <font color=\"#FFFFFF\">동일한 유형의 모든 적에게 적용됩니다.</font>",
+    "_note": "KOR 원문 수치(+50%/+75%)가 DamageBonus=0.5/0.75와 이미 일치. 두 티어 공통인 '10초'가 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+  },
+  "ToxicImmunity": {
+    "deluxeDesc": "<font color=\"#8B008B\">독성 면역(디럭스):</font> <font color=\"#FFD700\">독에 완전히 면역</font>되며, <font color=\"#00FF00\">독 피해를 받을 때 오히려 체력을 회복</font>합니다.",
+    "_note": "디럭스 티어는 '% 저항'이 아닌 '완전 면역+반사 회복'으로 효과 자체가 질적으로 바뀌어 PoisonResistance=0.166667(16.67%) 수치를 문장에 넣는 것이 부정확함. 원문 그대로 수동 등록(표준 티어는 자동 조정이 정상 동작해 그대로 둠)."
+  },
+  "HighRiskInvestment": {
+    "standardDesc": "상점에서 한 번에 <font color=\"#ff3399\">4,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
+    "deluxeDesc": "상점에서 한 번에 <font color=\"#ff3399\">3,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
+    "_note": "KOR 원문은 2500/1500 도쉬였으나 MinPurchaseAmount=4000/3000과 불일치하여 수정."
   }
 }

@@ -1,3 +1,5 @@
 ZedternalRBPerkpackage_Resources/
 *.u
 __pycache__/
+/Published/
+/Published.zip

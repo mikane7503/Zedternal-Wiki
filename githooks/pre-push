@@ -1,0 +1,48 @@
+#!/bin/sh
+# Auto-syncs Published/ (local UDK compiler output) into
+# docs/downloads/ZedternalRB_KOR_Patch.zip before every push, so the wiki's
+# download button always serves whatever was most recently built locally.
+#
+# Installed by copying/symlinking this file to .git/hooks/pre-push (see
+# githooks/install.sh). Runs data/sync_published_zip.py, stages the
+# resulting zip(s) if changed, and folds them into a new commit so the
+# push includes the up-to-date download.
+
+set -e
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+
+PYTHON="$(command -v python || command -v python3 || true)"
+if [ -z "$PYTHON" ]; then
+    # Fall back to the interpreter used elsewhere in this project's dev env.
+    for candidate in \
+        "/c/Users/$USER/AppData/Local/Programs/Python/Python310/python.exe" \
+        "$LOCALAPPDATA/Programs/Python/Python310/python.exe"; do
+        if [ -x "$candidate" ]; then
+            PYTHON="$candidate"
+            break
+        fi
+    done
+fi
+
+if [ -z "$PYTHON" ]; then
+    echo "[pre-push] python not found -- skipping Published.zip sync." >&2
+    exit 0
+fi
+
+"$PYTHON" data/sync_published_zip.py || {
+    echo "[pre-push] sync_published_zip.py failed -- push aborted." >&2
+    exit 1
+}
+
+# Only the docs/downloads copy is tracked -- root Published.zip and
+# Published/ are local build artifacts (gitignored).
+git add docs/downloads/ZedternalRB_KOR_Patch.zip 2>/dev/null || true
+
+if ! git diff --cached --quiet -- docs/downloads/ZedternalRB_KOR_Patch.zip; then
+    git commit -m "Sync Published.zip download (auto, pre-push)" -- docs/downloads/ZedternalRB_KOR_Patch.zip
+    echo "[pre-push] committed refreshed Published.zip download."
+fi
+
+exit 0
