@@ -143,6 +143,17 @@ DK_SKILL_REGISTRY_RE = re.compile(
 )
 
 
+def ci_lookup(mapping, key):
+    """Case-insensitive dict lookup (exact-case match wins)."""
+    if key in mapping:
+        return mapping[key]
+    lowered = key.lower()
+    for k, v in mapping.items():
+        if k.lower() == lowered:
+            return v
+    return None
+
+
 def parse_dk_skill_registry(path):
     """[ZedternalReborn.Config_SkillUpgrade] is the game's own authoritative
     roster of which skills belong to which advanced (DK) perk -- including
@@ -970,8 +981,13 @@ def build():
         skills = []
         for short, is_disabled, disabled_note in skill_roster:
             skill_section = f"DKUpgrade_Skill_{short}"
-            skor = kor_sections.get(skill_section, {})
-            sini = main_sections.get(skill_section, [])
+            # The game's Config_SkillUpgrade registry and the KOR/main ini
+            # section headers disagree on casing for a handful of skills
+            # (registry "ShowOff" vs section "[DKUpgrade_Skill_Showoff]").
+            # UnrealScript resolves names case-insensitively so it works
+            # in-game; mirror that here or those skills read as "no data".
+            skor = ci_lookup(kor_sections, skill_section) or {}
+            sini = ci_lookup(main_sections, skill_section) or []
             cost_keys = set(SKILL_COST_STATS.get(short, []))
             signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
                            for k, v in sini if k != "MODEVERSION"]
@@ -1025,7 +1041,7 @@ def build():
                 "textFixed": std_fixed or delx_fixed,
                 "disabled": is_disabled,
                 "disabledNote": disabled_note,
-                "noData": not skor and not raw_values,
+                "noData": not skor and not raw_values and not ("standardDesc" in override or "deluxeDesc" in override),
             })
 
         rule = unlock_rules.get(key, {})

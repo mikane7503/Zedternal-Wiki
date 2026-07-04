@@ -330,7 +330,7 @@ function renderAdvDetail(key) {
 
   const descLines = p.descriptions.map(d =>
     `<div class="desc-line ${d.isCapstone ? "capstone" : ""}">${d.raw || escapeHtml(d.text)}</div>`
-  ).join("") || '<div class="empty-state" style="padding:10px">등록된 설명 없음 (하드코딩 시스템)</div>';
+  ).join("") || '<div class="empty-state" style="padding:10px">등록된 게임 내 설명이 없습니다 — 아래 시스템 규칙 섹션을 참고하세요.</div>';
   const descNote = p.descriptions.length
     ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 전직 레벨 20(만렙) 기준입니다.</div>' : "";
 
@@ -343,14 +343,14 @@ function renderAdvDetail(key) {
     <div class="skill-item ${s.disabled ? "skill-disabled" : ""}">
       <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
       ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
-      ${s.noData ? `<div class="empty-state" style="padding:10px">설명 데이터 없음 (하드코딩 시스템 — ini/지역화 파일에 수치나 문구가 전혀 없어 정확한 설명을 제공할 수 없습니다)</div>` : ""}
+      ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
       ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
       ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
       ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
     </div>
   `).join("") || (p.key === "Haunted"
     ? '<div class="empty-state mystery" style="padding:10px">🌫️ 그 어떤 기록에도 남아있지 않다 — 이 존재의 진짜 힘을 알고 싶다면, 직접 웨이브 속에서 마주하는 수밖에 없다.</div>'
-    : '<div class="empty-state" style="padding:10px">스킬 데이터 없음 (하드코딩 시스템)</div>');
+    : '<div class="empty-state" style="padding:10px">이 퍼크는 구매형 스킬 없이 시스템 자체로 작동합니다 — 위의 설명과 규칙 섹션을 참고하세요.</div>');
 
   const container = el("div", {});
   container.innerHTML = `

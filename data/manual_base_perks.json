@@ -129,7 +129,7 @@
       },
       {
         "skill": "BoneBreaker",
-        "issue": "Knockdown 값이 4개(0.1/0.15/0.25/0.3) — T1/T2 구분인지 부위별 구분인지 불명확",
+        "issue": "헤드샷 넉다운 +10%(T2 +25%), 팔다리 부위 타격 넉다운 +15%(T2 +30%) — 보너스 폭이 작아 실전 체감이 낮음",
         "severity": "watch"
       },
       {
@@ -142,9 +142,9 @@
   "Sharpshooter": {
     "name": "샤프슈터",
     "grade": "S",
-    "summary": "헤드샷 누적 화력이 강력하고 포지셔닝 선택지가 다양함. RankThemUp 스택 상한만 확인되면 더 올라갈 여지도 있음.",
+    "summary": "헤드샷 누적 화력이 강력하고 포지셔닝 선택지가 다양함. RankThemUp은 헤드샷 5연속 누적형(상한 있음)으로 확인됨.",
     "role": "헤드샷 피해량을 여러 겹으로 증폭시켜, 원거리에서 한 방에 강적을 처리하게 해주는 <font color=\"#FFD700\">정밀 사격</font> 퍼크입니다.",
-    "endgame": "Lv20에 Assassin, DeadEye, Sniper, Velocity를 전부 채우면 <font color=\"#15d7fa\">헤드샷 피해량</font>이 여러 겹으로 중첩되어, 원거리에서 거의 모든 일반 제드를 헤드샷 한 방에 처치할 수 있는 수준에 도달합니다. RankThemUp 스택 상한만 확인되면 더 높은 평가도 가능합니다.",
+    "endgame": "Lv20에 Assassin, DeadEye, Sniper, Velocity를 전부 채우면 <font color=\"#15d7fa\">헤드샷 피해량</font>이 여러 겹으로 중첩되어, 원거리에서 거의 모든 일반 제드를 헤드샷 한 방에 처치할 수 있는 수준에 도달합니다. 여기에 RankThemUp(헤드샷 5연속 유지 시 헤드샷마다 +375%)까지 얹으면 단발 화력은 전 퍼크 최상위입니다.",
     "strengths": [
       "Assassin T2(+50%) + DeadEye T2(조준 헤드샷 +25%) — 헤드샷 피해 누적 최고 수준",
       "Sniper T2(+50%, 정지 시) + Velocity T2(+60%, 원거리) — 포지셔닝 선택지 다양",
@@ -158,7 +158,7 @@
       },
       {
         "skill": "RankThemUp",
-        "issue": "T2 ExtraDamage=3.75 — Helper 기반 스택, 상한/초기화 조건 불명. 무한 누적이면 OP",
+        "issue": "헤드샷 5회를 연속 누적한 뒤 유지하는 동안 헤드샷마다 T2 +375% 추가 피해(1.5초마다 카운터 감소, 5초 미적중 시 소실) — 무한 누적은 아니지만 유지 시 화력 상승폭이 매우 큼",
         "severity": "bad"
       },
       {
@@ -210,7 +210,7 @@
       },
       {
         "skill": "SuppressionRounds + Cripple",
-        "issue": "스네어 합산 시 제드 이동을 완전히 정지시킬 수 있음 (엔진 변환식 미확인으로 정량 판정 보류)",
+        "issue": "두 스킬의 스네어(감속)를 함께 쌓으면 제드 이동을 사실상 묶어둘 수 있을 만큼 강력함",
         "severity": "watch"
       }
     ]

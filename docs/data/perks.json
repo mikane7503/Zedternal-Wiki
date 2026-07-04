@@ -450,7 +450,7 @@
     },
     {
      "skill": "BoneBreaker",
-     "issue": "Knockdown 값이 4개(0.1/0.15/0.25/0.3) — T1/T2 구분인지 부위별 구분인지 불명확",
+     "issue": "헤드샷 넉다운 +10%(T2 +25%), 팔다리 부위 타격 넉다운 +15%(T2 +30%) — 보너스 폭이 작아 실전 체감이 낮음",
      "severity": "watch"
     },
     {
@@ -490,9 +490,9 @@
    "key": "Sharpshooter",
    "name": "샤프슈터",
    "grade": "S",
-   "summary": "헤드샷 누적 화력이 강력하고 포지셔닝 선택지가 다양함. RankThemUp 스택 상한만 확인되면 더 올라갈 여지도 있음.",
+   "summary": "헤드샷 누적 화력이 강력하고 포지셔닝 선택지가 다양함. RankThemUp은 헤드샷 5연속 누적형(상한 있음)으로 확인됨.",
    "role": "헤드샷 피해량을 여러 겹으로 증폭시켜, 원거리에서 한 방에 강적을 처리하게 해주는 <font color=\"#FFD700\">정밀 사격</font> 퍼크입니다.",
-   "endgame": "Lv20에 Assassin, DeadEye, Sniper, Velocity를 전부 채우면 <font color=\"#15d7fa\">헤드샷 피해량</font>이 여러 겹으로 중첩되어, 원거리에서 거의 모든 일반 제드를 헤드샷 한 방에 처치할 수 있는 수준에 도달합니다. RankThemUp 스택 상한만 확인되면 더 높은 평가도 가능합니다.",
+   "endgame": "Lv20에 Assassin, DeadEye, Sniper, Velocity를 전부 채우면 <font color=\"#15d7fa\">헤드샷 피해량</font>이 여러 겹으로 중첩되어, 원거리에서 거의 모든 일반 제드를 헤드샷 한 방에 처치할 수 있는 수준에 도달합니다. 여기에 RankThemUp(헤드샷 5연속 유지 시 헤드샷마다 +375%)까지 얹으면 단발 화력은 전 퍼크 최상위입니다.",
    "passiveStats": [
     {
      "key": "Cfg_DamageHead",
@@ -541,7 +541,7 @@
     },
     {
      "skill": "RankThemUp",
-     "issue": "T2 ExtraDamage=3.75 — Helper 기반 스택, 상한/초기화 조건 불명. 무한 누적이면 OP",
+     "issue": "헤드샷 5회를 연속 누적한 뒤 유지하는 동안 헤드샷마다 T2 +375% 추가 피해(1.5초마다 카운터 감소, 5초 미적중 시 소실) — 무한 누적은 아니지만 유지 시 화력 상승폭이 매우 큼",
      "severity": "bad"
     },
     {
@@ -717,7 +717,7 @@
     },
     {
      "skill": "SuppressionRounds + Cripple",
-     "issue": "스네어 합산 시 제드 이동을 완전히 정지시킬 수 있음 (엔진 변환식 미확인으로 정량 판정 보류)",
+     "issue": "두 스킬의 스네어(감속)를 함께 쌓으면 제드 이동을 사실상 묶어둘 수 있을 만큼 강력함",
      "severity": "watch"
     }
    ],
@@ -2435,7 +2435,7 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 대형ZED 처치마다 MaxHealth 영구누적(정수타입이라 소숫점 축소 불가, 워치독으로 리셋방지까지 하는 구조라 완전 제거가 유일한 해법",
+     "disabledNote": "2026-07-02 제거: 대형 ZED 처치마다 최대 체력이 영구 누적되는 스킬 — 밸런스 조정이 불가능한 구조라 비활성화",
      "noData": false
     },
     {
@@ -2476,7 +2476,7 @@
       }
      ],
      "hasKorText": true,
-     "note": "체력 30%/60% 차감이 있으나 엔진 클램프(Cap_MinHealth=1)가 하한을 보장해 자멸 불가 — 적절.",
+     "note": "체력 30%/60%를 소모하지만, 체력이 1 아래로는 내려가지 않아 이 스킬만으로 죽지는 않습니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": true,
@@ -4260,7 +4260,7 @@
       }
      ],
      "hasKorText": true,
-     "note": "헤드샷 처치 확률(25%/50%)만 명시되어 있고 대상 효과 필드명은 없으나, 퍼크 컨셉(ZED타임 특화) 및 캡스톤 설명(헤드샷 시 ZED타임 연장)과 연계된 효과로 추정.",
+     "note": "처치 시 25%(디럭스 50%) 확률로 시체가 파편 폭발을 일으킵니다. ZED 타임 여부와 무관하게 항상 발동합니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": true,
@@ -5207,16 +5207,16 @@
    "passiveStats": [],
    "fixedStats": [],
    "role": "처치할 때마다 카운터를 쌓아, 임계치에 도달하면 일정 시간 동안 처치하는 적을 전부 <font color=\"#FFD700\">연쇄 폭발</font>시켜주는 강력한 트리거형 퍼크입니다.",
-   "endgame": "패시브 2종(<font color=\"#15d7fa\">피해/여분탄약 성장치</font>)은 레벨당 성장하지만, 수치가 게임 내부에 하드코딩되어 있어 정확한 값은 공개되어 있지 않습니다.",
+   "endgame": "만렙(Lv20) 기준 폭발 임계값이 <font color=\"#FFFFFF\">30킬</font>까지 내려가고 폭발 하나하나가 <font color=\"#FF4444\">피해 1,000 · 반경 4m</font>에 달해, 활성 창이 열릴 때마다 웨이브 하나를 통째로 연쇄 폭발로 지워버릴 수 있습니다. 패시브(피해/여분탄약 각 레벨당 +2%, 만렙 +40%)도 꾸준히 쌓입니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">모든 무기 피해량</font> <font color=\"#FFFFFF\">+?(하드코딩·비공개)</font>",
-     "text": "폭발 숙련도: 모든 무기 피해량 +?(하드코딩·비공개)",
+     "raw": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">모든 무기 피해량</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+     "text": "폭발 숙련도: 모든 무기 피해량 레벨업당 +2% · 만렙(Lv20) +40%",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">여분 탄약</font> <font color=\"#FFFFFF\">+?(하드코딩·비공개)</font>",
-     "text": "폭발 숙련도: 여분 탄약 +?(하드코딩·비공개)",
+     "raw": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">여분 탄약</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+     "text": "폭발 숙련도: 여분 탄약 레벨업당 +2% · 만렙(Lv20) +40%",
      "isCapstone": false
     },
     {
@@ -5235,11 +5235,80 @@
      "isCapstone": false
     }
    ],
-   "skills": [],
-   "skillCount": 0,
+   "skills": [
+    {
+     "key": "HairTrigger",
+     "name": "헤어 트리거",
+     "standardDesc": "폭발 카운터 충전에 필요한 임계값이 5킬 줄어듭니다. 활성 창 지속 시간이 +3초 연장됩니다.",
+     "deluxeDesc": "폭발 카운터 충전에 필요한 임계값이 10킬 줄어듭니다. 활성 창 지속 시간이 +6초 연장됩니다.",
+     "standardDescRaw": "폭발 카운터 충전에 필요한 임계값이 <font color=\"#FFD700\">5킬</font> 줄어듭니다. 활성 창 지속 시간이 <font color=\"#FFD700\">+3초</font> 연장됩니다.",
+     "deluxeDescRaw": "폭발 카운터 충전에 필요한 임계값이 <font color=\"#FFD700\">10킬</font> 줄어듭니다. 활성 창 지속 시간이 <font color=\"#FFD700\">+6초</font> 연장됩니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "SlowBurn",
+     "name": "슬로우 번",
+     "standardDesc": "폭발 시 지면에 불길을 남깁니다: 6초 지속, 초당 30 피해.",
+     "deluxeDesc": "폭발 시 지면에 불길을 남깁니다: 10초 지속, 초당 60 피해.",
+     "standardDescRaw": "폭발 시 지면에 불길을 남깁니다: <font color=\"#FF6633\">6초 지속</font>, <font color=\"#FFD700\">초당 30 피해</font>.",
+     "deluxeDescRaw": "폭발 시 지면에 불길을 남깁니다: <font color=\"#FF6633\">10초 지속</font>, <font color=\"#FFD700\">초당 60 피해</font>.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ApexCharge",
+     "name": "에이펙스 차지",
+     "standardDesc": "보스 처치 시 활성화 카운터가 즉시 가득 찹니다. 활성 창 내에서 보스가 폭발할 경우: 피해량 1.5배, 반경 1.25배.",
+     "deluxeDesc": "활성 창 내에서 보스가 폭발할 경우: 피해량 2.5배, 반경 1.5배. 활성 창 밖에서 보스를 처치하면 다음 사이클에 50% 보너스 스택을 추가합니다.",
+     "standardDescRaw": "보스 처치 시 활성화 카운터가 <font color=\"#FFD700\">즉시</font> 가득 찹니다. 활성 창 내에서 보스가 폭발할 경우: <font color=\"#FF4444\">피해량 1.5배, 반경 1.25배</font>.",
+     "deluxeDescRaw": "활성 창 내에서 보스가 폭발할 경우: <font color=\"#FF4444\">피해량 2.5배, 반경 1.5배</font>. 활성 창 밖에서 보스를 처치하면 다음 사이클에 <font color=\"#77d914\">50% 보너스 스택</font>을 추가합니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "DaisyChain",
+     "name": "데이지 체인",
+     "standardDesc": "폭발 시 반경 내의 생존한 적 최대 8명에게 표식을 남깁니다. 표식이 남은 적을 처치하면 시체가 폭발합니다. 표식은 20초 후에 사라집니다.",
+     "deluxeDesc": "표식 반경이 1.5배 증가하고, 최대 12명에게 표식을 남깁니다. 표식은 30초 후에 사라지며, 연쇄 폭발이 한 번 더 표식을 남길 수 있습니다.",
+     "standardDescRaw": "폭발 시 반경 내의 생존한 적 최대 <font color=\"#FFD700\">8명</font>에게 표식을 남깁니다. 표식이 남은 적을 처치하면 시체가 폭발합니다. 표식은 <font color=\"#FFFFFF\">20초</font> 후에 사라집니다.",
+     "deluxeDescRaw": "표식 반경이 <font color=\"#FFD700\">1.5배</font> 증가하고, 최대 <font color=\"#FFD700\">12명</font>에게 표식을 남깁니다. 표식은 <font color=\"#FFFFFF\">30초</font> 후에 사라지며, 연쇄 폭발이 <font color=\"#FF4444\">한 번 더</font> 표식을 남길 수 있습니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 4,
    "verdict": {
     "tag": "적절 (설계상)",
-    "note": "핵심 로직은 확인 완료. 패시브 2종(DamagePerLevel/SpareAmmoPerLevel)만 'ZedternalUnlimited_Balance' ini 파일 부재로 조정 불가 — 설계 자체는 문제 없음.",
+    "note": "소스 전체 확인 완료. 패시브 2종은 코드 기본값 +2%/레벨(만렙 +40%) — 'ZedternalUnlimited_Balance' ini 부재 시 이 기본값이 적용됨. 임계값 50-레벨, 폭발 400+30×레벨/반경 300+5×레벨 등 시스템 수치 전부 검증.",
     "grade": "S"
    },
    "grade": "S",
@@ -5247,7 +5316,13 @@
    "patchNote": null,
    "testWarning": null,
    "balanceComplete": false,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "디토네이터 시스템 규칙",
+     "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
+     "html": "<div class=\"desc-line\">좀비를 처치할 때마다 <font color=\"#FFD700\">폭발 카운터</font>가 1씩 쌓입니다. 카운터가 임계값에 도달하면 <font color=\"#FF4444\">10초 동안 활성 창</font>이 열립니다.</div><div class=\"desc-line\">임계값 = <font color=\"#FFFFFF\">50 − 퍼크 레벨</font> (Lv20 기준 30킬, 최소 1). 스킬 <font color=\"#ebc034\">헤어 트리거</font>로 5(디럭스 10) 추가 감소, 활성 창도 +3초(디럭스 +6초) 연장됩니다.</div><div class=\"desc-line\">활성 창 동안에는 <font color=\"#FFFFFF\">모든 처치</font>가 죽은 좀비 위치에서 즉시 폭발을 일으킵니다 — 피해 <font color=\"#FF4444\">400 + 레벨×30</font> (Lv20 = 1,000), 폭발 반경 <font color=\"#FFFFFF\">300 + 레벨×5 유닛</font> (Lv20 = 400 ≈ 4m). 본인과 아군은 피해를 받지 않습니다.</div><div class=\"desc-line\">활성 창 동안에는 카운터가 쌓이지 않으며, 창이 끝나면 다시 충전이 시작됩니다. 카운터는 <font color=\"#15d7fa\">웨이브를 넘어 유지</font>됩니다.</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">에이펙스 차지</font>: 보스 처치 시 카운터가 즉시 가득 찹니다. 활성 창 안에서 보스를 처치하면 그 폭발은 피해 1.5배·반경 1.25배(디럭스 2.5배·1.5배)로 강화되고, 디럭스는 다음 사이클에 임계값의 50%를 미리 충전합니다.</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">데이지 체인</font>: 폭발 반경 내 생존한 좀비 최대 8마리(디럭스 12마리, 표식 반경 1.5배)에 표식을 남기고, 표식이 남은 좀비를 처치하면 충전 중에도 연쇄 폭발이 일어납니다(표식 지속 20초/디럭스 30초).</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">슬로우 번</font>: 폭발 지점에 <font color=\"#FF6633\">불길 지대</font>를 남깁니다 — 6초간 초당 30 피해(디럭스 10초간 초당 60 피해), 범위는 폭발 반경과 동일.</div><div class=\"desc-line\">카운터 진행도·남은 활성 시간은 HUD 카드에 실시간 표시됩니다.</div>"
+    }
+   ],
    "icon": "icons/detonator.png"
   },
   {
@@ -9358,8 +9433,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#77d914\">+?(하드코딩·비공개)초</font> 연장됩니다.",
-     "text": "ZED 타임 지속 시간이 +?(하드코딩·비공개)초 연장됩니다.",
+     "raw": "<font color=\"#15d7fa\">ZED 타임 연장 가능 횟수</font>가 <font color=\"#77d914\">레벨당 +1회</font> 증가합니다 (기본 1회 → 만렙 Lv20 기준 총 21회).",
+     "text": "ZED 타임 연장 가능 횟수가 레벨당 +1회 증가합니다 (기본 1회 → 만렙 Lv20 기준 총 21회).",
      "isCapstone": false
     }
    ],
@@ -9914,7 +9989,7 @@
    "extraSections": [
     {
      "title": "갬빗 시스템 규칙",
-     "note": "게임 소스코드(DKUpgrade_Perk_Gambit)에서 직접 추출·검증한 정보입니다. 갬빗 수치는 전부 코드에 하드코딩되어 있습니다.",
+     "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
      "html": "<div class=\"desc-line\">매 웨이브 시작 시 갬빗 1개가 무작위로 발동됩니다. 추첨 가중치는 <font color=\"#c8c8c8\">일반 100</font> : <font color=\"#50a0ff\">희귀 50</font> : <font color=\"#b450ff\">전설 25</font>입니다.</div><div class=\"desc-line\">등급 해금 — <font color=\"#c8c8c8\">일반</font>: 항상 / <font color=\"#50a0ff\">희귀</font>: 퍼크 Lv10부터 / <font color=\"#b450ff\">전설</font>: 퍼크 Lv20부터 / <font color=\"#ffc832\">신화</font>: 퍼크 Lv10부터, 매 추첨마다 별도 <font color=\"#FFFFFF\">1%</font> 확률 판정에 성공하면 일반 추첨을 무시하고 등장합니다.</div><div class=\"desc-line\">목표치 = 기본 목표 + (웨이브 배율 × 현재 웨이브 번호), 최소 1. 보상 = 기본 보상 × <font color=\"#77d914\">퍼크 레벨</font>.</div><div class=\"desc-line\"><font color=\"#FF6666\">피해량</font>·<font color=\"#77d914\">이동 속도</font> 보상은 게임이 끝날 때까지 영구 누적되고(무기 기본 피해/기본 이동 속도 기준 가산), <font color=\"#FFD700\">도쉬</font>는 즉시 지급됩니다.</div><div class=\"desc-line\">처치형 갬빗은 목표 달성 즉시 완료가 확정되며, '강철 피부'·'무적'처럼 웨이브 내내 유지해야 하는 갬빗은 웨이브 종료 시 최종 판정됩니다.</div><div class=\"desc-line\">대형 좀비 판정: 스크레이크, 플레시파운드(미니 포함), 보스. 진행도와 누적 보상은 HUD에 실시간 표시됩니다.</div>"
     },
     {
@@ -11332,11 +11407,11 @@
     },
     {
      "key": "Overpower",
-     "name": "Overpower",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
+     "name": "오버파워",
+     "standardDesc": "모든 공격 피해량이 +40% 증가하고, 근접 공격에는 +75%가 추가로 붙습니다 (근접 합계 +115%).",
+     "deluxeDesc": "모든 공격 피해량이 +80% 증가하고, 근접 공격에는 +100%가 추가로 붙습니다 (근접 합계 +180%).",
+     "standardDescRaw": "<font color=\"#FF4500\">모든 공격 피해량</font>이 <font color=\"#FFFFFF\">+40%</font> 증가하고, <font color=\"#FF4500\">근접 공격</font>에는 <font color=\"#FFFFFF\">+75%</font>가 추가로 붙습니다 (근접 합계 <font color=\"#FFD700\">+115%</font>).",
+     "deluxeDescRaw": "<font color=\"#FF4500\">모든 공격 피해량</font>이 <font color=\"#FFFFFF\">+80%</font> 증가하고, <font color=\"#FF4500\">근접 공격</font>에는 <font color=\"#FFFFFF\">+100%</font>가 추가로 붙습니다 (근접 합계 <font color=\"#FFD700\">+180%</font>).",
      "rawValues": [],
      "hasKorText": false,
      "note": null,
@@ -11345,7 +11420,7 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": true
+     "noData": false
     },
     {
      "key": "Resourceful",
@@ -11413,11 +11488,11 @@
     },
     {
      "key": "Tank",
-     "name": "Tank",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
+     "name": "탱크",
+     "standardDesc": "체력이 최대치의 90% 이상일 때 받는 피해가 6.7% 감소합니다.",
+     "deluxeDesc": "체력이 최대치의 70% 이상일 때 받는 피해가 10% 감소합니다.",
+     "standardDescRaw": "체력이 최대치의 <font color=\"#FFFFFF\">90% 이상</font>일 때 <font color=\"#4169E1\">받는 피해가 6.7% 감소</font>합니다.",
+     "deluxeDescRaw": "체력이 최대치의 <font color=\"#FFFFFF\">70% 이상</font>일 때 <font color=\"#4169E1\">받는 피해가 10% 감소</font>합니다.",
      "rawValues": [],
      "hasKorText": false,
      "note": null,
@@ -11426,7 +11501,7 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": true
+     "noData": false
     },
     {
      "key": "ThreadTheNeedle",
@@ -12151,13 +12226,18 @@
    "extraSections": [
     {
      "title": "할로우 시스템 규칙",
-     "note": "게임 소스코드(DKUpgrade_Perk_Hollow + Helper, DKHollowWeaponData)에서 직접 추출·검증한 정보입니다. 스킬 트리 없이 전부 코드에 하드코딩된 무기 숙련 시스템입니다.",
-     "html": "<div class=\"desc-line\">무기마다 <font color=\"#FFFFFF\">독립적으로</font> 진행되는 <font color=\"#6B0099\">5단계 숙련</font> 시스템입니다. 순서대로: ① <font color=\"#c8c8c8\">헤드샷 처치 50회</font>(헤드샷 불가 무기는 이 단계를 자동으로 건너뜀) → ② <font color=\"#c8c8c8\">총 처치 200회</font> → ③ <font color=\"#c8c8c8\">동시 처치(관통 등으로 0.05초 내 다중 처치) 50회</font> → ④ 근접무기는 <font color=\"#c8c8c8\">근접 처치 50회</font> / 원거리무기는 <font color=\"#c8c8c8\">연속 처치(4초 내 3킬) 50회</font> → ⑤ <font color=\"#c8c8c8\">대형 좀비(스크레이크·플레시파운드·미니 포함) 처치 50회</font>.</div><div class=\"desc-line\">5단계를 모두 완료하면 해당 무기의 <font color=\"#FFD700\">할로우 변형</font>이 영구적으로 잠금 해제됩니다(계정에 저장, 재도전 불필요).</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 20(공허 숙련)</font>: 모든 단계의 목표치가 <font color=\"#FFFFFF\">절반</font>으로 감소합니다(최소 1).</div><div class=\"desc-line\"><b>할로우 무기 공통 보너스</b>(변형 장착 시 항상 적용) — <font color=\"#77d914\">피해량 +100%</font> · <font color=\"#77d914\">탄창 크기 +100%</font> · <font color=\"#77d914\">예비 탄약 +100%</font> · <font color=\"#15d7fa\">반동 -50%</font> · <font color=\"#15d7fa\">탄 퍼짐 -50%</font> · 재장전 속도 대폭 상승(공식: 1÷(1÷기존배율 + 0.5)).</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 10(공허의 부름)</font>: 무기마다 무작위 <font color=\"#FFFFFF\">20~40%</font> 체력 임계값이 배정되며, 그 이하로 체력을 깎으면 <font color=\"#ff3399\">즉사 처리</font>됩니다(보스는 임계값 <font color=\"#FFFFFF\">10~20%</font>로 절반 적용).</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 20(공허 숙련)</font>: 계정에 잠금 해제된 할로우 무기 <font color=\"#FFFFFF\">1개당</font> 모든 할로우 무기의 피해량이 <font color=\"#77d914\">+1%</font> 영구 증가합니다(전역 누적, 무기 종류 무관).</div><div class=\"desc-line\">⚠ 특정 무기별 관통력·연사속도·근접속도·강공격·이동속도·피해저항 등 개별 보너스와 아래 특수 효과가 실제로 어떤 무기에 배정되는지는 게임 내부 하드코딩 데이터 테이블(무기별 목록)에 있으며, 이번에 제공된 소스코드에는 그 배정 테이블 값이 포함되어 있지 않아 확인 불가능합니다.</div>"
+     "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
+     "html": "<div class=\"desc-line\">무기마다 <font color=\"#FFFFFF\">독립적으로</font> 진행되는 <font color=\"#6B0099\">5단계 숙련</font> 시스템입니다. 순서대로: ① <font color=\"#c8c8c8\">헤드샷 처치 50회</font>(헤드샷 불가 무기는 이 단계를 자동으로 건너뜀) → ② <font color=\"#c8c8c8\">총 처치 200회</font> → ③ <font color=\"#c8c8c8\">동시 처치(관통 등으로 0.05초 내 다중 처치) 50회</font> → ④ 근접무기는 <font color=\"#c8c8c8\">근접 처치 50회</font> / 원거리무기는 <font color=\"#c8c8c8\">연속 처치(4초 내 3킬) 50회</font> → ⑤ <font color=\"#c8c8c8\">대형 좀비(스크레이크·플레시파운드·미니 포함) 처치 50회</font>.</div><div class=\"desc-line\">5단계를 모두 완료하면 해당 무기의 <font color=\"#FFD700\">할로우 변형</font>이 영구적으로 잠금 해제됩니다(계정에 저장, 재도전 불필요).</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 20(공허 숙련)</font>: 모든 단계의 목표치가 <font color=\"#FFFFFF\">절반</font>으로 감소합니다(최소 1).</div><div class=\"desc-line\"><b>할로우 무기 공통 보너스</b>(변형 장착 시 항상 적용) — <font color=\"#77d914\">피해량 +100%</font> · <font color=\"#77d914\">탄창 크기 +100%</font> · <font color=\"#77d914\">예비 탄약 +100%</font> · <font color=\"#15d7fa\">반동 -50%</font> · <font color=\"#15d7fa\">탄 퍼짐 -50%</font> · 재장전 속도 대폭 상승(공식: 1÷(1÷기존배율 + 0.5)).</div><div class=\"desc-line\">여기에 더해 무기 계열마다 <font color=\"#FFD700\">추가 스탯 보너스</font>와 <font color=\"#b450ff\">특수 효과</font> 1종이 배정됩니다 — 아래 '무기 계열별 배정표' 참고.</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 10(공허의 부름)</font>: 무기마다 무작위 <font color=\"#FFFFFF\">20~40%</font> 체력 임계값이 배정되며, 그 이하로 체력을 깎으면 <font color=\"#ff3399\">즉사 처리</font>됩니다(보스는 임계값 <font color=\"#FFFFFF\">10~20%</font>로 절반 적용).</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 20(공허 숙련)</font>: 계정에 잠금 해제된 할로우 무기 <font color=\"#FFFFFF\">1개당</font> 모든 할로우 무기의 피해량이 <font color=\"#77d914\">+1%</font> 영구 증가합니다(전역 누적, 무기 종류 무관).</div>"
     },
     {
-     "title": "무기별 특수 효과 종류",
-     "note": "할로우 변형마다 아래 중 하나(또는 없음)가 배정되는 것으로 코드에 정의되어 있으나, 실제 어떤 무기가 어떤 효과를 받는지의 배정표는 소스에 포함되어 있지 않습니다.",
-     "html": "<table class=\"stat-table\"><tr><th>효과</th><th>발동 조건</th><th>효과</th></tr><tr><td><font color=\"#ff6600\">처형자</font> (executioner)</td><td>피격 대상 체력 40% 미만</td><td>피해량 +50%</td></tr><tr><td><font color=\"#ff6600\">정밀</font> (precision)</td><td>헤드샷 적중</td><td>피해량 +50%</td></tr><tr><td><font color=\"#ff6600\">출혈</font> (hemorrhage)</td><td>고정 적용</td><td>피해량 +20%</td></tr><tr><td><font color=\"#ff6600\">소이</font> (incendiary)</td><td>고정 적용</td><td>피해량 +20%</td></tr><tr><td><font color=\"#ff6600\">거인학살</font> (titanslayer)</td><td>대형 좀비 대상</td><td>피해량 +40%</td></tr><tr><td><font color=\"#50a0ff\">무한탄창</font> (bottomless)</td><td>고정 적용</td><td>탄창 +50% · 예비 탄약 +50% (공통 보너스에 추가 가산, 합계 탄창/탄약 +150%)</td></tr><tr><td><font color=\"#50a0ff\">과충전</font> (overcharged)</td><td>고정 적용</td><td>탄창 -30% · 연사 속도 -30%(더 빠르게, 교환형)</td></tr><tr><td><font color=\"#50a0ff\">초경량</font> (featherweight)</td><td>고정 적용</td><td>무기 전환 속도 -30% · 이동 속도 +10%</td></tr><tr><td><font color=\"#b450ff\">연쇄 번개</font> (chainlightning)</td><td>처치 시</td><td>반경 500유닛 내 좀비 최대 3마리에게 처치 피해량의 25%(최소 10) 전파</td></tr><tr><td><font color=\"#b450ff\">폭발</font> (detonation)</td><td>처치 시</td><td>반경 500유닛 내 모든 좀비에게 고정 200 피해</td></tr><tr><td><font color=\"#b450ff\">충격파</font> (stumbleengine)</td><td>처치 시</td><td>반경 400유닛 내 모든 좀비에게 강력한 넉백 + 고정 1 피해</td></tr></table>"
+     "title": "특수 효과 종류 (9종)",
+     "note": "각 할로우 무기에는 무기 계열에 따라 아래 특수 효과 중 정확히 1종이 배정됩니다.",
+     "html": "<table class=\"stat-table\"><tr><th>효과</th><th>발동 조건</th><th>효과</th></tr><tr><td><font color=\"#ff6600\">처형자</font> (executioner)</td><td>피격 대상 체력 40% 미만</td><td>피해량 +50%</td></tr><tr><td><font color=\"#ff6600\">정밀</font> (precision)</td><td>헤드샷 적중</td><td>피해량 +50%</td></tr><tr><td><font color=\"#ff6600\">출혈</font> (hemorrhage)</td><td>고정 적용</td><td>피해량 +20%</td></tr><tr><td><font color=\"#ff6600\">소이</font> (incendiary)</td><td>고정 적용</td><td>피해량 +20%</td></tr><tr><td><font color=\"#50a0ff\">무한탄창</font> (bottomless)</td><td>고정 적용</td><td>탄창 +50% · 예비 탄약 +50% (공통 보너스에 추가 가산)</td></tr><tr><td><font color=\"#50a0ff\">탄약고</font> (stockpile)</td><td>고정 적용</td><td>예비 탄약 +100% (공통 보너스에 추가 가산, 합계 +200%)</td></tr><tr><td><font color=\"#50a0ff\">초경량</font> (featherweight)</td><td>고정 적용</td><td>무기 전환 속도 +30% · 이동 속도 +10%</td></tr><tr><td><font color=\"#b450ff\">연쇄 번개</font> (chainlightning)</td><td>처치 시</td><td>반경 500유닛 내 좀비 최대 3마리에게 처치 피해량의 25%(최소 10) 전파</td></tr><tr><td><font color=\"#b450ff\">폭발</font> (detonation)</td><td>처치 시</td><td>반경 500유닛 내 모든 좀비에게 고정 200 피해</td></tr></table>"
+    },
+    {
+     "title": "무기 계열별 배정표 (전체 128종)",
+     "note": "추가 스탯은 공통 보너스 위에 가산됩니다. 쌍권총 버전은 단일 버전과 같은 배정을 받습니다.",
+     "html": "<table class=\"stat-table\"><tr><th>무기 계열</th><th>특수 효과</th><th>추가 스탯</th><th>해당 무기</th></tr><tr><td>권총·리볼버 (25종)</td><td><font color=\"#b450ff\">연쇄 번개</font></td><td>연사 속도 +10% · 이동 속도 +5%</td><td>9mm, AF2011, 블레이디드 피스톨, 치아파 리노, M1911, 데저트 이글, G18C, HRG 윈터바이트, 메딕 피스톨, 레밍턴 1858, S&W 500, HRG 93R, HRG 벅샷 리볼버 (각 쌍권총 포함)</td></tr><tr><td>SMG (10종)</td><td><font color=\"#50a0ff\">탄약고</font></td><td>연사 속도 +15% · 이동 속도 +5%</td><td>크리스, MAC-10, MP5RAS, MP7, P90, 글록 18(기관단총), UMP, 메딕 SMG, 톰슨, HRG 스터너</td></tr><tr><td>돌격소총·에너지 (17종)</td><td><font color=\"#50a0ff\">무한탄창</font></td><td>연사 속도 +10% · 관통력 +15%</td><td>AK-12, AR-15, 불펍, FAMAS, FN FAL, G36C, 레이저 커터, MKB42, SCAR, HRG 테슬런처, 도시네건, HV 스톰 캐논, 슈링크 레이 건, HRG 배리어 라이플, HRG EMP 아크 제너레이터, HRG 에너지, HRG 소닉건</td></tr><tr><td>저격소총·활 (8종)</td><td><font color=\"#b450ff\">폭발</font></td><td>관통력 +25%</td><td>센터파이어 MB464, M14 EBR, M99, 모신나강, 레일건, 윈체스터 1894, 컴파운드 보우, 석궁</td></tr><tr><td>샷건 (9종)</td><td><font color=\"#ff6600\">출혈</font></td><td>관통력 +20% · 비틀거림 +20%</td><td>AA-12, 더블배럴, 엘리펀트 건, HZ12, M4, MB500, 네일건, 사이가 12, HRG 네일건</td></tr><tr><td>LMG·미니건 (3종)</td><td><font color=\"#ff6600\">정밀</font></td><td>관통력 +10% · 받는 피해 -5%</td><td>MG3, 스토너 63A, 미니건</td></tr><tr><td>폭발물 (19종)</td><td><font color=\"#ff6600\">소이</font></td><td>비틀거림 +25%</td><td>M16 M203, 블런더버스, HRG 카붐스틱, HRG 부미, HX25, M32, M79, RPG-7, 씰 스퀼, 시커 식스, C4, 그래비티 임플로더, 마인 리컨스트럭터, ZED MKIII, HRG 볼리스틱 바운서, HRG 크레니얼 파퍼, HRG 크로스붐, HRG 로커스트, HRG 워트호그</td></tr><tr><td>화염·냉기·특수 (13종)</td><td><font color=\"#ff6600\">처형자</font></td><td>연사 속도 +10%</td><td>플레어건(쌍 포함), HRG 스코처, 드래곤즈 브레스, HRG 드래곤브레스, 마이크로웨이브 라이플, HRG 소이 라이플, 서마이트 보어, 콜크 앤 번, 화염방사기, 프리즈스로워, 마이크로웨이브 건, 허스크 캐논</td></tr><tr><td>메딕 (10종)</td><td><font color=\"#50a0ff\">초경량</font></td><td>연사 속도 +10% · 이동 속도 +5% · 받는 피해 -5%</td><td>메딕 라이플, 메딕 유탄 라이플, 메딕 샷건, 헤모고블린, HRG 인시전, 패러사이트 임플란터, HRG 힐스로워, HRG 메딕 미사일, HRG 뱀파이어, 메딕 배트</td></tr><tr><td>근접 (14종)</td><td><font color=\"#50a0ff\">초경량</font></td><td>공격 속도 +25% · 강공격 피해 +25% · 비틀거림 +15% · 이동 속도 +10% · 받는 피해 -10%</td><td>이비서레이터, 어보미네이션 액스, 파이어 액스, 이온 스러스터, 카타나, 사이드(낫), 츠바이헨더, 체인 배트, 크로벨, 메이스 & 실드, 파워 글러브, 펄버라이저, 프로스트 샷건 액스, HRG 블래스트 브롤러</td></tr></table>"
     }
    ],
    "icon": "icons/hollow.png"
@@ -12481,37 +12561,67 @@
     },
     {
      "key": "ShowOff",
-     "name": "ShowOff",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [],
-     "hasKorText": false,
-     "note": null,
+     "name": "과시하다",
+     "standardDesc": "주변에 있는 적 1마리당 피해량이 5%씩 증가합니다 (최대 10마리, +50%).",
+     "deluxeDesc": "주변에 있는 적 1마리당 피해량이 10%씩 증가합니다 (최대 10마리, +100%).",
+     "standardDescRaw": "주변에 있는 적 <font color=\"#FFFFFF\">1마리당</font> <font color=\"#66cc00\">피해량</font>이 <font color=\"#ff3399\">5%</font>씩 증가합니다 (최대 10마리, <font color=\"#ff3399\">+50%</font>).",
+     "deluxeDescRaw": "주변에 있는 적 <font color=\"#FFFFFF\">1마리당</font> <font color=\"#66cc00\">피해량</font>이 <font color=\"#ff3399\">10%</font>씩 증가합니다 (최대 10마리, <font color=\"#ff3399\">+100%</font>).",
+     "rawValues": [
+      {
+       "key": "DamagePerZed",
+       "label": "제드 당 피해량",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "DamagePerZed",
+       "label": "제드 당 피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      }
+     ],
+     "hasKorText": true,
+     "note": "'주변' 판정 반경은 8m이며 0.5초마다 갱신됩니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": true
+     "noData": false
     },
     {
      "key": "TrueShot",
-     "name": "TrueShot",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [],
-     "hasKorText": false,
+     "name": "트루샷",
+     "standardDesc": "방어구가 없을 때 모든 무기의 피해량이 +30% 증가합니다. 방어구가 있는 동안에는 헤드샷 피해에만 적용됩니다.",
+     "deluxeDesc": "방어구가 없을 때 모든 무기의 피해량이 +60% 증가합니다. 방어구가 있는 동안에는 헤드샷 피해에만 적용됩니다.",
+     "standardDescRaw": "<font color=\"#be4d25\">방어구가 없을 때</font> <font color=\"#66cc00\">모든 무기의 피해량</font>이 <font color=\"#ff3399\">+30%</font> 증가합니다. 방어구가 있는 동안에는 <font color=\"#66cc00\">헤드샷 피해</font>에만 적용됩니다.",
+     "deluxeDescRaw": "<font color=\"#be4d25\">방어구가 없을 때</font> <font color=\"#66cc00\">모든 무기의 피해량</font>이 <font color=\"#ff3399\">+60%</font> 증가합니다. 방어구가 있는 동안에는 <font color=\"#66cc00\">헤드샷 피해</font>에만 적용됩니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해량",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": true
+     "noData": false
     },
     {
      "key": "Untouchable",
@@ -13363,7 +13473,7 @@
       }
      ],
      "hasKorText": true,
-     "note": "DamagePerStack의 최대 스택 수(MaxStacks)가 INI에 명시되어 있지 않아 무한 누적이 가능합니다 — 장기전에서 특히 강력합니다.",
+     "note": "동상 스택은 대상 하나당 최대 5개까지 쌓이며 스택당 10초간 유지됩니다 (활·석궁 계열에만 적용).",
      "isPatched": false,
      "patchNote": null,
      "textFixed": true,
@@ -13562,14 +13672,14 @@
    ],
    "skillCount": 10,
    "verdict": {
-    "tag": "OP 소지",
-    "note": "FrostbiteArrows의 최대 스택 수가 INI에 명시되어 있지 않음 — 상한 없는 스택형 DoT는 장기전에서 스노우볼될 가능성이 높아 'OP 소지'로 판단. 단일 스킬 이슈로 퍼크 전체가 무너질 정도는 아님.",
+    "tag": "적절 (검증 완료)",
+    "note": "FrostbiteArrows는 소스 확인 결과 대상당 최대 5스택(스택당 10초 유지) 상한이 하드코딩되어 있음 — 기존 '무한 누적 우려'는 해소. T2 기준 대상당 최대 +75%로 강하지만 상한이 있어 OP 아님.",
     "grade": "S"
    },
    "grade": "S",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000; 구 0.030→0.020→0.025→0.0125; 구 0.030000; 구 5.0→3.0→4.0→2.0",
-   "testWarning": "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다.",
+   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
    "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/cryophilite.png"
@@ -13596,7 +13706,7 @@
    ],
    "fixedStats": [],
    "role": "좀비를 처치해 모은 트로피 세트로 영구 보너스를 겹겹이 쌓아 무한히 강해지게 만들어주는 <font color=\"#FFD700\">컬렉션형 최종 샤프슈터</font> 심화 퍼크입니다.",
-   "endgame": "3세트를 완성하면 트로피가 <font color=\"#15d7fa\">5개 슬롯에 무한 중첩</font>되는 완전 하드코딩 시스템이라, 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있는 전체 최고 위험 퍼크입니다. 반드시 인지하고 사용해야 합니다.",
+   "endgame": "트로피 3세트를 완성할 때마다 <font color=\"#15d7fa\">5개 슬롯에 영구 보너스가 무한 중첩</font>되기 때문에, 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있는 전체 최고 위험 퍼크입니다. 반드시 인지하고 사용해야 합니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#CC8800\">사냥꾼의 본능:</font> 등급당 <font color=\"#FF6666\">모든 피해량</font> <font color=\"#FFFFFF\">+0.75%</font>",
@@ -14952,7 +15062,7 @@
       }
      ],
      "hasKorText": true,
-     "note": "'PerMilestone' 성장식은 퍼크 설명 기준 '무기별 100킬 단위'로 해석 — 점진적 성장형이라 위험도 낮음.",
+     "note": "마일스톤은 '무기별 100킬'(리포지 이후 킬 기준) 단위로 달성됩니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
@@ -15168,7 +15278,7 @@
       }
      ],
      "hasKorText": true,
-     "note": "MasterworkTechnique와 동일한 마일스톤(무기별 100킬 단위) 기준으로 해석.",
+     "note": "MasterworkTechnique와 동일한 마일스톤(무기별 100킬 단위)을 사용합니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
@@ -16408,7 +16518,7 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 트리거 조건 없이 10~15초마다 자동 광역 독뎀, 수치 전부 var const라 INI 조정 자체가 불가능해 완전 제거가 유일한 해법",
+     "disabledNote": "2026-07-02 제거: 조건 없이 10~15초마다 자동으로 광역 독 피해를 주는 스킬 — 밸런스 조정이 불가능한 구조라 비활성화",
      "noData": false
     },
     {
@@ -16521,7 +16631,7 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 중독사망 연쇄폭발(\"독성과부하\"), INI값 없어 하드코딩 추정이라 완전 잠금으로 처리",
+     "disabledNote": "2026-07-02 제거: 중독 상태로 죽은 적이 연쇄 폭발하는 스킬(\"독성과부하\") — 밸런스 조정이 불가능한 구조라 비활성화",
      "noData": false
     },
     {
@@ -16543,20 +16653,35 @@
     },
     {
      "key": "VenomWeave",
-     "name": "VenomWeave",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [],
-     "hasKorText": false,
+     "name": "베놈위브",
+     "standardDesc": "주변 5m 내의 독에 걸린 ZED 한 마리당 받는 피해가 5% 감소합니다 (최대 6마리, 합계 -30%).",
+     "deluxeDesc": "주변 7m 내의 독에 걸린 ZED 한 마리당 받는 피해가 7% 감소합니다 (최대 10마리, 상한 -50%).",
+     "standardDescRaw": "주변 <font color=\"#FFFFFF\">5m</font> 내의 <font color=\"#8fce00\">독에 걸린</font> ZED 한 마리당 <font color=\"#399c0e\">받는 피해가 5% 감소</font>합니다 (최대 <font color=\"#FFFFFF\">6마리</font>, 합계 -30%).",
+     "deluxeDescRaw": "주변 <font color=\"#FFFFFF\">7m</font> 내의 <font color=\"#8fce00\">독에 걸린</font> ZED 한 마리당 <font color=\"#b346ea\">받는 피해가 7% 감소</font>합니다 (최대 <font color=\"#FFFFFF\">10마리</font>, 상한 -50%).",
+     "rawValues": [
+      {
+       "key": "DRPerStack",
+       "label": "스택 당 피해 감소",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "DRPerStack",
+       "label": "스택 당 피해 감소",
+       "value": 0.07,
+       "unit": "percent",
+       "display": "+7%"
+      }
+     ],
+     "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": true
+     "noData": false
     }
    ],
    "skillCount": 12,
@@ -17600,7 +17725,7 @@
       }
      ],
      "hasKorText": true,
-     "note": "InterestRate=0.25가 기존 패시브 CompoundInterestRate(10%)와 중첩되나, 도쉬(재화) 효과라 전투 밸런스에는 영향 없음 — 적절.",
+     "note": "이자율 25%가 패시브 복리 이자(10%)와 중첩됩니다. 도쉬에만 영향을 주는 경제 효과입니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": true,
@@ -17948,7 +18073,7 @@
    "extraSections": [
     {
      "title": "예언 시스템 규칙",
-     "note": "게임 소스코드(DKUpgrade_Perk_Omen + Helper)에서 직접 추출·검증한 정보입니다. 예언 수치는 전부 코드에 하드코딩되어 있습니다.",
+     "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
      "html": "<div class=\"desc-line\">웨이브 시작 시 예언 풀에서 1개가 무작위로 뽑힙니다(직전 예언과 같으면 재추첨, 최대 20회 시도). 뽑힌 직후 <font color=\"#FFFFFF\">1.5초</font>의 유예시간 동안은 조건 위반이 감지되지 않습니다.</div><div class=\"desc-line\">풀 구성 — <font color=\"#c8c8c8\">티어1(8종)</font>: 항상 등장 / <font color=\"#50a0ff\">티어2(6종 추가, 총 14종)</font>: 퍼크 Lv10부터 / <font color=\"#b450ff\">티어3(5종 추가, 총 19종)</font>: 퍼크 Lv20부터.</div><div class=\"desc-line\">웨이브가 끝날 때까지 조건을 지키면 <font color=\"#77d914\">축복 완료</font> — 보상 수치가 <font color=\"#15d7fa\">영구 누적</font>됩니다(체력/방어구 보상은 즉시 최대치에 가산). 조건을 어기는 순간 즉시 <font color=\"#ff0000\">저주(운명) 발동</font>.</div><div class=\"desc-line\">저주 페널티 = 해당 예언 보상의 <font color=\"#FFFFFF\">2배</font>를 누적치에서 차감(체력/방어구는 최대치에서 즉시 차감, 최대 체력은 <font color=\"#FFFFFF\">25</font> 아래로, 방어구는 <font color=\"#FFFFFF\">0</font> 아래로 내려가지 않음).</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 10 (공포의 환영)</font>: 티어2 예언 추가. 저주를 받으면 <font color=\"#FFFFFF\">20초</font> 동안 피해량 <font color=\"#FFFFFF\">+15%</font>의 파멸의 저항력을 얻습니다.</div><div class=\"desc-line\"><font color=\"#8B0000\">레벨 20 (운명의 설계자)</font>: 티어3 예언 추가. <font color=\"#FFFFFF\">5웨이브</font>마다 1회 <font color=\"#15d7fa\">운명 거부</font>를 사용해 저주를 완전히 무효화할 수 있습니다. 또한 누적된 <font color=\"#FF6666\">피해량</font>·<font color=\"#FF6666\">피해 저항</font>·<font color=\"#77d914\">재장전 속도</font>·<font color=\"#77d914\">이동 속도</font> 보너스가 실전 적용 시 <font color=\"#FFFFFF\">1.5배</font>로 증폭됩니다(체력/방어구 누적치는 배율 미적용).</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">운명의 반전</font>: 예언을 완료할 때마다 동전을 던져 <font color=\"#FFFFFF\">50%(디럭스 55%)</font> 확률로 보상이 두 배가 되거나, 나머지 확률로 보상이 무효(꽝)가 됩니다.</div>"
     },
     {
@@ -17963,6 +18088,6 @@
  "meta": {
   "advancedPerkCount": 37,
   "basePerkCount": 10,
-  "totalSkills": 336
+  "totalSkills": 340
  }
 }

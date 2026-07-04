@@ -44,6 +44,13 @@
   "Predator": {
     "0": "<font color=\"#CC8800\">사냥꾼의 본능:</font> 등급당 <font color=\"#FF6666\">모든 피해량</font> <font color=\"#FFFFFF\">+0.75%%</font>"
   },
+  "Detonator": {
+    "0": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">모든 무기 피해량</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+    "1": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">여분 탄약</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>"
+  },
+  "TimeTraveler": {
+    "1": "<font color=\"#15d7fa\">ZED 타임 연장 가능 횟수</font>가 <font color=\"#77d914\">레벨당 +1회</font> 증가합니다 (기본 1회 → 만렙 Lv20 기준 총 21회)."
+  },
   "Metronome": {
     "1": "<font color=\"#ff4444\">돌격</font>: 레벨당 피해량 <font color=\"#FFFFFF\">+1.5%</font> 및 관통력 <font color=\"#FFFFFF\">+1.25%</font>. 동기화 조건: <font color=\"#FFFFFF\">헤드샷 처치</font>.",
     "2": "<font color=\"#44ddff\">템포</font>: 레벨당 재장전 속도 <font color=\"#FFFFFF\">+1%</font> 및 연사 속도 <font color=\"#FFFFFF\">+1%</font>. 동기화 조건: <font color=\"#FFFFFF\">빠른 연속 처치</font> (3초 이내).",
