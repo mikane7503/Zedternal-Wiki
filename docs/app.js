@@ -71,10 +71,10 @@ async function init() {
     `📢 <b>공지사항</b>: 이 위키에 기재된 수치가 현재 서버에 실제로 적용 중인 값입니다. 게임 클라이언트 내부 스킬 설명에 표시되는 수치는 오리지널 값이라 실제 값과 전혀 다릅니다. 정확한 현재 수치는 반드시 이 위키를 기준으로 확인하세요.
     <div class="meta-patch-row">
       <div class="meta-patch-text">
-        <span class="patch-highlight">밸런스 패치 된 수치가 실제 인게임 화면에 적용되기를 바라는 플레이어는 다음 한국어 패치 파일을 다운 받아 해당 경로에 복사 붙여넣기 하세요.</span>
-        <br>경로: <code>문서\\My Games\\KillingFloor2\\KFGame</code> 로 들어간 후, 압축을 풀고 통으로 붙여넣기.
+        <span class="patch-highlight">밸런스 패치 된 수치가 실제 인게임 화면에 적용되기를 바라는 플레이어는 다음 한국어 패치 파일을 다운 받아 해당 경로에 넣어주세요.</span>
+        <br>경로: <code>문서\\My Games\\KillingFloor2\\KFGame\\Localization\\KOR</code> 로 들어간 후, 다운로드한 <code>ZedternalRBPerkpackage.KOR</code> 파일을 그대로 덮어쓰기.
       </div>
-      <a class="patch-download-btn" href="downloads/ZedternalRB_KOR_Patch.zip" download>⬇ 한국어 패치 파일 다운로드</a>
+      <a class="patch-download-btn" href="downloads/ZedternalRBPerkpackage.KOR" download>⬇ 한국어 패치 파일 다운로드</a>
     </div>`;
 
   renderSidebar();

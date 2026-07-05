@@ -1,12 +1,13 @@
 #!/bin/sh
-# Auto-syncs Published/ (local UDK compiler output) into
-# docs/downloads/ZedternalRB_KOR_Patch.zip before every push, so the wiki's
-# download button always serves whatever was most recently built locally.
+# Auto-regenerates docs/downloads/ZedternalRBPerkpackage.KOR (the wiki's
+# download button target) from the repo's ZedternalRBPerkpackage.KOR.ini
+# before every push, converting it to UTF-16 LE with BOM -- the encoding
+# Killing Floor 2's localization loader expects for non-Latin text.
 #
 # Installed by copying/symlinking this file to .git/hooks/pre-push (see
-# githooks/install.sh). Runs data/sync_published_zip.py, stages the
-# resulting zip(s) if changed, and folds them into a new commit so the
-# push includes the up-to-date download.
+# githooks/install.sh). Runs data/sync_kor_download.py, stages the
+# resulting file if changed, and folds it into a new commit so the push
+# includes the up-to-date download.
 
 set -e
 
@@ -27,22 +28,20 @@ if [ -z "$PYTHON" ]; then
 fi
 
 if [ -z "$PYTHON" ]; then
-    echo "[pre-push] python not found -- skipping Published.zip sync." >&2
+    echo "[pre-push] python not found -- skipping KOR download sync." >&2
     exit 0
 fi
 
-"$PYTHON" data/sync_published_zip.py || {
-    echo "[pre-push] sync_published_zip.py failed -- push aborted." >&2
+"$PYTHON" data/sync_kor_download.py || {
+    echo "[pre-push] sync_kor_download.py failed -- push aborted." >&2
     exit 1
 }
 
-# Only the docs/downloads copy is tracked -- root Published.zip and
-# Published/ are local build artifacts (gitignored).
-git add docs/downloads/ZedternalRB_KOR_Patch.zip 2>/dev/null || true
+git add docs/downloads/ZedternalRBPerkpackage.KOR 2>/dev/null || true
 
-if ! git diff --cached --quiet -- docs/downloads/ZedternalRB_KOR_Patch.zip; then
-    git commit -m "Sync Published.zip download (auto, pre-push)" -- docs/downloads/ZedternalRB_KOR_Patch.zip
-    echo "[pre-push] committed refreshed Published.zip download."
+if ! git diff --cached --quiet -- docs/downloads/ZedternalRBPerkpackage.KOR; then
+    git commit -m "Sync ZedternalRBPerkpackage.KOR download (auto, pre-push)" -- docs/downloads/ZedternalRBPerkpackage.KOR
+    echo "[pre-push] committed refreshed KOR download."
 fi
 
 exit 0
