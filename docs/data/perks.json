@@ -922,7 +922,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -954,7 +954,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -986,7 +986,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1018,7 +1018,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1050,7 +1050,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.300000; 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1082,7 +1082,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.300000; 구 0.600000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1114,7 +1114,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.150000; 구 0.300000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1146,7 +1146,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.150000; 구 0.300000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1178,7 +1178,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.150000; 구 0.300000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1210,7 +1210,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "불워크 저항 축소(2026-07-02), 구 0.200000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1473,7 +1473,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1833,7 +1833,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.250000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -1893,7 +1893,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.250000; 구 0.350000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2111,7 +2111,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2157,7 +2157,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2203,7 +2203,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2249,7 +2249,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2295,7 +2295,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2355,7 +2355,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2401,7 +2401,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2479,7 +2479,7 @@
      "note": "체력 30%/60%를 소모하지만, 체력이 1 아래로는 내려가지 않아 이 스킬만으로 죽지는 않습니다.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2525,7 +2525,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2737,7 +2737,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2769,7 +2769,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2801,7 +2801,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2833,7 +2833,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2865,7 +2865,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2897,7 +2897,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2929,7 +2929,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2961,7 +2961,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -2993,7 +2993,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3025,7 +3025,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3391,7 +3391,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3440,7 +3440,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3486,7 +3486,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -3606,7 +3606,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4048,7 +4048,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.500000; 구 1.000000; 구 0.500000; 구 1.000000; 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4151,7 +4151,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "CC 남발 축소(2026-07-02), 구 0.400000; 구 0.800000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4263,7 +4263,7 @@
      "note": "처치 시 25%(디럭스 50%) 확률로 시체가 파편 폭발을 일으킵니다. ZED 타임 여부와 무관하게 항상 발동합니다.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4436,7 +4436,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 0.3/0.5 → Maniac 수류탄계열 4스킬 동시장착 시 Demo 패시브(+80%) 위 중첩 억제 (worst-case 가정, 인게임 확인 권장)",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4468,7 +4468,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4500,7 +4500,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4532,7 +4532,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4564,7 +4564,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 0.5/1.0 → Maniac 4종 스킬 중 최고값이라 우선 하향 (worst-case 가정, 인게임 확인 권장)",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4645,7 +4645,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 0.3/0.6 → Maniac 수류탄계열 중첩 억제",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4694,7 +4694,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 0.25/0.5 → Maniac 수류탄계열 중첩 억제. 4스킬 T2합 2.6(+260%)→1.45(+145%)로 조정",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4845,7 +4845,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4877,7 +4877,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4909,7 +4909,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -4941,7 +4941,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5082,7 +5082,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5146,7 +5146,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5178,7 +5178,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5678,7 +5678,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5724,7 +5724,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5756,7 +5756,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.100000; 구 0.250000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -5866,7 +5866,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6007,7 +6007,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.200000; 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6239,7 +6239,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02, 필드명 누락분 추가발견), 구 0.150000; 구 0.250000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6345,7 +6345,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6550,7 +6550,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6853,7 +6853,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6906,7 +6906,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.060000; 구 0.100000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6952,7 +6952,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "광역피해 남발 축소(2026-07-02), 구 300.000000; 구 500.000000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -6998,7 +6998,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7193,7 +7193,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7448,7 +7448,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7480,7 +7480,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7512,7 +7512,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.080000; 구 0.150000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7632,7 +7632,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7664,7 +7664,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.500000; 구 1.000000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7816,7 +7816,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.200000; 구 0.350000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -7862,7 +7862,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.250000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8062,7 +8062,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8108,7 +8108,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8203,7 +8203,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8249,7 +8249,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8341,7 +8341,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8373,7 +8373,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8614,7 +8614,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "신더 저항 1/3 축소(2026-07-02), 구 0.300000; 구 0.650000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8646,7 +8646,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8692,7 +8692,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8724,7 +8724,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8756,7 +8756,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8802,7 +8802,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8834,7 +8834,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8866,7 +8866,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 1.0/2.5 (+250%, 전체 스킬 중 최고 이상값) → +100%로 정상화. Pyre(+120%) 동시장착 시 화염피해 합산 과도 방지",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8912,7 +8912,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -8944,7 +8944,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9022,7 +9022,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9118,7 +9118,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9182,7 +9182,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9246,7 +9246,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9310,7 +9310,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9342,7 +9342,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9374,7 +9374,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9406,7 +9406,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9438,7 +9438,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9677,7 +9677,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9709,7 +9709,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -9838,7 +9838,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -10424,7 +10424,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -10548,7 +10548,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -10912,7 +10912,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.300000; 구 0.600000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -10976,7 +10976,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11008,7 +11008,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11040,7 +11040,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11086,7 +11086,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11164,7 +11164,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11203,7 +11203,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11235,7 +11235,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11469,7 +11469,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11501,7 +11501,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11533,7 +11533,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11565,7 +11565,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11624,7 +11624,7 @@
      "standardDescRaw": "<font color=\"#FF4500\">모든 공격 피해량</font>이 <font color=\"#FFFFFF\">+40%</font> 증가하고, <font color=\"#FF4500\">근접 공격</font>에는 <font color=\"#FFFFFF\">+75%</font>가 추가로 붙습니다 (근접 합계 <font color=\"#FFD700\">+115%</font>).",
      "deluxeDescRaw": "<font color=\"#FF4500\">모든 공격 피해량</font>이 <font color=\"#FFFFFF\">+80%</font> 증가하고, <font color=\"#FF4500\">근접 공격</font>에는 <font color=\"#FFFFFF\">+100%</font>가 추가로 붙습니다 (근접 합계 <font color=\"#FFD700\">+180%</font>).",
      "rawValues": [],
-     "hasKorText": false,
+     "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
@@ -11692,7 +11692,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11705,7 +11705,7 @@
      "standardDescRaw": "체력이 최대치의 <font color=\"#FFFFFF\">90% 이상</font>일 때 <font color=\"#4169E1\">받는 피해가 6.7% 감소</font>합니다.",
      "deluxeDescRaw": "체력이 최대치의 <font color=\"#FFFFFF\">70% 이상</font>일 때 <font color=\"#4169E1\">받는 피해가 10% 감소</font>합니다.",
      "rawValues": [],
-     "hasKorText": false,
+     "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
@@ -11741,7 +11741,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11899,7 +11899,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11931,7 +11931,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11963,7 +11963,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -11995,7 +11995,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12034,7 +12034,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12080,7 +12080,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12112,7 +12112,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12176,7 +12176,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12503,7 +12503,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12535,7 +12535,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "구 1.5/3.0(+300%) → +150%. Support 관통패시브(+150%)+Penetrator스킬(+200%)과 교차스택 시 관통 사실상 무제한이 되는 것 방지",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12581,7 +12581,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12613,7 +12613,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.100000; 구 0.200000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12645,7 +12645,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12677,7 +12677,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -12773,7 +12773,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13032,7 +13032,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.200000; 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13096,7 +13096,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.150000; 구 0.400000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13160,7 +13160,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.200000; 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13263,7 +13263,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13503,7 +13503,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "CC 남발 축소(2026-07-02), 구 0.150000; 구 0.300000; 구 0.150000; 구 0.300000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13567,7 +13567,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13599,7 +13599,7 @@
      "note": "동상 스택은 대상 하나당 최대 5개까지 쌓이며 스택당 10초간 유지됩니다 (활·석궁 계열에만 적용).",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13709,7 +13709,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -13787,7 +13787,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14189,7 +14189,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14344,7 +14344,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14390,7 +14390,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14436,7 +14436,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14468,7 +14468,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14514,7 +14514,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14606,7 +14606,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14638,7 +14638,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14684,7 +14684,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -14730,7 +14730,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15011,7 +15011,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.300000; 구 0.600000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15156,7 +15156,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15358,7 +15358,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15586,7 +15586,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15618,7 +15618,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15813,7 +15813,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15898,7 +15898,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "유저 지정값 너프(2026-07-02), 구 10.000000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -15958,7 +15958,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -16204,7 +16204,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -16253,7 +16253,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -16317,7 +16317,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -16748,7 +16748,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -16914,7 +16914,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.250000; 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17020,7 +17020,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17098,7 +17098,7 @@
      "note": null,
      "isPatched": true,
      "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.250000(블로트 가스 등 직결); 구 0.500000",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17298,7 +17298,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17330,7 +17330,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17362,7 +17362,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17394,7 +17394,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17433,7 +17433,7 @@
      "note": "이자율 25%가 패시브 복리 이자(10%)와 중첩됩니다. 도쉬에만 영향을 주는 경제 효과입니다.",
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17529,7 +17529,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17575,7 +17575,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17753,7 +17753,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17785,7 +17785,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17817,7 +17817,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17863,7 +17863,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17941,7 +17941,7 @@
      "note": "15버프 전부 활성 시 피해 감소 총합은 -22.5%로 제한됩니다.",
      "isPatched": true,
      "patchNote": "구 0.015/0.025(15버프 전부 활성 시 -37.5%) → -22.5%로 완화. Mimicry(기존 확정OP)의 탱크성 심화 억제",
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
@@ -17987,7 +17987,7 @@
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": true,
+     "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
