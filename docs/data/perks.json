@@ -2435,7 +2435,7 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 대형 ZED 처치마다 최대 체력이 영구 누적되는 스킬 — 밸런스 조정이 불가능한 구조라 비활성화",
+     "disabledNote": "2026-07-02 제거: 대형ZED 처치마다 MaxHealth 영구누적(정수타입이라 소숫점 축소 불가, 워치독으로 리셋방지까지 하는 구조라 완전 제거가 유일한 해법",
      "noData": false
     },
     {
@@ -3229,30 +3229,30 @@
     {
      "key": "BattlefieldAwareness",
      "name": "전장 인식",
-     "standardDesc": "ZED 타임 중 소총으로 적을 처치할 때마다 지속 시간이 0.3초 연장됩니다.",
-     "deluxeDesc": "ZED 타임 중 소총으로 적을 처치할 때마다 지속 시간이 0.5초 연장됩니다.",
-     "standardDescRaw": "<font color=\"#ff3399\">ZED 타임</font> 중 <font color=\"#15d7fa\">소총으로 적을 처치</font>할 때마다 지속 시간이 <font color=\"#77d914\">0.3초</font> 연장됩니다.",
-     "deluxeDescRaw": "<font color=\"#ff3399\">ZED 타임</font> 중 <font color=\"#15d7fa\">소총으로 적을 처치</font>할 때마다 지속 시간이 <font color=\"#77d914\">0.5초</font> 연장됩니다.",
+     "standardDesc": "ZED 타임 중 소총으로 적을 처치할 때마다 지속 시간이 0.15초 연장됩니다.",
+     "deluxeDesc": "ZED 타임 중 소총으로 적을 처치할 때마다 지속 시간이 0.25초 연장됩니다.",
+     "standardDescRaw": "<font color=\"#ff3399\">ZED 타임</font> 중 <font color=\"#15d7fa\">소총으로 적을 처치</font>할 때마다 지속 시간이 <font color=\"#77d914\">0.15초</font> 연장됩니다.",
+     "deluxeDescRaw": "<font color=\"#ff3399\">ZED 타임</font> 중 <font color=\"#15d7fa\">소총으로 적을 처치</font>할 때마다 지속 시간이 <font color=\"#77d914\">0.25초</font> 연장됩니다.",
      "rawValues": [
       {
        "key": "ZedTimeExtensionAmount",
        "label": "제드 시간 연장 량",
-       "value": 0.3,
+       "value": 0.15,
        "unit": "seconds",
-       "display": "0.3초"
+       "display": "0.15초"
       },
       {
        "key": "ZedTimeExtensionAmount",
        "label": "제드 시간 연장 량",
-       "value": 0.5,
+       "value": 0.25,
        "unit": "seconds",
-       "display": "0.5초"
+       "display": "0.25초"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 0.300000; 구 0.500000",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -3893,13 +3893,13 @@
     {
      "key": "HeadshotExtensionChance",
      "label": "헤드샷 연장 확률",
-     "value": 0.3,
+     "value": 0.1,
      "unit": "percent",
-     "display": "+30%",
-     "lv10": 0.3,
-     "lv20": 0.3,
-     "lv10Display": "+30%",
-     "lv20Display": "+30%",
+     "display": "+10%",
+     "lv10": 0.1,
+     "lv20": 0.1,
+     "lv10Display": "+10%",
+     "lv20Display": "+10%",
      "scaling": false,
      "capstoneLevel": null
     },
@@ -3932,13 +3932,13 @@
     {
      "key": "HeadshotExtensionCooldown",
      "label": "헤드샷 연장 재사용 대기시간",
-     "value": 3.0,
+     "value": 8.0,
      "unit": "seconds",
-     "display": "3초",
-     "lv10": 3.0,
-     "lv20": 3.0,
-     "lv10Display": "3초",
-     "lv20Display": "3초",
+     "display": "8초",
+     "lv10": 8.0,
+     "lv20": 8.0,
+     "lv10Display": "8초",
+     "lv20Display": "8초",
      "scaling": false,
      "capstoneLevel": null
     }
@@ -3957,13 +3957,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">시간의 숙련</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+20%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+15%</font>. 헤드샷 시 <font color=\"#FFFFFF\">30%</font> 확률로 <font color=\"#d8b0ff\">ZED 타임이 연장</font>됩니다.",
-     "text": "레벨 10: 시간의 숙련 - 이동 속도 +20%, ZED 타임 중 피해량 +15%. 헤드샷 시 30% 확률로 ZED 타임이 연장됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">시간의 숙련</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+20%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+15%</font>. 헤드샷 시 <font color=\"#FFFFFF\">10%</font> 확률로 <font color=\"#d8b0ff\">ZED 타임이 연장</font>됩니다(쿨다운 8초).",
+     "text": "레벨 10: 시간의 숙련 - 이동 속도 +20%, ZED 타임 중 피해량 +15%. 헤드샷 시 10% 확률로 ZED 타임이 연장됩니다(쿨다운 8초).",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">타임 뱅커</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> (정상 속도), <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+25%</font>. <font color=\"#d8b0ff\">무제한 연장 가능</font>. ZED 타임 <font color=\"#FFFFFF\">120초</font> 유지 시 <font color=\"#FFFFFF\">500 도쉬</font>를 획득합니다.",
-     "text": "레벨 20: 타임 뱅커 - 이동 속도 +30% (정상 속도), ZED 타임 중 피해량 +25%. 무제한 연장 가능. ZED 타임 120초 유지 시 500 도쉬를 획득합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">타임 뱅커</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+25%</font>. <font color=\"#d8b0ff\">무제한 연장 가능</font>. ZED 타임 <font color=\"#FFFFFF\">120초</font> 유지 시 <font color=\"#FFFFFF\">500 도쉬</font>를 획득합니다.",
+     "text": "레벨 20: 타임 뱅커 - 이동 속도 +30%, ZED 타임 중 피해량 +25%. 무제한 연장 가능. ZED 타임 120초 유지 시 500 도쉬를 획득합니다.",
      "isCapstone": true
     }
    ],
@@ -4349,14 +4349,14 @@
    ],
    "skillCount": 11,
    "verdict": {
-    "tag": "적절",
-    "note": "특이 OP/Trash 없음. TemporalRupture는 헤드샷 처치 시 확률적으로 ZED타임 관련 부가 효과가 발동하는 것으로 추정되며(퍼크 자체가 ZED타임 특화), 수치가 낮아 위험도는 낮음.",
+    "tag": "확정 OP (하드코딩 우회, 완화 완료)",
+    "note": "레벨 20에서 ZED타임 연장 횟수 제한을 '9999'로 설정해 사실상 무한 우회하도록 소스에 하드코딩되어 있음(ini로 조정 불가). 게다가 헤드샷 발동 로직이 이 횟수 제한 카운터 자체를 검사하지 않고 즉시 재발동시켜, Lv10부터 사실상 무제한 ZED타임 연장이 가능. 2026-07-05: ini로 조정 가능한 발동확률(30%→10%)과 쿨다운(3초→8초)을 대폭 축소해 빈도를 크게 낮췄으나, 근본적인 '무한 우회' 자체는 재컴파일 없이는 제거 불가.",
     "grade": "SS"
    },
    "grade": "SS",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.400000; 구 0.300000; 구 0.600000; 구 0.500000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.400000; 구 0.300000; ZED타임 무한연장 완화(2026-07-05), 구 0.300000 -- 카운터 우회 발동이라 3배 이상 축소; 구 0.600000; 구 0.500000; ZED타임 무한연장 완화(2026-07-05), 구 3.000000",
+   "testWarning": "🚨 경고! 이 퍼크는 밸런스 문제가 확정된 상태이며, 근본적인 수정 전까지는 매우 강력하게 작동할 수 있습니다.",
    "balanceComplete": false,
    "extraSections": [],
    "icon": "icons/agony.png"
@@ -7965,9 +7965,9 @@
      "key": "Backdraft",
      "name": "백드래프트",
      "standardDesc": "당신은 ZED 타임의 영향을 받지 않고 정상적인 속도로 이동 및 공격할 수 있습니다.",
-     "deluxeDesc": "당신은 ZED 타임의 영향을 받지 않고 정상적인 속도로 이동 및 공격할 수 있으며, ZED 타임 지속 시간이 50% 연장됩니다.",
+     "deluxeDesc": "당신은 ZED 타임의 영향을 받지 않고 정상적인 속도로 이동 및 공격할 수 있으며, ZED 타임 지속 시간이 25% 연장됩니다.",
      "standardDescRaw": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있습니다.",
-     "deluxeDescRaw": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있으며, <font color=\"#e80948\">ZED 타임 지속 시간</font>이 <font color=\"#e85009\">50%</font> 연장됩니다.",
+     "deluxeDescRaw": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있으며, <font color=\"#e80948\">ZED 타임 지속 시간</font>이 <font color=\"#e85009\">25%</font> 연장됩니다.",
      "rawValues": [
       {
        "key": "FireRate",
@@ -8007,15 +8007,15 @@
       {
        "key": "ZedTimeExt",
        "label": "제드 시간 연장",
-       "value": 0.5,
+       "value": 0.25,
        "unit": "seconds",
-       "display": "0.5초"
+       "display": "0.25초"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 0.500000",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -9786,7 +9786,7 @@
      "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임</font>을 <font color=\"#77d914\">20회</font> 추가로 연장할 수 있습니다.",
      "rawValues": [],
      "hasKorText": true,
-     "note": null,
+     "note": "ZED타임 연장 횟수를 표준 +10회 / 디럭스 +20회 고정 지급하는 로직이 하드코딩되어 있어 ini로 조정할 수 없습니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
@@ -9955,8 +9955,8 @@
    ],
    "skillCount": 10,
    "verdict": {
-    "tag": "적절 (상향 완료)",
-    "note": "유지 판정이자 최종 심화 퍼크(Lv20) 상향 대상 중 하나 — 전 속성 상향 조정되었으나, 이후 전체 밸런스 재조정으로 현재 Lv20 기준 +15%.",
+    "tag": "적절 (상향 완료) / 연장계수 하드코딩 확인",
+    "note": "유지 판정이자 최종 심화 퍼크(Lv20) 상향 대상 중 하나 — 전 속성 상향 조정되었으나, 이후 전체 밸런스 재조정으로 현재 Lv20 기준 +15%. 2026-07-05 조사: ZED타임 연장 횟수를 '퍼크 레벨만큼(최대 20)'으로 지급하는 로직이 하드코딩되어 있어 ini 조정 불가 — 다만 상한이 명확하고(레벨 20 = +20회) 에고니처럼 카운터를 우회하지 않아 위험도는 낮음.",
     "grade": "A"
    },
    "grade": "A",
@@ -10340,10 +10340,10 @@
     {
      "key": "DeathlessFury",
      "name": "불멸의 분노",
-     "standardDesc": "불멸의 분노: ZED 타임 동안 무기 모션 속도가 +30% 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 ZED 타임이 연장됩니다 (+1초).",
-     "deluxeDesc": "불멸의 분노: ZED 타임 동안 무기 모션 속도가 +75% 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 ZED 타임이 연장됩니다 (+3초).",
-     "standardDescRaw": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+1초</font>).",
-     "deluxeDescRaw": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+75%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+3초</font>).",
+     "standardDesc": "불멸의 분노: ZED 타임 동안 무기 모션 속도가 +30% 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 ZED 타임이 연장됩니다 (+0.5초).",
+     "deluxeDesc": "불멸의 분노: ZED 타임 동안 무기 모션 속도가 +75% 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 ZED 타임이 연장됩니다 (+1.5초).",
+     "standardDescRaw": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+0.5초</font>).",
+     "deluxeDescRaw": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+75%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+1.5초</font>).",
      "rawValues": [
       {
        "key": "ZedTimeBonus",
@@ -10362,22 +10362,22 @@
       {
        "key": "ZedTimeExtension",
        "label": "ZED타임 연장",
-       "value": 1.0,
+       "value": 0.5,
        "unit": "seconds",
-       "display": "1초"
+       "display": "0.5초"
       },
       {
        "key": "ZedTimeExtension",
        "label": "ZED타임 연장",
-       "value": 3.0,
+       "value": 1.5,
        "unit": "seconds",
-       "display": "3초"
+       "display": "1.5초"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 1.000000; 구 3.000000",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -13607,30 +13607,30 @@
     {
      "key": "GlacialEndurance",
      "name": "빙하 내구성",
-     "standardDesc": "ZED 타임 지속 시간이 2초 연장되며, 연장된 시간 동안 가하는 피해량이 100% 증가합니다.",
-     "deluxeDesc": "ZED 타임 지속 시간이 4초 연장되며, 연장된 시간 동안 가하는 피해량이 100% 증가합니다.",
-     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">2초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">4초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
+     "standardDesc": "ZED 타임 지속 시간이 1초 연장되며, 연장된 시간 동안 가하는 피해량이 100% 증가합니다.",
+     "deluxeDesc": "ZED 타임 지속 시간이 2초 연장되며, 연장된 시간 동안 가하는 피해량이 100% 증가합니다.",
+     "standardDescRaw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">1초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">2초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
      "rawValues": [
+      {
+       "key": "ZedTimeExtension",
+       "label": "ZED타임 연장",
+       "value": 1.0,
+       "unit": "seconds",
+       "display": "1초"
+      },
       {
        "key": "ZedTimeExtension",
        "label": "ZED타임 연장",
        "value": 2.0,
        "unit": "seconds",
        "display": "2초"
-      },
-      {
-       "key": "ZedTimeExtension",
-       "label": "ZED타임 연장",
-       "value": 4.0,
-       "unit": "seconds",
-       "display": "4초"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 2.000000; 구 4.000000",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -15672,30 +15672,30 @@
     {
      "key": "EndlessRampage",
      "name": "끝없는 광란",
-     "standardDesc": "ZED 타임이 +50% 더 오래 지속됩니다.",
-     "deluxeDesc": "ZED 타임이 +100% 더 오래 지속됩니다.",
-     "standardDescRaw": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+50%</font> 더 오래 지속됩니다.",
-     "deluxeDescRaw": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+100%</font> 더 오래 지속됩니다.",
+     "standardDesc": "ZED 타임이 +25% 더 오래 지속됩니다.",
+     "deluxeDesc": "ZED 타임이 +50% 더 오래 지속됩니다.",
+     "standardDescRaw": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+25%</font> 더 오래 지속됩니다.",
+     "deluxeDescRaw": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+50%</font> 더 오래 지속됩니다.",
      "rawValues": [
+      {
+       "key": "ZedTimeExtension",
+       "label": "ZED타임 연장",
+       "value": 0.25,
+       "unit": "seconds",
+       "display": "0.25초"
+      },
       {
        "key": "ZedTimeExtension",
        "label": "ZED타임 연장",
        "value": 0.5,
        "unit": "seconds",
        "display": "0.5초"
-      },
-      {
-       "key": "ZedTimeExtension",
-       "label": "ZED타임 연장",
-       "value": 1.0,
-       "unit": "seconds",
-       "display": "1초"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 0.500000; 구 1.000000",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -16223,7 +16223,7 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 조건 없이 10~15초마다 자동으로 광역 독 피해를 주는 스킬 — 밸런스 조정이 불가능한 구조라 비활성화",
+     "disabledNote": "2026-07-02 제거: 트리거 조건 없이 10~15초마다 자동 광역 독뎀, 수치 전부 var const라 INI 조정 자체가 불가능해 완전 제거가 유일한 해법",
      "noData": false
     },
     {
@@ -16336,7 +16336,7 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": true,
-     "disabledNote": "2026-07-02 제거: 중독 상태로 죽은 적이 연쇄 폭발하는 스킬(\"독성과부하\") — 밸런스 조정이 불가능한 구조라 비활성화",
+     "disabledNote": "2026-07-02 제거: 중독사망 연쇄폭발(\"독성과부하\"), INI값 없어 하드코딩 추정이라 완전 잠금으로 처리",
      "noData": false
     },
     {

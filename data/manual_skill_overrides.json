@@ -118,7 +118,7 @@
   },
   "Backdraft": {
     "standardDesc": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있습니다.",
-    "deluxeDesc": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있으며, <font color=\"#e80948\">ZED 타임 지속 시간</font>이 <font color=\"#e85009\">50%</font> 연장됩니다."
+    "deluxeDesc": "당신은 <font color=\"#e80948\">ZED 타임의 영향을 받지 않고</font> 정상적인 속도로 이동 및 공격할 수 있으며, <font color=\"#e80948\">ZED 타임 지속 시간</font>이 <font color=\"#e85009\">25%</font> 연장됩니다."
   },
   "SearingGaze": {
     "standardDesc": "화염 무기로 조준(아이언 사이트) 시 <font color=\"#e80948\">은폐한 ZED</font>와 <font color=\"#e80948\">적의 체력 바</font>를 볼 수 있습니다. 추가로 <font color=\"#e85009\">헤드샷 피해량</font>이 <font color=\"#e85009\">30%</font> 증가합니다.",
@@ -137,8 +137,9 @@
     "deluxeDesc": "<font color=\"#15d7fa\">ZED 타임</font> 동안 이동 속도가 <font color=\"#77d914\">50%</font> 더 빨라집니다."
   },
   "DeathlessFury": {
-    "standardDesc": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+1초</font>).",
-    "deluxeDesc": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+75%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+3초</font>)."
+    "standardDesc": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+30%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+0.5초</font>).",
+    "deluxeDesc": "<font color=\"#CC0000\">불멸의 분노:</font> ZED 타임 동안 <font color=\"#66CCFF\">무기 모션 속도</font>가 <font color=\"#FFFFFF\">+75%</font> 증가합니다. 해당 스킬을 가진 무기로 적 처치 시 <font color=\"#FFAA00\">ZED 타임이 연장</font>됩니다 (<font color=\"#FFFFFF\">+1.5초</font>).",
+    "_note": "ZED타임 무한연장 완화(2026-07-05)로 ZedTimeExtension 1.0/3.0 → 0.5/1.5로 축소."
   },
   "SoulChain": {
     "standardDesc": "<font color=\"#CC0000\">영혼의 사슬:</font> 5초 이내에 연속으로 처치할 때마다 스택이 1개씩 쌓입니다. 스택당 피해량이 5% 증가합니다(최대 5스택). 처치하지 못하면 5초 후에 스택이 초기화됩니다.",
@@ -205,9 +206,9 @@
     "deluxeDesc": "6000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다."
   },
   "EndlessRampage": {
-    "standardDesc": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+50%</font> 더 오래 지속됩니다.",
-    "deluxeDesc": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+100%</font> 더 오래 지속됩니다.",
-    "_note": "KOR 원문 수치(50%/100%)가 이미 ZedTimeExtension=0.5/1.0과 일치. ZedTimeExtension 키가 다른 스킬(GlacialEndurance)에서는 초 단위로 쓰여 자동 분류가 seconds로 고정되는 바람에 조정 파이프라인이 실패해 수동 등록."
+    "standardDesc": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+25%</font> 더 오래 지속됩니다.",
+    "deluxeDesc": "<font color=\"#00ffff\">ZED 타임</font>이 <font color=\"#ffff00\">+50%</font> 더 오래 지속됩니다.",
+    "_note": "ZED타임 무한연장 완화(2026-07-05)로 ZedTimeExtension 0.5/1.0 → 0.25/0.5로 축소. ZedTimeExtension 키가 다른 스킬(GlacialEndurance)에서는 초 단위로 쓰여 자동 분류가 seconds로 고정되는 바람에 조정 파이프라인이 실패해 수동 등록."
   },
   "Chronoshift": {
     "standardDesc": "<font color=\"#66cc00\">크로노시프트</font> 능력을 잠금 해제합니다. 사용 시 <font color=\"#00ffff\">5초</font> 동안 <font color=\"#ffaa33\">ZED 타임</font>을 즉시 발동합니다. 재사용 대기시간: <font color=\"#ff9900\">90초</font>.",
@@ -270,9 +271,9 @@
     "_note": "KOR 원문은 5/10이었으나 AvalancheDamage=2.5/5와 정확히 2배 차이가 나 ini 기준으로 절반 수정."
   },
   "GlacialEndurance": {
-    "standardDesc": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">2초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
-    "deluxeDesc": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">4초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
-    "_note": "KOR 원문 수치(2초/4초)가 ZedTimeExtension=2/4와 이미 일치. 두 티어 공통인 +100% 피해량은 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
+    "standardDesc": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">1초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
+    "deluxeDesc": "<font color=\"#15d7fa\">ZED 타임 지속 시간</font>이 <font color=\"#87CEEB\">2초</font> 연장되며, 연장된 시간 동안 가하는 <font color=\"#77d914\">피해량이 100%</font> 증가합니다.",
+    "_note": "ZED타임 무한연장 완화(2026-07-05)로 ZedTimeExtension 2/4 → 1/2로 축소. 두 티어 공통인 +100% 피해량은 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
   },
   "IceArmor": {
     "standardDesc": "전투 중이 아닐 때 <font color=\"#87CEEB\">10</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",

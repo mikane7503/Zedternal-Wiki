@@ -9,8 +9,8 @@
     "4": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">분노 모드</font> - 75킬마다 <font color=\"#FFFFFF\">8초 동안</font> <font color=\"#FFFFFF\">분노 모드</font>가 발동합니다: 연사 속도 <font color=\"#FFFFFF\">+100%</font> 및 피해량 <font color=\"#FFFFFF\">3.3배</font>."
   },
   "Agony": {
-    "2": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">시간의 숙련</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+20%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+15%</font>. 헤드샷 시 <font color=\"#FFFFFF\">30%</font> 확률로 <font color=\"#d8b0ff\">ZED 타임이 연장</font>됩니다.",
-    "3": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">타임 뱅커</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> (정상 속도), <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+25%</font>. <font color=\"#d8b0ff\">무제한 연장 가능</font>. ZED 타임 <font color=\"#FFFFFF\">120초</font> 유지 시 <font color=\"#FFFFFF\">500 도쉬</font>를 획득합니다."
+    "2": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">시간의 숙련</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+20%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+15%</font>. 헤드샷 시 <font color=\"#FFFFFF\">10%</font> 확률로 <font color=\"#d8b0ff\">ZED 타임이 연장</font>됩니다(쿨다운 8초).",
+    "3": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">타임 뱅커</font> - <font color=\"#d8b0ff\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font>, <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">+25%</font>. <font color=\"#d8b0ff\">무제한 연장 가능</font>. ZED 타임 <font color=\"#FFFFFF\">120초</font> 유지 시 <font color=\"#FFFFFF\">500 도쉬</font>를 획득합니다."
   },
   "Archangel": {
     "3": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">치유의 오라</font> - <font color=\"#FFFFFF\">6m</font> 이내의 아군이 <font color=\"#FFFFFF\">초당 0.25 HP</font>를 회복합니다.",
