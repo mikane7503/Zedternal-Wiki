@@ -836,18 +836,20 @@
    "parentPerk": "Berserker",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Health",
@@ -855,11 +857,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Armor",
@@ -867,14 +870,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "<font color=\"#FFD700\">Berserker/Firebug</font> 무기의 피해량, 체력, 방어력을 한꺼번에 끌어올려주는 하이브리드 방어 퍼크입니다.",
    "endgame": "Lv20 만렙 기준 피해/체력/방어력이 모두 <font color=\"#15d7fa\">+20%</font>까지 오릅니다 (게임 내 표기상 최대 30%까지 클램프되지만, 현재 레벨당 수치로는 Lv20에서 20%까지만 도달). 근접·화염 무기 사용 시 안정적인 탱커형 딜러로 완성됩니다.",
    "descriptions": [
@@ -2011,30 +2014,33 @@
    "parentPerk": "Berserker",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Health",
      "label": "체력",
-     "value": -0.05,
+     "value": 0.05,
      "unit": "percent",
-     "display": "-5%",
-     "lv10": -0.5,
-     "lv20": -1.0,
-     "lv10Display": "-50%",
-     "lv20Display": "-100%",
-     "scaling": true
+     "display": "+5%",
+     "lv10": 0.05,
+     "lv20": 0.05,
+     "lv10Display": "+5%",
+     "lv20Display": "+5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Armor",
      "label": "방어력",
-     "value": -0.05,
+     "value": 0.05,
      "unit": "percent",
-     "display": "-5%",
-     "lv10": -0.5,
-     "lv20": -1.0,
-     "lv10Display": "-50%",
-     "lv20Display": "-100%",
-     "scaling": true
+     "display": "+5%",
+     "lv10": 0.05,
+     "lv20": 0.05,
+     "lv10Display": "+5%",
+     "lv20Display": "+5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Damage",
@@ -2042,14 +2048,14 @@
      "value": 0.05,
      "unit": "percent",
      "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%",
-     "scaling": true
+     "lv10": 0.05,
+     "lv20": 0.05,
+     "lv10Display": "+5%",
+     "lv20Display": "+5%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "체력과 방어력을 스스로 깎아내는 대신, 그 대가로 피해량을 크게 폭증시켜주는 <font color=\"#FFD700\">하이리스크-하이리턴</font> 퍼크입니다.",
    "endgame": "패시브만으로 피해 +5%(레벨당)·만렙 <font color=\"#15d7fa\">+100%</font>가 붙는 대신 체력/방어력이 -5%(레벨당)·만렙 <font color=\"#ff6666\">-100%(엔진 클램프로 실제 하한은 있음)</font>까지 깎이며, 스킬 6개를 전부 '체력 소모형'으로 채우면 체력이 극단적으로 낮아지는 대신(최소 1은 보장) 압도적인 딜을 뽑아내는 올인 빌드가 완성됩니다.",
    "descriptions": [
@@ -2651,18 +2657,20 @@
    "parentPerk": "Commando",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Recoil",
@@ -2670,11 +2678,12 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadRate",
@@ -2682,14 +2691,14 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "특정 좀비 타입을 상대할 때 피해량을 큰 폭으로 몰아주는 <font color=\"#FFD700\">잠입 요원</font> 컨셉 퍼크입니다.",
    "endgame": "10개 스킬이 전부 동일 패턴(좀비 타입별 <font color=\"#15d7fa\">+30%/+60%</font> 피해)이라, 상대하는 적 구성에 맞춰 스킬을 선택하면 특화 대상에게는 최상급 화력을 낼 수 있습니다.",
    "descriptions": [
@@ -3051,18 +3060,20 @@
    "parentPerk": "Commando",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "RifleDamage",
      "label": "소총 피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "HeadshotDamage",
@@ -3070,11 +3081,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadSpeed",
@@ -3082,11 +3094,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "RecoilReduction",
@@ -3094,11 +3107,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "WeaponSwitchSpeed",
@@ -3106,11 +3120,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "AmmoCapacity",
@@ -3118,14 +3133,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "GrenadeCapacity",
      "label": "수류탄 용량",
@@ -3837,18 +3851,20 @@
    "parentPerk": "Commando",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "MovementPerLevel",
      "label": "레벨 당 이동",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "DamagePerLevel",
@@ -3856,14 +3872,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "Level10Movement",
      "label": "레벨 10 이동",
@@ -4367,18 +4382,20 @@
    "parentPerk": "Demolitionist",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "GrenadeDamage",
      "label": "수류탄 피해량",
      "value": 0.2,
      "unit": "percent",
      "display": "+20%",
-     "lv10": 2.0,
-     "lv20": 4.0,
-     "lv10Display": "+200%",
-     "lv20Display": "+400%",
-     "scaling": true
+     "lv10": 0.2,
+     "lv20": 0.2,
+     "lv10Display": "+20%",
+     "lv20Display": "+20%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadRate",
@@ -4386,14 +4403,14 @@
      "value": 0.05,
      "unit": "percent",
      "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%",
-     "scaling": true
+     "lv10": 0.05,
+     "lv20": 0.05,
+     "lv10Display": "+5%",
+     "lv20Display": "+5%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "수류탄 피해량을 여러 스킬로 겹겹이 증폭시켜주는 <font color=\"#FFD700\">수류탄 특화</font> 폭발 스페셜리스트입니다.",
    "endgame": "Elmo, MadBomber, SlowCooker, ArmedAndDangerous 스킬을 전부 채우면 <font color=\"#15d7fa\">수류탄 피해</font>가 크게 중첩되는 폭발 특화 빌드가 완성됩니다.",
    "descriptions": [
@@ -4720,18 +4737,20 @@
    "parentPerk": "Demolitionist",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "FireExplosiveDamage",
      "label": "화염 폭발물 피해량",
      "value": 0.02,
      "unit": "percent",
      "display": "+2%",
-     "lv10": 0.2,
-     "lv20": 0.4,
-     "lv10Display": "+20%",
-     "lv20Display": "+40%",
-     "scaling": true
+     "lv10": 0.02,
+     "lv20": 0.02,
+     "lv10Display": "+2%",
+     "lv20Display": "+2%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "BurnDurationBonus",
@@ -4739,14 +4758,13 @@
      "value": 0.025,
      "unit": "seconds",
      "display": "0.03초",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "0.25초",
-     "lv20Display": "0.5초",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.025,
+     "lv20": 0.025,
+     "lv10Display": "0.03초",
+     "lv20Display": "0.03초",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "Level10DamageBonus",
      "label": "레벨 10 피해량 보너스",
@@ -5204,18 +5222,20 @@
    "parentPerk": "Demolitionist",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "DamagePerLevel",
      "label": "레벨 당 피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadPerLevel",
@@ -5223,14 +5243,13 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "ConditionTarget_Headshot",
      "label": "조건 대상 헤드샷",
@@ -5542,18 +5561,20 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "FieldMedicine",
      "label": "야전 의술",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "CombatReadiness",
@@ -5561,11 +5582,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "HealingTouch",
@@ -5573,14 +5595,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "Level10AuraHealing",
      "label": "레벨 10 오라 치유",
@@ -6033,18 +6054,20 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "TeamDamagePerLevel",
      "label": "레벨 당 팀 피해량",
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.05,
-     "lv20": 0.1,
-     "lv10Display": "+5%",
-     "lv20Display": "+10%",
-     "scaling": true
+     "lv10": 0.005,
+     "lv20": 0.005,
+     "lv10Display": "+0.5%",
+     "lv20Display": "+0.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "TeamReloadSpeedPerLevel",
@@ -6052,14 +6075,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "TeamMovementPerSymbioteStage",
      "label": "공생체 단계 당 팀 이동",
@@ -6576,18 +6598,20 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "LifeStealPerLevel",
      "label": "레벨 당 생명 흡수",
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.05,
-     "lv20": 0.1,
-     "lv10Display": "+5%",
-     "lv20Display": "+10%",
-     "scaling": true
+     "lv10": 0.005,
+     "lv20": 0.005,
+     "lv10Display": "+0.5%",
+     "lv20Display": "+0.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "HealingReceivedPerLevel",
@@ -6595,14 +6619,13 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "SiphonDuration",
      "label": "흡수 지속시간",
@@ -7265,18 +7288,20 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "ReloadSpeed",
      "label": "재장전 속도",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "WeaponSwitchSpeed",
@@ -7284,11 +7309,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "PenetrationBonus",
@@ -7296,14 +7322,13 @@
      "value": 0.0175,
      "unit": "percent",
      "display": "+1.75%",
-     "lv10": 0.175,
-     "lv20": 0.35,
-     "lv10Display": "+17.5%",
-     "lv20Display": "+35%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.0175,
+     "lv20": 0.0175,
+     "lv10Display": "+1.75%",
+     "lv20Display": "+1.75%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "Level10SpareAmmoBonus",
      "label": "레벨 10 여분 탄약 보너스",
@@ -7888,18 +7913,20 @@
    "parentPerk": "Firebug",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Chance",
      "label": "발동 확률",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "DamageFactor",
@@ -7907,11 +7934,12 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
-     "scaling": true
+     "lv10": 0.0125,
+     "lv20": 0.0125,
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Damage",
@@ -7919,14 +7947,13 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.0125,
+     "lv20": 0.0125,
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "BurnDuration",
      "label": "화상 지속시간",
@@ -8399,18 +8426,20 @@
    "parentPerk": "Firebug",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "FireDamagePerLevel",
      "label": "레벨 당 화염 피해량",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "BurningTargetDamagePerLevel",
@@ -8418,14 +8447,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "BurnDurationPerLevel",
      "label": "레벨 당 화상 지속시간",
@@ -8970,21 +8998,22 @@
    "parentPerk": "Gunslinger",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Dosh",
      "label": "도쉬",
      "value": 1,
      "unit": "currency",
      "display": "1 도쉬",
-     "lv10": 10,
-     "lv20": 20,
-     "lv10Display": "10 도쉬",
-     "lv20Display": "20 도쉬",
-     "scaling": true
+     "lv10": 1,
+     "lv20": 1,
+     "lv10Display": "1 도쉬",
+     "lv20Display": "1 도쉬",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "특정 조건의 헤드샷 처치마다 두둑한 도쉬를 얹어주는 <font color=\"#FFD700\">경제형</font> 퍼크입니다.",
    "endgame": "14개의 <font color=\"#15d7fa\">도쉬 보상 스킬</font>을 조합하면 전투를 하면서 동시에 상당한 부수입을 얻는 경제 특화 빌드가 완성됩니다.",
    "descriptions": [
@@ -9464,18 +9493,20 @@
    "parentPerk": "Gunslinger",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Heal",
@@ -9483,11 +9514,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "KnockdownPower",
@@ -9495,11 +9527,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MagSize",
@@ -9507,11 +9540,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MeleeAttackSpeed",
@@ -9519,11 +9553,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Penetration",
@@ -9531,11 +9566,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "RateOfFire",
@@ -9543,11 +9579,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Recoil",
@@ -9555,11 +9592,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadRate",
@@ -9567,11 +9605,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "SpareAmmo",
@@ -9579,11 +9618,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "StumblePower",
@@ -9591,11 +9631,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "StunPower",
@@ -9603,11 +9644,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Speed",
@@ -9615,11 +9657,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Spread",
@@ -9627,14 +9670,14 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "피해·치유·탄창·관통·재장전·이동까지 거의 모든 능력치를 골고루 끌어올려주는 <font color=\"#FFD700\">최종 건슬링거</font> 심화 퍼크입니다.",
    "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어, 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
    "descriptions": [
@@ -10217,18 +10260,20 @@
    "parentPerk": "Gunslinger",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "CritChance",
      "label": "치명타 확률",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "HeadshotDamage",
@@ -10236,11 +10281,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MovementSpeed",
@@ -10248,14 +10294,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "Level10DamageBonus",
      "label": "레벨 10 피해량 보너스",
@@ -10730,18 +10775,20 @@
    "parentPerk": "SWAT",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "ReloadSpeed",
      "label": "재장전 속도",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "WeaponSwitchSpeed",
@@ -10749,11 +10796,12 @@
      "value": 0.02,
      "unit": "percent",
      "display": "+2%",
-     "lv10": 0.2,
-     "lv20": 0.4,
-     "lv10Display": "+20%",
-     "lv20Display": "+40%",
-     "scaling": true
+     "lv10": 0.02,
+     "lv20": 0.02,
+     "lv10Display": "+2%",
+     "lv20Display": "+2%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MovementSpeed",
@@ -10761,14 +10809,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "AmmoScavengeChance",
      "label": "탄약 노획 확률",
@@ -11261,18 +11308,20 @@
    "parentPerk": "SWAT",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Heal",
@@ -11280,11 +11329,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "KnockdownPower",
@@ -11292,11 +11342,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MagSize",
@@ -11304,11 +11355,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MeleeAttackSpeed",
@@ -11316,11 +11368,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Penetration",
@@ -11328,11 +11381,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "RateOfFire",
@@ -11340,11 +11394,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Recoil",
@@ -11352,11 +11407,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadRate",
@@ -11364,11 +11420,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "SpareAmmo",
@@ -11376,11 +11433,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "StumblePower",
@@ -11388,11 +11446,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "StunPower",
@@ -11400,11 +11459,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Speed",
@@ -11412,11 +11472,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Spread",
@@ -11424,14 +11485,14 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "피해·치유·탄창·관통·재장전 등 14가지 무기 능력치를 동시에 골고루 끌어올려주는 <font color=\"#FFD700\">만능형 SWAT</font> 전직입니다.",
    "endgame": "레벨당 <font color=\"#15d7fa\">14개 속성</font>이 동시에 성장해(Lv20 기준 각 +15%), 어떤 무기·상황에도 대응 가능한 올라운더형 빌드가 완성됩니다.",
    "descriptions": [
@@ -11767,18 +11828,20 @@
    "parentPerk": "SWAT",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Chance",
      "label": "발동 확률",
      "value": 0.002,
      "unit": "percent",
      "display": "+0.2%",
-     "lv10": 0.02,
-     "lv20": 0.04,
-     "lv10Display": "+2%",
-     "lv20Display": "+4%",
-     "scaling": true
+     "lv10": 0.002,
+     "lv20": 0.002,
+     "lv10Display": "+0.2%",
+     "lv20Display": "+0.2%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Damage",
@@ -11786,11 +11849,12 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
-     "scaling": true
+     "lv10": 0.0125,
+     "lv20": 0.0125,
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "FreezeDuration",
@@ -11798,14 +11862,14 @@
      "value": 0.125,
      "unit": "seconds",
      "display": "0.12초",
-     "lv10": 1.25,
-     "lv20": 2.5,
-     "lv10Display": "1.25초",
-     "lv20Display": "2.5초",
-     "scaling": true
+     "lv10": 0.125,
+     "lv20": 0.125,
+     "lv10Display": "0.12초",
+     "lv20Display": "0.12초",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "동결 효과의 피해와 지속시간을 함께 늘려 제드를 얼려 무력화시켜주는 <font color=\"#FFD700\">냉기 특화</font> 퍼크입니다.",
    "endgame": "레벨당 동결 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. 동결 효과 지속시간과 피해를 동시에 강화해 제드 무리를 얼려 안전하게 처리하는 빌드가 완성됩니다.",
    "descriptions": [
@@ -12248,18 +12312,20 @@
    "parentPerk": "SWAT",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "DamageResist",
@@ -12267,11 +12333,12 @@
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.05,
-     "lv20": 0.1,
-     "lv10Display": "+5%",
-     "lv20Display": "+10%",
-     "scaling": true
+     "lv10": 0.005,
+     "lv20": 0.005,
+     "lv10Display": "+0.5%",
+     "lv20Display": "+0.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "HeadshotDamage",
@@ -12279,14 +12346,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "피해량과 피해 저항을 동시에 얹어주어 공격과 생존을 둘 다 놓치지 않게 해주는 <font color=\"#FFD700\">균형형</font> 최종 생존전문가 심화 퍼크입니다.",
    "endgame": "Lv20 기준 <font color=\"#15d7fa\">피해량+20%, 피해 저항+10%</font>가 동시에 상승해, 어떤 상황에서도 안정적으로 버티며 딜을 넣을 수 있는 만능형 최종 빌드가 완성됩니다.",
    "descriptions": [
@@ -12371,18 +12438,20 @@
    "parentPerk": "Sharpshooter",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "DamageHead",
@@ -12390,11 +12459,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Penetration",
@@ -12402,14 +12472,14 @@
      "value": 0.025,
      "unit": "percent",
      "display": "+2.5%",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "+25%",
-     "lv20Display": "+50%",
-     "scaling": true
+     "lv10": 0.025,
+     "lv20": 0.025,
+     "lv10Display": "+2.5%",
+     "lv20Display": "+2.5%",
+     "scaling": false,
+     "capstoneLevel": null
     }
    ],
-   "fixedStats": [],
    "role": "샤프슈터/건슬링거 무기의 피해량과 헤드샷 피해를 동시에 끌어올려주는 <font color=\"#FFD700\">1차 전직</font>입니다.",
    "endgame": "Lv20 관통력 보너스까지 채우면 헤드샷 위주의 관통 사격 빌드가 완성되며, <font color=\"#15d7fa\">FullMetalJacket</font> 스킬로 관통력을 한층 더 끌어올릴 수 있습니다.",
    "descriptions": [
@@ -12799,18 +12869,20 @@
    "parentPerk": "Sharpshooter",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "StalkDamageBonus",
      "label": "추적 피해량 보너스",
      "value": 0.0175,
      "unit": "percent",
      "display": "+1.75%",
-     "lv10": 0.175,
-     "lv20": 0.35,
-     "lv10Display": "+17.5%",
-     "lv20Display": "+35%",
-     "scaling": true
+     "lv10": 0.0175,
+     "lv20": 0.0175,
+     "lv10Display": "+1.75%",
+     "lv20Display": "+1.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MovementSpeed",
@@ -12818,11 +12890,12 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "SpareAmmoBonus",
@@ -12830,14 +12903,13 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "PerfectAmbushBonus",
      "label": "완벽한 매복 보너스",
@@ -13321,18 +13393,20 @@
    "parentPerk": "Sharpshooter",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "BaseDamage",
      "label": "기본 피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
+     "lv10": 0.0075,
+     "lv20": 0.0075,
+     "lv10Display": "+0.75%",
+     "lv20Display": "+0.75%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "HeadshotDamage",
@@ -13340,11 +13414,12 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
-     "scaling": true
+     "lv10": 0.0125,
+     "lv20": 0.0125,
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadSpeed",
@@ -13352,14 +13427,13 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "IcicleArrowBonus",
      "label": "고드름 화살 보너스",
@@ -14247,32 +14321,7 @@
    "parentPerk": "Support",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
-    {
-     "key": "Dosh",
-     "label": "도쉬",
-     "value": 14,
-     "unit": "currency",
-     "display": "14 도쉬",
-     "lv10": 140,
-     "lv20": 280,
-     "lv10Display": "140 도쉬",
-     "lv20Display": "280 도쉬",
-     "scaling": true
-    },
-    {
-     "key": "Chance",
-     "label": "발동 확률",
-     "value": 0.02,
-     "unit": "percent",
-     "display": "+2%",
-     "lv10": 0.2,
-     "lv20": 0.4,
-     "lv10Display": "+20%",
-     "lv20Display": "+40%",
-     "scaling": true
-    }
-   ],
+   "passiveStats": [],
    "fixedStats": [
     {
      "key": "Doodle",
@@ -14284,6 +14333,32 @@
      "lv20": 40,
      "lv10Display": "40",
      "lv20Display": "40",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "Chance",
+     "label": "발동 확률",
+     "value": 0.02,
+     "unit": "percent",
+     "display": "+2%",
+     "lv10": 0.02,
+     "lv20": 0.02,
+     "lv10Display": "+2%",
+     "lv20Display": "+2%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "Dosh",
+     "label": "도쉬",
+     "value": 14,
+     "unit": "currency",
+     "display": "14 도쉬",
+     "lv10": 14,
+     "lv20": 14,
+     "lv10Display": "14 도쉬",
+     "lv20Display": "14 도쉬",
      "scaling": false,
      "capstoneLevel": null
     }
@@ -14756,18 +14831,20 @@
    "parentPerk": "Support",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "DamagePerLevel",
      "label": "레벨 당 피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadPerLevel",
@@ -14775,14 +14852,13 @@
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.05,
-     "lv20": 0.1,
-     "lv10Display": "+5%",
-     "lv20Display": "+10%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.005,
+     "lv20": 0.005,
+     "lv10Display": "+0.5%",
+     "lv20Display": "+0.5%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "ReforgeThreshold",
      "label": "재련 임계값",
@@ -15430,18 +15506,20 @@
    "parentPerk": "Support",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "RateOfFireBonus",
      "label": "연사 속도 보너스",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "PenetrationBonus",
@@ -15449,11 +15527,12 @@
      "value": 0.025,
      "unit": "percent",
      "display": "+2.5%",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "+25%",
-     "lv20Display": "+50%",
-     "scaling": true
+     "lv10": 0.025,
+     "lv20": 0.025,
+     "lv10Display": "+2.5%",
+     "lv20Display": "+2.5%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "MagazineSizeBonus",
@@ -15461,14 +15540,13 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "TwinStrikeChance",
      "label": "쌍둥이 타격 확률",
@@ -15984,18 +16062,20 @@
    "parentPerk": "Survivalist",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "Chance",
      "label": "발동 확률",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "DamageFactor",
@@ -16003,11 +16083,12 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
-     "scaling": true
+     "lv10": 0.0125,
+     "lv20": 0.0125,
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "Damage",
@@ -16015,14 +16096,13 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.0125,
+     "lv20": 0.0125,
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "PoisonDuration",
      "label": "독 지속시간",
@@ -16409,18 +16489,20 @@
    "parentPerk": "Survivalist",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "HeadshotDamage",
      "label": "헤드샷 피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "ReloadSpeed",
@@ -16428,11 +16510,12 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "SpareAmmo",
@@ -16440,14 +16523,13 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "lv10": 0.015,
+     "lv20": 0.015,
+     "lv10Display": "+1.5%",
+     "lv20Display": "+1.5%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "PoisonDamagePerSecond",
      "label": "초 당 독 피해량",
@@ -17170,45 +17252,47 @@
    "parentPerk": "Survivalist",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [
+   "passiveStats": [],
+   "fixedStats": [
     {
      "key": "RoundStipend",
      "label": "라운드 지원금",
      "value": 20.0,
      "unit": "count",
      "display": "20",
-     "lv10": 200.0,
-     "lv20": 400.0,
-     "lv10Display": "200",
-     "lv20Display": "400",
-     "scaling": true
+     "lv10": 20.0,
+     "lv20": 20.0,
+     "lv10Display": "20",
+     "lv20Display": "20",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "BulkDiscount",
      "label": "대량 할인",
-     "value": -0.008,
+     "value": 0.008,
      "unit": "percent",
-     "display": "-0.8%",
-     "lv10": -0.08,
-     "lv20": -0.16,
-     "lv10Display": "-8%",
-     "lv20Display": "-16%",
-     "scaling": true
+     "display": "+0.8%",
+     "lv10": 0.008,
+     "lv20": 0.008,
+     "lv10Display": "+0.8%",
+     "lv20Display": "+0.8%",
+     "scaling": false,
+     "capstoneLevel": null
     },
     {
      "key": "CostCutting",
      "label": "비용 절감",
-     "value": -0.01,
+     "value": 0.01,
      "unit": "percent",
-     "display": "-1%",
-     "lv10": -0.1,
-     "lv20": -0.2,
-     "lv10Display": "-10%",
-     "lv20Display": "-20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
+     "display": "+1%",
+     "lv10": 0.01,
+     "lv20": 0.01,
+     "lv10Display": "+1%",
+     "lv20Display": "+1%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
     {
      "key": "CompoundInterestRate",
      "label": "복리 이자 속도",
