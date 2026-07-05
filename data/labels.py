@@ -115,6 +115,11 @@ OVERRIDES = {
 FORCE_UNIT = {
     "DamageOverTime": "percent",  # "damage OVER TIME" is a DoT multiplier, not a duration
     "RiotLinger": "seconds",  # how long the lingering effect lasts, in seconds
+    # Shapeshifter's PolymorphicSynthesis: flat penetration points per active
+    # utility buff (+1/+2), not a percentage -- "penetration" is a PERCENT_HINT
+    # and both values are small integers (<=3), so the generic heuristic
+    # misreads this as "+100%"/"+200%".
+    "PenetrationPerUtilityBuff": "count",
 }
 
 # lowercased tokens that indicate the raw value is a ratio/bonus that should
