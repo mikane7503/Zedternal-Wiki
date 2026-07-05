@@ -32,6 +32,10 @@ const DAMAGE_TAKEN_STATS = [
   { label: "한스 유탄 피해", real: 0.75 },
   { label: "패트리아크 미사일 피해", real: 0.75 },
   { label: "마트리아크 플라즈마포 피해", real: 0.6 },
+  { label: "소닉 피해", real: 1.5 },
+  { label: "독성 피해", real: 2.0 },
+  { label: "허스크 화염구 피해", real: 1.5 },
+  { label: "허스크 화염방사기 피해", real: 1.5 },
   { label: "근접무기 소지 중 전체 피해", real: 0.75 },
 ];
 
