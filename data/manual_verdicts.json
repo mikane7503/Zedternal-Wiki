@@ -87,8 +87,8 @@
     },
     "Maniac": {
       "tag": "적절 (너프 완료)",
-      "note": "수류탄 스킬 4종(Elmo/MadBomber/SlowCooker/ArmedAndDangerous) 동시 장착 시 +260%였으나 +145%로 너프 완료. 베이스 퍼크 Demolitionist 수류탄 스택 문제의 재발 위험이 있던 항목.",
-      "grade": "A"
+      "note": "수류탄 스킬 4종(Elmo/MadBomber/SlowCooker/ArmedAndDangerous) 동시 장착 시 +260%였으나 +145%로 너프 완료. 재장전 속도 패시브도 만렙 +100%→+50%로 너프. 베이스 퍼크 Demolitionist 수류탄 스택 문제의 재발 위험이 있던 항목.",
+      "grade": "B"
     },
     "Medusa": {
       "tag": "적절",

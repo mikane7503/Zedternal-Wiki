@@ -167,7 +167,7 @@
   },
   "Jackpot": {
     "standardDesc": "ZED를 처치할 때마다 <font color=\"#ff3399\">0.5% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">350 도쉬</font>를 획득합니다.",
-    "deluxeDesc": "ZED를 처치할 때마다 <font color=\"#ff3399\">1% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">700 도쉬</font>를 획득합니다."
+    "deluxeDesc": "ZED를 처치할 때마다 <font color=\"#ff3399\">0.5% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">700 도쉬</font>를 획득합니다."
   },
   "PolymorphicSynthesis": {
     "standardDesc": "<font color=\"#c77dff\">다형성 합성:</font> 현재 활성화된 <font color=\"#e0aaff\">유틸리티 버프</font> 1개당 <font color=\"#FFFFFF\">+1</font>의 관통력을 얻습니다. 현재 활성화된 <font color=\"#e0aaff\">공격력 버프</font> 1개당 예비 탄약이 <font color=\"#FFFFFF\">+8%</font> 증가합니다.",

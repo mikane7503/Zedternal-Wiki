@@ -48,7 +48,7 @@
   },
   "Demolitionist": {
     "name": "데몰리션리스트",
-    "grade": "C",
+    "grade": "B",
     "summary": "폭발 화력이 베이스 퍼크 중 최상위. 수류탄 피해 스택이 최악 조합 시 기본 대비 ×4.5배까지 중첩되어 밸런스 조정이 필요할 만큼 강력함.",
     "role": "수류탄과 폭발물의 피해량을 크게 증폭시켜, 대형 제드까지 빠르게 정리하게 해주는 <font color=\"#FFD700\">광역 딜러</font> 퍼크입니다.",
     "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+190%(약 ×2.9배)</font>까지 중첩됩니다.",
@@ -95,7 +95,7 @@
   },
   "Firebug": {
     "name": "파이어버그",
-    "grade": "B",
+    "grade": "C",
     "summary": "화염/DoT 피해가 강력한 편이며 현재는 안정화된 상태.",
     "role": "화염과 지속피해(DoT)를 크게 증폭시켜, 좀비 무리를 태워버리게 해주는 <font color=\"#FFD700\">광역 소각 딜러</font> 퍼크입니다.",
     "endgame": "Lv20에 Combustion, Barbecue, HeatWaves 스킬을 모두 채우면 <font color=\"#15d7fa\">화염/DoT 피해량</font>이 크게 늘어난 강력한 소각 딜러가 완성됩니다.",

@@ -163,7 +163,7 @@
   {
    "key": "Demolitionist",
    "name": "데몰리션리스트",
-   "grade": "C",
+   "grade": "B",
    "summary": "폭발 화력이 베이스 퍼크 중 최상위. 수류탄 피해 스택이 최악 조합 시 기본 대비 ×4.5배까지 중첩되어 밸런스 조정이 필요할 만큼 강력함.",
    "role": "수류탄과 폭발물의 피해량을 크게 증폭시켜, 대형 제드까지 빠르게 정리하게 해주는 <font color=\"#FFD700\">광역 딜러</font> 퍼크입니다.",
    "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+190%(약 ×2.9배)</font>까지 중첩됩니다.",
@@ -334,7 +334,7 @@
   {
    "key": "Firebug",
    "name": "파이어버그",
-   "grade": "B",
+   "grade": "C",
    "summary": "화염/DoT 피해가 강력한 편이며 현재는 안정화된 상태.",
    "role": "화염과 지속피해(DoT)를 크게 증폭시켜, 좀비 무리를 태워버리게 해주는 <font color=\"#FFD700\">광역 소각 딜러</font> 퍼크입니다.",
    "endgame": "Lv20에 Combustion, Barbecue, HeatWaves 스킬을 모두 채우면 <font color=\"#15d7fa\">화염/DoT 피해량</font>이 크게 늘어난 강력한 소각 딜러가 완성됩니다.",
@@ -645,8 +645,8 @@
    "unlocks": [
     {
      "level": 5,
-     "perk": "Gambler",
-     "name": "도박꾼"
+     "perk": "Tycoon",
+     "name": "타이쿤"
     },
     {
      "level": 10,
@@ -814,8 +814,8 @@
     },
     {
      "level": 15,
-     "perk": "Tycoon",
-     "name": "타이쿤"
+     "perk": "Gambler",
+     "name": "도박꾼"
     },
     {
      "level": 20,
@@ -836,20 +836,18 @@
    "parentPerk": "Berserker",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "Health",
@@ -857,12 +855,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "Armor",
@@ -870,14 +867,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "<font color=\"#FFD700\">Berserker/Firebug</font> 무기의 피해량, 체력, 방어력을 한꺼번에 끌어올려주는 하이브리드 방어 퍼크입니다.",
    "endgame": "Lv20 만렙 기준 피해/체력/방어력이 모두 <font color=\"#15d7fa\">+20%</font>까지 오릅니다 (게임 내 표기상 최대 30%까지 클램프되지만, 현재 레벨당 수치로는 Lv20에서 20%까지만 도달). 근접·화염 무기 사용 시 안정적인 탱커형 딜러로 완성됩니다.",
    "descriptions": [
@@ -2014,20 +2011,18 @@
    "parentPerk": "Berserker",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Health",
      "label": "체력",
      "value": 0.05,
      "unit": "percent",
      "display": "+5%",
-     "lv10": 0.05,
-     "lv20": 0.05,
-     "lv10Display": "+5%",
-     "lv20Display": "+5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
+     "scaling": true
     },
     {
      "key": "Armor",
@@ -2035,12 +2030,11 @@
      "value": 0.05,
      "unit": "percent",
      "display": "+5%",
-     "lv10": 0.05,
-     "lv20": 0.05,
-     "lv10Display": "+5%",
-     "lv20Display": "+5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
+     "scaling": true
     },
     {
      "key": "Damage",
@@ -2048,14 +2042,14 @@
      "value": 0.05,
      "unit": "percent",
      "display": "+5%",
-     "lv10": 0.05,
-     "lv20": 0.05,
-     "lv10Display": "+5%",
-     "lv20Display": "+5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "체력과 방어력을 스스로 깎아내는 대신, 그 대가로 피해량을 크게 폭증시켜주는 <font color=\"#FFD700\">하이리스크-하이리턴</font> 퍼크입니다.",
    "endgame": "패시브만으로 피해 +5%(레벨당)·만렙 <font color=\"#15d7fa\">+100%</font>가 붙는 대신 체력/방어력이 -5%(레벨당)·만렙 <font color=\"#ff6666\">-100%(엔진 클램프로 실제 하한은 있음)</font>까지 깎이며, 스킬 6개를 전부 '체력 소모형'으로 채우면 체력이 극단적으로 낮아지는 대신(최소 1은 보장) 압도적인 딜을 뽑아내는 올인 빌드가 완성됩니다.",
    "descriptions": [
@@ -2657,20 +2651,18 @@
    "parentPerk": "Commando",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "Recoil",
@@ -2678,12 +2670,11 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "ReloadRate",
@@ -2691,14 +2682,14 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "특정 좀비 타입을 상대할 때 피해량을 큰 폭으로 몰아주는 <font color=\"#FFD700\">잠입 요원</font> 컨셉 퍼크입니다.",
    "endgame": "10개 스킬이 전부 동일 패턴(좀비 타입별 <font color=\"#15d7fa\">+30%/+60%</font> 피해)이라, 상대하는 적 구성에 맞춰 스킬을 선택하면 특화 대상에게는 최상급 화력을 낼 수 있습니다.",
    "descriptions": [
@@ -3060,20 +3051,18 @@
    "parentPerk": "Commando",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "RifleDamage",
      "label": "소총 피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "HeadshotDamage",
@@ -3081,12 +3070,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "ReloadSpeed",
@@ -3094,12 +3082,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "RecoilReduction",
@@ -3107,12 +3094,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "WeaponSwitchSpeed",
@@ -3120,12 +3106,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "AmmoCapacity",
@@ -3133,13 +3118,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "GrenadeCapacity",
      "label": "수류탄 용량",
@@ -3851,20 +3837,18 @@
    "parentPerk": "Commando",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "MovementPerLevel",
      "label": "레벨 당 이동",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "DamagePerLevel",
@@ -3872,13 +3856,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "Level10Movement",
      "label": "레벨 10 이동",
@@ -4382,35 +4367,33 @@
    "parentPerk": "Demolitionist",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "GrenadeDamage",
      "label": "수류탄 피해량",
      "value": 0.2,
      "unit": "percent",
      "display": "+20%",
-     "lv10": 0.2,
-     "lv20": 0.2,
-     "lv10Display": "+20%",
-     "lv20Display": "+20%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 2.0,
+     "lv20": 4.0,
+     "lv10Display": "+200%",
+     "lv20Display": "+400%",
+     "scaling": true
     },
     {
      "key": "ReloadRate",
      "label": "재장전 속도",
-     "value": 0.05,
+     "value": 0.025,
      "unit": "percent",
-     "display": "+5%",
-     "lv10": 0.05,
-     "lv20": 0.05,
-     "lv10Display": "+5%",
-     "lv20Display": "+5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "display": "+2.5%",
+     "lv10": 0.25,
+     "lv20": 0.5,
+     "lv10Display": "+25%",
+     "lv20Display": "+50%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "수류탄 피해량을 여러 스킬로 겹겹이 증폭시켜주는 <font color=\"#FFD700\">수류탄 특화</font> 폭발 스페셜리스트입니다.",
    "endgame": "Elmo, MadBomber, SlowCooker, ArmedAndDangerous 스킬을 전부 채우면 <font color=\"#15d7fa\">수류탄 피해</font>가 크게 중첩되는 폭발 특화 빌드가 완성됩니다.",
    "descriptions": [
@@ -4420,8 +4403,8 @@
      "isCapstone": false
     },
     {
-     "raw": "모든 무기의 <font color=\"#15d7fa\">재장전 속도</font>가 <font color=\"#77d914\">레벨업당 +5% · 만렙(Lv20) +100%</font> 증가합니다.",
-     "text": "모든 무기의 재장전 속도가 레벨업당 +5% · 만렙(Lv20) +100% 증가합니다.",
+     "raw": "모든 무기의 <font color=\"#15d7fa\">재장전 속도</font>가 <font color=\"#77d914\">레벨업당 +2.5% · 만렙(Lv20) +50%</font> 증가합니다.",
+     "text": "모든 무기의 재장전 속도가 레벨업당 +2.5% · 만렙(Lv20) +50% 증가합니다.",
      "isCapstone": false
     }
    ],
@@ -4720,12 +4703,12 @@
    "skillCount": 10,
    "verdict": {
     "tag": "적절 (너프 완료)",
-    "note": "수류탄 스킬 4종(Elmo/MadBomber/SlowCooker/ArmedAndDangerous) 동시 장착 시 +260%였으나 +145%로 너프 완료. 베이스 퍼크 Demolitionist 수류탄 스택 문제의 재발 위험이 있던 항목.",
-    "grade": "A"
+    "note": "수류탄 스킬 4종(Elmo/MadBomber/SlowCooker/ArmedAndDangerous) 동시 장착 시 +260%였으나 +145%로 너프 완료. 재장전 속도 패시브도 만렙 +100%→+50%로 너프. 베이스 퍼크 Demolitionist 수류탄 스택 문제의 재발 위험이 있던 항목.",
+    "grade": "B"
    },
-   "grade": "A",
+   "grade": "B",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.400000; 구 0.100000",
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.400000; 만렙(Lv20) 50%로 너프, 구 0.050000",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
    "balanceComplete": false,
    "extraSections": [],
@@ -4737,20 +4720,18 @@
    "parentPerk": "Demolitionist",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "FireExplosiveDamage",
      "label": "화염 폭발물 피해량",
      "value": 0.02,
      "unit": "percent",
      "display": "+2%",
-     "lv10": 0.02,
-     "lv20": 0.02,
-     "lv10Display": "+2%",
-     "lv20Display": "+2%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
+     "scaling": true
     },
     {
      "key": "BurnDurationBonus",
@@ -4758,13 +4739,14 @@
      "value": 0.025,
      "unit": "seconds",
      "display": "0.03초",
-     "lv10": 0.025,
-     "lv20": 0.025,
-     "lv10Display": "0.03초",
-     "lv20Display": "0.03초",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.25,
+     "lv20": 0.5,
+     "lv10Display": "0.25초",
+     "lv20Display": "0.5초",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "Level10DamageBonus",
      "label": "레벨 10 피해량 보너스",
@@ -5222,20 +5204,18 @@
    "parentPerk": "Demolitionist",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "DamagePerLevel",
      "label": "레벨 당 피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "ReloadPerLevel",
@@ -5243,13 +5223,14 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "ConditionTarget_Headshot",
      "label": "조건 대상 헤드샷",
@@ -5561,20 +5542,18 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "FieldMedicine",
      "label": "야전 의술",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "CombatReadiness",
@@ -5582,12 +5561,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "HealingTouch",
@@ -5595,13 +5573,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "Level10AuraHealing",
      "label": "레벨 10 오라 치유",
@@ -6054,20 +6033,18 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "TeamDamagePerLevel",
      "label": "레벨 당 팀 피해량",
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.005,
-     "lv20": 0.005,
-     "lv10Display": "+0.5%",
-     "lv20Display": "+0.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
     },
     {
      "key": "TeamReloadSpeedPerLevel",
@@ -6075,13 +6052,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "TeamMovementPerSymbioteStage",
      "label": "공생체 단계 당 팀 이동",
@@ -6598,20 +6576,18 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "LifeStealPerLevel",
      "label": "레벨 당 생명 흡수",
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.005,
-     "lv20": 0.005,
-     "lv10Display": "+0.5%",
-     "lv20Display": "+0.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
     },
     {
      "key": "HealingReceivedPerLevel",
@@ -6619,13 +6595,14 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "SiphonDuration",
      "label": "흡수 지속시간",
@@ -7288,20 +7265,18 @@
    "parentPerk": "FieldMedic",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "ReloadSpeed",
      "label": "재장전 속도",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "WeaponSwitchSpeed",
@@ -7309,12 +7284,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "PenetrationBonus",
@@ -7322,13 +7296,14 @@
      "value": 0.0175,
      "unit": "percent",
      "display": "+1.75%",
-     "lv10": 0.0175,
-     "lv20": 0.0175,
-     "lv10Display": "+1.75%",
-     "lv20Display": "+1.75%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.175,
+     "lv20": 0.35,
+     "lv10Display": "+17.5%",
+     "lv20Display": "+35%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "Level10SpareAmmoBonus",
      "label": "레벨 10 여분 탄약 보너스",
@@ -7913,20 +7888,18 @@
    "parentPerk": "Firebug",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Chance",
      "label": "발동 확률",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "DamageFactor",
@@ -7934,12 +7907,11 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
     },
     {
      "key": "Damage",
@@ -7947,13 +7919,14 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "BurnDuration",
      "label": "화상 지속시간",
@@ -8426,20 +8399,18 @@
    "parentPerk": "Firebug",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "FireDamagePerLevel",
      "label": "레벨 당 화염 피해량",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "BurningTargetDamagePerLevel",
@@ -8447,13 +8418,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "BurnDurationPerLevel",
      "label": "레벨 당 화상 지속시간",
@@ -8998,22 +8970,21 @@
    "parentPerk": "Gunslinger",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Dosh",
      "label": "도쉬",
      "value": 1,
      "unit": "currency",
      "display": "1 도쉬",
-     "lv10": 1,
-     "lv20": 1,
-     "lv10Display": "1 도쉬",
-     "lv20Display": "1 도쉬",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 10,
+     "lv20": 20,
+     "lv10Display": "10 도쉬",
+     "lv20Display": "20 도쉬",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "특정 조건의 헤드샷 처치마다 두둑한 도쉬를 얹어주는 <font color=\"#FFD700\">경제형</font> 퍼크입니다.",
    "endgame": "14개의 <font color=\"#15d7fa\">도쉬 보상 스킬</font>을 조합하면 전투를 하면서 동시에 상당한 부수입을 얻는 경제 특화 빌드가 완성됩니다.",
    "descriptions": [
@@ -9493,20 +9464,18 @@
    "parentPerk": "Gunslinger",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Heal",
@@ -9514,12 +9483,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "KnockdownPower",
@@ -9527,12 +9495,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "MagSize",
@@ -9540,12 +9507,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "MeleeAttackSpeed",
@@ -9553,12 +9519,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Penetration",
@@ -9566,12 +9531,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "RateOfFire",
@@ -9579,12 +9543,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Recoil",
@@ -9592,12 +9555,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "ReloadRate",
@@ -9605,12 +9567,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "SpareAmmo",
@@ -9618,12 +9579,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "StumblePower",
@@ -9631,12 +9591,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "StunPower",
@@ -9644,12 +9603,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Speed",
@@ -9657,12 +9615,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Spread",
@@ -9670,14 +9627,14 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "피해·치유·탄창·관통·재장전·이동까지 거의 모든 능력치를 골고루 끌어올려주는 <font color=\"#FFD700\">최종 건슬링거</font> 심화 퍼크입니다.",
    "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어, 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
    "descriptions": [
@@ -10260,20 +10217,18 @@
    "parentPerk": "Gunslinger",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "CritChance",
      "label": "치명타 확률",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "HeadshotDamage",
@@ -10281,12 +10236,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "MovementSpeed",
@@ -10294,13 +10248,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "Level10DamageBonus",
      "label": "레벨 10 피해량 보너스",
@@ -10775,20 +10730,18 @@
    "parentPerk": "SWAT",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "ReloadSpeed",
      "label": "재장전 속도",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
     },
     {
      "key": "WeaponSwitchSpeed",
@@ -10796,12 +10749,11 @@
      "value": 0.02,
      "unit": "percent",
      "display": "+2%",
-     "lv10": 0.02,
-     "lv20": 0.02,
-     "lv10Display": "+2%",
-     "lv20Display": "+2%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
+     "scaling": true
     },
     {
      "key": "MovementSpeed",
@@ -10809,13 +10761,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "AmmoScavengeChance",
      "label": "탄약 노획 확률",
@@ -11308,20 +11261,18 @@
    "parentPerk": "SWAT",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Heal",
@@ -11329,12 +11280,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "KnockdownPower",
@@ -11342,12 +11292,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "MagSize",
@@ -11355,12 +11304,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "MeleeAttackSpeed",
@@ -11368,12 +11316,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Penetration",
@@ -11381,12 +11328,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "RateOfFire",
@@ -11394,12 +11340,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Recoil",
@@ -11407,12 +11352,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "ReloadRate",
@@ -11420,12 +11364,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "SpareAmmo",
@@ -11433,12 +11376,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "StumblePower",
@@ -11446,12 +11388,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "StunPower",
@@ -11459,12 +11400,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Speed",
@@ -11472,12 +11412,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Spread",
@@ -11485,14 +11424,14 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "피해·치유·탄창·관통·재장전 등 14가지 무기 능력치를 동시에 골고루 끌어올려주는 <font color=\"#FFD700\">만능형 SWAT</font> 전직입니다.",
    "endgame": "레벨당 <font color=\"#15d7fa\">14개 속성</font>이 동시에 성장해(Lv20 기준 각 +15%), 어떤 무기·상황에도 대응 가능한 올라운더형 빌드가 완성됩니다.",
    "descriptions": [
@@ -11828,20 +11767,18 @@
    "parentPerk": "SWAT",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Chance",
      "label": "발동 확률",
      "value": 0.002,
      "unit": "percent",
      "display": "+0.2%",
-     "lv10": 0.002,
-     "lv20": 0.002,
-     "lv10Display": "+0.2%",
-     "lv20Display": "+0.2%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.02,
+     "lv20": 0.04,
+     "lv10Display": "+2%",
+     "lv20Display": "+4%",
+     "scaling": true
     },
     {
      "key": "Damage",
@@ -11849,12 +11786,11 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
     },
     {
      "key": "FreezeDuration",
@@ -11862,14 +11798,14 @@
      "value": 0.125,
      "unit": "seconds",
      "display": "0.12초",
-     "lv10": 0.125,
-     "lv20": 0.125,
-     "lv10Display": "0.12초",
-     "lv20Display": "0.12초",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 1.25,
+     "lv20": 2.5,
+     "lv10Display": "1.25초",
+     "lv20Display": "2.5초",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "동결 효과의 피해와 지속시간을 함께 늘려 제드를 얼려 무력화시켜주는 <font color=\"#FFD700\">냉기 특화</font> 퍼크입니다.",
    "endgame": "레벨당 동결 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. 동결 효과 지속시간과 피해를 동시에 강화해 제드 무리를 얼려 안전하게 처리하는 빌드가 완성됩니다.",
    "descriptions": [
@@ -12312,20 +12248,18 @@
    "parentPerk": "SWAT",
    "unlockLevel": 20,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "DamageResist",
@@ -12333,12 +12267,11 @@
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.005,
-     "lv20": 0.005,
-     "lv10Display": "+0.5%",
-     "lv20Display": "+0.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
     },
     {
      "key": "HeadshotDamage",
@@ -12346,14 +12279,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "피해량과 피해 저항을 동시에 얹어주어 공격과 생존을 둘 다 놓치지 않게 해주는 <font color=\"#FFD700\">균형형</font> 최종 생존전문가 심화 퍼크입니다.",
    "endgame": "Lv20 기준 <font color=\"#15d7fa\">피해량+20%, 피해 저항+10%</font>가 동시에 상승해, 어떤 상황에서도 안정적으로 버티며 딜을 넣을 수 있는 만능형 최종 빌드가 완성됩니다.",
    "descriptions": [
@@ -12438,20 +12371,18 @@
    "parentPerk": "Sharpshooter",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Damage",
      "label": "피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "DamageHead",
@@ -12459,12 +12390,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "Penetration",
@@ -12472,14 +12402,14 @@
      "value": 0.025,
      "unit": "percent",
      "display": "+2.5%",
-     "lv10": 0.025,
-     "lv20": 0.025,
-     "lv10Display": "+2.5%",
-     "lv20Display": "+2.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.25,
+     "lv20": 0.5,
+     "lv10Display": "+25%",
+     "lv20Display": "+50%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "role": "샤프슈터/건슬링거 무기의 피해량과 헤드샷 피해를 동시에 끌어올려주는 <font color=\"#FFD700\">1차 전직</font>입니다.",
    "endgame": "Lv20 관통력 보너스까지 채우면 헤드샷 위주의 관통 사격 빌드가 완성되며, <font color=\"#15d7fa\">FullMetalJacket</font> 스킬로 관통력을 한층 더 끌어올릴 수 있습니다.",
    "descriptions": [
@@ -12869,20 +12799,18 @@
    "parentPerk": "Sharpshooter",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "StalkDamageBonus",
      "label": "추적 피해량 보너스",
      "value": 0.0175,
      "unit": "percent",
      "display": "+1.75%",
-     "lv10": 0.0175,
-     "lv20": 0.0175,
-     "lv10Display": "+1.75%",
-     "lv20Display": "+1.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.175,
+     "lv20": 0.35,
+     "lv10Display": "+17.5%",
+     "lv20Display": "+35%",
+     "scaling": true
     },
     {
      "key": "MovementSpeed",
@@ -12890,12 +12818,11 @@
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "SpareAmmoBonus",
@@ -12903,13 +12830,14 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "PerfectAmbushBonus",
      "label": "완벽한 매복 보너스",
@@ -13393,20 +13321,18 @@
    "parentPerk": "Sharpshooter",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "BaseDamage",
      "label": "기본 피해량",
      "value": 0.0075,
      "unit": "percent",
      "display": "+0.75%",
-     "lv10": 0.0075,
-     "lv20": 0.0075,
-     "lv10Display": "+0.75%",
-     "lv20Display": "+0.75%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
     },
     {
      "key": "HeadshotDamage",
@@ -13414,12 +13340,11 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
     },
     {
      "key": "ReloadSpeed",
@@ -13427,13 +13352,14 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "IcicleArrowBonus",
      "label": "고드름 화살 보너스",
@@ -14316,103 +14242,410 @@
    "icon": "icons/predator.png"
   },
   {
-   "key": "Gambler",
-   "name": "도박꾼",
+   "key": "Tycoon",
+   "name": "타이쿤",
    "parentPerk": "Support",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "RoundStipend",
+     "label": "라운드 지원금",
+     "value": 20.0,
+     "unit": "count",
+     "display": "20",
+     "lv10": 200.0,
+     "lv20": 400.0,
+     "lv10Display": "200",
+     "lv20Display": "400",
+     "scaling": true
+    },
+    {
+     "key": "BulkDiscount",
+     "label": "대량 할인",
+     "value": 0.008,
+     "unit": "percent",
+     "display": "+0.8%",
+     "lv10": 0.08,
+     "lv20": 0.16,
+     "lv10Display": "+8%",
+     "lv20Display": "+16%",
+     "scaling": true
+    },
+    {
+     "key": "CostCutting",
+     "label": "비용 절감",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
    "fixedStats": [
     {
-     "key": "Doodle",
-     "label": "낙서",
-     "value": 40,
-     "unit": "count",
-     "display": "40",
-     "lv10": 40,
-     "lv20": 40,
-     "lv10Display": "40",
-     "lv20Display": "40",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Chance",
-     "label": "발동 확률",
-     "value": 0.02,
+     "key": "CompoundInterestRate",
+     "label": "복리 이자 속도",
+     "value": 0.1,
      "unit": "percent",
-     "display": "+2%",
-     "lv10": 0.02,
-     "lv20": 0.02,
-     "lv10Display": "+2%",
-     "lv20Display": "+2%",
+     "display": "+10%",
+     "lv10": 0.1,
+     "lv20": 0.1,
+     "lv10Display": "+10%",
+     "lv20Display": "+10%",
      "scaling": false,
      "capstoneLevel": null
     },
     {
-     "key": "Dosh",
-     "label": "도쉬",
-     "value": 14,
-     "unit": "currency",
-     "display": "14 도쉬",
-     "lv10": 14,
-     "lv20": 14,
-     "lv10Display": "14 도쉬",
-     "lv20Display": "14 도쉬",
+     "key": "HostileTakeoverRate",
+     "label": "적대적 장악 속도",
+     "value": 0.2,
+     "unit": "percent",
+     "display": "+20%",
+     "lv10": 0.2,
+     "lv20": 0.2,
+     "lv10Display": "+20%",
+     "lv20Display": "+20%",
      "scaling": false,
      "capstoneLevel": null
     }
    ],
-   "role": "확률적으로 터지는 잭팟과 웨이브 보너스로 두둑한 도쉬를 안겨주는 <font color=\"#FFD700\">경제형 서포트</font> 퍼크입니다.",
-   "endgame": "웨이브 종료 도쉬 보너스와 확률성 스킬(<font color=\"#15d7fa\">Jackpot</font> 등)을 조합하면 전투와 동시에 상당한 도쉬 수입을 기대할 수 있는 경제 특화 빌드가 완성됩니다.",
+   "role": "복리 이자가 눈덩이처럼 불어나 시간이 지날수록 도쉬 수입이 기하급수적으로 늘어나게 만들어주는 <font color=\"#FFD700\">최상급 경제형</font> 퍼크입니다.",
+   "endgame": "복리 이자, 라운드 지원금, 긴급환매 등 스킬을 조합하면 시간이 갈수록 기하급수적으로 불어나는 <font color=\"#15d7fa\">도쉬 수입</font>을 얻는 투자형 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "매 <font color=\"#15d7fa\">웨이브</font> 종료 시 <font color=\"#77d914\">레벨업당 +14 · 만렙(Lv20) +280 도쉬</font>를 획득합니다.",
-     "text": "매 웨이브 종료 시 레벨업당 +14 · 만렙(Lv20) +280 도쉬를 획득합니다.",
+     "raw": "<font color=\"#FFD700\">라운드 지원금:</font> 각 웨이브 종료 시 <font color=\"#90EE90\">추가 지급금</font> <font color=\"#FFFFFF\">레벨업당 +20 · 만렙(Lv20) +400</font>",
+     "text": "라운드 지원금: 각 웨이브 종료 시 추가 지급금 레벨업당 +20 · 만렙(Lv20) +400",
      "isCapstone": false
     },
     {
-     "raw": "헤드샷으로 처치할 때마다 <font color=\"#77d914\">레벨업당 +2% · 만렙(Lv20) +40%</font> 확률로 <font color=\"#77d914\">1 도쉬</font>를 획득합니다.",
-     "text": "헤드샷으로 처치할 때마다 레벨업당 +2% · 만렙(Lv20) +40% 확률로 1 도쉬를 획득합니다.",
+     "raw": "<font color=\"#FFD700\">대량 할인:</font> 상점 <font color=\"#90EE90\">아이템 가격</font> <font color=\"#FFFFFF\">레벨업당 -0.8% · 만렙(Lv20) -16%</font> 감소",
+     "text": "대량 할인: 상점 아이템 가격 레벨업당 -0.8% · 만렙(Lv20) -16% 감소",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#FFD700\">비용 절감:</font> <font color=\"#90EE90\">무기 및 장비 업그레이드 비용</font> <font color=\"#FFFFFF\">레벨업당 -1% · 만렙(Lv20) -20%</font> 감소",
+     "text": "비용 절감: 무기 및 장비 업그레이드 비용 레벨업당 -1% · 만렙(Lv20) -20% 감소",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">복리</font> - 웨이브 종료 시 현재 소지한 <font color=\"#90EE90\">도쉬</font>의 <font color=\"#FFFFFF\">+10%</font>를 이자로 획득합니다.",
+     "text": "레벨 10: 복리 - 웨이브 종료 시 현재 소지한 도쉬의 +10%를 이자로 획득합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">적대적 인수</font> - 보스 등장 시 모든 팀원의 현재 <font color=\"#90EE90\">도쉬</font> 중 <font color=\"#FFFFFF\">+20%</font>를 흡수하여 자신의 것으로 만듭니다.",
+     "text": "레벨 20: 적대적 인수 - 보스 등장 시 모든 팀원의 현재 도쉬 중 +20%를 흡수하여 자신의 것으로 만듭니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#FFD700\">포트폴리오 성장</font>: 누적 <font color=\"#FFFFFF\">2500</font> <font color=\"#90EE90\">도쉬</font>를 획득할 때마다, 매 웨이브 종료 시 받는 기본 지원금이 영구적으로 <font color=\"#FFFFFF\">+50</font> 증가합니다.",
+     "text": "포트폴리오 성장: 누적 2500 도쉬를 획득할 때마다, 매 웨이브 종료 시 받는 기본 지원금이 영구적으로 +50 증가합니다.",
      "isCapstone": false
     }
    ],
    "skills": [
     {
-     "key": "ArmoredUp",
-     "name": "무장",
-     "standardDesc": "ZED를 처치할 때마다 +1% 확률로 체력이 회복되고 방어력이 50 충전됩니다.",
-     "deluxeDesc": "ZED를 처치할 때마다 +2% 확률로 체력이 회복되고 방어력이 100 충전됩니다.",
-     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+1% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어력이 <font color=\"#be4d25\">50</font> 충전됩니다.",
-     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+2% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어력이 <font color=\"#be4d25\">100</font> 충전됩니다.",
+     "key": "AssetLiquidation",
+     "name": "자산 청산",
+     "standardDesc": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 +1%를 도쉬로 돌려받습니다.",
+     "deluxeDesc": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 +2%를 도쉬로 돌려받습니다.",
+     "standardDescRaw": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 <font color=\"#ffaa33\">+1%</font>를 도쉬로 돌려받습니다.",
+     "deluxeDescRaw": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 <font color=\"#ffaa33\">+2%</font>를 도쉬로 돌려받습니다.",
      "rawValues": [
       {
-       "key": "Chance",
-       "label": "발동 확률",
+       "key": "DamagePercentage",
+       "label": "피해량 퍼센트",
        "value": 0.01,
        "unit": "percent",
        "display": "+1%"
       },
       {
-       "key": "Chance",
-       "label": "발동 확률",
+       "key": "DamagePercentage",
+       "label": "피해량 퍼센트",
        "value": 0.02,
        "unit": "percent",
        "display": "+2%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "BulkPurchasing",
+     "name": "대량 구매",
+     "standardDesc": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 추가 구매 항목당 +1%의 도쉬를 환불받습니다.",
+     "deluxeDesc": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 추가 구매 항목당 +2%의 도쉬를 환불받습니다.",
+     "standardDescRaw": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 <font color=\"#00ff00\">추가 구매 항목당 <font color=\"#ffaa33\">+1%의 도쉬를 환불</font>받습니다.</font>",
+     "deluxeDescRaw": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 <font color=\"#00ff00\">추가 구매 항목당 <font color=\"#ffaa33\">+2%의 도쉬를 환불</font>받습니다.</font>",
+     "rawValues": [
+      {
+       "key": "RefundPercentage",
+       "label": "환급 퍼센트",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
       },
       {
-       "key": "ArmorOnKill",
-       "label": "방어력 처치",
+       "key": "RefundPercentage",
+       "label": "환급 퍼센트",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "CorporateBailout",
+     "name": "기업 구제금융",
+     "standardDesc": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 +25%를 보너스로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
+     "deluxeDesc": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 +50%를 보너스로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
+     "standardDescRaw": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 <font color=\"#ffaa33\">+25%</font>를 <font color=\"#00ff00\">보너스</font>로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
+     "deluxeDescRaw": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 <font color=\"#ffaa33\">+50%</font>를 <font color=\"#00ff00\">보너스</font>로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
+     "rawValues": [
+      {
+       "key": "BailoutPercentage",
+       "label": "긴급환매 퍼센트",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "BailoutPercentage",
+       "label": "긴급환매 퍼센트",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "GoldenParachute",
+     "name": "골든 파라슈트",
+     "standardDesc": "당신이 사망하면 무작위 팀원에게 400 도쉬가 지급됩니다.",
+     "deluxeDesc": "당신이 사망하면 도쉬가 가장 적은 팀원에게 800 도쉬가 지급됩니다.",
+     "standardDescRaw": "당신이 사망하면 <font color=\"#ffaa33\">무작위 팀원</font>에게 <font color=\"#00ff00\">400 도쉬</font>가 지급됩니다.",
+     "deluxeDescRaw": "당신이 사망하면 <font color=\"#ffaa33\">도쉬가 가장 적은 팀원</font>에게 <font color=\"#00ff00\">800 도쉬</font>가 지급됩니다.",
+     "rawValues": [
+      {
+       "key": "DoshAmount",
+       "label": "도쉬 량",
+       "value": 400,
+       "unit": "currency",
+       "display": "400 도쉬"
+      },
+      {
+       "key": "DoshAmount",
+       "label": "도쉬 량",
+       "value": 800,
+       "unit": "currency",
+       "display": "800 도쉬"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HODLing",
+     "name": "HODLing",
+     "standardDesc": "600초 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 +25%를 이자로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
+     "deluxeDesc": "450초 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 +25%를 이자로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
+     "standardDescRaw": "<font color=\"#ffaa33\">600초</font> 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 <font color=\"#00ff00\">+25%를 이자</font>로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
+     "deluxeDescRaw": "<font color=\"#ffaa33\">450초</font> 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 <font color=\"#00ff00\">+25%를 이자</font>로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
+     "rawValues": [
+      {
+       "key": "HODLDuration",
+       "label": "존버 지속시간",
+       "value": 600.0,
+       "unit": "seconds",
+       "display": "600초"
+      },
+      {
+       "key": "HODLDuration",
+       "label": "존버 지속시간",
+       "value": 450.0,
+       "unit": "seconds",
+       "display": "450초"
+      },
+      {
+       "key": "InterestRate",
+       "label": "이자 속도",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": "이자율 25%가 패시브 복리 이자(10%)와 중첩됩니다. 도쉬에만 영향을 주는 경제 효과입니다.",
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HighRiskInvestment",
+     "name": "고위험 투자",
+     "standardDesc": "상점에서 한 번에 4,000 도쉬 이상을 지출할 때마다 10% 확률로 지불한 금액을 그대로 환불받습니다.",
+     "deluxeDesc": "상점에서 한 번에 3,000 도쉬 이상을 지출할 때마다 10% 확률로 지불한 금액을 그대로 환불받습니다.",
+     "standardDescRaw": "상점에서 한 번에 <font color=\"#ff3399\">4,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
+     "deluxeDescRaw": "상점에서 한 번에 <font color=\"#ff3399\">3,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
+     "rawValues": [
+      {
+       "key": "MinPurchaseAmount",
+       "label": "최소 구매 량",
+       "value": 4000,
+       "unit": "count",
+       "display": "4,000"
+      },
+      {
+       "key": "MinPurchaseAmount",
+       "label": "최소 구매 량",
+       "value": 3000,
+       "unit": "count",
+       "display": "3,000"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HouseEdge",
+     "name": "하우스 엣지",
+     "standardDesc": "매 25번째 킬마다 슬롯머신이 발동됩니다: 80% 꽝, 15% +50 도쉬, 4% +150 도쉬, 1% +300 도쉬.",
+     "deluxeDesc": "매 20번째 킬마다 슬롯머신이 발동됩니다: 60% 꽝, 25% +50 도쉬, 10% +150 도쉬, 5% +300 도쉬.",
+     "standardDescRaw": "매 <font color=\"#ffaa33\">25번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">80% 꽝</font>, <font color=\"#ffaa33\">15% +50 도쉬</font>, <font color=\"#ff6600\">4% +150 도쉬</font>, <font color=\"#ff0000\">1% +300 도쉬</font>.",
+     "deluxeDescRaw": "매 <font color=\"#ffaa33\">20번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">60% 꽝</font>, <font color=\"#ffaa33\">25% +50 도쉬</font>, <font color=\"#ff6600\">10% +150 도쉬</font>, <font color=\"#ff0000\">5% +300 도쉬</font>.",
+     "rawValues": [
+      {
+       "key": "SlotMachineTrigger",
+       "label": "슬롯 머신 발동",
+       "value": 25,
+       "unit": "count",
+       "display": "25"
+      },
+      {
+       "key": "SlotMachineTrigger",
+       "label": "슬롯 머신 발동",
+       "value": 20,
+       "unit": "count",
+       "display": "20"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "InsiderTrading",
+     "name": "내부자 거래",
+     "standardDesc": "해당 웨이브에서 처치한 ZED의 종류가 다양할수록 종류 하나당 +15 도쉬를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
+     "deluxeDesc": "해당 웨이브에서 처치한 ZED의 종류가 다양할수록 종류 하나당 +30 도쉬를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
+     "standardDescRaw": "해당 웨이브에서 처치한 <font color=\"#ffaa33\">ZED의 종류</font>가 다양할수록 종류 하나당 <font color=\"#00ff00\">+15 도쉬</font>를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
+     "deluxeDescRaw": "해당 웨이브에서 처치한 <font color=\"#ffaa33\">ZED의 종류</font>가 다양할수록 종류 하나당 <font color=\"#00ff00\">+30 도쉬</font>를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
+     "rawValues": [
+      {
+       "key": "DoshPerZedType",
+       "label": "제드 종류 당 도쉬",
+       "value": 15,
+       "unit": "currency",
+       "display": "15 도쉬"
+      },
+      {
+       "key": "DoshPerZedType",
+       "label": "제드 종류 당 도쉬",
+       "value": 30,
+       "unit": "currency",
+       "display": "30 도쉬"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "MercenaryContract",
+     "name": "용병 계약",
+     "standardDesc": "동일한 종류의 ZED를 5번 연속 처치하면 +25 도쉬를 얻습니다.",
+     "deluxeDesc": "동일한 종류의 ZED를 4번 연속 처치하면 +50 도쉬를 얻습니다.",
+     "standardDescRaw": "동일한 종류의 ZED를 <font color=\"#ffaa33\">5번 연속</font> 처치하면 <font color=\"#00ff00\">+25 도쉬</font>를 얻습니다.",
+     "deluxeDescRaw": "동일한 종류의 ZED를 <font color=\"#ffaa33\">4번 연속</font> 처치하면 <font color=\"#00ff00\">+50 도쉬</font>를 얻습니다.",
+     "rawValues": [
+      {
+       "key": "DoshReward",
+       "label": "도쉬 보상",
+       "value": 25,
+       "unit": "currency",
+       "display": "25 도쉬"
+      },
+      {
+       "key": "DoshReward",
+       "label": "도쉬 보상",
        "value": 50,
+       "unit": "currency",
+       "display": "50 도쉬"
+      },
+      {
+       "key": "KillsRequired",
+       "label": "처치 필요",
+       "value": 5,
        "unit": "count",
-       "display": "50"
+       "display": "5"
       },
       {
-       "key": "ArmorOnKill",
-       "label": "방어력 처치",
-       "value": 100,
+       "key": "KillsRequired",
+       "label": "처치 필요",
+       "value": 4,
        "unit": "count",
-       "display": "100"
+       "display": "4"
       }
      ],
      "hasKorText": true,
@@ -14425,86 +14658,26 @@
      "noData": false
     },
     {
-     "key": "DoubleDown",
-     "name": "더블 다운",
-     "standardDesc": "헤드샷 피해량이 +15% 증가하지만, 몸통샷 피해량은 -8% 감소합니다.",
-     "deluxeDesc": "헤드샷 피해량이 +30% 증가하지만, 몸통샷 피해량은 -12% 감소합니다.",
-     "standardDescRaw": "<font color=\"#ff3399\">헤드샷</font> 피해량이 <font color=\"#66cc00\">+15%</font> 증가하지만, <font color=\"#be4d25\">몸통샷</font> 피해량은 <font color=\"#ff0000\">-8%</font> 감소합니다.",
-     "deluxeDescRaw": "<font color=\"#ff3399\">헤드샷</font> 피해량이 <font color=\"#66cc00\">+30%</font> 증가하지만, <font color=\"#be4d25\">몸통샷</font> 피해량은 <font color=\"#ff0000\">-12%</font> 감소합니다.",
+     "key": "ProfitSharing",
+     "name": "이익 분배",
+     "standardDesc": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 10 도쉬가 지급됩니다.",
+     "deluxeDesc": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 20 도쉬가 지급됩니다.",
+     "standardDescRaw": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 10 도쉬가 지급됩니다.",
+     "deluxeDescRaw": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 20 도쉬가 지급됩니다.",
      "rawValues": [
       {
-       "key": "HeadshotBonus",
-       "label": "헤드샷 보너스",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "HeadshotBonus",
-       "label": "헤드샷 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "BodyPenalty",
-       "label": "몸통 페널티",
-       "value": -0.08,
-       "unit": "percent",
-       "display": "-8%"
-      },
-      {
-       "key": "BodyPenalty",
-       "label": "몸통 페널티",
-       "value": -0.12,
-       "unit": "percent",
-       "display": "-12%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "FieryGambit",
-     "name": "불타는 도박",
-     "standardDesc": "화염 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
-     "deluxeDesc": "화염 피해로 ZED를 처치하면 +2% 확률로 175 도쉬를 획득합니다.",
-     "standardDescRaw": "화염 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
-     "deluxeDescRaw": "화염 피해로 ZED를 처치하면 +2% 확률로 175 도쉬를 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 90.0,
+       "key": "DoshPerTeammate",
+       "label": "팀원 당 도쉬",
+       "value": 10,
        "unit": "currency",
-       "display": "90 도쉬"
+       "display": "10 도쉬"
       },
       {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 175.0,
+       "key": "DoshPerTeammate",
+       "label": "팀원 당 도쉬",
+       "value": 20,
        "unit": "currency",
-       "display": "175 도쉬"
+       "display": "20 도쉬"
       }
      ],
      "hasKorText": true,
@@ -14517,288 +14690,33 @@
      "noData": false
     },
     {
-     "key": "GrenadeConjurer",
-     "name": "수류탄술사",
-     "standardDesc": "적을 처치할 때마다 +2.5% 확률로 수류탄을 1개 획득합니다.",
-     "deluxeDesc": "적을 처치할 때마다 +5% 확률로 수류탄을 1개 획득합니다.",
-     "standardDescRaw": "적을 처치할 때마다 <font color=\"#ff3399\">+2.5% 확률</font>로 <font color=\"#be4d25\">수류탄</font>을 <font color=\"#66cc00\">1개</font> 획득합니다.",
-     "deluxeDescRaw": "적을 처치할 때마다 <font color=\"#ff3399\">+5% 확률</font>로 <font color=\"#be4d25\">수류탄</font>을 <font color=\"#66cc00\">1개</font> 획득합니다.",
+     "key": "TaxLoopholes",
+     "name": "세금 허점",
+     "standardDesc": "6000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
+     "deluxeDesc": "6000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다.",
+     "standardDescRaw": "6000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
+     "deluxeDescRaw": "6000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다.",
      "rawValues": [
       {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.025,
-       "unit": "percent",
-       "display": "+2.5%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "IcyGambit",
-     "name": "아이시 갬빗",
-     "standardDesc": "얼음 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
-     "deluxeDesc": "얼음 피해로 ZED를 처치하면 +2% 확률로 175 도쉬를 획득합니다.",
-     "standardDescRaw": "얼음 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
-     "deluxeDescRaw": "얼음 피해로 ZED를 처치하면 +2% 확률로 175 도쉬를 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 90.0,
-       "unit": "currency",
-       "display": "90 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 175.0,
-       "unit": "currency",
-       "display": "175 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Jackpot",
-     "name": "잭팟",
-     "standardDesc": "ZED를 처치할 때마다 0.5% 확률로 잭팟이 터져 350 도쉬를 획득합니다.",
-     "deluxeDesc": "ZED를 처치할 때마다 1% 확률로 잭팟이 터져 700 도쉬를 획득합니다.",
-     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">0.5% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">350 도쉬</font>를 획득합니다.",
-     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">1% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">700 도쉬</font>를 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.005,
-       "unit": "percent",
-       "display": "+0.5%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
-      },
-      {
-       "key": "Jackpot",
-       "label": "잭팟",
-       "value": 350,
+       "key": "TaxRefundAmount",
+       "label": "세금 환급 량",
+       "value": 150,
        "unit": "count",
-       "display": "350"
+       "display": "150"
       },
       {
-       "key": "Jackpot",
-       "label": "잭팟",
-       "value": 700,
+       "key": "TaxRefundAmount",
+       "label": "세금 환급 량",
+       "value": 300,
        "unit": "count",
-       "display": "700"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "LuckyPop",
-     "name": "럭키팝",
-     "standardDesc": "헤드샷 성공 시 +1% 확률로 100 도쉬를 즉시 획득합니다.",
-     "deluxeDesc": "헤드샷 성공 시 +2% 확률로 200 도쉬를 즉시 획득합니다.",
-     "standardDescRaw": "<font color=\"#ff3399\">헤드샷</font> 성공 시 <font color=\"#66cc00\">+1%</font> 확률로 <font color=\"#be4d25\">100 도쉬</font>를 즉시 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#ff3399\">헤드샷</font> 성공 시 <font color=\"#66cc00\">+2%</font> 확률로 <font color=\"#be4d25\">200 도쉬</font>를 즉시 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
+       "display": "300"
       },
       {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 100.0,
-       "unit": "currency",
-       "display": "100 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 200.0,
-       "unit": "currency",
-       "display": "200 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "NarrowEscape",
-     "name": "아슬아슬한 탈출",
-     "standardDesc": "받는 피해가 +1% 확률로 무효화되어 0이 됩니다.",
-     "deluxeDesc": "받는 피해가 +2% 확률로 무효화되어 0이 됩니다.",
-     "standardDescRaw": "받는 <font color=\"#ff3399\">피해</font>가 <font color=\"#66cc00\">+1%</font> 확률로 무효화되어 <font color=\"#be4d25\">0</font>이 됩니다.",
-     "deluxeDescRaw": "받는 <font color=\"#ff3399\">피해</font>가 <font color=\"#66cc00\">+2%</font> 확률로 무효화되어 <font color=\"#be4d25\">0</font>이 됩니다.",
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "StrokeOfLuck",
-     "name": "행운의 일격",
-     "standardDesc": "ZED를 처치할 때마다 +1% 확률로 체력을 50 회복합니다.",
-     "deluxeDesc": "ZED를 처치할 때마다 +2% 확률로 체력을 100 회복합니다.",
-     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+1% 확률</font>로 <font color=\"#be4d25\">체력을 50 회복</font>합니다.",
-     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+2% 확률</font>로 <font color=\"#be4d25\">체력을 100 회복</font>합니다.",
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      },
-      {
-       "key": "Vampire",
-       "label": "흡혈",
-       "value": 50,
+       "key": "SpendingThreshold",
+       "label": "소비 임계값",
+       "value": 6000,
        "unit": "count",
-       "display": "50"
-      },
-      {
-       "key": "Vampire",
-       "label": "흡혈",
-       "value": 100,
-       "unit": "count",
-       "display": "100"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "ToxicGambit",
-     "name": "독성 갬빗",
-     "standardDesc": "독 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 얻습니다.",
-     "deluxeDesc": "독 피해로 ZED를 처치하면 +2% 확률로 175 도쉬를 얻습니다.",
-     "standardDescRaw": "<font color=\"#8fce00\">독 피해</font>로 ZED를 처치하면 <font color=\"#66cc00\">+1% 확률</font>로 <font color=\"#be4d25\">90 도쉬</font>를 얻습니다.",
-     "deluxeDescRaw": "<font color=\"#8fce00\">독 피해</font>로 ZED를 처치하면 <font color=\"#66cc00\">+2% 확률</font>로 <font color=\"#be4d25\">175 도쉬</font>를 얻습니다.",
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 90.0,
-       "unit": "currency",
-       "display": "90 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 175.0,
-       "unit": "currency",
-       "display": "175 도쉬"
+       "display": "6,000"
       }
      ],
      "hasKorText": true,
@@ -14811,19 +14729,19 @@
      "noData": false
     }
    ],
-   "skillCount": 10,
+   "skillCount": 11,
    "verdict": {
     "tag": "적절",
-    "note": "유지 판정. 경제 퍼크로서 기존 도쉬 밸런스 기준과 부합.",
+    "note": "HODLing의 InterestRate(0.25)는 패시브 CompoundInterestRate(10%)와 중첩되더라도 도쉬(재화)에만 영향을 주는 경제 효과라 전투 밸런스 리스크는 낮음 — 적절로 판단.",
     "grade": "B"
    },
    "grade": "B",
-   "isPatched": false,
-   "patchNote": null,
-   "testWarning": null,
+   "isPatched": true,
+   "patchNote": "구 0.200000 (복리 20%→10%, KOR 기술값 일치)",
+   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
    "balanceComplete": false,
    "extraSections": [],
-   "icon": "icons/gambler.png"
+   "icon": "icons/tycoon.png"
   },
   {
    "key": "Artificer",
@@ -14831,20 +14749,18 @@
    "parentPerk": "Support",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "DamagePerLevel",
      "label": "레벨 당 피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "ReloadPerLevel",
@@ -14852,13 +14768,14 @@
      "value": 0.005,
      "unit": "percent",
      "display": "+0.5%",
-     "lv10": 0.005,
-     "lv20": 0.005,
-     "lv10Display": "+0.5%",
-     "lv20Display": "+0.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "ReforgeThreshold",
      "label": "재련 임계값",
@@ -15506,20 +15423,18 @@
    "parentPerk": "Support",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "RateOfFireBonus",
      "label": "연사 속도 보너스",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "PenetrationBonus",
@@ -15527,12 +15442,11 @@
      "value": 0.025,
      "unit": "percent",
      "display": "+2.5%",
-     "lv10": 0.025,
-     "lv20": 0.025,
-     "lv10Display": "+2.5%",
-     "lv20Display": "+2.5%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.25,
+     "lv20": 0.5,
+     "lv10Display": "+25%",
+     "lv20Display": "+50%",
+     "scaling": true
     },
     {
      "key": "MagazineSizeBonus",
@@ -15540,13 +15454,14 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "TwinStrikeChance",
      "label": "쌍둥이 타격 확률",
@@ -16062,20 +15977,18 @@
    "parentPerk": "Survivalist",
    "unlockLevel": 5,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "Chance",
      "label": "발동 확률",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "DamageFactor",
@@ -16083,12 +15996,11 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
     },
     {
      "key": "Damage",
@@ -16096,13 +16008,14 @@
      "value": 0.0125,
      "unit": "percent",
      "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "PoisonDuration",
      "label": "독 지속시간",
@@ -16489,20 +16402,18 @@
    "parentPerk": "Survivalist",
    "unlockLevel": 10,
    "hasIniConfig": true,
-   "passiveStats": [],
-   "fixedStats": [
+   "passiveStats": [
     {
      "key": "HeadshotDamage",
      "label": "헤드샷 피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "ReloadSpeed",
@@ -16510,12 +16421,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "SpareAmmo",
@@ -16523,13 +16433,14 @@
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
-     "lv10": 0.015,
-     "lv20": 0.015,
-     "lv10Display": "+1.5%",
-     "lv20Display": "+1.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
     {
      "key": "PoisonDamagePerSecond",
      "label": "초 당 독 피해량",
@@ -17247,412 +17158,102 @@
    "icon": "icons/medusa.png"
   },
   {
-   "key": "Tycoon",
-   "name": "타이쿤",
+   "key": "Gambler",
+   "name": "도박꾼",
    "parentPerk": "Survivalist",
    "unlockLevel": 15,
    "hasIniConfig": true,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "Dosh",
+     "label": "도쉬",
+     "value": 20,
+     "unit": "currency",
+     "display": "20 도쉬",
+     "lv10": 200,
+     "lv20": 400,
+     "lv10Display": "200 도쉬",
+     "lv20Display": "400 도쉬",
+     "scaling": true
+    },
+    {
+     "key": "Chance",
+     "label": "발동 확률",
+     "value": 0.02,
+     "unit": "percent",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
+     "scaling": true
+    }
+   ],
    "fixedStats": [
     {
-     "key": "RoundStipend",
-     "label": "라운드 지원금",
-     "value": 20.0,
+     "key": "Doodle",
+     "label": "낙서",
+     "value": 40,
      "unit": "count",
-     "display": "20",
-     "lv10": 20.0,
-     "lv20": 20.0,
-     "lv10Display": "20",
-     "lv20Display": "20",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "BulkDiscount",
-     "label": "대량 할인",
-     "value": 0.008,
-     "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.008,
-     "lv20": 0.008,
-     "lv10Display": "+0.8%",
-     "lv20Display": "+0.8%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "CostCutting",
-     "label": "비용 절감",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "CompoundInterestRate",
-     "label": "복리 이자 속도",
-     "value": 0.1,
-     "unit": "percent",
-     "display": "+10%",
-     "lv10": 0.1,
-     "lv20": 0.1,
-     "lv10Display": "+10%",
-     "lv20Display": "+10%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "HostileTakeoverRate",
-     "label": "적대적 장악 속도",
-     "value": 0.2,
-     "unit": "percent",
-     "display": "+20%",
-     "lv10": 0.2,
-     "lv20": 0.2,
-     "lv10Display": "+20%",
-     "lv20Display": "+20%",
+     "display": "40",
+     "lv10": 40,
+     "lv20": 40,
+     "lv10Display": "40",
+     "lv20Display": "40",
      "scaling": false,
      "capstoneLevel": null
     }
    ],
-   "role": "복리 이자가 눈덩이처럼 불어나 시간이 지날수록 도쉬 수입이 기하급수적으로 늘어나게 만들어주는 <font color=\"#FFD700\">최상급 경제형</font> 퍼크입니다.",
-   "endgame": "복리 이자, 라운드 지원금, 긴급환매 등 스킬을 조합하면 시간이 갈수록 기하급수적으로 불어나는 <font color=\"#15d7fa\">도쉬 수입</font>을 얻는 투자형 빌드가 완성됩니다.",
+   "role": "확률적으로 터지는 잭팟과 웨이브 보너스로 두둑한 도쉬를 안겨주는 <font color=\"#FFD700\">경제형 서포트</font> 퍼크입니다.",
+   "endgame": "웨이브 종료 도쉬 보너스와 확률성 스킬(<font color=\"#15d7fa\">Jackpot</font> 등)을 조합하면 전투와 동시에 상당한 도쉬 수입을 기대할 수 있는 경제 특화 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">라운드 지원금:</font> 각 웨이브 종료 시 <font color=\"#90EE90\">추가 지급금</font> <font color=\"#FFFFFF\">레벨업당 +20 · 만렙(Lv20) +400</font>",
-     "text": "라운드 지원금: 각 웨이브 종료 시 추가 지급금 레벨업당 +20 · 만렙(Lv20) +400",
+     "raw": "매 <font color=\"#15d7fa\">웨이브</font> 종료 시 <font color=\"#77d914\">레벨업당 +20 · 만렙(Lv20) +400 도쉬</font>를 획득합니다.",
+     "text": "매 웨이브 종료 시 레벨업당 +20 · 만렙(Lv20) +400 도쉬를 획득합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FFD700\">대량 할인:</font> 상점 <font color=\"#90EE90\">아이템 가격</font> <font color=\"#FFFFFF\">레벨업당 -0.8% · 만렙(Lv20) -16%</font> 감소",
-     "text": "대량 할인: 상점 아이템 가격 레벨업당 -0.8% · 만렙(Lv20) -16% 감소",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#FFD700\">비용 절감:</font> <font color=\"#90EE90\">무기 및 장비 업그레이드 비용</font> <font color=\"#FFFFFF\">레벨업당 -1% · 만렙(Lv20) -20%</font> 감소",
-     "text": "비용 절감: 무기 및 장비 업그레이드 비용 레벨업당 -1% · 만렙(Lv20) -20% 감소",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">복리</font> - 웨이브 종료 시 현재 소지한 <font color=\"#90EE90\">도쉬</font>의 <font color=\"#FFFFFF\">+10%</font>를 이자로 획득합니다.",
-     "text": "레벨 10: 복리 - 웨이브 종료 시 현재 소지한 도쉬의 +10%를 이자로 획득합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">적대적 인수</font> - 보스 등장 시 모든 팀원의 현재 <font color=\"#90EE90\">도쉬</font> 중 <font color=\"#FFFFFF\">+20%</font>를 흡수하여 자신의 것으로 만듭니다.",
-     "text": "레벨 20: 적대적 인수 - 보스 등장 시 모든 팀원의 현재 도쉬 중 +20%를 흡수하여 자신의 것으로 만듭니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\"#FFD700\">포트폴리오 성장</font>: 누적 <font color=\"#FFFFFF\">2500</font> <font color=\"#90EE90\">도쉬</font>를 획득할 때마다, 매 웨이브 종료 시 받는 기본 지원금이 영구적으로 <font color=\"#FFFFFF\">+50</font> 증가합니다.",
-     "text": "포트폴리오 성장: 누적 2500 도쉬를 획득할 때마다, 매 웨이브 종료 시 받는 기본 지원금이 영구적으로 +50 증가합니다.",
+     "raw": "헤드샷으로 처치할 때마다 <font color=\"#77d914\">레벨업당 +2% · 만렙(Lv20) +40%</font> 확률로 <font color=\"#77d914\">5 도쉬</font>를 획득합니다.",
+     "text": "헤드샷으로 처치할 때마다 레벨업당 +2% · 만렙(Lv20) +40% 확률로 5 도쉬를 획득합니다.",
      "isCapstone": false
     }
    ],
    "skills": [
     {
-     "key": "AssetLiquidation",
-     "name": "자산 청산",
-     "standardDesc": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 +1%를 도쉬로 돌려받습니다.",
-     "deluxeDesc": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 +2%를 도쉬로 돌려받습니다.",
-     "standardDescRaw": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 <font color=\"#ffaa33\">+1%</font>를 도쉬로 돌려받습니다.",
-     "deluxeDescRaw": "무기를 판매하면 이번 웨이브에서 해당 무기로 입힌 피해량의 <font color=\"#ffaa33\">+2%</font>를 도쉬로 돌려받습니다.",
+     "key": "ArmoredUp",
+     "name": "무장",
+     "standardDesc": "ZED를 처치할 때마다 +1% 확률로 체력이 회복되고 방어력이 50 충전됩니다.",
+     "deluxeDesc": "ZED를 처치할 때마다 +2% 확률로 체력이 회복되고 방어력이 100 충전됩니다.",
+     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+1% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어력이 <font color=\"#be4d25\">50</font> 충전됩니다.",
+     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+2% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어력이 <font color=\"#be4d25\">100</font> 충전됩니다.",
      "rawValues": [
       {
-       "key": "DamagePercentage",
-       "label": "피해량 퍼센트",
+       "key": "Chance",
+       "label": "발동 확률",
        "value": 0.01,
        "unit": "percent",
        "display": "+1%"
       },
       {
-       "key": "DamagePercentage",
-       "label": "피해량 퍼센트",
+       "key": "Chance",
+       "label": "발동 확률",
        "value": 0.02,
        "unit": "percent",
        "display": "+2%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "BulkPurchasing",
-     "name": "대량 구매",
-     "standardDesc": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 추가 구매 항목당 +1%의 도쉬를 환불받습니다.",
-     "deluxeDesc": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 추가 구매 항목당 +2%의 도쉬를 환불받습니다.",
-     "standardDescRaw": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 <font color=\"#00ff00\">추가 구매 항목당 <font color=\"#ffaa33\">+1%의 도쉬를 환불</font>받습니다.</font>",
-     "deluxeDescRaw": "상점에서 한 번에 여러 항목을 구매하면, 두 번째 항목부터 <font color=\"#00ff00\">추가 구매 항목당 <font color=\"#ffaa33\">+2%의 도쉬를 환불</font>받습니다.</font>",
-     "rawValues": [
-      {
-       "key": "RefundPercentage",
-       "label": "환급 퍼센트",
-       "value": 0.01,
-       "unit": "percent",
-       "display": "+1%"
       },
       {
-       "key": "RefundPercentage",
-       "label": "환급 퍼센트",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "CorporateBailout",
-     "name": "기업 구제금융",
-     "standardDesc": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 +25%를 보너스로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
-     "deluxeDesc": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 +50%를 보너스로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
-     "standardDescRaw": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 <font color=\"#ffaa33\">+25%</font>를 <font color=\"#00ff00\">보너스</font>로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
-     "deluxeDescRaw": "팀원이 사망 후 부활할 때, 원래 소지했던 도쉬의 <font color=\"#ffaa33\">+50%</font>를 <font color=\"#00ff00\">보너스</font>로 들고 부활합니다. (당신의 개인 도쉬는 소모되지 않습니다).",
-     "rawValues": [
-      {
-       "key": "BailoutPercentage",
-       "label": "긴급환매 퍼센트",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "BailoutPercentage",
-       "label": "긴급환매 퍼센트",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "GoldenParachute",
-     "name": "골든 파라슈트",
-     "standardDesc": "당신이 사망하면 무작위 팀원에게 400 도쉬가 지급됩니다.",
-     "deluxeDesc": "당신이 사망하면 도쉬가 가장 적은 팀원에게 800 도쉬가 지급됩니다.",
-     "standardDescRaw": "당신이 사망하면 <font color=\"#ffaa33\">무작위 팀원</font>에게 <font color=\"#00ff00\">400 도쉬</font>가 지급됩니다.",
-     "deluxeDescRaw": "당신이 사망하면 <font color=\"#ffaa33\">도쉬가 가장 적은 팀원</font>에게 <font color=\"#00ff00\">800 도쉬</font>가 지급됩니다.",
-     "rawValues": [
-      {
-       "key": "DoshAmount",
-       "label": "도쉬 량",
-       "value": 400,
-       "unit": "currency",
-       "display": "400 도쉬"
-      },
-      {
-       "key": "DoshAmount",
-       "label": "도쉬 량",
-       "value": 800,
-       "unit": "currency",
-       "display": "800 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "HODLing",
-     "name": "HODLing",
-     "standardDesc": "600초 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 +25%를 이자로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
-     "deluxeDesc": "450초 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 +25%를 이자로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
-     "standardDescRaw": "<font color=\"#ffaa33\">600초</font> 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 <font color=\"#00ff00\">+25%를 이자</font>로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
-     "deluxeDescRaw": "<font color=\"#ffaa33\">450초</font> 동안 도쉬를 전혀 소비하지 않으면, 현재 소지 금액의 <font color=\"#00ff00\">+25%를 이자</font>로 받습니다 (웨이브 진행 중이 아닐 때는 타이머가 일시 정지됩니다).",
-     "rawValues": [
-      {
-       "key": "HODLDuration",
-       "label": "존버 지속시간",
-       "value": 600.0,
-       "unit": "seconds",
-       "display": "600초"
-      },
-      {
-       "key": "HODLDuration",
-       "label": "존버 지속시간",
-       "value": 450.0,
-       "unit": "seconds",
-       "display": "450초"
-      },
-      {
-       "key": "InterestRate",
-       "label": "이자 속도",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      }
-     ],
-     "hasKorText": true,
-     "note": "이자율 25%가 패시브 복리 이자(10%)와 중첩됩니다. 도쉬에만 영향을 주는 경제 효과입니다.",
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "HighRiskInvestment",
-     "name": "고위험 투자",
-     "standardDesc": "상점에서 한 번에 4,000 도쉬 이상을 지출할 때마다 10% 확률로 지불한 금액을 그대로 환불받습니다.",
-     "deluxeDesc": "상점에서 한 번에 3,000 도쉬 이상을 지출할 때마다 10% 확률로 지불한 금액을 그대로 환불받습니다.",
-     "standardDescRaw": "상점에서 한 번에 <font color=\"#ff3399\">4,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
-     "deluxeDescRaw": "상점에서 한 번에 <font color=\"#ff3399\">3,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
-     "rawValues": [
-      {
-       "key": "MinPurchaseAmount",
-       "label": "최소 구매 량",
-       "value": 4000,
-       "unit": "count",
-       "display": "4,000"
-      },
-      {
-       "key": "MinPurchaseAmount",
-       "label": "최소 구매 량",
-       "value": 3000,
-       "unit": "count",
-       "display": "3,000"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "HouseEdge",
-     "name": "하우스 엣지",
-     "standardDesc": "매 25번째 킬마다 슬롯머신이 발동됩니다: 80% 꽝, 15% +50 도쉬, 4% +150 도쉬, 1% +300 도쉬.",
-     "deluxeDesc": "매 20번째 킬마다 슬롯머신이 발동됩니다: 60% 꽝, 25% +50 도쉬, 10% +150 도쉬, 5% +300 도쉬.",
-     "standardDescRaw": "매 <font color=\"#ffaa33\">25번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">80% 꽝</font>, <font color=\"#ffaa33\">15% +50 도쉬</font>, <font color=\"#ff6600\">4% +150 도쉬</font>, <font color=\"#ff0000\">1% +300 도쉬</font>.",
-     "deluxeDescRaw": "매 <font color=\"#ffaa33\">20번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">60% 꽝</font>, <font color=\"#ffaa33\">25% +50 도쉬</font>, <font color=\"#ff6600\">10% +150 도쉬</font>, <font color=\"#ff0000\">5% +300 도쉬</font>.",
-     "rawValues": [
-      {
-       "key": "SlotMachineTrigger",
-       "label": "슬롯 머신 발동",
-       "value": 25,
-       "unit": "count",
-       "display": "25"
-      },
-      {
-       "key": "SlotMachineTrigger",
-       "label": "슬롯 머신 발동",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "InsiderTrading",
-     "name": "내부자 거래",
-     "standardDesc": "해당 웨이브에서 처치한 ZED의 종류가 다양할수록 종류 하나당 +15 도쉬를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
-     "deluxeDesc": "해당 웨이브에서 처치한 ZED의 종류가 다양할수록 종류 하나당 +30 도쉬를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
-     "standardDescRaw": "해당 웨이브에서 처치한 <font color=\"#ffaa33\">ZED의 종류</font>가 다양할수록 종류 하나당 <font color=\"#00ff00\">+15 도쉬</font>를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
-     "deluxeDescRaw": "해당 웨이브에서 처치한 <font color=\"#ffaa33\">ZED의 종류</font>가 다양할수록 종류 하나당 <font color=\"#00ff00\">+30 도쉬</font>를 보너스로 얻습니다 (매 웨이브마다 카운트 초기화).",
-     "rawValues": [
-      {
-       "key": "DoshPerZedType",
-       "label": "제드 종류 당 도쉬",
-       "value": 15,
-       "unit": "currency",
-       "display": "15 도쉬"
-      },
-      {
-       "key": "DoshPerZedType",
-       "label": "제드 종류 당 도쉬",
-       "value": 30,
-       "unit": "currency",
-       "display": "30 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "MercenaryContract",
-     "name": "용병 계약",
-     "standardDesc": "동일한 종류의 ZED를 5번 연속 처치하면 +25 도쉬를 얻습니다.",
-     "deluxeDesc": "동일한 종류의 ZED를 4번 연속 처치하면 +50 도쉬를 얻습니다.",
-     "standardDescRaw": "동일한 종류의 ZED를 <font color=\"#ffaa33\">5번 연속</font> 처치하면 <font color=\"#00ff00\">+25 도쉬</font>를 얻습니다.",
-     "deluxeDescRaw": "동일한 종류의 ZED를 <font color=\"#ffaa33\">4번 연속</font> 처치하면 <font color=\"#00ff00\">+50 도쉬</font>를 얻습니다.",
-     "rawValues": [
-      {
-       "key": "DoshReward",
-       "label": "도쉬 보상",
-       "value": 25,
-       "unit": "currency",
-       "display": "25 도쉬"
-      },
-      {
-       "key": "DoshReward",
-       "label": "도쉬 보상",
+       "key": "ArmorOnKill",
+       "label": "방어력 처치",
        "value": 50,
-       "unit": "currency",
-       "display": "50 도쉬"
+       "unit": "count",
+       "display": "50"
       },
       {
-       "key": "KillsRequired",
-       "label": "처치 필요",
-       "value": 5,
+       "key": "ArmorOnKill",
+       "label": "방어력 처치",
+       "value": 100,
        "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "KillsRequired",
-       "label": "처치 필요",
-       "value": 4,
-       "unit": "count",
-       "display": "4"
+       "display": "100"
       }
      ],
      "hasKorText": true,
@@ -17665,26 +17266,40 @@
      "noData": false
     },
     {
-     "key": "ProfitSharing",
-     "name": "이익 분배",
-     "standardDesc": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 10 도쉬가 지급됩니다.",
-     "deluxeDesc": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 20 도쉬가 지급됩니다.",
-     "standardDescRaw": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 10 도쉬가 지급됩니다.",
-     "deluxeDescRaw": "25킬을 달성할 때마다 자신을 포함한 모든 팀원에게 20 도쉬가 지급됩니다.",
+     "key": "DoubleDown",
+     "name": "더블 다운",
+     "standardDesc": "헤드샷 피해량이 +15% 증가하지만, 몸통샷 피해량은 -8% 감소합니다.",
+     "deluxeDesc": "헤드샷 피해량이 +30% 증가하지만, 몸통샷 피해량은 -12% 감소합니다.",
+     "standardDescRaw": "<font color=\"#ff3399\">헤드샷</font> 피해량이 <font color=\"#66cc00\">+15%</font> 증가하지만, <font color=\"#be4d25\">몸통샷</font> 피해량은 <font color=\"#ff0000\">-8%</font> 감소합니다.",
+     "deluxeDescRaw": "<font color=\"#ff3399\">헤드샷</font> 피해량이 <font color=\"#66cc00\">+30%</font> 증가하지만, <font color=\"#be4d25\">몸통샷</font> 피해량은 <font color=\"#ff0000\">-12%</font> 감소합니다.",
      "rawValues": [
       {
-       "key": "DoshPerTeammate",
-       "label": "팀원 당 도쉬",
-       "value": 10,
-       "unit": "currency",
-       "display": "10 도쉬"
+       "key": "HeadshotBonus",
+       "label": "헤드샷 보너스",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
       },
       {
-       "key": "DoshPerTeammate",
-       "label": "팀원 당 도쉬",
-       "value": 20,
-       "unit": "currency",
-       "display": "20 도쉬"
+       "key": "HeadshotBonus",
+       "label": "헤드샷 보너스",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "BodyPenalty",
+       "label": "몸통 페널티",
+       "value": -0.08,
+       "unit": "percent",
+       "display": "-8%"
+      },
+      {
+       "key": "BodyPenalty",
+       "label": "몸통 페널티",
+       "value": -0.12,
+       "unit": "percent",
+       "display": "-12%"
       }
      ],
      "hasKorText": true,
@@ -17697,58 +17312,359 @@
      "noData": false
     },
     {
-     "key": "TaxLoopholes",
-     "name": "세금 허점",
-     "standardDesc": "6000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
-     "deluxeDesc": "6000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다.",
-     "standardDescRaw": "6000 도쉬를 지출할 때마다 150 도쉬를 세금 환급으로 돌려받습니다.",
-     "deluxeDescRaw": "6000 도쉬를 지출할 때마다 300 도쉬를 세금 환급으로 돌려받습니다.",
+     "key": "FieryGambit",
+     "name": "불타는 도박",
+     "standardDesc": "화염 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
+     "deluxeDesc": "화염 피해로 ZED를 처치하면 +2% 확률로 150 도쉬를 획득합니다.",
+     "standardDescRaw": "화염 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
+     "deluxeDescRaw": "화염 피해로 ZED를 처치하면 +2% 확률로 150 도쉬를 획득합니다.",
      "rawValues": [
       {
-       "key": "TaxRefundAmount",
-       "label": "세금 환급 량",
-       "value": 150,
-       "unit": "count",
-       "display": "150"
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
       },
       {
-       "key": "TaxRefundAmount",
-       "label": "세금 환급 량",
-       "value": 300,
-       "unit": "count",
-       "display": "300"
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
       },
       {
-       "key": "SpendingThreshold",
-       "label": "소비 임계값",
-       "value": 6000,
-       "unit": "count",
-       "display": "6,000"
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 90.0,
+       "unit": "currency",
+       "display": "90 도쉬"
+      },
+      {
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 150.0,
+       "unit": "currency",
+       "display": "150 도쉬"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "디럭스 너프, 구 175",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "GrenadeConjurer",
+     "name": "수류탄술사",
+     "standardDesc": "적을 처치할 때마다 +2.5% 확률로 수류탄을 1개 획득합니다.",
+     "deluxeDesc": "적을 처치할 때마다 +5% 확률로 수류탄을 1개 획득합니다.",
+     "standardDescRaw": "적을 처치할 때마다 <font color=\"#ff3399\">+2.5% 확률</font>로 <font color=\"#be4d25\">수류탄</font>을 <font color=\"#66cc00\">1개</font> 획득합니다.",
+     "deluxeDescRaw": "적을 처치할 때마다 <font color=\"#ff3399\">+5% 확률</font>로 <font color=\"#be4d25\">수류탄</font>을 <font color=\"#66cc00\">1개</font> 획득합니다.",
+     "rawValues": [
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.025,
+       "unit": "percent",
+       "display": "+2.5%"
+      },
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "IcyGambit",
+     "name": "아이시 갬빗",
+     "standardDesc": "얼음 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
+     "deluxeDesc": "얼음 피해로 ZED를 처치하면 +2% 확률로 150 도쉬를 획득합니다.",
+     "standardDescRaw": "얼음 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 획득합니다.",
+     "deluxeDescRaw": "얼음 피해로 ZED를 처치하면 +2% 확률로 150 도쉬를 획득합니다.",
+     "rawValues": [
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
+      },
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
+      },
+      {
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 90.0,
+       "unit": "currency",
+       "display": "90 도쉬"
+      },
+      {
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 150.0,
+       "unit": "currency",
+       "display": "150 도쉬"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "디럭스 너프, 구 175",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Jackpot",
+     "name": "잭팟",
+     "standardDesc": "ZED를 처치할 때마다 0.5% 확률로 잭팟이 터져 350 도쉬를 획득합니다.",
+     "deluxeDesc": "ZED를 처치할 때마다 0.5% 확률로 잭팟이 터져 700 도쉬를 획득합니다.",
+     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">0.5% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">350 도쉬</font>를 획득합니다.",
+     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">0.5% 확률</font>로 <font color=\"#66cc00\">잭팟이 터져</font> <font color=\"#be4d25\">700 도쉬</font>를 획득합니다.",
+     "rawValues": [
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.005,
+       "unit": "percent",
+       "display": "+0.5%"
+      },
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.005,
+       "unit": "percent",
+       "display": "+0.5%"
+      },
+      {
+       "key": "Jackpot",
+       "label": "잭팟",
+       "value": 350,
+       "unit": "count",
+       "display": "350"
+      },
+      {
+       "key": "Jackpot",
+       "label": "잭팟",
+       "value": 700,
+       "unit": "count",
+       "display": "700"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "디럭스 너프, 구 0.010000",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "LuckyPop",
+     "name": "럭키팝",
+     "standardDesc": "헤드샷 성공 시 +1% 확률로 100 도쉬를 즉시 획득합니다.",
+     "deluxeDesc": "헤드샷 성공 시 +1% 확률로 200 도쉬를 즉시 획득합니다.",
+     "standardDescRaw": "<font color=\"#ff3399\">헤드샷</font> 성공 시 <font color=\"#66cc00\">+1%</font> 확률로 <font color=\"#be4d25\">100 도쉬</font>를 즉시 획득합니다.",
+     "deluxeDescRaw": "<font color=\"#ff3399\">헤드샷</font> 성공 시 <font color=\"#66cc00\">+1%</font> 확률로 <font color=\"#be4d25\">200 도쉬</font>를 즉시 획득합니다.",
+     "rawValues": [
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
+      },
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
+      },
+      {
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 100.0,
+       "unit": "currency",
+       "display": "100 도쉬"
+      },
+      {
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 200.0,
+       "unit": "currency",
+       "display": "200 도쉬"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "디럭스 너프, 구 0.020000",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "NarrowEscape",
+     "name": "아슬아슬한 탈출",
+     "standardDesc": "받는 피해가 +1% 확률로 무효화되어 0이 됩니다.",
+     "deluxeDesc": "받는 피해가 +2% 확률로 무효화되어 0이 됩니다.",
+     "standardDescRaw": "받는 <font color=\"#ff3399\">피해</font>가 <font color=\"#66cc00\">+1%</font> 확률로 무효화되어 <font color=\"#be4d25\">0</font>이 됩니다.",
+     "deluxeDescRaw": "받는 <font color=\"#ff3399\">피해</font>가 <font color=\"#66cc00\">+2%</font> 확률로 무효화되어 <font color=\"#be4d25\">0</font>이 됩니다.",
+     "rawValues": [
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
+      },
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "StrokeOfLuck",
+     "name": "행운의 일격",
+     "standardDesc": "ZED를 처치할 때마다 +1% 확률로 체력을 50 회복합니다.",
+     "deluxeDesc": "ZED를 처치할 때마다 +2% 확률로 체력을 100 회복합니다.",
+     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+1% 확률</font>로 <font color=\"#be4d25\">체력을 50 회복</font>합니다.",
+     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+2% 확률</font>로 <font color=\"#be4d25\">체력을 100 회복</font>합니다.",
+     "rawValues": [
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
+      },
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
+      },
+      {
+       "key": "Vampire",
+       "label": "흡혈",
+       "value": 50,
+       "unit": "count",
+       "display": "50"
+      },
+      {
+       "key": "Vampire",
+       "label": "흡혈",
+       "value": 100,
+       "unit": "count",
+       "display": "100"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ToxicGambit",
+     "name": "독성 갬빗",
+     "standardDesc": "독 피해로 ZED를 처치하면 +1% 확률로 90 도쉬를 얻습니다.",
+     "deluxeDesc": "독 피해로 ZED를 처치하면 +2% 확률로 150 도쉬를 얻습니다.",
+     "standardDescRaw": "<font color=\"#8fce00\">독 피해</font>로 ZED를 처치하면 <font color=\"#66cc00\">+1% 확률</font>로 <font color=\"#be4d25\">90 도쉬</font>를 얻습니다.",
+     "deluxeDescRaw": "<font color=\"#8fce00\">독 피해</font>로 ZED를 처치하면 <font color=\"#66cc00\">+2% 확률</font>로 <font color=\"#be4d25\">150 도쉬</font>를 얻습니다.",
+     "rawValues": [
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.01,
+       "unit": "percent",
+       "display": "+1%"
+      },
+      {
+       "key": "Chance",
+       "label": "발동 확률",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
+      },
+      {
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 90.0,
+       "unit": "currency",
+       "display": "90 도쉬"
+      },
+      {
+       "key": "Dosh",
+       "label": "도쉬",
+       "value": 150.0,
+       "unit": "currency",
+       "display": "150 도쉬"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "디럭스 너프, 구 175",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
      "noData": false
     }
    ],
-   "skillCount": 11,
+   "skillCount": 10,
    "verdict": {
     "tag": "적절",
-    "note": "HODLing의 InterestRate(0.25)는 패시브 CompoundInterestRate(10%)와 중첩되더라도 도쉬(재화)에만 영향을 주는 경제 효과라 전투 밸런스 리스크는 낮음 — 적절로 판단.",
+    "note": "유지 판정. 경제 퍼크로서 기존 도쉬 밸런스 기준과 부합.",
     "grade": "B"
    },
    "grade": "B",
    "isPatched": true,
-   "patchNote": "구 0.200000 (복리 20%→10%, KOR 기술값 일치)",
+   "patchNote": "웨이브 보상 버프, 구 14 (만렙 +280→+400)",
    "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
    "balanceComplete": false,
    "extraSections": [],
-   "icon": "icons/tycoon.png"
+   "icon": "icons/gambler.png"
   },
   {
    "key": "Shapeshifter",

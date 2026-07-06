@@ -738,6 +738,55 @@ IMPLICIT_SCALING_COUNTS = {
     "Riot": 3,
     "Metronome": 7,
     "Predator": 1,
+    # The rest were added after converting every remaining %x%%-templated
+    # PerkUpgradeDescription line to static pre-computed text (2026-07-05,
+    # commit fef92f8) -- that conversion removed the last '%x%' substrings
+    # compute_placeholder_groups() relies on, so every one of these perks'
+    # counts silently dropped to 0. Values restored from the pre-conversion
+    # build (commit 2d3cedd) to match exactly.
+    "Bulwark": 3,
+    "Voodoo": 3,
+    "SpecialAgent": 3,
+    "Warlord": 6,
+    "Agony": 2,
+    "Maniac": 2,
+    "ForgeWarden": 2,
+    "Hollow": 2,
+    "Archangel": 3,
+    "Hivemind": 2,
+    "Parasite": 2,
+    "Symbiote": 3,
+    "Pyrokinetic": 3,
+    "Cinder": 2,
+    "Headhunter": 1,
+    "TimeTraveler": 14,
+    "Reaper": 3,
+    "Scavenger": 3,
+    "Taskmaster": 14,
+    "Frost": 3,
+    "Omen": 3,
+    "Daredevil": 3,
+    "Wendigo": 3,
+    "Cryophilite": 3,
+    "Gambler": 2,
+    "Artificer": 2,
+    "Hydra": 3,
+    "Venomancer": 3,
+    "Medusa": 3,
+    "Tycoon": 3,
+}
+
+# Perks whose raw ini field order doesn't match description order, so the
+# leading-N-fields heuristic above (IMPLICIT_SCALING_COUNTS) would grab the
+# wrong fields. Explicit key order overrides that heuristic when present.
+# Gambler's ini declares Doodle/Chance/Dosh in that order, but its two
+# descriptions are about Dosh (per-wave reward) then Chance (headshot
+# proc) -- Doodle is an unrelated fixed stat that must stay out of scaling.
+# reorder_placeholder_targets() used to fix this via literal '%x' detection
+# before the descriptions were converted to static text; this is its
+# manual-override equivalent for the post-conversion static-text perks.
+IMPLICIT_SCALING_KEY_ORDER = {
+    "Gambler": ["Dosh", "Chance"],
 }
 
 # Advanced perks manually verified end-to-end against the current ini (every
@@ -950,6 +999,10 @@ def build():
                      for (k, v), sign in zip(filtered_kv, signs)]
         passive_stats = build_stat_entries(signed_kv, with_levels=True)
         passive_stats = reorder_placeholder_targets(passive_stats, raw_descs)
+        if key in IMPLICIT_SCALING_KEY_ORDER:
+            order = IMPLICIT_SCALING_KEY_ORDER[key]
+            by_key = {s["key"]: s for s in passive_stats}
+            passive_stats = [by_key[k] for k in order] + [s for s in passive_stats if s["key"] not in order]
         placeholder_groups, fixed_stats = compute_placeholder_groups(
             passive_stats, raw_descs, IMPLICIT_SCALING_COUNTS.get(key, 0))
         filled_descriptions = fill_percent_placeholders(raw_descs, placeholder_groups)
