@@ -170,7 +170,7 @@
    "passiveStats": [
     {
      "key": "Cfg_LZDamage",
-     "label": "착지존 피해량",
+     "label": "대형 제드 피해량",
      "value": 0.025,
      "unit": "percent",
      "display": "+2.5%",

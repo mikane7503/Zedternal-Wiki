@@ -44,7 +44,7 @@ WORD_MAP = {
     "invuln": "무적", "iron": "강철", "jackpot": "잭팟", "kill": "처치",
     "kills": "처치", "knockdown": "넉다운", "large": "대형", "level": "레벨",
     "life": "생명", "limit": "한도", "linger": "잔류", "lingering": "잔류",
-    "lz": "착지존", "machine": "머신", "mag": "탄창", "magazine": "탄창",
+    "lz": "대형 제드", "machine": "머신", "mag": "탄창", "magazine": "탄창",
     "magnet": "자석", "mark": "표식", "mastery": "숙련도", "max": "최대",
     "medicine": "의술", "melee": "근접", "milestone": "마일스톤",
     "min": "최소", "miracle": "기적", "mod": "배율", "mode": "모드",
@@ -89,7 +89,7 @@ WORD_MAP = {
 # the automatic tokenizer for names that would otherwise read awkwardly.
 OVERRIDES = {
     "Cfg_Damage": "피해량", "Cfg_ReloadRate": "재장전 속도", "Cfg_DamageHead": "헤드샷 피해량",
-    "Cfg_LZDamage": "착지존 피해량", "Cfg_GrenadeDamage": "수류탄 피해량", "Cfg_HealRate": "치유 속도",
+    "Cfg_LZDamage": "대형 제드 피해량", "Cfg_GrenadeDamage": "수류탄 피해량", "Cfg_HealRate": "치유 속도",
     "Cfg_Health": "체력", "Cfg_Defense": "방어", "Cfg_Ammo": "탄약", "Cfg_MoveSpeed": "이동 속도",
     "Cfg_SwitchSpeed": "무기 전환 속도", "Cfg_Armor": "방어력", "Cfg_MagSize": "탄창 크기",
     "Cfg_Recoil": "반동", "Cfg_SpareAmmo": "여분 탄약", "Cfg_StoppingPower": "제압력",
