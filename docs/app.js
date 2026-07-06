@@ -298,7 +298,7 @@ function renderBaseDetail(key) {
     grid.appendChild(card);
   }
 
-  const basePatchWarning = p.testWarning ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "";
+  const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
   container.innerHTML = `
     <div class="detail-header">
@@ -310,7 +310,7 @@ function renderBaseDetail(key) {
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
 
-    ${basePatchWarning}
+    ${recentChangeBadge}
 
     <div class="section-title">설명</div>
     <div class="desc-line">${p.role || ""}</div>
@@ -340,8 +340,7 @@ function renderAdvDetail(key) {
   const descNote = p.descriptions.length
     ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 전직 레벨 20(만렙) 기준입니다.</div>' : "";
 
-  const balanceBadge = p.balanceComplete ? '<div class="balance-complete-badge">✅ 밸런싱 완료 퍼크</div>' : "";
-  const perkPatchWarning = (!p.balanceComplete && p.testWarning) ? `<div class="patch-warning">${escapeHtml(p.testWarning)}</div>` : "";
+  const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
   const hasPassive = p.passiveStats.length > 0;
 
@@ -367,11 +366,10 @@ function renderAdvDetail(key) {
         <h2>${escapeHtml(p.name)}</h2>
         <div class="subtitle">심화 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
       </div>
-      ${balanceBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
 
-    ${perkPatchWarning}
+    ${recentChangeBadge}
 
     <div class="section-title">설명</div>
     <div class="desc-line">${p.role || ""}</div>
@@ -416,9 +414,10 @@ function renderFixedStatsSection(fixedStats) {
 
 function renderSliderSection(passiveStats, maxLevel) {
   if (!passiveStats.length) return '<div class="empty-state" style="padding:10px">등록된 패시브 수치 없음</div>';
-  const rows = passiveStats.map(s =>
-    `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td>${s.display}</td><td class="live-val">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`
-  ).join("");
+  const rows = passiveStats.map(s => {
+    const signClass = s.value < 0 ? "stat-neg" : s.value > 0 ? "stat-pos" : "";
+    return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
+  }).join("");
   return `
     <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. 수치는 KFZedternalUnlimited.ini의 현재(패치 반영) 값 기준입니다.</div>
     <div class="level-slider-row">
@@ -476,6 +475,14 @@ function gradeClass(grade) {
 function gradeBadge(grade) {
   if (!grade) return "";
   return `<span class="grade-badge ${gradeClass(grade)}">${escapeHtml(grade)}</span>`;
+}
+
+function renderRecentChangeBadge(tag) {
+  if (!tag) return "";
+  const isBuff = tag.type === "buff";
+  const label = isBuff ? "🔺 최근 버프됨" : "🔻 최근 너프됨";
+  const cls = isBuff ? "recent-change-buff" : "recent-change-nerf";
+  return `<div class="recent-change-badge ${cls}">${label} <span class="recent-change-date">(${escapeHtml(tag.date)})</span></div>`;
 }
 
 function escapeHtml(s) {

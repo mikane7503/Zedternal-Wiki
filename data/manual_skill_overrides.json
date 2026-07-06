@@ -276,8 +276,8 @@
     "_note": "ZED타임 무한연장 완화(2026-07-05)로 ZedTimeExtension 2/4 → 1/2로 축소. 두 티어 공통인 +100% 피해량은 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
   },
   "IceArmor": {
-    "standardDesc": "전투 중이 아닐 때 <font color=\"#87CEEB\">10</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
-    "deluxeDesc": "전투 중이 아닐 때 <font color=\"#87CEEB\">20</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
+    "standardDesc": "전투 중이 아닐 때 <font color=\"#87CEEB\">10</font>의 추가 <font color=\"#77d914\">방어구</font>를 얻으며, 이 방어구는 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
+    "deluxeDesc": "전투 중이 아닐 때 <font color=\"#87CEEB\">20</font>의 추가 <font color=\"#77d914\">방어구</font>를 얻으며, 이 방어구는 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
     "_note": "KOR 원문 수치(10/20)가 ArmorBonus=10/20과 이미 일치. 두 티어 공통인 '3초마다 1씩'이 ini에 없는 하드코딩 값이라 조정 파이프라인이 실패해 수동 등록."
   },
   "QuiverMastery": {

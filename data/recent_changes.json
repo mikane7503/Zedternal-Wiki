@@ -1,0 +1,86 @@
+{
+ "Agony": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Artificer": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Berserker": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Bulwark": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Commando": {
+  "date": "2026-07-07",
+  "type": "nerf"
+ },
+ "Cryophilite": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Daredevil": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Demolitionist": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "FieldMedic": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Frost": {
+  "date": "2026-07-07",
+  "type": "nerf"
+ },
+ "Gunslinger": {
+  "date": "2026-07-07",
+  "type": "nerf"
+ },
+ "Hydra": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Medusa": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Reaper": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Sharpshooter": {
+  "date": "2026-07-07",
+  "type": "nerf"
+ },
+ "Support": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Survivalist": {
+  "date": "2026-07-07",
+  "type": "nerf"
+ },
+ "Symbiote": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Taskmaster": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "TimeTraveler": {
+  "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Warlord": {
+  "date": "2026-07-07",
+  "type": "buff"
+ }
+}

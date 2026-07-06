@@ -21,14 +21,14 @@
     },
     {
      "key": "Cfg_Defense",
-     "label": "방어",
-     "value": 0.005,
+     "label": "저항력",
+     "value": 0.015,
      "unit": "percent",
-     "display": "+0.5%",
-     "lv10": 0.05,
-     "lv20": 0.1,
-     "lv10Display": "+5%",
-     "lv20Display": "+10%"
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%"
     },
     {
      "key": "Cfg_AttackSpeed",
@@ -78,9 +78,13 @@
      "name": "유령"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.005000",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "icon": "icons/berserker.png"
   },
   {
@@ -89,33 +93,33 @@
    "grade": "S",
    "summary": "강함, 균형 잡힘. 재장전+피해 조합이 베이스 퍼크 중 가장 안정적이며 큰 결함이 없는 퍼크.",
    "role": "모든 총기의 <font color=\"#FFD700\">피해량과 재장전 속도</font>를 동시에 크게 끌어올려주는 만능 화력 지원 퍼크입니다.",
-   "endgame": "Lv20 풀스킬 기준 피해량 +50%, <font color=\"#15d7fa\">재장전 속도</font> +60%에 스킬 보너스가 더해져, 어떤 무기를 들어도 안정적인 지속 화력을 뽑아낼 수 있는 만능형 딜러로 완성됩니다.",
+   "endgame": "Lv20 풀스킬 기준 피해량 +40%, <font color=\"#15d7fa\">재장전 속도</font> +30%에 스킬 보너스가 더해져, 어떤 무기를 들어도 안정적인 지속 화력을 뽑아낼 수 있는 만능형 딜러로 완성됩니다.",
    "passiveStats": [
     {
      "key": "Cfg_Damage",
      "label": "피해량",
-     "value": 0.025,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+2.5%",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "+25%",
-     "lv20Display": "+50%"
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%"
     },
     {
      "key": "Cfg_ReloadRate",
      "label": "재장전 속도",
-     "value": 0.03,
+     "value": 0.015,
      "unit": "percent",
-     "display": "+3%",
-     "lv10": 0.3,
-     "lv20": 0.6,
-     "lv10Display": "+30%",
-     "lv20Display": "+60%"
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%"
     }
    ],
    "strengths": [
-    "패시브 피해 +50%, 재장전 속도 +60% — 베이스 퍼크 중 재장전 패시브 최강",
+    "패시브 피해 +40%, 재장전 속도 +30% — 베이스 퍼크 중 재장전 패시브 최강",
     "TacticalReload T2: 전술 재장전 시스템 + 추가 패시브 +15%",
     "GunMachine T2: 연속 명중 시 +40% — 지속 화력 보상",
     "Supplier: 팀 탄약 공급 — 협동 가치 높음",
@@ -155,9 +159,13 @@
      "name": "에고니"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.025000; 밸런스 패치(2026-07-07), 구 0.030000",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "nerf"
+   },
    "icon": "icons/commando.png"
   },
   {
@@ -166,22 +174,22 @@
    "grade": "B",
    "summary": "폭발 화력이 베이스 퍼크 중 최상위. 수류탄 피해 스택이 최악 조합 시 기본 대비 ×4.5배까지 중첩되어 밸런스 조정이 필요할 만큼 강력함.",
    "role": "수류탄과 폭발물의 피해량을 크게 증폭시켜, 대형 제드까지 빠르게 정리하게 해주는 <font color=\"#FFD700\">광역 딜러</font> 퍼크입니다.",
-   "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+190%(약 ×2.9배)</font>까지 중첩됩니다.",
+   "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+200%(약 ×3.0배)</font>까지 중첩됩니다.",
    "passiveStats": [
     {
      "key": "Cfg_LZDamage",
      "label": "대형 제드 피해량",
-     "value": 0.025,
+     "value": 0.03,
      "unit": "percent",
-     "display": "+2.5%",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "+25%",
-     "lv20Display": "+50%"
+     "display": "+3%",
+     "lv10": 0.3,
+     "lv20": 0.6,
+     "lv10Display": "+30%",
+     "lv20Display": "+60%"
     },
     {
      "key": "Cfg_Damage",
-     "label": "피해량",
+     "label": "피해량(직격/스플래시)",
      "value": 0.025,
      "unit": "percent",
      "display": "+2.5%",
@@ -193,13 +201,13 @@
     {
      "key": "Cfg_GrenadeDamage",
      "label": "수류탄 피해량",
-     "value": 0.04,
+     "value": 0.05,
      "unit": "percent",
-     "display": "+4%",
-     "lv10": 0.4,
-     "lv20": 0.8,
-     "lv10Display": "+40%",
-     "lv20Display": "+80%"
+     "display": "+5%",
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%"
     }
    ],
    "strengths": [
@@ -209,7 +217,7 @@
    "weaknesses": [
     {
      "skill": "GrenadeDamage 패시브",
-     "issue": "Lv10 기준 +40%. Bombardier/DestroyerOfWorlds/QuickFuse(각 +50%)와 가산 시 총 +190% 수준",
+     "issue": "Lv10 기준 +50%. Bombardier/DestroyerOfWorlds/QuickFuse(각 +50%)와 가산 시 총 +200% 수준",
      "severity": "watch"
     },
     {
@@ -240,9 +248,13 @@
      "name": "기폭 장치"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.025000; 밸런스 패치(2026-07-07), 구 0.040000",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "icon": "icons/demolitionist.png"
   },
   {
@@ -267,13 +279,13 @@
     {
      "key": "Cfg_Health",
      "label": "체력",
-     "value": 0.0125,
+     "value": 0.03,
      "unit": "percent",
-     "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%"
+     "display": "+3%",
+     "lv10": 0.3,
+     "lv20": 0.6,
+     "lv10Display": "+30%",
+     "lv20Display": "+60%"
     },
     {
      "key": "Cfg_Damage",
@@ -326,9 +338,13 @@
      "name": "공생체"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.012500",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "icon": "icons/fieldmedic.png"
   },
   {
@@ -352,7 +368,7 @@
     },
     {
      "key": "Cfg_Defense",
-     "label": "방어",
+     "label": "저항력",
      "value": 0.02,
      "unit": "percent",
      "display": "+2%",
@@ -398,6 +414,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
+   "recentChangeTag": null,
    "icon": "icons/firebug.png"
   },
   {
@@ -422,13 +439,13 @@
     {
      "key": "Cfg_SwitchSpeed",
      "label": "무기 전환 속도",
-     "value": 0.125,
+     "value": 0.03,
      "unit": "percent",
-     "display": "+12.5%",
-     "lv10": 1.25,
-     "lv20": 2.5,
-     "lv10Display": "+125%",
-     "lv20Display": "+250%"
+     "display": "+3%",
+     "lv10": 0.3,
+     "lv20": 0.6,
+     "lv10Display": "+30%",
+     "lv20Display": "+60%"
     },
     {
      "key": "Cfg_Damage",
@@ -486,9 +503,13 @@
      "name": "사신"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.125000",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "nerf"
+   },
    "icon": "icons/gunslinger.png"
   },
   {
@@ -513,13 +534,13 @@
     {
      "key": "Cfg_Recoil",
      "label": "반동",
-     "value": 0.05,
+     "value": 0.025,
      "unit": "percent",
-     "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%"
+     "display": "+2.5%",
+     "lv10": 0.25,
+     "lv20": 0.5,
+     "lv10Display": "+25%",
+     "lv20Display": "+50%"
     },
     {
      "key": "Cfg_Damage",
@@ -577,9 +598,13 @@
      "name": "프레데터"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.050000",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "nerf"
+   },
    "icon": "icons/sharpshooter.png"
   },
   {
@@ -588,7 +613,7 @@
    "grade": "B",
    "summary": "강함, 균형 잡힘. 관통력 특화 퍼크로 군중 제어에서 베이스 퍼크 중 최상위이며 결점이 거의 없음.",
    "role": "샷건의 관통력을 극한까지 끌어올려, 늘어선 좀비 무리 전체를 한 발로 꿰뚫게 해주는 <font color=\"#FFD700\">군중 제어</font> 퍼크입니다.",
-   "endgame": "Lv20에 Penetrator, TightChoke, Barrage를 채우면 <font color=\"#15d7fa\">관통력</font>이 패시브 대비 최대 ×4.5까지 증가해, 샷건 한 발로 일렬로 늘어선 좀비 무리 전체를 관통해버리는 최상위 군중 제어 능력을 갖추게 됩니다.",
+   "endgame": "Lv20에 Penetrator, TightChoke, Barrage를 채우면 <font color=\"#15d7fa\">관통력</font>이 패시브 대비 최대 ×5.0까지 증가해, 샷건 한 발로 일렬로 늘어선 좀비 무리 전체를 관통해버리는 최상위 군중 제어 능력을 갖추게 됩니다.",
    "passiveStats": [
     {
      "key": "Cfg_StoppingPower",
@@ -615,18 +640,18 @@
     {
      "key": "Cfg_Penetration",
      "label": "관통력",
-     "value": 0.075,
+     "value": 0.1,
      "unit": "percent",
-     "display": "+7.5%",
-     "lv10": 0.75,
-     "lv20": 1.5,
-     "lv10Display": "+75%",
-     "lv20Display": "+150%"
+     "display": "+10%",
+     "lv10": 1.0,
+     "lv20": 2.0,
+     "lv10Display": "+100%",
+     "lv20Display": "+200%"
     }
    ],
    "strengths": [
-    "패시브 관통 +150% — 군중 청소 최강",
-    "Penetrator T2: 추가 관통 +200% — 최종 관통 ×4.5",
+    "패시브 관통 +200% — 군중 청소 최강",
+    "Penetrator T2: 추가 관통 +200% — 최종 관통 ×5.0",
     "TightChoke T2: 탄퍼짐 -70% — 샷건 장거리 운용 가능",
     "Barrage T2: 근접 피해 +60% — 샷건과 시너지"
    ],
@@ -659,9 +684,13 @@
      "name": "히드라"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.075000",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "icon": "icons/support.png"
   },
   {
@@ -674,7 +703,7 @@
    "passiveStats": [
     {
      "key": "Cfg_Armor",
-     "label": "방어력",
+     "label": "방어구",
      "value": 0.05,
      "unit": "percent",
      "display": "+5%",
@@ -746,6 +775,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
+   "recentChangeTag": null,
    "icon": "icons/swat.png"
   },
   {
@@ -754,18 +784,18 @@
    "grade": "A",
    "summary": "탄약/유틸리티 특화. 공격력은 낮지만 의도된 디자인으로 보이며, 팀 지원 역할로는 준수함.",
    "role": "탄약 공급력과 사이드암 화력을 크게 늘려주는 <font color=\"#FFD700\">만능 유틸리티</font> 퍼크입니다.",
-   "endgame": "Lv20에 Fallback, TacticalArmor 등을 채우면 <font color=\"#15d7fa\">여분 탄약</font> +280%로 팀 전체의 탄약 공급원 역할을 톡톡히 하며, 사이드암 특화 빌드로는 상당한 버스트 딜도 낼 수 있습니다. 다만 순수 화력은 의도적으로 낮게 설계되어 있습니다.",
+   "endgame": "Lv20에 Fallback, TacticalArmor 등을 채우면 <font color=\"#15d7fa\">여분 탄약</font> +200%로 팀 전체의 탄약 공급원 역할을 톡톡히 하며, 사이드암 특화 빌드로는 상당한 버스트 딜도 낼 수 있습니다. 다만 순수 화력은 의도적으로 낮게 설계되어 있습니다.",
    "passiveStats": [
     {
      "key": "Cfg_SpareAmmo",
      "label": "여분 탄약",
-     "value": 0.14,
+     "value": 0.1,
      "unit": "percent",
-     "display": "+14%",
-     "lv10": 1.4,
-     "lv20": 2.8,
-     "lv10Display": "+140%",
-     "lv20Display": "+280%"
+     "display": "+10%",
+     "lv10": 1.0,
+     "lv20": 2.0,
+     "lv10Display": "+100%",
+     "lv20Display": "+200%"
     },
     {
      "key": "Cfg_Damage",
@@ -780,7 +810,7 @@
     }
    ],
    "strengths": [
-    "SpareAmmo 패시브 +280% — 팀 탄약 공급원",
+    "SpareAmmo 패시브 +200% — 팀 탄약 공급원",
     "Fallback T2: 사이드암 피해 +250% — 피스톨 빌드 전용 파워",
     "TacticalArmor: 아머 보유 시 그랩 면역"
    ],
@@ -823,9 +853,13 @@
      "name": "변신술사"
     }
    ],
-   "isPatched": false,
-   "patchNote": null,
+   "isPatched": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.140000",
    "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "nerf"
+   },
    "icon": "icons/survivalist.png"
   }
  ],
@@ -852,31 +886,31 @@
     {
      "key": "Health",
      "label": "체력",
-     "value": 0.01,
+     "value": 0.1,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+10%",
+     "lv10": 1.0,
+     "lv20": 2.0,
+     "lv10Display": "+100%",
+     "lv20Display": "+200%",
      "scaling": true
     },
     {
      "key": "Armor",
-     "label": "방어력",
-     "value": 0.01,
+     "label": "방어구",
+     "value": 0.1,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+10%",
+     "lv10": 1.0,
+     "lv20": 2.0,
+     "lv10Display": "+100%",
+     "lv20Display": "+200%",
      "scaling": true
     }
    ],
    "fixedStats": [],
-   "role": "<font color=\"#FFD700\">Berserker/Firebug</font> 무기의 피해량, 체력, 방어력을 한꺼번에 끌어올려주는 하이브리드 방어 퍼크입니다.",
-   "endgame": "Lv20 만렙 기준 피해/체력/방어력이 모두 <font color=\"#15d7fa\">+20%</font>까지 오릅니다 (게임 내 표기상 최대 30%까지 클램프되지만, 현재 레벨당 수치로는 Lv20에서 20%까지만 도달). 근접·화염 무기 사용 시 안정적인 탱커형 딜러로 완성됩니다.",
+   "role": "<font color=\"#FFD700\">Berserker/Firebug</font> 무기의 피해량, 체력, 방어구를 한꺼번에 끌어올려주는 하이브리드 방어 퍼크입니다.",
+   "endgame": "Lv20 만렙 기준 피해/체력/방어구가 모두 <font color=\"#15d7fa\">+20%</font>까지 오릅니다 (게임 내 표기상 최대 30%까지 클램프되지만, 현재 레벨당 수치로는 Lv20에서 20%까지만 도달). 근접·화염 무기 사용 시 안정적인 탱커형 딜러로 완성됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#476d5c\">Berserker</font> 및 <font color=\"#476d5c\">Firebug</font> 무기의 <font color=\"#15d7fa\">피해량</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다 (최대 <font color=\"#FFFFFF\">30%</font>).",
@@ -884,13 +918,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#15d7fa\">최대 체력</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다 (최대 <font color=\"#FFFFFF\">30%</font>).",
-     "text": "최대 체력이 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다 (최대 30%).",
+     "raw": "<font color=\"#15d7fa\">최대 체력</font>이 <font color=\"#77d914\">레벨업당 +10% · 상한 +30%(Lv3에 도달)</font> 증가합니다.",
+     "text": "최대 체력이 레벨업당 +10% · 상한 +30%(Lv3에 도달) 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#15d7fa\">최대 방어력</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다 (최대 <font color=\"#FFFFFF\">30%</font>).",
-     "text": "최대 방어력이 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다 (최대 30%).",
+     "raw": "<font color=\"#15d7fa\">최대 방어구</font>이 <font color=\"#77d914\">레벨업당 +10% · 상한 +30%(Lv3에 도달)</font> 증가합니다.",
+     "text": "최대 방어구이 레벨업당 +10% · 상한 +30%(Lv3에 도달) 증가합니다.",
      "isCapstone": false
     }
    ],
@@ -1224,9 +1258,12 @@
    },
    "grade": "B",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.020000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": true,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 밸런스 패치(2026-07-07), 구 0.010000 (엔진 클램프 0.3 상한 존재); 밸런스 패치(2026-07-07), 구 0.010000 (엔진 클램프 0.3 상한 존재)",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/bulwark.png"
   },
@@ -2000,8 +2037,8 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.040→0.025→0.0125; 구 0.010000; 구 0.020→0.015→0.0075; 구 0.020000; 구 0.050000; 구 0.300000; 구 0.200000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": true,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/riot.png"
   },
@@ -2015,25 +2052,25 @@
     {
      "key": "Health",
      "label": "체력",
-     "value": 0.05,
+     "value": -0.05,
      "unit": "percent",
-     "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%",
+     "display": "-5%",
+     "lv10": -0.5,
+     "lv20": -1.0,
+     "lv10Display": "-50%",
+     "lv20Display": "-100%",
      "scaling": true
     },
     {
      "key": "Armor",
-     "label": "방어력",
-     "value": 0.05,
+     "label": "방어구",
+     "value": -0.05,
      "unit": "percent",
-     "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%",
+     "display": "-5%",
+     "lv10": -0.5,
+     "lv20": -1.0,
+     "lv10Display": "-50%",
+     "lv20Display": "-100%",
      "scaling": true
     },
     {
@@ -2050,8 +2087,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "체력과 방어력을 스스로 깎아내는 대신, 그 대가로 피해량을 크게 폭증시켜주는 <font color=\"#FFD700\">하이리스크-하이리턴</font> 퍼크입니다.",
-   "endgame": "패시브만으로 피해 +5%(레벨당)·만렙 <font color=\"#15d7fa\">+100%</font>가 붙는 대신 체력/방어력이 -5%(레벨당)·만렙 <font color=\"#ff6666\">-100%(엔진 클램프로 실제 하한은 있음)</font>까지 깎이며, 스킬 6개를 전부 '체력 소모형'으로 채우면 체력이 극단적으로 낮아지는 대신(최소 1은 보장) 압도적인 딜을 뽑아내는 올인 빌드가 완성됩니다.",
+   "role": "체력과 방어구를 스스로 깎아내는 대신, 그 대가로 피해량을 크게 폭증시켜주는 <font color=\"#FFD700\">하이리스크-하이리턴</font> 퍼크입니다.",
+   "endgame": "패시브만으로 피해 +5%(레벨당)·만렙 <font color=\"#15d7fa\">+100%</font>가 붙는 대신 체력/방어구가 -5%(레벨당)·만렙 <font color=\"#ff6666\">-100%(엔진 클램프로 실제 하한은 있음)</font>까지 깎이며, 스킬 6개를 전부 '체력 소모형'으로 채우면 체력이 극단적으로 낮아지는 대신(최소 1은 보장) 압도적인 딜을 뽑아내는 올인 빌드가 완성됩니다.",
    "descriptions": [
     {
      "raw": "<font color=\"#962ab9\">저주받은 그릇:</font> <font color=\"#cb1b43\">최대 체력</font> <font color=\"#cb1b43\">레벨업당 -5% · 만렙(Lv20) -50%</font> (최대 <font color=\"#FFFFFF\">50%</font> 감소)",
@@ -2059,8 +2096,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#962ab9\">저주받은 그릇:</font> <font color=\"#cb1b43\">최대 방어력</font> <font color=\"#cb1b43\">레벨업당 -5% · 만렙(Lv20) -50%</font> (최대 <font color=\"#FFFFFF\">50%</font> 감소)",
-     "text": "저주받은 그릇: 최대 방어력 레벨업당 -5% · 만렙(Lv20) -50% (최대 50% 감소)",
+     "raw": "<font color=\"#962ab9\">저주받은 그릇:</font> <font color=\"#cb1b43\">최대 방어구</font> <font color=\"#cb1b43\">레벨업당 -5% · 만렙(Lv20) -50%</font> (최대 <font color=\"#FFFFFF\">50%</font> 감소)",
+     "text": "저주받은 그릇: 최대 방어구 레벨업당 -5% · 만렙(Lv20) -50% (최대 50% 감소)",
      "isCapstone": false
     },
     {
@@ -2540,8 +2577,8 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100000; 구 0.100000; 구 0.100000",
-   "testWarning": "⚠️ 참고: 이 퍼크는 의도적인 고위험-고보상 설계이며, 극단적인 빌드 조합의 영향을 계속 확인 중입니다.",
-   "balanceComplete": true,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/voodoo.png"
   },
@@ -2641,7 +2678,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
-   "balanceComplete": false,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/haunted.png"
   },
@@ -3040,8 +3077,8 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.030000; 구 0.030000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/specialagent.png"
   },
@@ -3055,25 +3092,25 @@
     {
      "key": "RifleDamage",
      "label": "소총 피해량",
-     "value": 0.01,
+     "value": 0.015,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
      "scaling": true
     },
     {
      "key": "HeadshotDamage",
      "label": "헤드샷 피해량",
-     "value": 0.01,
+     "value": 0.015,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
      "scaling": true
     },
     {
@@ -3091,25 +3128,25 @@
     {
      "key": "RecoilReduction",
      "label": "반동 감소",
-     "value": 0.01,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "WeaponSwitchSpeed",
      "label": "무기 전환 속도",
-     "value": 0.01,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
@@ -3144,13 +3181,13 @@
    "endgame": "Lv20 기준 소총 피해/헤드샷/재장전/반동/전환속도/탄약 6개 속성이 전부 <font color=\"#15d7fa\">+20%</font> 상승하고, ThermalDrill 등 스킬로 관통·화력을 추가로 쌓으면 어떤 소총을 들어도 만능으로 강력한 딜러가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#15d7fa\">소총 피해량</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
-     "text": "소총 피해량이 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다.",
+     "raw": "<font color=\"#15d7fa\">소총 피해량</font>이 <font color=\"#77d914\">레벨업당 +1.5% · 만렙(Lv20) +30%</font> 증가합니다.",
+     "text": "소총 피해량이 레벨업당 +1.5% · 만렙(Lv20) +30% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "소총 <font color=\"#15d7fa\">헤드샷 피해량</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
-     "text": "소총 헤드샷 피해량이 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다.",
+     "raw": "소총 <font color=\"#15d7fa\">헤드샷 피해량</font>이 <font color=\"#77d914\">레벨업당 +1.5% · 만렙(Lv20) +30%</font> 증가합니다.",
+     "text": "소총 헤드샷 피해량이 레벨업당 +1.5% · 만렙(Lv20) +30% 증가합니다.",
      "isCapstone": false
     },
     {
@@ -3159,13 +3196,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#15d7fa\">반동</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 감소합니다.",
-     "text": "반동이 레벨업당 +1% · 만렙(Lv20) +20% 감소합니다.",
+     "raw": "<font color=\"#15d7fa\">반동</font>이 <font color=\"#77d914\">레벨업당 +2% · 만렙(Lv20) +40%</font> 감소합니다.",
+     "text": "반동이 레벨업당 +2% · 만렙(Lv20) +40% 감소합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#15d7fa\">무기 전환 속도</font>가 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
-     "text": "무기 전환 속도가 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다.",
+     "raw": "<font color=\"#15d7fa\">무기 전환 속도</font>가 <font color=\"#77d914\">레벨업당 +2% · 만렙(Lv20) +40%</font> 증가합니다.",
+     "text": "무기 전환 속도가 레벨업당 +2% · 만렙(Lv20) +40% 증가합니다.",
      "isCapstone": false
     },
     {
@@ -3620,9 +3657,12 @@
    },
    "grade": "B",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.020000; 구 0.020000; 구 0.020000; 구 0.020000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000; 밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/warlord.png"
   },
@@ -3826,8 +3866,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.050→0.025→0.0125; 구 0.020000; 구 0.020000; 구 0.015000; 구 0.030000; 구 0.040→0.020→0.010; 구 0.010→0.005→0.0025",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/metronome.png"
   },
@@ -3853,13 +3893,13 @@
     {
      "key": "DamagePerLevel",
      "label": "레벨 당 피해량",
-     "value": 0.01,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     }
    ],
@@ -3952,8 +3992,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#9632ff\">시간 왜곡:</font> <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
-     "text": "시간 왜곡: ZED 타임 중 피해량 레벨업당 +1% · 만렙(Lv20) +20%",
+     "raw": "<font color=\"#9632ff\">시간 왜곡:</font> <font color=\"#d8b0ff\">ZED 타임 중 피해량</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+     "text": "시간 왜곡: ZED 타임 중 피해량 레벨업당 +2% · 만렙(Lv20) +40%",
      "isCapstone": false
     },
     {
@@ -4355,9 +4395,12 @@
    },
    "grade": "SS",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000; 구 0.400000; 구 0.300000; ZED타임 무한연장 완화(2026-07-05), 구 0.300000 -- 카운터 우회 발동이라 3배 이상 축소; 구 0.600000; 구 0.500000; ZED타임 무한연장 완화(2026-07-05), 구 3.000000",
-   "testWarning": "🚨 경고! 이 퍼크는 밸런스 문제가 확정된 상태이며, 근본적인 수정 전까지는 매우 강력하게 작동할 수 있습니다.",
-   "balanceComplete": false,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.400000; 구 0.300000; ZED타임 무한연장 완화(2026-07-05), 구 0.300000 -- 카운터 우회 발동이라 3배 이상 축소; 구 0.600000; 구 0.500000; ZED타임 무한연장 완화(2026-07-05), 구 3.000000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/agony.png"
   },
@@ -4476,21 +4519,21 @@
     {
      "key": "BargainHunter",
      "name": "바겐 헌터",
-     "standardDesc": "각 웨이브가 끝날 때마다 방어력을 최대치의 +50%만큼 자동 회복합니다.",
-     "deluxeDesc": "각 웨이브가 끝날 때마다 방어력을 최대치의 +100%만큼 자동 회복합니다.",
-     "standardDescRaw": "각 웨이브가 끝날 때마다 방어력을 최대치의 <font color=\"#66cc00\">+50%</font>만큼 자동 회복합니다.",
-     "deluxeDescRaw": "각 웨이브가 끝날 때마다 방어력을 최대치의 <font color=\"#66cc00\">+100%</font>만큼 자동 회복합니다.",
+     "standardDesc": "각 웨이브가 끝날 때마다 방어구를 최대치의 +50%만큼 자동 회복합니다.",
+     "deluxeDesc": "각 웨이브가 끝날 때마다 방어구를 최대치의 +100%만큼 자동 회복합니다.",
+     "standardDescRaw": "각 웨이브가 끝날 때마다 방어구를 최대치의 <font color=\"#66cc00\">+50%</font>만큼 자동 회복합니다.",
+     "deluxeDescRaw": "각 웨이브가 끝날 때마다 방어구를 최대치의 <font color=\"#66cc00\">+100%</font>만큼 자동 회복합니다.",
      "rawValues": [
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 0.5,
        "unit": "percent",
        "display": "+50%"
       },
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 1.0,
        "unit": "percent",
        "display": "+100%"
@@ -4508,21 +4551,21 @@
     {
      "key": "Dauntless",
      "name": "용감한",
-     "standardDesc": "최대 방어력이 +40% 증가합니다.",
-     "deluxeDesc": "최대 방어력이 +80% 증가합니다.",
-     "standardDescRaw": "<font color=\"#ff3399\">최대 방어력</font>이 <font color=\"#66cc00\">+40%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#ff3399\">최대 방어력</font>이 <font color=\"#66cc00\">+80%</font> 증가합니다.",
+     "standardDesc": "최대 방어구이 +40% 증가합니다.",
+     "deluxeDesc": "최대 방어구이 +80% 증가합니다.",
+     "standardDescRaw": "<font color=\"#ff3399\">최대 방어구</font>이 <font color=\"#66cc00\">+40%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#ff3399\">최대 방어구</font>이 <font color=\"#66cc00\">+80%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 0.4,
        "unit": "percent",
        "display": "+40%"
       },
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 0.8,
        "unit": "percent",
        "display": "+80%"
@@ -4709,8 +4752,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.400000; 만렙(Lv20) 50%로 너프, 구 0.050000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/maniac.png"
   },
@@ -5154,21 +5197,21 @@
     {
      "key": "TemperedSteel",
      "name": "강화강철",
-     "standardDesc": "최대 방어력이 +25% 증가합니다.",
-     "deluxeDesc": "최대 방어력이 +60% 증가합니다.",
-     "standardDescRaw": "최대 방어력이 +25% 증가합니다.",
-     "deluxeDescRaw": "최대 방어력이 +60% 증가합니다.",
+     "standardDesc": "최대 방어구가 +25% 증가합니다.",
+     "deluxeDesc": "최대 방어구가 +60% 증가합니다.",
+     "standardDescRaw": "최대 방어구가 +25% 증가합니다.",
+     "deluxeDescRaw": "최대 방어구가 +60% 증가합니다.",
      "rawValues": [
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 0.25,
        "unit": "percent",
        "display": "+25%"
       },
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 0.6,
        "unit": "percent",
        "display": "+60%"
@@ -5193,8 +5236,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.040000; 구 0.050000; 구 0.250000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/forgewarden.png"
   },
@@ -5388,8 +5431,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020→0.015→0.0075; 구 0.015000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [
     {
      "title": "할로우 시스템 규칙",
@@ -5526,7 +5569,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
-   "balanceComplete": false,
+   "recentChangeTag": null,
    "extraSections": [
     {
      "title": "디토네이터 시스템 규칙",
@@ -5686,10 +5729,10 @@
     {
      "key": "DivineFortitude",
      "name": "신성한 용기",
-     "standardDesc": "최대 체력과 최대 방어력이 +10% 증가합니다.",
-     "deluxeDesc": "디럭스. 최대 체력 및 최대 방어력이 +25% 증가합니다.",
-     "standardDescRaw": "최대 체력과 최대 방어력이 +10% 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> <font color=\"#ff6666\">최대 체력</font> 및 <font color=\"#4444ff\">최대 방어력</font>이 <font color=\"#eeeeff\">+25%</font> 증가합니다.",
+     "standardDesc": "최대 체력과 최대 방어구가 +10% 증가합니다.",
+     "deluxeDesc": "디럭스. 최대 체력 및 최대 방어구이 +25% 증가합니다.",
+     "standardDescRaw": "최대 체력과 최대 방어구가 +10% 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> <font color=\"#ff6666\">최대 체력</font> 및 <font color=\"#4444ff\">최대 방어구</font>이 <font color=\"#eeeeff\">+25%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "HealthBonus",
@@ -5707,14 +5750,14 @@
       },
       {
        "key": "ArmorBonus",
-       "label": "방어력 보너스",
+       "label": "방어구 보너스",
        "value": 0.1,
        "unit": "percent",
        "display": "+10%"
       },
       {
        "key": "ArmorBonus",
-       "label": "방어력 보너스",
+       "label": "방어구 보너스",
        "value": 0.25,
        "unit": "percent",
        "display": "+25%"
@@ -5810,21 +5853,21 @@
     {
      "key": "OverflowingGrace",
      "name": "넘치는 은혜",
-     "standardDesc": "아군을 치유하면 대상 아군에게 +3 방어력을 회복시켜 줍니다.",
-     "deluxeDesc": "디럭스. 아군을 치유하면 대상 아군에게 +8 방어력을 회복시켜 줍니다.",
-     "standardDescRaw": "아군을 치유하면 대상 아군에게 <font color=\"#4444ff\">+3 방어력</font>을 회복시켜 줍니다.",
-     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유하면 대상 아군에게 <font color=\"#4444ff\">+8 방어력</font>을 회복시켜 줍니다.",
+     "standardDesc": "아군을 치유하면 대상 아군에게 +3 방어구를 회복시켜 줍니다.",
+     "deluxeDesc": "디럭스. 아군을 치유하면 대상 아군에게 +8 방어구를 회복시켜 줍니다.",
+     "standardDescRaw": "아군을 치유하면 대상 아군에게 <font color=\"#4444ff\">+3 방어구</font>를 회복시켜 줍니다.",
+     "deluxeDescRaw": "<font color=\"#ffd700\">디럭스.</font> 아군을 치유하면 대상 아군에게 <font color=\"#4444ff\">+8 방어구</font>를 회복시켜 줍니다.",
      "rawValues": [
       {
        "key": "ArmorGrant",
-       "label": "방어력 부여",
+       "label": "방어구 부여",
        "value": 1,
        "unit": "count",
        "display": "1"
       },
       {
        "key": "ArmorGrant",
-       "label": "방어력 부여",
+       "label": "방어구 부여",
        "value": 2,
        "unit": "count",
        "display": "2"
@@ -6022,8 +6065,8 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.050000→0.030(이전)→0.015; 구 0.015000; 구 0.020000; 형제 스탯 대비 과도해 추가축소(2026-07-02), 구 0.500000(그 이전 구 1.000000); 구 0.100000(확률, 유지)",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/archangel.png"
   },
@@ -6425,9 +6468,9 @@
      "key": "ParasiticBloom",
      "name": "기생성 조류 번식",
      "standardDesc": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 20 HP 회복됩니다.",
-     "deluxeDesc": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어력이 10 회복됩니다.",
+     "deluxeDesc": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어구가 10 회복됩니다.",
      "standardDescRaw": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 20 HP 회복됩니다.",
-     "deluxeDescRaw": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어력이 10 회복됩니다.",
+     "deluxeDescRaw": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어구가 10 회복됩니다.",
      "rawValues": [
       {
        "key": "HealAmount",
@@ -6445,7 +6488,7 @@
       },
       {
        "key": "DeluxeArmorAmount",
-       "label": "디럭스 방어력 량",
+       "label": "디럭스 방어구 량",
        "value": 10,
        "unit": "count",
        "display": "10"
@@ -6510,9 +6553,9 @@
      "key": "RegenerativeMembrane",
      "name": "재생막",
      "standardDesc": "제자리에 가만히 서 있는 동안 초당 체력을 1 회복합니다. 회복이 시작된 후 움직이면 60초의 재사용 대기시간이 발동됩니다.",
-     "deluxeDesc": "제자리에 가만히 서 있는 동안 초당 체력을 2, 방어력을 1 회복합니다. 회복이 시작된 후 움직이면 60초의 재사용 대기시간이 발동됩니다.",
+     "deluxeDesc": "제자리에 가만히 서 있는 동안 초당 체력을 2, 방어구를 1 회복합니다. 회복이 시작된 후 움직이면 60초의 재사용 대기시간이 발동됩니다.",
      "standardDescRaw": "제자리에 가만히 서 있는 동안 <font color=\"#F0F8FF\">초당 체력을 1</font> 회복합니다. 회복이 시작된 후 움직이면 <font color=\"#FFAA00\">60초의 재사용 대기시간이 발동됩니다.</font>",
-     "deluxeDescRaw": "제자리에 가만히 서 있는 동안 <font color=\"#42e087\">초당 체력을 2</font>, <font color=\"#4444ff\">방어력을 1</font> 회복합니다. 회복이 시작된 후 움직이면 <font color=\"#FFAA00\">60초의 재사용 대기시간이 발동됩니다.</font>",
+     "deluxeDescRaw": "제자리에 가만히 서 있는 동안 <font color=\"#42e087\">초당 체력을 2</font>, <font color=\"#4444ff\">방어구를 1</font> 회복합니다. 회복이 시작된 후 움직이면 <font color=\"#FFAA00\">60초의 재사용 대기시간이 발동됩니다.</font>",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -6526,21 +6569,21 @@
     {
      "key": "SymbioticRestoration",
      "name": "공생 복원",
-     "standardDesc": "아군을 치료하면 자신의 치유량의 +12.5%만큼 방어력이 회복됩니다.",
-     "deluxeDesc": "아군을 치료하면 자신의 치유량의 +25%만큼 방어력이 회복됩니다.",
-     "standardDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+12.5%</font>만큼 <font color=\"#4444ff\">방어력</font>이 회복됩니다.",
-     "deluxeDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+25%</font>만큼 <font color=\"#4444ff\">방어력</font>이 회복됩니다.",
+     "standardDesc": "아군을 치료하면 자신의 치유량의 +12.5%만큼 방어구이 회복됩니다.",
+     "deluxeDesc": "아군을 치료하면 자신의 치유량의 +25%만큼 방어구이 회복됩니다.",
+     "standardDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+12.5%</font>만큼 <font color=\"#4444ff\">방어구</font>이 회복됩니다.",
+     "deluxeDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+25%</font>만큼 <font color=\"#4444ff\">방어구</font>이 회복됩니다.",
      "rawValues": [
       {
        "key": "ArmorPercent",
-       "label": "방어력 퍼센트",
+       "label": "방어구 퍼센트",
        "value": 0.125,
        "unit": "percent",
        "display": "+12.5%"
       },
       {
        "key": "ArmorPercent",
-       "label": "방어력 퍼센트",
+       "label": "방어구 퍼센트",
        "value": 0.25,
        "unit": "percent",
        "display": "+25%"
@@ -6565,8 +6608,8 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.020000; 구 0.010000; 광역피해 남발 축소(2026-07-02, 스택상한 불명이라 보수적으로 추가축소), 구 0.025000(그 이전 구 0.050000); 구 1000.000000; 구 0.200000; 형제 스탯(SwarmDamage/Movement) 대비 과도해 추가축소(2026-07-02), 구 0.250000(그 이전 구 0.500000); 구 0.150000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/hivemind.png"
   },
@@ -7254,8 +7297,8 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.015000; 구 0.040000; 구 0.500000; 광역피해 남발 축소(2026-07-02), 구 150.000000; 구 800.000000; 구 1.000000; 구 0.500000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/parasite.png"
   },
@@ -7281,25 +7324,25 @@
     {
      "key": "WeaponSwitchSpeed",
      "label": "무기 전환 속도",
-     "value": 0.01,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "PenetrationBonus",
      "label": "관통력 보너스",
-     "value": 0.0175,
+     "value": 0.05,
      "unit": "percent",
-     "display": "+1.75%",
-     "lv10": 0.175,
-     "lv20": 0.35,
-     "lv10Display": "+17.5%",
-     "lv20Display": "+35%",
+     "display": "+5%",
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
      "scaling": true
     }
    ],
@@ -7366,13 +7409,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#00FF7F\">신경 인터페이스:</font> <font color=\"#7FFF7F\">무기 전환 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
-     "text": "신경 인터페이스: 무기 전환 속도 레벨업당 +1% · 만렙(Lv20) +20%",
+     "raw": "<font color=\"#00FF7F\">신경 인터페이스:</font> <font color=\"#7FFF7F\">무기 전환 속도</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+     "text": "신경 인터페이스: 무기 전환 속도 레벨업당 +2% · 만렙(Lv20) +40%",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#00FF7F\">단단한 갑각:</font> <font color=\"#7FFF7F\">관통력</font> <font color=\"#FFFFFF\">레벨업당 +1.75% · 만렙(Lv20) +35%</font>",
-     "text": "단단한 갑각: 관통력 레벨업당 +1.75% · 만렙(Lv20) +35%",
+     "raw": "<font color=\"#00FF7F\">단단한 갑각:</font> <font color=\"#7FFF7F\">관통력</font> <font color=\"#FFFFFF\">레벨업당 +5% · 만렙(Lv20) +100%</font>",
+     "text": "단단한 갑각: 관통력 레벨업당 +5% · 만렙(Lv20) +100%",
      "isCapstone": false
     },
     {
@@ -7876,9 +7919,12 @@
    },
    "grade": "SS",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.020000; 구 0.050→0.025→0.035→0.0175; 구 0.500000; 구 0.300000; 구 0.250000; 구 100.000000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.0175; 구 0.500000; 구 0.300000; 구 0.250000; 구 100.000000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/symbiote.png"
   },
@@ -8388,8 +8434,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 구 0.100→0.025→0.0125; 구 0.500000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/pyrokinetic.png"
   },
@@ -8959,8 +9005,8 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.020000; 구 0.200000; 구 0.050000; 구 0.300000; 구 0.100000; 구 0.080000; 구 1.000000; 구 0.010000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/cinder.png"
   },
@@ -9454,7 +9500,7 @@
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
-   "balanceComplete": true,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/headhunter.png"
   },
@@ -9468,169 +9514,169 @@
     {
      "key": "Damage",
      "label": "피해량",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "Heal",
      "label": "치유",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "KnockdownPower",
      "label": "넉다운 위력",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "MagSize",
      "label": "탄창 크기",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "MeleeAttackSpeed",
      "label": "근접 공격 속도",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "Penetration",
      "label": "관통력",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "RateOfFire",
      "label": "연사 속도",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "Recoil",
      "label": "반동",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "ReloadRate",
      "label": "재장전 속도",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "SpareAmmo",
      "label": "여분 탄약",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "StumblePower",
      "label": "휘청임 위력",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "StunPower",
      "label": "기절 위력",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "Speed",
      "label": "속도",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "Spread",
      "label": "탄퍼짐",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     }
    ],
@@ -9639,8 +9685,8 @@
    "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어, 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
-     "text": "무기의 모든 능력치가 레벨업당 +0.75% · 만렙(Lv20) +15% 증가합니다.",
+     "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
+     "text": "무기의 모든 능력치가 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다.",
      "isCapstone": false
     },
     {
@@ -9961,9 +10007,12 @@
    },
    "grade": "A",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010→0.015→0.0075 (14속성 전부 동일)",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 약함(Trash) 우려로 인해 일부 수치가 상향 조정되어 테스트 중입니다.",
-   "balanceComplete": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.0075 (14속성 전부 동일)",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/timetraveler.png"
   },
@@ -10195,8 +10244,8 @@
    "grade": "S",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [
     {
      "title": "갬빗 시스템 규칙",
@@ -10233,25 +10282,25 @@
     {
      "key": "HeadshotDamage",
      "label": "헤드샷 피해량",
-     "value": 0.01,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "MovementSpeed",
      "label": "이동 속도",
-     "value": 0.01,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     }
    ],
@@ -10279,13 +10328,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#CC0000\">소울 스트라이크:</font> <font color=\"#FF6666\">헤드샷 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
-     "text": "소울 스트라이크: 헤드샷 피해량 레벨업당 +1% · 만렙(Lv20) +20%",
+     "raw": "<font color=\"#CC0000\">소울 스트라이크:</font> <font color=\"#FF6666\">헤드샷 피해량</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+     "text": "소울 스트라이크: 헤드샷 피해량 레벨업당 +2% · 만렙(Lv20) +40%",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#CC0000\">섀도우 스텝:</font> <font color=\"#FF6666\">이동 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
-     "text": "섀도우 스텝: 이동 속도 레벨업당 +1% · 만렙(Lv20) +20%",
+     "raw": "<font color=\"#CC0000\">섀도우 스텝:</font> <font color=\"#FF6666\">이동 속도</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+     "text": "섀도우 스텝: 이동 속도 레벨업당 +2% · 만렙(Lv20) +40%",
      "isCapstone": false
     },
     {
@@ -10718,9 +10767,12 @@
    },
    "grade": "SS",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030→0.020→0.010; 구 0.020000; 구 0.250000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.250000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/reaper.png"
   },
@@ -11250,8 +11302,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.350→0.250→0.125",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": true,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/scavenger.png"
   },
@@ -11265,169 +11317,169 @@
     {
      "key": "Damage",
      "label": "피해량",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "Heal",
      "label": "치유",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "KnockdownPower",
      "label": "넉다운 위력",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "MagSize",
      "label": "탄창 크기",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "MeleeAttackSpeed",
      "label": "근접 공격 속도",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "Penetration",
      "label": "관통력",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "RateOfFire",
      "label": "연사 속도",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "Recoil",
      "label": "반동",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "ReloadRate",
      "label": "재장전 속도",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "SpareAmmo",
      "label": "여분 탄약",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "StumblePower",
      "label": "휘청임 위력",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "StunPower",
      "label": "기절 위력",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "Speed",
      "label": "속도",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
      "key": "Spread",
      "label": "탄퍼짐",
-     "value": 0.0075,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     }
    ],
@@ -11436,8 +11488,8 @@
    "endgame": "레벨당 <font color=\"#15d7fa\">14개 속성</font>이 동시에 성장해(Lv20 기준 각 +15%), 어떤 무기·상황에도 대응 가능한 올라운더형 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
-     "text": "무기의 모든 능력치가 레벨업당 +0.75% · 만렙(Lv20) +15% 증가합니다.",
+     "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +2% · 만렙(Lv20) +40%</font> 증가합니다.",
+     "text": "무기의 모든 능력치가 레벨업당 +2% · 만렙(Lv20) +40% 증가합니다.",
      "isCapstone": false
     }
    ],
@@ -11755,9 +11807,12 @@
    },
    "grade": "A",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030→0.015→0.0075 (14속성 전부 동일)",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": true,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.0075 (14속성 전부 동일)",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/taskmaster.png"
   },
@@ -11795,13 +11850,13 @@
     {
      "key": "FreezeDuration",
      "label": "동결 지속시간",
-     "value": 0.125,
+     "value": 0.1,
      "unit": "seconds",
-     "display": "0.12초",
-     "lv10": 1.25,
-     "lv20": 2.5,
-     "lv10Display": "1.25초",
-     "lv20Display": "2.5초",
+     "display": "0.1초",
+     "lv10": 1.0,
+     "lv20": 2.0,
+     "lv10Display": "1초",
+     "lv20Display": "2초",
      "scaling": true
     }
    ],
@@ -11820,8 +11875,8 @@
      "isCapstone": false
     },
     {
-     "raw": "당신의 <font color=\"#0bf1f1\">동결</font> 효과가 <font color=\"#77d914\">레벨업당 +12.5% · 만렙(Lv20) +250%</font> 더 오래 지속됩니다.",
-     "text": "당신의 동결 효과가 레벨업당 +12.5% · 만렙(Lv20) +250% 더 오래 지속됩니다.",
+     "raw": "당신의 <font color=\"#0bf1f1\">동결</font> 효과가 <font color=\"#77d914\">레벨업당 +10% · 만렙(Lv20) +200%</font> 더 오래 지속됩니다.",
+     "text": "당신의 동결 효과가 레벨업당 +10% · 만렙(Lv20) +200% 더 오래 지속됩니다.",
      "isCapstone": false
     }
    ],
@@ -11861,10 +11916,10 @@
     {
      "key": "AspectOfYmir",
      "name": "이미르의 측면",
-     "standardDesc": "얼음 효과 피해량이 +15% 증가하고 방어력이 +20% 증가합니다.",
-     "deluxeDesc": "얼음 효과 피해량이 +30% 증가하고 방어력이 +40% 증가합니다.",
-     "standardDescRaw": "<font color=\"#a0c1cb\">얼음</font> 효과 피해량이 <font color=\"#15d7fa\">+15%</font> 증가하고 <font color=\"#a0c1cb\">방어력</font>이 <font color=\"#15d7fa\">+20%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#a0c1cb\">얼음</font> 효과 피해량이 <font color=\"#15d7fa\">+30%</font> 증가하고 <font color=\"#a0c1cb\">방어력</font>이 <font color=\"#15d7fa\">+40%</font> 증가합니다.",
+     "standardDesc": "얼음 효과 피해량이 +15% 증가하고 방어구이 +20% 증가합니다.",
+     "deluxeDesc": "얼음 효과 피해량이 +30% 증가하고 방어구이 +40% 증가합니다.",
+     "standardDescRaw": "<font color=\"#a0c1cb\">얼음</font> 효과 피해량이 <font color=\"#15d7fa\">+15%</font> 증가하고 <font color=\"#a0c1cb\">방어구</font>이 <font color=\"#15d7fa\">+20%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#a0c1cb\">얼음</font> 효과 피해량이 <font color=\"#15d7fa\">+30%</font> 증가하고 <font color=\"#a0c1cb\">방어구</font>이 <font color=\"#15d7fa\">+40%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -11882,14 +11937,14 @@
       },
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 0.2,
        "unit": "percent",
        "display": "+20%"
       },
       {
        "key": "Armor",
-       "label": "방어력",
+       "label": "방어구",
        "value": 0.4,
        "unit": "percent",
        "display": "+40%"
@@ -12236,9 +12291,12 @@
    },
    "grade": "A",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 구 0.250000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 밸런스 패치(2026-07-07), 구 0.125000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "nerf"
+   },
    "extraSections": [],
    "icon": "icons/frost.png"
   },
@@ -12349,8 +12407,8 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.010000; 구 0.020000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [
     {
      "title": "예언 시스템 규칙",
@@ -12375,37 +12433,37 @@
     {
      "key": "Damage",
      "label": "피해량",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "DamageHead",
      "label": "피해량 머리",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "Penetration",
      "label": "관통력",
-     "value": 0.025,
+     "value": 0.05,
      "unit": "percent",
-     "display": "+2.5%",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "+25%",
-     "lv20Display": "+50%",
+     "display": "+5%",
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
      "scaling": true
     }
    ],
@@ -12414,18 +12472,18 @@
    "endgame": "Lv20 관통력 보너스까지 채우면 헤드샷 위주의 관통 사격 빌드가 완성되며, <font color=\"#15d7fa\">FullMetalJacket</font> 스킬로 관통력을 한층 더 끌어올릴 수 있습니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#476d5c\">Sharpshooter</font> 및 <font color=\"#476d5c\">Gunslinger</font> 무기의 <font color=\"#15d7fa\">피해량</font>이 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
-     "text": "Sharpshooter 및 Gunslinger 무기의 피해량이 레벨업당 +0.75% · 만렙(Lv20) +15% 증가합니다.",
+     "raw": "<font color=\"#476d5c\">Sharpshooter</font> 및 <font color=\"#476d5c\">Gunslinger</font> 무기의 <font color=\"#15d7fa\">피해량</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
+     "text": "Sharpshooter 및 Gunslinger 무기의 피해량이 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#15d7fa\">헤드샷 피해량</font>이 <font color=\"#77d914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font> 증가합니다.",
-     "text": "헤드샷 피해량이 레벨업당 +0.75% · 만렙(Lv20) +15% 증가합니다.",
+     "raw": "<font color=\"#15d7fa\">헤드샷 피해량</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
+     "text": "헤드샷 피해량이 레벨업당 +1% · 만렙(Lv20) +20% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "모든 무기의 <font color=\"#15d7fa\">관통력</font>이 <font color=\"#77d914\">레벨업당 +2.5% · 만렙(Lv20) +50%</font> 증가합니다.",
-     "text": "모든 무기의 관통력이 레벨업당 +2.5% · 만렙(Lv20) +50% 증가합니다.",
+     "raw": "모든 무기의 <font color=\"#15d7fa\">관통력</font>이 <font color=\"#77d914\">레벨업당 +5% · 만렙(Lv20) +100%</font> 증가합니다.",
+     "text": "모든 무기의 관통력이 레벨업당 +5% · 만렙(Lv20) +100% 증가합니다.",
      "isCapstone": false
     }
    ],
@@ -12589,10 +12647,10 @@
     {
      "key": "ImpenetrableSkin",
      "name": "노미더",
-     "standardDesc": "방어력이 없을 때 받는 피해가 +3.33% 감소하며, 클롯에게 잡히지 않습니다.",
-     "deluxeDesc": "방어력이 없을 때 받는 피해가 +6.67% 감소하며, 클롯에게 잡히지 않습니다.",
-     "standardDescRaw": "방어력이 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+3.33%</font> 감소하며, 클롯에게 잡히지 않습니다.",
-     "deluxeDescRaw": "방어력이 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+6.67%</font> 감소하며, 클롯에게 잡히지 않습니다.",
+     "standardDesc": "방어구가 없을 때 받는 피해가 +3.33% 감소하며, 클롯에게 잡히지 않습니다.",
+     "deluxeDesc": "방어구가 없을 때 받는 피해가 +6.67% 감소하며, 클롯에게 잡히지 않습니다.",
+     "standardDescRaw": "방어구가 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+3.33%</font> 감소하며, 클롯에게 잡히지 않습니다.",
+     "deluxeDescRaw": "방어구가 없을 때 받는 <font color=\"#66cc00\">피해</font>가 <font color=\"#ff3399\">+6.67%</font> 감소하며, 클롯에게 잡히지 않습니다.",
      "rawValues": [
       {
        "key": "Resistance",
@@ -12787,9 +12845,12 @@
    },
    "grade": "A",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000; 구 0.015000; 구 0.200→0.050→0.025",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.007500; 밸런스 패치(2026-07-07), 구 0.007500; 밸런스 패치(2026-07-07), 구 0.025000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/daredevil.png"
   },
@@ -13310,8 +13371,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.060→0.035→0.0175; 구 0.020→0.015→0.0075; 구 0.050→0.030→0.015; 구 1.000000; 구 0.700000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/wendigo.png"
   },
@@ -13325,25 +13386,25 @@
     {
      "key": "BaseDamage",
      "label": "기본 피해량",
-     "value": 0.0075,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     },
     {
      "key": "HeadshotDamage",
      "label": "헤드샷 피해량",
-     "value": 0.0125,
+     "value": 0.02,
      "unit": "percent",
-     "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
      "scaling": true
     },
     {
@@ -13404,13 +13465,13 @@
    "endgame": "Lv20 절대 영도 캡스톤(20킬마다 냉동 폭발 충전)까지 채우면 <font color=\"#15d7fa\">헤드샷+25%, 기본 피해+15%</font>에 냉동 폭발까지 더해진 최상급 원거리 딜러가 완성되나, FrostbiteArrows 스킬은 최대 스택 상한이 확인되지 않아 장기전에서 주의가 필요합니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#87CEEB\">서리 숙련도:</font> <font color=\"#B0E0E6\">모든 피해량</font> <font color=\"#FFFFFF\">레벨업당 +0.75% · 만렙(Lv20) +15%</font>",
-     "text": "서리 숙련도: 모든 피해량 레벨업당 +0.75% · 만렙(Lv20) +15%",
+     "raw": "<font color=\"#87CEEB\">서리 숙련도:</font> <font color=\"#B0E0E6\">모든 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
+     "text": "서리 숙련도: 모든 피해량 레벨업당 +1% · 만렙(Lv20) +20%",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#87CEEB\">정밀 얼음:</font> <font color=\"#B0E0E6\">헤드샷 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.25% · 만렙(Lv20) +25%</font>",
-     "text": "정밀 얼음: 헤드샷 피해량 레벨업당 +1.25% · 만렙(Lv20) +25%",
+     "raw": "<font color=\"#87CEEB\">정밀 얼음:</font> <font color=\"#B0E0E6\">헤드샷 피해량</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
+     "text": "정밀 얼음: 헤드샷 피해량 레벨업당 +2% · 만렙(Lv20) +40%",
      "isCapstone": false
     },
     {
@@ -13639,21 +13700,21 @@
     {
      "key": "IceArmor",
      "name": "얼음 갑옷",
-     "standardDesc": "전투 중이 아닐 때 10의 추가 방어력을 얻으며, 이 방어력은 3초마다 1씩 재생됩니다.",
-     "deluxeDesc": "전투 중이 아닐 때 20의 추가 방어력을 얻으며, 이 방어력은 3초마다 1씩 재생됩니다.",
-     "standardDescRaw": "전투 중이 아닐 때 <font color=\"#87CEEB\">10</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
-     "deluxeDescRaw": "전투 중이 아닐 때 <font color=\"#87CEEB\">20</font>의 추가 <font color=\"#77d914\">방어력</font>을 얻으며, 이 방어력은 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
+     "standardDesc": "전투 중이 아닐 때 10의 추가 방어구를 얻으며, 이 방어구는 3초마다 1씩 재생됩니다.",
+     "deluxeDesc": "전투 중이 아닐 때 20의 추가 방어구를 얻으며, 이 방어구는 3초마다 1씩 재생됩니다.",
+     "standardDescRaw": "전투 중이 아닐 때 <font color=\"#87CEEB\">10</font>의 추가 <font color=\"#77d914\">방어구</font>를 얻으며, 이 방어구는 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
+     "deluxeDescRaw": "전투 중이 아닐 때 <font color=\"#87CEEB\">20</font>의 추가 <font color=\"#77d914\">방어구</font>를 얻으며, 이 방어구는 <font color=\"#FFAA33\">3초</font>마다 <font color=\"#15d7fa\">1씩</font> 재생됩니다.",
      "rawValues": [
       {
        "key": "ArmorBonus",
-       "label": "방어력 보너스",
+       "label": "방어구 보너스",
        "value": 10,
        "unit": "count",
        "display": "10"
       },
       {
        "key": "ArmorBonus",
-       "label": "방어력 보너스",
+       "label": "방어구 보너스",
        "value": 20,
        "unit": "count",
        "display": "20"
@@ -13801,9 +13862,12 @@
    },
    "grade": "S",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000; 구 0.030→0.020→0.025→0.0125; 구 0.030000; 구 5.0→3.0→4.0→2.0",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.007500; 밸런스 패치(2026-07-07), 구 0.0125; 구 0.030000; 구 5.0→3.0→4.0→2.0",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/cryophilite.png"
   },
@@ -13862,8 +13926,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#CC8800\">무한 사냥:</font> <font color=\"#FFFFFF\">3</font>세트를 완성한 후 트로피는 <font color=\"#FFD700\">무한히</font> 중첩되며 <font color=\"#FFFFFF\">5</font>개의 슬롯에 저장됩니다. (중첩당: <font color=\"#87CEEB\">클롯</font> 웨이브당 +1 도쉬 / <font color=\"#87CEEB\">크롤러</font> 속도 +1% / <font color=\"#87CEEB\">고어패스트</font> 근접 공격력 +1% / <font color=\"#87CEEB\">스토커</font> 탄창 용량 +1% / <font color=\"#87CEEB\">블로트</font> 최대 체력 +1 / <font color=\"#87CEEB\">허스크</font> 받는 피해 -1% / <font color=\"#87CEEB\">사이렌</font> 탄약 +5% / <font color=\"#87CEEB\">EDAR</font> 헤드샷 피해 +10% / <font color=\"#87CEEB\">스크레이크</font> 방어력 +5 / <font color=\"#87CEEB\">FP</font> 모든 피해량 +10%)",
-     "text": "무한 사냥: 3세트를 완성한 후 트로피는 무한히 중첩되며 5개의 슬롯에 저장됩니다. (중첩당: 클롯 웨이브당 +1 도쉬 / 크롤러 속도 +1% / 고어패스트 근접 공격력 +1% / 스토커 탄창 용량 +1% / 블로트 최대 체력 +1 / 허스크 받는 피해 -1% / 사이렌 탄약 +5% / EDAR 헤드샷 피해 +10% / 스크레이크 방어력 +5 / FP 모든 피해량 +10%)",
+     "raw": "<font color=\"#CC8800\">무한 사냥:</font> <font color=\"#FFFFFF\">3</font>세트를 완성한 후 트로피는 <font color=\"#FFD700\">무한히</font> 중첩되며 <font color=\"#FFFFFF\">5</font>개의 슬롯에 저장됩니다. (중첩당: <font color=\"#87CEEB\">클롯</font> 웨이브당 +1 도쉬 / <font color=\"#87CEEB\">크롤러</font> 속도 +1% / <font color=\"#87CEEB\">고어패스트</font> 근접 공격력 +1% / <font color=\"#87CEEB\">스토커</font> 탄창 용량 +1% / <font color=\"#87CEEB\">블로트</font> 최대 체력 +1 / <font color=\"#87CEEB\">허스크</font> 받는 피해 -1% / <font color=\"#87CEEB\">사이렌</font> 탄약 +5% / <font color=\"#87CEEB\">EDAR</font> 헤드샷 피해 +10% / <font color=\"#87CEEB\">스크레이크</font> 방어구 +5 / <font color=\"#87CEEB\">FP</font> 모든 피해량 +10%)",
+     "text": "무한 사냥: 3세트를 완성한 후 트로피는 무한히 중첩되며 5개의 슬롯에 저장됩니다. (중첩당: 클롯 웨이브당 +1 도쉬 / 크롤러 속도 +1% / 고어패스트 근접 공격력 +1% / 스토커 탄창 용량 +1% / 블로트 최대 체력 +1 / 허스크 받는 피해 -1% / 사이렌 탄약 +5% / EDAR 헤드샷 피해 +10% / 스크레이크 방어구 +5 / FP 모든 피해량 +10%)",
      "isCapstone": false
     },
     {
@@ -13913,10 +13977,10 @@
     {
      "key": "CarrionHarvest",
      "name": "시체 수확",
-     "standardDesc": "사체 수확: 트로피를 획득할 때마다 체력을 10 회복합니다. 체력이 최대치일 경우 대신 방어력을 5 얻습니다.",
-     "deluxeDesc": "사체 수확: 트로피를 획득할 때마다 체력을 20 회복합니다. 체력이 최대치일 경우 대신 방어력을 10 얻습니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">사체 수확:</font> 트로피를 획득할 때마다 <font color=\"#FF6666\">체력을</font> <font color=\"#FFFFFF\">10</font> 회복합니다. 체력이 최대치일 경우 대신 <font color=\"#87CEEB\">방어력을 5</font> 얻습니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">사체 수확:</font> 트로피를 획득할 때마다 <font color=\"#FF6666\">체력을</font> <font color=\"#FFFFFF\">20</font> 회복합니다. 체력이 최대치일 경우 대신 <font color=\"#87CEEB\">방어력을 10</font> 얻습니다.",
+     "standardDesc": "사체 수확: 트로피를 획득할 때마다 체력을 10 회복합니다. 체력이 최대치일 경우 대신 방어구를 5 얻습니다.",
+     "deluxeDesc": "사체 수확: 트로피를 획득할 때마다 체력을 20 회복합니다. 체력이 최대치일 경우 대신 방어구를 10 얻습니다.",
+     "standardDescRaw": "<font color=\"#FFD700\">사체 수확:</font> 트로피를 획득할 때마다 <font color=\"#FF6666\">체력을</font> <font color=\"#FFFFFF\">10</font> 회복합니다. 체력이 최대치일 경우 대신 <font color=\"#87CEEB\">방어구를 5</font> 얻습니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">사체 수확:</font> 트로피를 획득할 때마다 <font color=\"#FF6666\">체력을</font> <font color=\"#FFFFFF\">20</font> 회복합니다. 체력이 최대치일 경우 대신 <font color=\"#87CEEB\">방어구를 10</font> 얻습니다.",
      "rawValues": [
       {
        "key": "HealHP",
@@ -13934,14 +13998,14 @@
       },
       {
        "key": "HealArmor",
-       "label": "치유 방어력",
+       "label": "치유 방어구",
        "value": 5,
        "unit": "count",
        "display": "5"
       },
       {
        "key": "HealArmor",
-       "label": "치유 방어력",
+       "label": "치유 방어구",
        "value": 10,
        "unit": "count",
        "display": "10"
@@ -14023,10 +14087,10 @@
     {
      "key": "MountedTrophies",
      "name": "장식 트로피",
-     "standardDesc": "장식된 트로피: 트로피 세트를 완성할 때마다 최대 체력이 +10, 최대 방어력이 +15 영구 증가합니다.",
-     "deluxeDesc": "장식된 트로피: 트로피 세트를 완성할 때마다 최대 체력이 +20, 최대 방어력이 +30 영구 증가합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">장식된 트로피:</font> 트로피 세트를 완성할 때마다 <font color=\"#FF6666\">최대 체력</font>이 <font color=\"#FFFFFF\">+10</font>, <font color=\"#87CEEB\">최대 방어력</font>이 <font color=\"#FFFFFF\">+15</font> 영구 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">장식된 트로피:</font> 트로피 세트를 완성할 때마다 <font color=\"#FF6666\">최대 체력</font>이 <font color=\"#FFFFFF\">+20</font>, <font color=\"#87CEEB\">최대 방어력</font>이 <font color=\"#FFFFFF\">+30</font> 영구 증가합니다.",
+     "standardDesc": "장식된 트로피: 트로피 세트를 완성할 때마다 최대 체력이 +10, 최대 방어구이 +15 영구 증가합니다.",
+     "deluxeDesc": "장식된 트로피: 트로피 세트를 완성할 때마다 최대 체력이 +20, 최대 방어구이 +30 영구 증가합니다.",
+     "standardDescRaw": "<font color=\"#FFD700\">장식된 트로피:</font> 트로피 세트를 완성할 때마다 <font color=\"#FF6666\">최대 체력</font>이 <font color=\"#FFFFFF\">+10</font>, <font color=\"#87CEEB\">최대 방어구</font>이 <font color=\"#FFFFFF\">+15</font> 영구 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">장식된 트로피:</font> 트로피 세트를 완성할 때마다 <font color=\"#FF6666\">최대 체력</font>이 <font color=\"#FFFFFF\">+20</font>, <font color=\"#87CEEB\">최대 방어구</font>이 <font color=\"#FFFFFF\">+30</font> 영구 증가합니다.",
      "rawValues": [
       {
        "key": "HPPerSet",
@@ -14044,14 +14108,14 @@
       },
       {
        "key": "ArmorPerSet",
-       "label": "세트 당 방어력",
+       "label": "세트 당 방어구",
        "value": 15,
        "unit": "count",
        "display": "15"
       },
       {
        "key": "ArmorPerSet",
-       "label": "세트 당 방어력",
+       "label": "세트 당 방어구",
        "value": 30,
        "unit": "count",
        "display": "30"
@@ -14236,8 +14300,8 @@
    "grade": "SS",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000",
-   "testWarning": "🚨 경고! 이 퍼크는 밸런스 문제가 확정된 상태이며, 근본적인 수정 전까지는 매우 강력하게 작동할 수 있습니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/predator.png"
   },
@@ -14263,25 +14327,25 @@
     {
      "key": "BulkDiscount",
      "label": "대량 할인",
-     "value": 0.008,
+     "value": -0.008,
      "unit": "percent",
-     "display": "+0.8%",
-     "lv10": 0.08,
-     "lv20": 0.16,
-     "lv10Display": "+8%",
-     "lv20Display": "+16%",
+     "display": "-0.8%",
+     "lv10": -0.08,
+     "lv20": -0.16,
+     "lv10Display": "-8%",
+     "lv20Display": "-16%",
      "scaling": true
     },
     {
      "key": "CostCutting",
      "label": "비용 절감",
-     "value": 0.01,
+     "value": -0.01,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "-1%",
+     "lv10": -0.1,
+     "lv20": -0.2,
+     "lv10Display": "-10%",
+     "lv20Display": "-20%",
      "scaling": true
     }
    ],
@@ -14738,8 +14802,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "구 0.200000 (복리 20%→10%, KOR 기술값 일치)",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/tycoon.png"
   },
@@ -14765,13 +14829,13 @@
     {
      "key": "ReloadPerLevel",
      "label": "레벨 당 재장전",
-     "value": 0.005,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+0.5%",
-     "lv10": 0.05,
-     "lv20": 0.1,
-     "lv10Display": "+5%",
-     "lv20Display": "+10%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     }
    ],
@@ -14942,8 +15006,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FFD700\">단조 조건:</font> <font color=\"#FFD700\">재장전 속도</font> <font color=\"#FFFFFF\">레벨업당 +0.5% · 만렙(Lv20) +10%</font>",
-     "text": "단조 조건: 재장전 속도 레벨업당 +0.5% · 만렙(Lv20) +10%",
+     "raw": "<font color=\"#FFD700\">단조 조건:</font> <font color=\"#FFD700\">재장전 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
+     "text": "단조 조건: 재장전 속도 레벨업당 +1% · 만렙(Lv20) +20%",
      "isCapstone": false
     },
     {
@@ -15267,10 +15331,10 @@
     {
      "key": "Reclamation",
      "name": "간척",
-     "standardDesc": "재련된 무기로 적을 처치하면 체력을 2 회복합니다. 체력이 가득 차 있을 때는 대신 방어력을 1 회복합니다.",
-     "deluxeDesc": "재련된 무기로 적을 처치하면 체력을 4 회복합니다. 체력이 가득 차 있을 때는 대신 방어력을 2 회복합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">재련된</font> 무기로 적을 처치하면 체력을 <font color=\"#FFFFFF\">2</font> 회복합니다. 체력이 가득 차 있을 때는 대신 방어력을 <font color=\"#FFFFFF\">1</font> 회복합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">재련된</font> 무기로 적을 처치하면 체력을 <font color=\"#FFFFFF\">4</font> 회복합니다. 체력이 가득 차 있을 때는 대신 방어력을 <font color=\"#FFFFFF\">2</font> 회복합니다.",
+     "standardDesc": "재련된 무기로 적을 처치하면 체력을 2 회복합니다. 체력이 가득 차 있을 때는 대신 방어구를 1 회복합니다.",
+     "deluxeDesc": "재련된 무기로 적을 처치하면 체력을 4 회복합니다. 체력이 가득 차 있을 때는 대신 방어구를 2 회복합니다.",
+     "standardDescRaw": "<font color=\"#FFD700\">재련된</font> 무기로 적을 처치하면 체력을 <font color=\"#FFFFFF\">2</font> 회복합니다. 체력이 가득 차 있을 때는 대신 방어구를 <font color=\"#FFFFFF\">1</font> 회복합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">재련된</font> 무기로 적을 처치하면 체력을 <font color=\"#FFFFFF\">4</font> 회복합니다. 체력이 가득 차 있을 때는 대신 방어구를 <font color=\"#FFFFFF\">2</font> 회복합니다.",
      "rawValues": [
       {
        "key": "HealAmount",
@@ -15288,14 +15352,14 @@
       },
       {
        "key": "ArmorAmount",
-       "label": "방어력 량",
+       "label": "방어구 량",
        "value": 1,
        "unit": "count",
        "display": "1"
       },
       {
        "key": "ArmorAmount",
-       "label": "방어력 량",
+       "label": "방어구 량",
        "value": 2,
        "unit": "count",
        "display": "2"
@@ -15411,9 +15475,12 @@
    },
    "grade": "B",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.010000; 구 0.010000; 구 0.005000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 밸런스 패치(2026-07-07), 구 0.005000; 구 0.010000; 구 0.005000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/artificer.png"
   },
@@ -15427,25 +15494,25 @@
     {
      "key": "RateOfFireBonus",
      "label": "연사 속도 보너스",
-     "value": 0.01,
+     "value": 0.015,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
      "scaling": true
     },
     {
      "key": "PenetrationBonus",
      "label": "관통력 보너스",
-     "value": 0.025,
+     "value": 0.05,
      "unit": "percent",
-     "display": "+2.5%",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "+25%",
-     "lv20Display": "+50%",
+     "display": "+5%",
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
      "scaling": true
     },
     {
@@ -15519,13 +15586,13 @@
    "endgame": "Lv20 분노 모드 캡스톤(75킬마다 발동, <font color=\"#15d7fa\">연사+100%/피해 3.3배</font> 폭발)까지 채우면 짧은 시간 동안 압도적인 화력 폭발을 낼 수 있는 버스트형 극딜러가 됩니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#FF6600\">하이드라의 분노:</font> <font color=\"#FF9933\">연사 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
-     "text": "하이드라의 분노: 연사 속도 레벨업당 +1% · 만렙(Lv20) +20%",
+     "raw": "<font color=\"#FF6600\">하이드라의 분노:</font> <font color=\"#FF9933\">연사 속도</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
+     "text": "하이드라의 분노: 연사 속도 레벨업당 +1.5% · 만렙(Lv20) +30%",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FF6600\">뱀의 일격:</font> <font color=\"#FF9933\">관통력</font> <font color=\"#FFFFFF\">레벨업당 +2.5% · 만렙(Lv20) +50%</font>",
-     "text": "뱀의 일격: 관통력 레벨업당 +2.5% · 만렙(Lv20) +50%",
+     "raw": "<font color=\"#FF6600\">뱀의 일격:</font> <font color=\"#FF9933\">관통력</font> <font color=\"#FFFFFF\">레벨업당 +5% · 만렙(Lv20) +100%</font>",
+     "text": "뱀의 일격: 관통력 레벨업당 +5% · 만렙(Lv20) +100%",
      "isCapstone": false
     },
     {
@@ -15965,9 +16032,12 @@
    },
    "grade": "S",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.050000; 구 0.020000; 구 1.200000(+20%→+10%, 배율의 보너스분만 축소)",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.025000; 구 0.020000; 구 1.200000(+20%→+10%, 배율의 보너스분만 축소)",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/hydra.png"
   },
@@ -16391,8 +16461,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 구 0.100→0.025→0.0125; 구 0.500000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/venomancer.png"
   },
@@ -16406,13 +16476,13 @@
     {
      "key": "HeadshotDamage",
      "label": "헤드샷 피해량",
-     "value": 0.01,
+     "value": 0.015,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
      "scaling": true
     },
     {
@@ -16430,13 +16500,13 @@
     {
      "key": "SpareAmmo",
      "label": "여분 탄약",
-     "value": 0.015,
+     "value": 0.05,
      "unit": "percent",
-     "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
+     "display": "+5%",
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
      "scaling": true
     }
    ],
@@ -16485,8 +16555,8 @@
    "endgame": "Lv20 고르곤의 독 캡스톤(적 처치 시 15m 내 독 확산)과 <font color=\"#15d7fa\">뱀 비늘 6개 달성 시 풀 고르곤 상태(독 피해+100%)</font>까지 채우면 광역 독 피해가 눈덩이처럼 불어나는 빌드가 완성됩니다.",
    "descriptions": [
     {
-     "raw": "<font color=\"#8B008B\">독성 정밀도:</font> <font color=\"#9966FF\">헤드샷 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
-     "text": "독성 정밀도: 헤드샷 피해량 레벨업당 +1% · 만렙(Lv20) +20%",
+     "raw": "<font color=\"#8B008B\">독성 정밀도:</font> <font color=\"#9966FF\">헤드샷 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
+     "text": "독성 정밀도: 헤드샷 피해량 레벨업당 +1.5% · 만렙(Lv20) +30%",
      "isCapstone": false
     },
     {
@@ -16495,8 +16565,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B008B\">독 비축량:</font> <font color=\"#9966FF\">여분 탄약</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
-     "text": "독 비축량: 여분 탄약 레벨업당 +1.5% · 만렙(Lv20) +30%",
+     "raw": "<font color=\"#8B008B\">독 비축량:</font> <font color=\"#9966FF\">여분 탄약</font> <font color=\"#FFFFFF\">레벨업당 +5% · 만렙(Lv20) +100%</font>",
+     "text": "독 비축량: 여분 탄약 레벨업당 +5% · 만렙(Lv20) +100%",
      "isCapstone": false
     },
     {
@@ -17151,9 +17221,12 @@
    },
    "grade": "A",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030→0.020→0.010; 구 0.020000; 구 0.030000",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000; 밸런스 패치(2026-07-07), 구 0.015000",
+   "testWarning": null,
+   "recentChangeTag": {
+    "date": "2026-07-07",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/medusa.png"
   },
@@ -17178,7 +17251,7 @@
     },
     {
      "key": "Chance",
-     "label": "발동 확률",
+     "label": "헤드샷 처치시 5도쉬 획득 확률",
      "value": 0.02,
      "unit": "percent",
      "display": "+2%",
@@ -17222,10 +17295,10 @@
     {
      "key": "ArmoredUp",
      "name": "무장",
-     "standardDesc": "ZED를 처치할 때마다 +1% 확률로 체력이 회복되고 방어력이 50 충전됩니다.",
-     "deluxeDesc": "ZED를 처치할 때마다 +2% 확률로 체력이 회복되고 방어력이 100 충전됩니다.",
-     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+1% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어력이 <font color=\"#be4d25\">50</font> 충전됩니다.",
-     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+2% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어력이 <font color=\"#be4d25\">100</font> 충전됩니다.",
+     "standardDesc": "ZED를 처치할 때마다 +1% 확률로 체력이 회복되고 방어구가 50 충전됩니다.",
+     "deluxeDesc": "ZED를 처치할 때마다 +2% 확률로 체력이 회복되고 방어구가 100 충전됩니다.",
+     "standardDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+1% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어구가 <font color=\"#be4d25\">50</font> 충전됩니다.",
+     "deluxeDescRaw": "ZED를 처치할 때마다 <font color=\"#ff3399\">+2% 확률</font>로 <font color=\"#66cc00\">체력</font>이 회복되고 방어구가 <font color=\"#be4d25\">100</font> 충전됩니다.",
      "rawValues": [
       {
        "key": "Chance",
@@ -17243,14 +17316,14 @@
       },
       {
        "key": "ArmorOnKill",
-       "label": "방어력 처치",
+       "label": "방어구 처치",
        "value": 50,
        "unit": "count",
        "display": "50"
       },
       {
        "key": "ArmorOnKill",
-       "label": "방어력 처치",
+       "label": "방어구 처치",
        "value": 100,
        "unit": "count",
        "display": "100"
@@ -17661,8 +17734,8 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "웨이브 보상 버프, 구 14 (만렙 +280→+400)",
-   "testWarning": "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/gambler.png"
   },
@@ -18079,8 +18152,8 @@
    "grade": "S",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다.",
-   "balanceComplete": false,
+   "testWarning": null,
+   "recentChangeTag": null,
    "extraSections": [
     {
      "title": "변신술사 시스템 규칙",

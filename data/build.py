@@ -542,25 +542,9 @@ SKILL_COST_STATS = {
 }
 
 
-def build_test_warning(verdict, is_patched):
-    """A short 'currently being tested/monitored' banner for perks whose
-    balance status is notably in flux, phrased as a heads-up to players.
-    Kept to a single lead sentence -- no raw ini patch-note dump."""
-    tag = (verdict or {}).get("tag", "")
-
-    if "확정 OP" in tag:
-        return "🚨 경고! 이 퍼크는 밸런스 문제가 확정된 상태이며, 근본적인 수정 전까지는 매우 강력하게 작동할 수 있습니다."
-    if "OP 소지" in tag:
-        return "⚠️ 주의! 이 퍼크는 과도하게 강해질 우려가 있어 성능을 지속적으로 모니터링 중입니다."
-    if "고위험 설계" in tag:
-        return "⚠️ 참고: 이 퍼크는 의도적인 고위험-고보상 설계이며, 극단적인 빌드 조합의 영향을 계속 확인 중입니다."
-    if "너프 완료" in tag:
-        return "⚠️ 주의! 이 퍼크는 최근 과도한 강함(OP) 우려로 인해 일부 수치가 하향 조정되어 테스트 중입니다."
-    if "상향 완료" in tag:
-        return "⚠️ 주의! 이 퍼크는 최근 약함(Trash) 우려로 인해 일부 수치가 상향 조정되어 테스트 중입니다."
-    if is_patched:
-        return "⚠️ 주의! 이 퍼크는 최근 밸런스 조정이 적용되어 테스트 중입니다."
-    return None
+# build_test_warning() (generic "이 퍼크는 최근 ... 테스트 중입니다" banner) was
+# removed 2026-07-07 -- superseded by the per-patch buff/nerf tag system
+# (see compute_recent_change_tag()).
 
 
 PLACEHOLDER_RE = re.compile(r"([+-]?)%x(%%?)?")
@@ -615,6 +599,24 @@ def determine_stat_signs(raw_descriptions, stat_count):
             signs[idx] = -1 if m.group(1) == "-" else 1
             idx += 1
     return signs
+
+
+# Perks whose descriptions were converted to static text (no more literal
+# '%x%' for determine_stat_signs() to read a sign off of), but which DO have
+# genuine negative/penalty stats -- keyed by ini field name -> sign. Verified
+# against each perk's own static KOR sentence (e.g. Voodoo's "-5%·만렙-50%"
+# for Health/Armor, Tycoon's "-0.8%·만렙-16%" for BulkDiscount).
+IMPLICIT_STAT_SIGNS = {
+    "Voodoo": {"Health": -1, "Armor": -1},
+    "Tycoon": {"BulkDiscount": -1, "CostCutting": -1},
+}
+
+
+def apply_implicit_stat_signs(perk_key, filtered_kv, signs):
+    overrides = IMPLICIT_STAT_SIGNS.get(perk_key)
+    if not overrides:
+        return signs
+    return [overrides.get(k, sign) for (k, _v), sign in zip(filtered_kv, signs)]
 
 
 def _fmt_signed_pct(x):
@@ -789,10 +791,9 @@ IMPLICIT_SCALING_KEY_ORDER = {
     "Gambler": ["Dosh", "Chance"],
 }
 
-# Advanced perks manually verified end-to-end against the current ini (every
-# number, every skill) -- shown with a "밸런싱 완료" badge instead of the
-# generic in-flux test warning. Hand-maintained list, not inferred.
-BALANCE_COMPLETE_PERKS = {"TimeTraveler", "Bulwark", "Riot", "Voodoo", "Headhunter", "Scavenger", "Taskmaster"}
+# BALANCE_COMPLETE_PERKS ("밸런싱 완료" badge) removed 2026-07-07 -- superseded
+# by the per-patch buff/nerf tag system (RECENT_CHANGES, see below).
+RECENT_CHANGES_PATH = os.path.join(ROOT, "data", "recent_changes.json")
 
 
 def normalize_terminology(value):
@@ -984,6 +985,10 @@ def build():
         manual_perk_descs = json.load(f)
     with open(MANUAL_PERK_EXTRAS, encoding="utf-8") as f:
         manual_perk_extras = json.load(f)
+    recent_changes = {}
+    if os.path.exists(RECENT_CHANGES_PATH):
+        with open(RECENT_CHANGES_PATH, encoding="utf-8") as f:
+            recent_changes = json.load(f)
 
     # ---- advanced perks (커퍼 / DK) ----
     adv_keys = sorted({k[len("DKUpgrade_Perk_"):] for k in kor_sections if k.startswith("DKUpgrade_Perk_")})
@@ -995,9 +1000,16 @@ def build():
         raw_descs = kor.get("descriptions", [])
         filtered_kv = [(k, v) for k, v in ini_kv if k != "MODEVERSION"]
         signs = determine_stat_signs(raw_descs, len(filtered_kv))
+        signs = apply_implicit_stat_signs(key, filtered_kv, signs)
         signed_kv = [(k, to_num(v) * sign if isinstance(to_num(v), (int, float)) else to_num(v))
                      for (k, v), sign in zip(filtered_kv, signs)]
         passive_stats = build_stat_entries(signed_kv, with_levels=True)
+        if key == "Gambler":
+            # Generic "Chance" label reads as meaningless ("발동 확률") next
+            # to Gambler's other passive -- spell out what it actually is.
+            for stat in passive_stats:
+                if stat["key"] == "Chance":
+                    stat["label"] = "헤드샷 처치시 5도쉬 획득 확률"
         passive_stats = reorder_placeholder_targets(passive_stats, raw_descs)
         if key in IMPLICIT_SCALING_KEY_ORDER:
             order = IMPLICIT_SCALING_KEY_ORDER[key]
@@ -1119,8 +1131,8 @@ def build():
             "grade": (verdict or {}).get("grade"),
             "isPatched": is_patched,
             "patchNote": perk_patch_note or None,
-            "testWarning": build_test_warning(verdict, is_patched),
-            "balanceComplete": key in BALANCE_COMPLETE_PERKS,
+            "testWarning": None,
+            "recentChangeTag": recent_changes.get(key),
             "extraSections": perk_extras.get("extraSections", []),
             "icon": f"icons/{key.lower()}.png",
         })
@@ -1132,6 +1144,14 @@ def build():
     for bkey, bdata in manual_base.items():
         wrapper_kv = main_sections.get(f"DKWrapper_Perk_{bkey}", [])
         passive_stats = build_stat_entries([(k, v) for k, v in wrapper_kv if k != "MODEVERSION"], with_levels=True)
+        if bkey == "Demolitionist":
+            # Demolitionist's plain "피해량" field is a flat perk-weapon
+            # damage bonus that applies to both direct hits and splash --
+            # unlike Cfg_GrenadeDamage/Cfg_LZDamage (grenade-type / large-zed
+            # conditional bonuses), so it reads as ambiguous next to them.
+            for stat in passive_stats:
+                if stat["key"] == "Cfg_Damage":
+                    stat["label"] = "피해량(직격/스플래시)"
         unlocks = [
             {"level": p["unlockLevel"], "perk": p["key"], "name": p["name"]}
             for p in advanced_perks if p["parentPerk"] == bkey
@@ -1152,7 +1172,8 @@ def build():
             "unlocks": unlocks,
             "isPatched": base_is_patched,
             "patchNote": base_patch_note or None,
-            "testWarning": build_test_warning(None, base_is_patched),
+            "testWarning": None,
+            "recentChangeTag": recent_changes.get(bkey),
             "icon": f"icons/{bkey.lower()}.png",
         })
 
