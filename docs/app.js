@@ -318,7 +318,6 @@ function renderBaseDetail(key) {
 
     <div class="section-title">설명</div>
     <div class="desc-line">${p.role || ""}</div>
-    <div class="desc-line capstone">${p.endgame || ""}</div>
 
     <div class="section-title">세부 효과 (강점 / 약점)</div>
     ${strengths || '<div class="empty-state" style="padding:10px">기록된 강점 없음</div>'}
@@ -368,7 +367,7 @@ function renderAdvDetail(key) {
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
-        <div class="subtitle">심화 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
+        <div class="subtitle">전직 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
       </div>
       ${recentChangeBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
@@ -376,7 +375,6 @@ function renderAdvDetail(key) {
 
     <div class="section-title">설명</div>
     <div class="desc-line">${p.role || ""}</div>
-    <div class="desc-line capstone">${p.endgame || ""}</div>
 
     <div class="section-title">세부 효과 (게임 내 텍스트)</div>
     ${descNote}
@@ -512,7 +510,7 @@ function buildSearchIndex() {
       navKey: adv.key,
       ownKey: adv.key,
       name: adv.name,
-      sub: `심화 퍼크 · ${parent ? parent.name : ""}`,
+      sub: `전직 퍼크 · ${parent ? parent.name : ""}`,
       search: buildSearchCorpus(adv, parent || { name: "" }),
     });
     for (const s of adv.skills) {

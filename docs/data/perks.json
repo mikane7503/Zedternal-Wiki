@@ -5,8 +5,8 @@
    "name": "버서커",
    "grade": "A",
    "summary": "근접 탱커/딜러로 강점이 뚜렷하고 전반적으로 균형 잡힘.",
-   "role": "근접 무기 피해량과 최대 체력을 동시에 크게 끌어올려주는 <font color=\"#FFD700\">근접 탱커/딜러</font> 퍼크입니다. 적진 한복판에 뛰어들어도 버틸 수 있는 맷집까지 함께 부여합니다.",
-   "endgame": "Lv20에 모든 스킬을 디럭스로 채우면 근접 피해 +50%, <font color=\"#15d7fa\">최대 체력</font> +60%까지 확보되어 어지간해서는 죽지 않고 버티며 근접 화력만으로 웨이브를 정리할 수 있는 수준에 도달합니다.",
+   "role": "적진 한복판까지 파고들어도 버티는 맷집과 강력한 근접 화력을 겸비한 근접 탱커/딜러 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_Damage",
@@ -92,8 +92,8 @@
    "name": "코만도",
    "grade": "S",
    "summary": "강함, 균형 잡힘. 재장전+피해 조합이 베이스 퍼크 중 가장 안정적이며 큰 결함이 없는 퍼크.",
-   "role": "모든 총기의 <font color=\"#FFD700\">피해량과 재장전 속도</font>를 동시에 크게 끌어올려주는 만능 화력 지원 퍼크입니다.",
-   "endgame": "Lv20 풀스킬 기준 피해량 +40%, <font color=\"#15d7fa\">재장전 속도</font> +30%에 스킬 보너스가 더해져, 어떤 무기를 들어도 안정적인 지속 화력을 뽑아낼 수 있는 만능형 딜러로 완성됩니다.",
+   "role": "모든 총기의 피해량과 재장전 속도를 동시에 끌어올리는 만능 화력 지원 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_Damage",
@@ -173,8 +173,8 @@
    "name": "데몰리션리스트",
    "grade": "B",
    "summary": "폭발 화력이 베이스 퍼크 중 최상위. 수류탄 피해 스택이 최악 조합 시 기본 대비 ×4.5배까지 중첩되어 밸런스 조정이 필요할 만큼 강력함.",
-   "role": "수류탄과 폭발물의 피해량을 크게 증폭시켜, 대형 제드까지 빠르게 정리하게 해주는 <font color=\"#FFD700\">광역 딜러</font> 퍼크입니다.",
-   "endgame": "Lv10에 수류탄 관련 스킬(Bombardier, DestroyerOfWorlds, QuickFuse)을 전부 채우면 수류탄 피해량이 기본 대비 최대 <font color=\"#15d7fa\">+200%(약 ×3.0배)</font>까지 중첩됩니다.",
+   "role": "수류탄과 폭발물의 위력을 극대화해 대형 제드까지 빠르게 정리하는 광역 딜러 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_LZDamage",
@@ -262,8 +262,8 @@
    "name": "필드메딕",
    "grade": "SS",
    "summary": "딜량 기준으로는 낮지만, 이 퍼크의 본질은 '팀 생존 연장'이며 그 역할에서는 베이스 퍼크 중 최상위. 힐 출력·팀 유지력 모두 최고 수준이라 역할 기준 SS.",
-   "role": "아군에게 주는 치유량과 팀 전체의 생존 시간을 극적으로 늘려주는 순수 <font color=\"#FFD700\">지원형</font> 퍼크입니다.",
-   "endgame": "Lv20에 Safeguard 등 치유 스킬을 모두 채우면 <font color=\"#15d7fa\">치유 속도</font> +100%, 치유량 +50%까지 강화되어 팀 전체가 사실상 죽지 않는 수준으로 생존력이 극대화됩니다. 딜량 지표로는 낮아 보이지만 웨이브 클리어 능력 자체를 끌어올리는 역할이므로, 역할 기준으로는 베이스 퍼크 중 최상위(SS) 퍼크입니다.",
+   "role": "치유량과 팀 전체의 생존 시간을 극적으로 늘려주는 순수 지원형 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_HealRate",
@@ -324,13 +324,13 @@
     },
     {
      "level": 10,
-     "perk": "Hivemind",
-     "name": "하이브마인드"
+     "perk": "Parasite",
+     "name": "기생충"
     },
     {
      "level": 15,
-     "perk": "Parasite",
-     "name": "기생충"
+     "perk": "Hivemind",
+     "name": "하이브마인드"
     },
     {
      "level": 20,
@@ -352,8 +352,8 @@
    "name": "파이어버그",
    "grade": "C",
    "summary": "화염/DoT 피해가 강력한 편이며 현재는 안정화된 상태.",
-   "role": "화염과 지속피해(DoT)를 크게 증폭시켜, 좀비 무리를 태워버리게 해주는 <font color=\"#FFD700\">광역 소각 딜러</font> 퍼크입니다.",
-   "endgame": "Lv20에 Combustion, Barbecue, HeatWaves 스킬을 모두 채우면 <font color=\"#15d7fa\">화염/DoT 피해량</font>이 크게 늘어난 강력한 소각 딜러가 완성됩니다.",
+   "role": "화염과 지속피해로 좀비 무리를 통째로 태워버리는 광역 소각 딜러 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_Damage",
@@ -422,8 +422,8 @@
    "name": "건슬링거",
    "grade": "S",
    "summary": "패시브가 약하지만 스킬 투자로 화력을 보완하는 타입. 기동성/버스트는 우수하나 기본기가 아쉬움.",
-   "role": "권총의 연사력과 이동속도·재장전 속도를 동시에 크게 끌어올려주는 <font color=\"#FFD700\">기동성 중심 딜러</font> 퍼크입니다.",
-   "endgame": "Lv20에 FirstBlood, ShootAndRun 등을 채우면 연속 킬 누적 최대 5배 피해와 킬 후 <font color=\"#15d7fa\">이동속도+재장전 속도</font> 버프로 뛰어난 기동성과 버스트 딜을 확보하지만, 패시브 피해량 자체는 베이스 퍼크 중 최하위권이라 스킬 투자 없이는 화력이 아쉽습니다.",
+   "role": "빠른 이동속도와 재장전으로 전장을 누비는 기동성 중심 딜러 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_MoveSpeed",
@@ -517,8 +517,8 @@
    "name": "샤프슈터",
    "grade": "S",
    "summary": "헤드샷 누적 화력이 강력하고 포지셔닝 선택지가 다양함. RankThemUp은 헤드샷 5연속 누적형(상한 있음)으로 확인됨.",
-   "role": "헤드샷 피해량을 여러 겹으로 증폭시켜, 원거리에서 한 방에 강적을 처리하게 해주는 <font color=\"#FFD700\">정밀 사격</font> 퍼크입니다.",
-   "endgame": "Lv20에 Assassin, DeadEye, Sniper, Velocity를 전부 채우면 <font color=\"#15d7fa\">헤드샷 피해량</font>이 여러 겹으로 중첩되어, 원거리에서 거의 모든 일반 제드를 헤드샷 한 방에 처치할 수 있는 수준에 도달합니다. 여기에 RankThemUp(헤드샷 5연속 유지 시 헤드샷마다 +375%)까지 얹으면 단발 화력은 전 퍼크 최상위입니다.",
+   "role": "헤드샷 피해를 여러 겹으로 증폭시켜 원거리에서 강적을 한 방에 처리하는 정밀 사격 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_DamageHead",
@@ -612,8 +612,8 @@
    "name": "서포트",
    "grade": "B",
    "summary": "강함, 균형 잡힘. 관통력 특화 퍼크로 군중 제어에서 베이스 퍼크 중 최상위이며 결점이 거의 없음.",
-   "role": "샷건의 관통력을 극한까지 끌어올려, 늘어선 좀비 무리 전체를 한 발로 꿰뚫게 해주는 <font color=\"#FFD700\">군중 제어</font> 퍼크입니다.",
-   "endgame": "Lv20에 Penetrator, TightChoke, Barrage를 채우면 <font color=\"#15d7fa\">관통력</font>이 패시브 대비 최대 ×5.0까지 증가해, 샷건 한 발로 일렬로 늘어선 좀비 무리 전체를 관통해버리는 최상위 군중 제어 능력을 갖추게 됩니다.",
+   "role": "샷건의 관통력을 극한까지 끌어올려 늘어선 적 무리를 한 발로 꿰뚫는 군중 제어 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_StoppingPower",
@@ -698,8 +698,8 @@
    "name": "SWAT",
    "grade": "A",
    "summary": "아머와 총기 피해 저항을 크게 늘려주는 생존 특화 퍼크.",
-   "role": "아머 최대치와 총기 피해 저항을 크게 늘려, 최전선에서도 오래 버틸 수 있는 생존력을 보장해주는 <font color=\"#FFD700\">최전방 방어</font> 퍼크입니다.",
-   "endgame": "Lv10에 HeavyArmor, AssaultArmor, RiotShield를 전부 채우면 <font color=\"#15d7fa\">아머</font>가 기본 대비 2배 이상 늘어나고 총기 피해도 상당히 경감되어, 최전선에서 오래 버틸 수 있는 수준에 도달합니다.",
+   "role": "아머와 총기 피해 저항을 크게 늘려 최전선에서도 오래 버티는 방어 특화 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_Armor",
@@ -783,8 +783,8 @@
    "name": "서바이벌리스트",
    "grade": "A",
    "summary": "탄약/유틸리티 특화. 공격력은 낮지만 의도된 디자인으로 보이며, 팀 지원 역할로는 준수함.",
-   "role": "탄약 공급력과 사이드암 화력을 크게 늘려주는 <font color=\"#FFD700\">만능 유틸리티</font> 퍼크입니다.",
-   "endgame": "Lv20에 Fallback, TacticalArmor 등을 채우면 <font color=\"#15d7fa\">여분 탄약</font> +200%로 팀 전체의 탄약 공급원 역할을 톡톡히 하며, 사이드암 특화 빌드로는 상당한 버스트 딜도 낼 수 있습니다. 다만 순수 화력은 의도적으로 낮게 설계되어 있습니다.",
+   "role": "탄약 공급력과 사이드암 화력을 겸비한 만능 유틸리티 전직입니다.",
+   "endgame": null,
    "passiveStats": [
     {
      "key": "Cfg_SpareAmmo",
@@ -909,8 +909,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "<font color=\"#FFD700\">Berserker/Firebug</font> 무기의 피해량, 체력, 방어구를 한꺼번에 끌어올려주는 하이브리드 방어 퍼크입니다.",
-   "endgame": "Lv20 만렙 기준 피해/체력/방어구가 모두 <font color=\"#15d7fa\">+20%</font>까지 오릅니다 (게임 내 표기상 최대 30%까지 클램프되지만, 현재 레벨당 수치로는 Lv20에서 20%까지만 도달). 근접·화염 무기 사용 시 안정적인 탱커형 딜러로 완성됩니다.",
+   "role": "Berserker·Firebug 무기의 피해량, 체력, 방어구를 동시에 끌어올리는 탱커형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#476d5c\">Berserker</font> 및 <font color=\"#476d5c\">Firebug</font> 무기의 <font color=\"#15d7fa\">피해량</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다 (최대 <font color=\"#FFFFFF\">30%</font>).",
@@ -1430,8 +1430,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "적을 연속으로 처치할 때마다 스택이 쌓여 근접 화력이 스스로 눈덩이처럼 불어나게 만들어주는 <font color=\"#FFD700\">폭동 진압형</font> 퍼크입니다.",
-   "endgame": "레벨당 <font color=\"#15d7fa\">근접 피해+공격 속도</font>가 누적되고, 스킬로 스택형 보너스(AdrenalineRush, ChainFury 등)를 쌓으면 웨이브 후반으로 갈수록 근접 화력이 눈덩이처럼 강해지는 빌드가 완성됩니다.",
+   "role": "근접 처치가 누적될수록 피해량·공격 속도가 눈덩이처럼 강해지는 폭동 진압 특화 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FF4500\">브롤러즈 엣지:</font> 레벨당 <font color=\"#FFB347\">근접 공격력</font> <font color=\"#FFFFFF\">+1.25%</font>, <font color=\"#FFB347\">피해 저항</font> <font color=\"#FFFFFF\">+0.5%</font>, <font color=\"#FFB347\">공격 속도</font> <font color=\"#FFFFFF\">+0.75%</font>",
@@ -2087,8 +2087,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "체력과 방어구를 스스로 깎아내는 대신, 그 대가로 피해량을 크게 폭증시켜주는 <font color=\"#FFD700\">하이리스크-하이리턴</font> 퍼크입니다.",
-   "endgame": "패시브만으로 피해 +5%(레벨당)·만렙 <font color=\"#15d7fa\">+100%</font>가 붙는 대신 체력/방어구가 -5%(레벨당)·만렙 <font color=\"#ff6666\">-100%(엔진 클램프로 실제 하한은 있음)</font>까지 깎이며, 스킬 6개를 전부 '체력 소모형'으로 채우면 체력이 극단적으로 낮아지는 대신(최소 1은 보장) 압도적인 딜을 뽑아내는 올인 빌드가 완성됩니다.",
+   "role": "체력·방어구를 스스로 깎는 대신 피해량을 대폭 폭증시키는 하이리스크-하이리턴 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#962ab9\">저주받은 그릇:</font> <font color=\"#cb1b43\">최대 체력</font> <font color=\"#cb1b43\">레벨업당 -5% · 만렙(Lv20) -50%</font> (최대 <font color=\"#FFFFFF\">50%</font> 감소)",
@@ -2643,8 +2643,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "그 정체를 아는 자가 거의 없는 <font color=\"#FFD700\">미지의 최종 심화 퍼크</font>입니다. 어둠 속에서 무언가가 당신을 지켜보고 있습니다.",
-   "endgame": "베일에 싸인 힘이 잠들어 있습니다. 그 진정한 능력을 마주하려면, 두려움을 이기고 직접 웨이브를 헤쳐나가는 수밖에 없습니다.",
+   "role": "그 진정한 힘을 아는 자가 없는 베일에 싸인 최종 전직입니다. 어둠 속에서 무언가가 당신을 지켜보고 있습니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#400040\">...</font>",
@@ -2727,8 +2727,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "특정 좀비 타입을 상대할 때 피해량을 큰 폭으로 몰아주는 <font color=\"#FFD700\">잠입 요원</font> 컨셉 퍼크입니다.",
-   "endgame": "10개 스킬이 전부 동일 패턴(좀비 타입별 <font color=\"#15d7fa\">+30%/+60%</font> 피해)이라, 상대하는 적 구성에 맞춰 스킬을 선택하면 특화 대상에게는 최상급 화력을 낼 수 있습니다.",
+   "role": "좀비 타입별로 피해를 집중 증폭시키는 잠입 요원 컨셉의 특화 딜러 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#476d5c\">Commando</font> 및 <font color=\"#476d5c\">Sharpshooter</font> 무기의 <font color=\"#15d7fa\">피해량</font>이 <font color=\"#77d914\">레벨업당 +1.5% · 만렙(Lv20) +30%</font> 증가합니다.",
@@ -3177,8 +3177,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "소총의 피해·헤드샷·재장전·반동·전환속도·탄약까지 6가지 능력치를 한 번에 끌어올려주는 <font color=\"#FFD700\">만능형 화력 강화</font> 퍼크입니다.",
-   "endgame": "Lv20 기준 소총 피해/헤드샷/재장전/반동/전환속도/탄약 6개 속성이 전부 <font color=\"#15d7fa\">+20%</font> 상승하고, ThermalDrill 등 스킬로 관통·화력을 추가로 쌓으면 어떤 소총을 들어도 만능으로 강력한 딜러가 완성됩니다.",
+   "role": "소총의 피해·헤드샷·재장전·반동·전환·탄약 6속성을 한 번에 강화하는 만능 화력 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#15d7fa\">소총 피해량</font>이 <font color=\"#77d914\">레벨업당 +1.5% · 만렙(Lv20) +30%</font> 증가합니다.",
@@ -3812,8 +3812,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "돌격/템포/모멘텀/요새 4가지 위상을 자동으로 순환시키며 상황에 맞는 강력한 보너스를 번갈아 부여하는 <font color=\"#FFD700\">리듬형</font> 퍼크입니다.",
-   "endgame": "각 위상의 <font color=\"#15d7fa\">동기화 조건</font>(헤드샷/연속처치/이동중처치/근접처치)을 계속 충족시키면 상황에 맞는 보너스를 끊임없이 활용하는 다재다능한 빌드가 완성됩니다.",
+   "role": "4가지 위상을 자동 순환하며 상황에 맞는 강력한 보너스를 끊임없이 부여하는 리듬형 서포트 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "위상은 <font color=\"#ff4444\">ASSAULT</font>, <font color=\"#44ddff\">TEMPO</font>, <font color=\"#44ff44\">MOMENTUM</font>, <font color=\"#ffaa22\">BASTION</font> 순으로 <font color=\"#FFFFFF\">20초마다</font> 자동 순환됩니다. 각 위상마다 고유한 보너스가 부여됩니다.",
@@ -3983,8 +3983,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "<font color=\"#FFD700\">ZED타임</font> 중 이동속도와 피해량을 대폭 증폭시켜주고, 무제한으로 ZED타임을 늘리는 능력까지 부여하는 최종 코만도 심화 퍼크입니다.",
-   "endgame": "Lv20 이동속도+30%, <font color=\"#15d7fa\">ZED타임 피해+25%</font>, 무제한 ZED타임 연장 캡스톤까지 갖추면 ZED타임 한 번으로 웨이브 전체를 정리할 수 있는 시간 조작형 극딜러가 완성됩니다.",
+   "role": "ZED타임 중 이동속도·피해량을 대폭 증폭시키고, 헤드샷으로 ZED타임을 연장하는 시간 지배형 최종 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#9632ff\">시간 가속도:</font> <font color=\"#d8b0ff\">ZED 타임 중 이동 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -4437,8 +4437,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "수류탄 피해량을 여러 스킬로 겹겹이 증폭시켜주는 <font color=\"#FFD700\">수류탄 특화</font> 폭발 스페셜리스트입니다.",
-   "endgame": "Elmo, MadBomber, SlowCooker, ArmedAndDangerous 스킬을 전부 채우면 <font color=\"#15d7fa\">수류탄 피해</font>가 크게 중첩되는 폭발 특화 빌드가 완성됩니다.",
+   "role": "수류탄 피해량을 스킬로 겹겹이 증폭시키는 폭발 스페셜리스트 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "모든 <font color=\"#15d7fa\">수류탄 피해량</font>이 <font color=\"#77d914\">레벨업당 +20% · 만렙(Lv20) +400%</font> 증가합니다.",
@@ -4817,8 +4817,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "화염과 폭발, 두 속성의 피해량을 동시에 크게 끌어올려주는 <font color=\"#FFD700\">하이브리드 소각</font> 퍼크입니다.",
-   "endgame": "Lv10 제련 숙련도 캡스톤까지 채우면 화염과 폭발 두 속성을 동시에 강화하는 만능 소각형 빌드가 완성됩니다. 패시브 화염/폭발 피해는 레벨당 <font color=\"#15d7fa\">+2%</font>(Lv20 +40%)씩 꾸준히 쌓입니다.",
+   "role": "화염과 폭발, 두 속성의 피해를 동시에 끌어올리는 하이브리드 소각 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FF4500\">용융 숙련도:</font> <font color=\"#FF8C00\">화염 및 폭발 피해량</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
@@ -5392,8 +5392,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "무기별 조건을 채울 때마다 '공허' 변형을 잠금 해제해, 체력이 낮은 적을 즉사에 가깝게 산산조각내주는 <font color=\"#FFD700\">컬렉션형</font> 퍼크입니다.",
-   "endgame": "레벨당 피해/재장전이 성장하고(Lv20 기준 각 +15%), 다양한 조건(헤드샷/관통/연속처치 등)을 채우면 체력이 낮은 대상에게 <font color=\"#15d7fa\">즉사에 가까운 산산조각 피해</font>를 주는 마무리 특화 빌드가 완성됩니다.",
+   "role": "무기별 조건을 채워 공허 변형을 잠금 해제하고, 체력이 낮은 적을 즉사에 가까운 피해로 마무리하는 컬렉션형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#6B0099\">공허 조건화:</font> <font color=\"#6B0099\">모든 무기 피해량</font> <font color=\"#FFFFFF\">레벨업당 +0.75% · 만렙(Lv20) +15%</font>",
@@ -5460,8 +5460,8 @@
    "hasIniConfig": false,
    "passiveStats": [],
    "fixedStats": [],
-   "role": "처치할 때마다 카운터를 쌓아, 임계치에 도달하면 일정 시간 동안 처치하는 적을 전부 <font color=\"#FFD700\">연쇄 폭발</font>시켜주는 강력한 트리거형 퍼크입니다.",
-   "endgame": "만렙(Lv20) 기준 폭발 임계값이 <font color=\"#FFFFFF\">30킬</font>까지 내려가고 폭발 하나하나가 <font color=\"#FF4444\">피해 1,000 · 반경 4m</font>에 달해, 활성 창이 열릴 때마다 웨이브 하나를 통째로 연쇄 폭발로 지워버릴 수 있습니다. 패시브(피해/여분탄약 각 레벨당 +2%, 만렙 +40%)도 꾸준히 쌓입니다.",
+   "role": "처치 카운터가 쌓이면 처치하는 적을 연쇄 폭발로 지워버리는 트리거형 광역 딜러 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FFD700\">폭발 숙련도:</font> <font color=\"#FFD700\">모든 무기 피해량</font> <font color=\"#FFFFFF\">레벨업당 +2% · 만렙(Lv20) +40%</font>",
@@ -5664,8 +5664,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "치유량을 크게 늘려주고, 확률적으로 대상을 완전히 회복시키는 기적까지 부여하는 <font color=\"#FFD700\">힐러 특화</font> 퍼크입니다.",
-   "endgame": "Lv20 기적의 회복 캡스톤(치유 시 <font color=\"#15d7fa\">5% 확률로 완전 회복</font>)까지 채우면 팀원을 사실상 죽지 않게 만드는 최상급 힐서포터가 완성됩니다.",
+   "role": "치유량을 크게 늘리고, 확률적으로 팀원을 완전 회복시키는 힐러 특화 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FFD700\">야전 의학:</font> <font color=\"#00FF7F\">모든 출처에서 얻는 치유량</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -6071,553 +6071,10 @@
    "icon": "icons/archangel.png"
   },
   {
-   "key": "Hivemind",
-   "name": "하이브마인드",
-   "parentPerk": "FieldMedic",
-   "unlockLevel": 10,
-   "hasIniConfig": true,
-   "passiveStats": [
-    {
-     "key": "TeamDamagePerLevel",
-     "label": "레벨 당 팀 피해량",
-     "value": 0.005,
-     "unit": "percent",
-     "display": "+0.5%",
-     "lv10": 0.05,
-     "lv20": 0.1,
-     "lv10Display": "+5%",
-     "lv20Display": "+10%",
-     "scaling": true
-    },
-    {
-     "key": "TeamReloadSpeedPerLevel",
-     "label": "레벨 당 팀 재장전 속도",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
-    {
-     "key": "TeamMovementPerSymbioteStage",
-     "label": "공생체 단계 당 팀 이동",
-     "value": 0.005,
-     "unit": "percent",
-     "display": "+0.5%",
-     "lv10": 0.005,
-     "lv20": 0.005,
-     "lv10Display": "+0.5%",
-     "lv20Display": "+0.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "NeuralNetworkDamagePerStage",
-     "label": "단계 당 신경 네트워크 피해량",
-     "value": 0.0125,
-     "unit": "percent",
-     "display": "+1.25%",
-     "lv10": 0.0125,
-     "lv20": 0.0125,
-     "lv10Display": "+1.25%",
-     "lv20Display": "+1.25%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "NeuralNetworkRadius",
-     "label": "신경 네트워크 범위",
-     "value": 500.0,
-     "unit": "distance",
-     "display": "500",
-     "lv10": 500.0,
-     "lv20": 500.0,
-     "lv10Display": "500",
-     "lv20Display": "500",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SwarmCollectiveKillsRequired",
-     "label": "무리 집단 처치 필요",
-     "value": 20,
-     "unit": "count",
-     "display": "20",
-     "lv10": 20,
-     "lv20": 20,
-     "lv10Display": "20",
-     "lv20Display": "20",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SwarmCollectiveDuration",
-     "label": "무리 집단 지속시간",
-     "value": 8.0,
-     "unit": "seconds",
-     "display": "8초",
-     "lv10": 8.0,
-     "lv20": 8.0,
-     "lv10Display": "8초",
-     "lv20Display": "8초",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SwarmDamageBonus",
-     "label": "무리 피해량 보너스",
-     "value": 0.1,
-     "unit": "percent",
-     "display": "+10%",
-     "lv10": 0.1,
-     "lv20": 0.1,
-     "lv10Display": "+10%",
-     "lv20Display": "+10%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SwarmReloadBonus",
-     "label": "무리 재장전 보너스",
-     "value": 0.125,
-     "unit": "percent",
-     "display": "+12.5%",
-     "lv10": 0.125,
-     "lv20": 0.125,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+12.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SwarmMovementBonus",
-     "label": "무리 이동 보너스",
-     "value": 0.075,
-     "unit": "percent",
-     "display": "+7.5%",
-     "lv10": 0.075,
-     "lv20": 0.075,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+7.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    }
-   ],
-   "role": "근처 팀원 전체의 피해량과 재장전 속도를 함께 끌어올려주는 <font color=\"#FFD700\">공생체 컨셉</font> 팀 버프 퍼크입니다.",
-   "endgame": "Lv20 군중 집단 캡스톤(20킬마다 발동하는 팀 버프)까지 채우면 파티 전체의 전투력을 순간적으로 크게 끌어올리는 팀 버퍼가 완성됩니다.",
-   "descriptions": [
-    {
-     "raw": "<font color=\"#32FF32\">시냅스 연결:</font> 10m 이내 팀원의 <font color=\"#7FFF7F\">피해량</font> <font color=\"#FFFFFF\">레벨업당 +0.5% · 만렙(Lv20) +10%</font>",
-     "text": "시냅스 연결: 10m 이내 팀원의 피해량 레벨업당 +0.5% · 만렙(Lv20) +10%",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#32FF32\">신경 효율:</font> <font color=\"#FFFFFF\">10m</font> 이내 팀원의 <font color=\"#7FFF7F\">재장전 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
-     "text": "신경 효율: 10m 이내 팀원의 재장전 속도 레벨업당 +1% · 만렙(Lv20) +20%",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#32FF32\">벌집 이동:</font> <font color=\"#7FFF7F\">공생체 진화 단계당</font> 팀원의 <font color=\"#7FFF7F\">이동 속도</font> <font color=\"#FFFFFF\">+0.5%</font> (10m 이내)",
-     "text": "벌집 이동: 공생체 진화 단계당 팀원의 이동 속도 +0.5% (10m 이내)",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">신경망</font> - <font color=\"#FFFFFF\">5m</font> 이내 팀원의 피해량이 <font color=\"#7FFF7F\">공생체 진화 단계</font>마다 <font color=\"#FFFFFF\">+1.25%</font>씩 증가합니다 (최대 <font color=\"#FFFFFF\">+12.5%</font>).",
-     "text": "레벨 10: 신경망 - 5m 이내 팀원의 피해량이 공생체 진화 단계마다 +1.25%씩 증가합니다 (최대 +12.5%).",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">군중 집단</font> - 20킬마다 8초 동안 팀 전체에 버프가 발동됩니다: 피해량 +10%, 재장전 속도 +12.5%, 이동 속도 +7.5%.",
-     "text": "레벨 20: 군중 집단 - 20킬마다 8초 동안 팀 전체에 버프가 발동됩니다: 피해량 +10%, 재장전 속도 +12.5%, 이동 속도 +7.5%.",
-     "isCapstone": true
-    }
-   ],
-   "skills": [
-    {
-     "key": "BioelectricDischarge",
-     "name": "생체 전기 방전",
-     "standardDesc": "탄창을 완전히 비우면 5m 반경에 전기 펄스를 방출하여 50의 피해를 입힙니다. 재사용 대기시간: 10초.",
-     "deluxeDesc": "탄창을 완전히 비우면 5m 반경에 강력한 전기 펄스를 방출하여 100의 피해를 입힙니다. 재사용 대기시간: 8초.",
-     "standardDescRaw": "탄창을 완전히 비우면 5m 반경에 전기 펄스를 방출하여 50의 피해를 입힙니다. 재사용 대기시간: 10초.",
-     "deluxeDescRaw": "탄창을 완전히 비우면 5m 반경에 강력한 전기 펄스를 방출하여 100의 피해를 입힙니다. 재사용 대기시간: 8초.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "EmpathicLink",
-     "name": "공감 링크",
-     "standardDesc": "고통이 하이브마인드의 신경망에 분산됩니다. 모든 출처로부터 받는 피해가 +5% 감소합니다.",
-     "deluxeDesc": "고통이 하이브마인드의 신경망에 분산됩니다. 모든 출처로부터 받는 피해가 +8.33% 감소합니다.",
-     "standardDescRaw": "고통이 <font color=\"#9370DB\">하이브마인드의 신경망</font>에 분산됩니다. 모든 출처로부터 받는 피해가 <font color=\"#00FF7F\">+5% 감소</font>합니다.",
-     "deluxeDescRaw": "고통이 <font color=\"#9370DB\">하이브마인드의 신경망</font>에 분산됩니다. 모든 출처로부터 받는 피해가 <font color=\"#00FF7F\">+8.33% 감소</font>합니다.",
-     "rawValues": [
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.083333,
-       "unit": "percent",
-       "display": "+8.33%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "저항 스킬 1/3 축소(2026-07-02, 필드명 누락분 추가발견), 구 0.150000; 구 0.250000",
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Hivesight",
-     "name": "하이브사이트",
-     "standardDesc": "적의 체력 바를 볼 수 있으며, 은신 탐지 범위가 +50% 증가합니다.",
-     "deluxeDesc": "적의 체력 바를 볼 수 있으며, 은신 탐지 범위가 +200% 증가하여 훨씬 더 멀리서 은신한 ZED를 감지할 수 있습니다.",
-     "standardDescRaw": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있으며, 은신 탐지 범위가 <font color=\"#77d914\">+50%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있으며, 은신 탐지 범위가 <font color=\"#77d914\">+200%</font> 증가하여 훨씬 더 멀리서 은신한 ZED를 감지할 수 있습니다.",
-     "rawValues": [
-      {
-       "key": "CloakDetectionBonus",
-       "label": "은신 탐지 보너스",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "CloakDetectionBonus",
-       "label": "은신 탐지 보너스",
-       "value": 2.0,
-       "unit": "percent",
-       "display": "+200%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "InfestedRounds",
-     "name": "감염된 라운드",
-     "standardDesc": "헤드샷으로 처치 시 3m 반경 내에 50의 독 광역 피해를 입힙니다. 몸통을 맞춰 처치할 경우에는 +25% 확률로 2m 반경 내에 25의 피해를 입힙니다.",
-     "deluxeDesc": "헤드샷으로 처치 시 3m 반경 내에 100의 독 광역 피해를 입힙니다. 몸통을 맞춰 처치할 경우에는 +40% 확률로 2m 반경 내에 40의 피해를 입힙니다.",
-     "standardDescRaw": "헤드샷으로 처치 시 <font color=\"#15d7fa\">3m 반경</font> 내에 <font color=\"#FFFFFF\">50의 독 광역 피해</font>를 입힙니다. 몸통을 맞춰 처치할 경우에는 <font color=\"#77d914\">+25% 확률</font>로 <font color=\"#15d7fa\">2m 반경</font> 내에 <font color=\"#FFFFFF\">25의 피해</font>를 입힙니다.",
-     "deluxeDescRaw": "헤드샷으로 처치 시 <font color=\"#15d7fa\">3m 반경</font> 내에 <font color=\"#FFFFFF\">100의 독 광역 피해</font>를 입힙니다. 몸통을 맞춰 처치할 경우에는 <font color=\"#77d914\">+40% 확률</font>로 <font color=\"#15d7fa\">2m 반경</font> 내에 <font color=\"#FFFFFF\">40의 피해</font>를 입힙니다.",
-     "rawValues": [
-      {
-       "key": "HeadshotDamage",
-       "label": "헤드샷 피해량",
-       "value": 50,
-       "unit": "count",
-       "display": "50"
-      },
-      {
-       "key": "HeadshotDamage",
-       "label": "헤드샷 피해량",
-       "value": 100,
-       "unit": "count",
-       "display": "100"
-      },
-      {
-       "key": "BodyDamage",
-       "label": "몸통 피해량",
-       "value": 25,
-       "unit": "count",
-       "display": "25"
-      },
-      {
-       "key": "BodyDamage",
-       "label": "몸통 피해량",
-       "value": 40,
-       "unit": "count",
-       "display": "40"
-      },
-      {
-       "key": "BodyChance",
-       "label": "몸통 확률",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "BodyChance",
-       "label": "몸통 확률",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "HeadshotRadius",
-       "label": "헤드샷 범위",
-       "value": 300.0,
-       "unit": "distance",
-       "display": "300"
-      },
-      {
-       "key": "BodyRadius",
-       "label": "몸통 범위",
-       "value": 200.0,
-       "unit": "distance",
-       "display": "200"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "Mitosis",
-     "name": "유사분열",
-     "standardDesc": "세포 분열: 15킬을 달성할 때마다 현재 무기의 탄창이 즉시 가득 채워집니다.",
-     "deluxeDesc": "세포 분열: 10킬을 달성할 때마다 현재 무기의 탄창이 즉시 가득 채워집니다.",
-     "standardDescRaw": "<font color=\"#9370DB\">세포 분열:</font> <font color=\"#FFFFFF\">15킬</font>을 달성할 때마다 <font color=\"#15d7fa\">현재 무기의 탄창이 즉시 가득 채워집니다.</font>",
-     "deluxeDescRaw": "<font color=\"#9370DB\">세포 분열:</font> <font color=\"#FFFFFF\">10킬</font>을 달성할 때마다 <font color=\"#15d7fa\">현재 무기의 탄창이 즉시 가득 채워집니다.</font>",
-     "rawValues": [
-      {
-       "key": "KillThreshold",
-       "label": "필요 처치 수",
-       "value": 30,
-       "unit": "count",
-       "display": "30"
-      },
-      {
-       "key": "KillThreshold",
-       "label": "필요 처치 수",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "메딕트리 정밀조사(2026-07-02): 즉시 완전재장전(예비탄약 소모) 트리거를 더 어렵게, 구 15; 구 10",
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "NeuralFeedback",
-     "name": "신경 피드백",
-     "standardDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 7.5%를 공격자에게 독성 피해로 되돌려줍니다.",
-     "deluxeDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 25%만큼 자신의 체력을 회복합니다.",
-     "standardDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 7.5%를 공격자에게 독성 피해로 되돌려줍니다.",
-     "deluxeDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 25%만큼 자신의 체력을 회복합니다.",
-     "rawValues": [
-      {
-       "key": "ReflectPercent",
-       "label": "반사 퍼센트",
-       "value": 0.075,
-       "unit": "percent",
-       "display": "+7.5%"
-      },
-      {
-       "key": "ReflectPercent",
-       "label": "반사 퍼센트",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "DeluxeHealPercent",
-       "label": "디럭스 치유 퍼센트",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.150000; 구 0.300000; 구 0.500000",
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "ParasiticBloom",
-     "name": "기생성 조류 번식",
-     "standardDesc": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 20 HP 회복됩니다.",
-     "deluxeDesc": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어구가 10 회복됩니다.",
-     "standardDescRaw": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 20 HP 회복됩니다.",
-     "deluxeDescRaw": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어구가 10 회복됩니다.",
-     "rawValues": [
-      {
-       "key": "HealAmount",
-       "label": "치유량",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      },
-      {
-       "key": "HealAmount",
-       "label": "치유량",
-       "value": 35,
-       "unit": "count",
-       "display": "35"
-      },
-      {
-       "key": "DeluxeArmorAmount",
-       "label": "디럭스 방어구 량",
-       "value": 10,
-       "unit": "count",
-       "display": "10"
-      },
-      {
-       "key": "Radius",
-       "label": "범위",
-       "value": 1000.0,
-       "unit": "distance",
-       "display": "1,000"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "PheromoneTrail",
-     "name": "페로몬 트레일",
-     "standardDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도가 +15% 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
-     "deluxeDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도 +30% 및 재장전 속도 +7.5% 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
-     "standardDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#FFFFFF\">+15%</font> 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
-     "deluxeDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> 및 <font color=\"#42e087\">재장전 속도</font> <font color=\"#FFFFFF\">+7.5%</font> 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
-     "rawValues": [
-      {
-       "key": "SpeedBonus",
-       "label": "속도 보너스",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "SpeedBonus",
-       "label": "속도 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "DeluxeReloadBonus",
-       "label": "디럭스 재장전 보너스",
-       "value": 0.075,
-       "unit": "percent",
-       "display": "+7.5%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.150000",
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "RegenerativeMembrane",
-     "name": "재생막",
-     "standardDesc": "제자리에 가만히 서 있는 동안 초당 체력을 1 회복합니다. 회복이 시작된 후 움직이면 60초의 재사용 대기시간이 발동됩니다.",
-     "deluxeDesc": "제자리에 가만히 서 있는 동안 초당 체력을 2, 방어구를 1 회복합니다. 회복이 시작된 후 움직이면 60초의 재사용 대기시간이 발동됩니다.",
-     "standardDescRaw": "제자리에 가만히 서 있는 동안 <font color=\"#F0F8FF\">초당 체력을 1</font> 회복합니다. 회복이 시작된 후 움직이면 <font color=\"#FFAA00\">60초의 재사용 대기시간이 발동됩니다.</font>",
-     "deluxeDescRaw": "제자리에 가만히 서 있는 동안 <font color=\"#42e087\">초당 체력을 2</font>, <font color=\"#4444ff\">방어구를 1</font> 회복합니다. 회복이 시작된 후 움직이면 <font color=\"#FFAA00\">60초의 재사용 대기시간이 발동됩니다.</font>",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    },
-    {
-     "key": "SymbioticRestoration",
-     "name": "공생 복원",
-     "standardDesc": "아군을 치료하면 자신의 치유량의 +12.5%만큼 방어구이 회복됩니다.",
-     "deluxeDesc": "아군을 치료하면 자신의 치유량의 +25%만큼 방어구이 회복됩니다.",
-     "standardDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+12.5%</font>만큼 <font color=\"#4444ff\">방어구</font>이 회복됩니다.",
-     "deluxeDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+25%</font>만큼 <font color=\"#4444ff\">방어구</font>이 회복됩니다.",
-     "rawValues": [
-      {
-       "key": "ArmorPercent",
-       "label": "방어구 퍼센트",
-       "value": 0.125,
-       "unit": "percent",
-       "display": "+12.5%"
-      },
-      {
-       "key": "ArmorPercent",
-       "label": "방어구 퍼센트",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false
-    }
-   ],
-   "skillCount": 10,
-   "verdict": {
-    "tag": "적절",
-    "note": "특이사항 없음.",
-    "grade": "S"
-   },
-   "grade": "S",
-   "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.020000; 구 0.010000; 광역피해 남발 축소(2026-07-02, 스택상한 불명이라 보수적으로 추가축소), 구 0.025000(그 이전 구 0.050000); 구 1000.000000; 구 0.200000; 형제 스탯(SwarmDamage/Movement) 대비 과도해 추가축소(2026-07-02), 구 0.250000(그 이전 구 0.500000); 구 0.150000",
-   "testWarning": null,
-   "recentChangeTag": null,
-   "extraSections": [],
-   "icon": "icons/hivemind.png"
-  },
-  {
    "key": "Parasite",
    "name": "기생충",
    "parentPerk": "FieldMedic",
-   "unlockLevel": 15,
+   "unlockLevel": 10,
    "hasIniConfig": true,
    "passiveStats": [
     {
@@ -6816,8 +6273,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "적의 생명력을 빨아들여 자신과 아군에게 나눠주는, 딜과 힐을 동시에 챙기는 <font color=\"#FFD700\">흡혈 서포트</font> 퍼크입니다.",
-   "endgame": "다양한 <font color=\"#15d7fa\">흡혈/치유 전환</font> 스킬을 채우면 딜과 힐을 동시에 수행하는 하이브리드 서포터로 완성됩니다.",
+   "role": "적을 공격할수록 체력을 흡수해 자생력을 확보하고, 팀원까지 회복시키는 흡혈 서포트 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#B40028\">피의 십일조:</font> <font color=\"#FF6464\">모든 피해량에 비례하여 체력 흡수</font> <font color=\"#FFFFFF\">레벨업당 +0.5% · 만렙(Lv20) +10%</font> (타격당 최대 <font color=\"#FFFFFF\">5 HP</font>)",
@@ -7303,6 +6760,549 @@
    "icon": "icons/parasite.png"
   },
   {
+   "key": "Hivemind",
+   "name": "하이브마인드",
+   "parentPerk": "FieldMedic",
+   "unlockLevel": 15,
+   "hasIniConfig": true,
+   "passiveStats": [
+    {
+     "key": "TeamDamagePerLevel",
+     "label": "레벨 당 팀 피해량",
+     "value": 0.005,
+     "unit": "percent",
+     "display": "+0.5%",
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
+    },
+    {
+     "key": "TeamReloadSpeedPerLevel",
+     "label": "레벨 당 팀 재장전 속도",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
+    {
+     "key": "TeamMovementPerSymbioteStage",
+     "label": "공생체 단계 당 팀 이동",
+     "value": 0.005,
+     "unit": "percent",
+     "display": "+0.5%",
+     "lv10": 0.005,
+     "lv20": 0.005,
+     "lv10Display": "+0.5%",
+     "lv20Display": "+0.5%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "NeuralNetworkDamagePerStage",
+     "label": "단계 당 신경 네트워크 피해량",
+     "value": 0.0125,
+     "unit": "percent",
+     "display": "+1.25%",
+     "lv10": 0.0125,
+     "lv20": 0.0125,
+     "lv10Display": "+1.25%",
+     "lv20Display": "+1.25%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "NeuralNetworkRadius",
+     "label": "신경 네트워크 범위",
+     "value": 500.0,
+     "unit": "distance",
+     "display": "500",
+     "lv10": 500.0,
+     "lv20": 500.0,
+     "lv10Display": "500",
+     "lv20Display": "500",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "SwarmCollectiveKillsRequired",
+     "label": "무리 집단 처치 필요",
+     "value": 20,
+     "unit": "count",
+     "display": "20",
+     "lv10": 20,
+     "lv20": 20,
+     "lv10Display": "20",
+     "lv20Display": "20",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "SwarmCollectiveDuration",
+     "label": "무리 집단 지속시간",
+     "value": 8.0,
+     "unit": "seconds",
+     "display": "8초",
+     "lv10": 8.0,
+     "lv20": 8.0,
+     "lv10Display": "8초",
+     "lv20Display": "8초",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "SwarmDamageBonus",
+     "label": "무리 피해량 보너스",
+     "value": 0.1,
+     "unit": "percent",
+     "display": "+10%",
+     "lv10": 0.1,
+     "lv20": 0.1,
+     "lv10Display": "+10%",
+     "lv20Display": "+10%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "SwarmReloadBonus",
+     "label": "무리 재장전 보너스",
+     "value": 0.125,
+     "unit": "percent",
+     "display": "+12.5%",
+     "lv10": 0.125,
+     "lv20": 0.125,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+12.5%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "SwarmMovementBonus",
+     "label": "무리 이동 보너스",
+     "value": 0.075,
+     "unit": "percent",
+     "display": "+7.5%",
+     "lv10": 0.075,
+     "lv20": 0.075,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+7.5%",
+     "scaling": false,
+     "capstoneLevel": null
+    }
+   ],
+   "role": "팀원 전체의 피해량·재장전 속도를 함께 끌어올리고, 일제 처치 시 파티 버프를 터뜨리는 팀 버퍼 전직입니다.",
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#32FF32\">시냅스 연결:</font> 10m 이내 팀원의 <font color=\"#7FFF7F\">피해량</font> <font color=\"#FFFFFF\">레벨업당 +0.5% · 만렙(Lv20) +10%</font>",
+     "text": "시냅스 연결: 10m 이내 팀원의 피해량 레벨업당 +0.5% · 만렙(Lv20) +10%",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#32FF32\">신경 효율:</font> <font color=\"#FFFFFF\">10m</font> 이내 팀원의 <font color=\"#7FFF7F\">재장전 속도</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
+     "text": "신경 효율: 10m 이내 팀원의 재장전 속도 레벨업당 +1% · 만렙(Lv20) +20%",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#32FF32\">벌집 이동:</font> <font color=\"#7FFF7F\">공생체 진화 단계당</font> 팀원의 <font color=\"#7FFF7F\">이동 속도</font> <font color=\"#FFFFFF\">+0.5%</font> (10m 이내)",
+     "text": "벌집 이동: 공생체 진화 단계당 팀원의 이동 속도 +0.5% (10m 이내)",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">신경망</font> - <font color=\"#FFFFFF\">5m</font> 이내 팀원의 피해량이 <font color=\"#7FFF7F\">공생체 진화 단계</font>마다 <font color=\"#FFFFFF\">+1.25%</font>씩 증가합니다 (최대 <font color=\"#FFFFFF\">+12.5%</font>).",
+     "text": "레벨 10: 신경망 - 5m 이내 팀원의 피해량이 공생체 진화 단계마다 +1.25%씩 증가합니다 (최대 +12.5%).",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">군중 집단</font> - 20킬마다 8초 동안 팀 전체에 버프가 발동됩니다: 피해량 +10%, 재장전 속도 +12.5%, 이동 속도 +7.5%.",
+     "text": "레벨 20: 군중 집단 - 20킬마다 8초 동안 팀 전체에 버프가 발동됩니다: 피해량 +10%, 재장전 속도 +12.5%, 이동 속도 +7.5%.",
+     "isCapstone": true
+    }
+   ],
+   "skills": [
+    {
+     "key": "BioelectricDischarge",
+     "name": "생체 전기 방전",
+     "standardDesc": "탄창을 완전히 비우면 5m 반경에 전기 펄스를 방출하여 50의 피해를 입힙니다. 재사용 대기시간: 10초.",
+     "deluxeDesc": "탄창을 완전히 비우면 5m 반경에 강력한 전기 펄스를 방출하여 100의 피해를 입힙니다. 재사용 대기시간: 8초.",
+     "standardDescRaw": "탄창을 완전히 비우면 5m 반경에 전기 펄스를 방출하여 50의 피해를 입힙니다. 재사용 대기시간: 10초.",
+     "deluxeDescRaw": "탄창을 완전히 비우면 5m 반경에 강력한 전기 펄스를 방출하여 100의 피해를 입힙니다. 재사용 대기시간: 8초.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "EmpathicLink",
+     "name": "공감 링크",
+     "standardDesc": "고통이 하이브마인드의 신경망에 분산됩니다. 모든 출처로부터 받는 피해가 +5% 감소합니다.",
+     "deluxeDesc": "고통이 하이브마인드의 신경망에 분산됩니다. 모든 출처로부터 받는 피해가 +8.33% 감소합니다.",
+     "standardDescRaw": "고통이 <font color=\"#9370DB\">하이브마인드의 신경망</font>에 분산됩니다. 모든 출처로부터 받는 피해가 <font color=\"#00FF7F\">+5% 감소</font>합니다.",
+     "deluxeDescRaw": "고통이 <font color=\"#9370DB\">하이브마인드의 신경망</font>에 분산됩니다. 모든 출처로부터 받는 피해가 <font color=\"#00FF7F\">+8.33% 감소</font>합니다.",
+     "rawValues": [
+      {
+       "key": "DamageReduction",
+       "label": "피해량 감소",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "DamageReduction",
+       "label": "피해량 감소",
+       "value": 0.083333,
+       "unit": "percent",
+       "display": "+8.33%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "저항 스킬 1/3 축소(2026-07-02, 필드명 누락분 추가발견), 구 0.150000; 구 0.250000",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Hivesight",
+     "name": "하이브사이트",
+     "standardDesc": "적의 체력 바를 볼 수 있으며, 은신 탐지 범위가 +50% 증가합니다.",
+     "deluxeDesc": "적의 체력 바를 볼 수 있으며, 은신 탐지 범위가 +200% 증가하여 훨씬 더 멀리서 은신한 ZED를 감지할 수 있습니다.",
+     "standardDescRaw": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있으며, 은신 탐지 범위가 <font color=\"#77d914\">+50%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#a0c1cb\">적의 체력 바</font>를 볼 수 있으며, 은신 탐지 범위가 <font color=\"#77d914\">+200%</font> 증가하여 훨씬 더 멀리서 은신한 ZED를 감지할 수 있습니다.",
+     "rawValues": [
+      {
+       "key": "CloakDetectionBonus",
+       "label": "은신 탐지 보너스",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "CloakDetectionBonus",
+       "label": "은신 탐지 보너스",
+       "value": 2.0,
+       "unit": "percent",
+       "display": "+200%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "InfestedRounds",
+     "name": "감염된 라운드",
+     "standardDesc": "헤드샷으로 처치 시 3m 반경 내에 50의 독 광역 피해를 입힙니다. 몸통을 맞춰 처치할 경우에는 +25% 확률로 2m 반경 내에 25의 피해를 입힙니다.",
+     "deluxeDesc": "헤드샷으로 처치 시 3m 반경 내에 100의 독 광역 피해를 입힙니다. 몸통을 맞춰 처치할 경우에는 +40% 확률로 2m 반경 내에 40의 피해를 입힙니다.",
+     "standardDescRaw": "헤드샷으로 처치 시 <font color=\"#15d7fa\">3m 반경</font> 내에 <font color=\"#FFFFFF\">50의 독 광역 피해</font>를 입힙니다. 몸통을 맞춰 처치할 경우에는 <font color=\"#77d914\">+25% 확률</font>로 <font color=\"#15d7fa\">2m 반경</font> 내에 <font color=\"#FFFFFF\">25의 피해</font>를 입힙니다.",
+     "deluxeDescRaw": "헤드샷으로 처치 시 <font color=\"#15d7fa\">3m 반경</font> 내에 <font color=\"#FFFFFF\">100의 독 광역 피해</font>를 입힙니다. 몸통을 맞춰 처치할 경우에는 <font color=\"#77d914\">+40% 확률</font>로 <font color=\"#15d7fa\">2m 반경</font> 내에 <font color=\"#FFFFFF\">40의 피해</font>를 입힙니다.",
+     "rawValues": [
+      {
+       "key": "HeadshotDamage",
+       "label": "헤드샷 피해량",
+       "value": 50,
+       "unit": "count",
+       "display": "50"
+      },
+      {
+       "key": "HeadshotDamage",
+       "label": "헤드샷 피해량",
+       "value": 100,
+       "unit": "count",
+       "display": "100"
+      },
+      {
+       "key": "BodyDamage",
+       "label": "몸통 피해량",
+       "value": 25,
+       "unit": "count",
+       "display": "25"
+      },
+      {
+       "key": "BodyDamage",
+       "label": "몸통 피해량",
+       "value": 40,
+       "unit": "count",
+       "display": "40"
+      },
+      {
+       "key": "BodyChance",
+       "label": "몸통 확률",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "BodyChance",
+       "label": "몸통 확률",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "HeadshotRadius",
+       "label": "헤드샷 범위",
+       "value": 300.0,
+       "unit": "distance",
+       "display": "300"
+      },
+      {
+       "key": "BodyRadius",
+       "label": "몸통 범위",
+       "value": 200.0,
+       "unit": "distance",
+       "display": "200"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Mitosis",
+     "name": "유사분열",
+     "standardDesc": "세포 분열: 15킬을 달성할 때마다 현재 무기의 탄창이 즉시 가득 채워집니다.",
+     "deluxeDesc": "세포 분열: 10킬을 달성할 때마다 현재 무기의 탄창이 즉시 가득 채워집니다.",
+     "standardDescRaw": "<font color=\"#9370DB\">세포 분열:</font> <font color=\"#FFFFFF\">15킬</font>을 달성할 때마다 <font color=\"#15d7fa\">현재 무기의 탄창이 즉시 가득 채워집니다.</font>",
+     "deluxeDescRaw": "<font color=\"#9370DB\">세포 분열:</font> <font color=\"#FFFFFF\">10킬</font>을 달성할 때마다 <font color=\"#15d7fa\">현재 무기의 탄창이 즉시 가득 채워집니다.</font>",
+     "rawValues": [
+      {
+       "key": "KillThreshold",
+       "label": "필요 처치 수",
+       "value": 30,
+       "unit": "count",
+       "display": "30"
+      },
+      {
+       "key": "KillThreshold",
+       "label": "필요 처치 수",
+       "value": 20,
+       "unit": "count",
+       "display": "20"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "메딕트리 정밀조사(2026-07-02): 즉시 완전재장전(예비탄약 소모) 트리거를 더 어렵게, 구 15; 구 10",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "NeuralFeedback",
+     "name": "신경 피드백",
+     "standardDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 7.5%를 공격자에게 독성 피해로 되돌려줍니다.",
+     "deluxeDesc": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 25%만큼 자신의 체력을 회복합니다.",
+     "standardDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 7.5%를 공격자에게 독성 피해로 되돌려줍니다.",
+     "deluxeDescRaw": "군체의식에 반격 체계가 활성화됩니다. 적에게 피해를 입으면 그 피해량의 15%를 공격자에게 독성 피해로 되돌려주고, 반사한 피해량의 25%만큼 자신의 체력을 회복합니다.",
+     "rawValues": [
+      {
+       "key": "ReflectPercent",
+       "label": "반사 퍼센트",
+       "value": 0.075,
+       "unit": "percent",
+       "display": "+7.5%"
+      },
+      {
+       "key": "ReflectPercent",
+       "label": "반사 퍼센트",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "DeluxeHealPercent",
+       "label": "디럭스 치유 퍼센트",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "메딕트리 정밀조사 축소(2026-07-02), 구 0.150000; 구 0.300000; 구 0.500000",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ParasiticBloom",
+     "name": "기생성 조류 번식",
+     "standardDesc": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 20 HP 회복됩니다.",
+     "deluxeDesc": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어구가 10 회복됩니다.",
+     "standardDescRaw": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 20 HP 회복됩니다.",
+     "deluxeDescRaw": "대형 좀비를 처치하면 10m 이내의 모든 팀원의 체력이 35 HP 회복되고, 방어구가 10 회복됩니다.",
+     "rawValues": [
+      {
+       "key": "HealAmount",
+       "label": "치유량",
+       "value": 20,
+       "unit": "count",
+       "display": "20"
+      },
+      {
+       "key": "HealAmount",
+       "label": "치유량",
+       "value": 35,
+       "unit": "count",
+       "display": "35"
+      },
+      {
+       "key": "DeluxeArmorAmount",
+       "label": "디럭스 방어구 량",
+       "value": 10,
+       "unit": "count",
+       "display": "10"
+      },
+      {
+       "key": "Radius",
+       "label": "범위",
+       "value": 1000.0,
+       "unit": "distance",
+       "display": "1,000"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "PheromoneTrail",
+     "name": "페로몬 트레일",
+     "standardDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도가 +15% 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "deluxeDesc": "적을 처치할 때마다 화학 신호를 방출하여 3초 동안 이동 속도 +30% 및 재장전 속도 +7.5% 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "standardDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font>가 <font color=\"#FFFFFF\">+15%</font> 증가합니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "deluxeDescRaw": "적을 처치할 때마다 <font color=\"#9370DB\">화학 신호</font>를 방출하여 <font color=\"#FFAA00\">3초</font> 동안 <font color=\"#84d6d0\">이동 속도</font> <font color=\"#FFFFFF\">+30%</font> 및 <font color=\"#42e087\">재장전 속도</font> <font color=\"#FFFFFF\">+7.5%</font> 버프를 얻습니다. 지속 시간 내에 적을 처치하면 효과가 갱신됩니다.",
+     "rawValues": [
+      {
+       "key": "SpeedBonus",
+       "label": "속도 보너스",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "SpeedBonus",
+       "label": "속도 보너스",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "DeluxeReloadBonus",
+       "label": "디럭스 재장전 보너스",
+       "value": 0.075,
+       "unit": "percent",
+       "display": "+7.5%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.150000",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "RegenerativeMembrane",
+     "name": "재생막",
+     "standardDesc": "제자리에 가만히 서 있는 동안 초당 체력을 1 회복합니다. 회복이 시작된 후 움직이면 60초의 재사용 대기시간이 발동됩니다.",
+     "deluxeDesc": "제자리에 가만히 서 있는 동안 초당 체력을 2, 방어구를 1 회복합니다. 회복이 시작된 후 움직이면 60초의 재사용 대기시간이 발동됩니다.",
+     "standardDescRaw": "제자리에 가만히 서 있는 동안 <font color=\"#F0F8FF\">초당 체력을 1</font> 회복합니다. 회복이 시작된 후 움직이면 <font color=\"#FFAA00\">60초의 재사용 대기시간이 발동됩니다.</font>",
+     "deluxeDescRaw": "제자리에 가만히 서 있는 동안 <font color=\"#42e087\">초당 체력을 2</font>, <font color=\"#4444ff\">방어구를 1</font> 회복합니다. 회복이 시작된 후 움직이면 <font color=\"#FFAA00\">60초의 재사용 대기시간이 발동됩니다.</font>",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "SymbioticRestoration",
+     "name": "공생 복원",
+     "standardDesc": "아군을 치료하면 자신의 치유량의 +12.5%만큼 방어구이 회복됩니다.",
+     "deluxeDesc": "아군을 치료하면 자신의 치유량의 +25%만큼 방어구이 회복됩니다.",
+     "standardDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+12.5%</font>만큼 <font color=\"#4444ff\">방어구</font>이 회복됩니다.",
+     "deluxeDescRaw": "아군을 치료하면 자신의 <font color=\"#42e087\">치유량</font>의 <font color=\"#4444ff\">+25%</font>만큼 <font color=\"#4444ff\">방어구</font>이 회복됩니다.",
+     "rawValues": [
+      {
+       "key": "ArmorPercent",
+       "label": "방어구 퍼센트",
+       "value": 0.125,
+       "unit": "percent",
+       "display": "+12.5%"
+      },
+      {
+       "key": "ArmorPercent",
+       "label": "방어구 퍼센트",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
+   "verdict": {
+    "tag": "적절",
+    "note": "특이사항 없음.",
+    "grade": "S"
+   },
+   "grade": "S",
+   "isPatched": true,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.020000; 구 0.010000; 광역피해 남발 축소(2026-07-02, 스택상한 불명이라 보수적으로 추가축소), 구 0.025000(그 이전 구 0.050000); 구 1000.000000; 구 0.200000; 형제 스탯(SwarmDamage/Movement) 대비 과도해 추가축소(2026-07-02), 구 0.250000(그 이전 구 0.500000); 구 0.150000",
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "icon": "icons/hivemind.png"
+  },
+  {
    "key": "Symbiote",
    "name": "공생체",
    "parentPerk": "FieldMedic",
@@ -7400,8 +7400,8 @@
      "capstoneLevel": 20
     }
    ],
-   "role": "치유 능력은 유지한 채 재장전 속도와 관통력까지 크게 얹어주는 <font color=\"#FFD700\">최종 필드메딕</font> 형태입니다.",
-   "endgame": "Lv20 기준 <font color=\"#15d7fa\">재장전+30%, 관통+35%</font>까지 갖추면 힐러이면서도 상당한 총기 화력을 겸비하는 하이브리드 빌드가 완성됩니다.",
+   "role": "치유 능력을 유지하면서 재장전·관통력·탄약까지 얹어주는 최종 필드메딕 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#00FF7F\">공생 효율:</font> <font color=\"#7FFF7F\">재장전 속도</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -7987,8 +7987,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "화염 피해량을 레벨마다 착실하게 증폭시켜주는 <font color=\"#FFD700\">파이어버그 1차 전직</font>입니다.",
-   "endgame": "레벨당 화염 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. ConsumingFlame 스킬은 값이 0인 버그로 확인되어 실질적으로 작동하지 않습니다.",
+   "role": "화염 피해량을 레벨마다 착실하게 쌓아가는 파이어버그 1차 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "모든 무기가 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 확률로 사격 시 <font color=\"#ffa000\">테르밋탄</font>을 발사합니다.",
@@ -8603,8 +8603,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "불타는 적이 많아질수록 화염 피해가 계속 불어나고, 죽음도 회피시켜주는 <font color=\"#FFD700\">스노우볼형 화염 딜러</font>입니다.",
-   "endgame": "Lv20 피닉스 프로토콜 캡스톤(웨이브당 1회 죽음 회피+<font color=\"#15d7fa\">10초 동안 받는 피해 50% 감소</font>)까지 채우면 생존력까지 갖춘 최상급 화염 딜러가 완성됩니다. 레벨당 화염 피해가 착실히 증가해 Lv20 기준 화염 피해 +30%에 도달합니다.",
+   "role": "불타는 적이 많을수록 화염 피해가 스스로 불어나고, 웨이브당 1회 죽음까지 회피하는 스노우볼형 화염 딜러 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FF6400\">화염 폭발:</font> <font color=\"#FF8C32\">화염 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -9031,8 +9031,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "특정 조건의 헤드샷 처치마다 두둑한 도쉬를 얹어주는 <font color=\"#FFD700\">경제형</font> 퍼크입니다.",
-   "endgame": "14개의 <font color=\"#15d7fa\">도쉬 보상 스킬</font>을 조합하면 전투를 하면서 동시에 상당한 부수입을 얻는 경제 특화 빌드가 완성됩니다.",
+   "role": "헤드샷 처치마다 도쉬를 안겨주는 건슬링거 1차 경제형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "헤드샷으로 처치할 때마다 <font color=\"#77d914\">레벨업당 +1 · 만렙(Lv20) +20 도쉬</font>를 획득합니다.",
@@ -9681,8 +9681,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "피해·치유·탄창·관통·재장전·이동까지 거의 모든 능력치를 골고루 끌어올려주는 <font color=\"#FFD700\">최종 건슬링거</font> 심화 퍼크입니다.",
-   "endgame": "Lv20에 전 속성(피해/치유/탄창/관통/재장전/이동 등)이 골고루 <font color=\"#15d7fa\">+15%</font>까지 상향되어, 특정 스탯에 치우치지 않는 균형 잡힌 만능형 최종 빌드가 완성됩니다.",
+   "role": "피해·치유·탄창·관통·재장전·이동 등 14가지 속성을 골고루 강화하는 균형형 최종 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
@@ -10024,8 +10024,8 @@
    "hasIniConfig": false,
    "passiveStats": [],
    "fixedStats": [],
-   "role": "매 웨이브 랜덤 챌린지를 완료할 때마다 영구적으로 스탯을 쌓아 계속 강해지게 만들어주는 <font color=\"#FFD700\">로그라이크형</font> 퍼크입니다.",
-   "endgame": "챌린지 성공 시 <font color=\"#15d7fa\">영구 스탯이 무한 누적</font>되고 승수 스킬까지 중첩 가능해, 장기전(엔들리스)으로 갈수록 이론상 한계 없이 강해질 수 있어 주의가 필요합니다.",
+   "role": "매 웨이브 랜덤 챌린지를 완료할 때마다 스탯이 영구히 누적되는 로그라이크형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "각 웨이브마다 <font color=\"#15d7fa\">갬빗 챌린지</font>가 무작위로 주어집니다. 완료하면 <font color=\"#77d914\">영구적인 능력치 보너스</font>를 얻습니다.",
@@ -10319,8 +10319,8 @@
      "capstoneLevel": 10
     }
    ],
-   "role": "전체 피해량과 이동속도를 함께 얹어주고, 일정 확률로 적을 그 자리에서 즉사시켜버리는 <font color=\"#FFD700\">히트 앤 런형</font> 퍼크입니다.",
-   "endgame": "Lv10 전체 피해+12.5% 캡스톤과 <font color=\"#15d7fa\">5% 확률 즉사</font>(대형 제드 포함, 진짜 보스 제외)를 갖추면 기동성과 순간 처치력을 겸비한 딜러가 완성됩니다.",
+   "role": "전체 피해량·이동속도·헤드샷을 얹으면서, 일정 확률로 적을 즉사시키는 히트앤런형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#CC0000\">죽음의 정밀도:</font> <font color=\"#FF6666\">치명타 확률</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -10874,8 +10874,8 @@
      "capstoneLevel": 20
     }
    ],
-   "role": "탄약이 마르지 않게 만들어주고 재장전 속도까지 크게 끌어올려주는 <font color=\"#FFD700\">SWAT 1차 전직</font>입니다.",
-   "endgame": "Lv20 캡스톤(피해+12.5%, <font color=\"#15d7fa\">탄창+30%</font>)까지 채우면 총알이 마르지 않는 지속 화력형 빌드가 완성됩니다.",
+   "role": "탄약이 마르지 않게 해주고 재장전·무기 전환 속도를 크게 끌어올리는 SWAT 1차 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#DAA520\">연습 재장전:</font> <font color=\"#F0C868\">재장전 속도</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -11484,8 +11484,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "피해·치유·탄창·관통·재장전 등 14가지 무기 능력치를 동시에 골고루 끌어올려주는 <font color=\"#FFD700\">만능형 SWAT</font> 전직입니다.",
-   "endgame": "레벨당 <font color=\"#15d7fa\">14개 속성</font>이 동시에 성장해(Lv20 기준 각 +15%), 어떤 무기·상황에도 대응 가능한 올라운더형 빌드가 완성됩니다.",
+   "role": "14가지 무기 능력치를 동시에 균등하게 끌어올리는 올라운더형 SWAT 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "무기의 <font color=\"#15d7fa\">모든 능력치</font>가 <font color=\"#77d914\">레벨업당 +2% · 만렙(Lv20) +40%</font> 증가합니다.",
@@ -11861,8 +11861,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "동결 효과의 피해와 지속시간을 함께 늘려 제드를 얼려 무력화시켜주는 <font color=\"#FFD700\">냉기 특화</font> 퍼크입니다.",
-   "endgame": "레벨당 동결 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. 동결 효과 지속시간과 피해를 동시에 강화해 제드 무리를 얼려 안전하게 처리하는 빌드가 완성됩니다.",
+   "role": "동결 피해와 지속시간을 함께 늘려 제드를 얼려 무력화시키는 냉기 특화 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "모든 무기가 <font color=\"#77d914\">레벨업당 +0.2% · 만렙(Lv20) +4%</font> 확률로 타격 시 <font color=\"#0bf1f1\">눈사태</font>를 발생시킵니다.",
@@ -12345,8 +12345,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "피해량과 피해 저항을 동시에 얹어주어 공격과 생존을 둘 다 놓치지 않게 해주는 <font color=\"#FFD700\">균형형</font> 최종 생존전문가 심화 퍼크입니다.",
-   "endgame": "Lv20 기준 <font color=\"#15d7fa\">피해량+20%, 피해 저항+10%</font>가 동시에 상승해, 어떤 상황에서도 안정적으로 버티며 딜을 넣을 수 있는 만능형 최종 빌드가 완성됩니다.",
+   "role": "피해량과 피해 저항을 동시에 끌어올려 공격·생존 두 가지를 모두 챙기는 균형형 최종 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#ebc034\">징조의 시선:</font> <font color=\"#ebc034\">피해량</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -12468,8 +12468,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "샤프슈터/건슬링거 무기의 피해량과 헤드샷 피해를 동시에 끌어올려주는 <font color=\"#FFD700\">1차 전직</font>입니다.",
-   "endgame": "Lv20 관통력 보너스까지 채우면 헤드샷 위주의 관통 사격 빌드가 완성되며, <font color=\"#15d7fa\">FullMetalJacket</font> 스킬로 관통력을 한층 더 끌어올릴 수 있습니다.",
+   "role": "샤프슈터·건슬링거 무기의 피해량과 헤드샷 피해를 함께 강화하는 1차 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#476d5c\">Sharpshooter</font> 및 <font color=\"#476d5c\">Gunslinger</font> 무기의 <font color=\"#15d7fa\">피해량</font>이 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 증가합니다.",
@@ -12926,8 +12926,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "매복한 채 가하는 첫 공격의 피해량을 폭발적으로 늘려주는 <font color=\"#FFD700\">헌터형 저격</font> 퍼크입니다.",
-   "endgame": "완벽한 매복 보너스와 <font color=\"#15d7fa\">정점 스토커 보너스</font>를 갖추면 첫 발 기습에 압도적인 피해를 실어보내는 저격형 암살자 빌드가 완성됩니다.",
+   "role": "매복 첫 공격의 피해를 폭발적으로 증폭시키는 헌터형 저격 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#4682B4\">포식자의 인내심:</font> 5초 이상 사격하지 않은 후 첫 타격의 <font color=\"#87CEEB\">피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.75% · 만렙(Lv20) +35%</font>",
@@ -13461,8 +13461,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "헤드샷 피해와 기본 피해를 동시에 큰 폭으로 얹어주고, 조건 충족 시 냉동 폭발까지 터뜨려주는 <font color=\"#FFD700\">최종 샤프슈터 저격형</font> 심화 퍼크입니다.",
-   "endgame": "Lv20 절대 영도 캡스톤(20킬마다 냉동 폭발 충전)까지 채우면 <font color=\"#15d7fa\">헤드샷+25%, 기본 피해+15%</font>에 냉동 폭발까지 더해진 최상급 원거리 딜러가 완성되나, FrostbiteArrows 스킬은 최대 스택 상한이 확인되지 않아 장기전에서 주의가 필요합니다.",
+   "role": "헤드샷·기본 피해를 동시에 대폭 끌어올리고, 조건 충족 시 냉동 폭발을 터뜨리는 최종 저격형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#87CEEB\">서리 숙련도:</font> <font color=\"#B0E0E6\">모든 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -13892,8 +13892,8 @@
     }
    ],
    "fixedStats": [],
-   "role": "좀비를 처치해 모은 트로피 세트로 영구 보너스를 겹겹이 쌓아 무한히 강해지게 만들어주는 <font color=\"#FFD700\">컬렉션형 최종 샤프슈터</font> 심화 퍼크입니다.",
-   "endgame": "트로피 3세트를 완성할 때마다 <font color=\"#15d7fa\">5개 슬롯에 영구 보너스가 무한 중첩</font>되기 때문에, 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있는 전체 최고 위험 퍼크입니다. 반드시 인지하고 사용해야 합니다.",
+   "role": "트로피 세트를 수집할수록 영구 보너스가 무한히 쌓여 점점 강해지는 컬렉션형 최종 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#CC8800\">사냥꾼의 본능:</font> 등급당 <font color=\"#FF6666\">모든 피해량</font> <font color=\"#FFFFFF\">+0.75%</font>",
@@ -14377,8 +14377,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "복리 이자가 눈덩이처럼 불어나 시간이 지날수록 도쉬 수입이 기하급수적으로 늘어나게 만들어주는 <font color=\"#FFD700\">최상급 경제형</font> 퍼크입니다.",
-   "endgame": "복리 이자, 라운드 지원금, 긴급환매 등 스킬을 조합하면 시간이 갈수록 기하급수적으로 불어나는 <font color=\"#15d7fa\">도쉬 수입</font>을 얻는 투자형 빌드가 완성됩니다.",
+   "role": "복리 이자가 눈덩이처럼 불어나 웨이브가 지날수록 도쉬 수입이 기하급수적으로 늘어나는 최상급 경제형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FFD700\">라운드 지원금:</font> 각 웨이브 종료 시 <font color=\"#90EE90\">추가 지급금</font> <font color=\"#FFFFFF\">레벨업당 +20 · 만렙(Lv20) +400</font>",
@@ -14997,8 +14997,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "무기를 오래 쓸수록 무작위 능력치 보너스가 영구히 쌓여 점점 강해지게 만들어주는 <font color=\"#FFD700\">대장장이 컨셉</font>의 1차 전직입니다.",
-   "endgame": "무기별 <font color=\"#15d7fa\">100킬 마일스톤</font>을 달성할 때마다 영구 보너스가 쌓여, 장시간 플레이할수록 점점 강해지는 성장형 빌드가 완성됩니다.",
+   "role": "무기를 오래 쓸수록 무작위 능력치 보너스가 영구히 누적되는 장인 컨셉의 서포트 1차 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FFD700\">단조 조건:</font> <font color=\"#FFD700\">모든 무기 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1% · 만렙(Lv20) +20%</font>",
@@ -15582,8 +15582,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "연사 속도와 관통력을 크게 늘려주고, 조건을 채우면 화력이 3배 이상으로 폭발하는 분노 모드까지 부여하는 <font color=\"#FFD700\">기관총 특화</font> 퍼크입니다.",
-   "endgame": "Lv20 분노 모드 캡스톤(75킬마다 발동, <font color=\"#15d7fa\">연사+100%/피해 3.3배</font> 폭발)까지 채우면 짧은 시간 동안 압도적인 화력 폭발을 낼 수 있는 버스트형 극딜러가 됩니다.",
+   "role": "연사 속도와 관통력을 크게 늘리고, 조건 충족 시 화력이 폭발하는 분노 모드로 버스트 극딜을 뽑는 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#FF6600\">하이드라의 분노:</font> <font color=\"#FF9933\">연사 속도</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -16100,8 +16100,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "독 피해량을 레벨마다 착실하게 증폭시켜주는 <font color=\"#FFD700\">생존전문가 1차 전직</font>입니다.",
-   "endgame": "레벨당 독 피해가 착실히 증가해 Lv20 기준 <font color=\"#15d7fa\">+25%</font>에 도달합니다. 독 계열 화기와 함께 사용하면 안정적인 지속 피해 빌드가 완성됩니다.",
+   "role": "독 피해량을 레벨마다 착실하게 증폭시키는 서바이벌리스트 1차 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "모든 무기가 <font color=\"#77d914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 확률로 적을 <font color=\"#8fce00\">신경독</font>에 중독시킵니다.",
@@ -16551,8 +16551,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "독과 석화 효과로 적을 서서히 무력화시키고, 조건 충족 시 광역 맹독까지 퍼뜨려주는 <font color=\"#FFD700\">뱀 컨셉의 저격형</font> 생존전문가 전직입니다.",
-   "endgame": "Lv20 고르곤의 독 캡스톤(적 처치 시 15m 내 독 확산)과 <font color=\"#15d7fa\">뱀 비늘 6개 달성 시 풀 고르곤 상태(독 피해+100%)</font>까지 채우면 광역 독 피해가 눈덩이처럼 불어나는 빌드가 완성됩니다.",
+   "role": "독·석화로 적을 무력화하고, 조건 충족 시 광역 맹독을 퍼뜨리는 뱀 컨셉의 저격형 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#8B008B\">독성 정밀도:</font> <font color=\"#9966FF\">헤드샷 피해량</font> <font color=\"#FFFFFF\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>",
@@ -17277,8 +17277,8 @@
      "capstoneLevel": null
     }
    ],
-   "role": "확률적으로 터지는 잭팟과 웨이브 보너스로 두둑한 도쉬를 안겨주는 <font color=\"#FFD700\">경제형 서포트</font> 퍼크입니다.",
-   "endgame": "웨이브 종료 도쉬 보너스와 확률성 스킬(<font color=\"#15d7fa\">Jackpot</font> 등)을 조합하면 전투와 동시에 상당한 도쉬 수입을 기대할 수 있는 경제 특화 빌드가 완성됩니다.",
+   "role": "확률적 잭팟과 웨이브 보너스로 도쉬 수입을 늘리는 경제형 서포트 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "매 <font color=\"#15d7fa\">웨이브</font> 종료 시 <font color=\"#77d914\">레벨업당 +20 · 만렙(Lv20) +400 도쉬</font>를 획득합니다.",
@@ -17747,8 +17747,8 @@
    "hasIniConfig": false,
    "passiveStats": [],
    "fixedStats": [],
-   "role": "매 웨이브 무작위 버프를 뽑아 능력이 계속 바뀌다가, 레벨 20부터는 그 버프들이 영구적으로 쌓여 시간이 갈수록 점점 강력해지는 <font color=\"#FFD700\">최종 서바이벌리스트</font> 심화 퍼크입니다.",
-   "endgame": "레벨 10부터 웨이브당 버프 2개, <font color=\"#8B0000\">레벨 20(모방)</font>부터는 웨이브마다 새 버프가 <font color=\"#15d7fa\">영구적으로 하나씩 누적</font>되어 최대 15개(전체 버프 완전 습득)까지 쌓일 수 있습니다. 퍼크 자체 버프 효과치는 'ZedternalUnlimited_Balance' ini 파일이 없어 코드 기본값(레벨당 +2~5%대)이 그대로 적용되고 조정 여지가 없어, 장기전(엔들리스)에서 매우 강력해질 수 있습니다.",
+   "role": "웨이브마다 무작위 버프가 영구적으로 쌓여, 시간이 갈수록 능력치가 무한히 확장되는 최종 서바이벌리스트 전직입니다.",
+   "endgame": null,
    "descriptions": [
     {
      "raw": "<font color=\"#c77dff\">변신술사:</font> 각 웨이브마다 레벨에 비례하는 <font color=\"#e0aaff\">무작위 전투 버프</font>를 1개 부여받습니다.",
