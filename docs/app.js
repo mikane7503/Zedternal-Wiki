@@ -80,8 +80,13 @@ async function init() {
         <br>경로: <code>문서\\My Games\\KillingFloor2\\KFGame\\Localization\\KOR</code> 로 들어간 후, 다운로드한 <code>ZedternalRBPerkpackage.KOR</code> 파일을 그대로 덮어쓰기.
         <div class="patch-warning">⚠️ 반드시 Steam 창작마당에서 <b>Zedternal Unlimited 구독을 해제</b>한 상태여야 합니다. 구독 중이면 Steam이 자동 동기화하면서 방금 덮어쓴 패치 파일을 구버전 원본으로 다시 덮어씁니다.</div>
       </div>
-      <a class="patch-download-btn" href="downloads/ZedternalRBPerkpackage.KOR" download>⬇ 한국어 패치 파일 다운로드</a>
+      <a class="patch-download-btn" id="korDownloadBtn" href="downloads/ZedternalRBPerkpackage.KOR" download>⬇ 한국어 패치 파일 다운로드</a>
     </div>`;
+
+  document.getElementById("korDownloadBtn").addEventListener("click", (e) => {
+    const ok = confirm("Steam 창작마당에서 Zedternal Unlimited 구독을 해제하셨습니까?\n\n구독 중인 상태로 이 파일을 덮어쓰면, Steam이 자동 동기화하면서 방금 받은 패치 파일을 구버전 원본으로 다시 덮어씁니다.\n\n구독 해제를 확인하셨다면 [확인]을 눌러 다운로드를 계속하세요.");
+    if (!ok) e.preventDefault();
+  });
 
   renderSidebar();
   renderMainArea();
