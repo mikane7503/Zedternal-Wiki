@@ -312,10 +312,9 @@ function renderBaseDetail(key) {
         <h2>${escapeHtml(p.name)}</h2>
         <div class="subtitle">베이스 퍼크</div>
       </div>
+      ${recentChangeBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
-
-    ${recentChangeBadge}
 
     <div class="section-title">설명</div>
     <div class="desc-line">${p.role || ""}</div>
@@ -371,10 +370,9 @@ function renderAdvDetail(key) {
         <h2>${escapeHtml(p.name)}</h2>
         <div class="subtitle">심화 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
       </div>
+      ${recentChangeBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
-
-    ${recentChangeBadge}
 
     <div class="section-title">설명</div>
     <div class="desc-line">${p.role || ""}</div>
