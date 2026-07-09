@@ -4,6 +4,7 @@ let BASE_BY_KEY = {};
 let OPEN_BASE_KEY = null;
 let SELECTED_ADV_KEY = null;
 let AURORA_VIEW = false;
+let AURORA_MODE = null;
 let SEARCH_INDEX = [];
 let SEARCH_RESULTS = [];
 let SEARCH_ACTIVE_IDX = -1;
@@ -19,25 +20,46 @@ const DAMAGE_GIVEN_STATS = [
   { label: "폭발 피해", real: 0.4 },
   { label: "폭발 파편 피해", real: 0.5 },
   { label: "메딕 수류탄(독성) 피해", real: 0.25 },
-  { label: "베기 피해", real: 0.75 },
-  { label: "관통 피해", real: 0.75 },
-  { label: "타격 피해", real: 0.75 },
-  { label: "HRG 로커스트(독성) 피해", real: 0.3 },
-  { label: "샷건 피해", real: 0.5 },
-  { label: "냉동건 피해", real: 1.3 },
-  { label: "냉동건 얼음 파편 피해", real: 2.0 },
+  { label: "베기 피해", real: 0.85 },
+  { label: "관통 피해", real: 0.85 },
+  { label: "둔기 피해", real: 0.85 },
+  { label: "샷건 피해", real: 0.6 },
 ];
 const DAMAGE_TAKEN_STATS = [
   { label: "허스크 자폭 피해", real: 1.5 },
   { label: "플레쉬파운드 킹 가슴빔 피해", real: 0.75 },
   { label: "한스 유탄 피해", real: 0.75 },
-  { label: "패트리아크 미사일 피해", real: 0.75 },
-  { label: "마트리아크 플라즈마포 피해", real: 0.6 },
+  { label: "가부장 미사일 피해", real: 0.75 },
+  { label: "여장부 플라즈마포 피해", real: 0.6 },
   { label: "소닉 피해", real: 1.5 },
   { label: "독성 피해", real: 2.0 },
-  { label: "허스크 화염구 피해", real: 1.5 },
+  { label: "허스크 화염구 피해", real: 1.25 },
   { label: "허스크 화염방사기 피해", real: 2.0 },
   { label: "근접무기 소지 중 전체 피해", real: 0.75 },
+];
+
+const WEAPON_AURORA_STATS = [
+  { label: "동결 투척자", value: 1.25 },
+  { label: "동결 투척자 얼음 파편", value: 1.75 },
+  { label: "RPG-7 탄두", value: 1.5 },
+  { label: "RPG-7 후폭발", value: 10.0 },
+  { label: "분쇄기 폭발", value: 2.0 },
+  { label: "석궁", value: 1.3 },
+  { label: "컴파운드 보우", value: 1.5 },
+  { label: "M14 EBR", value: 1.3 },
+  { label: "FN FAL", value: 1.2 },
+  { label: "MG3", value: 1.1 },
+  { label: "MG3 변형", value: 1.1 },
+  { label: "스토너 63A", value: 1.1 },
+  { label: "센터파이어 MB464", value: 0.75 },
+  { label: "윈체스터 1894", value: 0.75 },
+  { label: "S&W 500", value: 0.8 },
+  { label: "M99", value: 0.85 },
+  { label: "레일건", value: 0.9 },
+  { label: "허스크 캐논", value: 0.8 },
+  { label: "HV 스톰 캐논", value: 0.9 },
+  { label: "HRG 카붐스틱", value: 0.85 },
+  { label: "HRG 메뚜기", value: 0.3 },
 ];
 
 function el(tag, attrs = {}, children = []) {
@@ -117,8 +139,9 @@ function selectAdv(key) {
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
 }
 
-function showBalanceAurora() {
+function showAurora(mode) {
   AURORA_VIEW = true;
+  AURORA_MODE = mode;
   OPEN_BASE_KEY = null;
   SELECTED_ADV_KEY = null;
   renderSidebar();
@@ -146,7 +169,7 @@ function auroraBarRow(stat, invert) {
 }
 
 function renderBalanceAuroraBox() {
-  const item = el("div", { class: `accordion-item balance-aurora-item ${AURORA_VIEW ? "open" : ""}` });
+  const item = el("div", { class: `accordion-item balance-aurora-item ${AURORA_VIEW && AURORA_MODE === "perk" ? "open" : ""}` });
 
   const header = el("div", { class: "accordion-header" }, [
     el("span", { class: "ba-icon", text: "⚠️" }),
@@ -155,42 +178,82 @@ function renderBalanceAuroraBox() {
     ]),
     el("span", { class: "chevron", text: "▸" }),
   ]);
-  header.addEventListener("click", showBalanceAurora);
+  header.addEventListener("click", () => showAurora("perk"));
   item.appendChild(header);
   return item;
 }
 
+function renderWeaponAuroraBox() {
+  const item = el("div", { class: `accordion-item weapon-aurora-item ${AURORA_VIEW && AURORA_MODE === "weapon" ? "open" : ""}` });
+
+  const header = el("div", { class: "accordion-header" }, [
+    el("span", { class: "ba-icon", text: "⚔️" }),
+    el("div", { class: "titles" }, [
+      el("h3", { text: "무기 밸런스 오로라" }),
+    ]),
+    el("span", { class: "chevron", text: "▸" }),
+  ]);
+  header.addEventListener("click", () => showAurora("weapon"));
+  item.appendChild(header);
+  return item;
+}
+
+function renderWeaponAuroraDetail() {
+  const buffList = WEAPON_AURORA_STATS.filter(w => w.value >= 1).map(w => `<li>${escapeHtml(w.label)}</li>`).join("");
+  const nerfList = WEAPON_AURORA_STATS.filter(w => w.value < 1).map(w => `<li>${escapeHtml(w.label)}</li>`).join("");
+  return `
+    <div class="detail-header">
+      <div class="ba-icon lg">⚔️</div>
+      <div class="detail-titles">
+        <h2>무기 밸런스 오로라</h2>
+      </div>
+    </div>
+
+    <div class="section-title">기준</div>
+    <div class="aurora-note">
+      <div class="aurora-note-main"> 제드터널 모드의 특성상 너무 강하거나 약한 무기를 밸런싱한, 버프 / 너프된 무기 리스트 입니다. <code>소스: [ZedternalReborn.Config_Player]</code></div>
+      <div class="aurora-note-sub">해당 값은 추후 밸런싱을 통해 언제나 바뀔 수 있으며 배율 값은 비공개 입니다.</div>
+    </div>
+
+    <div class="aurora-grid">
+      <div class="aurora-col buff-col">
+        <div class="section-title"><font color=\"#00ff00\">버프</font></div>
+        <ul class="strengths">${buffList}</ul>
+      </div>
+      <div class="aurora-col nerf-col">
+        <div class="section-title"><font color=\"#ff0000\">너프</font></div>
+        <ul class="strengths">${nerfList}</ul>
+      </div>
+    </div>
+  `;
+}
+
 function renderBalanceAuroraDetail() {
-  const container = el("div", {});
-  container.innerHTML = `
+  return `
     <div class="detail-header">
       <div class="ba-icon lg">⚠️</div>
       <div class="detail-titles">
         <h2>퍼크 밸런스 오로라</h2>
       </div>
     </div>
-
     <div class="section-title">설명</div>
     <div class="desc-line">
       속성별로 내가 주는 피해와 받는 피해가 평소보다 얼마나 세거나 약한지 한눈에 볼 수 있는 표입니다.
-      막대가 가운데 기준선보다 오른쪽에서 초록색이면 유리한 쪽, 왼쪽에서 빨간색이면 불리한 쪽입니다.
     </div>
 
-    <div class="section-title">대미지 기븐 (내가 주는 피해)</div>
+    <div class="section-title"><font color=\"#00ff00\">대미지 기븐 (내가 주는 피해 증폭 배율)</font></div>
     ${DAMAGE_GIVEN_STATS.map(s => auroraBarRow(s, false)).join("")}
 
-    <div class="section-title">대미지 테이큰 (내가 받는 피해)</div>
+    <div class="section-title"><font color=\"#00ff00\">대미지 테이큰 (내가 받는 피해 증폭 배율)</font></div>
     ${DAMAGE_TAKEN_STATS.map(s => auroraBarRow(s, true)).join("")}
   `;
-  const wrap = document.createDocumentFragment();
-  wrap.appendChild(container);
-  return wrap;
 }
 
 function renderSidebar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.innerHTML = "";
   sidebar.appendChild(renderBalanceAuroraBox());
+  sidebar.appendChild(renderWeaponAuroraBox());
   for (const base of DATA.basePerks) {
     const isOpen = base.key === OPEN_BASE_KEY;
     const item = el("div", { class: `accordion-item ${isOpen ? "open" : ""}`, "data-basekey": base.key });
@@ -234,7 +297,8 @@ function renderMainArea() {
   main.innerHTML = "";
 
   if (AURORA_VIEW) {
-    main.appendChild(renderBalanceAuroraDetail());
+    main.innerHTML = AURORA_MODE === "weapon" ? renderWeaponAuroraDetail() : renderBalanceAuroraDetail();
+    wireDetailEvents(main);
     return;
   }
   if (SELECTED_ADV_KEY) {
@@ -247,7 +311,7 @@ function renderMainArea() {
     wireDetailEvents(main);
     return;
   }
-  main.appendChild(el("div", { class: "empty-state", text: "왼쪽에서 베이스 퍼크를 선택하면 전직 트리가 펼쳐집니다." }));
+  main.appendChild(el("div", { class: "empty-state", text: "왼쪽에서 베이스 퍼크를 선택하면 베이스 퍼크 트리가 펼쳐집니다." }));
 }
 
 function wireDetailEvents(root) {
@@ -277,9 +341,11 @@ function renderBaseDetail(key) {
 
   const strengths = p.strengths.length
     ? `<ul class="strengths">${p.strengths.map(s => `<li>${escapeHtml(s)}</li>`).join("")}</ul>` : "";
-  const weaknesses = p.weaknesses.map(w =>
-    `<div class="weak-item"><span class="sev-${w.severity}">${escapeHtml(w.skill)}</span> — ${escapeHtml(w.issue)}</div>`
-  ).join("");
+  const weaknesses = p.weaknesses.length
+    ? p.weaknesses.map(w =>
+        `<div class="weak-item"><span class="sev-${w.severity}">${escapeHtml(w.label || w.skill)}</span> — ${escapeHtml(w.issue)}</div>`
+      ).join("")
+    : "";
 
   const grid = el("div", { class: "adv-grid" });
   const unlockByLevel = Object.fromEntries(p.unlocks.map(u => [u.level, u]));
@@ -293,7 +359,7 @@ function renderBaseDetail(key) {
     }, [
       iconImg(adv),
       el("div", { class: "adv-body" }, [
-        el("div", { class: "lvl", text: `Lv${lvl} 전직` }),
+        el("div", { class: "lvl", text: `Lv${lvl} 해금` }),
         el("div", { class: "name", text: adv.name }),
         el("div", { class: "skillcount", text: `스킬 ${adv.skillCount}개` }),
       ]),
@@ -319,14 +385,14 @@ function renderBaseDetail(key) {
     <div class="section-title">설명</div>
     <div class="desc-line">${p.role || ""}</div>
 
-    <div class="section-title">세부 효과 (강점 / 약점)</div>
+    <div class="section-title">세부 효과 (강점)</div>
     ${strengths || '<div class="empty-state" style="padding:10px">기록된 강점 없음</div>'}
-    ${weaknesses || '<div class="empty-state" style="padding:10px">특이사항 없음</div>'}
+    ${weaknesses ? `<div class="section-title" style="margin-top:14px">세부 효과 (약점)</div>${weaknesses}` : ""}
 
-    <div class="section-title">전직 레벨별 수치</div>
+    <div class="section-title">레벨별 수치</div>
     ${renderSliderSection(p.passiveStats, 20)}
 
-    <div class="section-title">전직 트리 (클릭해서 상세 보기)</div>
+    <div class="section-title">퍼크 트리 (클릭해서 상세 보기)</div>
   `;
   container.appendChild(grid);
   wrap.appendChild(container);
@@ -341,7 +407,7 @@ function renderAdvDetail(key) {
     `<div class="desc-line ${d.isCapstone ? "capstone" : ""}">${d.raw || escapeHtml(d.text)}</div>`
   ).join("") || '<div class="empty-state" style="padding:10px">등록된 게임 내 설명이 없습니다 — 아래 시스템 규칙 섹션을 참고하세요.</div>';
   const descNote = p.descriptions.length
-    ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 전직 레벨 20(만렙) 기준입니다.</div>' : "";
+    ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 레벨 20(만렙) 기준입니다.</div>' : "";
 
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
@@ -367,7 +433,7 @@ function renderAdvDetail(key) {
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
-        <div class="subtitle">전직 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
+        <div class="subtitle">베이스 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
       </div>
       ${recentChangeBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
@@ -386,7 +452,7 @@ function renderAdvDetail(key) {
       ${sec.html}
     `).join("")}
 
-    ${hasPassive ? `<div class="section-title">전직 레벨별 수치</div>${renderSliderSection(p.passiveStats, 20)}` : ""}
+    ${hasPassive ? `<div class="section-title">레벨별 수치</div>${renderSliderSection(p.passiveStats, 20)}` : ""}
 
     ${renderFixedStatsSection(p.fixedStats)}
 
@@ -510,7 +576,7 @@ function buildSearchIndex() {
       navKey: adv.key,
       ownKey: adv.key,
       name: adv.name,
-      sub: `전직 퍼크 · ${parent ? parent.name : ""}`,
+      sub: `베이스 퍼크 · ${parent ? parent.name : ""}`,
       search: buildSearchCorpus(adv, parent || { name: "" }),
     });
     for (const s of adv.skills) {
