@@ -395,12 +395,23 @@ function renderBaseDetail(key) {
 
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
+  const skillsHtml = (p.skills || []).map(s => `
+    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}">
+      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
+      ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
+      ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
+      ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
+      ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
+      ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
+    </div>
+  `).join("") || '<div class="empty-state" style="padding:10px">등록된 스킬 없음</div>';
+
   container.innerHTML = `
     <div class="detail-header">
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
-        <div class="subtitle">베이스 퍼크</div>
+        <div class="subtitle">베이스 퍼크 · 스킬 ${p.skillCount || 0}개</div>
       </div>
       ${recentChangeBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
@@ -415,6 +426,9 @@ function renderBaseDetail(key) {
 
     <div class="section-title">레벨별 수치</div>
     ${renderSliderSection(p.passiveStats, 20)}
+
+    <div class="section-title">스킬 목록 (표준 / 디럭스)</div>
+    <div class="skill-list">${skillsHtml}</div>
 
     <div class="section-title">퍼크 트리 (클릭해서 상세 보기)</div>
   `;
@@ -592,6 +606,16 @@ function buildSearchIndex() {
       sub: "베이스 퍼크",
       search: `${base.name} ${base.key}`.toLowerCase(),
     });
+    for (const s of base.skills || []) {
+      SEARCH_INDEX.push({
+        type: "base",
+        navKey: base.key,
+        ownKey: s.key,
+        name: s.name,
+        sub: `스킬 · ${base.name}`,
+        search: `${s.name} ${s.key} ${s.standardDesc || ""} ${s.deluxeDesc || ""}`.toLowerCase(),
+      });
+    }
   }
   for (const adv of DATA.advancedPerks) {
     const parent = BASE_BY_KEY[adv.parentPerk];

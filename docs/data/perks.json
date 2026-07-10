@@ -72,6 +72,427 @@
      "name": "유령"
     }
    ],
+   "skills": [
+    {
+     "key": "BerserkerRage",
+     "name": "광전사의 분노",
+     "standardDesc": "방어구가 없을 때 근접 피해량이 +20%, 기타 피해량이 +10% 증가합니다",
+     "deluxeDesc": "방어구가 없을 때 근접 피해량이 +50%, 기타 피해량이 +25% 증가합니다",
+     "standardDescRaw": "방어구가 없을 때 <font color=\"#caab05\">근접 피해량</font>이 +20%, <font color=\"#eaeff7\">기타 피해량</font>이 +10% 증가합니다",
+     "deluxeDescRaw": "방어구가 없을 때 <font color=\"#caab05\">근접 피해량</font>이 <font color=\"#b346ea\">+50%</font>, <font color=\"#eaeff7\">기타 피해량</font>이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MeleeDamage",
+       "label": "근접 피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_MeleeDamage",
+       "label": "근접 피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Brawler",
+     "name": "격투가",
+     "standardDesc": "클롯의 잡기에 면역이 되며 근접 피해 저항이 +10% 증가합니다",
+     "deluxeDesc": "클롯의 잡기에 면역이 되며 근접 피해 저항이 +25% 증가합니다",
+     "standardDescRaw": "클롯의 잡기에 면역이 되며 근접 피해 저항이 +10% 증가합니다",
+     "deluxeDescRaw": "클롯의 잡기에 면역이 되며 근접 피해 저항이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Butcher",
+     "name": "도살자",
+     "standardDesc": "모든 무기의 공격 및 발사 속도가 +15% 빨라집니다",
+     "deluxeDesc": "모든 무기의 공격 및 발사 속도가 +40% 빨라집니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 및 발사 속도가 +15% 빨라집니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 및 발사 속도가 <font color=\"#b346ea\">+40%</font> 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MeleeSpeed",
+       "label": "근접 속도",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_MeleeSpeed",
+       "label": "근접 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Dreadnaught",
+     "name": "드레드노트",
+     "standardDesc": "최대 체력이 +25% 증가합니다",
+     "deluxeDesc": "최대 체력이 +60% 증가합니다",
+     "standardDescRaw": "최대 체력이 +25% 증가합니다",
+     "deluxeDescRaw": "최대 체력이 <font color=\"#b346ea\">+60%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Health",
+       "label": "체력",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Health",
+       "label": "체력",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Massacre",
+     "name": "대학살",
+     "standardDesc": "근접 무기 피해량이 +20%, 기타 무기 피해량이 +5% 증가합니다",
+     "deluxeDesc": "근접 무기 피해량이 +50%, 기타 무기 피해량이 +15% 증가합니다",
+     "standardDescRaw": "<font color=\"#caab05\">근접 무기</font> 피해량이 +20%, <font color=\"#eaeff7\">기타 무기</font> 피해량이 +5% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#caab05\">근접 무기</font> 피해량이 <font color=\"#b346ea\">+50%</font>, <font color=\"#eaeff7\">기타 무기</font> 피해량이 <font color=\"#b346ea\">+15%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MeleeDamage",
+       "label": "근접 피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_MeleeDamage",
+       "label": "근접 피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Parry",
+     "name": "패링",
+     "standardDesc": "저항력: +10% · 피해량: +30%",
+     "deluxeDesc": "저항력: +13.33% · 피해량: +75%",
+     "standardDescRaw": "저항력: +10% · 피해량: +30%",
+     "deluxeDescRaw": "저항력: +13.33% · 피해량: +75%",
+     "rawValues": [
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.133333,
+       "unit": "percent",
+       "display": "+13.33%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.300000; 구 0.400000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Spartan",
+     "name": "스파르탄",
+     "standardDesc": "특수 속도: +20% · 연사 속도: +40%",
+     "deluxeDesc": "특수 속도: +40% · 연사 속도: +80%",
+     "standardDescRaw": "특수 속도: +20% · 연사 속도: +40%",
+     "deluxeDescRaw": "특수 속도: +40% · 연사 속도: +80%",
+     "rawValues": [
+      {
+       "key": "Cfg_SpecialRate",
+       "label": "특수 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_SpecialRate",
+       "label": "특수 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "Cfg_FireRate",
+       "label": "연사 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "Cfg_FireRate",
+       "label": "연사 속도",
+       "value": 0.8,
+       "unit": "percent",
+       "display": "+80%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Tank",
+     "name": "탱크",
+     "standardDesc": "체력이 최대치의 90% 이상일 때 받는 피해가 6.7% 감소합니다.",
+     "deluxeDesc": "체력이 최대치의 70% 이상일 때 받는 피해가 10% 감소합니다.",
+     "standardDescRaw": "체력이 최대치의 <font color=\"#FFFFFF\">90% 이상</font>일 때 <font color=\"#4169E1\">받는 피해가 6.7% 감소</font>합니다.",
+     "deluxeDescRaw": "체력이 최대치의 <font color=\"#FFFFFF\">70% 이상</font>일 때 <font color=\"#4169E1\">받는 피해가 10% 감소</font>합니다.",
+     "rawValues": [
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.066667,
+       "unit": "percent",
+       "display": "+6.67%"
+      },
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Critical",
+       "label": "치명타",
+       "value": 0.9,
+       "unit": "percent",
+       "display": "+90%"
+      },
+      {
+       "key": "Cfg_Critical",
+       "label": "치명타",
+       "value": 0.7,
+       "unit": "percent",
+       "display": "+70%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.200000; 구 0.300000",
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Vampire",
+     "name": "흡혈귀",
+     "standardDesc": "좀비 처치 시 투사체 무기는 2 포인트, 근접 무기는 3 포인트의 체력을 회복합니다",
+     "deluxeDesc": "좀비 처치 시 투사체 무기는 5 포인트, 근접 무기는 8 포인트의 체력을 회복합니다",
+     "standardDescRaw": "좀비 처치 시 투사체 무기는 2 포인트, 근접 무기는 3 포인트의 체력을 회복합니다",
+     "deluxeDescRaw": "좀비 처치 시 투사체 무기는 <font color=\"#b346ea\">5</font> 포인트, 근접 무기는 <font color=\"#b346ea\">8</font> 포인트의 체력을 회복합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MeleeVampire",
+       "label": "근접 흡혈",
+       "value": 3,
+       "unit": "count",
+       "display": "3"
+      },
+      {
+       "key": "Cfg_MeleeVampire",
+       "label": "근접 흡혈",
+       "value": 8,
+       "unit": "count",
+       "display": "8"
+      },
+      {
+       "key": "Cfg_WeapVampire",
+       "label": "무기 흡혈",
+       "value": 2,
+       "unit": "count",
+       "display": "2"
+      },
+      {
+       "key": "Cfg_WeapVampire",
+       "label": "무기 흡혈",
+       "value": 5,
+       "unit": "count",
+       "display": "5"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Tempest",
+     "name": "폭풍",
+     "standardDesc": "이동 중에 가하는 모든 무기의 피해량이 +20% 증가합니다",
+     "deluxeDesc": "이동 중에 가하는 모든 무기의 피해량이 +50% 증가합니다",
+     "standardDescRaw": "이동 중에 가하는 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 +20% 증가합니다",
+     "deluxeDescRaw": "이동 중에 가하는 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-08), 구 0.005000",
    "testWarning": null,
@@ -142,6 +563,357 @@
      "name": "에고니"
     }
    ],
+   "skills": [
+    {
+     "key": "CallOut",
+     "name": "호출",
+     "standardDesc": "은신한 좀비를 감지할 수 있으며 모든 무기의 피해량이 +10% 증가합니다",
+     "deluxeDesc": "은신한 좀비를 감지할 수 있으며 모든 무기의 피해량이 +25% 증가합니다",
+     "standardDescRaw": "은신한 좀비를 감지할 수 있으며 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 +10% 증가합니다",
+     "deluxeDescRaw": "은신한 좀비를 감지할 수 있으며 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Concentration",
+     "name": "집중",
+     "standardDesc": "ZED 타임 동안 모든 무기의 피해량이 +30% 증가합니다",
+     "deluxeDesc": "ZED 타임 동안 모든 무기의 피해량이 +50% 증가합니다",
+     "standardDescRaw": "ZED 타임 동안 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 +30% 증가합니다",
+     "deluxeDescRaw": "ZED 타임 동안 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Guerrilla",
+     "name": "게릴라",
+     "standardDesc": "최대 체력 및 모든 무기의 피해량이 +10% 증가합니다",
+     "deluxeDesc": "최대 체력 및 모든 무기의 피해량이 +25% 증가합니다",
+     "standardDescRaw": "최대 체력 및 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 +10% 증가합니다",
+     "deluxeDescRaw": "최대 체력 및 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "GunMachine",
+     "name": "기관총 사수",
+     "standardDesc": "피해량: +25%",
+     "deluxeDesc": "피해량: +40%",
+     "standardDescRaw": "피해량: +25%",
+     "deluxeDescRaw": "피해량: +40%",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HighCapacityMags",
+     "name": "대용량 탄창",
+     "standardDesc": "모든 무기의 탄창 용량이 +30% 증가합니다",
+     "deluxeDesc": "모든 무기의 탄창 용량이 +75% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 탄창 용량이 +30% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 탄창 용량이 <font color=\"#b346ea\">+75%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MagCapacity",
+       "label": "탄창 용량",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_MagCapacity",
+       "label": "탄창 용량",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ImpactRounds",
+     "name": "충격탄",
+     "standardDesc": "모든 무기의 비틀거림 +10%, 탄도 피해량이 +10% 증가합니다",
+     "deluxeDesc": "모든 무기의 비틀거림 +25%, 탄도 피해량이 +25% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 비틀거림 +10%, <font color=\"#caab05\">탄도</font> 피해량이 +10% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 비틀거림 <font color=\"#b346ea\">+25%</font>, <font color=\"#caab05\">탄도</font> 피해량이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Stumble",
+       "label": "휘청임",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Stumble",
+       "label": "휘청임",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.200000; 구 0.500000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Overload",
+     "name": "과부하",
+     "standardDesc": "모든 무기의 탄창 및 최대 탄약량이 +20% 증가합니다",
+     "deluxeDesc": "모든 무기의 탄창 및 최대 탄약량이 +50% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 탄창 및 최대 탄약량이 +20% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 탄창 및 최대 탄약량이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MagCapacity",
+       "label": "탄창 용량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_MagCapacity",
+       "label": "탄창 용량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_MaxAmmo",
+       "label": "최대 탄약",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_MaxAmmo",
+       "label": "최대 탄약",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Supplier",
+     "name": "보급원",
+     "standardDesc": "탄약 소지량이 +30% 증가하며 웨이브당 1회 팀원에게 탄약을 보급해 줄 수 있습니다",
+     "deluxeDesc": "보급 탄약: +30% · 최대 탄약: +75%",
+     "standardDescRaw": "탄약 소지량이 +30% 증가하며 웨이브당 1회 팀원에게 탄약을 보급해 줄 수 있습니다",
+     "deluxeDescRaw": "보급 탄약: +30% · 최대 탄약: +75%",
+     "rawValues": [
+      {
+       "key": "Cfg_SupplierAmmo",
+       "label": "보급 탄약",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_MaxAmmo",
+       "label": "최대 탄약",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_MaxAmmo",
+       "label": "최대 탄약",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "TacticalReload",
+     "name": "전술 재장전",
+     "standardDesc": "재장전 속도 디럭스: +15%",
+     "deluxeDesc": "모든 무기의 재장전 속도가 +15% 빨라집니다",
+     "standardDescRaw": "재장전 속도 디럭스: +15%",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 재장전 속도가 <font color=\"#b346ea\">+15%</font> 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_ReloadRateDeluxe",
+       "label": "재장전 속도 디럭스",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.300000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Tactician",
+     "name": "전술가",
+     "standardDesc": "배율: ×1",
+     "deluxeDesc": "ZED 타임 동안 모든 무기를 정상 속도보다 +175% 더 빠르게 재장전 및 전환합니다",
+     "standardDescRaw": "배율: ×1",
+     "deluxeDescRaw": "ZED 타임 동안 <font color=\"#eaeff7\">모든 무기</font>를 정상 속도보다 <font color=\"#b346ea\">+175%</font> 더 빠르게 재장전 및 전환합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Mod",
+       "label": "배율",
+       "value": 1.0,
+       "unit": "multiplier",
+       "display": "×1"
+      },
+      {
+       "key": "Cfg_Mod",
+       "label": "배율",
+       "value": 1.75,
+       "unit": "multiplier",
+       "display": "×1.75"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.025000; 밸런스 패치(2026-07-07), 구 0.030000",
    "testWarning": null,
@@ -220,6 +992,350 @@
      "name": "기폭 장치"
     }
    ],
+   "skills": [
+    {
+     "key": "Bombardier",
+     "name": "폭격수",
+     "standardDesc": "피해량: +20%",
+     "deluxeDesc": "20초마다 수류탄을 1개 획득하며 모든 수류탄의 피해량이 +50% 증가합니다",
+     "standardDescRaw": "피해량: +20%",
+     "deluxeDescRaw": "<font color=\"#b346ea\">20</font>초마다 수류탄을 1개 획득하며 <font color=\"#eaeff7\">모든 수류탄</font>의 피해량이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "DestroyerOfWorlds",
+     "name": "세계의 파괴자",
+     "standardDesc": "모든 폭발물 및 수류탄의 피해량이 +20% 증가합니다",
+     "deluxeDesc": "모든 폭발물 및 수류탄의 피해량이 +50% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 폭발물</font> 및 <font color=\"#eaeff7\">수류탄</font>의 피해량이 +20% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 폭발물</font> 및 <font color=\"#eaeff7\">수류탄</font>의 피해량이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ExtraRounds",
+     "name": "추가 탄약",
+     "standardDesc": "모든 무기의 최대 탄약량이 +15% 증가하며 폭파병 무기는 5발 더 추가됩니다",
+     "deluxeDesc": "모든 무기의 최대 탄약량이 +40% 증가하며 폭파병 무기는 10발 더 추가됩니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 최대 탄약량이 +15% 증가하며 <font color=\"#caab05\">폭파병 무기</font>는 5발 더 추가됩니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 최대 탄약량이 <font color=\"#b346ea\">+40%</font> 증가하며 <font color=\"#caab05\">폭파병 무기</font>는 <font color=\"#b346ea\">10</font>발 더 추가됩니다",
+     "rawValues": [
+      {
+       "key": "Cfg_ExtraAmmoPrct",
+       "label": "추가 탄약 Prct",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_ExtraAmmoPrct",
+       "label": "추가 탄약 Prct",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "Cfg_ExtraAmmo",
+       "label": "추가 탄약",
+       "value": 5,
+       "unit": "count",
+       "display": "5"
+      },
+      {
+       "key": "Cfg_ExtraAmmo",
+       "label": "추가 탄약",
+       "value": 10,
+       "unit": "count",
+       "display": "10"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "FrontLine",
+     "name": "최전선",
+     "standardDesc": "자신이 쏜 폭발물 저항이 +1.67%, 기타 피해 저항이 +11.67% 증가합니다",
+     "deluxeDesc": "자신이 쏜 폭발물 저항이 +3.33%, 기타 피해 저항이 +25% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">자신이 쏜 폭발물</font> 저항이 +1.67%, 기타 피해 저항이 +11.67% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">자신이 쏜 폭발물</font> 저항이 <font color=\"#b346ea\">+3.33%</font>, 기타 피해 저항이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_OtherResistance",
+       "label": "Other 저항력",
+       "value": 0.016667,
+       "unit": "percent",
+       "display": "+1.67%"
+      },
+      {
+       "key": "Cfg_OtherResistance",
+       "label": "Other 저항력",
+       "value": 0.033333,
+       "unit": "percent",
+       "display": "+3.33%"
+      },
+      {
+       "key": "Cfg_SelfExplosiveResistance",
+       "label": "자신 폭발물 저항력",
+       "value": 0.116667,
+       "unit": "percent",
+       "display": "+11.67%"
+      },
+      {
+       "key": "Cfg_SelfExplosiveResistance",
+       "label": "자신 폭발물 저항력",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.050000; 구 0.100000; 구 0.350000; 구 0.750000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HighImpactRound",
+     "name": "고충격탄",
+     "standardDesc": "모든 폭발물의 넉다운 위력이 +20% 증가합니다",
+     "deluxeDesc": "모든 폭발물의 넉다운 위력이 +50% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 폭발물</font>의 넉다운 위력이 +20% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 폭발물</font>의 넉다운 위력이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.400000(T2는 100%확정이었음); 구 1.000000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Kamikaze",
+     "name": "가미카제",
+     "standardDesc": "피해량 디럭스: +25%",
+     "deluxeDesc": "모든 무기의 피해량이 +25% 증가하며 위독 시 폭발하고 생존합니다 (웨이브당 1회)",
+     "standardDescRaw": "피해량 디럭스: +25%",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 피해량이 <font color=\"#b346ea\">+25%</font> 증가하며 위독 시 폭발하고 생존합니다 (웨이브당 1회)",
+     "rawValues": [
+      {
+       "key": "Cfg_DamageDeluxe",
+       "label": "피해량 디럭스",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "MadBomber",
+     "name": "미친 폭격수",
+     "standardDesc": "폭발탄이 거리 제한 없이 폭발하며 자신의 폭발물 저항이 +10% 증가합니다",
+     "deluxeDesc": "폭발탄이 거리 제한 없이 폭발하며 자신의 폭발물 저항이 +23.33% 증가합니다",
+     "standardDescRaw": "<font color=\"#caab05\">폭발탄</font>이 거리 제한 없이 폭발하며 <font color=\"#eaeff7\">자신의 폭발물</font> 저항이 +10% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#caab05\">폭발탄</font>이 거리 제한 없이 폭발하며 <font color=\"#eaeff7\">자신의 폭발물</font> 저항이 <font color=\"#b346ea\">+23.33%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.233333,
+       "unit": "percent",
+       "display": "+23.33%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.300000; 구 0.700000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ShockTrooper",
+     "name": "충격 부대",
+     "standardDesc": "모든 무기의 빈 탄창 재장전 속도가 +20% 빨라집니다",
+     "deluxeDesc": "모든 무기의 빈 탄창 재장전 속도가 +50% 빨라집니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 빈 탄창 재장전 속도가 +20% 빨라집니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 빈 탄창 재장전 속도가 <font color=\"#b346ea\">+50%</font> 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_ReloadSpeed",
+       "label": "재장전 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_ReloadSpeed",
+       "label": "재장전 속도",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.400000; 구 1.000000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "SonicResistantRounds",
+     "name": "음파 저항탄",
+     "standardDesc": "자신이 쏜 폭발물이 사이렌 비명에 면역되며 음파 피해 저항이 +30% 증가합니다",
+     "deluxeDesc": "자신이 쏜 폭발물이 사이렌 비명에 면역되며 음파 피해 저항이 +60% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">자신이 쏜 폭발물</font>이 사이렌 비명에 면역되며 음파 피해 저항이 +30% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">자신이 쏜 폭발물</font>이 사이렌 비명에 면역되며 음파 피해 저항이 <font color=\"#b346ea\">+60%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "구 0.4/1.0(T2 음파피해 완전면역) → -60%로 제한. 소스 확인: ProjSirenResist()가 레벨 무관 항상 True라 스턴내성은 T1부터 이미 확보, 데미지까지 100%면역은 사이렌 완전무력화라 과도",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "QuickFuse",
+     "name": "단축 도화선",
+     "standardDesc": "피해량: +20%",
+     "deluxeDesc": "피해량: +50%",
+     "standardDescRaw": "피해량: +20%",
+     "deluxeDescRaw": "피해량: +50%",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.025000; 밸런스 패치(2026-07-07), 구 0.040000",
    "testWarning": null,
@@ -299,6 +1415,384 @@
      "name": "공생체"
     }
    ],
+   "skills": [
+    {
+     "key": "AcidicRounds",
+     "name": "산성탄",
+     "standardDesc": "최대 피해량: 75 · 피해량 계수: +20% · 최대 확률: +100%",
+     "deluxeDesc": "최대 피해량: 75 · 피해량 계수: +50% · 최대 확률: +100%",
+     "standardDescRaw": "최대 피해량: 75 · 피해량 계수: +20% · 최대 확률: +100%",
+     "deluxeDescRaw": "최대 피해량: 75 · 피해량 계수: +50% · 최대 확률: +100%",
+     "rawValues": [
+      {
+       "key": "Cfg_maxDamage",
+       "label": "최대 피해량",
+       "value": 75.0,
+       "unit": "count",
+       "display": "75"
+      },
+      {
+       "key": "Cfg_damageFactor",
+       "label": "피해량 계수",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_damageFactor",
+       "label": "피해량 계수",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_maxProbability",
+       "label": "최대 확률",
+       "value": 1.0,
+       "unit": "percent",
+       "display": "+100%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "AirborneAgent",
+     "name": "공중 작용제",
+     "standardDesc": "자신이나 주변 팀원이 위험할 때 치유 가스를 방출합니다",
+     "deluxeDesc": "자신이나 주변 팀원이 위험할 때 강력한 치유 가스를 방출합니다",
+     "standardDescRaw": "자신이나 주변 팀원이 위험할 때 치유 가스를 방출합니다",
+     "deluxeDescRaw": "자신이나 주변 팀원이 위험할 때 <font color=\"#b346ea\">강력한</font> 치유 가스를 방출합니다",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "BattleSurgeon",
+     "name": "전장 외과의",
+     "standardDesc": "의무병 무기의 피해량이 +20%, 기타 무기의 피해량이 +10% 증가합니다",
+     "deluxeDesc": "의무병 무기의 피해량이 +50%, 기타 무기의 피해량이 +25% 증가합니다",
+     "standardDescRaw": "<font color=\"#caab05\">의무병 무기</font>의 피해량이 +20%, <font color=\"#eaeff7\">기타 무기</font>의 피해량이 +10% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#caab05\">의무병 무기</font>의 피해량이 <font color=\"#b346ea\">+50%</font>, <font color=\"#eaeff7\">기타 무기</font>의 피해량이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_OtherDamage",
+       "label": "Other 피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_OtherDamage",
+       "label": "Other 피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "CoagulantBooster",
+     "name": "응고제 부스터",
+     "standardDesc": "잃은 체력 1포인트당 피해 저항이 +0.17% 증가합니다 (최대 +6.67%)",
+     "deluxeDesc": "잃은 체력 1포인트당 피해 저항이 +0.4% 증가합니다 (최대 +11.67%)",
+     "standardDescRaw": "잃은 체력 1포인트당 피해 저항이 +0.17% 증가합니다 (최대 +6.67%)",
+     "deluxeDescRaw": "잃은 체력 1포인트당 피해 저항이 <font color=\"#b346ea\">+0.4%</font> 증가합니다 (최대 <font color=\"#b346ea\">+11.67%</font>)",
+     "rawValues": [
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.001667,
+       "unit": "percent",
+       "display": "+0.17%"
+      },
+      {
+       "key": "Cfg_Resistance",
+       "label": "저항력",
+       "value": 0.004,
+       "unit": "percent",
+       "display": "+0.4%"
+      },
+      {
+       "key": "Cfg_MaxResistance",
+       "label": "최대 저항력",
+       "value": 0.066667,
+       "unit": "percent",
+       "display": "+6.67%"
+      },
+      {
+       "key": "Cfg_MaxResistance",
+       "label": "최대 저항력",
+       "value": 0.116667,
+       "unit": "percent",
+       "display": "+11.67%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.005000; 구 0.012000; 구 0.200000; 구 0.350000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "CombatantDoctor",
+     "name": "전투 의사",
+     "standardDesc": "누적 50포인트의 체력을 치유하면 모든 무기의 탄약이 생성됩니다",
+     "deluxeDesc": "누적 25포인트의 체력을 치유하면 모든 무기의 탄약이 생성됩니다",
+     "standardDescRaw": "누적 50포인트의 체력을 치유하면 모든 무기의 탄약이 생성됩니다",
+     "deluxeDescRaw": "누적 <font color=\"#b346ea\">25</font>포인트의 체력을 치유하면 모든 무기의 탄약이 생성됩니다",
+     "rawValues": [
+      {
+       "key": "Cfg_AmmoDivider",
+       "label": "탄약 나눔값",
+       "value": 30.0,
+       "unit": "count",
+       "display": "30"
+      },
+      {
+       "key": "Cfg_HealthThreshold",
+       "label": "체력 임계값",
+       "value": 50,
+       "unit": "count",
+       "display": "50"
+      },
+      {
+       "key": "Cfg_HealthThreshold",
+       "label": "체력 임계값",
+       "value": 25,
+       "unit": "count",
+       "display": "25"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": true,
+     "disabledNote": "2026-07-04 제거: 심각한 무한 탄약 보충",
+     "noData": false
+    },
+    {
+     "key": "Hemoglobin",
+     "name": "헤모글로빈",
+     "standardDesc": "독 피해가 좀비에게 장기 부전을 유발합니다",
+     "deluxeDesc": "독 피해가 좀비에게 심각한 장기 부전을 유발합니다",
+     "standardDescRaw": "<font color=\"#caab05\">독</font> 피해가 좀비에게 장기 부전을 유발합니다",
+     "deluxeDescRaw": "<font color=\"#caab05\">독</font> 피해가 좀비에게 <font color=\"#b346ea\">심각한</font> 장기 부전을 유발합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 30,
+       "unit": "count",
+       "display": "30"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 100,
+       "unit": "count",
+       "display": "100"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Safeguard",
+     "name": "안전 보호",
+     "standardDesc": "주사기 및 치유 다트의 효능과 충전 속도가 +20% 증가합니다",
+     "deluxeDesc": "주사기 및 치유 다트의 효능과 충전 속도가 +50% 증가합니다",
+     "standardDescRaw": "주사기 및 치유 다트의 효능과 충전 속도가 +20% 증가합니다",
+     "deluxeDescRaw": "주사기 및 치유 다트의 효능과 충전 속도가 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "SymbioticHealth",
+     "name": "공생 체력",
+     "standardDesc": "보너스: +10%",
+     "deluxeDesc": "보너스: +25%",
+     "standardDescRaw": "보너스: +10%",
+     "deluxeDescRaw": "보너스: +25%",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Zedatif",
+     "name": "ZED-진정제",
+     "standardDesc": "독 효과가 좀비를 둔화시키며 독 피해량 및 치유 효력이 +25% 증가합니다",
+     "deluxeDesc": "독 효과가 좀비를 둔화시키며 독 피해량 및 치유 효력이 +60% 증가합니다",
+     "standardDescRaw": "독 효과가 좀비를 둔화시키며 독 피해량 및 치유 효력이 +25% 증가합니다",
+     "deluxeDescRaw": "독 효과가 좀비를 둔화시키며 독 피해량 및 치유 효력이 <font color=\"#b346ea\">+60%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      },
+      {
+       "key": "Cfg_Snare",
+       "label": "속박",
+       "value": 15.0,
+       "unit": "count",
+       "display": "15"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "CC 남발 축소(2026-07-02), 구 30.000000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "FocusInjection",
+     "name": "집중 주입",
+     "standardDesc": "보너스: 5 · 최대 보너스: 20",
+     "deluxeDesc": "보너스: 10 · 최대 보너스: 50",
+     "standardDescRaw": "보너스: 5 · 최대 보너스: 20",
+     "deluxeDescRaw": "보너스: 10 · 최대 보너스: 50",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 5,
+       "unit": "count",
+       "display": "5"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 10,
+       "unit": "count",
+       "display": "10"
+      },
+      {
+       "key": "Cfg_MaxBonus",
+       "label": "최대 보너스",
+       "value": 20,
+       "unit": "count",
+       "display": "20"
+      },
+      {
+       "key": "Cfg_MaxBonus",
+       "label": "최대 보너스",
+       "value": 50,
+       "unit": "count",
+       "display": "50"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.012500",
    "testWarning": null,
@@ -366,6 +1860,370 @@
      "name": "신더"
     }
    ],
+   "skills": [
+    {
+     "key": "Barbecue",
+     "name": "바비큐",
+     "standardDesc": "피해량 시간: 1.5초 · 피해량: +10%",
+     "deluxeDesc": "피해량 시간: 2.5초 · 피해량: +25%",
+     "standardDescRaw": "피해량 시간: 1.5초 · 피해량: +10%",
+     "deluxeDescRaw": "피해량 시간: 2.5초 · 피해량: +25%",
+     "rawValues": [
+      {
+       "key": "Cfg_DamageOverTime",
+       "label": "피해량 시간",
+       "value": 1.5,
+       "unit": "seconds",
+       "display": "1.5초"
+      },
+      {
+       "key": "Cfg_DamageOverTime",
+       "label": "피해량 시간",
+       "value": 2.5,
+       "unit": "seconds",
+       "display": "2.5초"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "BringTheHeat",
+     "name": "열기 발산",
+     "standardDesc": "화염 보너스: +140%",
+     "deluxeDesc": "화염 보너스: +140%",
+     "standardDescRaw": "화염 보너스: +140%",
+     "deluxeDescRaw": "화염 보너스: +140%",
+     "rawValues": [
+      {
+       "key": "Cfg_FireBonus",
+       "label": "화염 보너스",
+       "value": 1.4,
+       "unit": "percent",
+       "display": "+140%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": true,
+     "disabledNote": "2026-07-06 제거: 열기 발산 (제드타임 버그 추측)",
+     "noData": false
+    },
+    {
+     "key": "Combustion",
+     "name": "연소",
+     "standardDesc": "화상, 빙결, 독 피해량이 +15% 증가합니다",
+     "deluxeDesc": "화상, 빙결, 독 피해량이 +25% 증가합니다",
+     "standardDescRaw": "화상, 빙결, 독 피해량이 +15% 증가합니다",
+     "deluxeDescRaw": "화상, 빙결, 독 피해량이 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Firestorm",
+     "name": "화염 폭풍",
+     "standardDesc": "모든 무기의 공격 속도가 +15% 빨라지며 화염병 무기의 사거리가 증가합니다",
+     "deluxeDesc": "모든 무기의 공격 속도가 +40% 빨라지며 화염병 무기의 사거리가 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 속도가 +15% 빨라지며 <font color=\"#caab05\">화염병 무기</font>의 사거리가 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 속도가 <font color=\"#b346ea\">+40%</font> 빨라지며 <font color=\"#caab05\">화염병 무기</font>의 사거리가 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MeleeSpeed",
+       "label": "근접 속도",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_MeleeSpeed",
+       "label": "근접 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "Cfg_FireRate",
+       "label": "연사 속도",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_FireRate",
+       "label": "연사 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HeatWaves",
+     "name": "열파",
+     "standardDesc": "휘청임: +150% · 피해량: +60% · 범위 제곱: 90,000",
+     "deluxeDesc": "6미터 내의 좀비 사격 시 비틀거림 +150% 증가 및 화염병 무기로 +150% 추가 피해를 주는 지면 화염을 생성합니다",
+     "standardDescRaw": "휘청임: +150% · 피해량: +60% · 범위 제곱: 90,000",
+     "deluxeDescRaw": "<font color=\"#b346ea\">6</font>미터 내의 좀비 사격 시 비틀거림 +150% 증가 및 <font color=\"#caab05\">화염병 무기</font>로 <font color=\"#b346ea\">+150%</font> 추가 피해를 주는 지면 화염을 생성합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Stumble",
+       "label": "휘청임",
+       "value": 1.5,
+       "unit": "percent",
+       "display": "+150%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 1.5,
+       "unit": "percent",
+       "display": "+150%"
+      },
+      {
+       "key": "Cfg_RadiusSQ",
+       "label": "범위 제곱",
+       "value": 90000,
+       "unit": "distance",
+       "display": "90,000"
+      },
+      {
+       "key": "Cfg_RadiusSQ",
+       "label": "범위 제곱",
+       "value": 360000,
+       "unit": "distance",
+       "display": "360,000"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": "성능 감시",
+     "noData": false
+    },
+    {
+     "key": "Napalm",
+     "name": "네이팜",
+     "standardDesc": "최대 피해량: 75 · 피해량 계수: +20% · 최대 확률: +100%",
+     "deluxeDesc": "최대 피해량: 75 · 피해량 계수: +50% · 최대 확률: +100%",
+     "standardDescRaw": "최대 피해량: 75 · 피해량 계수: +20% · 최대 확률: +100%",
+     "deluxeDescRaw": "최대 피해량: 75 · 피해량 계수: +50% · 최대 확률: +100%",
+     "rawValues": [
+      {
+       "key": "Cfg_maxDamage",
+       "label": "최대 피해량",
+       "value": 75.0,
+       "unit": "count",
+       "display": "75"
+      },
+      {
+       "key": "Cfg_damageFactor",
+       "label": "피해량 계수",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_damageFactor",
+       "label": "피해량 계수",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_maxProbability",
+       "label": "최대 확률",
+       "value": 1.0,
+       "unit": "percent",
+       "display": "+100%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Pyromaniac",
+     "name": "방화광",
+     "standardDesc": "주변 좀비 4마리 이상 시 발사 속도 +20% 증가 및 무한 탄약을 사용합니다",
+     "deluxeDesc": "주변 좀비 3마리 이상 시 발사 속도 +40% 증가 및 무한 탄약을 사용합니다",
+     "standardDescRaw": "주변 좀비 4마리 이상 시 발사 속도 +20% 증가 및 무한 탄약을 사용합니다",
+     "deluxeDescRaw": "주변 좀비 <font color=\"#b346ea\">3</font>마리 이상 시 발사 속도 <font color=\"#b346ea\">+40%</font> 증가 및 무한 탄약을 사용합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": true,
+     "disabledNote": "2026-07-04 제거: 사기급 성능",
+     "noData": false
+    },
+    {
+     "key": "Resistance",
+     "name": "저항력",
+     "standardDesc": "화염, 음파, 독성 피해 저항이 +8.33% 증가합니다",
+     "deluxeDesc": "화염, 음파, 독성 피해 저항이 +20% 증가합니다",
+     "standardDescRaw": "화염, 음파, 독성 피해 저항이 +8.33% 증가합니다",
+     "deluxeDescRaw": "화염, 음파, 독성 피해 저항이 <font color=\"#b346ea\">+20%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.083333,
+       "unit": "percent",
+       "display": "+8.33%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.250000; 구 0.600000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ZedPlosion",
+     "name": "ZED-폭발",
+     "standardDesc": "처치한 좀비가 +20% 확률로 폭발하여 주변 좀비에게 피해를 입히고 넘어뜨립니다",
+     "deluxeDesc": "처치한 좀비가 +50% 확률로 폭발하여 주변 좀비에게 피해를 입히고 넘어뜨립니다",
+     "standardDescRaw": "처치한 좀비가 +20% 확률로 폭발하여 주변 좀비에게 피해를 입히고 넘어뜨립니다",
+     "deluxeDescRaw": "처치한 좀비가 <font color=\"#b346ea\">+50%</font> 확률로 폭발하여 주변 좀비에게 피해를 입히고 넘어뜨립니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Chance",
+       "label": "확률",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Chance",
+       "label": "확률",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": true,
+     "disabledNote": "2026-07-07 제거: 사기급 성능",
+     "noData": false
+    },
+    {
+     "key": "HotPepper",
+     "name": "매운 후추",
+     "standardDesc": "1.5미터 이내의 좀비들이 잠시 후 불에 타기 시작합니다",
+     "deluxeDesc": "1.5미터 이내의 좀비들이 잠시 후 치명적인 불길에 휩싸입니다",
+     "standardDescRaw": "1.5미터 이내의 좀비들이 잠시 후 불에 타기 시작합니다",
+     "deluxeDescRaw": "1.5미터 이내의 좀비들이 잠시 후 <font color=\"#b346ea\">치명적인</font> 불길에 휩싸입니다",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": "성능 감시",
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
@@ -442,6 +2300,420 @@
      "name": "사신"
     }
    ],
+   "skills": [
+    {
+     "key": "BoneBreaker",
+     "name": "뼈 분쇄자",
+     "standardDesc": "휘청임: +15% · 넉다운: +10%",
+     "deluxeDesc": "휘청임: +37.5% · 넉다운: +15%",
+     "standardDescRaw": "휘청임: +15% · 넉다운: +10%",
+     "deluxeDescRaw": "휘청임: +37.5% · 넉다운: +15%",
+     "rawValues": [
+      {
+       "key": "Cfg_Stumble",
+       "label": "휘청임",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Stumble",
+       "label": "휘청임",
+       "value": 0.375,
+       "unit": "percent",
+       "display": "+37.5%"
+      },
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.300000; 구 0.750000; 구 0.200000; 구 0.300000; 구 0.500000; 구 0.600000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "FirstBlood",
+     "name": "선혈",
+     "standardDesc": "피해량 Delta: +5% · 피해량 최대: 2",
+     "deluxeDesc": "피해량 Delta: +10% · 피해량 최대: 5",
+     "standardDescRaw": "피해량 Delta: +5% · 피해량 최대: 2",
+     "deluxeDescRaw": "피해량 Delta: +10% · 피해량 최대: 5",
+     "rawValues": [
+      {
+       "key": "Cfg_DamageDelta",
+       "label": "피해량 Delta",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "Cfg_DamageDelta",
+       "label": "피해량 Delta",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_DamageMax",
+       "label": "피해량 최대",
+       "value": 2.0,
+       "unit": "count",
+       "display": "2"
+      },
+      {
+       "key": "Cfg_DamageMax",
+       "label": "피해량 최대",
+       "value": 5.0,
+       "unit": "count",
+       "display": "5"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "MagicBullet",
+     "name": "마법의 총알",
+     "standardDesc": "좀비 처치 시 예비 탄약 1발이 현재 탄창에 즉시 추가됩니다",
+     "deluxeDesc": "좀비 처치 시 예비 탄약 2발이 현재 탄창에 즉시 추가됩니다",
+     "standardDescRaw": "좀비 처치 시 예비 탄약 1발이 현재 탄창에 즉시 추가됩니다",
+     "deluxeDescRaw": "좀비 처치 시 예비 탄약 <font color=\"#b346ea\">2</font>발이 현재 탄창에 즉시 추가됩니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Ammo",
+       "label": "탄약",
+       "value": 1,
+       "unit": "count",
+       "display": "1"
+      },
+      {
+       "key": "Cfg_Ammo",
+       "label": "탄약",
+       "value": 2,
+       "unit": "count",
+       "display": "2"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "QuickDraw",
+     "name": "속발",
+     "standardDesc": "모든 무기 전환 속도가 +100% 빨라집니다",
+     "deluxeDesc": "모든 무기 전환 속도가 +250% 빨라집니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font> 전환 속도가 +100% 빨라집니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font> 전환 속도가 <font color=\"#b346ea\">+250%</font> 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_SwitchSpeed",
+       "label": "무기 전환 속도",
+       "value": 1.0,
+       "unit": "percent",
+       "display": "+100%"
+      },
+      {
+       "key": "Cfg_SwitchSpeed",
+       "label": "무기 전환 속도",
+       "value": 2.5,
+       "unit": "percent",
+       "display": "+250%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Ruthless",
+     "name": "무자비함",
+     "standardDesc": "모든 무기의 피해량이 +15% 증가합니다",
+     "deluxeDesc": "모든 무기의 피해량이 +40% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 피해량이 +15% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 피해량이 <font color=\"#b346ea\">+40%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ShootAndRun",
+     "name": "기동 사격",
+     "standardDesc": "지속적으로 좀비 처치 시 재장전 속도 최대 +20%, 이동 속도 최대 +25% 증가합니다",
+     "deluxeDesc": "지속적으로 좀비 처치 시 재장전 속도 최대 +50%, 이동 속도 최대 +62.5% 증가합니다",
+     "standardDescRaw": "지속적으로 좀비 처치 시 재장전 속도 최대 +20%, 이동 속도 최대 +25% 증가합니다",
+     "deluxeDescRaw": "지속적으로 좀비 처치 시 재장전 속도 최대 <font color=\"#b346ea\">+50%</font>, 이동 속도 최대 <font color=\"#b346ea\">+62.5%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MaxMoveSpeedBonus",
+       "label": "최대 이동 속도 보너스",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_MaxMoveSpeedBonus",
+       "label": "최대 이동 속도 보너스",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_MaxReloadSpeedBonus",
+       "label": "최대 재장전 속도 보너스",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_MaxReloadSpeedBonus",
+       "label": "최대 재장전 속도 보너스",
+       "value": 0.625,
+       "unit": "percent",
+       "display": "+62.5%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.500000; 구 1.250000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Skirmisher",
+     "name": "유격병",
+     "standardDesc": "이동 속도가 +5% 빨라지며 매초 체력을 1 포인트씩 재생합니다",
+     "deluxeDesc": "이동 속도가 +10% 빨라지며 매초 체력을 2 포인트씩 재생합니다",
+     "standardDescRaw": "이동 속도가 +5% 빨라지며 매초 체력을 1 포인트씩 재생합니다",
+     "deluxeDescRaw": "이동 속도가 <font color=\"#b346ea\">+10%</font> 빨라지며 매초 체력을 <font color=\"#b346ea\">2</font> 포인트씩 재생합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MoveSpeed",
+       "label": "이동 속도",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "Cfg_MoveSpeed",
+       "label": "이동 속도",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Speedloader",
+     "name": "속사 장전기",
+     "standardDesc": "탄창에 남은 탄약 수에 비례해 재장전 속도가 +5%~+20% 빨라집니다",
+     "deluxeDesc": "탄창에 남은 탄약 수에 비례해 재장전 속도가 +12.5%~+37.5% 빨라집니다",
+     "standardDescRaw": "탄창에 남은 탄약 수에 비례해 재장전 속도가 +5%~+20% 빨라집니다",
+     "deluxeDescRaw": "탄창에 남은 탄약 수에 비례해 재장전 속도가 <font color=\"#b346ea\">+12.5%</font>~<font color=\"#b346ea\">+37.5%</font> 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MinReloadSpeed",
+       "label": "최소 재장전 속도",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "Cfg_MinReloadSpeed",
+       "label": "최소 재장전 속도",
+       "value": 0.125,
+       "unit": "percent",
+       "display": "+12.5%"
+      },
+      {
+       "key": "Cfg_maxReloadSpeed",
+       "label": "최대 재장전 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_maxReloadSpeed",
+       "label": "최대 재장전 속도",
+       "value": 0.375,
+       "unit": "percent",
+       "display": "+37.5%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.100000; 구 0.250000; 구 0.400000; 구 0.750000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "WhirlwindOfLead",
+     "name": "납탄의 회오리",
+     "standardDesc": "특수 속도: +20% · 연사 속도: +50%",
+     "deluxeDesc": "특수 속도: +40% · 연사 속도: +90%",
+     "standardDescRaw": "특수 속도: +20% · 연사 속도: +50%",
+     "deluxeDescRaw": "특수 속도: +40% · 연사 속도: +90%",
+     "rawValues": [
+      {
+       "key": "Cfg_SpecialRate",
+       "label": "특수 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_SpecialRate",
+       "label": "특수 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "Cfg_FireRate",
+       "label": "연사 속도",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_FireRate",
+       "label": "연사 속도",
+       "value": 0.9,
+       "unit": "percent",
+       "display": "+90%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": true,
+     "disabledNote": "2026-07-04 제거: 제드타임 무한탄약 무한속도",
+     "noData": false
+    },
+    {
+     "key": "Steady",
+     "name": "안정적",
+     "standardDesc": "반동: +30% · 흔들림: +11%",
+     "deluxeDesc": "반동: +75% · 흔들림: +11%",
+     "standardDescRaw": "반동: +30% · 흔들림: +11%",
+     "deluxeDescRaw": "반동: +75% · 흔들림: +11%",
+     "rawValues": [
+      {
+       "key": "Cfg_Recoil",
+       "label": "반동",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_Recoil",
+       "label": "반동",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      },
+      {
+       "key": "Cfg_Bob",
+       "label": "흔들림",
+       "value": 0.11,
+       "unit": "percent",
+       "display": "+11%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.125000",
    "testWarning": null,
@@ -521,6 +2793,349 @@
      "name": "프레데터"
     }
    ],
+   "skills": [
+    {
+     "key": "Assassin",
+     "name": "암살자",
+     "standardDesc": "모든 무기의 헤드샷 피해량이 +20% 증가합니다",
+     "deluxeDesc": "모든 무기의 헤드샷 피해량이 +50% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 헤드샷 피해량이 +20% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 헤드샷 피해량이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ColdRiposte",
+     "name": "냉각 반격",
+     "standardDesc": "피해를 입을 때 냉기 폭발을 방출합니다",
+     "deluxeDesc": "피해를 입을 때 거대한 냉기 폭발을 방출합니다",
+     "standardDescRaw": "피해를 입을 때 냉기 폭발을 방출합니다",
+     "deluxeDescRaw": "피해를 입을 때 <font color=\"#b346ea\">거대한</font> 냉기 폭발을 방출합니다",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": true,
+     "disabledNote": "2026-07-04 제거: 자동 얼리기 스킬 제어",
+     "noData": false
+    },
+    {
+     "key": "DeadEye",
+     "name": "명중자",
+     "standardDesc": "보너스: +10%",
+     "deluxeDesc": "보너스: +25%",
+     "standardDescRaw": "보너스: +10%",
+     "deluxeDescRaw": "보너스: +25%",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "FrozenHeadPopper",
+     "name": "냉동 두개골 폭발",
+     "standardDesc": "최대 피해량: 800 · 확률: +3%",
+     "deluxeDesc": "최대 피해량: 800 · 확률: +3%",
+     "standardDescRaw": "최대 피해량: 800 · 확률: +3%",
+     "deluxeDescRaw": "최대 피해량: 800 · 확률: +3%",
+     "rawValues": [
+      {
+       "key": "Cfg_maxDamage",
+       "label": "최대 피해량",
+       "value": 800.0,
+       "unit": "count",
+       "display": "800"
+      },
+      {
+       "key": "Cfg_Probability",
+       "label": "확률",
+       "value": 0.03,
+       "unit": "percent",
+       "display": "+3%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": true,
+     "disabledNote": "2026-07-04 제거: 자동 얼리기 스킬 제어",
+     "noData": false
+    },
+    {
+     "key": "Marksman",
+     "name": "명사수",
+     "standardDesc": "모든 무기의 공격 속도가 +5%, 이동 속도가 +15% 빨라집니다",
+     "deluxeDesc": "모든 무기의 공격 속도가 +10%, 이동 속도가 +40% 빨라집니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 속도가 +5%, 이동 속도가 +15% 빨라집니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 속도가 <font color=\"#b346ea\">+10%</font>, 이동 속도가 <font color=\"#b346ea\">+40%</font> 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Speed",
+       "label": "속도",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "Cfg_Speed",
+       "label": "속도",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "RankThemUp",
+     "name": "순서대로",
+     "standardDesc": "모든 무기로 헤드샷 5회 연속 적중 시 다음 헤드샷 피해량이 +150% 증가합니다",
+     "deluxeDesc": "모든 무기로 헤드샷 5회 연속 적중 시 다음 헤드샷 피해량이 +375% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>로 헤드샷 5회 연속 적중 시 다음 헤드샷 피해량이 +150% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>로 헤드샷 5회 연속 적중 시 다음 헤드샷 피해량이 <font color=\"#b346ea\">+375%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_ExtraDamage",
+       "label": "추가 피해량",
+       "value": 1.5,
+       "unit": "percent",
+       "display": "+150%"
+      },
+      {
+       "key": "Cfg_ExtraDamage",
+       "label": "추가 피해량",
+       "value": 3.75,
+       "unit": "percent",
+       "display": "+375%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Sniper",
+     "name": "저격수",
+     "standardDesc": "정지 상태일 때 모든 무기의 피해량이 +20% 증가합니다",
+     "deluxeDesc": "정지 상태일 때 모든 무기의 피해량이 +50% 증가합니다",
+     "standardDescRaw": "정지 상태일 때 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 +20% 증가합니다",
+     "deluxeDescRaw": "정지 상태일 때 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 <font color=\"#b346ea\">+50%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Stability",
+     "name": "안정성",
+     "standardDesc": "모든 무기의 조준 사격 반동 +25%, 지향 사격 반동 +50% 감소합니다",
+     "deluxeDesc": "모든 무기의 조준 사격 반동 +50%, 지향 사격 반동 +75% 감소합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 조준 사격 반동 +25%, 지향 사격 반동 +50% 감소합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 조준 사격 반동 <font color=\"#b346ea\">+50%</font>, 지향 사격 반동 <font color=\"#b346ea\">+75%</font> 감소합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_AimRecoil",
+       "label": "Aim 반동",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_AimRecoil",
+       "label": "Aim 반동",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_HipRecoil",
+       "label": "Hip 반동",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_HipRecoil",
+       "label": "Hip 반동",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Velocity",
+     "name": "고속",
+     "standardDesc": "거리가 멀어질수록 모든 무기의 피해량이 최대 +25%까지 증가합니다",
+     "deluxeDesc": "거리가 멀어질수록 모든 무기의 피해량이 최대 +60%까지 증가합니다",
+     "standardDescRaw": "거리가 멀어질수록 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 최대 +25%까지 증가합니다",
+     "deluxeDescRaw": "거리가 멀어질수록 <font color=\"#eaeff7\">모든 무기</font>의 피해량이 최대 <font color=\"#b346ea\">+60%</font>까지 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MaxRadius",
+       "label": "최대 범위",
+       "value": 50000000.0,
+       "unit": "distance",
+       "display": "50,000,000"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Hunter",
+     "name": "사냥꾼",
+     "standardDesc": "대형 좀비 처치 시마다 체력을 15 포인트 회복합니다",
+     "deluxeDesc": "대형 좀비 처치 시마다 체력을 40 포인트 회복합니다",
+     "standardDescRaw": "대형 좀비 처치 시마다 체력을 15 포인트 회복합니다",
+     "deluxeDescRaw": "대형 좀비 처치 시마다 체력을 <font color=\"#b346ea\">40</font> 포인트 회복합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Vampire",
+       "label": "흡혈",
+       "value": 20,
+       "unit": "count",
+       "display": "20"
+      },
+      {
+       "key": "Cfg_Vampire",
+       "label": "흡혈",
+       "value": 60,
+       "unit": "count",
+       "display": "60"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.050000",
    "testWarning": null,
@@ -596,6 +3211,335 @@
      "name": "히드라"
     }
    ],
+   "skills": [
+    {
+     "key": "Barrage",
+     "name": "포격",
+     "standardDesc": "모든 무기의 근접 사거리 피해량이 +25% 증가합니다",
+     "deluxeDesc": "모든 무기의 근접 사거리 피해량이 +60% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 근접 사거리 피해량이 +25% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 근접 사거리 피해량이 <font color=\"#b346ea\">+60%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      },
+      {
+       "key": "Cfg_RadiusSQ",
+       "label": "범위 제곱",
+       "value": 50000,
+       "unit": "distance",
+       "display": "50,000"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Destruction",
+     "name": "파괴",
+     "standardDesc": "ZED 타임 시작 시 5미터 이내의 좀비를 넘어뜨립니다",
+     "deluxeDesc": "ZED 타임 시작 시 10미터 이내의 좀비를 넘어뜨립니다",
+     "standardDescRaw": "ZED 타임 시작 시 5미터 이내의 좀비를 넘어뜨립니다",
+     "deluxeDescRaw": "ZED 타임 시작 시 <font color=\"#b346ea\">10</font>미터 이내의 좀비를 넘어뜨립니다",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": true,
+     "disabledNote": "2026-07-07 제거: 사기급 성능",
+     "noData": false
+    },
+    {
+     "key": "DoorTraps",
+     "name": "문 함정",
+     "standardDesc": "용접 속도 +75% 증가, 수류탄 소지량 4 증가 및 폭발 문 함정을 설치할 수 있습니다",
+     "deluxeDesc": "용접 속도 +200% 증가, 수류탄 소지량 8 증가 및 핵 문 함정을 설치할 수 있습니다",
+     "standardDescRaw": "용접 속도 +75% 증가, 수류탄 소지량 4 증가 및 폭발 문 함정을 설치할 수 있습니다",
+     "deluxeDescRaw": "용접 속도 <font color=\"#b346ea\">+200%</font> 증가, 수류탄 소지량 <font color=\"#b346ea\">8</font> 증가 및 <font color=\"#b346ea\">핵</font> 문 함정을 설치할 수 있습니다",
+     "rawValues": [
+      {
+       "key": "Cfg_ExtraGrenades",
+       "label": "추가 수류탄",
+       "value": 4,
+       "unit": "count",
+       "display": "4"
+      },
+      {
+       "key": "Cfg_ExtraGrenades",
+       "label": "추가 수류탄",
+       "value": 8,
+       "unit": "count",
+       "display": "8"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 2.0,
+       "unit": "percent",
+       "display": "+200%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Fortitude",
+     "name": "불굴",
+     "standardDesc": "체력: +10%",
+     "deluxeDesc": "최대 체력이 +25% 증가하며 매초 체력을 1 포인트씩 재생합니다",
+     "standardDescRaw": "체력: +10%",
+     "deluxeDescRaw": "최대 체력이 <font color=\"#b346ea\">+25%</font> 증가하며 <font color=\"#b346ea\">매초</font> 체력을 1 포인트씩 재생합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Health",
+       "label": "체력",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Health",
+       "label": "체력",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HighCapacityMagsB",
+     "name": "대용량 탄창",
+     "standardDesc": "모든 무기의 탄창 용량이 +30% 증가합니다",
+     "deluxeDesc": "모든 무기의 탄창 용량이 +75% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 탄창 용량이 +30% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 탄창 용량이 <font color=\"#b346ea\">+75%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MagCapacity",
+       "label": "탄창 용량",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_MagCapacity",
+       "label": "탄창 용량",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Penetrator",
+     "name": "관통자",
+     "standardDesc": "샷건, 라이플, 리볼버의 관통력이 +100% 증가합니다",
+     "deluxeDesc": "샷건, 라이플, 리볼버의 관통력이 +200% 증가합니다",
+     "standardDescRaw": "<font color=\"#caab05\">샷건, 라이플, 리볼버</font>의 관통력이 +100% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#caab05\">샷건, 라이플, 리볼버</font>의 관통력이 <font color=\"#b346ea\">+200%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Penetration",
+       "label": "관통력",
+       "value": 1.0,
+       "unit": "percent",
+       "display": "+100%"
+      },
+      {
+       "key": "Cfg_Penetration",
+       "label": "관통력",
+       "value": 2.0,
+       "unit": "percent",
+       "display": "+200%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Salvo",
+     "name": "일제 사격",
+     "standardDesc": "모든 무기의 피해량과 발사 속도가 +10% 증가합니다",
+     "deluxeDesc": "모든 무기의 피해량과 발사 속도가 +25% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 피해량과 발사 속도가 +10% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 피해량과 발사 속도가 <font color=\"#b346ea\">+25%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Tenacity",
+     "name": "끈기",
+     "standardDesc": "피해량: +15%",
+     "deluxeDesc": "피해량: +40%",
+     "standardDescRaw": "피해량: +15%",
+     "deluxeDescRaw": "피해량: +40%",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "TightChoke",
+     "name": "좁은 산탄도",
+     "standardDesc": "산탄 확산도를 +40% 감소시킵니다",
+     "deluxeDesc": "산탄 확산도를 +70% 감소시킵니다",
+     "standardDescRaw": "산탄 확산도를 +40% 감소시킵니다",
+     "deluxeDescRaw": "산탄 확산도를 <font color=\"#b346ea\">+70%</font> 감소시킵니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Spread",
+       "label": "탄퍼짐",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      },
+      {
+       "key": "Cfg_Spread",
+       "label": "탄퍼짐",
+       "value": 0.7,
+       "unit": "percent",
+       "display": "+70%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "ConcussionRounds",
+     "name": "진탕탄",
+     "standardDesc": "모든 무기의 비틀거림, 기절, 넉다운 위력이 +25% 증가합니다",
+     "deluxeDesc": "모든 무기의 비틀거림, 기절, 넉다운 위력이 +60% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 비틀거림, 기절, 넉다운 위력이 +25% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 비틀거림, 기절, 넉다운 위력이 <font color=\"#b346ea\">+60%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Effect",
+       "label": "Effect",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Effect",
+       "label": "Effect",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.075000",
    "testWarning": null,
@@ -673,6 +3617,399 @@
      "name": "징조"
     }
    ],
+   "skills": [
+    {
+     "key": "Cripple",
+     "name": "불구화",
+     "standardDesc": "피해량: +10% · 속박: 5",
+     "deluxeDesc": "피해량: +25% · 속박: 5",
+     "standardDescRaw": "피해량: +10% · 속박: 5",
+     "deluxeDescRaw": "피해량: +25% · 속박: 5",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Snare",
+       "label": "속박",
+       "value": 5.0,
+       "unit": "count",
+       "display": "5"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "CC 남발 축소(2026-07-02), 구 10.000000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "HeavyArmor",
+     "name": "중장갑",
+     "standardDesc": "최대 방어구 수치가 +30% 증가합니다",
+     "deluxeDesc": "최대 방어구 수치가 +75% 증가합니다",
+     "standardDescRaw": "최대 방어구 수치가 +30% 증가합니다",
+     "deluxeDescRaw": "최대 방어구 수치가 <font color=\"#b346ea\">+75%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Armor",
+       "label": "방어구",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_Armor",
+       "label": "방어구",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Pressure",
+     "name": "압박",
+     "standardDesc": "체력이 낮을수록 모든 무기의 재장전 속도가 최대 +30%까지 빨라집니다",
+     "deluxeDesc": "체력이 낮을수록 모든 무기의 재장전 속도가 최대 +75%까지 빨라집니다",
+     "standardDescRaw": "체력이 낮을수록 <font color=\"#eaeff7\">모든 무기</font>의 재장전 속도가 최대 +30%까지 빨라집니다",
+     "deluxeDescRaw": "체력이 낮을수록 <font color=\"#eaeff7\">모든 무기</font>의 재장전 속도가 최대 <font color=\"#b346ea\">+75%</font>까지 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_MinHealth",
+       "label": "최소 체력",
+       "value": 60,
+       "unit": "count",
+       "display": "60"
+      },
+      {
+       "key": "Cfg_maxReloadSpeed",
+       "label": "최대 재장전 속도",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_maxReloadSpeed",
+       "label": "최대 재장전 속도",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.600000; 구 1.500000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Ranger",
+     "name": "레인저",
+     "standardDesc": "모든 무기의 헤드샷 피해량이 +25%, 헤드샷 기절 위력이 +15% 증가합니다",
+     "deluxeDesc": "모든 무기의 헤드샷 피해량이 +62.5%, 헤드샷 기절 위력이 +40% 증가합니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 헤드샷 피해량이 +25%, 헤드샷 기절 위력이 +15% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 헤드샷 피해량이 <font color=\"#b346ea\">+62.5%</font>, 헤드샷 기절 위력이 <font color=\"#b346ea\">+40%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Stun",
+       "label": "기절",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Stun",
+       "label": "기절",
+       "value": 0.625,
+       "unit": "percent",
+       "display": "+62.5%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "CC 남발 축소(2026-07-02), 구 0.500000; 구 1.250000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "RapidAssault",
+     "name": "신속 강습",
+     "standardDesc": "모든 무기의 공격 및 발사 속도가 +20% 빨라집니다",
+     "deluxeDesc": "모든 무기의 공격 및 발사 속도가 +50% 빨라집니다",
+     "standardDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 및 발사 속도가 +20% 빨라집니다",
+     "deluxeDescRaw": "<font color=\"#eaeff7\">모든 무기</font>의 공격 및 발사 속도가 <font color=\"#b346ea\">+50%</font> 빨라집니다",
+     "rawValues": [
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_RateOfFire",
+       "label": "연사 속도",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "RiotShield",
+     "name": "진압 방패",
+     "standardDesc": "투사체 피해 저항 +35%, 기타 피해 저항이 +5% 증가합니다",
+     "deluxeDesc": "투사체 피해 저항 +60%, 기타 피해 저항이 +10% 증가합니다",
+     "standardDescRaw": "<font color=\"#caab05\">투사체</font> 피해 저항 +35%, 기타 피해 저항이 +5% 증가합니다",
+     "deluxeDescRaw": "<font color=\"#caab05\">투사체</font> 피해 저항 <font color=\"#b346ea\">+60%</font>, 기타 피해 저항이 <font color=\"#b346ea\">+10%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.35,
+       "unit": "percent",
+       "display": "+35%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      },
+      {
+       "key": "Cfg_OtherDamage",
+       "label": "Other 피해량",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "Cfg_OtherDamage",
+       "label": "Other 피해량",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "SpecialUnit",
+     "name": "특수 부대",
+     "standardDesc": "방어구 착용 시 모든 무기 피해량 +10% 증가, 미착용 시 이동 속도가 +15% 증가합니다",
+     "deluxeDesc": "방어구 착용 시 모든 무기 피해량 +20% 증가, 미착용 시 이동 속도가 +40% 증가합니다",
+     "standardDescRaw": "방어구 착용 시 <font color=\"#eaeff7\">모든 무기</font> 피해량 +10% 증가, 미착용 시 이동 속도가 +15% 증가합니다",
+     "deluxeDescRaw": "방어구 착용 시 <font color=\"#eaeff7\">모든 무기</font> 피해량 <font color=\"#b346ea\">+20%</font> 증가, 미착용 시 이동 속도가 <font color=\"#b346ea\">+40%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Speed",
+       "label": "속도",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_Speed",
+       "label": "속도",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.4,
+       "unit": "percent",
+       "display": "+40%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "SuppressionRounds",
+     "name": "제압탄",
+     "standardDesc": "넉다운: +15% · 속박: 10",
+     "deluxeDesc": "넉다운: +37.5% · 속박: 10",
+     "standardDescRaw": "넉다운: +15% · 속박: 10",
+     "deluxeDescRaw": "넉다운: +37.5% · 속박: 10",
+     "rawValues": [
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      },
+      {
+       "key": "Cfg_Knockdown",
+       "label": "넉다운",
+       "value": 0.375,
+       "unit": "percent",
+       "display": "+37.5%"
+      },
+      {
+       "key": "Cfg_Snare",
+       "label": "속박",
+       "value": 10.0,
+       "unit": "count",
+       "display": "10"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "CC/임팩트 남발 축소(2026-07-02), 구 0.300000; 구 0.750000; 구 20.000000",
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "TacticalMovement",
+     "name": "전술 이동",
+     "standardDesc": "이동 속도: +5% · 속도: +100%",
+     "deluxeDesc": "이동 속도: +5% · 속도: +115%",
+     "standardDescRaw": "이동 속도: +5% · 속도: +100%",
+     "deluxeDescRaw": "이동 속도: +5% · 속도: +115%",
+     "rawValues": [
+      {
+       "key": "Cfg_MoveSpeed",
+       "label": "이동 속도",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "Cfg_Speed",
+       "label": "속도",
+       "value": 1.0,
+       "unit": "percent",
+       "display": "+100%"
+      },
+      {
+       "key": "Cfg_Speed",
+       "label": "속도",
+       "value": 1.15,
+       "unit": "percent",
+       "display": "+115%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "AssaultArmor",
+     "name": "돌격 방어구",
+     "standardDesc": "웨이브 완료 후 방어구 수치가 +50% 회복됩니다",
+     "deluxeDesc": "웨이브 완료 후 방어구 수치가 +100% 회복됩니다",
+     "standardDescRaw": "웨이브 완료 후 방어구 수치가 +50% 회복됩니다",
+     "deluxeDescRaw": "웨이브 완료 후 방어구 수치가 <font color=\"#b346ea\">+100%</font> 회복됩니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Armor",
+       "label": "방어구",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_Armor",
+       "label": "방어구",
+       "value": 1.0,
+       "unit": "percent",
+       "display": "+100%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
@@ -738,6 +4075,384 @@
      "name": "변신술사"
     }
    ],
+   "skills": [
+    {
+     "key": "AmmoVest",
+     "name": "탄약 조끼",
+     "standardDesc": "무게 한도가 2 증가하며 모든 무기의 탄약 소지량이 최대 +30% 증가합니다",
+     "deluxeDesc": "무게 한도가 5 증가하며 모든 무기의 탄약 소지량이 최대 +75% 증가합니다",
+     "standardDescRaw": "무게 한도가 2 증가하며 <font color=\"#eaeff7\">모든 무기</font>의 탄약 소지량이 최대 +30% 증가합니다",
+     "deluxeDescRaw": "무게 한도가 <font color=\"#b346ea\">5</font> 증가하며 <font color=\"#eaeff7\">모든 무기</font>의 탄약 소지량이 최대 <font color=\"#b346ea\">+75%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Ammo",
+       "label": "탄약",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_Ammo",
+       "label": "탄약",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      },
+      {
+       "key": "Cfg_Weight",
+       "label": "중량",
+       "value": 2,
+       "unit": "count",
+       "display": "2"
+      },
+      {
+       "key": "Cfg_Weight",
+       "label": "중량",
+       "value": 5,
+       "unit": "count",
+       "display": "5"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Emergency",
+     "name": "비상사태",
+     "standardDesc": "최소 체력 역: +2% · 최대 속도: +30% · 최소 체력: 50",
+     "deluxeDesc": "최소 체력 역: +2% · 최대 속도: +75% · 최소 체력: 50",
+     "standardDescRaw": "최소 체력 역: +2% · 최대 속도: +30% · 최소 체력: 50",
+     "deluxeDescRaw": "최소 체력 역: +2% · 최대 속도: +75% · 최소 체력: 50",
+     "rawValues": [
+      {
+       "key": "Cfg_MinHealthInv",
+       "label": "최소 체력 역",
+       "value": 0.02,
+       "unit": "percent",
+       "display": "+2%"
+      },
+      {
+       "key": "Cfg_MaxSpeed",
+       "label": "최대 속도",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "Cfg_MaxSpeed",
+       "label": "최대 속도",
+       "value": 0.75,
+       "unit": "percent",
+       "display": "+75%"
+      },
+      {
+       "key": "Cfg_MinHealth",
+       "label": "최소 체력",
+       "value": 50,
+       "unit": "count",
+       "display": "50"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Empathy",
+     "name": "공감",
+     "standardDesc": "치유량이 +25% 증가하며 팀원을 치유 시 자신의 체력이 최대치의 +10%만큼 회복됩니다",
+     "deluxeDesc": "치유량이 +50% 증가하며 팀원을 치유 시 자신의 체력이 최대치의 +25%만큼 회복됩니다",
+     "standardDescRaw": "치유량이 +25% 증가하며 팀원을 치유 시 자신의 체력이 최대치의 +10%만큼 회복됩니다",
+     "deluxeDescRaw": "치유량이 <font color=\"#b346ea\">+50%</font> 증가하며 팀원을 치유 시 자신의 체력이 최대치의 <font color=\"#b346ea\">+25%</font>만큼 회복됩니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Healing",
+       "label": "치유",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Healing",
+       "label": "치유",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      },
+      {
+       "key": "Cfg_SelfHealing",
+       "label": "자신 치유",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Cfg_SelfHealing",
+       "label": "자신 치유",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Fallback",
+     "name": "후방 지원",
+     "standardDesc": "수류탄 소지량이 3 증가하며 보조 무기 및 칼의 피해량이 +100% 증가합니다",
+     "deluxeDesc": "수류탄 소지량이 6 증가하며 보조 무기 및 칼의 피해량이 +250% 증가합니다",
+     "standardDescRaw": "수류탄 소지량이 3 증가하며 보조 무기 및 칼의 피해량이 +100% 증가합니다",
+     "deluxeDescRaw": "수류탄 소지량이 <font color=\"#b346ea\">6</font> 증가하며 보조 무기 및 칼의 피해량이 <font color=\"#b346ea\">+250%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_ExtraGrenades",
+       "label": "추가 수류탄",
+       "value": 3,
+       "unit": "count",
+       "display": "3"
+      },
+      {
+       "key": "Cfg_ExtraGrenades",
+       "label": "추가 수류탄",
+       "value": 6,
+       "unit": "count",
+       "display": "6"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 1.0,
+       "unit": "percent",
+       "display": "+100%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 2.5,
+       "unit": "percent",
+       "display": "+250%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "MedicalInjection",
+     "name": "의료 주사",
+     "standardDesc": "체력이 낮을수록 매초 최대 3 포인트의 체력을 재생합니다",
+     "deluxeDesc": "체력이 낮을수록 매초 최대 8 포인트의 체력을 재생합니다",
+     "standardDescRaw": "체력이 낮을수록 매초 최대 3 포인트의 체력을 재생합니다",
+     "deluxeDescRaw": "체력이 낮을수록 매초 최대 <font color=\"#b346ea\">8</font> 포인트의 체력을 재생합니다",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Scrapper",
+     "name": "고철 수집가",
+     "standardDesc": "좀비 처치 시 +12.5% 확률로 대기 중인 무기의 탄약이 보충됩니다",
+     "deluxeDesc": "좀비 처치 시 +25% 확률로 대기 중인 무기의 탄약이 보충됩니다",
+     "standardDescRaw": "좀비 처치 시 +12.5% 확률로 대기 중인 무기의 탄약이 보충됩니다",
+     "deluxeDescRaw": "좀비 처치 시 <font color=\"#b346ea\">+25%</font> 확률로 대기 중인 무기의 탄약이 보충됩니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Probability",
+       "label": "확률",
+       "value": 0.125,
+       "unit": "percent",
+       "display": "+12.5%"
+      },
+      {
+       "key": "Cfg_Probability",
+       "label": "확률",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_AmmoDivider",
+       "label": "탄약 나눔값",
+       "value": 40.0,
+       "unit": "count",
+       "display": "40"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Strength",
+     "name": "근력",
+     "standardDesc": "무게 한도가 3 증가합니다",
+     "deluxeDesc": "무게 한도가 8 증가합니다",
+     "standardDescRaw": "무게 한도가 3 증가합니다",
+     "deluxeDescRaw": "무게 한도가 <font color=\"#b346ea\">8</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 3,
+       "unit": "count",
+       "display": "3"
+      },
+      {
+       "key": "Cfg_Bonus",
+       "label": "보너스",
+       "value": 8,
+       "unit": "count",
+       "display": "8"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "TacticalArmor",
+     "name": "중장갑 훈련",
+     "standardDesc": "최대 방어구가 +20% 증가하며 방어구 착용 시 클롯의 잡기에 면역이 됩니다",
+     "deluxeDesc": "최대 방어구가 +50% 증가하며 방어구 착용 시 클롯의 잡기에 면역이 됩니다",
+     "standardDescRaw": "최대 방어구가 +20% 증가하며 방어구 착용 시 클롯의 잡기에 면역이 됩니다",
+     "deluxeDescRaw": "최대 방어구가 <font color=\"#b346ea\">+50%</font> 증가하며 방어구 착용 시 클롯의 잡기에 면역이 됩니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Armor",
+       "label": "방어구",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
+      {
+       "key": "Cfg_Armor",
+       "label": "방어구",
+       "value": 0.5,
+       "unit": "percent",
+       "display": "+50%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "Watcher",
+     "name": "감시자",
+     "standardDesc": "좀비 체력을 볼 수 있으며 체력이 낮은 좀비에게 +25% 더 많은 피해를 입힙니다",
+     "deluxeDesc": "치명타 체력: +25% · 피해량: +60%",
+     "standardDescRaw": "좀비 체력을 볼 수 있으며 체력이 낮은 좀비에게 +25% 더 많은 피해를 입힙니다",
+     "deluxeDescRaw": "치명타 체력: +25% · 피해량: +60%",
+     "rawValues": [
+      {
+       "key": "Cfg_CriticalHealth",
+       "label": "치명타 체력",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.25,
+       "unit": "percent",
+       "display": "+25%"
+      },
+      {
+       "key": "Cfg_Damage",
+       "label": "피해량",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    },
+    {
+     "key": "AmmoPickup",
+     "name": "여분 탄약 획득",
+     "standardDesc": "탄약 상자에서 획득하는 탄약량이 +150% 증가합니다",
+     "deluxeDesc": "탄약 상자에서 획득하는 탄약량이 +225% 증가합니다",
+     "standardDescRaw": "탄약 상자에서 획득하는 탄약량이 +150% 증가합니다",
+     "deluxeDescRaw": "탄약 상자에서 획득하는 탄약량이 <font color=\"#b346ea\">+225%</font> 증가합니다",
+     "rawValues": [
+      {
+       "key": "Cfg_Ammo",
+       "label": "탄약",
+       "value": 1.5,
+       "unit": "percent",
+       "display": "+150%"
+      },
+      {
+       "key": "Cfg_Ammo",
+       "label": "탄약",
+       "value": 2.25,
+       "unit": "percent",
+       "display": "+225%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false
+    }
+   ],
+   "skillCount": 10,
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.140000",
    "testWarning": null,
@@ -18060,6 +21775,6 @@
  "meta": {
   "advancedPerkCount": 37,
   "basePerkCount": 10,
-  "totalSkills": 340
+  "totalSkills": 440
  }
 }

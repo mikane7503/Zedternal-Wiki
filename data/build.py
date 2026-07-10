@@ -18,6 +18,7 @@ from labels import translate_key, classify_unit_group, format_value_as
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INI_MAIN = os.path.join(ROOT, "KFZedternalUnlimited.ini")
 INI_KOR = os.path.join(ROOT, "ZedternalRBPerkpackage.KOR.ini")
+INI_REBORN_KOR = os.path.join(ROOT, "ZedternalReborn.kor.ini")
 INI_UPGRADES = os.path.join(ROOT, "KFZedternalReborn_Upgrades.ini")
 MANUAL_BASE = os.path.join(ROOT, "data", "manual_base_perks.json")
 MANUAL_VERDICTS = os.path.join(ROOT, "data", "manual_verdicts.json")
@@ -82,11 +83,11 @@ def parse_patch_notes(path):
 KOR_LINE_RE = re.compile(r'^(\w+)\s*=\s*"(.*)"\s*$')
 
 
-def parse_kor_ini(path):
+def parse_kor_ini(path, encoding="utf-8-sig"):
     """section_name -> dict of {UpgradeName, descriptions:[...], StandardSkillUpgradeDescription, DeluxeSkillUpgradeDescription}"""
     sections = {}
     current = None
-    with open(path, encoding="utf-8-sig") as f:
+    with open(path, encoding=encoding) as f:
         for raw in f:
             line = raw.rstrip("\n").strip()
             if not line or line.startswith("//"):
@@ -142,6 +143,13 @@ DK_SKILL_REGISTRY_RE = re.compile(
     r'SkillPath="ZedternalRBPerkpackage\.DKUpgrade_Skill_(\w+)"\)(?:\s*;\s*(.*))?'
 )
 
+# Same registry file, but the base (10-perk) skill roster -- registered under
+# the game's own "WM" (WildMonster/base perk) namespace rather than "DK".
+WM_SKILL_REGISTRY_RE = re.compile(
+    r'([#;])?SkillUpgrade_Upgrade=\(PerkPath="ZedternalReborn\.WMUpgrade_Perk_(\w+)",'
+    r'SkillPath="ZedternalReborn\.WMUpgrade_Skill_(\w+)"\)(?:\s*;\s*(.*))?'
+)
+
 
 def ci_lookup(mapping, key):
     """Case-insensitive dict lookup (exact-case match wins)."""
@@ -166,6 +174,20 @@ def parse_dk_skill_registry(path):
     with open(path, encoding="utf-8-sig") as f:
         for raw in f:
             m = DK_SKILL_REGISTRY_RE.match(raw.strip())
+            if not m:
+                continue
+            disabled = bool(m.group(1))
+            perk, skill, note = m.group(2), m.group(3), m.group(4)
+            registry.setdefault(perk, []).append((skill, disabled, note))
+    return registry
+
+
+def parse_wm_skill_registry(path):
+    """Same as parse_dk_skill_registry() but for the base-perk (WM) skill roster."""
+    registry = {}
+    with open(path, encoding="utf-8-sig") as f:
+        for raw in f:
+            m = WM_SKILL_REGISTRY_RE.match(raw.strip())
             if not m:
                 continue
             disabled = bool(m.group(1))
@@ -969,7 +991,9 @@ def reconcile_perk_descriptions(raw_descriptions, filled_descriptions, fixed_sta
 def build():
     main_sections = parse_ini_generic(INI_MAIN)
     kor_sections = parse_kor_ini(INI_KOR)
+    reborn_kor_sections = parse_kor_ini(INI_REBORN_KOR, encoding="utf-16")
     dk_skill_registry = parse_dk_skill_registry(INI_UPGRADES)
+    wm_skill_registry = parse_wm_skill_registry(INI_UPGRADES)
     unlock_rules = parse_unlock_rules(main_sections)
     patch_notes = parse_patch_notes(INI_MAIN)
 
@@ -1159,6 +1183,66 @@ def build():
         unlocks.sort(key=lambda u: u["level"] or 0)
         base_patch_note = "; ".join(patch_notes.get(f"DKWrapper_Perk_{bkey}", []))
         base_is_patched = bool(base_patch_note)
+
+        base_skill_notes = manual_verdicts.get("skillNotes", {}).get(bkey, {})
+        base_skills = []
+        for short, is_disabled, disabled_note in wm_skill_registry.get(bkey, []):
+            skill_section = f"DKWrapper_Skill_{short}"
+            skor = ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}") or {}
+            sini = ci_lookup(main_sections, skill_section) or []
+            cost_keys = set(SKILL_COST_STATS.get(short, []))
+            signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
+                           for k, v in sini if k != "MODEVERSION"]
+            raw_values = build_stat_entries(signed_sini)
+            skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
+            override = manual_skill_overrides.get(short, {})
+
+            t1_entries, t2_entries = split_tiers(raw_values)
+            if "standardDesc" in override:
+                std_raw, std_fixed = override["standardDesc"], False
+            else:
+                std_orig = skor.get("StandardSkillUpgradeDescription")
+                std_pre, std_entries = reconcile_fold_matches(std_orig, t1_entries)
+                std_pre, std_entries = reconcile_health_cost_text(std_pre, std_entries)
+                std_pre, std_entries = reconcile_stack_total_text(std_pre, std_entries)
+                std_raw, std_ok, std_fixed = reconcile_skill_text(std_pre, std_entries)
+                std_fixed = std_fixed or std_pre != std_orig
+                if not std_ok:
+                    fallback = build_ini_only_text(t1_entries)
+                    if fallback:
+                        std_raw, std_fixed = fallback, True
+            if "deluxeDesc" in override:
+                delx_raw, delx_fixed = override["deluxeDesc"], False
+            else:
+                delx_orig = skor.get("DeluxeSkillUpgradeDescription")
+                delx_pre, delx_entries = reconcile_fold_matches(delx_orig, t2_entries)
+                delx_pre, delx_entries = reconcile_health_cost_text(delx_pre, delx_entries)
+                delx_pre, delx_entries = reconcile_stack_total_text(delx_pre, delx_entries)
+                delx_raw, delx_ok, delx_fixed = reconcile_skill_text(delx_pre, delx_entries)
+                delx_fixed = delx_fixed or delx_pre != delx_orig
+                if not delx_ok:
+                    fallback = build_ini_only_text(t2_entries)
+                    if fallback:
+                        delx_raw, delx_fixed = fallback, True
+
+            base_skills.append({
+                "key": short,
+                "name": override.get("name") or skor.get("UpgradeName", short),
+                "standardDesc": strip_font(std_raw),
+                "deluxeDesc": strip_font(delx_raw),
+                "standardDescRaw": std_raw,
+                "deluxeDescRaw": delx_raw,
+                "rawValues": raw_values,
+                "hasKorText": bool(skor),
+                "note": base_skill_notes.get(short),
+                "isPatched": bool(skill_patch_note),
+                "patchNote": skill_patch_note or None,
+                "textFixed": std_fixed or delx_fixed,
+                "disabled": is_disabled,
+                "disabledNote": disabled_note,
+                "noData": not skor and not raw_values and not ("standardDesc" in override or "deluxeDesc" in override),
+            })
+
         base_perks.append({
             "key": bkey,
             "name": bdata["name"],
@@ -1170,6 +1254,8 @@ def build():
             "strengths": bdata.get("strengths", []),
             "weaknesses": bdata.get("weaknesses", []),
             "unlocks": unlocks,
+            "skills": base_skills,
+            "skillCount": len(base_skills),
             "isPatched": base_is_patched,
             "patchNote": base_patch_note or None,
             "testWarning": None,
@@ -1183,7 +1269,7 @@ def build():
         "meta": {
             "advancedPerkCount": len(advanced_perks),
             "basePerkCount": len(base_perks),
-            "totalSkills": sum(p["skillCount"] for p in advanced_perks),
+            "totalSkills": sum(p["skillCount"] for p in advanced_perks) + sum(p["skillCount"] for p in base_perks),
         },
     }
     data = normalize_terminology(data)
