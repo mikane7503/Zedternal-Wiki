@@ -43,7 +43,7 @@ const WEAPON_AURORA_STATS = [
   { label: "동결 투척자 얼음 파편", value: 1.75 },
   { label: "RPG-7 탄두", value: 1.5 },
   { label: "RPG-7 후폭발", value: 10.0 },
-  { label: "분쇄기 폭발", value: 2.0 },
+  { label: "분쇄기 폭발", value: 2.5 },
   { label: "석궁", value: 1.3 },
   { label: "컴파운드 보우", value: 1.5 },
   { label: "M14 EBR", value: 1.3 },
@@ -51,13 +51,30 @@ const WEAPON_AURORA_STATS = [
   { label: "MG3", value: 1.1 },
   { label: "MG3 변형", value: 1.1 },
   { label: "스토너 63A", value: 1.1 },
+  { label: "미니건", value: 1.1 },
+  { label: "MKB42", value: 1.2 },
+  { label: "모신나강", value: 1.1 },
+  { label: "모신나강 관통(스코프)", value: 1.4 },
+  { label: "HRG 탄도 바운서", value: 0.6 },
+  { label: "M4 샷건", value: 1.2 },
+  { label: "네일건", value: 1.3 },
+  { label: "기생충 이식기", value: 1.2 },
+  { label: "C4", value: 2.0 },
+  { label: "씰스퀄 폭발", value: 1.3 },
+  { label: "씰스퀄 직격", value: 2.0 },
+  { label: "중력폭구 폭발", value: 1.3 },
+  { label: "중력폭구 대체 직격", value: 3.0 },
+  { label: "마이크로웨이브 라이플", value: 1.4 },
+  { label: "G18", value: 1.25 },
+  { label: "G18 실드", value: 4.0 },
+  { label: "G18 실드(임펄스)", value: 4.0 },
   { label: "센터파이어 MB464", value: 0.75 },
   { label: "윈체스터 1894", value: 0.75 },
   { label: "S&W 500", value: 0.8 },
   { label: "M99", value: 0.85 },
   { label: "레일건", value: 0.9 },
   { label: "허스크 캐논", value: 0.8 },
-  { label: "HV 스톰 캐논", value: 0.9 },
+  { label: "HV 스톰 캐논", value: 0.85 },
   { label: "HRG 카붐스틱", value: 0.85 },
   { label: "HRG 메뚜기", value: 0.3 },
 ];
@@ -198,9 +215,16 @@ function renderWeaponAuroraBox() {
   return item;
 }
 
+function weaponAuroraLi(w) {
+  let style = "";
+  if (w.value > 1.5) style = ' style="color:#00ff00;font-weight:600"';
+  else if (w.value <= 0.7) style = ' style="color:crimson;font-weight:600"';
+  return `<li${style}>${escapeHtml(w.label)}</li>`;
+}
+
 function renderWeaponAuroraDetail() {
-  const buffList = WEAPON_AURORA_STATS.filter(w => w.value >= 1).map(w => `<li>${escapeHtml(w.label)}</li>`).join("");
-  const nerfList = WEAPON_AURORA_STATS.filter(w => w.value < 1).map(w => `<li>${escapeHtml(w.label)}</li>`).join("");
+  const buffList = WEAPON_AURORA_STATS.filter(w => w.value >= 1).map(weaponAuroraLi).join("");
+  const nerfList = WEAPON_AURORA_STATS.filter(w => w.value < 1).map(weaponAuroraLi).join("");
   return `
     <div class="detail-header">
       <div class="ba-icon lg">⚔️</div>
@@ -433,7 +457,7 @@ function renderAdvDetail(key) {
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
-        <div class="subtitle">베이스 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
+        <div class="subtitle">전직 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
       </div>
       ${recentChangeBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
@@ -576,7 +600,7 @@ function buildSearchIndex() {
       navKey: adv.key,
       ownKey: adv.key,
       name: adv.name,
-      sub: `베이스 퍼크 · ${parent ? parent.name : ""}`,
+      sub: `전직 퍼크 · ${parent ? parent.name : ""}`,
       search: buildSearchCorpus(adv, parent || { name: "" }),
     });
     for (const s of adv.skills) {
