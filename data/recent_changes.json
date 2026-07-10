@@ -1,15 +1,15 @@
 {
  "Agony": {
-  "date": "2026-07-07",
-  "type": "buff"
+  "date": "2026-07-10",
+  "type": "nerf"
  },
  "Artificer": {
   "date": "2026-07-07",
   "type": "buff"
  },
  "Berserker": {
-  "date": "2026-07-07",
-  "type": "buff"
+  "date": "2026-07-10",
+  "type": "nerf"
  },
  "Bulwark": {
   "date": "2026-07-07",
@@ -36,7 +36,7 @@
   "type": "buff"
  },
  "Frost": {
-  "date": "2026-07-07",
+  "date": "2026-07-10",
   "type": "nerf"
  },
  "Gunslinger": {
@@ -81,6 +81,10 @@
  },
  "Warlord": {
   "date": "2026-07-07",
+  "type": "buff"
+ },
+ "Wendigo": {
+  "date": "2026-07-10",
   "type": "buff"
  }
 }

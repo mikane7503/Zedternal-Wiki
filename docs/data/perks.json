@@ -22,13 +22,13 @@
     {
      "key": "Cfg_Defense",
      "label": "저항력",
-     "value": 0.015,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%"
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%"
     },
     {
      "key": "Cfg_AttackSpeed",
@@ -73,11 +73,11 @@
     }
    ],
    "isPatched": true,
-   "patchNote": "밸런스 패치(2026-07-07), 구 0.005000",
+   "patchNote": "밸런스 패치(2026-07-08), 구 0.005000",
    "testWarning": null,
    "recentChangeTag": {
-    "date": "2026-07-07",
-    "type": "buff"
+    "date": "2026-07-10",
+    "type": "nerf"
    },
    "icon": "icons/berserker.png"
   },
@@ -4164,30 +4164,30 @@
     {
      "key": "TemporalRupture",
      "name": "시간적 파열",
-     "standardDesc": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 +25% 확률로 폭발하며 파편 피해를 입힙니다.",
-     "deluxeDesc": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 +50% 확률로 폭발하며 파편 피해를 입힙니다.",
-     "standardDescRaw": "<font color=\"#9632ff\">시간의 스트레스가 적의 시체를 파열시킵니다.</font> 죽은 적은 <font color=\"#d8b0ff\">+25%</font> 확률로 폭발하며 <font color=\"#FFFFFF\">파편 피해</font>를 입힙니다.",
-     "deluxeDescRaw": "<font color=\"#9632ff\">시간의 스트레스가 적의 시체를 파열시킵니다.</font> 죽은 적은 <font color=\"#d8b0ff\">+50%</font> 확률로 폭발하며 <font color=\"#FFFFFF\">파편 피해</font>를 입힙니다.",
+     "standardDesc": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 +4% 확률로 폭발하며 파편 피해를 입힙니다.",
+     "deluxeDesc": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 +7% 확률로 폭발하며 파편 피해를 입힙니다.",
+     "standardDescRaw": "<font color=\"#9632ff\">시간의 스트레스가 적의 시체를 파열시킵니다.</font> 죽은 적은 <font color=\"#d8b0ff\">+4%</font> 확률로 폭발하며 <font color=\"#FFFFFF\">파편 피해</font>를 입힙니다.",
+     "deluxeDescRaw": "<font color=\"#9632ff\">시간의 스트레스가 적의 시체를 파열시킵니다.</font> 죽은 적은 <font color=\"#d8b0ff\">+7%</font> 확률로 폭발하며 <font color=\"#FFFFFF\">파편 피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Chance",
        "label": "발동 확률",
-       "value": 0.25,
+       "value": 0.04,
        "unit": "percent",
-       "display": "+25%"
+       "display": "+4%"
       },
       {
        "key": "Chance",
        "label": "발동 확률",
-       "value": 0.5,
+       "value": 0.07,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+7%"
       }
      ],
      "hasKorText": true,
      "note": "처치 시 25%(디럭스 50%) 확률로 시체가 파편 폭발을 일으킵니다. ZED 타임 여부와 무관하게 항상 발동합니다.",
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "260708 너프. 구 0.250000; 260708 너프. 구 0.500000",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -4283,8 +4283,8 @@
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.400000; 구 0.300000; ZED타임 무한연장 완화(2026-07-05), 구 0.300000 -- 카운터 우회 발동이라 3배 이상 축소; 구 0.600000; 구 0.500000; ZED타임 무한연장 완화(2026-07-05), 구 3.000000",
    "testWarning": null,
    "recentChangeTag": {
-    "date": "2026-07-07",
-    "type": "buff"
+    "date": "2026-07-10",
+    "type": "nerf"
    },
    "extraSections": [],
    "icon": "icons/agony.png"
@@ -11711,13 +11711,13 @@
     {
      "key": "Chance",
      "label": "발동 확률",
-     "value": 0.002,
+     "value": 0.001,
      "unit": "percent",
-     "display": "+0.2%",
-     "lv10": 0.02,
-     "lv20": 0.04,
-     "lv10Display": "+2%",
-     "lv20Display": "+4%",
+     "display": "+0.1%",
+     "lv10": 0.01,
+     "lv20": 0.02,
+     "lv10Display": "+1%",
+     "lv20Display": "+2%",
      "scaling": true
     },
     {
@@ -11879,17 +11879,17 @@
     {
      "key": "Blizzard",
      "name": "블리자드",
-     "standardDesc": "플레시파운드를 헤드샷으로 처치 시 +12.5% 확률로 블리자드를 발생시킵니다.",
+     "standardDesc": "플레시파운드를 헤드샷으로 처치 시 +15% 확률로 블리자드를 발생시킵니다.",
      "deluxeDesc": "플레시파운드를 헤드샷으로 처치 시 +25% 확률로 대규모 눈보라를 발생시킵니다.",
-     "standardDescRaw": "<font color=\"#a0c1cb\">플레시파운드</font>를 헤드샷으로 처치 시 <font color=\"#15d7fa\">+12.5% 확률</font>로 <font color=\"#0bf1f1\">블리자드</font>를 발생시킵니다.",
+     "standardDescRaw": "<font color=\"#a0c1cb\">플레시파운드</font>를 헤드샷으로 처치 시 <font color=\"#15d7fa\">+15% 확률</font>로 <font color=\"#0bf1f1\">블리자드</font>를 발생시킵니다.",
      "deluxeDescRaw": "<font color=\"#a0c1cb\">플레시파운드</font>를 헤드샷으로 처치 시 <font color=\"#15d7fa\">+25% 확률</font>로 <font color=\"#0bf1f1\">대규모 눈보라</font>를 발생시킵니다.",
      "rawValues": [
       {
        "key": "Chance",
        "label": "발동 확률",
-       "value": 0.125,
+       "value": 0.15,
        "unit": "percent",
-       "display": "+12.5%"
+       "display": "+15%"
       },
       {
        "key": "Chance",
@@ -11943,10 +11943,10 @@
     {
      "key": "FrozenHeart",
      "name": "얼어붙은 심장",
-     "standardDesc": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +50% 증가합니다.",
-     "deluxeDesc": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +75% 증가합니다.",
-     "standardDescRaw": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +50% 증가합니다.",
-     "deluxeDescRaw": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +75% 증가합니다.",
+     "standardDesc": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +25% 증가합니다.",
+     "deluxeDesc": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +40% 증가합니다.",
+     "standardDescRaw": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +25% 증가합니다.",
+     "deluxeDescRaw": "웨이브당 한 번, 팀원들이 당신과 상호작용하여 자신의 최대 탄약 +50%를 무료로 보충할 수 있습니다. 추가로 모든 무기의 탄창 크기가 +40% 증가합니다.",
      "rawValues": [
       {
        "key": "SupplierAmmo",
@@ -11958,16 +11958,16 @@
       {
        "key": "MagSize",
        "label": "탄창 크기",
-       "value": 0.5,
+       "value": 0.25,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+25%"
       },
       {
        "key": "MagSize",
        "label": "탄창 크기",
-       "value": 0.75,
+       "value": 0.4,
        "unit": "percent",
-       "display": "+75%"
+       "display": "+40%"
       }
      ],
      "hasKorText": true,
@@ -12179,7 +12179,7 @@
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 밸런스 패치(2026-07-07), 구 0.125000",
    "testWarning": null,
    "recentChangeTag": {
-    "date": "2026-07-07",
+    "date": "2026-07-10",
     "type": "nerf"
    },
    "extraSections": [],
@@ -12748,14 +12748,14 @@
    "passiveStats": [
     {
      "key": "StalkDamageBonus",
-     "label": "포식자의 인내심 보너스",
-     "value": 0.0175,
+     "label": "추적 피해량 보너스",
+     "value": 0.025,
      "unit": "percent",
-     "display": "+1.75%",
-     "lv10": 0.175,
-     "lv20": 0.35,
-     "lv10Display": "+17.5%",
-     "lv20Display": "+35%",
+     "display": "+2.5%",
+     "lv10": 0.25,
+     "lv20": 0.5,
+     "lv10Display": "+25%",
+     "lv20Display": "+50%",
      "scaling": true
     },
     {
@@ -12811,7 +12811,7 @@
      "capstoneLevel": null
     }
    ],
-   "role": "<font color=\"#FFD700\">5초 이상 사격하지 않은 상태에서 쏘는 첫 발의 대미지를 증폭</font> 시켜주는 저격 특화 전직입니다.<br> <font color=\"#DC143C\">대물 저격총 트리</font>에 특화되어 있습니다.",
+   "role": "매복 첫 공격의 피해를 폭발적으로 증폭시키는 헌터형 저격 전직입니다.",
    "endgame": null,
    "descriptions": [
     {
@@ -12852,30 +12852,30 @@
       {
        "key": "LargeZedHeal",
        "label": "대형 제드 치유",
-       "value": 5,
+       "value": 20,
        "unit": "count",
-       "display": "5"
+       "display": "20"
       },
       {
        "key": "LargeZedHeal",
        "label": "대형 제드 치유",
-       "value": 10,
+       "value": 40,
        "unit": "count",
-       "display": "10"
+       "display": "40"
       },
       {
        "key": "BossHeal",
        "label": "보스 치유",
-       "value": 10,
+       "value": 100,
        "unit": "count",
-       "display": "10"
+       "display": "100"
       },
       {
        "key": "BossHeal",
        "label": "보스 치유",
-       "value": 20,
+       "value": 200,
        "unit": "count",
-       "display": "20"
+       "display": "200"
       }
      ],
      "hasKorText": true,
@@ -12898,16 +12898,16 @@
       {
        "key": "KillThreshold",
        "label": "필요 처치 수",
-       "value": 5,
+       "value": 10,
        "unit": "count",
-       "display": "5"
+       "display": "10"
       },
       {
        "key": "KillThreshold",
        "label": "필요 처치 수",
-       "value": 3,
+       "value": 6,
        "unit": "count",
-       "display": "3"
+       "display": "6"
       }
      ],
      "hasKorText": true,
@@ -12937,9 +12937,9 @@
       {
        "key": "Damage",
        "label": "피해량",
-       "value": 0.5,
+       "value": 0.4,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+40%"
       }
      ],
      "hasKorText": true,
@@ -12954,30 +12954,30 @@
     {
      "key": "FrozenHide",
      "name": "냉동 가죽",
-     "standardDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +6.67% 감소합니다.",
-     "deluxeDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +16.67% 감소합니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+6.67%</font> 감소합니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+16.67%</font> 감소합니다.",
+     "standardDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +15% 감소합니다.",
+     "deluxeDesc": "얼어붙은 가죽: 제자리에 멈춰 서 있는 동안 받는 피해가 +25% 감소합니다.",
+     "standardDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+15%</font> 감소합니다.",
+     "deluxeDescRaw": "<font color=\"#4682B4\">얼어붙은 가죽:</font> 제자리에 멈춰 서 있는 동안 <font color=\"#87CEEB\">받는 피해가</font> <font color=\"#FFFFFF\">+25%</font> 감소합니다.",
      "rawValues": [
       {
        "key": "Resistance",
        "label": "저항력",
-       "value": 0.066667,
+       "value": 0.15,
        "unit": "percent",
-       "display": "+6.67%"
+       "display": "+15%"
       },
       {
        "key": "Resistance",
        "label": "저항력",
-       "value": 0.166667,
+       "value": 0.25,
        "unit": "percent",
-       "display": "+16.67%"
+       "display": "+25%"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": true,
-     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.200000; 구 0.500000",
+     "isPatched": false,
+     "patchNote": null,
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -12986,17 +12986,17 @@
     {
      "key": "HoardersCache",
      "name": "수집가의 은닉처",
-     "standardDesc": "호더의 은닉처: 모든 무기의 탄창 용량이 +15% 증가합니다.",
+     "standardDesc": "호더의 은닉처: 모든 무기의 탄창 용량이 +20% 증가합니다.",
      "deluxeDesc": "호더의 은닉처: 모든 무기의 탄창 용량이 +35% 증가합니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">호더의 은닉처:</font> 모든 무기의 <font color=\"#87CEEB\">탄창 용량</font>이 <font color=\"#FFFFFF\">+15%</font> 증가합니다.",
+     "standardDescRaw": "<font color=\"#4682B4\">호더의 은닉처:</font> 모든 무기의 <font color=\"#87CEEB\">탄창 용량</font>이 <font color=\"#FFFFFF\">+20%</font> 증가합니다.",
      "deluxeDescRaw": "<font color=\"#4682B4\">호더의 은닉처:</font> 모든 무기의 <font color=\"#87CEEB\">탄창 용량</font>이 <font color=\"#FFFFFF\">+35%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "MagBonus",
        "label": "탄창 보너스",
-       "value": 0.15,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+15%"
+       "display": "+20%"
       },
       {
        "key": "MagBonus",
@@ -13018,30 +13018,30 @@
     {
      "key": "Isolation",
      "name": "격리",
-     "standardDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +5% 증가합니다.",
-     "deluxeDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +13.33% 증가합니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">고립:</font> <font color=\"#F0F8FF\">15미터</font> 이내에 아군이 아무도 없을 때 <font color=\"#87CEEB\">피해 저항이</font> <font color=\"#FFFFFF\">+5%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">고립:</font> <font color=\"#F0F8FF\">15미터</font> 이내에 아군이 아무도 없을 때 <font color=\"#87CEEB\">피해 저항이</font> <font color=\"#FFFFFF\">+13.33%</font> 증가합니다.",
+     "standardDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +15% 증가합니다.",
+     "deluxeDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +30% 증가합니다.",
+     "standardDescRaw": "<font color=\"#4682B4\">고립:</font> <font color=\"#F0F8FF\">15미터</font> 이내에 아군이 아무도 없을 때 <font color=\"#87CEEB\">피해 저항이</font> <font color=\"#FFFFFF\">+15%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#4682B4\">고립:</font> <font color=\"#F0F8FF\">15미터</font> 이내에 아군이 아무도 없을 때 <font color=\"#87CEEB\">피해 저항이</font> <font color=\"#FFFFFF\">+30%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Resistance",
        "label": "저항력",
-       "value": 0.05,
+       "value": 0.15,
        "unit": "percent",
-       "display": "+5%"
+       "display": "+15%"
       },
       {
        "key": "Resistance",
        "label": "저항력",
-       "value": 0.133333,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+13.33%"
+       "display": "+30%"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": true,
-     "patchNote": "저항 스킬 1/3 축소(2026-07-02), 구 0.150000; 구 0.400000",
+     "isPatched": false,
+     "patchNote": null,
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -13083,9 +13083,9 @@
      "key": "PatientReload",
      "name": "환자 재장전",
      "standardDesc": "침착한 재장전: 제자리에 가만히 서 있을 때 재장전 속도가 +10% 증가합니다.",
-     "deluxeDesc": "침착한 재장전: 제자리에 가만히 서 있을 때 재장전 속도가 +25% 증가합니다.",
+     "deluxeDesc": "침착한 재장전: 제자리에 가만히 서 있을 때 재장전 속도가 +20% 증가합니다.",
      "standardDescRaw": "<font color=\"#4682B4\">침착한 재장전:</font> 제자리에 가만히 서 있을 때 <font color=\"#87CEEB\">재장전 속도</font>가 <font color=\"#FFFFFF\">+10%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">침착한 재장전:</font> 제자리에 가만히 서 있을 때 <font color=\"#87CEEB\">재장전 속도</font>가 <font color=\"#FFFFFF\">+25%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#4682B4\">침착한 재장전:</font> 제자리에 가만히 서 있을 때 <font color=\"#87CEEB\">재장전 속도</font>가 <font color=\"#FFFFFF\">+20%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "ReloadRate",
@@ -13097,15 +13097,15 @@
       {
        "key": "ReloadRate",
        "label": "재장전 속도",
-       "value": 0.25,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+25%"
+       "display": "+20%"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": true,
-     "patchNote": "스킬 재장전 50%축소(2026-07-02), 구 0.200000; 구 0.500000",
+     "patchNote": "스킬 재장전 50%축소(2026-07-09), 구 0.200000; 구 0.250000",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -13161,16 +13161,16 @@
       {
        "key": "Damage",
        "label": "피해량",
-       "value": 0.25,
+       "value": 0.2,
        "unit": "percent",
-       "display": "+25%"
+       "display": "+20%"
       },
       {
        "key": "Damage",
        "label": "피해량",
-       "value": 0.6,
+       "value": 0.4,
        "unit": "percent",
-       "display": "+60%"
+       "display": "+40%"
       }
      ],
      "hasKorText": true,
@@ -13185,24 +13185,24 @@
     {
      "key": "Territorial",
      "name": "영역 확보",
-     "standardDesc": "영역: 문 용접 및 용접 해제 속도가 +50% 빨라집니다.",
-     "deluxeDesc": "영역: 문 용접 및 용접 해제 속도가 +125% 빨라집니다.",
-     "standardDescRaw": "<font color=\"#4682B4\">영역:</font> 문 용접 및 <font color=\"#F0F8FF\">용접 해제</font> 속도가 <font color=\"#FFFFFF\">+50%</font> <font color=\"#87CEEB\">빨라집니다</font>.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">영역:</font> 문 용접 및 <font color=\"#F0F8FF\">용접 해제</font> 속도가 <font color=\"#FFFFFF\">+125%</font> <font color=\"#87CEEB\">빨라집니다</font>.",
+     "standardDesc": "영역: 문 용접 및 용접 해제 속도가 +100% 빨라집니다.",
+     "deluxeDesc": "영역: 문 용접 및 용접 해제 속도가 +200% 빨라집니다.",
+     "standardDescRaw": "<font color=\"#4682B4\">영역:</font> 문 용접 및 <font color=\"#F0F8FF\">용접 해제</font> 속도가 <font color=\"#FFFFFF\">+100%</font> <font color=\"#87CEEB\">빨라집니다</font>.",
+     "deluxeDescRaw": "<font color=\"#4682B4\">영역:</font> 문 용접 및 <font color=\"#F0F8FF\">용접 해제</font> 속도가 <font color=\"#FFFFFF\">+200%</font> <font color=\"#87CEEB\">빨라집니다</font>.",
      "rawValues": [
       {
        "key": "Bonus",
        "label": "보너스",
-       "value": 0.5,
+       "value": 1.0,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+100%"
       },
       {
        "key": "Bonus",
        "label": "보너스",
-       "value": 1.25,
+       "value": 2.0,
        "unit": "percent",
-       "display": "+125%"
+       "display": "+200%"
       }
      ],
      "hasKorText": true,
@@ -13218,9 +13218,9 @@
      "key": "TrophyHunt",
      "name": "트로피 사냥",
      "standardDesc": "트로피 사냥: 대형 좀비와 보스에게 입히는 피해량이 +25% 증가합니다.",
-     "deluxeDesc": "트로피 사냥: 대형 좀비와 보스에게 입히는 피해량이 +60% 증가합니다.",
+     "deluxeDesc": "트로피 사냥: 대형 좀비와 보스에게 입히는 피해량이 +50% 증가합니다.",
      "standardDescRaw": "<font color=\"#4682B4\">트로피 사냥:</font> <font color=\"#87CEEB\">대형 좀비</font>와 <font color=\"#F0F8FF\">보스</font>에게 입히는 피해량이 <font color=\"#FFFFFF\">+25%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#4682B4\">트로피 사냥:</font> <font color=\"#87CEEB\">대형 좀비</font>와 <font color=\"#F0F8FF\">보스</font>에게 입히는 피해량이 <font color=\"#FFFFFF\">+60%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#4682B4\">트로피 사냥:</font> <font color=\"#87CEEB\">대형 좀비</font>와 <font color=\"#F0F8FF\">보스</font>에게 입히는 피해량이 <font color=\"#FFFFFF\">+50%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -13232,9 +13232,9 @@
       {
        "key": "Damage",
        "label": "피해량",
-       "value": 0.6,
+       "value": 0.5,
        "unit": "percent",
-       "display": "+60%"
+       "display": "+50%"
       }
      ],
      "hasKorText": true,
@@ -13255,9 +13255,12 @@
    },
    "grade": "B",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.060→0.035→0.0175; 구 0.020→0.015→0.0075; 구 0.050→0.030→0.015; 구 1.000000; 구 0.700000",
+   "patchNote": "260709 버프. 구 0.0175; 구 0.020→0.015→0.0075; 구 0.050→0.030→0.015; 구 1.000000; 구 0.700000",
    "testWarning": null,
-   "recentChangeTag": null,
+   "recentChangeTag": {
+    "date": "2026-07-10",
+    "type": "buff"
+   },
    "extraSections": [],
    "icon": "icons/wendigo.png"
   },
