@@ -5,6 +5,7 @@ let OPEN_BASE_KEY = null;
 let SELECTED_ADV_KEY = null;
 let AURORA_VIEW = false;
 let AURORA_MODE = null;
+let PATCH_NOTES_VIEW = false;
 let SEARCH_INDEX = [];
 let SEARCH_RESULTS = [];
 let SEARCH_ACTIVE_IDX = -1;
@@ -79,6 +80,53 @@ const WEAPON_AURORA_STATS = [
   { label: "HRG 메뚜기", value: 0.3 },
 ];
 
+// 지금까지의 주요 패치 내역 요약 (최신순). 모든 커밋을 나열하진 않고,
+// 플레이어가 체감할 만한 굵직한 변경사항만 추립니다.
+const PATCH_NOTES = [
+  {
+    date: "2026-07-10",
+    items: [
+      "베이스 퍼크(10종)에도 전직 퍼크와 동일한 스킬 목록(표준/디럭스 설명, 비활성화 스킬 표시) 추가",
+      "전직 퍼크 상세페이지에 잘못 표시되던 '베이스 퍼크' 라벨을 '전직 퍼크'로 수정",
+      "무기 밸런스 오로라에 신규 무기 다수 반영, 강한 버프/너프 항목 색상 강조",
+      "제드 웨이브 스폰 비율 조정 — 30웨이브까지 잡제드:중보스 비율이 점진적으로 8:2에 수렴하도록 튜닝",
+      "어고니 / 버서커 / 프로스트 너프, 웬디고 버프 반영 및 한글 패치 동기화",
+    ],
+  },
+  {
+    date: "2026-07-07",
+    items: [
+      "모든 퍼크 설명란을 정체성 중심의 짧고 명확한 문구로 전면 간소화 (레벨20 풀스킬 장문 설명 삭제)",
+      "최근 버프/너프 태그 위치를 등급 배지 옆으로 이동",
+      "메트로놈 · 심비오트 심화 매커니즘 상세 설명 추가, 한글 패치 다운로드 시 구독 해제 재확인 팝업 추가",
+      "방어구/저항력 용어 통일, 대규모 밸런스 패치 반영",
+      "손상/반동/탄퍼짐 마스터 상한 완화 및 서버 사이드 ini 동기화",
+    ],
+  },
+  {
+    date: "2026-07-06",
+    items: [
+      "패시브 수치 표시 회귀 버그 수정, 파이어버그·데몰리션리스트 등급 조정",
+      "매니악 재장전 속도 너프, 갬블러·타이쿤 밸런스 조정",
+    ],
+  },
+  {
+    date: "2026-07-05",
+    items: [
+      "한글 패치와 실제 밸런스 ini 간 수치 불일치를 자동으로 잡아내는 감사 도구 도입",
+      "밸런스 오로라(피해량 배율) 수치를 서버 최신값으로 동기화",
+      "ZED타임 연장 계열 스킬 전반 너프",
+      "4개 베이스 퍼크의 Lv15/20 전직 퍼크 슬롯 재배치",
+    ],
+  },
+  {
+    date: "2026-07-04",
+    items: [
+      "초반(1~3웨이브)이 쉽고 11~25웨이브가 밋밋했던 난이도 곡선 개선, 26웨이브 이후 급격한 난이도 상승 완화",
+    ],
+  },
+];
+
 function el(tag, attrs = {}, children = []) {
   const node = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
@@ -122,6 +170,8 @@ async function init() {
       <a class="patch-download-btn" id="korDownloadBtn" href="downloads/ZedternalRBPerkpackage.KOR" download>⬇ 한국어 패치 파일 다운로드</a>
     </div>`;
 
+  document.getElementById("patchNotesBtn").addEventListener("click", showPatchNotes);
+
   document.getElementById("korDownloadBtn").addEventListener("click", (e) => {
     const ok = confirm("Steam 창작마당에서 Zedternal Unlimited 구독을 해제하셨습니까?\n\n구독 중인 상태로 이 파일을 덮어쓰면, Steam이 자동 동기화하면서 방금 받은 패치 파일을 구버전 원본으로 다시 덮어씁니다.\n\n구독 해제를 확인하셨다면 [확인]을 눌러 다운로드를 계속하세요.");
     if (!ok) e.preventDefault();
@@ -142,8 +192,10 @@ function showBaseOverview(key) {
   OPEN_BASE_KEY = key;
   SELECTED_ADV_KEY = null;
   AURORA_VIEW = false;
+  PATCH_NOTES_VIEW = false;
   renderSidebar();
   renderMainArea();
+  document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
 }
 
 function selectAdv(key) {
@@ -151,6 +203,7 @@ function selectAdv(key) {
   OPEN_BASE_KEY = adv.parentPerk;
   SELECTED_ADV_KEY = key;
   AURORA_VIEW = false;
+  PATCH_NOTES_VIEW = false;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
@@ -159,11 +212,43 @@ function selectAdv(key) {
 function showAurora(mode) {
   AURORA_VIEW = true;
   AURORA_MODE = mode;
+  PATCH_NOTES_VIEW = false;
   OPEN_BASE_KEY = null;
   SELECTED_ADV_KEY = null;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
+}
+
+function showPatchNotes() {
+  PATCH_NOTES_VIEW = true;
+  AURORA_VIEW = false;
+  OPEN_BASE_KEY = null;
+  SELECTED_ADV_KEY = null;
+  renderSidebar();
+  renderMainArea();
+  document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
+}
+
+function renderPatchNotesDetail() {
+  const groups = PATCH_NOTES.map(g => `
+    <div class="patch-note-group">
+      <div class="patch-note-date">${g.date}</div>
+      <ul class="strengths">${g.items.map(i => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
+    </div>
+  `).join("");
+  return `
+    <div class="detail-header">
+      <div class="ba-icon lg">🧾</div>
+      <div class="detail-titles">
+        <h2>패치 노트</h2>
+      </div>
+    </div>
+    <div class="aurora-note">
+      <div class="aurora-note-main">지금까지의 주요 변경사항을 최신순으로 정리했습니다. 사소한 수치 조정까지 전부 담지는 않았습니다.</div>
+    </div>
+    ${groups}
+  `;
 }
 
 function auroraBarRow(stat, invert) {
@@ -320,6 +405,11 @@ function renderMainArea() {
   const main = document.getElementById("mainArea");
   main.innerHTML = "";
 
+  if (PATCH_NOTES_VIEW) {
+    main.innerHTML = renderPatchNotesDetail();
+    wireDetailEvents(main);
+    return;
+  }
   if (AURORA_VIEW) {
     main.innerHTML = AURORA_MODE === "weapon" ? renderWeaponAuroraDetail() : renderBalanceAuroraDetail();
     wireDetailEvents(main);
@@ -396,7 +486,7 @@ function renderBaseDetail(key) {
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
   const skillsHtml = (p.skills || []).map(s => `
-    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}">
+    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
       <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
       ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
       ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
@@ -452,7 +542,7 @@ function renderAdvDetail(key) {
   const hasPassive = p.passiveStats.length > 0;
 
   const skillsHtml = p.skills.map(s => `
-    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}">
+    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
       <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
       ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
       ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
@@ -663,6 +753,16 @@ function goToSearchResult(item) {
   if (!item) return;
   if (item.type === "base") showBaseOverview(item.navKey);
   else selectAdv(item.navKey);
+  if (item.ownKey !== item.navKey) {
+    requestAnimationFrame(() => {
+      const el = document.querySelector(`.skill-item[data-skillkey="${CSS.escape(item.ownKey)}"]`);
+      if (el) {
+        el.scrollIntoView({ behavior: "instant", block: "center" });
+        el.classList.add("skill-highlight");
+        setTimeout(() => el.classList.remove("skill-highlight"), 1600);
+      }
+    });
+  }
   closeSearchResults();
   document.getElementById("searchBox").blur();
 }

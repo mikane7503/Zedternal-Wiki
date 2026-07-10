@@ -87,6 +87,18 @@ body {
   flex-wrap: wrap;
 }
 
+.patch-notes-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.patch-notes-btn:hover { background: var(--bg-card-hover); border-color: var(--cyan); }
+
 .search-wrap { position: relative; }
 
 #searchBox {
@@ -285,6 +297,14 @@ body {
   color: var(--cyan);
   padding: 1px 5px;
   border-radius: 4px;
+}
+
+.patch-note-group { margin-bottom: 18px; }
+.patch-note-date {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
 .ba-row {
@@ -533,6 +553,11 @@ body {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 10px 12px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.skill-item.skill-highlight {
+  border-color: var(--cyan);
+  background: rgba(21,215,250,0.12);
 }
 .skill-item h4 { margin: 0 0 6px; font-size: 14px; }
 .skill-item .std, .skill-item .delx { font-size: 13px; margin: 3px 0; }
