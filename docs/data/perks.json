@@ -7416,33 +7416,33 @@
    "endgame": null,
    "descriptions": [
     {
-     "raw": "위상은 <font color=\"#ff4444\">ASSAULT</font>, <font color=\"#44ddff\">TEMPO</font>, <font color=\"#44ff44\">MOMENTUM</font>, <font color=\"#ffaa22\">BASTION</font> 순으로 <font color=\"#FFFFFF\">20초마다</font> 자동 순환됩니다. 각 위상마다 고유한 보너스가 부여됩니다.",
-     "text": "위상은 ASSAULT, TEMPO, MOMENTUM, BASTION 순으로 20초마다 자동 순환됩니다. 각 위상마다 고유한 보너스가 부여됩니다.",
+     "raw": "<font color=\"#FFFFFF\">돌격 → 템포 → 모멘텀 → 요새</font> 순서로 위상이 <font color=\"#FFFFFF\">20초마다</font> 자동 전환됩니다 (전체 한 바퀴 80초). 지금 활성화된 위상의 보너스만 적용됩니다.",
+     "text": "돌격 → 템포 → 모멘텀 → 요새 순서로 위상이 20초마다 자동 전환됩니다 (전체 한 바퀴 80초). 지금 활성화된 위상의 보너스만 적용됩니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#ff4444\">돌격</font>: 레벨당 피해량 <font color=\"#FFFFFF\">+1.5%</font> 및 관통력 <font color=\"#FFFFFF\">+1.25%</font>. 동기화 조건: <font color=\"#FFFFFF\">헤드샷 처치</font>.",
-     "text": "돌격: 레벨당 피해량 +1.5% 및 관통력 +1.25%. 동기화 조건: 헤드샷 처치.",
+     "raw": "<font color=\"#ff4444\">① 돌격</font>: 레벨당 피해량 <font color=\"#FFFFFF\">+1.5%</font> 및 관통력 <font color=\"#FFFFFF\">+1.25%</font>. 동기화 조건: <font color=\"#FFFFFF\">헤드샷 처치</font>.",
+     "text": "① 돌격: 레벨당 피해량 +1.5% 및 관통력 +1.25%. 동기화 조건: 헤드샷 처치.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#44ddff\">템포</font>: 레벨당 재장전 속도 <font color=\"#FFFFFF\">+1%</font> 및 연사 속도 <font color=\"#FFFFFF\">+1%</font>. 동기화 조건: <font color=\"#FFFFFF\">빠른 연속 처치</font> (3초 이내).",
-     "text": "템포: 레벨당 재장전 속도 +1% 및 연사 속도 +1%. 동기화 조건: 빠른 연속 처치 (3초 이내).",
+     "raw": "<font color=\"#44ddff\">② 템포</font>: 레벨당 재장전 속도 <font color=\"#FFFFFF\">+1%</font> 및 연사 속도 <font color=\"#FFFFFF\">+1%</font>. 동기화 조건: <font color=\"#FFFFFF\">빠른 연속 처치</font> (3초 이내).",
+     "text": "② 템포: 레벨당 재장전 속도 +1% 및 연사 속도 +1%. 동기화 조건: 빠른 연속 처치 (3초 이내).",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#44ff44\">모멘텀</font>: 레벨당 이동 속도 <font color=\"#FFFFFF\">+0.75%</font> 및 무기 전환 속도 <font color=\"#FFFFFF\">+1.5%</font>. 동기화 조건: <font color=\"#FFFFFF\">이동 중 처치</font>.",
-     "text": "모멘텀: 레벨당 이동 속도 +0.75% 및 무기 전환 속도 +1.5%. 동기화 조건: 이동 중 처치.",
+     "raw": "<font color=\"#44ff44\">③ 모멘텀</font>: 레벨당 이동 속도 <font color=\"#FFFFFF\">+0.75%</font> 및 무기 전환 속도 <font color=\"#FFFFFF\">+1.5%</font>. 동기화 조건: <font color=\"#FFFFFF\">이동 중 처치</font>.",
+     "text": "③ 모멘텀: 레벨당 이동 속도 +0.75% 및 무기 전환 속도 +1.5%. 동기화 조건: 이동 중 처치.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#ffaa22\">BASTION</font>: 레벨당 근접 피해량 <font color=\"#FFFFFF\">+1%</font>, 처치 시 <font color=\"#FFFFFF\">1 HP 회복</font>, 피해 저항 <font color=\"#FFFFFF\">15%</font>. 동기화 조건: <font color=\"#FFFFFF\">근거리 처치</font> (5m 미만).",
-     "text": "BASTION: 레벨당 근접 피해량 +1%, 처치 시 1 HP 회복, 피해 저항 15%. 동기화 조건: 근거리 처치 (5m 미만).",
+     "raw": "<font color=\"#ffaa22\">④ 요새</font>: 레벨당 근접 피해량 <font color=\"#FFFFFF\">+1%</font>, 처치 시 <font color=\"#FFFFFF\">1 HP 회복</font>, 피해 저항 <font color=\"#FFFFFF\">15%</font>. 동기화 조건: <font color=\"#FFFFFF\">근거리 처치</font> (5m 미만).",
+     "text": "④ 요새: 레벨당 근접 피해량 +1%, 처치 시 1 HP 회복, 피해 저항 15%. 동기화 조건: 근거리 처치 (5m 미만).",
      "isCapstone": false
     },
     {
-     "raw": "각 위상과 일치하는 조건으로 <font color=\"#FFFFFF\">5회 동기화 처치</font>를 달성하면, 해당 위상에 <font color=\"#77d914\">영구적인 +0.25%</font> 중첩 보너스가 부여됩니다.",
-     "text": "각 위상과 일치하는 조건으로 5회 동기화 처치를 달성하면, 해당 위상에 영구적인 +0.25% 중첩 보너스가 부여됩니다.",
+     "raw": "한 위상이 활성화된 동안 그 위상의 동기화 조건으로 <font color=\"#FFFFFF\">5회 처치</font>하면, 그 위상에 <font color=\"#77d914\">영구적인 +0.25%</font> 중첩 보너스가 붙습니다 (다음에 그 위상이 돌아와도 계속 유지).",
+     "text": "한 위상이 활성화된 동안 그 위상의 동기화 조건으로 5회 처치하면, 그 위상에 영구적인 +0.25% 중첩 보너스가 붙습니다 (다음에 그 위상이 돌아와도 계속 유지).",
      "isCapstone": false
     },
     {
@@ -7451,8 +7451,8 @@
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">크레센도</font> - 한 사이클(4위상×20초=80초) 동안 <font color=\"#FFFFFF\">4개 위상 전부</font> 동기화 조건을 만족하면, ASSAULT로 돌아오는 순간 <font color=\"#FFFFFF\">5초간</font> 크레센도가 발동합니다. 이 동안 현재 활성 위상은 보너스 100%를 그대로 유지하고, 나머지 3개 비활성 위상도 각각 <font color=\"#FFFFFF\">50%</font>씩 동시에 적용됩니다.",
-     "text": "레벨 20: 크레센도 - 한 사이클(4위상×20초=80초) 동안 4개 위상 전부 동기화 조건을 만족하면, ASSAULT로 돌아오는 순간 5초간 크레센도가 발동합니다. 이 동안 현재 활성 위상은 보너스 100%를 그대로 유지하고, 나머지 3개 비활성 위상도 각각 50%씩 동시에 적용됩니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">크레센도</font> - 한 사이클(4위상×20초=80초) 동안 <font color=\"#FFFFFF\">4개 위상 전부</font> 동기화 조건을 만족하면, 다시 돌격 위상으로 돌아오는 순간 <font color=\"#FFFFFF\">5초간</font> 크레센도가 발동합니다. 이 동안 현재 활성 위상은 보너스 100%를 그대로 유지하고, 나머지 3개 비활성 위상도 각각 <font color=\"#FFFFFF\">50%</font>씩 동시에 적용됩니다.",
+     "text": "레벨 20: 크레센도 - 한 사이클(4위상×20초=80초) 동안 4개 위상 전부 동기화 조건을 만족하면, 다시 돌격 위상으로 돌아오는 순간 5초간 크레센도가 발동합니다. 이 동안 현재 활성 위상은 보너스 100%를 그대로 유지하고, 나머지 3개 비활성 위상도 각각 50%씩 동시에 적용됩니다.",
      "isCapstone": true
     }
    ],
@@ -9006,19 +9006,19 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">공허의 부름</font> - 공허한 무기가 체력이 낮은 대상에게 <font color=\"#FFFFFF\">산산조각</font> 피해를 입힙니다 (보스의 경우 임계값이 절반으로 감소합니다).",
-     "text": "레벨 10: 공허의 부름 - 공허한 무기가 체력이 낮은 대상에게 산산조각 피해를 입힙니다 (보스의 경우 임계값이 절반으로 감소합니다).",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">공허 숙련</font> - 고유 잠금 해제 아이템 하나당 할로우 무기 피해량이 <font color=\"#FFFFFF\">+1%</font> 증가합니다.",
-     "text": "레벨 20: 공허 숙련 - 고유 잠금 해제 아이템 하나당 할로우 무기 피해량이 +1% 증가합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "각 무기에 대해 <font color=\"#FFFFFF\">5가지 조건</font>을 달성하면 상점에서 해당 무기의 <font color=\"#FFD700\">할로우 변형</font>을 잠금 해제할 수 있습니다.",
-     "text": "각 무기에 대해 5가지 조건을 달성하면 상점에서 해당 무기의 할로우 변형을 잠금 해제할 수 있습니다.",
+     "raw": "무기별로 아래 <font color=\"#FFFFFF\">5가지 조건을 순서대로</font> 채우면 상점에서 그 무기의 <font color=\"#FFD700\">할로우 변형</font>을 잠금 해제할 수 있습니다: ① 헤드샷 처치 50회 → ② 누적 처치 200회 → ③ 짧은 순간(0.05초 내) 동시 처치 50회 → ④ 3초 내 연속 처치 또는 근접 처치 50회 → ⑤ 대형 좀비(스크레이크급 이상) 처치 50회.",
+     "text": "무기별로 아래 5가지 조건을 순서대로 채우면 상점에서 그 무기의 할로우 변형을 잠금 해제할 수 있습니다: ① 헤드샷 처치 50회 → ② 누적 처치 200회 → ③ 짧은 순간(0.05초 내) 동시 처치 50회 → ④ 3초 내 연속 처치 또는 근접 처치 50회 → ⑤ 대형 좀비(스크레이크급 이상) 처치 50회.",
      "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">공허의 부름</font> - 할로우 무기는 무기마다 정해진 <font color=\"#FFFFFF\">체력 비율 이하</font>로 남은 대상을 즉시 처치하는 <font color=\"#FFFFFF\">산산조각</font> 피해를 입힙니다 (보스는 이 기준 체력 비율이 절반으로 낮아져 더 늦게 발동합니다).",
+     "text": "레벨 10: 공허의 부름 - 할로우 무기는 무기마다 정해진 체력 비율 이하로 남은 대상을 즉시 처치하는 산산조각 피해를 입힙니다 (보스는 이 기준 체력 비율이 절반으로 낮아져 더 늦게 발동합니다).",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">공허 숙련</font> - 지금까지 잠금 해제한 할로우 무기 1개당 할로우 무기 전체의 피해량이 <font color=\"#FFFFFF\">+1%</font> 증가합니다 (무기를 많이 모을수록 전부 강해짐).",
+     "text": "레벨 20: 공허 숙련 - 지금까지 잠금 해제한 할로우 무기 1개당 할로우 무기 전체의 피해량이 +1% 증가합니다 (무기를 많이 모을수록 전부 강해짐).",
+     "isCapstone": true
     }
    ],
    "skills": [],
@@ -9074,18 +9074,18 @@
      "isCapstone": false
     },
     {
-     "raw": "처치할 때마다 <font color=\"#FF8C32\">카운터</font>가 충전됩니다. 임계값에 도달하면 <font color=\"#FF4444\">10초간 활성화</font>되며, 이 동안 처치한 적은 <font color=\"#FF4444\">폭발</font>합니다.",
-     "text": "처치할 때마다 카운터가 충전됩니다. 임계값에 도달하면 10초간 활성화되며, 이 동안 처치한 적은 폭발합니다.",
+     "raw": "처치할 때마다 <font color=\"#FF8C32\">폭발 카운터</font>가 1씩 쌓입니다. 카운터가 <font color=\"#FFFFFF\">임계값(레벨업당 -0.75, 만렙 30 -> 15킬)</font>에 도달하면 <font color=\"#FF4444\">10초간</font> '폭발 모드'가 활성화되며, 이 동안 처치한 적은 <font color=\"#FF4444\">그 자리에서 폭발</font>합니다.",
+     "text": "처치할 때마다 폭발 카운터가 1씩 쌓입니다. 카운터가 임계값(레벨업당 -0.75, 만렙 30 -> 15킬)에 도달하면 10초간 '폭발 모드'가 활성화되며, 이 동안 처치한 적은 그 자리에서 폭발합니다.",
      "isCapstone": false
     },
     {
-     "raw": "필요 킬 수 임계값이 <font color=\"#FFFFFF\">50 -> 30</font> 킬로 감소하고, 폭발 피해량은 <font color=\"#FFFFFF\">400 -> 1000</font>, 폭발 반경은 <font color=\"#FFFFFF\">300 -> 400</font>으로 증가합니다.",
-     "text": "필요 킬 수 임계값이 50 -> 30 킬로 감소하고, 폭발 피해량은 400 -> 1000, 폭발 반경은 300 -> 400으로 증가합니다.",
-     "isCapstone": false
+     "raw": "레벨이 오를수록 폭발 모드가 더 쉽고 강해집니다 - 필요 킬 수는 <font color=\"#FFFFFF\">30 -> 15</font>킬로 감소하고, 폭발 피해량은 <font color=\"#FFFFFF\">400 -> 1000</font>, 폭발 반경은 <font color=\"#FFFFFF\">300 -> 400</font>으로 증가합니다 (모두 만렙 기준).",
+     "text": "레벨이 오를수록 폭발 모드가 더 쉽고 강해집니다 - 필요 킬 수는 30 -> 15킬로 감소하고, 폭발 피해량은 400 -> 1000, 폭발 반경은 300 -> 400으로 증가합니다 (모두 만렙 기준).",
+     "isCapstone": true
     },
     {
-     "raw": "카운터는 <font color=\"#77d914\">웨이브 간에도 유지</font>됩니다. 자가 피해는 받지 않습니다.",
-     "text": "카운터는 웨이브 간에도 유지됩니다. 자가 피해는 받지 않습니다.",
+     "raw": "폭발 카운터는 <font color=\"#77d914\">웨이브가 바뀌어도 초기화되지 않고 계속 유지</font>됩니다. 폭발 피해로 자기 자신은 다치지 않습니다.",
+     "text": "폭발 카운터는 웨이브가 바뀌어도 초기화되지 않고 계속 유지됩니다. 폭발 피해로 자기 자신은 다치지 않습니다.",
      "isCapstone": false
     }
    ],
@@ -9174,7 +9174,7 @@
     {
      "title": "디토네이터 시스템 규칙",
      "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
-     "html": "<div class=\"desc-line\">좀비를 처치할 때마다 <font color=\"#FFD700\">폭발 카운터</font>가 1씩 쌓입니다. 카운터가 임계값에 도달하면 <font color=\"#FF4444\">10초 동안 활성 창</font>이 열립니다.</div><div class=\"desc-line\">임계값 = <font color=\"#FFFFFF\">50 − 퍼크 레벨</font> (Lv20 기준 30킬, 최소 1). 스킬 <font color=\"#ebc034\">헤어 트리거</font>로 5(디럭스 10) 추가 감소, 활성 창도 +3초(디럭스 +6초) 연장됩니다.</div><div class=\"desc-line\">활성 창 동안에는 <font color=\"#FFFFFF\">모든 처치</font>가 죽은 좀비 위치에서 즉시 폭발을 일으킵니다 — 피해 <font color=\"#FF4444\">400 + 레벨×30</font> (Lv20 = 1,000), 폭발 반경 <font color=\"#FFFFFF\">300 + 레벨×5 유닛</font> (Lv20 = 400 ≈ 4m). 본인과 아군은 피해를 받지 않습니다.</div><div class=\"desc-line\">활성 창 동안에는 카운터가 쌓이지 않으며, 창이 끝나면 다시 충전이 시작됩니다. 카운터는 <font color=\"#15d7fa\">웨이브를 넘어 유지</font>됩니다.</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">에이펙스 차지</font>: 보스 처치 시 카운터가 즉시 가득 찹니다. 활성 창 안에서 보스를 처치하면 그 폭발은 피해 1.5배·반경 1.25배(디럭스 2.5배·1.5배)로 강화되고, 디럭스는 다음 사이클에 임계값의 50%를 미리 충전합니다.</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">데이지 체인</font>: 폭발 반경 내 생존한 좀비 최대 8마리(디럭스 12마리, 표식 반경 1.5배)에 표식을 남기고, 표식이 남은 좀비를 처치하면 충전 중에도 연쇄 폭발이 일어납니다(표식 지속 20초/디럭스 30초).</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">슬로우 번</font>: 폭발 지점에 <font color=\"#FF6633\">불길 지대</font>를 남깁니다 — 6초간 초당 30 피해(디럭스 10초간 초당 60 피해), 범위는 폭발 반경과 동일.</div><div class=\"desc-line\">카운터 진행도·남은 활성 시간은 HUD 카드에 실시간 표시됩니다.</div>"
+     "html": "<div class=\"desc-line\">좀비를 처치할 때마다 <font color=\"#FFD700\">폭발 카운터</font>가 1씩 쌓입니다. 카운터가 임계값에 도달하면 <font color=\"#FF4444\">10초 동안 활성 창</font>이 열립니다.</div><div class=\"desc-line\">임계값 = <font color=\"#FFFFFF\">30 − (퍼크 레벨 × 0.75)</font> (Lv0 기준 30킬 → Lv20 기준 15킬). 스킬 <font color=\"#ebc034\">헤어 트리거</font>로 추가 감소, 활성 창도 +3초(디럭스 +6초) 연장됩니다.</div><div class=\"desc-line\">활성 창 동안에는 <font color=\"#FFFFFF\">모든 처치</font>가 죽은 좀비 위치에서 즉시 폭발을 일으킵니다 — 피해 <font color=\"#FF4444\">400 + 레벨×30</font> (Lv20 = 1,000), 폭발 반경 <font color=\"#FFFFFF\">300 + 레벨×5 유닛</font> (Lv20 = 400 ≈ 4m). 본인과 아군은 피해를 받지 않습니다.</div><div class=\"desc-line\">활성 창 동안에는 카운터가 쌓이지 않으며, 창이 끝나면 다시 충전이 시작됩니다. 카운터는 <font color=\"#15d7fa\">웨이브를 넘어 유지</font>됩니다.</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">에이펙스 차지</font>: 보스 처치 시 카운터가 즉시 가득 찹니다. 활성 창 안에서 보스를 처치하면 그 폭발은 피해 1.5배·반경 1.25배(디럭스 2.5배·1.5배)로 강화되고, 디럭스는 다음 사이클에 임계값의 50%를 미리 충전합니다.</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">데이지 체인</font>: 폭발 반경 내 생존한 좀비 최대 8마리(디럭스 12마리, 표식 반경 1.5배)에 표식을 남기고, 표식이 남은 좀비를 처치하면 충전 중에도 연쇄 폭발이 일어납니다(표식 지속 20초/디럭스 30초).</div><div class=\"desc-line\">스킬 <font color=\"#ebc034\">슬로우 번</font>: 폭발 지점에 <font color=\"#FF6633\">불길 지대</font>를 남깁니다 — 6초간 초당 30 피해(디럭스 10초간 초당 60 피해), 범위는 폭발 반경과 동일.</div><div class=\"desc-line\">카운터 진행도·남은 활성 시간은 HUD 카드에 실시간 표시됩니다.</div>"
     }
    ],
    "icon": "icons/detonator.png"
@@ -13628,8 +13628,13 @@
    "endgame": null,
    "descriptions": [
     {
-     "raw": "각 웨이브마다 <font color=\"#15d7fa\">갬빗 챌린지</font>가 무작위로 주어집니다. 완료하면 <font color=\"#77d914\">영구적인 능력치 보너스</font>를 얻습니다.",
-     "text": "각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "raw": "각 웨이브 시작 시 <font color=\"#15d7fa\">갬빗 챌린지</font> 1개가 무작위로 주어집니다. 웨이브 안에 완료하면 <font color=\"#77d914\">영구적인 능력치 보너스</font>를 얻습니다.",
+     "text": "각 웨이브 시작 시 갬빗 챌린지 1개가 무작위로 주어집니다. 웨이브 안에 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "실패해도 <font color=\"#FFFFFF\">아무런 불이익이 없습니다</font> - 그 챌린지는 그냥 사라지고, 다음 웨이브에 새 챌린지가 주어집니다.",
+     "text": "실패해도 아무런 불이익이 없습니다 - 그 챌린지는 그냥 사라지고, 다음 웨이브에 새 챌린지가 주어집니다.",
      "isCapstone": false
     },
     {
@@ -15964,18 +15969,18 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#ebc034\">예언:</font> 매 웨이브마다 <font color=\"#77d914\">축복</font> 도전이 주어집니다. 이를 완료하면 <font color=\"#15d7fa\">영구적인 버프</font>를 얻지만, 실패하면 <font color=\"#ff0000\">보상의 두 배에 달하는 강력한 저주</font>를 받습니다.",
-     "text": "예언: 매 웨이브마다 축복 도전이 주어집니다. 이를 완료하면 영구적인 버프를 얻지만, 실패하면 보상의 두 배에 달하는 강력한 저주를 받습니다.",
+     "raw": "<font color=\"#ebc034\">예언:</font> 매 웨이브마다 <font color=\"#77d914\">축복</font> 도전이 주어집니다. 성공하면 <font color=\"#15d7fa\">영구적인 버프</font>를 얻지만, <font color=\"#ff0000\">실패하면 그 두 배 크기의 저주(디버프)</font>를 영구히 받습니다. (피해량 저주는 아무리 쌓여도 기본 피해량의 <font color=\"#FFFFFF\">20% 밑으로는 떨어지지 않습니다</font>.)",
+     "text": "예언: 매 웨이브마다 축복 도전이 주어집니다. 성공하면 영구적인 버프를 얻지만, 실패하면 그 두 배 크기의 저주(디버프)를 영구히 받습니다. (피해량 저주는 아무리 쌓여도 기본 피해량의 20% 밑으로는 떨어지지 않습니다.)",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">공포의 환영</font> - 더 어려운 예언이 추가됩니다. 예언 실패 시, <font color=\"#15d7fa\">파멸의 저항력</font>을 얻습니다 (<font color=\"#FFFFFF\">20초</font> 동안 피해량 <font color=\"#FFFFFF\">+15%</font>).",
-     "text": "레벨 10: 공포의 환영 - 더 어려운 예언이 추가됩니다. 예언 실패 시, 파멸의 저항력을 얻습니다 (20초 동안 피해량 +15%).",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">공포의 환영</font> - 더 어려운(그만큼 보상도 큰) 예언이 추가됩니다. 예언에 실패한 직후에는 오히려 <font color=\"#15d7fa\">파멸의 저항력</font>을 얻어, <font color=\"#FFFFFF\">20초</font> 동안 피해량이 <font color=\"#FFFFFF\">+15%</font> 늘어납니다.",
+     "text": "레벨 10: 공포의 환영 - 더 어려운(그만큼 보상도 큰) 예언이 추가됩니다. 예언에 실패한 직후에는 오히려 파멸의 저항력을 얻어, 20초 동안 피해량이 +15% 늘어납니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">운명의 설계자</font> - 극한의 예언이 추가됩니다. 5 웨이브마다 1회 <font color=\"#15d7fa\">운명 거부</font>를 사용할 수 있습니다. 누적된 모든 보상이 <font color=\"#FFFFFF\">+50%</font> 증가합니다.",
-     "text": "레벨 20: 운명의 설계자 - 극한의 예언이 추가됩니다. 5 웨이브마다 1회 운명 거부를 사용할 수 있습니다. 누적된 모든 보상이 +50% 증가합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">운명의 설계자</font> - 극한의 예언이 추가되고, 누적된 모든 축복 보상이 <font color=\"#FFFFFF\">+50%</font> 증가합니다. 또한 <font color=\"#FFFFFF\">5웨이브에 1회</font>, 예언 실패로 저주가 내려지려는 순간 이를 <font color=\"#15d7fa\">자동으로 무효화(운명 거부)</font>하는 기회가 주어집니다.",
+     "text": "레벨 20: 운명의 설계자 - 극한의 예언이 추가되고, 누적된 모든 축복 보상이 +50% 증가합니다. 또한 5웨이브에 1회, 예언 실패로 저주가 내려지려는 순간 이를 자동으로 무효화(운명 거부)하는 기회가 주어집니다.",
      "isCapstone": true
     }
    ],
@@ -17504,8 +17509,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#CC8800\">트로피 헌터:</font> 좀비를 처치하면 확률적으로 <font color=\"#FFD700\">트로피</font>를 획득합니다. 알맞은 트로피를 모아 <font color=\"#87CEEB\">세트</font>를 완성하면(최대 <font color=\"#FFFFFF\">3개</font>) 영구적인 보너스를 획득합니다.",
-     "text": "트로피 헌터: 좀비를 처치하면 확률적으로 트로피를 획득합니다. 알맞은 트로피를 모아 세트를 완성하면(최대 3개) 영구적인 보너스를 획득합니다.",
+     "raw": "<font color=\"#CC8800\">트로피 헌터:</font> 좀비를 처치하면 확률적으로 <font color=\"#FFD700\">트로피</font>를 획득합니다. 정해진 좀비 조합의 트로피를 모아 <font color=\"#87CEEB\">세트</font>를 완성하면(최대 <font color=\"#FFFFFF\">3개</font>) 영구적인 보너스를 획득합니다. (아래 티어는 완성한 세트 개수에 따라 순서대로 열리며, 먼저 연 세트의 보너스는 계속 유지됩니다.)",
+     "text": "트로피 헌터: 좀비를 처치하면 확률적으로 트로피를 획득합니다. 정해진 좀비 조합의 트로피를 모아 세트를 완성하면(최대 3개) 영구적인 보너스를 획득합니다. (아래 티어는 완성한 세트 개수에 따라 순서대로 열리며, 먼저 연 세트의 보너스는 계속 유지됩니다.)",
      "isCapstone": false
     },
     {
@@ -17529,8 +17534,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#CC8800\">무한 사냥:</font> <font color=\"#FFFFFF\">3</font>세트를 완성한 후 트로피는 <font color=\"#FFD700\">무한히</font> 중첩되며 <font color=\"#FFFFFF\">5</font>개의 슬롯에 저장됩니다. (중첩당: <font color=\"#87CEEB\">클롯</font> 웨이브당 +1 도쉬 / <font color=\"#87CEEB\">크롤러</font> 속도 +1% / <font color=\"#87CEEB\">고어패스트</font> 근접 공격력 +1% / <font color=\"#87CEEB\">스토커</font> 탄창 용량 +1% / <font color=\"#87CEEB\">블로트</font> 최대 체력 +1 / <font color=\"#87CEEB\">허스크</font> 받는 피해 -1% / <font color=\"#87CEEB\">사이렌</font> 탄약 +5% / <font color=\"#87CEEB\">EDAR</font> 헤드샷 피해 +10% / <font color=\"#87CEEB\">스크레이크</font> 방어구 +5 / <font color=\"#87CEEB\">FP</font> 모든 피해량 +10%)",
-     "text": "무한 사냥: 3세트를 완성한 후 트로피는 무한히 중첩되며 5개의 슬롯에 저장됩니다. (중첩당: 클롯 웨이브당 +1 도쉬 / 크롤러 속도 +1% / 고어패스트 근접 공격력 +1% / 스토커 탄창 용량 +1% / 블로트 최대 체력 +1 / 허스크 받는 피해 -1% / 사이렌 탄약 +5% / EDAR 헤드샷 피해 +10% / 스크레이크 방어구 +5 / FP 모든 피해량 +10%)",
+     "raw": "<font color=\"#CC8800\">무한 사냥:</font> <font color=\"#FFFFFF\">3</font>세트를 전부 완성하고 나면, 이후로는 좀비 종류 10가지 중 <font color=\"#FFFFFF\">먼저 트로피가 붙은 5가지</font>만 슬롯을 차지해 <font color=\"#FFD700\">무한히</font> 중첩됩니다 (슬롯이 5개 다 차면 새로운 종류는 더 이상 슬롯을 얻지 못합니다). 슬롯당 효과 - <font color=\"#87CEEB\">클롯</font> 웨이브당 +1 도쉬 / <font color=\"#87CEEB\">크롤러</font> 속도 +1% / <font color=\"#87CEEB\">고어패스트</font> 근접 공격력 +1% / <font color=\"#87CEEB\">스토커</font> 탄창 용량 +1% / <font color=\"#87CEEB\">블로트</font> 최대 체력 +1 / <font color=\"#87CEEB\">허스크</font> 받는 피해 -1% / <font color=\"#87CEEB\">사이렌</font> 탄약 +5% / <font color=\"#87CEEB\">EDAR</font> 헤드샷 피해 +10% / <font color=\"#87CEEB\">스크레이크</font> 방어구 +5 / <font color=\"#87CEEB\">FP</font> 모든 피해량 +10%",
+     "text": "무한 사냥: 3세트를 전부 완성하고 나면, 이후로는 좀비 종류 10가지 중 먼저 트로피가 붙은 5가지만 슬롯을 차지해 무한히 중첩됩니다 (슬롯이 5개 다 차면 새로운 종류는 더 이상 슬롯을 얻지 못합니다). 슬롯당 효과 - 클롯 웨이브당 +1 도쉬 / 크롤러 속도 +1% / 고어패스트 근접 공격력 +1% / 스토커 탄창 용량 +1% / 블로트 최대 체력 +1 / 허스크 받는 피해 -1% / 사이렌 탄약 +5% / EDAR 헤드샷 피해 +10% / 스크레이크 방어구 +5 / FP 모든 피해량 +10%",
      "isCapstone": false
     },
     {
@@ -21354,18 +21359,18 @@
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#c77dff\">변신술사:</font> 각 웨이브마다 레벨에 비례하는 <font color=\"#e0aaff\">무작위 전투 버프</font>를 1개 부여받습니다.",
-     "text": "변신술사: 각 웨이브마다 레벨에 비례하는 무작위 전투 버프를 1개 부여받습니다.",
+     "raw": "<font color=\"#c77dff\">변신술사:</font> 각 웨이브마다 <font color=\"#e0aaff\">무작위 전투 버프</font> 1개를 받습니다. 다만 <font color=\"#FFFFFF\">Lv1~9에서는 이 버프가 영구적이지 않고</font>, 새 웨이브가 되면 이전 버프를 대체합니다 (동시에 1개만 유지).",
+     "text": "변신술사: 각 웨이브마다 무작위 전투 버프 1개를 받습니다. 다만 Lv1~9에서는 이 버프가 영구적이지 않고, 새 웨이브가 되면 이전 버프를 대체합니다 (동시에 1개만 유지).",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">듀얼 폼</font> - 이제 웨이브당 <font color=\"#e0aaff\">2개의 버프</font>를 받습니다.",
-     "text": "레벨 10: 듀얼 폼 - 이제 웨이브당 2개의 버프를 받습니다.",
+     "raw": "<font color=\"#8B0000\">레벨 10:</font> <font color=\"#FFD700\">듀얼 폼</font> - 웨이브당 <font color=\"#e0aaff\">2개의 버프</font>를 받습니다. 이 구간(Lv10~19)에서도 아직 영구적이지 않고, 매 웨이브 새로운 2개로 교체됩니다.",
+     "text": "레벨 10: 듀얼 폼 - 웨이브당 2개의 버프를 받습니다. 이 구간(Lv10~19)에서도 아직 영구적이지 않고, 매 웨이브 새로운 2개로 교체됩니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">모방</font> - 얻은 버프가 <font color=\"#e0aaff\">영구적으로 중첩됩니다</font>. 총 <font color=\"#FFFFFF\">15개</font>의 버프를 모두 모으면 최고 숙련도를 달성합니다.",
-     "text": "레벨 20: 모방 - 얻은 버프가 영구적으로 중첩됩니다. 총 15개의 버프를 모두 모으면 최고 숙련도를 달성합니다.",
+     "raw": "<font color=\"#8B0000\">레벨 20:</font> <font color=\"#FFD700\">모방</font> - 이제부터는 웨이브마다 받는 버프가 <font color=\"#e0aaff\">영구적으로 중첩</font>되어 사라지지 않습니다 (대신 개수는 다시 1개/웨이브로 줄어듭니다). 존재하는 <font color=\"#FFFFFF\">15종</font>의 버프를 전부 모으면 최고 숙련도를 달성합니다.",
+     "text": "레벨 20: 모방 - 이제부터는 웨이브마다 받는 버프가 영구적으로 중첩되어 사라지지 않습니다 (대신 개수는 다시 1개/웨이브로 줄어듭니다). 존재하는 15종의 버프를 전부 모으면 최고 숙련도를 달성합니다.",
      "isCapstone": true
     }
    ],
