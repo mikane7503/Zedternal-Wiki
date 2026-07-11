@@ -117,7 +117,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Brawler",
@@ -149,7 +150,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Butcher",
@@ -195,7 +197,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Dreadnaught",
@@ -227,7 +230,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Massacre",
@@ -273,7 +277,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Parry",
@@ -319,7 +324,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Spartan",
@@ -365,7 +371,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Tank",
@@ -411,7 +418,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Vampire",
@@ -457,7 +465,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Tempest",
@@ -489,7 +498,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -594,7 +604,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Concentration",
@@ -626,7 +637,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Guerrilla",
@@ -658,7 +670,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "GunMachine",
@@ -690,7 +703,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "HighCapacityMags",
@@ -722,7 +736,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "ImpactRounds",
@@ -768,7 +783,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Overload",
@@ -814,7 +830,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Supplier",
@@ -853,7 +870,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "TacticalReload",
@@ -878,7 +896,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Tactician",
@@ -910,7 +929,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -1023,7 +1043,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "DestroyerOfWorlds",
@@ -1055,7 +1076,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "ExtraRounds",
@@ -1101,7 +1123,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "FrontLine",
@@ -1147,7 +1170,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "HighImpactRound",
@@ -1179,7 +1203,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Kamikaze",
@@ -1204,7 +1229,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "MadBomber",
@@ -1236,7 +1262,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MadBomber.png"
     },
     {
      "key": "ShockTrooper",
@@ -1268,7 +1295,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "SonicResistantRounds",
@@ -1300,7 +1328,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "QuickFuse",
@@ -1332,7 +1361,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -1460,7 +1490,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "AirborneAgent",
@@ -1477,7 +1508,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "BattleSurgeon",
@@ -1523,7 +1555,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "CoagulantBooster",
@@ -1569,7 +1602,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "CombatantDoctor",
@@ -1608,7 +1642,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-04 제거: 심각한 무한 탄약 보충",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Hemoglobin",
@@ -1640,7 +1675,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Safeguard",
@@ -1672,7 +1708,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "SymbioticHealth",
@@ -1704,7 +1741,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Zedatif",
@@ -1743,7 +1781,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "FocusInjection",
@@ -1789,7 +1828,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -1905,7 +1945,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "BringTheHeat",
@@ -1930,7 +1971,8 @@
      "textFixed": true,
      "disabled": true,
      "disabledNote": "2026-07-06 제거: 열기 발산 (제드타임 버그 추측)",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Combustion",
@@ -1962,7 +2004,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Firestorm",
@@ -2008,7 +2051,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Firestorm.png"
     },
     {
      "key": "HeatWaves",
@@ -2061,7 +2105,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": "성능 감시",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Napalm",
@@ -2107,7 +2152,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Pyromaniac",
@@ -2139,7 +2185,8 @@
      "textFixed": true,
      "disabled": true,
      "disabledNote": "2026-07-04 제거: 사기급 성능",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Resistance",
@@ -2171,7 +2218,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "ZedPlosion",
@@ -2203,7 +2251,8 @@
      "textFixed": true,
      "disabled": true,
      "disabledNote": "2026-07-07 제거: 사기급 성능",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "HotPepper",
@@ -2220,7 +2269,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": "성능 감시",
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -2359,7 +2409,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "FirstBlood",
@@ -2405,7 +2456,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "MagicBullet",
@@ -2437,7 +2489,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "QuickDraw",
@@ -2469,7 +2522,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/QuickDraw.png"
     },
     {
      "key": "Ruthless",
@@ -2501,7 +2555,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "ShootAndRun",
@@ -2547,7 +2602,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Skirmisher",
@@ -2579,7 +2635,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Speedloader",
@@ -2625,7 +2682,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "WhirlwindOfLead",
@@ -2671,7 +2729,8 @@
      "textFixed": true,
      "disabled": true,
      "disabledNote": "2026-07-04 제거: 제드타임 무한탄약 무한속도",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Steady",
@@ -2710,7 +2769,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -2824,7 +2884,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "ColdRiposte",
@@ -2841,7 +2902,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-04 제거: 자동 얼리기 스킬 제어",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "DeadEye",
@@ -2873,7 +2935,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DeadEye.png"
     },
     {
      "key": "FrozenHeadPopper",
@@ -2905,7 +2968,8 @@
      "textFixed": true,
      "disabled": true,
      "disabledNote": "2026-07-04 제거: 자동 얼리기 스킬 제어",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Marksman",
@@ -2951,7 +3015,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "RankThemUp",
@@ -2983,7 +3048,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Sniper",
@@ -3015,7 +3081,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Stability",
@@ -3061,7 +3128,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Velocity",
@@ -3100,7 +3168,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Hunter",
@@ -3132,7 +3201,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -3249,7 +3319,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Destruction",
@@ -3266,7 +3337,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-07 제거: 사기급 성능",
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "DoorTraps",
@@ -3312,7 +3384,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Fortitude",
@@ -3344,7 +3417,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "HighCapacityMagsB",
@@ -3376,7 +3450,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Penetrator",
@@ -3408,7 +3483,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Salvo",
@@ -3440,7 +3516,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Tenacity",
@@ -3472,7 +3549,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "TightChoke",
@@ -3504,7 +3582,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "ConcussionRounds",
@@ -3536,7 +3615,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -3655,7 +3735,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "HeavyArmor",
@@ -3687,7 +3768,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Pressure",
@@ -3726,7 +3808,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Ranger",
@@ -3772,7 +3855,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "RapidAssault",
@@ -3804,7 +3888,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "RiotShield",
@@ -3850,7 +3935,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "SpecialUnit",
@@ -3896,7 +3982,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "SuppressionRounds",
@@ -3935,7 +4022,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "TacticalMovement",
@@ -3974,7 +4062,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "AssaultArmor",
@@ -4006,7 +4095,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -4120,7 +4210,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Emergency",
@@ -4166,7 +4257,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Empathy",
@@ -4212,7 +4304,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Fallback",
@@ -4258,7 +4351,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "MedicalInjection",
@@ -4275,7 +4369,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Scrapper",
@@ -4314,7 +4409,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Strength",
@@ -4346,7 +4442,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "TacticalArmor",
@@ -4378,7 +4475,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Watcher",
@@ -4417,7 +4515,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "AmmoPickup",
@@ -4449,7 +4548,8 @@
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
@@ -4559,7 +4659,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Aware.png"
     },
     {
      "key": "BugFixing",
@@ -4591,7 +4692,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BugFixing.png"
     },
     {
      "key": "Deflector",
@@ -4623,7 +4725,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Deflector.png"
     },
     {
      "key": "FLAK",
@@ -4655,7 +4758,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FLAK.png"
     },
     {
      "key": "Fencer",
@@ -4687,7 +4791,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Fencer.png"
     },
     {
      "key": "Indifferent",
@@ -4719,7 +4824,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Indifferent.png"
     },
     {
      "key": "NoiseCancelling",
@@ -4751,7 +4857,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NoiseCancelling.png"
     },
     {
      "key": "SteelSkin",
@@ -4783,7 +4890,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SteelSkin.png"
     },
     {
      "key": "Stoic",
@@ -4815,7 +4923,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Stoic.png"
     },
     {
      "key": "ThickSkin",
@@ -4847,7 +4956,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ThickSkin.png"
     }
    ],
    "skillCount": 10,
@@ -5113,7 +5223,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AdrenalineRush.png"
     },
     {
      "key": "BatteringRam",
@@ -5173,7 +5284,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BatteringRam.png"
     },
     {
      "key": "ChainFury",
@@ -5233,7 +5345,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ChainFury.png"
     },
     {
      "key": "Counterforce",
@@ -5279,7 +5392,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Counterforce.png"
     },
     {
      "key": "CrowdSurge",
@@ -5381,7 +5495,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CrowdSurge.png"
     },
     {
      "key": "Deadlock",
@@ -5427,7 +5542,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Deadlock.png"
     },
     {
      "key": "HoldTheLine",
@@ -5473,7 +5589,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HoldTheLine.png"
     },
     {
      "key": "NoSurrender",
@@ -5533,7 +5650,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NoSurrender.png"
     },
     {
      "key": "PainEcho",
@@ -5593,7 +5711,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PainEcho.png"
     },
     {
      "key": "Shockwave",
@@ -5625,7 +5744,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-02 제거: 자동 광역 넘어뜨리기(\"지진 스킬\", 근접3-5킬마다 5-7m 전체 넘어뜨림)",
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Shockwave.png"
     }
    ],
    "skillCount": 10,
@@ -5751,7 +5871,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BloodRush.png"
     },
     {
      "key": "DealWithTheDevil",
@@ -5797,7 +5918,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DealWithTheDevil.png"
     },
     {
      "key": "NoStringsOnMe",
@@ -5843,7 +5965,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NoStringsOnMe.png"
     },
     {
      "key": "OdeToGreed",
@@ -5889,7 +6012,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/OdeToGreed.png"
     },
     {
      "key": "PainSplit",
@@ -5935,7 +6059,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PainSplit.png"
     },
     {
      "key": "PinpointAccuracy",
@@ -5995,7 +6120,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PinpointAccuracy.png"
     },
     {
      "key": "PowerTransfer",
@@ -6041,7 +6167,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PowerTransfer.png"
     },
     {
      "key": "Reaper",
@@ -6073,7 +6200,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-02 제거: 대형ZED 처치마다 MaxHealth 영구누적(정수타입이라 소숫점 축소 불가, 워치독으로 리셋방지까지 하는 구조라 완전 제거가 유일한 해법",
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Reaper.png"
     },
     {
      "key": "SoulStealer",
@@ -6119,7 +6247,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SoulStealer.png"
     },
     {
      "key": "Triskelion",
@@ -6165,7 +6294,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Triskelion.png"
     }
    ],
    "skillCount": 10,
@@ -6377,7 +6507,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ApronHunter.png"
     },
     {
      "key": "Arachnophobia",
@@ -6409,7 +6540,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Arachnophobia.png"
     },
     {
      "key": "Extinguisher",
@@ -6441,7 +6573,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Extinguisher.png"
     },
     {
      "key": "GoreFasting",
@@ -6473,7 +6606,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GoreFasting.png"
     },
     {
      "key": "Muted",
@@ -6505,7 +6639,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Muted.png"
     },
     {
      "key": "Pounded",
@@ -6537,7 +6672,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Pounded.png"
     },
     {
      "key": "RestrainingOrder",
@@ -6569,7 +6705,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/RestrainingOrder.png"
     },
     {
      "key": "Technophobe",
@@ -6601,7 +6738,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Technophobe.png"
     },
     {
      "key": "Untouchable",
@@ -6633,7 +6771,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Untouchable.png"
     },
     {
      "key": "Weightwatcher",
@@ -6665,7 +6804,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Weightwatcher.png"
     }
    ],
    "skillCount": 10,
@@ -6861,7 +7001,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ArmorPiercingProtocol.png"
     },
     {
      "key": "BattlefieldAwareness",
@@ -6893,7 +7034,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BattlefieldAwareness.png"
     },
     {
      "key": "DeepReserves",
@@ -6939,7 +7081,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DeepReserves.png"
     },
     {
      "key": "HuntersInstinct",
@@ -6999,7 +7142,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HuntersInstinct.png"
     },
     {
      "key": "IronFortress",
@@ -7031,7 +7175,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/IronFortress.png"
     },
     {
      "key": "LuckySalvage",
@@ -7048,7 +7193,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/LuckySalvage.png"
     },
     {
      "key": "LuckyShot",
@@ -7080,7 +7226,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/LuckyShot.png"
     },
     {
      "key": "SuppressiveFire",
@@ -7126,7 +7273,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SuppressiveFire.png"
     },
     {
      "key": "SymbioticRounds",
@@ -7186,7 +7334,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SymbioticRounds.png"
     },
     {
      "key": "ThermalDrill",
@@ -7246,7 +7395,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ThermalDrill.png"
     }
    ],
    "skillCount": 10,
@@ -7638,7 +7788,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AcceleratedDecay.png"
     },
     {
      "key": "AgonizingPresence",
@@ -7691,7 +7842,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AgonizingPresence.png"
     },
     {
      "key": "ChronoCarapace",
@@ -7730,7 +7882,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ChronoCarapace.png"
     },
     {
      "key": "Chronoshift",
@@ -7762,7 +7915,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Chronoshift.png"
     },
     {
      "key": "EternalSuffering",
@@ -7794,7 +7948,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/EternalSuffering.png"
     },
     {
      "key": "PhantomPain",
@@ -7811,7 +7966,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PhantomPain.png"
     },
     {
      "key": "PocketDimension",
@@ -7857,7 +8013,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PocketDimension.png"
     },
     {
      "key": "TemporalAbsolution",
@@ -7874,7 +8031,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TemporalAbsolution.png"
     },
     {
      "key": "TemporalRupture",
@@ -7906,7 +8064,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TemporalRupture.png"
     },
     {
      "key": "TemporalSiphon",
@@ -7952,7 +8111,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TemporalSiphon.png"
     },
     {
      "key": "WarpPhase",
@@ -7984,7 +8144,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/WarpPhase.png"
     }
    ],
    "skillCount": 11,
@@ -8082,7 +8243,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ArmedAndDangerous.png"
     },
     {
      "key": "Arsonist",
@@ -8114,7 +8276,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Arsonist.png"
     },
     {
      "key": "BargainHunter",
@@ -8146,7 +8309,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BargainHunter.png"
     },
     {
      "key": "Dauntless",
@@ -8178,7 +8342,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Dauntless.png"
     },
     {
      "key": "Elmo",
@@ -8210,7 +8375,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Elmo.png"
     },
     {
      "key": "Fanatic",
@@ -8242,7 +8408,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Fanatic.png"
     },
     {
      "key": "Fireproof",
@@ -8259,7 +8426,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Fireproof.png"
     },
     {
      "key": "MadBomber",
@@ -8291,7 +8459,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MadBomber.png"
     },
     {
      "key": "SafetyFirst",
@@ -8308,7 +8477,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SafetyFirst.png"
     },
     {
      "key": "SlowCooker",
@@ -8340,7 +8510,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SlowCooker.png"
     }
    ],
    "skillCount": 10,
@@ -8491,7 +8662,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Armory.png"
     },
     {
      "key": "Bellows",
@@ -8523,7 +8695,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Bellows.png"
     },
     {
      "key": "ChainReaction",
@@ -8555,7 +8728,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ChainReaction.png"
     },
     {
      "key": "Crucible",
@@ -8587,7 +8761,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Crucible.png"
     },
     {
      "key": "EmberHarvest",
@@ -8633,7 +8808,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/EmberHarvest.png"
     },
     {
      "key": "EternalForge",
@@ -8650,7 +8826,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/EternalForge.png"
     },
     {
      "key": "InfernoRounds",
@@ -8696,7 +8873,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/InfernoRounds.png"
     },
     {
      "key": "Ironclad",
@@ -8728,7 +8906,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Ironclad.png"
     },
     {
      "key": "Pyroclasm",
@@ -8760,7 +8939,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Pyroclasm.png"
     },
     {
      "key": "SlagArmor",
@@ -8792,7 +8972,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SlagArmor.png"
     },
     {
      "key": "TemperedSteel",
@@ -8824,7 +9005,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TemperedSteel.png"
     }
    ],
    "skillCount": 11,
@@ -9105,7 +9287,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HairTrigger.png"
     },
     {
      "key": "SlowBurn",
@@ -9122,7 +9305,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SlowBurn.png"
     },
     {
      "key": "ApexCharge",
@@ -9139,7 +9323,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ApexCharge.png"
     },
     {
      "key": "DaisyChain",
@@ -9156,7 +9341,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DaisyChain.png"
     }
    ],
    "skillCount": 4,
@@ -9324,7 +9510,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CelestialVitality.png"
     },
     {
      "key": "DivineFortitude",
@@ -9370,7 +9557,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DivineFortitude.png"
     },
     {
      "key": "HolyResilience",
@@ -9402,7 +9590,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HolyResilience.png"
     },
     {
      "key": "MartyrBlessing",
@@ -9448,7 +9637,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MartyrBlessing.png"
     },
     {
      "key": "OverflowingGrace",
@@ -9480,7 +9670,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/OverflowingGrace.png"
     },
     {
      "key": "PhoenixPrayer",
@@ -9512,7 +9703,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
     },
     {
      "key": "SanctifiedRounds",
@@ -9544,7 +9736,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SanctifiedRounds.png"
     },
     {
      "key": "TriageExpert",
@@ -9583,7 +9776,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TriageExpert.png"
     },
     {
      "key": "UnwaveringFaith",
@@ -9600,7 +9794,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/UnwaveringFaith.png"
     },
     {
      "key": "WingsOfMercy",
@@ -9653,7 +9848,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/WingsOfMercy.png"
     }
    ],
    "skillCount": 10,
@@ -9956,7 +10152,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BloodBank.png"
     },
     {
      "key": "BloodShield",
@@ -10009,7 +10206,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BloodShield.png"
     },
     {
      "key": "Contagion",
@@ -10055,7 +10253,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Contagion.png"
     },
     {
      "key": "CrimsonBond",
@@ -10101,7 +10300,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CrimsonBond.png"
     },
     {
      "key": "EssenceDrain",
@@ -10133,7 +10333,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/EssenceDrain.png"
     },
     {
      "key": "LeechField",
@@ -10200,7 +10401,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/LeechField.png"
     },
     {
      "key": "LifeTap",
@@ -10232,7 +10434,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/LifeTap.png"
     },
     {
      "key": "SiphonCascade",
@@ -10264,7 +10467,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SiphonCascade.png"
     },
     {
      "key": "SymbioticReload",
@@ -10296,7 +10500,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SymbioticReload.png"
     },
     {
      "key": "Transfusion",
@@ -10342,7 +10547,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Transfusion.png"
     }
    ],
    "skillCount": 10,
@@ -10542,7 +10748,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BioelectricDischarge.png"
     },
     {
      "key": "EmpathicLink",
@@ -10574,7 +10781,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/EmpathicLink.png"
     },
     {
      "key": "Hivesight",
@@ -10606,7 +10814,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Hivesight.png"
     },
     {
      "key": "InfestedRounds",
@@ -10680,7 +10889,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/InfestedRounds.png"
     },
     {
      "key": "Mitosis",
@@ -10712,7 +10922,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Mitosis.png"
     },
     {
      "key": "NeuralFeedback",
@@ -10751,7 +10962,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NeuralFeedback.png"
     },
     {
      "key": "ParasiticBloom",
@@ -10797,7 +11009,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ParasiticBloom.png"
     },
     {
      "key": "PheromoneTrail",
@@ -10836,7 +11049,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PheromoneTrail.png"
     },
     {
      "key": "RegenerativeMembrane",
@@ -10853,7 +11067,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/RegenerativeMembrane.png"
     },
     {
      "key": "SymbioticRestoration",
@@ -10885,7 +11100,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SymbioticRestoration.png"
     }
    ],
    "skillCount": 10,
@@ -11094,7 +11310,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AcidicBlood.png"
     },
     {
      "key": "BiomassRecycling",
@@ -11126,7 +11343,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BiomassRecycling.png"
     },
     {
      "key": "CellularRedundancy",
@@ -11158,7 +11376,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CellularRedundancy.png"
     },
     {
      "key": "DesperateSymbiosis",
@@ -11204,7 +11423,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DesperateSymbiosis.png"
     },
     {
      "key": "FleshWeaving",
@@ -11278,7 +11498,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FleshWeaving.png"
     },
     {
      "key": "MetabolicOverdrive",
@@ -11310,7 +11531,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MetabolicOverdrive.png"
     },
     {
      "key": "MuscleFiberEnhancement",
@@ -11356,7 +11578,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MuscleFiberEnhancement.png"
     },
     {
      "key": "ParasiticBond",
@@ -11402,7 +11625,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ParasiticBond.png"
     },
     {
      "key": "SurvivalInstinct",
@@ -11462,7 +11686,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SurvivalInstinct.png"
     },
     {
      "key": "SymbioticEfficiency",
@@ -11508,7 +11733,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SymbioticEfficiency.png"
     }
    ],
    "skillCount": 10,
@@ -11665,7 +11891,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Backdraft.png"
     },
     {
      "key": "Blaze",
@@ -11711,7 +11938,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Blaze.png"
     },
     {
      "key": "ChosenOfTheSun",
@@ -11757,7 +11985,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ChosenOfTheSun.png"
     },
     {
      "key": "ConsumingFlame",
@@ -11789,7 +12018,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ConsumingFlame.png"
     },
     {
      "key": "Flashpoint",
@@ -11806,7 +12036,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Flashpoint.png"
     },
     {
      "key": "Forger",
@@ -11852,7 +12083,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Forger.png"
     },
     {
      "key": "Heatstroke",
@@ -11898,7 +12130,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Heatstroke.png"
     },
     {
      "key": "SearingGaze",
@@ -11944,7 +12177,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SearingGaze.png"
     },
     {
      "key": "TrialByFire",
@@ -11990,7 +12224,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TrialByFire.png"
     },
     {
      "key": "Wildfire",
@@ -12022,7 +12257,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Wildfire.png"
     }
    ],
    "skillCount": 10,
@@ -12263,7 +12499,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AshenBulwark.png"
     },
     {
      "key": "Conflagration",
@@ -12295,7 +12532,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Conflagration.png"
     },
     {
      "key": "Cremation",
@@ -12341,7 +12579,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Cremation.png"
     },
     {
      "key": "FireEater",
@@ -12373,7 +12612,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FireEater.png"
     },
     {
      "key": "Meltdown",
@@ -12405,7 +12645,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Meltdown.png"
     },
     {
      "key": "MoltenCore",
@@ -12451,7 +12692,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MoltenCore.png"
     },
     {
      "key": "Pyre",
@@ -12483,7 +12725,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Pyre.png"
     },
     {
      "key": "ScorchedEarth",
@@ -12515,7 +12758,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ScorchedEarth.png"
     },
     {
      "key": "SearingFocus",
@@ -12561,7 +12805,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SearingFocus.png"
     },
     {
      "key": "ThermalLance",
@@ -12593,7 +12838,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ThermalLance.png"
     }
    ],
    "skillCount": 10,
@@ -12671,7 +12917,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AmishParadise.png"
     },
     {
      "key": "CeaseAndDesist",
@@ -12703,7 +12950,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CeaseAndDesist.png"
     },
     {
      "key": "Clotbuster",
@@ -12735,7 +12983,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Clotbuster.png"
     },
     {
      "key": "Dietician",
@@ -12767,7 +13016,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Dietician.png"
     },
     {
      "key": "Feminist",
@@ -12799,7 +13049,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Feminist.png"
     },
     {
      "key": "Firefighter",
@@ -12831,7 +13082,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Firefighter.png"
     },
     {
      "key": "GorefastSlayer",
@@ -12863,7 +13115,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GorefastSlayer.png"
     },
     {
      "key": "Kingslayer",
@@ -12895,7 +13148,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Kingslayer.png"
     },
     {
      "key": "NoCloneZone",
@@ -12927,7 +13181,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NoCloneZone.png"
     },
     {
      "key": "NoWomanNoCry",
@@ -12959,7 +13214,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NoWomanNoCry.png"
     },
     {
      "key": "NoiseComplaint",
@@ -12991,7 +13247,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NoiseComplaint.png"
     },
     {
      "key": "SomeoneYourOwnSize",
@@ -13023,7 +13280,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SomeoneYourOwnSize.png"
     },
     {
      "key": "SupersizeMe",
@@ -13055,7 +13313,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SupersizeMe.png"
     },
     {
      "key": "TexasChainsawMassacre",
@@ -13087,7 +13346,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TexasChainsawMassacre.png"
     }
    ],
    "skillCount": 14,
@@ -13326,7 +13586,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BulletTime.png"
     },
     {
      "key": "HighNoon",
@@ -13358,7 +13619,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HighNoon.png"
     },
     {
      "key": "Minuteman",
@@ -13375,7 +13637,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Minuteman.png"
     },
     {
      "key": "Pandemic",
@@ -13421,7 +13684,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Pandemic.png"
     },
     {
      "key": "Shifter",
@@ -13438,7 +13702,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Shifter.png"
     },
     {
      "key": "TemporalFracture",
@@ -13455,7 +13720,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TemporalFracture.png"
     },
     {
      "key": "TimeHealsAllWounds",
@@ -13487,7 +13753,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TimeHealsAllWounds.png"
     },
     {
      "key": "TimeSpiral",
@@ -13533,7 +13800,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TimeSpiral.png"
     },
     {
      "key": "Timeburst",
@@ -13550,7 +13818,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-03 제거. 광역 스턴",
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Timeburst.png"
     },
     {
      "key": "Timewalk",
@@ -13596,7 +13865,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Timewalk.png"
     }
    ],
    "skillCount": 10,
@@ -13669,7 +13939,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/RaiseTheStakes.png"
     },
     {
      "key": "HotStreak",
@@ -13686,7 +13957,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HotStreak.png"
     },
     {
      "key": "TheHouseAlwaysWins",
@@ -13703,7 +13975,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TheHouseAlwaysWins.png"
     },
     {
      "key": "CardShark",
@@ -13720,7 +13993,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CardShark.png"
     },
     {
      "key": "WildCard",
@@ -13737,7 +14011,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/WildCard.png"
     },
     {
      "key": "DoubleOrNothing",
@@ -13754,7 +14029,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DoubleOrNothing.png"
     },
     {
      "key": "RoyalFlush",
@@ -13771,7 +14047,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/RoyalFlush.png"
     },
     {
      "key": "AceUpYourSleeve",
@@ -13788,7 +14065,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AceUpYourSleeve.png"
     },
     {
      "key": "Bluff",
@@ -13805,7 +14083,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Bluff.png"
     },
     {
      "key": "HouseEdge",
@@ -13837,7 +14116,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HouseEdge.png"
     }
    ],
    "skillCount": 10,
@@ -13989,7 +14269,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DanceOfDeath.png"
     },
     {
      "key": "DeathlessFury",
@@ -14035,7 +14316,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DeathlessFury.png"
     },
     {
      "key": "DeathSentence",
@@ -14081,7 +14363,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DeathSentence.png"
     },
     {
      "key": "DeathsGaze",
@@ -14113,7 +14396,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DeathsGaze.png"
     },
     {
      "key": "GrimTithe",
@@ -14145,7 +14429,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GrimTithe.png"
     },
     {
      "key": "LastBreath",
@@ -14205,7 +14490,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/LastBreath.png"
     },
     {
      "key": "MementoMori",
@@ -14237,7 +14523,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MementoMori.png"
     },
     {
      "key": "SoulChain",
@@ -14283,7 +14570,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SoulChain.png"
     },
     {
      "key": "SoulOverflow",
@@ -14315,7 +14603,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SoulOverflow.png"
     },
     {
      "key": "VeilWalker",
@@ -14361,7 +14650,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/VeilWalker.png"
     }
    ],
    "skillCount": 10,
@@ -14572,7 +14862,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AdrenalineReload.png"
     },
     {
      "key": "AmmoSiphon",
@@ -14604,7 +14895,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AmmoSiphon.png"
     },
     {
      "key": "BottomlessReserves",
@@ -14636,7 +14928,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BottomlessReserves.png"
     },
     {
      "key": "ChainFeed",
@@ -14668,7 +14961,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ChainFeed.png"
     },
     {
      "key": "DesperateMeasures",
@@ -14700,7 +14994,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DesperateMeasures.png"
     },
     {
      "key": "JuryRig",
@@ -14746,7 +15041,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/JuryRig.png"
     },
     {
      "key": "OneManArmy",
@@ -14778,7 +15074,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/OneManArmy.png"
     },
     {
      "key": "QuickHands",
@@ -14824,7 +15121,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/QuickHands.png"
     },
     {
      "key": "WarProfiteer",
@@ -14863,7 +15161,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/WarProfiteer.png"
     },
     {
      "key": "Windfall",
@@ -14895,7 +15194,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Windfall.png"
     }
    ],
    "skillCount": 10,
@@ -15129,7 +15429,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BulletHell.png"
     },
     {
      "key": "Deadshot",
@@ -15161,7 +15462,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Deadshot.png"
     },
     {
      "key": "HammerShot",
@@ -15193,7 +15495,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HammerShot.png"
     },
     {
      "key": "HippocraticOath",
@@ -15225,7 +15528,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HippocraticOath.png"
     },
     {
      "key": "Marathon",
@@ -15271,7 +15575,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Marathon.png"
     },
     {
      "key": "Overpower",
@@ -15288,7 +15593,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "Resourceful",
@@ -15320,7 +15626,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Resourceful.png"
     },
     {
      "key": "SurgicalPrecision",
@@ -15352,7 +15659,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SurgicalPrecision.png"
     },
     {
      "key": "Tank",
@@ -15369,7 +15677,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": null
     },
     {
      "key": "ThreadTheNeedle",
@@ -15401,7 +15710,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ThreadTheNeedle.png"
     }
    ],
    "skillCount": 10,
@@ -15516,7 +15826,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Absorb.png"
     },
     {
      "key": "AspectOfYmir",
@@ -15562,7 +15873,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AspectOfYmir.png"
     },
     {
      "key": "BlackIce",
@@ -15594,7 +15906,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BlackIce.png"
     },
     {
      "key": "Blizzard",
@@ -15626,7 +15939,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Blizzard.png"
     },
     {
      "key": "Cryosynthesis",
@@ -15658,7 +15972,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Cryosynthesis.png"
     },
     {
      "key": "FrozenHeart",
@@ -15697,7 +16012,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FrozenHeart.png"
     },
     {
      "key": "Giantsbane",
@@ -15743,7 +16059,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Giantsbane.png"
     },
     {
      "key": "HarshConditions",
@@ -15775,7 +16092,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HarshConditions.png"
     },
     {
      "key": "Hypothermia",
@@ -15807,7 +16125,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Hypothermia.png"
     },
     {
      "key": "ImmovableObject",
@@ -15839,7 +16158,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ImmovableObject.png"
     },
     {
      "key": "RegenerativeRounds",
@@ -15885,7 +16205,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/RegenerativeRounds.png"
     }
    ],
    "skillCount": 11,
@@ -16000,7 +16321,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TwistOfFate.png"
     }
    ],
    "skillCount": 1,
@@ -16137,7 +16459,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CloseCall.png"
     },
     {
      "key": "DeadeyeMomentum",
@@ -16169,7 +16492,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DeadeyeMomentum.png"
     },
     {
      "key": "FullMetalJacket",
@@ -16201,7 +16525,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FullMetalJacket.png"
     },
     {
      "key": "GlassCannon",
@@ -16247,7 +16572,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GlassCannon.png"
     },
     {
      "key": "ImpenetrableSkin",
@@ -16279,7 +16605,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ImpenetrableSkin.png"
     },
     {
      "key": "Primed",
@@ -16311,7 +16638,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Primed.png"
     },
     {
      "key": "Resilience",
@@ -16343,7 +16671,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Resilience.png"
     },
     {
      "key": "ShowOff",
@@ -16375,7 +16704,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ShowOff.png"
     },
     {
      "key": "TrueShot",
@@ -16407,7 +16737,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TrueShot.png"
     },
     {
      "key": "Untouchable",
@@ -16439,7 +16770,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Untouchable.png"
     }
    ],
    "skillCount": 10,
@@ -16605,7 +16937,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Consume.png"
     },
     {
      "key": "DeathChill",
@@ -16637,7 +16970,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DeathChill.png"
     },
     {
      "key": "FaminesTouch",
@@ -16669,7 +17003,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FaminesTouch.png"
     },
     {
      "key": "FrozenHide",
@@ -16701,7 +17036,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FrozenHide.png"
     },
     {
      "key": "HoardersCache",
@@ -16733,7 +17069,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HoardersCache.png"
     },
     {
      "key": "Isolation",
@@ -16765,7 +17102,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Isolation.png"
     },
     {
      "key": "Mimicry",
@@ -16797,7 +17135,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Mimicry.png"
     },
     {
      "key": "PatientReload",
@@ -16829,7 +17168,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PatientReload.png"
     },
     {
      "key": "PredatorsFocus",
@@ -16868,7 +17208,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PredatorsFocus.png"
     },
     {
      "key": "RavenousStrikes",
@@ -16900,7 +17241,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/RavenousStrikes.png"
     },
     {
      "key": "Territorial",
@@ -16932,7 +17274,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Territorial.png"
     },
     {
      "key": "TrophyHunt",
@@ -16964,7 +17307,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TrophyHunt.png"
     }
    ],
    "skillCount": 12,
@@ -17129,7 +17473,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AvalancheProtocol.png"
     },
     {
      "key": "BitterChill",
@@ -17175,7 +17520,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BitterChill.png"
     },
     {
      "key": "CrystalClarity",
@@ -17207,7 +17553,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CrystalClarity.png"
     },
     {
      "key": "Fimbulwinter",
@@ -17239,7 +17586,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Fimbulwinter.png"
     },
     {
      "key": "FrostbiteArrows",
@@ -17271,7 +17619,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FrostbiteArrows.png"
     },
     {
      "key": "GlacialEndurance",
@@ -17303,7 +17652,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GlacialEndurance.png"
     },
     {
      "key": "IceArmor",
@@ -17335,7 +17685,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/IceArmor.png"
     },
     {
      "key": "Permafrost",
@@ -17381,7 +17732,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Permafrost.png"
     },
     {
      "key": "QuiverMastery",
@@ -17413,7 +17765,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/QuiverMastery.png"
     },
     {
      "key": "WintersSwiftness",
@@ -17459,7 +17812,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/WintersSwiftness.png"
     }
    ],
    "skillCount": 10,
@@ -17580,7 +17934,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ApexMark.png"
     },
     {
      "key": "CarrionHarvest",
@@ -17626,7 +17981,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CarrionHarvest.png"
     },
     {
      "key": "DiversifiedCollection",
@@ -17658,7 +18014,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DiversifiedCollection.png"
     },
     {
      "key": "FeedingFrenzy",
@@ -17690,7 +18047,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FeedingFrenzy.png"
     },
     {
      "key": "MountedTrophies",
@@ -17736,7 +18094,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MountedTrophies.png"
     },
     {
      "key": "Taxidermist",
@@ -17768,7 +18127,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Taxidermist.png"
     },
     {
      "key": "TrophyHoarder",
@@ -17800,7 +18160,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TrophyHoarder.png"
     },
     {
      "key": "TrophyMagnetism",
@@ -17832,7 +18193,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TrophyMagnetism.png"
     },
     {
      "key": "TrophyShield",
@@ -17864,7 +18226,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TrophyShield.png"
     },
     {
      "key": "WildHunt",
@@ -17896,7 +18259,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/WildHunt.png"
     }
    ],
    "skillCount": 10,
@@ -18050,7 +18414,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AssetLiquidation.png"
     },
     {
      "key": "BulkPurchasing",
@@ -18082,7 +18447,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/BulkPurchasing.png"
     },
     {
      "key": "CorporateBailout",
@@ -18114,7 +18480,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CorporateBailout.png"
     },
     {
      "key": "GoldenParachute",
@@ -18146,7 +18513,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GoldenParachute.png"
     },
     {
      "key": "HODLing",
@@ -18185,7 +18553,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HODLing.png"
     },
     {
      "key": "HighRiskInvestment",
@@ -18217,7 +18586,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HighRiskInvestment.png"
     },
     {
      "key": "HouseEdge",
@@ -18249,7 +18619,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HouseEdge.png"
     },
     {
      "key": "InsiderTrading",
@@ -18281,7 +18652,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/InsiderTrading.png"
     },
     {
      "key": "MercenaryContract",
@@ -18327,7 +18699,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MercenaryContract.png"
     },
     {
      "key": "ProfitSharing",
@@ -18359,7 +18732,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ProfitSharing.png"
     },
     {
      "key": "TaxLoopholes",
@@ -18398,7 +18772,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/TaxLoopholes.png"
     }
    ],
    "skillCount": 11,
@@ -18679,7 +19054,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AlloyRounds.png"
     },
     {
      "key": "AnvilsEcho",
@@ -18718,7 +19094,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AnvilsEcho.png"
     },
     {
      "key": "GildedTouch",
@@ -18792,7 +19169,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GildedTouch.png"
     },
     {
      "key": "HardenedPlate",
@@ -18824,7 +19202,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HardenedPlate.png"
     },
     {
      "key": "MasterworkTechnique",
@@ -18856,7 +19235,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/MasterworkTechnique.png"
     },
     {
      "key": "Overforge",
@@ -18895,7 +19275,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Overforge.png"
     },
     {
      "key": "QuenchingStrike",
@@ -18934,7 +19315,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/QuenchingStrike.png"
     },
     {
      "key": "Reclamation",
@@ -18980,7 +19362,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Reclamation.png"
     },
     {
      "key": "ShatterPoint",
@@ -19026,7 +19409,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ShatterPoint.png"
     },
     {
      "key": "Soulbound",
@@ -19072,7 +19456,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Soulbound.png"
     }
    ],
    "skillCount": 10,
@@ -19257,7 +19642,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ApexPredator.png"
     },
     {
      "key": "Bloodthirst",
@@ -19289,7 +19675,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Bloodthirst.png"
     },
     {
      "key": "CascadingMassacre",
@@ -19335,7 +19722,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CascadingMassacre.png"
     },
     {
      "key": "EndlessRampage",
@@ -19367,7 +19755,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/EndlessRampage.png"
     },
     {
      "key": "HuntDown",
@@ -19406,7 +19795,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/HuntDown.png"
     },
     {
      "key": "LernaeanImmortality",
@@ -19445,7 +19835,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/LernaeanImmortality.png"
     },
     {
      "key": "Overkill",
@@ -19484,7 +19875,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Overkill.png"
     },
     {
      "key": "PrimalRoar",
@@ -19523,7 +19915,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-02 제거: 자동 광역 넘어뜨리기(25킬마다 6-10m 전체 스턴/넘어뜨림)",
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PrimalRoar.png"
     },
     {
      "key": "ReflectedFury",
@@ -19569,7 +19962,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ReflectedFury.png"
     },
     {
      "key": "SymphonyOfSlaughter",
@@ -19629,7 +20023,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SymphonyOfSlaughter.png"
     }
    ],
    "skillCount": 10,
@@ -19758,7 +20153,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AdaptiveVenom.png"
     },
     {
      "key": "Blight",
@@ -19797,7 +20193,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Blight.png"
     },
     {
      "key": "EnvenomedArsenal",
@@ -19829,7 +20226,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/EnvenomedArsenal.png"
     },
     {
      "key": "Miasma",
@@ -19846,7 +20244,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Miasma.png"
     },
     {
      "key": "Necrosis",
@@ -19878,7 +20277,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Necrosis.png"
     },
     {
      "key": "Outbreak",
@@ -19895,7 +20295,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-02 제거: 트리거 조건 없이 10~15초마다 자동 광역 독뎀, 수치 전부 var const라 INI 조정 자체가 불가능해 완전 제거가 유일한 해법",
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Outbreak.png"
     },
     {
      "key": "Putrefaction",
@@ -19927,7 +20328,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Putrefaction.png"
     },
     {
      "key": "SymbioticToxin",
@@ -19959,7 +20361,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SymbioticToxin.png"
     },
     {
      "key": "ToxicAbsorption",
@@ -19991,7 +20394,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ToxicAbsorption.png"
     },
     {
      "key": "ToxicOverload",
@@ -20008,7 +20412,8 @@
      "textFixed": false,
      "disabled": true,
      "disabledNote": "2026-07-02 제거: 중독사망 연쇄폭발(\"독성과부하\"), INI값 없어 하드코딩 추정이라 완전 잠금으로 처리",
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ToxicOverload.png"
     },
     {
      "key": "VenomousRiposte",
@@ -20025,7 +20430,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/VenomousRiposte.png"
     },
     {
      "key": "VenomWeave",
@@ -20057,7 +20463,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/VenomWeave.png"
     }
    ],
    "skillCount": 12,
@@ -20224,7 +20631,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/AthenasWrath.png"
     },
     {
      "key": "CurseOfStone",
@@ -20270,7 +20678,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/CurseOfStone.png"
     },
     {
      "key": "GorgonsCurse",
@@ -20316,7 +20725,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GorgonsCurse.png"
     },
     {
      "key": "GorgonsLegacy",
@@ -20362,7 +20772,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GorgonsLegacy.png"
     },
     {
      "key": "Metamorphosis",
@@ -20422,7 +20833,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Metamorphosis.png"
     },
     {
      "key": "NestOfVipers",
@@ -20482,7 +20894,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NestOfVipers.png"
     },
     {
      "key": "PetrifyingPresence",
@@ -20542,7 +20955,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PetrifyingPresence.png"
     },
     {
      "key": "SerpentineReflexes",
@@ -20588,7 +21002,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SerpentineReflexes.png"
     },
     {
      "key": "ShedSkin",
@@ -20648,7 +21063,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ShedSkin.png"
     },
     {
      "key": "SnakesCoil",
@@ -20694,7 +21110,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SnakesCoil.png"
     },
     {
      "key": "ToxicAura",
@@ -20740,7 +21157,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ToxicAura.png"
     },
     {
      "key": "ToxicImmunity",
@@ -20772,7 +21190,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ToxicImmunity.png"
     },
     {
      "key": "VenomExtraction",
@@ -20818,7 +21237,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/VenomExtraction.png"
     }
    ],
    "skillCount": 13,
@@ -20944,7 +21364,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ArmoredUp.png"
     },
     {
      "key": "DoubleDown",
@@ -20990,7 +21411,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/DoubleDown.png"
     },
     {
      "key": "FieryGambit",
@@ -21036,7 +21458,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FieryGambit.png"
     },
     {
      "key": "GrenadeConjurer",
@@ -21068,7 +21491,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GrenadeConjurer.png"
     },
     {
      "key": "IcyGambit",
@@ -21114,7 +21538,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/IcyGambit.png"
     },
     {
      "key": "Jackpot",
@@ -21160,7 +21585,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Jackpot.png"
     },
     {
      "key": "LuckyPop",
@@ -21206,7 +21632,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/LuckyPop.png"
     },
     {
      "key": "NarrowEscape",
@@ -21238,7 +21665,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/NarrowEscape.png"
     },
     {
      "key": "StrokeOfLuck",
@@ -21284,7 +21712,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/StrokeOfLuck.png"
     },
     {
      "key": "ToxicGambit",
@@ -21330,7 +21759,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ToxicGambit.png"
     }
    ],
    "skillCount": 10,
@@ -21405,7 +21835,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ChimeraProtocol.png"
     },
     {
      "key": "FluxState",
@@ -21437,7 +21868,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/FluxState.png"
     },
     {
      "key": "GeneticMemory",
@@ -21469,7 +21901,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/GeneticMemory.png"
     },
     {
      "key": "Monomorph",
@@ -21501,7 +21934,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/Monomorph.png"
     },
     {
      "key": "OverclockedForm",
@@ -21547,7 +21981,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/OverclockedForm.png"
     },
     {
      "key": "PolymorphicSynthesis",
@@ -21593,7 +22028,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PolymorphicSynthesis.png"
     },
     {
      "key": "PrimordialVigor",
@@ -21625,7 +22061,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/PrimordialVigor.png"
     },
     {
      "key": "ResidualForm",
@@ -21671,7 +22108,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/ResidualForm.png"
     },
     {
      "key": "SurplusForm",
@@ -21688,7 +22126,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/SurplusForm.png"
     },
     {
      "key": "VolatileShift",
@@ -21748,7 +22187,8 @@
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
-     "noData": false
+     "noData": false,
+     "icon": "icons/skills/VolatileShift.png"
     }
    ],
    "skillCount": 10,

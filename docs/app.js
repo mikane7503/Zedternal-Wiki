@@ -487,12 +487,15 @@ function renderBaseDetail(key) {
 
   const skillsHtml = (p.skills || []).map(s => `
     <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
-      <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
-      ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
-      ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
-      ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
-      ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
-      ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
+      ${s.icon ? `<img class="skill-icon" src="${s.icon}" alt="" loading="lazy" onerror="this.style.display='none'">` : ""}
+      <div class="skill-item-body">
+        <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
+        ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
+        ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
+        ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
+        ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
+        ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
+      </div>
     </div>
   `).join("") || '<div class="empty-state" style="padding:10px">등록된 스킬 없음</div>';
 

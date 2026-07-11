@@ -27,6 +27,13 @@ MANUAL_SKILL_OVERRIDES = os.path.join(ROOT, "data", "manual_skill_overrides.json
 MANUAL_PERK_DESCS = os.path.join(ROOT, "data", "manual_perk_desc_overrides.json")
 MANUAL_PERK_EXTRAS = os.path.join(ROOT, "data", "manual_perk_extras.json")
 OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
+SKILL_ICON_DIR = os.path.join(ROOT, "docs", "icons", "skills")
+
+
+def skill_icon_path(short):
+    if os.path.exists(os.path.join(SKILL_ICON_DIR, f"{short}.png")):
+        return f"icons/skills/{short}.png"
+    return None
 
 SECTION_RE = re.compile(r"^\[(?:ZedternalRBPerkpackage\.)?(.+)\]$")
 
@@ -1131,6 +1138,7 @@ def build():
                 "disabled": is_disabled,
                 "disabledNote": disabled_note,
                 "noData": not skor and not raw_values and not ("standardDesc" in override or "deluxeDesc" in override),
+                "icon": skill_icon_path(short),
             })
 
         rule = unlock_rules.get(key, {})
@@ -1241,6 +1249,7 @@ def build():
                 "disabled": is_disabled,
                 "disabledNote": disabled_note,
                 "noData": not skor and not raw_values and not ("standardDesc" in override or "deluxeDesc" in override),
+                "icon": skill_icon_path(short),
             })
 
         base_perks.append({

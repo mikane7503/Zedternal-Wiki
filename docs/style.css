@@ -554,11 +554,24 @@ body {
   border-radius: 8px;
   padding: 10px 12px;
   transition: background 0.3s, border-color 0.3s;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 .skill-item.skill-highlight {
   border-color: var(--cyan);
   background: rgba(21,215,250,0.12);
 }
+.skill-icon {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.2);
+}
+.skill-item-body { flex: 1 1 auto; min-width: 0; }
 .skill-item h4 { margin: 0 0 6px; font-size: 14px; }
 .skill-item .std, .skill-item .delx { font-size: 13px; margin: 3px 0; }
 .skill-item .std b { color: var(--text-dim); font-weight: 600; margin-right: 4px; }
