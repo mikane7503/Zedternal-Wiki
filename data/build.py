@@ -53,6 +53,8 @@ MANUAL_PERK_DESCS = os.path.join(ROOT, "data", "manual_perk_desc_overrides.json"
 MANUAL_PERK_EXTRAS = os.path.join(ROOT, "data", "manual_perk_extras.json")
 OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
 SKILL_ICON_DIR = os.path.join(ROOT, "docs", "icons", "skills")
+PERK_ICON_DIR = os.path.join(ROOT, "docs", "icons")
+SOURCE_CLASS_DIR = os.path.join(SOURCE_DIR, "Classes")
 
 
 def parse_player_aurora(path):
@@ -102,6 +104,85 @@ def skill_icon_path(short):
     if os.path.exists(os.path.join(SKILL_ICON_DIR, f"{short}.png")):
         return f"icons/skills/{short}.png"
     return None
+
+
+PERK_ICON_FALLBACKS = {
+    # The custom textures for these perks are loaded from the separately
+    # cooked game package. Use the source-defined fallback or parent icon.
+    "Diablo": "icons/berserker.png",
+    "JekyllHyde": "icons/shapeshifter.png",
+    "Capitalist": "icons/support.png",
+}
+
+
+def perk_icon_path(short, parent=None):
+    candidate = f"icons/{short.lower()}.png"
+    if os.path.isfile(os.path.join(PERK_ICON_DIR, f"{short.lower()}.png")):
+        return candidate
+    if short in PERK_ICON_FALLBACKS:
+        return PERK_ICON_FALLBACKS[short]
+    if parent and os.path.isfile(os.path.join(PERK_ICON_DIR, f"{parent.lower()}.png")):
+        return f"icons/{parent.lower()}.png"
+    return "icons/support.png"
+
+
+STATIC_PERK_STAT_DEFS = {
+    "Capitalist": [
+        {"index": 0, "key": "Dosh", "label": "웨이브 생존 보상", "unit": "currency", "scale": 1},
+        {"index": 1, "key": "DoshPerKill", "label": "직접 처치 도쉬 보너스", "unit": "percent", "scale": 0.01},
+    ],
+}
+
+STATIC_PERK_BONUS_FALLBACKS = {"Capitalist": [10, 1]}
+
+
+def parse_source_perk_bonus(key):
+    """Read PerkBonus defaults from source classes if the live INI has no override."""
+    class_path = os.path.join(SOURCE_CLASS_DIR, f"ZTUpgrade_Perk_{key}.uc")
+    values = {}
+    if os.path.isfile(class_path):
+        with open(class_path, encoding="utf-8-sig") as f:
+            source = f.read()
+        pattern = re.compile(
+            r'PerkBonus\((\d+)\)=\(baseValue=([^,]+),\s*incValue=([^,]+),\s*maxValue=([^)]+)\)'
+        )
+        for match in pattern.finditer(source):
+            try:
+                values[int(match.group(1))] = float(match.group(3).strip().rstrip("f"))
+            except ValueError:
+                continue
+    if not values and key in STATIC_PERK_BONUS_FALLBACKS:
+        values = dict(enumerate(STATIC_PERK_BONUS_FALLBACKS[key]))
+    return values
+
+
+def build_static_perk_stats(key, bonus_values):
+    stats = []
+    for definition in STATIC_PERK_STAT_DEFS.get(key, []):
+        value = bonus_values.get(definition["index"])
+        if value is None:
+            continue
+        value *= definition["scale"]
+        stats.append({
+            "key": definition["key"],
+            "label": definition["label"],
+            "value": value,
+            "unit": definition["unit"],
+            "display": format_value_as(value, definition["unit"]),
+            "scaling": True,
+        })
+    return stats
+
+
+ENGINEER_DRONE_STAT_LABELS = {
+    "SentinelAmmo": "센티넬 기본 탄약",
+    "WarthogAmmo": "워트호그 기본 탄약",
+    "PreciousSentinelAmmo": "프레셔스 센티넬 탄약",
+    "PreciousWarthogAmmo": "프레셔스 워트호그 탄약",
+    "ReforgedSentinelAmmo": "리포지드 센티넬 탄약",
+    "ReforgedWarthogAmmo": "리포지드 워트호그 탄약",
+    "MaxLifetimeSeconds": "드론 최대 지속시간 (0 = 제한 없음)",
+}
 
 SECTION_RE = re.compile(r"^\[(?:[^.\]]+\.)?(.+)\]$")
 
@@ -213,7 +294,7 @@ def strip_font(s):
 
 
 UNLOCK_RULE_RE = re.compile(
-    r'PerkUnlockRules=\(PerkName="(?:ZT|DK)Upgrade_Perk_(\w+)",Req1Perk="(?:ZUTUpgrade_Perk_Base_|WMUpgrade_Perk_)(\w+)",Req1Level=(\d+)'
+    r'PerkUnlockRules=\(PerkName="(?:ZT|DK)Upgrade_Perk_(\w+)",Req1Perk="(?:ZUTUpgrade_Perk_Base_|WMUpgrade_Perk_|ZTUpgrade_Perk_|DKUpgrade_Perk_)(\w+)",Req1Level=(\d+)'
 )
 
 
@@ -242,7 +323,7 @@ WM_SKILL_REGISTRY_RE = re.compile(
 )
 
 ACTIVE_PERK_REGISTRY_RE = re.compile(
-    r'PerkUpgrade_Upgrade=\(PerkPath="(?:ZedternalTempered\.ZTUpgrade_Perk_|ZedternalRBPerkpackage\.DKUpgrade_Perk_)(\w+)",bIsStatic=(?:True|False)\)'
+    r'PerkUpgrade_Upgrade=\(PerkPath="(?:ZedternalTempered\.ZTUpgrade_Perk_|ZedternalRBPerkpackage\.DKUpgrade_Perk_)(\w+)",bIsStatic=(True|False)\)'
 )
 
 
@@ -292,8 +373,8 @@ def parse_wm_skill_registry(path):
 
 
 def parse_active_advanced_perks(path):
-    """Return only advanced perks registered by the current source config."""
-    active = set()
+    """Return active perk registrations and whether each is a static perk."""
+    active = {}
     with open(path, encoding="utf-8-sig") as f:
         for raw in f:
             line = raw.strip()
@@ -301,7 +382,7 @@ def parse_active_advanced_perks(path):
                 continue
             match = ACTIVE_PERK_REGISTRY_RE.search(line)
             if match:
-                active.add(match.group(1))
+                active[match.group(1)] = match.group(2) == "True"
     return active
 
 
@@ -1140,12 +1221,14 @@ def build():
 
     # ---- advanced perks (커퍼 / DK) ----
     localized_perks = {k[len("DKUpgrade_Perk_"):] for k in kor_sections if k.startswith("DKUpgrade_Perk_")}
-    adv_keys = sorted(localized_perks & active_advanced_perks)
+    adv_keys = sorted(localized_perks & set(active_advanced_perks))
 
     advanced_perks = []
     for key in adv_keys:
+        is_static = active_advanced_perks.get(key, False)
         kor = kor_sections.get(f"DKUpgrade_Perk_{key}", {})
         ini_kv = main_sections.get(f"DKUpgrade_Perk_{key}", [])
+        static_bonus_values = parse_source_perk_bonus(key) if is_static else {}
         raw_descs = kor.get("descriptions", [])
         filtered_kv = [(k, v) for k, v in ini_kv if k != "MODEVERSION"]
         signs = determine_stat_signs(raw_descs, len(filtered_kv))
@@ -1166,8 +1249,39 @@ def build():
             passive_stats = [by_key[k] for k in order if k in by_key] + [s for s in passive_stats if s["key"] not in order]
         placeholder_groups, fixed_stats = compute_placeholder_groups(
             passive_stats, raw_descs, IMPLICIT_SCALING_COUNTS.get(key, 0))
-        filled_descriptions = fill_percent_placeholders(raw_descs, placeholder_groups)
         scaling_stats = [stat for group in placeholder_groups for stat in group]
+        filled_descriptions = list(raw_descs) if is_static else fill_percent_placeholders(raw_descs, placeholder_groups)
+        static_perk_stats = build_static_perk_stats(key, static_bonus_values)
+        if is_static and not scaling_stats:
+            scaling_stats = static_perk_stats
+        if is_static and static_bonus_values:
+            bonus_index = 0
+            def replace_static_bonus(match):
+                nonlocal bonus_index
+                value = static_bonus_values.get(bonus_index)
+                bonus_index += 1
+                if value is None:
+                    return match.group(0)
+                # Percent descriptions encode the suffix as %% in Unreal
+                # localization strings; currency descriptions have no suffix.
+                if match.group(0).endswith("%%"):
+                    return f"{value:g}%"
+                return f"{value:g}"
+            filled_descriptions = [
+                re.sub(r"%x%%|%x", replace_static_bonus, text)
+                for text in filled_descriptions
+            ]
+        if key == "Engineer":
+            drone_rows = main_sections.get("ZTConfig_EngineerDrones", [])
+            drone_stats = build_stat_entries(
+                [(name, to_num(value)) for name, value in drone_rows if name != "MODEVERSION"]
+            )
+            for stat in drone_stats:
+                stat["label"] = ENGINEER_DRONE_STAT_LABELS.get(stat["key"], stat["label"])
+                if stat["key"] == "MaxLifetimeSeconds":
+                    stat["unit"] = "seconds"
+                    stat["display"] = "제한 없음" if stat["value"] == 0 else format_value_as(stat["value"], "seconds")
+            fixed_stats.extend(drone_stats)
         filled_descriptions = reconcile_perk_descriptions(raw_descs, filled_descriptions, fixed_stats, placeholder_groups)
         # Hand-authored replacements for lines the automatic reconciler
         # can't safely fix: full original-KOR sentences (prose and font
@@ -1270,9 +1384,14 @@ def build():
             "name": kor.get("UpgradeName", key),
             "parentPerk": rule.get("parentPerk"),
             "unlockLevel": rule.get("unlockLevel"),
+            "isStatic": is_static,
             "hasIniConfig": bool(ini_kv),
             "passiveStats": scaling_stats,
             "fixedStats": fixed_stats,
+            "valueSourceNote": (
+                "PerkBonus 값은 현재 운영 INI에 별도 섹션이 없어 ZedternalTempered 소스 클래스 기본값을 표시합니다."
+                if key == "Capitalist" and static_perk_stats else None
+            ),
             "role": role_desc.get("role"),
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
@@ -1285,7 +1404,7 @@ def build():
             "testWarning": None,
             "recentChangeTag": recent_changes.get(key),
             "extraSections": perk_extras.get("extraSections", []),
-            "icon": f"icons/{key.lower()}.png",
+            "icon": perk_icon_path(key, rule.get("parentPerk")),
         })
 
     advanced_perks.sort(key=lambda p: ((p["parentPerk"] or "zzz"), p["unlockLevel"] or 99))

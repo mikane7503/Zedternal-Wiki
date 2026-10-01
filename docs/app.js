@@ -409,6 +409,43 @@ function renderSidebar() {
     item.appendChild(body);
     sidebar.appendChild(item);
   }
+
+  const independentPerks = DATA.advancedPerks.filter(perk =>
+    !BASE_BY_KEY[perk.parentPerk] && !ADV_BY_KEY[perk.parentPerk]
+  );
+  for (const perk of independentPerks) {
+    const children = DATA.advancedPerks
+      .filter(child => child.parentPerk === perk.key)
+      .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0));
+    const isOpen = perk.key === SELECTED_ADV_KEY || children.some(child => child.key === SELECTED_ADV_KEY);
+    const item = el("div", { class: `accordion-item ${isOpen ? "open" : ""}` });
+    const header = el("div", { class: "accordion-header" }, [
+      iconImg(perk, "sm"),
+      el("div", { class: "titles" }, [
+        el("h3", { text: perk.name }),
+        el("div", { class: "grade", text: perk.isStatic ? "정적 퍼크" : "독립 퍼크" }),
+      ]),
+      el("span", { class: "chevron", text: "▸" }),
+    ]);
+    header.addEventListener("click", () => selectAdv(perk.key));
+    item.appendChild(header);
+
+    const body = el("div", { class: "accordion-body" });
+    for (const child of children) {
+      const row = el("div", {
+        class: `child-row ${child.key === SELECTED_ADV_KEY ? "active" : ""}`,
+        "data-advkey": child.key,
+      }, [
+        iconImg(child, "sm"),
+        el("span", { class: "lvl", text: `Lv${child.unlockLevel}` }),
+        el("span", { class: "name", text: child.name }),
+      ]);
+      row.addEventListener("click", event => { event.stopPropagation(); selectAdv(child.key); });
+      body.appendChild(row);
+    }
+    item.appendChild(body);
+    sidebar.appendChild(item);
+  }
 }
 
 function renderMainArea() {
@@ -442,8 +479,11 @@ function wireDetailEvents(root) {
   root.querySelectorAll(".unlock-chip").forEach(chip => {
     chip.addEventListener("click", () => selectAdv(chip.dataset.advkey));
   });
-  root.querySelectorAll(".back-link").forEach(b => {
-    b.addEventListener("click", () => showBaseOverview(b.dataset.basekey));
+  root.querySelectorAll(".back-link").forEach(link => {
+    link.addEventListener("click", () => {
+      if (link.dataset.advkey) selectAdv(link.dataset.advkey);
+      else showBaseOverview(link.dataset.basekey);
+    });
   });
   const slider = root.querySelector("#levelSlider");
   if (slider) slider.addEventListener("input", onLevelSlide);
@@ -543,6 +583,18 @@ function renderBaseDetail(key) {
 function renderAdvDetail(key) {
   const p = ADV_BY_KEY[key];
   const parent = BASE_BY_KEY[p.parentPerk];
+  const parentAdv = ADV_BY_KEY[p.parentPerk];
+  const parentName = parent?.name || parentAdv?.name;
+  const backLink = parent
+    ? `<div class="back-link" data-basekey="${escapeHtml(parent.key)}">← ${escapeHtml(parent.name)} 개요로</div>`
+    : parentAdv
+      ? `<div class="back-link" data-advkey="${escapeHtml(parentAdv.key)}">← ${escapeHtml(parentAdv.name)} 개요로</div>`
+      : "";
+  const subtitle = p.isStatic
+    ? `정적 퍼크 · 최대 Lv20 · 스킬 ${p.skillCount}개`
+    : parentName
+      ? `${escapeHtml(parentName)} Lv${p.unlockLevel ?? "?"} 해금 · 스킬 ${p.skillCount}개`
+      : `독립 퍼크 · 스킬 ${p.skillCount}개`;
 
   const descLines = p.descriptions.map(d =>
     `<div class="desc-line ${d.isCapstone ? "capstone" : ""}">${d.raw || escapeHtml(d.text)}</div>`
@@ -572,19 +624,19 @@ function renderAdvDetail(key) {
 
   const container = el("div", {});
   container.innerHTML = `
-    <div class="back-link" data-basekey="${p.parentPerk}">← ${parent ? escapeHtml(parent.name) : "베이스 퍼크"} 개요로</div>
+    ${backLink}
     <div class="detail-header">
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
-        <div class="subtitle">전직 퍼크 · ${parent ? escapeHtml(parent.name) : "?"} Lv${p.unlockLevel} 해금 · 스킬 ${p.skillCount}개</div>
+        <div class="subtitle">${subtitle}</div>
       </div>
       ${recentChangeBadge}
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
 
     <div class="section-title">설명</div>
-    <div class="desc-line">${p.role || ""}</div>
+    <div class="desc-line">${escapeHtml(p.role || (p.isStatic ? "베이스 퍼크 트리와 별도로 운영되는 정적 퍼크입니다." : ""))}</div>
 
     <div class="section-title">세부 효과 (게임 내 텍스트)</div>
     ${descNote}
@@ -596,7 +648,7 @@ function renderAdvDetail(key) {
       ${sec.html}
     `).join("")}
 
-    ${hasPassive ? `<div class="section-title">레벨별 수치</div>${renderSliderSection(p.passiveStats, 20)}` : ""}
+    ${hasPassive ? `<div class="section-title">레벨별 수치</div>${renderSliderSection(p.passiveStats, 20, p.valueSourceNote)}` : ""}
 
     ${renderFixedStatsSection(p.fixedStats)}
 
@@ -623,14 +675,14 @@ function renderFixedStatsSection(fixedStats) {
   `;
 }
 
-function renderSliderSection(passiveStats, maxLevel) {
+function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
   if (!passiveStats.length) return '<div class="empty-state" style="padding:10px">등록된 패시브 수치 없음</div>';
   const rows = passiveStats.map(s => {
     const signClass = s.value < 0 ? "stat-neg" : s.value > 0 ? "stat-pos" : "";
     return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
   }).join("");
   return `
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. 수치는 SV_Zedternal_Tempered 운영 폴더의 KFZedternalUnlimited.ini 기준입니다.</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 SV_Zedternal_Tempered 운영 폴더의 KFZedternalUnlimited.ini 기준입니다."}</div>
     <div class="level-slider-row">
       <label for="levelSlider">퍼크 레벨</label>
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">
@@ -724,13 +776,13 @@ function buildSearchIndex() {
     }
   }
   for (const adv of DATA.advancedPerks) {
-    const parent = BASE_BY_KEY[adv.parentPerk];
+    const parent = BASE_BY_KEY[adv.parentPerk] || ADV_BY_KEY[adv.parentPerk];
     SEARCH_INDEX.push({
       type: "adv",
       navKey: adv.key,
       ownKey: adv.key,
       name: adv.name,
-      sub: `전직 퍼크 · ${parent ? parent.name : ""}`,
+      sub: adv.isStatic ? "정적 퍼크" : `전직 퍼크 · ${parent ? parent.name : "독립"}`,
       search: buildSearchCorpus(adv, parent || { name: "" }),
     });
     for (const s of adv.skills) {
