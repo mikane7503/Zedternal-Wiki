@@ -12,7 +12,7 @@ let SEARCH_ACTIVE_IDX = -1;
 
 const LEVELS = [5, 10, 15, 20];
 
-// [ZedternalReborn.Config_Player] 원본 배율 (KFZedternalReborn_Game.ini 기준).
+// 표시값은 빌드 시 운영 폴더의 KFZedternalReborn_Game.ini에서 읽습니다.
 // 표시값 = (실제값 + 1) / 2 로 절반만 반영해 서술합니다.
 const DAMAGE_GIVEN_STATS = [
   { label: "화염 피해", real: 0.5 },
@@ -84,13 +84,20 @@ const WEAPON_AURORA_STATS = [
 // 플레이어가 체감할 만한 굵직한 변경사항만 추립니다.
 const PATCH_NOTES = [
   {
+    date: "2026-10-01",
+    items: [
+      "사이트 데이터 기준을 ZedternalTempered 소스와 SV_Zedternal_Tempered 운영 설정으로 전환",
+      "퍼크, 스킬, 피해 오로라 수치를 운영 INI에서 생성하도록 변경",
+    ],
+  },
+  {
     date: "2026-07-10",
     items: [
       "베이스 퍼크(10종)에도 전직 퍼크와 동일한 스킬 목록(표준/디럭스 설명, 비활성화 스킬 표시) 추가",
       "전직 퍼크 상세페이지에 잘못 표시되던 '베이스 퍼크' 라벨을 '전직 퍼크'로 수정",
       "무기 밸런스 오로라에 신규 무기 다수 반영, 강한 버프/너프 항목 색상 강조",
       "제드 웨이브 스폰 비율 조정 — 30웨이브까지 잡제드:중보스 비율이 점진적으로 8:2에 수렴하도록 튜닝",
-      "어고니 / 버서커 / 프로스트 너프, 웬디고 버프 반영 및 한글 패치 동기화",
+      "어고니 / 버서커 / 프로스트 너프, 웬디고 버프 반영",
     ],
   },
   {
@@ -98,7 +105,7 @@ const PATCH_NOTES = [
     items: [
       "모든 퍼크 설명란을 정체성 중심의 짧고 명확한 문구로 전면 간소화 (레벨20 풀스킬 장문 설명 삭제)",
       "최근 버프/너프 태그 위치를 등급 배지 옆으로 이동",
-      "메트로놈 · 심비오트 심화 매커니즘 상세 설명 추가, 한글 패치 다운로드 시 구독 해제 재확인 팝업 추가",
+      "메트로놈 · 심비오트 심화 매커니즘 상세 설명 추가",
       "방어구/저항력 용어 통일, 대규모 밸런스 패치 반영",
       "손상/반동/탄퍼짐 마스터 상한 완화 및 서버 사이드 ini 동기화",
     ],
@@ -113,7 +120,6 @@ const PATCH_NOTES = [
   {
     date: "2026-07-05",
     items: [
-      "한글 패치와 실제 밸런스 ini 간 수치 불일치를 자동으로 잡아내는 감사 도구 도입",
       "밸런스 오로라(피해량 배율) 수치를 서버 최신값으로 동기화",
       "ZED타임 연장 계열 스킬 전반 너프",
       "4개 베이스 퍼크의 Lv15/20 전직 퍼크 슬롯 재배치",
@@ -156,26 +162,11 @@ async function init() {
   // perks.json is never masked by a stale browser-cached copy
   const res = await fetch("data/perks.json", { cache: "no-cache" });
   DATA = await res.json();
+  applyLiveAuroraData();
   ADV_BY_KEY = Object.fromEntries(DATA.advancedPerks.map(p => [p.key, p]));
   BASE_BY_KEY = Object.fromEntries(DATA.basePerks.map(p => [p.key, p]));
 
-  document.getElementById("meta").innerHTML =
-    `📢 <b>공지사항</b>: 이 위키에 기재된 수치가 현재 서버에 실제로 적용 중인 값입니다. 게임 클라이언트 내부 스킬 설명에 표시되는 수치는 오리지널 값이라 실제 값과 전혀 다릅니다. 정확한 현재 수치는 반드시 이 위키를 기준으로 확인하세요.
-    <div class="meta-patch-row">
-      <div class="meta-patch-text">
-        <span class="patch-highlight">밸런스 패치 된 수치가 실제 인게임 화면에 적용되기를 바라는 플레이어는 다음 한국어 패치 파일을 다운 받아 해당 경로에 넣어주세요.</span>
-        <br>경로: <code>문서\\My Games\\KillingFloor2\\KFGame\\Localization\\KOR</code> 로 들어간 후, 다운로드한 <code>ZedternalRBPerkpackage.KOR</code> 파일을 그대로 덮어쓰기.
-        <div class="patch-warning">⚠️ 반드시 Steam 창작마당에서 <b>Zedternal Unlimited 구독을 해제</b>한 상태여야 합니다. 구독 중이면 Steam이 자동 동기화하면서 방금 덮어쓴 패치 파일을 구버전 원본으로 다시 덮어씁니다.</div>
-      </div>
-      <a class="patch-download-btn" id="korDownloadBtn" href="downloads/ZedternalRBPerkpackage.KOR" download>⬇ 한국어 패치 파일 다운로드</a>
-    </div>`;
-
   document.getElementById("patchNotesBtn").addEventListener("click", showPatchNotes);
-
-  document.getElementById("korDownloadBtn").addEventListener("click", (e) => {
-    const ok = confirm("Steam 창작마당에서 Zedternal Unlimited 구독을 해제하셨습니까?\n\n구독 중인 상태로 이 파일을 덮어쓰면, Steam이 자동 동기화하면서 방금 받은 패치 파일을 구버전 원본으로 다시 덮어씁니다.\n\n구독 해제를 확인하셨다면 [확인]을 눌러 다운로드를 계속하세요.");
-    if (!ok) e.preventDefault();
-  });
 
   renderSidebar();
   renderMainArea();
@@ -185,6 +176,25 @@ async function init() {
   searchBox.addEventListener("keydown", onSearchKeydown);
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".search-wrap")) closeSearchResults();
+  });
+}
+
+function applyLiveAuroraData() {
+  const aurora = DATA.aurora;
+  if (!aurora) return;
+  if (aurora.damageGiven.length !== DAMAGE_GIVEN_STATS.length + WEAPON_AURORA_STATS.length ||
+      aurora.damageTaken.length !== DAMAGE_TAKEN_STATS.length - 1) {
+    console.error("Aurora labels do not match the server damage config.");
+    return;
+  }
+  DAMAGE_GIVEN_STATS.forEach((stat, index) => { stat.real = aurora.damageGiven[index]; });
+  DAMAGE_TAKEN_STATS.forEach((stat, index) => {
+    stat.real = index === DAMAGE_TAKEN_STATS.length - 1
+      ? aurora.holdingMelee
+      : aurora.damageTaken[index];
+  });
+  WEAPON_AURORA_STATS.forEach((stat, index) => {
+    stat.value = aurora.damageGiven[DAMAGE_GIVEN_STATS.length + index];
   });
 }
 
@@ -620,7 +630,7 @@ function renderSliderSection(passiveStats, maxLevel) {
     return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
   }).join("");
   return `
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. 수치는 KFZedternalUnlimited.ini의 현재(패치 반영) 값 기준입니다.</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. 수치는 SV_Zedternal_Tempered 운영 폴더의 KFZedternalUnlimited.ini 기준입니다.</div>
     <div class="level-slider-row">
       <label for="levelSlider">퍼크 레벨</label>
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">
