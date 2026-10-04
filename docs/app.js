@@ -5,15 +5,133 @@ let OPEN_BASE_KEY = null;
 let SELECTED_ADV_KEY = null;
 let AURORA_VIEW = false;
 let AURORA_MODE = null;
+let PATCH_NOTES_VIEW = false;
 let SEARCH_INDEX = [];
 let SEARCH_RESULTS = [];
 let SEARCH_ACTIVE_IDX = -1;
 
-// [ZedternalReborn.Config_Player] 원본 배율 (KFZedternalReborn_Game.ini 기준).
+const LEVELS = [5, 10, 15, 20];
+
+// 표시값은 빌드 시 운영 폴더의 KFZedternalReborn_Game.ini에서 읽습니다.
 // 표시값 = (실제값 + 1) / 2 로 절반만 반영해 서술합니다.
-let DAMAGE_GIVEN_STATS = [];
-let DAMAGE_TAKEN_STATS = [];
-let WEAPON_AURORA_STATS = [];
+const DAMAGE_GIVEN_STATS = [
+  { label: "화염 피해", real: 0.5 },
+  { label: "지면 화염 피해", real: 0.25 },
+  { label: "네이팜 피해", real: 0.35 },
+  { label: "폭발 피해", real: 0.4 },
+  { label: "폭발 파편 피해", real: 0.5 },
+  { label: "메딕 수류탄(독성) 피해", real: 0.25 },
+  { label: "베기 피해", real: 0.85 },
+  { label: "관통 피해", real: 0.85 },
+  { label: "둔기 피해", real: 0.85 },
+  { label: "샷건 피해", real: 0.6 },
+];
+const DAMAGE_TAKEN_STATS = [
+  { label: "허스크 자폭 피해", real: 1.5 },
+  { label: "플레쉬파운드 킹 가슴빔 피해", real: 0.75 },
+  { label: "한스 유탄 피해", real: 0.75 },
+  { label: "가부장 미사일 피해", real: 0.75 },
+  { label: "여장부 플라즈마포 피해", real: 0.6 },
+  { label: "소닉 피해", real: 1.5 },
+  { label: "독성 피해", real: 2.0 },
+  { label: "허스크 화염구 피해", real: 1.25 },
+  { label: "허스크 화염방사기 피해", real: 2.0 },
+  { label: "근접무기 소지 중 전체 피해", real: 0.75 },
+];
+
+const WEAPON_AURORA_STATS = [
+  { label: "동결 투척자", value: 1.25 },
+  { label: "동결 투척자 얼음 파편", value: 1.75 },
+  { label: "RPG-7 탄두", value: 1.5 },
+  { label: "RPG-7 후폭발", value: 10.0 },
+  { label: "분쇄기 폭발", value: 2.5 },
+  { label: "석궁", value: 1.3 },
+  { label: "컴파운드 보우", value: 1.5 },
+  { label: "M14 EBR", value: 1.3 },
+  { label: "FN FAL", value: 1.2 },
+  { label: "MG3", value: 1.1 },
+  { label: "MG3 변형", value: 1.1 },
+  { label: "스토너 63A", value: 1.1 },
+  { label: "미니건", value: 1.1 },
+  { label: "MKB42", value: 1.2 },
+  { label: "모신나강", value: 1.1 },
+  { label: "모신나강 관통(스코프)", value: 1.4 },
+  { label: "HRG 탄도 바운서", value: 0.6 },
+  { label: "M4 샷건", value: 1.2 },
+  { label: "네일건", value: 1.3 },
+  { label: "기생충 이식기", value: 1.2 },
+  { label: "C4", value: 2.0 },
+  { label: "씰스퀄 폭발", value: 1.3 },
+  { label: "씰스퀄 직격", value: 2.0 },
+  { label: "중력폭구 폭발", value: 1.3 },
+  { label: "중력폭구 대체 직격", value: 3.0 },
+  { label: "마이크로웨이브 라이플", value: 1.4 },
+  { label: "G18", value: 1.25 },
+  { label: "G18 실드", value: 4.0 },
+  { label: "G18 실드(임펄스)", value: 4.0 },
+  { label: "센터파이어 MB464", value: 0.75 },
+  { label: "윈체스터 1894", value: 0.75 },
+  { label: "S&W 500", value: 0.8 },
+  { label: "M99", value: 0.85 },
+  { label: "레일건", value: 0.9 },
+  { label: "허스크 캐논", value: 0.8 },
+  { label: "HV 스톰 캐논", value: 0.85 },
+  { label: "HRG 카붐스틱", value: 0.85 },
+  { label: "HRG 메뚜기", value: 0.3 },
+];
+
+// 지금까지의 주요 패치 내역 요약 (최신순). 모든 커밋을 나열하진 않고,
+// 플레이어가 체감할 만한 굵직한 변경사항만 추립니다.
+const PATCH_NOTES = [
+  {
+    date: "2026-10-01",
+    items: [
+      "사이트 데이터 기준을 ZedternalTempered 소스와 SV_Zedternal_Tempered 운영 설정으로 전환",
+      "퍼크, 스킬, 피해 오로라 수치를 운영 INI에서 생성하도록 변경",
+    ],
+  },
+  {
+    date: "2026-07-10",
+    items: [
+      "베이스 퍼크(10종)에도 전직 퍼크와 동일한 스킬 목록(표준/디럭스 설명, 비활성화 스킬 표시) 추가",
+      "전직 퍼크 상세페이지에 잘못 표시되던 '베이스 퍼크' 라벨을 '전직 퍼크'로 수정",
+      "무기 밸런스 오로라에 신규 무기 다수 반영, 강한 버프/너프 항목 색상 강조",
+      "제드 웨이브 스폰 비율 조정 — 30웨이브까지 잡제드:중보스 비율이 점진적으로 8:2에 수렴하도록 튜닝",
+      "어고니 / 버서커 / 프로스트 너프, 웬디고 버프 반영",
+    ],
+  },
+  {
+    date: "2026-07-07",
+    items: [
+      "모든 퍼크 설명란을 정체성 중심의 짧고 명확한 문구로 전면 간소화 (레벨20 풀스킬 장문 설명 삭제)",
+      "최근 버프/너프 태그 위치를 등급 배지 옆으로 이동",
+      "메트로놈 · 심비오트 심화 매커니즘 상세 설명 추가",
+      "방어구/저항력 용어 통일, 대규모 밸런스 패치 반영",
+      "손상/반동/탄퍼짐 마스터 상한 완화 및 서버 사이드 ini 동기화",
+    ],
+  },
+  {
+    date: "2026-07-06",
+    items: [
+      "패시브 수치 표시 회귀 버그 수정, 파이어버그·데몰리션리스트 등급 조정",
+      "매니악 재장전 속도 너프, 갬블러·타이쿤 밸런스 조정",
+    ],
+  },
+  {
+    date: "2026-07-05",
+    items: [
+      "밸런스 오로라(피해량 배율) 수치를 서버 최신값으로 동기화",
+      "ZED타임 연장 계열 스킬 전반 너프",
+      "4개 베이스 퍼크의 Lv15/20 전직 퍼크 슬롯 재배치",
+    ],
+  },
+  {
+    date: "2026-07-04",
+    items: [
+      "초반(1~3웨이브)이 쉽고 11~25웨이브가 밋밋했던 난이도 곡선 개선, 26웨이브 이후 급격한 난이도 상승 완화",
+    ],
+  },
+];
 
 function el(tag, attrs = {}, children = []) {
   const node = document.createElement(tag);
@@ -39,53 +157,16 @@ function iconImg(perk, size) {
   });
 }
 
-function gradeClass(grade) {
-  return `grade-${String(grade || "").toLowerCase()}`;
-}
-
-function gradeBadge(grade) {
-  return grade ? `<span class="grade-badge ${gradeClass(grade)}">${escapeHtml(grade)}</span>` : "";
-}
-
-function gradeBadgeNode(grade) {
-  return grade ? el("span", { class: `grade-badge ${gradeClass(grade)}`, text: grade }) : null;
-}
-
-function isCombinationUnlocked(perk) {
-  return (perk.unlockRequirements || []).length > 1;
-}
-
-function requirementSummary(perk) {
-  return (perk.unlockRequirements || []).map(req => {
-    const required = BASE_BY_KEY[req.perk] || ADV_BY_KEY[req.perk];
-    return `${required ? required.name : req.perk} Lv${req.level}`;
-  }).join(" + ");
-}
-
 async function init() {
   // no-cache: revalidate with the server every load so a freshly rebuilt
   // perks.json is never masked by a stale browser-cached copy
   const res = await fetch("data/perks.json", { cache: "no-cache" });
   DATA = await res.json();
-  DAMAGE_GIVEN_STATS = DATA.meta.systems.damageGiven.map(item => ({ label: item.label, real: item.multiplier }));
-  DAMAGE_TAKEN_STATS = DATA.meta.systems.damageTaken.map(item => ({ label: item.label, real: item.multiplier }));
-  WEAPON_AURORA_STATS = DATA.meta.systems.weaponDamage.map(item => ({ label: item.label, value: item.multiplier }));
+  applyLiveAuroraData();
   ADV_BY_KEY = Object.fromEntries(DATA.advancedPerks.map(p => [p.key, p]));
   BASE_BY_KEY = Object.fromEntries(DATA.basePerks.map(p => [p.key, p]));
 
-  const version = DATA.meta.version ? `v${DATA.meta.version}` : "버전 정보 없음";
-  const asOf = DATA.meta.asOf || "날짜 정보 없음";
-  const deluxeUnlockLevels = (DATA.meta.deluxeSkillUnlock || []).map(level => `Lv${level}`).join(", ") || "설정 없음";
-  document.getElementById("meta").innerHTML =
-    `📘 <b>Zedternal Tempered ${version}</b> · ${asOf} 기준 소스 기본값과 게임 설명을 대조해 표시합니다. 서버 운영자가 별도 INI 값을 사용하면 실제 서버 수치와 다를 수 있습니다.
-    <br>스킬 구매: 표준 ${Number(DATA.meta.skillUpgradePrice || 0).toLocaleString()} 도쉬 · 디럭스 ${Number(DATA.meta.deluxeSkillUpgradePrice || 0).toLocaleString()} 도쉬 · 디럭스 해금 레벨 ${escapeHtml(deluxeUnlockLevels)}
-    <div class="meta-patch-row">
-      <div class="meta-patch-text">
-        한국어 로컬라이제이션 파일은 선택적으로 설치할 수 있습니다. 파일을 <code>문서\\My Games\\KillingFloor2\\KFGame\\Localization\\KOR</code>에 넣고 게임을 다시 실행하세요.
-      </div>
-      <a class="patch-download-btn" href="downloads/ZedternalTempered.kor" download>⬇ 템퍼드 한국어 파일 다운로드</a>
-    </div>`;
-  document.getElementById("footerVersion").textContent = version;
+  document.getElementById("patchNotesBtn").addEventListener("click", showPatchNotes);
 
   renderSidebar();
   renderMainArea();
@@ -98,10 +179,30 @@ async function init() {
   });
 }
 
+function applyLiveAuroraData() {
+  const aurora = DATA.aurora;
+  if (!aurora) return;
+  if (aurora.damageGiven.length !== DAMAGE_GIVEN_STATS.length + WEAPON_AURORA_STATS.length ||
+      aurora.damageTaken.length !== DAMAGE_TAKEN_STATS.length - 1) {
+    console.error("Aurora labels do not match the server damage config.");
+    return;
+  }
+  DAMAGE_GIVEN_STATS.forEach((stat, index) => { stat.real = aurora.damageGiven[index]; });
+  DAMAGE_TAKEN_STATS.forEach((stat, index) => {
+    stat.real = index === DAMAGE_TAKEN_STATS.length - 1
+      ? aurora.holdingMelee
+      : aurora.damageTaken[index];
+  });
+  WEAPON_AURORA_STATS.forEach((stat, index) => {
+    stat.value = aurora.damageGiven[DAMAGE_GIVEN_STATS.length + index];
+  });
+}
+
 function showBaseOverview(key) {
   OPEN_BASE_KEY = key;
   SELECTED_ADV_KEY = null;
   AURORA_VIEW = false;
+  PATCH_NOTES_VIEW = false;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
@@ -112,6 +213,7 @@ function selectAdv(key) {
   OPEN_BASE_KEY = adv.parentPerk;
   SELECTED_ADV_KEY = key;
   AURORA_VIEW = false;
+  PATCH_NOTES_VIEW = false;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
@@ -120,11 +222,43 @@ function selectAdv(key) {
 function showAurora(mode) {
   AURORA_VIEW = true;
   AURORA_MODE = mode;
+  PATCH_NOTES_VIEW = false;
   OPEN_BASE_KEY = null;
   SELECTED_ADV_KEY = null;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
+}
+
+function showPatchNotes() {
+  PATCH_NOTES_VIEW = true;
+  AURORA_VIEW = false;
+  OPEN_BASE_KEY = null;
+  SELECTED_ADV_KEY = null;
+  renderSidebar();
+  renderMainArea();
+  document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
+}
+
+function renderPatchNotesDetail() {
+  const groups = PATCH_NOTES.map(g => `
+    <div class="patch-note-group">
+      <div class="patch-note-date">${g.date}</div>
+      <ul class="strengths">${g.items.map(i => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
+    </div>
+  `).join("");
+  return `
+    <div class="detail-header">
+      <div class="ba-icon lg">🧾</div>
+      <div class="detail-titles">
+        <h2>패치 노트</h2>
+      </div>
+    </div>
+    <div class="aurora-note">
+      <div class="aurora-note-main">지금까지의 주요 변경사항을 최신순으로 정리했습니다. 사소한 수치 조정까지 전부 담지는 않았습니다.</div>
+    </div>
+    ${groups}
+  `;
 }
 
 function auroraBarRow(stat, invert) {
@@ -142,7 +276,7 @@ function auroraBarRow(stat, invert) {
         <div class="ba-bar-center"></div>
         <div class="ba-bar-fill" style="left:${left}%;width:${halfWidth}%;background:${color}"></div>
       </div>
-      <div class="ba-row-val" title="이 값은 Config_Player의 현재 INI 배율입니다. 시각화 기준 환산값 ×${trimNum(shown)}">×${trimNum(stat.real)}</div>
+      <div class="ba-row-val">×${trimNum(shown)}</div>
     </div>`;
 }
 
@@ -180,7 +314,7 @@ function weaponAuroraLi(w) {
   let style = "";
   if (w.value > 1.5) style = ' style="color:#00ff00;font-weight:600"';
   else if (w.value <= 0.7) style = ' style="color:crimson;font-weight:600"';
-  return `<li${style}>${escapeHtml(w.label)} — ×${trimNum(w.value)}</li>`;
+  return `<li${style}>${escapeHtml(w.label)}</li>`;
 }
 
 function renderWeaponAuroraDetail() {
@@ -197,7 +331,7 @@ function renderWeaponAuroraDetail() {
     <div class="section-title">기준</div>
     <div class="aurora-note">
       <div class="aurora-note-main"> 제드터널 모드의 특성상 너무 강하거나 약한 무기를 밸런싱한, 버프 / 너프된 무기 리스트 입니다. <code>소스: [ZedternalReborn.Config_Player]</code></div>
-      <div class="aurora-note-sub">배율은 현재 템퍼드 소스의 <code>Config_Player</code> 설정에서 자동으로 가져옵니다.</div>
+      <div class="aurora-note-sub">해당 값은 추후 밸런싱을 통해 언제나 바뀔 수 있으며 배율 값은 비공개 입니다.</div>
     </div>
 
     <div class="aurora-grid">
@@ -239,20 +373,6 @@ function renderSidebar() {
   sidebar.innerHTML = "";
   sidebar.appendChild(renderBalanceAuroraBox());
   sidebar.appendChild(renderWeaponAuroraBox());
-  const comboPerks = DATA.advancedPerks.filter(isCombinationUnlocked);
-  if (comboPerks.length) {
-    sidebar.appendChild(el("div", { class: "sidebar-section-label", text: "퍼크 조합 해금" }));
-    for (const perk of comboPerks) {
-      const row = el("div", { class: "child-row combination-perk-row", "data-advkey": perk.key }, [
-        iconImg(perk, "sm"),
-        el("span", { class: "name", text: perk.name }),
-        gradeBadgeNode(perk.grade),
-      ]);
-      row.title = requirementSummary(perk);
-      row.addEventListener("click", () => selectAdv(perk.key));
-      sidebar.appendChild(row);
-    }
-  }
   for (const base of DATA.basePerks) {
     const isOpen = base.key === OPEN_BASE_KEY;
     const item = el("div", { class: `accordion-item ${isOpen ? "open" : ""}`, "data-basekey": base.key });
@@ -261,6 +381,7 @@ function renderSidebar() {
       iconImg(base, "sm"),
       el("div", { class: "titles" }, [
         el("h3", { text: base.name }),
+        el("div", { class: "grade", html: base.grade ? `등급 ${gradeBadge(base.grade)}` : "" }),
       ]),
       el("span", { class: "chevron", text: "▸" }),
     ]);
@@ -268,10 +389,11 @@ function renderSidebar() {
     item.appendChild(header);
 
     const body = el("div", { class: "accordion-body" });
-    for (const u of base.unlocks.slice().sort((a, b) => (a.level || 0) - (b.level || 0))) {
-      const lvl = u.level;
+    const unlockByLevel = Object.fromEntries(base.unlocks.map(u => [u.level, u]));
+    for (const lvl of LEVELS) {
+      const u = unlockByLevel[lvl];
+      if (!u) continue;
       const adv = ADV_BY_KEY[u.perk];
-      if (!adv || isCombinationUnlocked(adv)) continue;
       const row = el("div", {
         class: `child-row ${adv.key === SELECTED_ADV_KEY ? "active" : ""}`,
         "data-advkey": adv.key,
@@ -279,8 +401,8 @@ function renderSidebar() {
         iconImg(adv, "sm"),
         el("span", { class: "lvl", text: `Lv${lvl}` }),
         el("span", { class: "name", text: adv.name }),
-        gradeBadgeNode(adv.grade),
       ]);
+      if (adv.grade) row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(adv.grade) }));
       row.addEventListener("click", (e) => { e.stopPropagation(); selectAdv(adv.key); });
       body.appendChild(row);
     }
@@ -288,38 +410,41 @@ function renderSidebar() {
     sidebar.appendChild(item);
   }
 
-  const rootPerks = DATA.advancedPerks.filter(perk => !perk.parentPerk);
-  if (rootPerks.length) {
-    sidebar.appendChild(el("div", { class: "sidebar-section-label", text: "독립 퍼크 및 확장 트리" }));
-    for (const perk of rootPerks) {
-      const item = el("div", { class: `accordion-item ${perk.key === SELECTED_ADV_KEY ? "open" : ""}` });
-      const header = el("div", { class: "accordion-header" }, [
-        iconImg(perk, "sm"),
-        el("div", { class: "titles" }, [el("h3", { text: perk.name })]),
-        gradeBadgeNode(perk.grade),
-        el("span", { class: "chevron", text: "▸" }),
+  const independentPerks = DATA.advancedPerks.filter(perk =>
+    !BASE_BY_KEY[perk.parentPerk] && !ADV_BY_KEY[perk.parentPerk]
+  );
+  for (const perk of independentPerks) {
+    const children = DATA.advancedPerks
+      .filter(child => child.parentPerk === perk.key)
+      .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0));
+    const isOpen = perk.key === SELECTED_ADV_KEY || children.some(child => child.key === SELECTED_ADV_KEY);
+    const item = el("div", { class: `accordion-item ${isOpen ? "open" : ""}` });
+    const header = el("div", { class: "accordion-header" }, [
+      iconImg(perk, "sm"),
+      el("div", { class: "titles" }, [
+        el("h3", { text: perk.name }),
+        el("div", { class: "grade", text: perk.isStatic ? "정적 퍼크" : "독립 퍼크" }),
+      ]),
+      el("span", { class: "chevron", text: "▸" }),
+    ]);
+    header.addEventListener("click", () => selectAdv(perk.key));
+    item.appendChild(header);
+
+    const body = el("div", { class: "accordion-body" });
+    for (const child of children) {
+      const row = el("div", {
+        class: `child-row ${child.key === SELECTED_ADV_KEY ? "active" : ""}`,
+        "data-advkey": child.key,
+      }, [
+        iconImg(child, "sm"),
+        el("span", { class: "lvl", text: `Lv${child.unlockLevel}` }),
+        el("span", { class: "name", text: child.name }),
       ]);
-      header.addEventListener("click", () => selectAdv(perk.key));
-      item.appendChild(header);
-      const body = el("div", { class: "accordion-body" });
-      const row = el("div", { class: `child-row ${perk.key === SELECTED_ADV_KEY ? "active" : ""}` }, [
-        el("span", { class: "name", text: `독립 퍼크 · 최대 Lv${perk.maxLevel || 20}` }),
-      ]);
-      row.addEventListener("click", () => selectAdv(perk.key));
+      row.addEventListener("click", event => { event.stopPropagation(); selectAdv(child.key); });
       body.appendChild(row);
-      for (const child of DATA.advancedPerks.filter(candidate => candidate.parentPerk === perk.key && !isCombinationUnlocked(candidate))) {
-        const childRow = el("div", { class: `child-row ${child.key === SELECTED_ADV_KEY ? "active" : ""}`, "data-advkey": child.key }, [
-          iconImg(child, "sm"),
-          el("span", { class: "lvl", text: `Lv${child.unlockLevel || "?"}` }),
-          el("span", { class: "name", text: child.name }),
-          gradeBadgeNode(child.grade),
-        ]);
-        childRow.addEventListener("click", (event) => { event.stopPropagation(); selectAdv(child.key); });
-        body.appendChild(childRow);
-      }
-      item.appendChild(body);
-      sidebar.appendChild(item);
     }
+    item.appendChild(body);
+    sidebar.appendChild(item);
   }
 }
 
@@ -327,6 +452,11 @@ function renderMainArea() {
   const main = document.getElementById("mainArea");
   main.innerHTML = "";
 
+  if (PATCH_NOTES_VIEW) {
+    main.innerHTML = renderPatchNotesDetail();
+    wireDetailEvents(main);
+    return;
+  }
   if (AURORA_VIEW) {
     main.innerHTML = AURORA_MODE === "weapon" ? renderWeaponAuroraDetail() : renderBalanceAuroraDetail();
     wireDetailEvents(main);
@@ -342,65 +472,18 @@ function renderMainArea() {
     wireDetailEvents(main);
     return;
   }
-  main.appendChild(renderSystemOverview());
-}
-
-function renderSystemOverview() {
-  const systems = DATA.meta.systems;
-  const event = systems.eventWaves;
-  const rogue = systems.roguelike;
-  const rank = systems.rank;
-  const events = event.weightedEvents.map(item => `
-    <tr><td>${escapeHtml(item.key)}</td><td>${Number(item.weight).toFixed(2)}</td></tr>
-  `).join("");
-  const container = el("div", { class: "system-overview" });
-  container.innerHTML = `
-    <div class="detail-header">
-      <div class="detail-titles"><h2>Zedternal Tempered 게임 규칙</h2>
-        <div class="subtitle">공식 소스 기본값 · 운영 서버의 별도 INI 설정은 다를 수 있습니다.</div>
-      </div>
-    </div>
-    <div class="overview-grid">
-      <section class="system-card"><h3>랭크</h3>
-        <p><b>${rank.maxRank}레벨</b> · 칭호 ${rank.titles}개</p>
-        <p>최대 누적 경험치 ${Number(rank.maxXp).toLocaleString()} XP</p>
-        <p>이전 5개 랭크 구간을 새 랭크 하나로 압축하는 진행도 체계입니다.</p>
-      </section>
-      <section class="system-card"><h3>로그라이크 업그레이드</h3>
-        <p>${rogue.enabled ? `매 ${rogue.waveInterval}웨이브마다 선택` : "비활성화"}</p>
-        <p>중도 접속 보충: ${rogue.lateJoinCatchUp ? "활성화" : "비활성화"}${rogue.lateJoinCatchUp && rogue.lateJoinMaxSelections === 0 ? " · 놓친 선택 횟수 제한 없음" : ""}</p>
-      </section>
-      <section class="system-card"><h3>이벤트 웨이브</h3>
-        <p>${event.enabled ? `웨이브 ${event.minWave}부터 · 웨이브당 ${Math.round(event.probability * 100)}% 확률` : "비활성화"}</p>
-        <p>매치 최대 횟수: ${event.maxPerMatch === 0 ? "제한 없음" : event.maxPerMatch}</p>
-        <p>가중치가 0보다 큰 이벤트 ${event.weightedEvents.length}종이 선택 대상입니다.</p>
-      </section>
-      <section class="system-card"><h3>퍼크 레벨 캡스톤</h3>
-        <p>1차: Lv${systems.capstones.rank1Level} · 2차: Lv${systems.capstones.rank2Level}</p>
-        <p>레벨 상한은 퍼크별로 표시합니다. 엔지니어 트리의 일부 퍼크는 최대 Lv10입니다.</p>
-      </section>
-    </div>
-    <div class="section-title">현재 이벤트 웨이브 가중치</div>
-    <table class="stat-table"><tr><th>이벤트 키</th><th>가중치</th></tr>${events}</table>
-    <div class="section-title">퍼크 및 스킬 수록 범위</div>
-    <div class="desc-line">베이스 퍼크 ${DATA.meta.basePerkCount}종 · 등록된 전직/독립 퍼크 ${DATA.meta.advancedPerkCount}종 · 표준/디럭스 스킬 항목 ${DATA.meta.totalSkills}개</div>
-  `;
-  return container;
+  main.appendChild(el("div", { class: "empty-state", text: "왼쪽에서 베이스 퍼크를 선택하면 베이스 퍼크 트리가 펼쳐집니다." }));
 }
 
 function wireDetailEvents(root) {
   root.querySelectorAll(".unlock-chip").forEach(chip => {
     chip.addEventListener("click", () => selectAdv(chip.dataset.advkey));
   });
-  root.querySelectorAll(".back-link").forEach(b => {
-    b.addEventListener("click", () => {
-      const parentKey = b.dataset.basekey;
-      if (BASE_BY_KEY[parentKey]) showBaseOverview(parentKey);
-      else if (ADV_BY_KEY[parentKey]) selectAdv(parentKey);
+  root.querySelectorAll(".back-link").forEach(link => {
+    link.addEventListener("click", () => {
+      if (link.dataset.advkey) selectAdv(link.dataset.advkey);
+      else showBaseOverview(link.dataset.basekey);
     });
-  });
-  root.querySelectorAll(".upper-perk-card[data-advkey]").forEach(card => {
-    card.addEventListener("click", () => selectAdv(card.dataset.advkey));
   });
   const slider = root.querySelector("#levelSlider");
   if (slider) slider.addEventListener("input", onLevelSlide);
@@ -420,29 +503,37 @@ function renderBaseDetail(key) {
   const wrap = document.createDocumentFragment();
   const container = el("div", {});
 
+  const strengths = p.strengths.length
+    ? `<ul class="strengths">${p.strengths.map(s => `<li>${escapeHtml(s)}</li>`).join("")}</ul>` : "";
+  const weaknesses = p.weaknesses.length
+    ? p.weaknesses.map(w =>
+        `<div class="weak-item"><span class="sev-${w.severity}">${escapeHtml(w.label || w.skill)}</span> — ${escapeHtml(w.issue)}</div>`
+      ).join("")
+    : "";
+
   const grid = el("div", { class: "adv-grid" });
-  for (const u of p.unlocks.slice().sort((a, b) => (a.level || 0) - (b.level || 0))) {
-    const lvl = u.level;
+  const unlockByLevel = Object.fromEntries(p.unlocks.map(u => [u.level, u]));
+  for (const lvl of LEVELS) {
+    const u = unlockByLevel[lvl];
+    if (!u) continue;
     const adv = ADV_BY_KEY[u.perk];
-    if (!adv || isCombinationUnlocked(adv)) continue;
-    const requirementLabel = (adv.unlockRequirements || []).map(req => {
-      const required = BASE_BY_KEY[req.perk] || ADV_BY_KEY[req.perk];
-      return `${required ? required.name : req.perk} Lv${req.level}`;
-    }).join(" + ");
     const card = el("div", {
       class: "adv-card",
       "data-advkey": adv.key,
     }, [
       iconImg(adv),
       el("div", { class: "adv-body" }, [
-        el("div", { class: "lvl", text: `해금: ${requirementLabel || `Lv${lvl}`}` }),
-        el("div", { class: "name", html: `${escapeHtml(adv.name)} ${gradeBadge(adv.grade)}` }),
+        el("div", { class: "lvl", text: `Lv${lvl} 해금` }),
+        el("div", { class: "name", text: adv.name }),
         el("div", { class: "skillcount", text: `스킬 ${adv.skillCount}개` }),
       ]),
     ]);
+    if (adv.grade) card.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(adv.grade) }));
     card.addEventListener("click", () => selectAdv(adv.key));
     grid.appendChild(card);
   }
+
+  const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
   const skillsHtml = (p.skills || []).map(s => `
     <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
@@ -465,7 +556,16 @@ function renderBaseDetail(key) {
         <h2>${escapeHtml(p.name)}</h2>
         <div class="subtitle">베이스 퍼크 · 스킬 ${p.skillCount || 0}개</div>
       </div>
+      ${recentChangeBadge}
+      <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
+
+    <div class="section-title">설명</div>
+    <div class="desc-line">${p.role || ""}</div>
+
+    <div class="section-title">세부 효과 (강점)</div>
+    ${strengths || '<div class="empty-state" style="padding:10px">기록된 강점 없음</div>'}
+    ${weaknesses ? `<div class="section-title" style="margin-top:14px">세부 효과 (약점)</div>${weaknesses}` : ""}
 
     <div class="section-title">레벨별 수치</div>
     ${renderSliderSection(p.passiveStats, 20)}
@@ -482,29 +582,29 @@ function renderBaseDetail(key) {
 
 function renderAdvDetail(key) {
   const p = ADV_BY_KEY[key];
-  const parent = BASE_BY_KEY[p.parentPerk] || ADV_BY_KEY[p.parentPerk];
-  const unlockText = (p.unlockRequirements || []).map(req => {
-    const requiredPerk = BASE_BY_KEY[req.perk] || ADV_BY_KEY[req.perk];
-    return `${requiredPerk ? requiredPerk.name : req.perk} Lv${req.level}`;
-  }).join(" + ");
+  const parent = BASE_BY_KEY[p.parentPerk];
+  const parentAdv = ADV_BY_KEY[p.parentPerk];
+  const parentName = parent?.name || parentAdv?.name;
+  const backLink = parent
+    ? `<div class="back-link" data-basekey="${escapeHtml(parent.key)}">← ${escapeHtml(parent.name)} 개요로</div>`
+    : parentAdv
+      ? `<div class="back-link" data-advkey="${escapeHtml(parentAdv.key)}">← ${escapeHtml(parentAdv.name)} 개요로</div>`
+      : "";
+  const subtitle = p.isStatic
+    ? `정적 퍼크 · 최대 Lv20 · 스킬 ${p.skillCount}개`
+    : parentName
+      ? `${escapeHtml(parentName)} Lv${p.unlockLevel ?? "?"} 해금 · 스킬 ${p.skillCount}개`
+      : `독립 퍼크 · 스킬 ${p.skillCount}개`;
 
   const descLines = p.descriptions.map(d =>
     `<div class="desc-line ${d.isCapstone ? "capstone" : ""}">${d.raw || escapeHtml(d.text)}</div>`
   ).join("") || '<div class="empty-state" style="padding:10px">등록된 게임 내 설명이 없습니다 — 아래 시스템 규칙 섹션을 참고하세요.</div>';
   const descNote = p.descriptions.length
-    ? `<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 패시브 수치는 최대 레벨 ${p.maxLevel || 20} 기준입니다.</div>` : "";
+    ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 레벨 20(만렙) 기준입니다.</div>' : "";
+
+  const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
   const hasPassive = p.passiveStats.length > 0;
-  const upperPerks = p.parentPerk ? [] : DATA.advancedPerks.filter(child => child.parentPerk === p.key && !isCombinationUnlocked(child));
-  const upperPerkCards = upperPerks.map(child => `
-    <div class="adv-card upper-perk-card" data-advkey="${escapeHtml(child.key)}">
-      <img class="icon-img" src="${escapeHtml(child.icon || "")}" alt="" onerror="this.style.display='none'">
-      <div class="adv-body">
-        <div class="lvl">해금: ${escapeHtml(requirementSummary(child))}</div>
-        <div class="name">${escapeHtml(child.name)} ${gradeBadge(child.grade)}</div>
-        <div class="skillcount">스킬 ${child.skillCount}개</div>
-      </div>
-    </div>`).join("");
 
   const skillsHtml = p.skills.map(s => `
     <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
@@ -524,24 +624,33 @@ function renderAdvDetail(key) {
 
   const container = el("div", {});
   container.innerHTML = `
-    <div class="back-link" data-basekey="${p.parentPerk}">← ${parent ? escapeHtml(parent.name) : "베이스 퍼크"} 개요로</div>
+    ${backLink}
     <div class="detail-header">
       <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
-        <h2>${escapeHtml(p.name)} ${gradeBadge(p.grade)}</h2>
-        <div class="subtitle">${unlockText ? `해금 조건: ${escapeHtml(unlockText)}` : (parent ? `${escapeHtml(parent.name)} Lv${p.unlockLevel || "?"} 해금` : "독립 퍼크")} · 최대 Lv${p.maxLevel || 20} · 스킬 ${p.skillCount}개</div>
+        <h2>${escapeHtml(p.name)}</h2>
+        <div class="subtitle">${subtitle}</div>
       </div>
+      ${recentChangeBadge}
+      <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
+
+    <div class="section-title">설명</div>
+    <div class="desc-line">${escapeHtml(p.role || (p.isStatic ? "베이스 퍼크 트리와 별도로 운영되는 정적 퍼크입니다." : ""))}</div>
 
     <div class="section-title">세부 효과 (게임 내 텍스트)</div>
     ${descNote}
     ${descLines}
 
-    ${hasPassive ? `<div class="section-title">레벨별 수치</div>${renderSliderSection(p.passiveStats, p.maxLevel || 20, p.valueSourceNote)}` : ""}
+    ${(p.extraSections || []).map(sec => `
+      <div class="section-title">${escapeHtml(sec.title)}</div>
+      ${sec.note ? `<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">${escapeHtml(sec.note)}</div>` : ""}
+      ${sec.html}
+    `).join("")}
 
-    ${renderFixedStatsSection(p.fixedStats, p.key === "Engineer" ? "Engineer 드론 기준 설정" : undefined, p.key === "Engineer" ? "수치는 템퍼드 소스의 ZTConfig_EngineerDrones 기본 설정에서 가져옵니다." : undefined)}
+    ${hasPassive ? `<div class="section-title">레벨별 수치</div>${renderSliderSection(p.passiveStats, 20, p.valueSourceNote)}` : ""}
 
-    ${upperPerks.length ? `<div class="section-title">상위 퍼크</div><div class="adv-grid">${upperPerkCards}</div>` : ""}
+    ${renderFixedStatsSection(p.fixedStats)}
 
     <div class="section-title">스킬 목록 (표준 / 디럭스)</div>
     <div class="skill-list">${skillsHtml}</div>
@@ -551,7 +660,7 @@ function renderAdvDetail(key) {
   return wrap;
 }
 
-function renderFixedStatsSection(fixedStats, title = "고정 효과 (레벨과 무관하게 일정)", note = "⚠ 아래 수치는 레벨업으로 커지지 않는 고정값입니다. \"Lv10/20 캡스톤\"은 해당 레벨에 도달하는 순간 1회 적용되는 효과입니다.") {
+function renderFixedStatsSection(fixedStats) {
   if (!fixedStats || !fixedStats.length) return "";
   const rows = fixedStats.map(s => `
     <div class="fixed-stat-row">
@@ -560,8 +669,8 @@ function renderFixedStatsSection(fixedStats, title = "고정 효과 (레벨과 �
       ${s.capstoneLevel ? `<span class="capstone-badge">Lv${s.capstoneLevel} 캡스톤</span>` : ""}
     </div>`).join("");
   return `
-    <div class="section-title">${escapeHtml(title)}</div>
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">${escapeHtml(note)}</div>
+    <div class="section-title">고정 효과 (레벨과 무관하게 일정)</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">⚠ 아래 수치는 레벨업으로 커지지 않는 고정값입니다. "Lv10/20 캡스톤"은 해당 레벨에 도달하는 순간 1회 적용되는 효과입니다.</div>
     <div class="fixed-stat-list">${rows}</div>
   `;
 }
@@ -570,10 +679,10 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
   if (!passiveStats.length) return '<div class="empty-state" style="padding:10px">등록된 패시브 수치 없음</div>';
   const rows = passiveStats.map(s => {
     const signClass = s.value < 0 ? "stat-neg" : s.value > 0 ? "stat-pos" : "";
-    return `<tr data-perlevel="${s.value}" data-unit="${s.unit}" data-cap="${s.cap ?? ""}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatStat(s.value * maxLevel, s.unit, s.cap)}</td></tr>`;
+    return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
   }).join("");
   return `
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">${escapeHtml(sourceNote || "⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. 수치는 KFZedternalUnlimited.ini의 현재(패치 반영) 값 기준입니다.")}</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 SV_Zedternal_Tempered 운영 폴더의 KFZedternalUnlimited.ini 기준입니다."}</div>
     <div class="level-slider-row">
       <label for="levelSlider">퍼크 레벨</label>
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">
@@ -591,8 +700,7 @@ function onLevelSlide(e) {
   document.getElementById("lvlValLabel").textContent = `Lv ${lvl}`;
   document.querySelectorAll("#mainArea table tr[data-perlevel]").forEach(row => {
     const perLevel = Number(row.dataset.perlevel);
-    const cap = row.dataset.cap === "" ? null : Number(row.dataset.cap);
-    row.querySelector(".live-val").textContent = formatStat(perLevel * lvl, row.dataset.unit, cap);
+    row.querySelector(".live-val").textContent = formatByUnit(perLevel * lvl, row.dataset.unit);
   });
 }
 
@@ -607,18 +715,37 @@ function formatByUnit(value, unit) {
   if (unit === "multiplier") return `×${trimNum(value)}`;
   if (unit === "seconds") return `${trimNum(value)}초`;
   if (unit === "currency") return `${Math.round(value).toLocaleString()} 도쉬`;
-  if (unit === "health") return `${trimNum(value)} HP`;
   if (Number.isInteger(value)) return value.toLocaleString();
   return trimNum(value);
 }
 
-function formatStat(value, unit, cap = null) {
-  if (cap != null && Number.isFinite(cap)) value = value >= 0 ? Math.min(value, cap) : Math.max(value, cap);
-  return formatByUnit(value, unit);
-}
-
 function trimNum(n) {
   return (Math.round(n * 100) / 100).toString();
+}
+
+function gradeClass(grade) {
+  if (!grade) return "";
+  const g = grade.trim();
+  if (g === "SS") return "grade-ss";
+  if (g === "S") return "grade-s";
+  if (g === "A") return "grade-a";
+  if (g === "B") return "grade-b";
+  if (g === "C") return "grade-c";
+  if (g === "?") return "grade-mystery";
+  return "grade-b";
+}
+
+function gradeBadge(grade) {
+  if (!grade) return "";
+  return `<span class="grade-badge ${gradeClass(grade)}">${escapeHtml(grade)}</span>`;
+}
+
+function renderRecentChangeBadge(tag) {
+  if (!tag) return "";
+  const isBuff = tag.type === "buff";
+  const label = isBuff ? "🔺 최근 버프됨" : "🔻 최근 너프됨";
+  const cls = isBuff ? "recent-change-buff" : "recent-change-nerf";
+  return `<div class="recent-change-badge ${cls}">${label} <span class="recent-change-date">(${escapeHtml(tag.date)})</span></div>`;
 }
 
 function escapeHtml(s) {
@@ -649,13 +776,13 @@ function buildSearchIndex() {
     }
   }
   for (const adv of DATA.advancedPerks) {
-    const parent = BASE_BY_KEY[adv.parentPerk];
+    const parent = BASE_BY_KEY[adv.parentPerk] || ADV_BY_KEY[adv.parentPerk];
     SEARCH_INDEX.push({
       type: "adv",
       navKey: adv.key,
       ownKey: adv.key,
       name: adv.name,
-      sub: `전직 퍼크 · ${parent ? parent.name : ""}`,
+      sub: adv.isStatic ? "정적 퍼크" : `전직 퍼크 · ${parent ? parent.name : "독립"}`,
       search: buildSearchCorpus(adv, parent || { name: "" }),
     });
     for (const s of adv.skills) {

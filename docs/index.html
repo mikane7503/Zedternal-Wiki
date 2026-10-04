@@ -3,24 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>제드터널 템퍼드 위키</title>
-<link rel="stylesheet" href="style.css?v=20261004-2">
+<title>제드터널 언리미티드 위키</title>
+<link rel="stylesheet" href="style.css?v=20261002-1">
 </head>
 <body>
 <header class="topbar">
   <div class="title-group">
-    <h1>제드터널 <span>템퍼드</span> 위키</h1>
-    <div class="powered-by">Zedternal Unlimited Tempered · 공식 소스 설정 및 로컬라이제이션 기준</div>
+    <h1>제드터널 <span>언리미티드</span> 위키</h1>
+    <div class="powered-by">Powered by Remilly, 뽀이뿨이 Zedternal Unlimited 서버 <span class="server-status"><span class="dot"></span>현재 서버 온라인</span></div>
   </div>
   <div class="topbar-tools">
+    <button id="patchNotesBtn" class="patch-notes-btn" type="button">🧾 패치 노트</button>
     <div class="search-wrap">
-      <input id="searchBox" type="search" placeholder="퍼크·스킬 검색 (예: 엔지니어, 화염, 헤드샷)" autocomplete="off">
+      <input id="searchBox" type="search" placeholder="퍼크/스킬 이름 검색... (예: 화염, 헤드샷, Predator)" autocomplete="off">
       <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="legend">
+      <span class="grade-badge grade-ss">SS</span>
+      <span class="grade-badge grade-s">S</span>
+      <span class="grade-badge grade-a">A</span>
+      <span class="grade-badge grade-b">B</span>
+      <span class="grade-badge grade-c">C</span>
     </div>
   </div>
 </header>
-
-<div id="meta" class="meta-bar"></div>
 
 <div class="layout">
   <aside id="sidebar" class="sidebar"></aside>
@@ -30,9 +36,9 @@
 </div>
 
 <footer class="foot">
-  데이터 출처: 템퍼드 소스 설정·클래스 기본값·한국어 로컬라이제이션 · 적용 기준 버전 <span id="footerVersion">불러오는 중</span>. 서버의 운영자별 INI 값은 다를 수 있습니다.
+  데이터 기준: 소스 <code>ZedternalTempered</code> · 운영 설정 <code>SV_Zedternal_Tempered</code> (수치는 운영 INI 기준)
 </footer>
 
-<script src="app.js?v=20261004-2"></script>
+<script src="app.js?v=20261002-1"></script>
 </body>
 </html>

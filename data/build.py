@@ -1,5 +1,14 @@
 # -*- coding: utf-8 -*-
-"""Build the Tempered wiki data from its checked-in source snapshot."""
+"""
+Zedternal Unlimited perk data builder.
+
+Parses the mod's raw INI files + Korean localization file into a single
+site/data/perks.json used by the static website. Also merges in
+hand-curated balance verdicts / base-perk commentary (manual_*.json)
+that only exist as prose in the balance docs.
+
+Run: python build.py
+"""
 import json
 import re
 import os
@@ -7,17 +16,88 @@ import os
 from labels import translate_key, classify_unit_group, format_value_as
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SOURCE = os.path.join(ROOT, "data", "source", "tempered")
-INI_MAIN = os.path.join(SOURCE, "KFZedternalUnlimited.ini")
-INI_KOR = os.path.join(SOURCE, "ZedternalTempered.kor")
-INI_REBORN_KOR = os.path.join(SOURCE, "ZedternalReborn.kor")
-INI_UPGRADES = os.path.join(SOURCE, "KFZedternalReborn_Upgrades.ini")
+# Local working copies are fallbacks for contributors who do not have the
+# source checkout or game server mounted. The canonical Windows paths are
+# used automatically on the maintainer's machine and can be overridden with
+# ZEDTERNAL_SOURCE_DIR / ZEDTERNAL_OPERATIONS_DIR.
+SOURCE_DIR = os.environ.get(
+    "ZEDTERNAL_SOURCE_DIR",
+    r"C:\Users\yss19\Documents\Projects\zedternal-unlimited-main\ZedternalTempered",
+)
+OPERATIONS_DIR = os.environ.get(
+    "ZEDTERNAL_OPERATIONS_DIR",
+    r"D:\KF2server\KFGame\Config\SV_Zedternal_Tempered",
+)
+
+
+def preferred_file(directory, filename, fallback):
+    candidate = os.path.join(directory, filename)
+    return candidate if os.path.isfile(candidate) else os.path.join(ROOT, fallback)
+
+
+INI_MAIN = preferred_file(OPERATIONS_DIR, "KFZedternalUnlimited.ini", "KFZedternalUnlimited.ini")
+INI_BALANCE = preferred_file(
+    OPERATIONS_DIR, "KFZedternalUnlimited_Balance.ini", "KFZedternalUnlimited_Balance.ini"
+)
+INI_KOR = preferred_file(
+    os.path.join(SOURCE_DIR, "Localization", "KOR"), "ZedternalTempered.kor", "ZedternalRBPerkpackage.KOR.ini"
+)
+INI_REBORN_KOR = os.path.join(ROOT, "ZedternalReborn.kor.ini")
+INI_UPGRADES = preferred_file(SOURCE_DIR, "KFZedternalReborn_Upgrades.ini", "KFZedternalReborn_Upgrades.ini")
+INI_GAME = preferred_file(OPERATIONS_DIR, "KFZedternalReborn_Game.ini", "KFZedternalReborn_Game.ini")
 MANUAL_BASE = os.path.join(ROOT, "data", "manual_base_perks.json")
-PERK_GRADES = os.path.join(ROOT, "data", "perk_grades.json")
+MANUAL_VERDICTS = os.path.join(ROOT, "data", "manual_verdicts.json")
+MANUAL_ROLES = os.path.join(ROOT, "data", "manual_role_descriptions.json")
 MANUAL_SKILL_OVERRIDES = os.path.join(ROOT, "data", "manual_skill_overrides.json")
+MANUAL_PERK_DESCS = os.path.join(ROOT, "data", "manual_perk_desc_overrides.json")
+MANUAL_PERK_EXTRAS = os.path.join(ROOT, "data", "manual_perk_extras.json")
 OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
 SKILL_ICON_DIR = os.path.join(ROOT, "docs", "icons", "skills")
-PERK_CLASS_DIR = os.path.join(SOURCE, "classes")
+PERK_ICON_DIR = os.path.join(ROOT, "docs", "icons")
+SOURCE_CLASS_DIR = os.path.join(SOURCE_DIR, "Classes")
+
+
+def parse_player_aurora(path):
+    """Return the live server's ordered damage multipliers for the aurora UI."""
+    given, taken = [], []
+    holding_melee = None
+    value_re = re.compile(r'Multiplier=([+-]?[\d.]+)')
+    with open(path, encoding="utf-8-sig") as f:
+        for raw in f:
+            line = raw.strip()
+            if line.startswith("Player_DamageGiven="):
+                match = value_re.search(line)
+                if match:
+                    given.append(float(match.group(1)))
+            elif line.startswith("Player_DamageTaken="):
+                match = value_re.search(line)
+                if match:
+                    taken.append(float(match.group(1)))
+            elif line.startswith("Player_DamageTakenMultiplierWhileHoldingMelee="):
+                match = re.search(r'HOE=([+-]?[\d.]+)', line)
+                if match:
+                    holding_melee = float(match.group(1))
+    if len(given) < 10 or len(taken) != 9 or holding_melee is None:
+        raise ValueError(
+            f"Unexpected damage config in {path}: {len(given)} given, {len(taken)} taken, "
+            f"holding-melee={'present' if holding_melee is not None else 'missing'}"
+        )
+    return {"damageGiven": given, "damageTaken": taken, "holdingMelee": holding_melee}
+
+
+def merge_ini_sections(base, overrides):
+    """Overlay dedicated balance sections on the server's main config."""
+    merged = {section: list(rows) for section, rows in base.items()}
+    for section, override_rows in overrides.items():
+        rows = merged.setdefault(section, [])
+        for key, value in override_rows:
+            indices = [i for i, (existing_key, _) in enumerate(rows) if existing_key == key]
+            if indices:
+                for i in indices:
+                    rows[i] = (key, value)
+            else:
+                rows.append((key, value))
+    return merged
 
 
 def skill_icon_path(short):
@@ -25,7 +105,86 @@ def skill_icon_path(short):
         return f"icons/skills/{short}.png"
     return None
 
-SECTION_RE = re.compile(r"^\[(?:(?:ZedternalRBPerkpackage|ZedternalTempered|ZedternalReborn)\.)?(.+)\]$")
+
+PERK_ICON_FALLBACKS = {
+    # The custom textures for these perks are loaded from the separately
+    # cooked game package. Use the source-defined fallback or parent icon.
+    "Diablo": "icons/berserker.png",
+    "JekyllHyde": "icons/shapeshifter.png",
+    "Capitalist": "icons/support.png",
+}
+
+
+def perk_icon_path(short, parent=None):
+    candidate = f"icons/{short.lower()}.png"
+    if os.path.isfile(os.path.join(PERK_ICON_DIR, f"{short.lower()}.png")):
+        return candidate
+    if short in PERK_ICON_FALLBACKS:
+        return PERK_ICON_FALLBACKS[short]
+    if parent and os.path.isfile(os.path.join(PERK_ICON_DIR, f"{parent.lower()}.png")):
+        return f"icons/{parent.lower()}.png"
+    return "icons/support.png"
+
+
+STATIC_PERK_STAT_DEFS = {
+    "Capitalist": [
+        {"index": 0, "key": "Dosh", "label": "웨이브 생존 보상", "unit": "currency", "scale": 1},
+        {"index": 1, "key": "DoshPerKill", "label": "직접 처치 도쉬 보너스", "unit": "percent", "scale": 0.01},
+    ],
+}
+
+STATIC_PERK_BONUS_FALLBACKS = {"Capitalist": [10, 1]}
+
+
+def parse_source_perk_bonus(key):
+    """Read PerkBonus defaults from source classes if the live INI has no override."""
+    class_path = os.path.join(SOURCE_CLASS_DIR, f"ZTUpgrade_Perk_{key}.uc")
+    values = {}
+    if os.path.isfile(class_path):
+        with open(class_path, encoding="utf-8-sig") as f:
+            source = f.read()
+        pattern = re.compile(
+            r'PerkBonus\((\d+)\)=\(baseValue=([^,]+),\s*incValue=([^,]+),\s*maxValue=([^)]+)\)'
+        )
+        for match in pattern.finditer(source):
+            try:
+                values[int(match.group(1))] = float(match.group(3).strip().rstrip("f"))
+            except ValueError:
+                continue
+    if not values and key in STATIC_PERK_BONUS_FALLBACKS:
+        values = dict(enumerate(STATIC_PERK_BONUS_FALLBACKS[key]))
+    return values
+
+
+def build_static_perk_stats(key, bonus_values):
+    stats = []
+    for definition in STATIC_PERK_STAT_DEFS.get(key, []):
+        value = bonus_values.get(definition["index"])
+        if value is None:
+            continue
+        value *= definition["scale"]
+        stats.append({
+            "key": definition["key"],
+            "label": definition["label"],
+            "value": value,
+            "unit": definition["unit"],
+            "display": format_value_as(value, definition["unit"]),
+            "scaling": True,
+        })
+    return stats
+
+
+ENGINEER_DRONE_STAT_LABELS = {
+    "SentinelAmmo": "센티넬 기본 탄약",
+    "WarthogAmmo": "워트호그 기본 탄약",
+    "PreciousSentinelAmmo": "프레셔스 센티넬 탄약",
+    "PreciousWarthogAmmo": "프레셔스 워트호그 탄약",
+    "ReforgedSentinelAmmo": "리포지드 센티넬 탄약",
+    "ReforgedWarthogAmmo": "리포지드 워트호그 탄약",
+    "MaxLifetimeSeconds": "드론 최대 지속시간 (0 = 제한 없음)",
+}
+
+SECTION_RE = re.compile(r"^\[(?:[^.\]]+\.)?(.+)\]$")
 
 
 def parse_ini_generic(path):
@@ -39,7 +198,7 @@ def parse_ini_generic(path):
                 continue
             m = SECTION_RE.match(line)
             if m:
-                current = m.group(1)
+                current = canonical_section(m.group(1))
                 sections[current] = []
                 continue
             if current is None or "=" not in line:
@@ -52,7 +211,48 @@ def parse_ini_generic(path):
     return sections
 
 
-KOR_LINE_RE = re.compile(r'^(\w+)\s*=\s*"(.*)"\s*$')
+def canonical_section(section):
+    """Map current ZT/ZUT config namespaces onto the site's stable data keys."""
+    replacements = (
+        ("ZUTUpgrade_Perk_Base_", "DKWrapper_Perk_"),
+        ("ZTWrapper_Perk_", "DKWrapper_Perk_"),
+        ("ZUTUpgrade_Skill_", "WMUpgrade_Skill_"),
+        ("ZTWrapper_Skill_", "WMUpgrade_Skill_"),
+        ("ZTUpgrade_Perk_", "DKUpgrade_Perk_"),
+        ("ZTUpgrade_Skill_", "DKUpgrade_Skill_"),
+    )
+    for old, new in replacements:
+        if section.startswith(old):
+            return new + section[len(old):]
+    return section
+
+
+def parse_patch_notes(path):
+    """section_name -> [comment_text, ...] for lines carrying a '; 구 ...' balance-patch changelog note.
+
+    The operations KFZedternalUnlimited.ini is the authoritative, currently-applied values file. Whenever a
+    number was tuned from its original value, the editor left a '; 구 <old> -> <reason>' comment
+    on that line (per the project's own editing convention). We surface these so the site can
+    warn when the flavor text in KOR.ini (which still contains the pre-patch numbers) might be stale.
+    """
+    notes = {}
+    current = None
+    with open(path, encoding="utf-8-sig") as f:
+        for raw in f:
+            line = raw.strip()
+            m = SECTION_RE.match(line)
+            if m:
+                current = canonical_section(m.group(1))
+                continue
+            if current is None or ";" not in line:
+                continue
+            comment = line.split(";", 1)[1].strip()
+            if "구 " in comment:
+                notes.setdefault(current, []).append(comment)
+    return notes
+
+
+KOR_LINE_RE = re.compile(r'^(\w+)\s*=\s*(?:"(.*)"|(.*))\s*$')
 
 
 def parse_kor_ini(path, encoding="utf-8-sig"):
@@ -66,7 +266,7 @@ def parse_kor_ini(path, encoding="utf-8-sig"):
                 continue
             m = SECTION_RE.match(line)
             if m:
-                current = m.group(1)
+                current = canonical_section(m.group(1))
                 sections[current] = {"descriptions": []}
                 continue
             if current is None:
@@ -74,7 +274,7 @@ def parse_kor_ini(path, encoding="utf-8-sig"):
             km = KOR_LINE_RE.match(line)
             if not km:
                 continue
-            key, val = km.group(1), km.group(2)
+            key, val = km.group(1), km.group(2) if km.group(2) is not None else km.group(3)
             val = val.replace('\\"', '"')
             if key == "UpgradeName":
                 sections[current]["UpgradeName"] = val
@@ -94,346 +294,36 @@ def strip_font(s):
 
 
 UNLOCK_RULE_RE = re.compile(
-    r'PerkUnlockRules=\(PerkName="ZTUpgrade_Perk_(\w+)",Req1Perk="(?:ZTUpgrade_Perk_|ZUTUpgrade_Perk_Base_)(\w+)",Req1Level=(\d+)'
+    r'PerkUnlockRules=\(PerkName="(?:ZT|DK)Upgrade_Perk_(\w+)",Req1Perk="(?:ZUTUpgrade_Perk_Base_|WMUpgrade_Perk_|ZTUpgrade_Perk_|DKUpgrade_Perk_)(\w+)",Req1Level=(\d+)'
 )
 
 
 def parse_unlock_rules(main_sections):
     rules = {}
-    # PerkUnlockRules is a repeated key; parse the structured values directly.
+    rows = main_sections.get("DKConfig_PerkUnlockRules", [])
+    # PerkUnlockRules is a repeated key; re-scan the raw file for full value since '=' inside value breaks generic split
     with open(INI_MAIN, encoding="utf-8-sig") as f:
         text = f.read()
-    for match in re.finditer(r'PerkUnlockRules=\(([^)]*)\)', text):
-        perk_match = re.search(r'PerkName="ZTUpgrade_Perk_(\w+)"', match.group(1))
-        if not perk_match:
-            continue
-        requirements = []
-        for index in range(1, 5):
-            req = re.search(
-                rf'Req{index}Perk="(?:ZTUpgrade_Perk_|ZUTUpgrade_Perk_Base_)(\w+)"\s*,\s*Req{index}Level=(\d+)',
-                match.group(1),
-            )
-            if req:
-                requirement = {"perk": req.group(1), "level": int(req.group(2))}
-                if requirement not in requirements:
-                    requirements.append(requirement)
-        rules[perk_match.group(1)] = {
-            "parentPerk": requirements[0]["perk"] if requirements else None,
-            "unlockLevel": requirements[0]["level"] if requirements else None,
-            "requirements": requirements,
-        }
+    for m in UNLOCK_RULE_RE.finditer(text):
+        adv, base, lvl = m.group(1), m.group(2), int(m.group(3))
+        rules[adv] = {"parentPerk": base, "unlockLevel": lvl}
     return rules
 
 
-def parse_perk_max_levels(path):
-    levels = {}
-    with open(path, encoding="utf-8-sig") as f:
-        text = f.read()
-    for match in re.finditer(
-        r'PerkMaxLevels=\(PerkPath="ZedternalTempered\.ZTUpgrade_Perk_(\w+)",MaxLevel=(\d+)\)', text
-    ):
-        levels[match.group(1)] = int(match.group(2))
-    return levels
-
-
-def parse_skill_upgrade_prices(path):
-    with open(path, encoding="utf-8-sig") as f:
-        text = f.read()
-    section = re.search(r'\[ZedternalReborn\.Config_SkillUpgradeOptions\](.*?)(?=\n\[|\Z)', text, re.S)
-    values = section.group(1) if section else text
-    result = {}
-    for key in ("SkillUpgrade_Price", "SkillUpgrade_DeluxePrice", "SkillUpgrade_DeluxeSkillUnlock"):
-        match = re.search(rf'^{key}=(.+)$', values, re.M)
-        if match:
-            result[key] = match.group(1).strip()
-    return result
-
-
-def section_values(sections, name):
-    return {key: value for key, value in sections.get(name, [])}
-
-
-def build_system_overview(main_sections, upgrades_path, game_sections):
-    event_config = section_values(main_sections, "ZTConfig_EventWave")
-    roguelike = section_values(main_sections, "ZTConfig_Roguelike")
-    capstones = section_values(main_sections, "ZTConfig_Capstone")
-    rank_path = os.path.join(SOURCE, "classes", "ZTRank.uc")
-    with open(rank_path, encoding="utf-8-sig") as f:
-        rank_source = f.read()
-    max_rank = int(re.search(r'const MAX_RANK = (\d+);', rank_source).group(1))
-    rank_count = int(re.search(r'const NUM_TIERS = (\d+);', rank_source).group(1))
-    legacy_per_rank = int(re.search(r'const LEGACY_RANKS_PER_LEVEL = (\d+);', rank_source).group(1))
-    legacy_rank = max_rank * legacy_per_rank
-    max_xp = (legacy_rank * (125 + 75 * legacy_rank + (legacy_rank * legacy_rank) // 10)) // (2 * legacy_per_rank)
-    prices = parse_skill_upgrade_prices(upgrades_path)
-    deluxe_unlock_levels = [int(value) for value in re.findall(r'\d+', prices.get("SkillUpgrade_DeluxeSkillUnlock", ""))]
-    event_weights = [
-        {"key": key[len("Weight_"):], "weight": float(value)}
-        for key, value in event_config.items()
-        if key.startswith("Weight_") and float(value) > 0
-    ]
-    given_label_map = {
-        "KFDT_Fire": "화염 피해", "KFDT_Fire_Ground": "지면 화염 피해",
-        "KFDT_Fire_Napalm": "네이팜 피해", "KFDT_Explosive": "폭발 피해",
-        "KFDT_Explosive_Shrapnel": "폭발 파편 피해", "KFDT_Toxic_MedicGrenade": "메딕 수류탄(독성) 피해",
-        "KFDT_Slashing": "베기 피해", "KFDT_Piercing": "관통 피해", "KFDT_Bludgeon": "둔기 피해",
-        "KFDT_Ballistic_Shotgun": "샷건 피해", "KFDT_Freeze_FreezeThrower": "동결 투척자",
-        "KFDT_Freeze_FreezeThrower_IceShards": "동결 투척자 얼음 파편", "KFDT_Ballistic_CenterfireMB464": "센터파이어 MB464",
-        "KFDT_Ballistic_Winchester": "윈체스터 1894", "KFDT_Ballistic_SW500": "S&W 500", "KFDT_Ballistic_M99": "M99",
-        "KFDT_Ballistic_RailGun": "레일건", "KFDT_Explosive_HuskCannon": "허스크 캐논",
-        "KFDT_Ballistic_RPG7Impact": "RPG-7 탄두", "KFDT_Explosive_RPG7BackBlast": "RPG-7 후폭발",
-        "KFDT_Explosive_Pulverizer": "분쇄기 폭발", "KFDT_EMP_HVStormCannon": "HV 스톰 캐논",
-        "KFDT_Explosive_HRG_Kaboomstick": "HRG 카붐스틱", "KFDT_Piercing_Crossbow": "석궁",
-        "KFDT_Piercing_CompoundBowSharpImpact": "컴파운드 보우", "KFDT_Ballistic_M14EBR": "M14 EBR",
-        "KFDT_Ballistic_FNFal": "FN FAL", "KFDT_Ballistic_MG3": "MG3", "KFDT_Ballistic_MG3_Alt": "MG3 변형",
-        "KFDT_Ballistic_Stoner63A": "스토너 63A", "KFDT_Ballistic_Minigun": "미니건",
-        "KFDT_Ballistic_MKB42": "MKB42", "KFDT_Ballistic_MosinNagant": "모신나강",
-        "KFDT_Piercing_MosinNagant": "모신나강 관통(스코프)",
-        "KFDT_Bludgeon_HRG_BallisticBouncer_Shot": "HRG 탄도 바운서",
-        "KFDT_Ballistic_M4Shotgun": "M4 샷건", "KFDT_Ballistic_NailShotgun": "네일건",
-        "KFDT_Ballistic_ParasiteImplanter": "기생충 이식기", "KFDT_Explosive_C4": "C4",
-        "KFDT_Explosive_SealSqueal": "씰스퀄 폭발", "KFDT_Ballistic_SealSquealImpact": "씰스퀄 직격",
-        "KFDT_Explosive_GravityImploder": "중력폭구 폭발", "KFDT_Ballistic_GravityImploderImpactAlt": "중력폭구 대체 직격",
-        "KFDT_Ballistic_MicrowaveRifle": "마이크로웨이브 라이플", "KFDT_Ballistic_G18": "G18",
-        "KFDT_Bludgeon_G18Shield": "G18 실드", "KFDT_Bludgeon_G18Shield_Impulse": "G18 실드(임펄스)",
-    }
-    taken_label_map = {
-        "KFDT_Explosive_HuskSuicide": "허스크 자폭 피해",
-        "KFDT_FleshpoundKing_ChestBeam": "플레쉬파운드 킹 가슴빔 피해",
-        "KFDT_Explosive_HansHEGrenade": "한스 유탄 피해", "KFDT_Explosive_PatMissile": "가부장 미사일 피해",
-        "KFDT_EMP_MatriarchPlasmaCannon": "여장부 플라즈마포 피해", "KFDT_Fire_HuskFireball": "허스크 화염구 피해",
-        "KFDT_Fire_HuskFlamethrower": "허스크 화염방사기 피해",
-    }
-
-    def read_damage_entries(config_key, labels):
-        entries = []
-        seen = set()
-        for entry_key, raw in game_sections.get("Config_Player", []):
-            if entry_key != config_key:
-                continue
-            match = re.search(r'DamageType="([^"]+)".*?Multiplier=([-+\d.]+)', raw)
-            if not match:
-                continue
-            damage_type, multiplier = match.group(1), float(match.group(2))
-            damage_key = damage_type.rsplit(".", 1)[-1]
-            if (damage_key, multiplier) in seen:
-                continue
-            seen.add((damage_key, multiplier))
-            label = labels.get(damage_key, re.sub(r'([a-z])([A-Z])', r'\1 \2', damage_key.replace("KFDT_", "")))
-            entries.append({"key": damage_key, "label": label, "multiplier": multiplier})
-        return entries
-
-    damage_given = read_damage_entries("Player_DamageGiven", given_label_map)
-    damage_taken = read_damage_entries("Player_DamageTaken", taken_label_map)
-    melee_taken = next((value for key, value in game_sections.get("Config_Player", []) if key == "Player_DamageTakenMultiplierWhileHoldingMelee"), "")
-    melee_match = re.search(r'HOE=([-+\d.]+)', melee_taken)
-    if melee_match:
-        damage_taken.append({"key": "DamageTakenWhileHoldingMelee", "label": "근접무기 소지 중 전체 피해", "multiplier": float(melee_match.group(1))})
-    return {
-        "rank": {"maxRank": max_rank, "titles": rank_count, "maxXp": max_xp},
-        "roguelike": {
-            "enabled": roguelike.get("bEnableRoguelike") == "True",
-            "waveInterval": int(roguelike.get("UpgradeWaveInterval", 0)),
-            "lateJoinCatchUp": roguelike.get("bCatchUpLateJoiners") == "True",
-            "lateJoinMaxSelections": int(roguelike.get("CatchUpMaxSelections", 0)),
-        },
-        "eventWaves": {
-            "enabled": event_config.get("bEnabled") == "True",
-            "probability": float(event_config.get("EventWaveProbability", 0)),
-            "minWave": int(event_config.get("MinWave", 0)),
-            "maxPerMatch": int(event_config.get("MaxPerMatch", 0)),
-            "weightedEvents": event_weights,
-        },
-        "capstones": {
-            "rank1Level": int(capstones.get("Capstone_Rank1Level", 10)),
-            "rank2Level": int(capstones.get("Capstone_Rank2Level", 20)),
-        },
-        "skillPricing": {
-            "standard": int(prices.get("SkillUpgrade_Price", 0)),
-            "deluxe": int(prices.get("SkillUpgrade_DeluxePrice", 0)),
-            "deluxeUnlockLevels": deluxe_unlock_levels,
-        },
-        "damageGiven": damage_given,
-        "damageTaken": damage_taken,
-        "weaponDamage": damage_given[10:],
-    }
-
-
-BASE_STAT_LABELS_KO = {
-    "maximum health": "최대 체력",
-    "melee and fire rate": "근접 공격 및 연사 속도",
-    "berserker weapon damage": "버서커 무기 피해",
-    "zed time extension": "ZED Time 지속시간",
-    "reload speed": "재장전 속도",
-    "commando weapon damage": "코만도 무기 피해",
-    "grenade damage": "수류탄 피해",
-    "damage to large zeds and bosses": "대형 제드 및 보스 피해",
-    "demolitionist weapon damage": "데몰리션리스트 무기 피해",
-    "syringe and healing dart recharge": "주사기 및 치유 다트 재충전",
-    "field medic weapon damage": "필드메딕 무기 피해",
-    "fire, explosive, toxic and sonic resistance": "화염·폭발·독성·음파 저항력",
-    "firebug weapon damage": "파이어버그 무기 피해",
-    "movement speed": "이동 속도",
-    "headshot damage with all weapons": "모든 무기 헤드샷 피해",
-    "gunslinger weapon damage": "건슬링거 무기 피해",
-    "recoil with all weapons": "모든 무기 반동",
-    "sharpshooter weapon damage": "샤프슈터 무기 피해",
-    "stumble and knockdown power": "휘청임 및 넉다운 위력",
-    "penetration": "관통력",
-    "support weapon damage": "서포트 무기 피해",
-    "carry weight": "휴대 중량",
-    "spare ammunition": "여분 탄약",
-    "damage with all weapons": "모든 무기 피해",
-    "maximum armor": "최대 방어구",
-    "magazine capacity": "탄창 용량",
-    "penetration": "관통력",
-    "carry weight": "휴대 중량",
-    "swat weapon damage": "SWAT 무기 피해",
-}
-
-BASE_CLASS_PROPERTY_ORDER = {
-    "Berserker": ["Health", "AttackSpeed", "Damage"],
-    "Commando": ["ZEDTimeExtension", "ReloadRate", "Damage"],
-    "Demolitionist": ["GrenadeDamage", "LZDamage", "Damage"],
-    "FieldMedic": ["Health", "HealRate", "Damage"],
-    "Firebug": ["Defense", "Damage"],
-    "Gunslinger": ["MoveSpeed", "HeadshotDamage", "Damage"],
-    "Sharpshooter": ["Recoil", "DamageHead", "Damage"],
-    "Support": ["StoppingPower", "Penetration", "Damage"],
-    "Survivalist": ["CarryWeight", "SpareAmmo", "Damage"],
-    "SWAT": ["Armor", "MagSize", "Damage"],
-}
-
-CAPITALIST_STAT_DEFS = [
-    {"index": 0, "key": "DoshPerWave", "label": "웨이브 생존 보상", "unit": "currency", "scale": 1},
-    {"index": 1, "key": "DirectKillDoshBonus", "label": "직접 처치 도쉬 보너스", "unit": "percent", "scale": 0.01},
-]
-
-ENGINEER_DRONE_STAT_LABELS = {
-    "SentinelAmmo": "센티넬 기본 탄약",
-    "WarthogAmmo": "워트호그 기본 탄약",
-    "PreciousSentinelAmmo": "프레셔스 센티넬 탄약",
-    "PreciousWarthogAmmo": "프레셔스 워트호그 탄약",
-    "ReforgedSentinelAmmo": "리포지드 센티넬 탄약",
-    "ReforgedWarthogAmmo": "리포지드 워트호그 탄약",
-    "MaxLifetimeSeconds": "드론 최대 지속시간",
-}
-
-
-def parse_base_perk_class_stats(perk_key):
-    """Read the live ZUT base-perk class defaults, not retired wrapper INIs."""
-    path = os.path.join(SOURCE, "classes", f"ZUTUpgrade_Perk_Base_{perk_key}.uc")
-    if not os.path.exists(path):
-        return []
-    with open(path, encoding="utf-8-sig") as f:
-        source = f.read()
-    descriptions = {
-        int(i): text for i, text in re.findall(r'UpgradeDescription\((\d+)\)="((?:\\.|[^"\\])*)"', source)
-    }
-    defaults = source.split("defaultproperties", 1)[-1]
-    values = {name: float(value) for name, value in re.findall(r'^\s*([A-Za-z]\w*)=([-+\d.]+)f?\s*$', defaults, re.M)}
-    entries = []
-    for index, desc in sorted(descriptions.items()):
-        order = BASE_CLASS_PROPERTY_ORDER.get(perk_key, [])
-        if index >= len(order):
-            continue
-        prop = order[index]
-        inc = values.get(prop, 1.0 if prop in ("ZEDTimeExtension", "CarryWeight") else None)
-        if inc is None:
-            continue
-        cleaned = strip_font(desc).replace("Per level:", "").strip().rstrip(".")
-        phrase = re.sub(r'\s*[+-]?\d+(?:\.\d+)?\s*(?:%|HP|second|seconds)\s*(?:\(max.*\))?$', "", cleaned, flags=re.I).strip()
-        phrase = re.sub(r'\s*[+-]?\d+(?:\.\d+)?$', "", phrase).strip()
-        phrase = phrase.strip(" :")
-        label = BASE_STAT_LABELS_KO.get(phrase.lower(), phrase)
-        sign_match = re.search(r'([+-])\s*\d+(?:\.\d+)?\s*(?:%|HP|second|seconds)', desc, re.I)
-        sign = -1 if sign_match and sign_match.group(1) == "-" else 1
-        if re.search(r'\d+(?:\.\d+)?\s*%', desc):
-            unit, value = "percent", sign * inc
-            cap_match = re.search(r'\(max\s*<font[^>]*>(\d+(?:\.\d+)?)%</font>\)', desc, re.I)
-            max_value = sign * float(cap_match.group(1)) / 100.0 if cap_match else None
-        elif re.search(r'\d+(?:\.\d+)?\s*seconds?', desc, re.I):
-            unit, value = "seconds", sign * inc
-            cap_match = re.search(r'\(max\s*<font[^>]*>(\d+(?:\.\d+)?)\s*seconds?</font>\)', desc, re.I)
-            max_value = sign * float(cap_match.group(1)) if cap_match else None
-        elif re.search(r'\d+(?:\.\d+)?\s*HP', desc, re.I):
-            unit, value = "health", sign * inc
-            max_value = None
-        else:
-            unit, value = "count", sign * inc
-            max_value = None
-        max_level = 20
-        total = value * max_level
-        if max_value is not None:
-            total = min(total, max_value) if value >= 0 else max(total, max_value)
-        entries.append({
-            "key": f"PerkBonus{index}", "label": label, "value": value, "unit": unit,
-            "display": format_value_as(value, unit), "lv10": value * 10, "lv20": total,
-            "lv10Display": format_value_as(value * 10, unit), "lv20Display": format_value_as(total, unit),
-            "description": strip_font(desc), "cap": max_value,
-        })
-    return entries
-
-
-def parse_source_perk_bonuses(perk_key):
-    """Read static-perk PerkBonus increments from current Tempered classes."""
-    path = os.path.join(PERK_CLASS_DIR, f"ZTUpgrade_Perk_{perk_key}.uc")
-    if not os.path.exists(path):
-        return {}
-    with open(path, encoding="utf-8-sig") as f:
-        source = f.read()
-    values = {}
-    pattern = re.compile(
-        r'PerkBonus\((\d+)\)=\(baseValue=([^,]+),\s*incValue=([^,]+),\s*maxValue=([^)]+)\)'
-    )
-    for match in pattern.finditer(source):
-        try:
-            values[int(match.group(1))] = float(match.group(3).strip().rstrip("f"))
-        except ValueError:
-            continue
-    return values
-
-
-def build_static_perk_stats(perk_key, bonus_values):
-    """Expose Capitalist's class-level values as the per-level wiki slider."""
-    if perk_key != "Capitalist":
-        return []
-    entries = []
-    for definition in CAPITALIST_STAT_DEFS:
-        raw_value = bonus_values.get(definition["index"])
-        if raw_value is None:
-            continue
-        value = raw_value * definition["scale"]
-        lv10, lv20 = value * 10, value * 20
-        entries.append({
-            "key": definition["key"],
-            "label": definition["label"],
-            "value": value,
-            "unit": definition["unit"],
-            "display": format_value_as(value, definition["unit"]),
-            "lv10": lv10,
-            "lv20": lv20,
-            "lv10Display": format_value_as(lv10, definition["unit"]),
-            "lv20Display": format_value_as(lv20, definition["unit"]),
-            "scaling": True,
-        })
-    return entries
-
-
 DK_SKILL_REGISTRY_RE = re.compile(
-    r'([#;])?SkillUpgrade_Upgrade=\(PerkPath="ZedternalTempered\.ZTUpgrade_Perk_(\w+)",'
-    r'SkillPath="ZedternalTempered\.ZTUpgrade_Skill_(\w+)"\)(?:\s*;\s*(.*))?'
+    r'([#;])?SkillUpgrade_Upgrade=\(PerkPath="(?:ZedternalTempered|ZedternalRBPerkpackage)\.(?:ZT|DK)Upgrade_Perk_(\w+)",'
+    r'SkillPath="(?:ZedternalTempered|ZedternalRBPerkpackage)\.(?:ZT|DK)Upgrade_Skill_(\w+)"\)(?:\s*;\s*(.*))?'
 )
 
 # Same registry file, but the base (10-perk) skill roster -- registered under
 # the game's own "WM" (WildMonster/base perk) namespace rather than "DK".
 WM_SKILL_REGISTRY_RE = re.compile(
-    r'([#;])?SkillUpgrade_Upgrade=\(PerkPath="ZedternalTempered\.ZUTUpgrade_Perk_Base_(\w+)",'
-    r'SkillPath="ZedternalTempered\.ZUTUpgrade_Skill_(\w+)"\)(?:\s*;\s*(.*))?'
+    r'([#;])?SkillUpgrade_Upgrade=\(PerkPath="(?:ZedternalTempered\.ZUTUpgrade_Perk_Base_|ZedternalReborn\.WMUpgrade_Perk_)(\w+)",'
+    r'SkillPath="(?:ZedternalTempered\.(?:ZUT|ZT)Upgrade_Skill_|ZedternalReborn\.WMUpgrade_Skill_)(\w+)"\)(?:\s*;\s*(.*))?'
 )
 
-REGISTERED_ADVANCED_PERK_RE = re.compile(
-    r'^PerkUpgrade_Upgrade=\(PerkPath="ZedternalTempered\.ZTUpgrade_Perk_(\w+)",bIsStatic=(True|False)\)'
+ACTIVE_PERK_REGISTRY_RE = re.compile(
+    r'PerkUpgrade_Upgrade=\(PerkPath="(?:ZedternalTempered\.ZTUpgrade_Perk_|ZedternalRBPerkpackage\.DKUpgrade_Perk_)(\w+)",bIsStatic=(True|False)\)'
 )
 
 
@@ -482,15 +372,18 @@ def parse_wm_skill_registry(path):
     return registry
 
 
-def parse_registered_advanced_perks(path):
-    """Return registered advanced perks and whether each uses static-perk UI."""
-    registered = {}
+def parse_active_advanced_perks(path):
+    """Return active perk registrations and whether each is a static perk."""
+    active = {}
     with open(path, encoding="utf-8-sig") as f:
         for raw in f:
-            match = REGISTERED_ADVANCED_PERK_RE.match(raw.strip())
+            line = raw.strip()
+            if line.startswith(("#", ";")):
+                continue
+            match = ACTIVE_PERK_REGISTRY_RE.search(line)
             if match:
-                registered[match.group(1)] = match.group(2) == "True"
-    return registered
+                active[match.group(1)] = match.group(2) == "True"
+    return active
 
 
 def to_num(s):
@@ -755,7 +648,7 @@ def _attempt_reconcile(raw_text, tier_entries, percent_pattern, percent_display_
 def reconcile_skill_text(raw_text, tier_entries):
     """Rewrite hardcoded numbers embedded in a skill's KOR-ini flavor text so
     they match the currently-applied value in KFZedternalUnlimited.ini,
-    which is the authoritative source -- the KOR ini text is just the
+    from the operations INI -- the KOR ini text is just the
     original (possibly stale) game copy. Matches tokens to ini values
     positionally, per unit type, in the order they appear; if the count of
     tokens found doesn't exactly match the count of same-unit ini values,
@@ -832,7 +725,7 @@ def build_ini_only_text(tier_entries):
     ini keys, or the text phrases a value as "N배" while the ini treats it
     as a percent -- both real cases found in this data). Rather than leave
     stale/mismatched numbers on the page, drop the flavor prose entirely and
-    show a plain line built only from KFZedternalUnlimited.ini, which is the
+    show a plain line built only from the operations INI, which is the
     single source of truth per project policy -- the KOR ini is flavor text
     only, never authoritative for numbers."""
     if not tier_entries:
@@ -859,6 +752,11 @@ SKILL_COST_STATS = {
     "DoubleDown": ["BodyPenalty"],
     "LifeTap": ["RechargeReductionPerSiphon"],
 }
+
+
+# build_test_warning() (generic "이 퍼크는 최근 ... 테스트 중입니다" banner) was
+# removed 2026-07-07 -- superseded by the per-patch buff/nerf tag system
+# (see compute_recent_change_tag()).
 
 
 PLACEHOLDER_RE = re.compile(r"([+-]?)%x(%%?)?")
@@ -1105,6 +1003,11 @@ IMPLICIT_SCALING_KEY_ORDER = {
     "Gambler": ["Dosh", "Chance"],
 }
 
+# BALANCE_COMPLETE_PERKS ("밸런싱 완료" badge) removed 2026-07-07 -- superseded
+# by the per-patch buff/nerf tag system (RECENT_CHANGES, see below).
+RECENT_CHANGES_PATH = os.path.join(ROOT, "data", "recent_changes.json")
+
+
 def normalize_terminology(value):
     if isinstance(value, str):
         for old, new in TERMINOLOGY_FIXES:
@@ -1247,10 +1150,13 @@ def reconcile_perk_descriptions(raw_descriptions, filled_descriptions, fixed_sta
     wrong substitution ("5%" trophy-drop-rate replaced by "+0.8%" damage) --
     worse than leaving the original text untouched.
 
-    When a joint attempt fails (mixed hardcoded/ini-backed numbers in one
+    When the joint attempt fails (mixed hardcoded/ini-backed numbers in one
     sentence, e.g. Agony's Lv20 "500 도쉬" reward with no backing Dosh
-    field), the source Korean sentence is left intact. Never substitute a
-    partial or uncertain guess, and
+    field), the lines are left untouched here and MANUAL_PERK_DESCS
+    (data/manual_perk_desc_overrides.json) is expected to carry a
+    hand-authored copy of the original KOR sentence with each number
+    individually corrected against the operations INI -- prose stays,
+    numbers trace to ini. Never substitute a partial/uncertain guess, and
     never truncate the flavor text: an earlier "정확한 수치는 아래 참고"
     replacement approach also leaked the capstone prefix's UNCLOSED
     <font color="#8B0000"> tag into the page and tinted everything after it
@@ -1273,37 +1179,56 @@ def reconcile_perk_descriptions(raw_descriptions, filled_descriptions, fixed_sta
 
 
 def build():
-    main_sections = parse_ini_generic(INI_MAIN)
-    game_sections = parse_ini_generic(os.path.join(SOURCE, "KFZedternalReborn_Game.ini"))
-    kor_sections = parse_kor_ini(INI_KOR, encoding="utf-16")
+    print(f"[build] 운영 수치: {INI_MAIN}")
+    print(f"[build] 추가 밸런스 수치: {INI_BALANCE}")
+    print(f"[build] 소스 스킬 배정: {INI_UPGRADES}")
+    print(f"[build] 소스 한국어: {INI_KOR}")
+    print(f"[build] 피해 오로라: {INI_GAME}")
+    main_sections = merge_ini_sections(
+        parse_ini_generic(INI_MAIN),
+        parse_ini_generic(INI_BALANCE) if os.path.isfile(INI_BALANCE) else {},
+    )
+    aurora_stats = parse_player_aurora(INI_GAME)
+    kor_encoding = "utf-16" if INI_KOR.lower().endswith(".kor") else "utf-8-sig"
+    kor_sections = parse_kor_ini(INI_KOR, encoding=kor_encoding)
+    use_current_source_kor = INI_KOR.lower().endswith("zedternaltempered.kor")
     reborn_kor_sections = parse_kor_ini(INI_REBORN_KOR, encoding="utf-16")
     dk_skill_registry = parse_dk_skill_registry(INI_UPGRADES)
     wm_skill_registry = parse_wm_skill_registry(INI_UPGRADES)
-    registered_advanced = parse_registered_advanced_perks(INI_UPGRADES)
+    active_advanced_perks = parse_active_advanced_perks(INI_UPGRADES)
     unlock_rules = parse_unlock_rules(main_sections)
-    perk_max_levels = parse_perk_max_levels(INI_MAIN)
-    skill_upgrade_prices = parse_skill_upgrade_prices(INI_UPGRADES)
-    system_overview = build_system_overview(main_sections, INI_UPGRADES, game_sections)
+    patch_notes = parse_patch_notes(INI_MAIN)
+    if os.path.isfile(INI_BALANCE):
+        for section, notes in parse_patch_notes(INI_BALANCE).items():
+            patch_notes.setdefault(section, []).extend(notes)
+
     with open(MANUAL_BASE, encoding="utf-8") as f:
         manual_base = json.load(f)
-    with open(PERK_GRADES, encoding="utf-8") as f:
-        perk_grades = json.load(f)
+    with open(MANUAL_VERDICTS, encoding="utf-8") as f:
+        manual_verdicts = json.load(f)
+    with open(MANUAL_ROLES, encoding="utf-8") as f:
+        manual_roles = json.load(f)
     with open(MANUAL_SKILL_OVERRIDES, encoding="utf-8") as f:
         manual_skill_overrides = json.load(f)
+    with open(MANUAL_PERK_DESCS, encoding="utf-8") as f:
+        manual_perk_descs = json.load(f)
+    with open(MANUAL_PERK_EXTRAS, encoding="utf-8") as f:
+        manual_perk_extras = json.load(f)
+    recent_changes = {}
+    if os.path.exists(RECENT_CHANGES_PATH):
+        with open(RECENT_CHANGES_PATH, encoding="utf-8") as f:
+            recent_changes = json.load(f)
 
     # ---- advanced perks (커퍼 / DK) ----
-    adv_keys = sorted(
-        {k[len("ZTUpgrade_Perk_"):] for k in kor_sections if k.startswith("ZTUpgrade_Perk_")}
-        & set(registered_advanced)
-    )
+    localized_perks = {k[len("DKUpgrade_Perk_"):] for k in kor_sections if k.startswith("DKUpgrade_Perk_")}
+    adv_keys = sorted(localized_perks & set(active_advanced_perks))
 
     advanced_perks = []
     for key in adv_keys:
-        is_static = registered_advanced.get(key, False)
-        kor = kor_sections.get(f"ZTUpgrade_Perk_{key}", {})
-        ini_kv = main_sections.get(f"ZTUpgrade_Perk_{key}", [])
-        static_bonus_values = parse_source_perk_bonuses(key) if is_static else {}
-        static_perk_stats = build_static_perk_stats(key, static_bonus_values)
+        is_static = active_advanced_perks.get(key, False)
+        kor = kor_sections.get(f"DKUpgrade_Perk_{key}", {})
+        ini_kv = main_sections.get(f"DKUpgrade_Perk_{key}", [])
+        static_bonus_values = parse_source_perk_bonus(key) if is_static else {}
         raw_descs = kor.get("descriptions", [])
         filtered_kv = [(k, v) for k, v in ini_kv if k != "MODEVERSION"]
         signs = determine_stat_signs(raw_descs, len(filtered_kv))
@@ -1321,25 +1246,27 @@ def build():
         if key in IMPLICIT_SCALING_KEY_ORDER:
             order = IMPLICIT_SCALING_KEY_ORDER[key]
             by_key = {s["key"]: s for s in passive_stats}
-            passive_stats = [by_key[k] for k in order] + [s for s in passive_stats if s["key"] not in order]
+            passive_stats = [by_key[k] for k in order if k in by_key] + [s for s in passive_stats if s["key"] not in order]
         placeholder_groups, fixed_stats = compute_placeholder_groups(
             passive_stats, raw_descs, IMPLICIT_SCALING_COUNTS.get(key, 0))
         scaling_stats = [stat for group in placeholder_groups for stat in group]
+        filled_descriptions = list(raw_descs) if is_static else fill_percent_placeholders(raw_descs, placeholder_groups)
+        static_perk_stats = build_static_perk_stats(key, static_bonus_values)
         if is_static and not scaling_stats:
             scaling_stats = static_perk_stats
-        filled_descriptions = list(raw_descs) if is_static else fill_percent_placeholders(raw_descs, placeholder_groups)
         if is_static and static_bonus_values:
             bonus_index = 0
-
             def replace_static_bonus(match):
                 nonlocal bonus_index
                 value = static_bonus_values.get(bonus_index)
                 bonus_index += 1
                 if value is None:
                     return match.group(0)
-                suffix = "%" if match.group(0).endswith("%%") else ""
-                return f"{value:g}{suffix}"
-
+                # Percent descriptions encode the suffix as %% in Unreal
+                # localization strings; currency descriptions have no suffix.
+                if match.group(0).endswith("%%"):
+                    return f"{value:g}%"
+                return f"{value:g}"
             filled_descriptions = [
                 re.sub(r"%x%%|%x", replace_static_bonus, text)
                 for text in filled_descriptions
@@ -1356,14 +1283,33 @@ def build():
                     stat["display"] = "제한 없음" if stat["value"] == 0 else format_value_as(stat["value"], "seconds")
             fixed_stats.extend(drone_stats)
         filled_descriptions = reconcile_perk_descriptions(raw_descs, filled_descriptions, fixed_stats, placeholder_groups)
+        # Hand-authored replacements for lines the automatic reconciler
+        # can't safely fix: full original-KOR sentences (prose and font
+        # markup intact) with each number individually corrected against
+        # operations INI. Keyed by 0-based index into the perk's
+        # PerkUpgradeDescriptionN list.
+        if not use_current_source_kor:
+            for idx_str, text in manual_perk_descs.get(key, {}).items():
+                i = int(idx_str)
+                if 0 <= i < len(filled_descriptions):
+                    filled_descriptions[i] = text
         descriptions = [
             {"raw": d, "text": strip_font(d), "isCapstone": bool(CAPSTONE_LINE_RE.match(d)) or d.startswith("레벨")}
             for d in filled_descriptions
         ]
+        perk_patch_note = "; ".join(patch_notes.get(f"DKUpgrade_Perk_{key}", []))
+
+        skill_notes = manual_verdicts.get("skillNotes", {}).get(key, {})
+        perk_extras = manual_perk_extras.get(key, {})
+        # Skills confirmed to exist in the perk's game code + KOR sections
+        # but absent from the Config_SkillUpgrade registry (e.g. Gambit's
+        # entire hardcoded skill set) -- run them through the exact same
+        # pipeline as registry skills.
         skill_roster = list(dk_skill_registry.get(key, []))
+        skill_roster += [(short, False, None) for short in perk_extras.get("skills", [])]
         skills = []
         for short, is_disabled, disabled_note in skill_roster:
-            skill_section = f"ZTUpgrade_Skill_{short}"
+            skill_section = f"DKUpgrade_Skill_{short}"
             # The game's Config_SkillUpgrade registry and the KOR/main ini
             # section headers disagree on casing for a handful of skills
             # (registry "ShowOff" vs section "[DKUpgrade_Skill_Showoff]").
@@ -1375,10 +1321,11 @@ def build():
             signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
                            for k, v in sini if k != "MODEVERSION"]
             raw_values = build_stat_entries(signed_sini)
+            skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
             override = manual_skill_overrides.get(short, {})
 
             t1_entries, t2_entries = split_tiers(raw_values)
-            if "standardDesc" in override and not skor.get("StandardSkillUpgradeDescription"):
+            if "standardDesc" in override and not use_current_source_kor:
                 # Hand-authored from the ini values directly (KOR ini has no
                 # description at all for this skill) -- already accurate,
                 # skip the reconcile/fallback pipeline meant for KOR text.
@@ -1394,7 +1341,7 @@ def build():
                     fallback = build_ini_only_text(t1_entries)
                     if fallback:
                         std_raw, std_fixed = fallback, True
-            if "deluxeDesc" in override and not skor.get("DeluxeSkillUpgradeDescription"):
+            if "deluxeDesc" in override and not use_current_source_kor:
                 delx_raw, delx_fixed = override["deluxeDesc"], False
             else:
                 delx_orig = skor.get("DeluxeSkillUpgradeDescription")
@@ -1417,6 +1364,9 @@ def build():
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
+                "note": skill_notes.get(short),
+                "isPatched": bool(skill_patch_note),
+                "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
                 "disabled": is_disabled,
                 "disabledNote": disabled_note,
@@ -1425,26 +1375,36 @@ def build():
             })
 
         rule = unlock_rules.get(key, {})
+        verdict = manual_verdicts.get("advancedPerks", {}).get(key)
+        is_patched = bool(perk_patch_note)
+        role_desc = manual_roles.get(key, {})
+
         advanced_perks.append({
             "key": key,
             "name": kor.get("UpgradeName", key),
-            "grade": perk_grades.get(key),
             "parentPerk": rule.get("parentPerk"),
             "unlockLevel": rule.get("unlockLevel"),
-            "unlockRequirements": rule.get("requirements", []),
-            "maxLevel": perk_max_levels.get(key, 20),
             "isStatic": is_static,
             "hasIniConfig": bool(ini_kv),
             "passiveStats": scaling_stats,
             "fixedStats": fixed_stats,
             "valueSourceNote": (
-                "수치는 ZedternalTempered 클래스의 PerkBonus 기본값에서 가져옵니다."
+                "PerkBonus 값은 현재 운영 INI에 별도 섹션이 없어 ZedternalTempered 소스 클래스 기본값을 표시합니다."
                 if key == "Capitalist" and static_perk_stats else None
             ),
+            "role": role_desc.get("role"),
+            "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
             "skills": skills,
             "skillCount": len(skills),
-            "icon": f"icons/{key.lower()}.png",
+            "verdict": verdict,
+            "grade": (verdict or {}).get("grade"),
+            "isPatched": is_patched,
+            "patchNote": perk_patch_note or None,
+            "testWarning": None,
+            "recentChangeTag": recent_changes.get(key),
+            "extraSections": perk_extras.get("extraSections", []),
+            "icon": perk_icon_path(key, rule.get("parentPerk")),
         })
 
     advanced_perks.sort(key=lambda p: ((p["parentPerk"] or "zzz"), p["unlockLevel"] or 99))
@@ -1452,10 +1412,8 @@ def build():
     # ---- base perks (오퍼 / WM) ----
     base_perks = []
     for bkey, bdata in manual_base.items():
-        wrapper_kv = main_sections.get(f"ZUTUpgrade_Perk_Base_{bkey}", [])
+        wrapper_kv = main_sections.get(f"DKWrapper_Perk_{bkey}", [])
         passive_stats = build_stat_entries([(k, v) for k, v in wrapper_kv if k != "MODEVERSION"], with_levels=True)
-        if not passive_stats:
-            passive_stats = parse_base_perk_class_stats(bkey)
         if bkey == "Demolitionist":
             # Demolitionist's plain "피해량" field is a flat perk-weapon
             # damage bonus that applies to both direct hits and splash --
@@ -1469,19 +1427,24 @@ def build():
             for p in advanced_perks if p["parentPerk"] == bkey
         ]
         unlocks.sort(key=lambda u: u["level"] or 0)
+        base_patch_note = "; ".join(patch_notes.get(f"DKWrapper_Perk_{bkey}", []))
+        base_is_patched = bool(base_patch_note)
+
+        base_skill_notes = manual_verdicts.get("skillNotes", {}).get(bkey, {})
         base_skills = []
         for short, is_disabled, disabled_note in wm_skill_registry.get(bkey, []):
-            skill_section = f"ZUTUpgrade_Skill_{short}"
+            skill_section = f"DKWrapper_Skill_{short}"
             skor = ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}") or {}
             sini = ci_lookup(main_sections, skill_section) or []
             cost_keys = set(SKILL_COST_STATS.get(short, []))
             signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
                            for k, v in sini if k != "MODEVERSION"]
             raw_values = build_stat_entries(signed_sini)
+            skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
             override = manual_skill_overrides.get(short, {})
 
             t1_entries, t2_entries = split_tiers(raw_values)
-            if "standardDesc" in override and not skor.get("StandardSkillUpgradeDescription"):
+            if "standardDesc" in override and not use_current_source_kor:
                 std_raw, std_fixed = override["standardDesc"], False
             else:
                 std_orig = skor.get("StandardSkillUpgradeDescription")
@@ -1494,7 +1457,7 @@ def build():
                     fallback = build_ini_only_text(t1_entries)
                     if fallback:
                         std_raw, std_fixed = fallback, True
-            if "deluxeDesc" in override and not skor.get("DeluxeSkillUpgradeDescription"):
+            if "deluxeDesc" in override and not use_current_source_kor:
                 delx_raw, delx_fixed = override["deluxeDesc"], False
             else:
                 delx_orig = skor.get("DeluxeSkillUpgradeDescription")
@@ -1517,6 +1480,9 @@ def build():
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
+                "note": base_skill_notes.get(short),
+                "isPatched": bool(skill_patch_note),
+                "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
                 "disabled": is_disabled,
                 "disabledNote": disabled_note,
@@ -1527,26 +1493,28 @@ def build():
         base_perks.append({
             "key": bkey,
             "name": bdata["name"],
+            "grade": bdata.get("grade"),
+            "summary": bdata.get("summary"),
+            "role": bdata.get("role"),
+            "endgame": bdata.get("endgame"),
             "passiveStats": passive_stats,
+            "strengths": bdata.get("strengths", []),
+            "weaknesses": bdata.get("weaknesses", []),
             "unlocks": unlocks,
             "skills": base_skills,
             "skillCount": len(base_skills),
+            "isPatched": base_is_patched,
+            "patchNote": base_patch_note or None,
+            "testWarning": None,
+            "recentChangeTag": recent_changes.get(bkey),
             "icon": f"icons/{bkey.lower()}.png",
         })
-
-    with open(os.path.join(SOURCE, "Tempered-Version.json"), encoding="utf-8") as f:
-        source_version = json.load(f)
 
     data = {
         "basePerks": base_perks,
         "advancedPerks": advanced_perks,
+        "aurora": aurora_stats,
         "meta": {
-            "version": source_version.get("Version"),
-            "asOf": source_version.get("Date"),
-            "systems": system_overview,
-            "skillUpgradePrice": skill_upgrade_prices.get("SkillUpgrade_Price"),
-            "deluxeSkillUpgradePrice": skill_upgrade_prices.get("SkillUpgrade_DeluxePrice"),
-            "deluxeSkillUnlock": system_overview["skillPricing"]["deluxeUnlockLevels"],
             "advancedPerkCount": len(advanced_perks),
             "basePerkCount": len(base_perks),
             "totalSkills": sum(p["skillCount"] for p in advanced_perks) + sum(p["skillCount"] for p in base_perks),
