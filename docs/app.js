@@ -10,14 +10,12 @@ let SEARCH_INDEX = [];
 let SEARCH_RESULTS = [];
 let SEARCH_ACTIVE_IDX = -1;
 
-const LEVELS = [5, 10, 15, 20];
-
 // 표시값은 빌드 시 운영 폴더의 KFZedternalReborn_Game.ini에서 읽습니다.
 // 표시값 = (실제값 + 1) / 2 로 절반만 반영해 서술합니다.
 const DAMAGE_GIVEN_STATS = [
   { label: "화염 피해", real: 0.5 },
-  { label: "지면 화염 피해", real: 0.25 },
-  { label: "네이팜 피해", real: 0.35 },
+  { label: "지면 화염 피해", real: 0.4 },
+  { label: "네이팜 피해", real: 0.4 },
   { label: "폭발 피해", real: 0.4 },
   { label: "폭발 파편 피해", real: 0.5 },
   { label: "메딕 수류탄(독성) 피해", real: 0.25 },
@@ -27,24 +25,30 @@ const DAMAGE_GIVEN_STATS = [
   { label: "샷건 피해", real: 0.6 },
 ];
 const DAMAGE_TAKEN_STATS = [
-  { label: "허스크 자폭 피해", real: 1.5 },
+  { label: "허스크 자폭 피해", real: 1.3 },
   { label: "플레쉬파운드 킹 가슴빔 피해", real: 0.75 },
   { label: "한스 유탄 피해", real: 0.75 },
   { label: "가부장 미사일 피해", real: 0.75 },
   { label: "여장부 플라즈마포 피해", real: 0.6 },
-  { label: "소닉 피해", real: 1.5 },
-  { label: "독성 피해", real: 2.0 },
   { label: "허스크 화염구 피해", real: 1.25 },
-  { label: "허스크 화염방사기 피해", real: 2.0 },
+  { label: "허스크 화염방사기 피해", real: 1.5 },
   { label: "근접무기 소지 중 전체 피해", real: 0.75 },
 ];
 
 const WEAPON_AURORA_STATS = [
   { label: "동결 투척자", value: 1.25 },
   { label: "동결 투척자 얼음 파편", value: 1.75 },
+  { label: "센터파이어 MB464", value: 0.75 },
+  { label: "윈체스터 1894", value: 0.75 },
+  { label: "S&W 500", value: 0.8 },
+  { label: "M99", value: 0.85 },
+  { label: "레일건", value: 0.9 },
+  { label: "허스크 캐논", value: 0.8 },
   { label: "RPG-7 탄두", value: 1.5 },
   { label: "RPG-7 후폭발", value: 10.0 },
   { label: "분쇄기 폭발", value: 2.5 },
+  { label: "HV 스톰 캐논", value: 0.85 },
+  { label: "HRG 카붐스틱", value: 0.85 },
   { label: "석궁", value: 1.3 },
   { label: "컴파운드 보우", value: 1.5 },
   { label: "M14 EBR", value: 1.3 },
@@ -56,6 +60,7 @@ const WEAPON_AURORA_STATS = [
   { label: "MKB42", value: 1.2 },
   { label: "모신나강", value: 1.1 },
   { label: "모신나강 관통(스코프)", value: 1.4 },
+  { label: "미니건 (대체 피해)", value: 1.1 },
   { label: "HRG 탄도 바운서", value: 0.6 },
   { label: "M4 샷건", value: 1.2 },
   { label: "네일건", value: 1.3 },
@@ -69,15 +74,6 @@ const WEAPON_AURORA_STATS = [
   { label: "G18", value: 1.25 },
   { label: "G18 실드", value: 4.0 },
   { label: "G18 실드(임펄스)", value: 4.0 },
-  { label: "센터파이어 MB464", value: 0.75 },
-  { label: "윈체스터 1894", value: 0.75 },
-  { label: "S&W 500", value: 0.8 },
-  { label: "M99", value: 0.85 },
-  { label: "레일건", value: 0.9 },
-  { label: "허스크 캐논", value: 0.8 },
-  { label: "HV 스톰 캐논", value: 0.85 },
-  { label: "HRG 카붐스틱", value: 0.85 },
-  { label: "HRG 메뚜기", value: 0.3 },
 ];
 
 // 지금까지의 주요 패치 내역 요약 (최신순). 모든 커밋을 나열하진 않고,
@@ -330,7 +326,7 @@ function renderWeaponAuroraDetail() {
 
     <div class="section-title">기준</div>
     <div class="aurora-note">
-      <div class="aurora-note-main"> 제드터널 모드의 특성상 너무 강하거나 약한 무기를 밸런싱한, 버프 / 너프된 무기 리스트 입니다. <code>소스: [ZedternalReborn.Config_Player]</code></div>
+      <div class="aurora-note-main"> 제드터널 모드의 특성상 너무 강하거나 약한 무기를 밸런싱한, 버프 / 너프된 무기 리스트 입니다. <code>소스: KFZedternalReborn_Game.ini</code></div>
       <div class="aurora-note-sub">해당 값은 추후 밸런싱을 통해 언제나 바뀔 수 있으며 배율 값은 비공개 입니다.</div>
     </div>
 
@@ -373,6 +369,8 @@ function renderSidebar() {
   sidebar.innerHTML = "";
   sidebar.appendChild(renderBalanceAuroraBox());
   sidebar.appendChild(renderWeaponAuroraBox());
+  const combinationPerks = DATA.advancedPerks.filter(isCombinationUnlocked);
+  if (combinationPerks.length) sidebar.appendChild(renderCombinationPerksBox(combinationPerks));
   for (const base of DATA.basePerks) {
     const isOpen = base.key === OPEN_BASE_KEY;
     const item = el("div", { class: `accordion-item ${isOpen ? "open" : ""}`, "data-basekey": base.key });
@@ -389,17 +387,15 @@ function renderSidebar() {
     item.appendChild(header);
 
     const body = el("div", { class: "accordion-body" });
-    const unlockByLevel = Object.fromEntries(base.unlocks.map(u => [u.level, u]));
-    for (const lvl of LEVELS) {
-      const u = unlockByLevel[lvl];
-      if (!u) continue;
+    for (const u of base.unlocks) {
       const adv = ADV_BY_KEY[u.perk];
+      if (!adv) continue;
       const row = el("div", {
         class: `child-row ${adv.key === SELECTED_ADV_KEY ? "active" : ""}`,
         "data-advkey": adv.key,
       }, [
         iconImg(adv, "sm"),
-        el("span", { class: "lvl", text: `Lv${lvl}` }),
+        el("span", { class: "lvl", text: `Lv${u.level}` }),
         el("span", { class: "name", text: adv.name }),
       ]);
       if (adv.grade) row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(adv.grade) }));
@@ -422,7 +418,7 @@ function renderSidebar() {
     const header = el("div", { class: "accordion-header" }, [
       iconImg(perk, "sm"),
       el("div", { class: "titles" }, [
-        el("h3", { text: perk.name }),
+        el("h3", { html: `${escapeHtml(perk.name)} ${gradeBadge(perk.grade)}` }),
         el("div", { class: "grade", text: perk.isStatic ? "정적 퍼크" : "독립 퍼크" }),
       ]),
       el("span", { class: "chevron", text: "▸" }),
@@ -440,12 +436,45 @@ function renderSidebar() {
         el("span", { class: "lvl", text: `Lv${child.unlockLevel}` }),
         el("span", { class: "name", text: child.name }),
       ]);
+      if (child.grade) row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(child.grade) }));
       row.addEventListener("click", event => { event.stopPropagation(); selectAdv(child.key); });
       body.appendChild(row);
     }
     item.appendChild(body);
     sidebar.appendChild(item);
   }
+}
+
+function renderCombinationPerksBox(perks) {
+  const item = el("div", {
+    class: `accordion-item combination-perks-item ${perks.some(perk => perk.key === SELECTED_ADV_KEY) ? "open" : ""}`,
+  });
+  const header = el("div", { class: "accordion-header" }, [
+    el("span", { class: "ba-icon", text: "🔗" }),
+    el("div", { class: "titles" }, [
+      el("h3", { text: "퍼크 조합 해금" }),
+      el("div", { class: "grade", text: `${perks.length}개 퍼크` }),
+    ]),
+    el("span", { class: "chevron", text: "▸" }),
+  ]);
+  header.addEventListener("click", () => item.classList.toggle("open"));
+  item.appendChild(header);
+
+  const body = el("div", { class: "accordion-body" });
+  for (const perk of perks) {
+    const row = el("div", {
+      class: `child-row ${perk.key === SELECTED_ADV_KEY ? "active" : ""}`,
+      "data-advkey": perk.key,
+    }, [
+      iconImg(perk, "sm"),
+      el("span", { class: "name", text: perk.name }),
+    ]);
+    if (perk.grade) row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(perk.grade) }));
+    row.addEventListener("click", event => { event.stopPropagation(); selectAdv(perk.key); });
+    body.appendChild(row);
+  }
+  item.appendChild(body);
+  return item;
 }
 
 function renderMainArea() {
@@ -478,6 +507,9 @@ function renderMainArea() {
 function wireDetailEvents(root) {
   root.querySelectorAll(".unlock-chip").forEach(chip => {
     chip.addEventListener("click", () => selectAdv(chip.dataset.advkey));
+  });
+  root.querySelectorAll(".upper-perk-card[data-advkey]").forEach(card => {
+    card.addEventListener("click", () => selectAdv(card.dataset.advkey));
   });
   root.querySelectorAll(".back-link").forEach(link => {
     link.addEventListener("click", () => {
@@ -512,18 +544,16 @@ function renderBaseDetail(key) {
     : "";
 
   const grid = el("div", { class: "adv-grid" });
-  const unlockByLevel = Object.fromEntries(p.unlocks.map(u => [u.level, u]));
-  for (const lvl of LEVELS) {
-    const u = unlockByLevel[lvl];
-    if (!u) continue;
+  for (const u of p.unlocks) {
     const adv = ADV_BY_KEY[u.perk];
+    if (!adv) continue;
     const card = el("div", {
       class: "adv-card",
       "data-advkey": adv.key,
     }, [
       iconImg(adv),
       el("div", { class: "adv-body" }, [
-        el("div", { class: "lvl", text: `Lv${lvl} 해금` }),
+        el("div", { class: "lvl", text: `Lv${u.level} 해금` }),
         el("div", { class: "name", text: adv.name }),
         el("div", { class: "skillcount", text: `스킬 ${adv.skillCount}개` }),
       ]),
@@ -585,12 +615,16 @@ function renderAdvDetail(key) {
   const parent = BASE_BY_KEY[p.parentPerk];
   const parentAdv = ADV_BY_KEY[p.parentPerk];
   const parentName = parent?.name || parentAdv?.name;
+  const combination = isCombinationUnlocked(p);
+  const unlockText = (p.unlockRequirements || []).map(unlockRequirementLabel).join(" + ");
   const backLink = parent
     ? `<div class="back-link" data-basekey="${escapeHtml(parent.key)}">← ${escapeHtml(parent.name)} 개요로</div>`
     : parentAdv
       ? `<div class="back-link" data-advkey="${escapeHtml(parentAdv.key)}">← ${escapeHtml(parentAdv.name)} 개요로</div>`
       : "";
-  const subtitle = p.isStatic
+  const subtitle = combination
+    ? `조합 해금 · ${escapeHtml(unlockText)} · 스킬 ${p.skillCount}개`
+    : p.isStatic
     ? `정적 퍼크 · 최대 Lv20 · 스킬 ${p.skillCount}개`
     : parentName
       ? `${escapeHtml(parentName)} Lv${p.unlockLevel ?? "?"} 해금 · 스킬 ${p.skillCount}개`
@@ -605,6 +639,19 @@ function renderAdvDetail(key) {
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
 
   const hasPassive = p.passiveStats.length > 0;
+  const upperPerks = DATA.advancedPerks
+    .filter(child => child.parentPerk === p.key && !isCombinationUnlocked(child))
+    .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0));
+  const upperPerkCards = upperPerks.map(child => `
+    <div class="adv-card upper-perk-card" data-advkey="${escapeHtml(child.key)}">
+      <img class="icon-img" src="${escapeHtml(child.icon || "")}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <div class="adv-body">
+        <div class="lvl">${escapeHtml(parentName || p.name)} Lv${child.unlockLevel} 해금</div>
+        <div class="name">${escapeHtml(child.name)}</div>
+        <div class="skillcount">스킬 ${child.skillCount}개</div>
+      </div>
+      ${child.grade ? `<span class="grade-badge-wrap">${gradeBadge(child.grade)}</span>` : ""}
+    </div>`).join("");
 
   const skillsHtml = p.skills.map(s => `
     <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
@@ -651,6 +698,8 @@ function renderAdvDetail(key) {
     ${hasPassive ? `<div class="section-title">레벨별 수치</div>${renderSliderSection(p.passiveStats, 20, p.valueSourceNote)}` : ""}
 
     ${renderFixedStatsSection(p.fixedStats)}
+
+    ${upperPerks.length ? `<div class="section-title">상위 퍼크</div><div class="adv-grid">${upperPerkCards}</div>` : ""}
 
     <div class="section-title">스킬 목록 (표준 / 디럭스)</div>
     <div class="skill-list">${skillsHtml}</div>
@@ -738,6 +787,15 @@ function gradeClass(grade) {
 function gradeBadge(grade) {
   if (!grade) return "";
   return `<span class="grade-badge ${gradeClass(grade)}">${escapeHtml(grade)}</span>`;
+}
+
+function isCombinationUnlocked(perk) {
+  return perk.isCombinationUnlocked === true || new Set((perk.unlockRequirements || []).map(req => req.perk)).size > 1;
+}
+
+function unlockRequirementLabel(requirement) {
+  const source = BASE_BY_KEY[requirement.perk] || ADV_BY_KEY[requirement.perk];
+  return `${source ? source.name : requirement.perk} Lv${requirement.level}`;
 }
 
 function renderRecentChangeBadge(tag) {

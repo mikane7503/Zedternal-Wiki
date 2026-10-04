@@ -42,7 +42,11 @@ INI_BALANCE = preferred_file(
 INI_KOR = preferred_file(
     os.path.join(SOURCE_DIR, "Localization", "KOR"), "ZedternalTempered.kor", "ZedternalRBPerkpackage.KOR.ini"
 )
-INI_REBORN_KOR = os.path.join(ROOT, "ZedternalReborn.kor.ini")
+INI_REBORN_KOR = preferred_file(
+    os.path.join(SOURCE_DIR, "Localization", "KOR"),
+    "ZedternalReborn.kor",
+    "ZedternalReborn.kor.ini",
+)
 INI_UPGRADES = preferred_file(SOURCE_DIR, "KFZedternalReborn_Upgrades.ini", "KFZedternalReborn_Upgrades.ini")
 INI_GAME = preferred_file(OPERATIONS_DIR, "KFZedternalReborn_Game.ini", "KFZedternalReborn_Game.ini")
 MANUAL_BASE = os.path.join(ROOT, "data", "manual_base_perks.json")
@@ -77,7 +81,11 @@ def parse_player_aurora(path):
                 match = re.search(r'HOE=([+-]?[\d.]+)', line)
                 if match:
                     holding_melee = float(match.group(1))
-    if len(given) < 10 or len(taken) != 9 or holding_melee is None:
+    # The live Tempered profile currently has ten general damage rows, 38
+    # weapon-specific rows, seven incoming-damage rows, and the melee-held
+    # modifier. Keep this check aligned with the labels in docs/app.js so a
+    # changed config cannot silently attach values to the wrong names.
+    if len(given) != 48 or len(taken) != 7 or holding_melee is None:
         raise ValueError(
             f"Unexpected damage config in {path}: {len(given)} given, {len(taken)} taken, "
             f"holding-melee={'present' if holding_melee is not None else 'missing'}"
@@ -293,9 +301,11 @@ def strip_font(s):
     return s
 
 
-UNLOCK_RULE_RE = re.compile(
-    r'PerkUnlockRules=\(PerkName="(?:ZT|DK)Upgrade_Perk_(\w+)",Req1Perk="(?:ZUTUpgrade_Perk_Base_|WMUpgrade_Perk_|ZTUpgrade_Perk_|DKUpgrade_Perk_)(\w+)",Req1Level=(\d+)'
+UNLOCK_RULE_RE = re.compile(r'PerkUnlockRules=\(PerkName="(?:ZT|DK)Upgrade_Perk_(\w+)",([^)]*)\)')
+UNLOCK_REQUIREMENT_PERK_RE = re.compile(
+    r'Req([12])Perk="(?:ZUTUpgrade_Perk_Base_|WMUpgrade_Perk_|ZTUpgrade_Perk_|DKUpgrade_Perk_)(\w+)"'
 )
+UNLOCK_REQUIREMENT_LEVEL_RE = re.compile(r'Req([12])Level=(\d+)')
 
 
 def parse_unlock_rules(main_sections):
@@ -305,8 +315,22 @@ def parse_unlock_rules(main_sections):
     with open(INI_MAIN, encoding="utf-8-sig") as f:
         text = f.read()
     for m in UNLOCK_RULE_RE.finditer(text):
-        adv, base, lvl = m.group(1), m.group(2), int(m.group(3))
-        rules[adv] = {"parentPerk": base, "unlockLevel": lvl}
+        adv, body = m.group(1), m.group(2)
+        perk_by_index = {int(index): perk for index, perk in UNLOCK_REQUIREMENT_PERK_RE.findall(body)}
+        level_by_index = {int(index): int(level) for index, level in UNLOCK_REQUIREMENT_LEVEL_RE.findall(body)}
+        requirements = []
+        for index in sorted(set(perk_by_index) & set(level_by_index)):
+            requirement = {"perk": perk_by_index[index], "level": level_by_index[index]}
+            if requirement not in requirements:
+                requirements.append(requirement)
+        if requirements:
+            distinct_perks = {req["perk"] for req in requirements}
+            rules[adv] = {
+                "parentPerk": requirements[0]["perk"],
+                "unlockLevel": requirements[0]["level"] if len(distinct_perks) == 1 else None,
+                "requirements": requirements,
+                "isCombinationUnlocked": len(distinct_perks) > 1,
+            }
     return rules
 
 
@@ -1384,6 +1408,8 @@ def build():
             "name": kor.get("UpgradeName", key),
             "parentPerk": rule.get("parentPerk"),
             "unlockLevel": rule.get("unlockLevel"),
+            "unlockRequirements": rule.get("requirements", []),
+            "isCombinationUnlocked": rule.get("isCombinationUnlocked", False),
             "isStatic": is_static,
             "hasIniConfig": bool(ini_kv),
             "passiveStats": scaling_stats,
@@ -1424,7 +1450,7 @@ def build():
                     stat["label"] = "피해량(직격/스플래시)"
         unlocks = [
             {"level": p["unlockLevel"], "perk": p["key"], "name": p["name"]}
-            for p in advanced_perks if p["parentPerk"] == bkey
+            for p in advanced_perks if p["parentPerk"] == bkey and not p["isCombinationUnlocked"]
         ]
         unlocks.sort(key=lambda u: u["level"] or 0)
         base_patch_note = "; ".join(patch_notes.get(f"DKWrapper_Perk_{bkey}", []))
@@ -1434,7 +1460,11 @@ def build():
         base_skills = []
         for short, is_disabled, disabled_note in wm_skill_registry.get(bkey, []):
             skill_section = f"DKWrapper_Skill_{short}"
-            skor = ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}") or {}
+            skor = (
+                ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}")
+                or ci_lookup(kor_sections, f"DKUpgrade_Skill_{short}")
+                or {}
+            )
             sini = ci_lookup(main_sections, skill_section) or []
             cost_keys = set(SKILL_COST_STATS.get(short, []))
             signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
@@ -1444,7 +1474,7 @@ def build():
             override = manual_skill_overrides.get(short, {})
 
             t1_entries, t2_entries = split_tiers(raw_values)
-            if "standardDesc" in override and not use_current_source_kor:
+            if "standardDesc" in override and not skor.get("StandardSkillUpgradeDescription"):
                 std_raw, std_fixed = override["standardDesc"], False
             else:
                 std_orig = skor.get("StandardSkillUpgradeDescription")
@@ -1457,7 +1487,7 @@ def build():
                     fallback = build_ini_only_text(t1_entries)
                     if fallback:
                         std_raw, std_fixed = fallback, True
-            if "deluxeDesc" in override and not use_current_source_kor:
+            if "deluxeDesc" in override and not skor.get("DeluxeSkillUpgradeDescription"):
                 delx_raw, delx_fixed = override["deluxeDesc"], False
             else:
                 delx_orig = skor.get("DeluxeSkillUpgradeDescription")

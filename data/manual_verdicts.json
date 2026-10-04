@@ -184,6 +184,24 @@
       "tag": "적절",
       "note": "특이사항 없음.",
       "grade": "B"
+    },
+    "Capitalist": {
+      "grade": "A"
+    },
+    "Engineer": {
+      "grade": "B"
+    },
+    "MissingNO": {
+      "grade": "A"
+    },
+    "Diablo": {
+      "grade": "S"
+    },
+    "Hacker": {
+      "grade": "A"
+    },
+    "Technician": {
+      "grade": "B"
     }
   },
   "skillNotes": {

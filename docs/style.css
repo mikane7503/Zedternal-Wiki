@@ -328,6 +328,10 @@ body {
   gap: 6px;
   position: sticky;
   top: 80px;
+  align-self: start;
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .accordion-item {
@@ -441,7 +445,7 @@ body {
 
 @media (max-width: 860px) {
   .layout { flex-direction: column; }
-  .sidebar { width: 100%; position: static; }
+  .sidebar { width: 100%; position: static; max-height: 50vh; }
 }
 
 .section-title {
