@@ -281,6 +281,9 @@ def format_value_as(value, unit):
     if unit == "seconds":
         s = f"{value:.2f}".rstrip("0").rstrip(".")
         return f"{s}초"
+    if unit == "health":
+        s = f"{value:.2f}".rstrip("0").rstrip(".")
+        return f"{s} HP"
     if unit == "currency":
         return f"{value:,.0f} 도쉬"
     # distance / count / flat -- preserve decimals, just format nicely
