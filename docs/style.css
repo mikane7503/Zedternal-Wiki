@@ -333,6 +333,7 @@ body {
   overflow-y: auto;
   overscroll-behavior: contain;
 }
+.sidebar > .accordion-item { flex-shrink: 0; }
 
 .accordion-item {
   background: var(--bg-card);
