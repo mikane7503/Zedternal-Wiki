@@ -80,6 +80,17 @@ const WEAPON_AURORA_STATS = [
 // 플레이어가 체감할 만한 굵직한 변경사항만 추립니다.
 const PATCH_NOTES = [
   {
+    date: "2026-10-05",
+    items: [
+      "패스트볼·골키퍼·소원술사 퍼크를 추가하고 서포트 Lv20·파이어버그 Lv10·서바이벌리스트 Lv15 전직으로 배치",
+      "도박꾼을 자본가 전직에서 상시 선택 가능한 베이스 퍼크로 이동",
+      "타이쿤 해금을 서포트 Lv5와 도쉬 지출 없이 5웨이브 연속 완료 조건으로 수정",
+      "자본가와 엔지니어를 베이스 퍼크와 같은 목록 형식으로 표시하고 정적 퍼크 문구 제거",
+      "현재 장착 무기에 적용 중인 보너스 요약과 전체 누적 능력치 패널 추가 (ToggleStats 또는 mutate stats)",
+      "지킬 & 하이드의 이동·재장전 패시브를 레벨당 +1%, Lv20 +20%로 수정",
+    ],
+  },
+  {
     date: "2026-10-01",
     items: [
       "사이트 데이터 기준을 ZedternalTempered 소스와 SV_Zedternal_Tempered 운영 설정으로 전환",
@@ -371,8 +382,23 @@ function renderSidebar() {
   sidebar.appendChild(renderWeaponAuroraBox());
   const combinationPerks = DATA.advancedPerks.filter(isCombinationUnlocked);
   if (combinationPerks.length) sidebar.appendChild(renderCombinationPerksBox(combinationPerks));
-  for (const base of DATA.basePerks) {
-    const isOpen = base.key === OPEN_BASE_KEY;
+  const baseDisplayKeys = new Set(["Gambler", "Capitalist", "Engineer"]);
+  const baseDisplayPerks = [
+    ...DATA.basePerks,
+    ...["Gambler", "Capitalist", "Engineer"]
+      .map(key => ADV_BY_KEY[key])
+      .filter(Boolean),
+  ];
+  for (const base of baseDisplayPerks) {
+    const isOriginalBase = Boolean(BASE_BY_KEY[base.key]);
+    const children = isOriginalBase
+      ? base.unlocks.map(unlock => ({ ...unlock, perkData: ADV_BY_KEY[unlock.perk] }))
+      : DATA.advancedPerks
+          .filter(perk => perk.parentPerk === base.key && !baseDisplayKeys.has(perk.key))
+          .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0))
+          .map(perk => ({ level: perk.unlockLevel, perk: perk.key, perkData: perk }));
+    const isOpen = base.key === OPEN_BASE_KEY || base.key === SELECTED_ADV_KEY
+      || children.some(child => child.perk === SELECTED_ADV_KEY);
     const item = el("div", { class: `accordion-item ${isOpen ? "open" : ""}`, "data-basekey": base.key });
 
     const header = el("div", { class: "accordion-header" }, [
@@ -383,12 +409,12 @@ function renderSidebar() {
       ]),
       el("span", { class: "chevron", text: "▸" }),
     ]);
-    header.addEventListener("click", () => showBaseOverview(base.key));
+    header.addEventListener("click", () => isOriginalBase ? showBaseOverview(base.key) : selectAdv(base.key));
     item.appendChild(header);
 
     const body = el("div", { class: "accordion-body" });
-    for (const u of base.unlocks) {
-      const adv = ADV_BY_KEY[u.perk];
+    for (const u of children) {
+      const adv = u.perkData;
       if (!adv) continue;
       const row = el("div", {
         class: `child-row ${adv.key === SELECTED_ADV_KEY ? "active" : ""}`,
@@ -408,6 +434,7 @@ function renderSidebar() {
 
   const independentPerks = DATA.advancedPerks.filter(perk =>
     !BASE_BY_KEY[perk.parentPerk] && !ADV_BY_KEY[perk.parentPerk]
+    && !baseDisplayKeys.has(perk.key)
   );
   for (const perk of independentPerks) {
     const children = DATA.advancedPerks
@@ -452,7 +479,7 @@ function renderCombinationPerksBox(perks) {
   const header = el("div", { class: "accordion-header" }, [
     el("span", { class: "ba-icon", text: "🔗" }),
     el("div", { class: "titles" }, [
-      el("h3", { text: "퍼크 조합 해금" }),
+      el("h3", { text: "히든 퍼크" }),
       el("div", { class: "grade", text: `${perks.length}개 퍼크` }),
     ]),
     el("span", { class: "chevron", text: "▸" }),
@@ -469,7 +496,7 @@ function renderCombinationPerksBox(perks) {
       iconImg(perk, "sm"),
       el("span", { class: "name", text: perk.name }),
     ]);
-    if (perk.grade) row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(perk.grade) }));
+    row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge("?") }));
     row.addEventListener("click", event => { event.stopPropagation(); selectAdv(perk.key); });
     body.appendChild(row);
   }
@@ -617,17 +644,21 @@ function renderAdvDetail(key) {
   const parentName = parent?.name || parentAdv?.name;
   const combination = isCombinationUnlocked(p);
   const unlockText = (p.unlockRequirements || []).map(unlockRequirementLabel).join(" + ");
+  const achievementUnlockText = p.unlockAchievement === "NoTrader5Waves"
+    ? " + 도쉬 지출 없이 5웨이브 연속 완료 업적" : "";
   const backLink = parent
     ? `<div class="back-link" data-basekey="${escapeHtml(parent.key)}">← ${escapeHtml(parent.name)} 개요로</div>`
     : parentAdv
       ? `<div class="back-link" data-advkey="${escapeHtml(parentAdv.key)}">← ${escapeHtml(parentAdv.name)} 개요로</div>`
       : "";
   const subtitle = combination
-    ? `조합 해금 · ${escapeHtml(unlockText)} · 스킬 ${p.skillCount}개`
+    ? `히든 퍼크 · ${escapeHtml(unlockText)} · 스킬 ${p.skillCount}개`
+    : p.baseDisplay
+    ? `베이스 퍼크 · 스킬 ${p.skillCount}개`
     : p.isStatic
     ? `정적 퍼크 · 최대 Lv20 · 스킬 ${p.skillCount}개`
     : parentName
-      ? `${escapeHtml(parentName)} Lv${p.unlockLevel ?? "?"} 해금 · 스킬 ${p.skillCount}개`
+      ? `${escapeHtml(parentName)} Lv${p.unlockLevel ?? "?"} 해금${achievementUnlockText} · 스킬 ${p.skillCount}개`
       : `독립 퍼크 · 스킬 ${p.skillCount}개`;
 
   const descLines = p.descriptions.map(d =>
@@ -683,7 +714,7 @@ function renderAdvDetail(key) {
     </div>
 
     <div class="section-title">설명</div>
-    <div class="desc-line">${escapeHtml(p.role || (p.isStatic ? "베이스 퍼크 트리와 별도로 운영되는 정적 퍼크입니다." : ""))}</div>
+    <div class="desc-line">${escapeHtml(p.role || (p.baseDisplay ? "" : p.isStatic ? "베이스 퍼크 트리와 별도로 운영되는 정적 퍼크입니다." : ""))}</div>
 
     <div class="section-title">세부 효과 (게임 내 텍스트)</div>
     ${descNote}
@@ -840,7 +871,7 @@ function buildSearchIndex() {
       navKey: adv.key,
       ownKey: adv.key,
       name: adv.name,
-      sub: adv.isStatic ? "정적 퍼크" : `전직 퍼크 · ${parent ? parent.name : "독립"}`,
+      sub: adv.baseDisplay ? "베이스 퍼크" : adv.isStatic ? "정적 퍼크" : `전직 퍼크 · ${parent ? parent.name : "독립"}`,
       search: buildSearchCorpus(adv, parent || { name: "" }),
     });
     for (const s of adv.skills) {
