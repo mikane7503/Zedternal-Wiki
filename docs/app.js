@@ -82,9 +82,9 @@ const PATCH_NOTES = [
   {
     date: "2026-10-05",
     items: [
-      "패스트볼·골키퍼·소원술사 퍼크를 추가하고 서포트 Lv20·파이어버그 Lv10·서바이벌리스트 Lv15 전직으로 배치",
-      "도박꾼을 자본가 전직에서 상시 선택 가능한 베이스 퍼크로 이동",
-      "타이쿤 해금을 서포트 Lv5와 도쉬 지출 없이 5웨이브 연속 완료 조건으로 수정",
+      "퍼크 트리를 운영 서버 KFZedternalUnlimited.ini의 활성 PerkUnlockRules 43개 기준으로 재작성",
+      "자본가 전직을 도박꾼 Lv10, 웨이브 도박꾼 Lv5, 타이쿤 Lv15로 동기화하고 비활성 규칙 퍼크를 목록에서 제외",
+      "유령·지킬 & 하이드의 숨겨진 퍼크 해금 조건을 운영 INI에 맞춤",
       "자본가와 엔지니어를 베이스 퍼크와 같은 목록 형식으로 표시하고 정적 퍼크 문구 제거",
       "현재 장착 무기에 적용 중인 보너스 요약과 전체 누적 능력치 패널 추가 (ToggleStats 또는 mutate stats)",
       "지킬 & 하이드의 이동·재장전 패시브를 레벨당 +1%, Lv20 +20%로 수정",
@@ -382,10 +382,10 @@ function renderSidebar() {
   sidebar.appendChild(renderWeaponAuroraBox());
   const combinationPerks = DATA.advancedPerks.filter(isCombinationUnlocked);
   if (combinationPerks.length) sidebar.appendChild(renderCombinationPerksBox(combinationPerks));
-  const baseDisplayKeys = new Set(["Gambler", "Capitalist", "Engineer"]);
+  const baseDisplayKeys = new Set(["Capitalist", "Engineer"]);
   const baseDisplayPerks = [
     ...DATA.basePerks,
-    ...["Gambler", "Capitalist", "Engineer"]
+    ...["Capitalist", "Engineer"]
       .map(key => ADV_BY_KEY[key])
       .filter(Boolean),
   ];
@@ -786,6 +786,10 @@ function onLevelSlide(e) {
 
 function formatByUnit(value, unit) {
   if (typeof value !== "number" || Number.isNaN(value)) return String(value);
+  if (unit === "armor") {
+    const sign = value >= 0 ? "+" : "";
+    return `${sign}${trimNum(value)} AP`;
+  }
   if (unit === "percent") {
     const pct = value * 100;
     const s = trimNum(pct);

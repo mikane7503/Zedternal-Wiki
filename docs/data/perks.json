@@ -33,11 +33,11 @@
     {
      "key": "Cfg_HealthFlat",
      "label": "체력 Flat",
-     "value": 5.0,
+     "value": 5,
      "unit": "count",
      "display": "5",
-     "lv10": 50.0,
-     "lv20": 100.0,
+     "lv10": 50,
+     "lv20": 100,
      "lv10Display": "50",
      "lv20Display": "100"
     }
@@ -55,6 +55,11 @@
      "level": 5,
      "perk": "Bulwark",
      "name": "불워크"
+    },
+    {
+     "level": 5,
+     "perk": "Goliath",
+     "name": "골리앗"
     },
     {
      "level": 10,
@@ -554,7 +559,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%"
     }
@@ -788,18 +793,18 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%"
     },
     {
      "key": "Cfg_Health",
      "label": "체력",
-     "value": 2.0,
+     "value": 2,
      "unit": "count",
      "display": "2",
-     "lv10": 20.0,
-     "lv20": 40.0,
+     "lv10": 20,
+     "lv20": 40,
      "lv10Display": "20",
      "lv20Display": "40"
     },
@@ -1723,8 +1728,8 @@
      "value": 0.1,
      "unit": "percent",
      "display": "+10%",
-     "lv10": 1.0,
-     "lv20": 2.0,
+     "lv10": 1,
+     "lv20": 2,
      "lv10Display": "+100%",
      "lv20Display": "+200%"
     }
@@ -1937,7 +1942,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%"
     },
@@ -1959,7 +1964,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%"
     }
@@ -2194,7 +2199,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%"
     },
@@ -2476,8 +2481,8 @@
      "value": 0.1,
      "unit": "percent",
      "display": "+10%",
-     "lv10": 1.0,
-     "lv20": 2.0,
+     "lv10": 1,
+     "lv20": 2,
      "lv10Display": "+100%",
      "lv20Display": "+200%",
      "scaling": true
@@ -2488,8 +2493,8 @@
      "value": 0.1,
      "unit": "percent",
      "display": "+10%",
-     "lv10": 1.0,
-     "lv20": 2.0,
+     "lv10": 1,
+     "lv20": 2,
      "lv10Display": "+100%",
      "lv20Display": "+200%",
      "scaling": true
@@ -2857,7 +2862,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 밸런스 패치(2026-07-07), 구 0.010000 (엔진 클램프 0.3 상한 존재); 밸런스 패치(2026-07-07), 구 0.010000 (엔진 클램프 0.3 상한 존재)",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -2960,11 +2964,11 @@
     {
      "key": "NearbyEnemyRadius",
      "label": "근처 적 범위",
-     "value": 500.0,
+     "value": 500,
      "unit": "distance",
      "display": "500",
-     "lv10": 500.0,
-     "lv20": 500.0,
+     "lv10": 500,
+     "lv20": 500,
      "lv10Display": "500",
      "lv20Display": "500",
      "scaling": false,
@@ -3025,11 +3029,11 @@
     {
      "key": "RiotLinger",
      "label": "리어트 잔류",
-     "value": 3.0,
+     "value": 3,
      "unit": "seconds",
      "display": "3초",
-     "lv10": 3.0,
-     "lv20": 3.0,
+     "lv10": 3,
+     "lv20": 3,
      "lv10Display": "3초",
      "lv20Display": "3초",
      "scaling": false,
@@ -3155,14 +3159,14 @@
       {
        "key": "ChargeDamage",
        "label": "충전 피해량",
-       "value": 2.0,
+       "value": 2,
        "unit": "percent",
        "display": "+200%"
       },
       {
        "key": "ChargeWindow",
        "label": "충전 시간창",
-       "value": 1.0,
+       "value": 1,
        "unit": "seconds",
        "display": "1초"
       },
@@ -3223,14 +3227,14 @@
       {
        "key": "PenetrationBonus",
        "label": "관통력 보너스",
-       "value": 2.0,
+       "value": 2,
        "unit": "percent",
        "display": "+200%"
       },
       {
        "key": "PenetrationBonus",
        "label": "관통력 보너스",
-       "value": 3.0,
+       "value": 3,
        "unit": "percent",
        "display": "+300%"
       }
@@ -3373,14 +3377,14 @@
       {
        "key": "StackDuration",
        "label": "스택 지속시간",
-       "value": 6.0,
+       "value": 6,
        "unit": "seconds",
        "display": "6초"
       },
       {
        "key": "StackDuration",
        "label": "스택 지속시간",
-       "value": 9.0,
+       "value": 9,
        "unit": "seconds",
        "display": "9초"
       }
@@ -3420,14 +3424,14 @@
       {
        "key": "InvincibilityDuration",
        "label": "무적 지속시간",
-       "value": 15.0,
+       "value": 15,
        "unit": "seconds",
        "display": "15초"
       },
       {
        "key": "InvincibilityDuration",
        "label": "무적 지속시간",
-       "value": 15.0,
+       "value": 15,
        "unit": "seconds",
        "display": "15초"
       }
@@ -3621,7 +3625,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.040→0.025→0.0125; 구 0.020→0.015→0.0075; 구 0.020000; 구 0.300000; 구 0.200000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/riot.png"
@@ -3648,7 +3651,7 @@
      "unit": "percent",
      "display": "-5%",
      "lv10": -0.5,
-     "lv20": -1.0,
+     "lv20": -1,
      "lv10Display": "-50%",
      "lv20Display": "-100%",
      "scaling": true
@@ -3660,7 +3663,7 @@
      "unit": "percent",
      "display": "-5%",
      "lv10": -0.5,
-     "lv20": -1.0,
+     "lv20": -1,
      "lv10Display": "-50%",
      "lv20Display": "-100%",
      "scaling": true
@@ -3672,7 +3675,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%",
      "scaling": true
@@ -4147,7 +4150,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100000; 구 0.100000; 구 0.100000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/voodoo.png"
@@ -4197,11 +4199,11 @@
     {
      "key": "DeathwaveInterval",
      "label": "Deathwave 간격",
-     "value": 60.0,
+     "value": 60,
      "unit": "seconds",
      "display": "60초",
-     "lv10": 60.0,
-     "lv20": 60.0,
+     "lv10": 60,
+     "lv20": 60,
      "lv10Display": "60초",
      "lv20Display": "60초",
      "scaling": false,
@@ -4210,11 +4212,11 @@
     {
      "key": "DeathwaveRadius",
      "label": "Deathwave 범위",
-     "value": 200.0,
+     "value": 200,
      "unit": "distance",
      "display": "200",
-     "lv10": 200.0,
-     "lv20": 200.0,
+     "lv10": 200,
+     "lv20": 200,
      "lv10Display": "200",
      "lv20Display": "200",
      "scaling": false,
@@ -4275,11 +4277,11 @@
     {
      "key": "RadiusBonus",
      "label": "범위 보너스",
-     "value": 50.0,
+     "value": 50,
      "unit": "distance",
      "display": "50",
-     "lv10": 50.0,
-     "lv20": 50.0,
+     "lv10": 50,
+     "lv20": 50,
      "lv10Display": "50",
      "lv20Display": "50",
      "scaling": false,
@@ -4288,11 +4290,11 @@
     {
      "key": "RadiusBonus",
      "label": "범위 보너스",
-     "value": 100.0,
+     "value": 100,
      "unit": "distance",
      "display": "100",
-     "lv10": 100.0,
-     "lv20": 100.0,
+     "lv10": 100,
+     "lv20": 100,
      "lv10Display": "100",
      "lv20Display": "100",
      "scaling": false,
@@ -4301,11 +4303,11 @@
     {
      "key": "CooldownReduction",
      "label": "재사용 대기시간 감소",
-     "value": 10.0,
+     "value": 10,
      "unit": "percent",
      "display": "+1000%",
-     "lv10": 10.0,
-     "lv20": 10.0,
+     "lv10": 10,
+     "lv20": 10,
      "lv10Display": "+1000%",
      "lv20Display": "+1000%",
      "scaling": false,
@@ -4314,11 +4316,11 @@
     {
      "key": "CooldownReduction",
      "label": "재사용 대기시간 감소",
-     "value": 20.0,
+     "value": 20,
      "unit": "percent",
      "display": "+2000%",
-     "lv10": 20.0,
-     "lv20": 20.0,
+     "lv10": 20,
+     "lv20": 20,
      "lv10Display": "+2000%",
      "lv20Display": "+2000%",
      "scaling": false,
@@ -4457,11 +4459,11 @@
     {
      "key": "HellgateRadiusBonus",
      "label": "Hellgate 범위 보너스",
-     "value": 100.0,
+     "value": 100,
      "unit": "distance",
      "display": "100",
-     "lv10": 100.0,
-     "lv20": 100.0,
+     "lv10": 100,
+     "lv20": 100,
      "lv10Display": "100",
      "lv20Display": "100",
      "scaling": false,
@@ -4470,11 +4472,11 @@
     {
      "key": "HellgateRadiusBonus",
      "label": "Hellgate 범위 보너스",
-     "value": 200.0,
+     "value": 200,
      "unit": "distance",
      "display": "200",
-     "lv10": 200.0,
-     "lv20": 200.0,
+     "lv10": 200,
+     "lv20": 200,
      "lv10Display": "200",
      "lv20Display": "200",
      "scaling": false,
@@ -4716,7 +4718,6 @@
    "grade": "S",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/diablo.png"
@@ -4724,16 +4725,20 @@
   {
    "key": "Haunted",
    "name": "유령",
-   "parentPerk": "Berserker",
+   "parentPerk": "Firebug",
    "unlockLevel": null,
    "unlockRequirements": [
     {
-     "perk": "Berserker",
-     "level": 10
+     "perk": "Firebug",
+     "level": 5
     },
     {
-     "perk": "FieldMedic",
-     "level": 10
+     "perk": "Demolitionist",
+     "level": 5
+    },
+    {
+     "perk": "Survivalist",
+     "level": 5
     }
    ],
    "isCombinationUnlocked": true,
@@ -4783,11 +4788,11 @@
     {
      "key": "ExplosionDamageMultiplier",
      "label": "폭발 피해량 배율",
-     "value": 2.0,
+     "value": 2,
      "unit": "multiplier",
      "display": "×2",
-     "lv10": 2.0,
-     "lv20": 2.0,
+     "lv10": 2,
+     "lv20": 2,
      "lv10Display": "×2",
      "lv20Display": "×2",
      "scaling": false,
@@ -4822,11 +4827,11 @@
     {
      "key": "DisasterWarningDuration",
      "label": "Disaster Warning 지속시간",
-     "value": 2.0,
+     "value": 2,
      "unit": "seconds",
      "display": "2초",
-     "lv10": 2.0,
-     "lv20": 2.0,
+     "lv10": 2,
+     "lv20": 2,
      "lv10Display": "2초",
      "lv20Display": "2초",
      "scaling": false,
@@ -4868,7 +4873,6 @@
    "grade": "?",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/haunted.png"
@@ -4876,9 +4880,14 @@
   {
    "key": "Gambler",
    "name": "도박꾼",
-   "parentPerk": null,
-   "unlockLevel": null,
-   "unlockRequirements": [],
+   "parentPerk": "Capitalist",
+   "unlockLevel": 10,
+   "unlockRequirements": [
+    {
+     "perk": "Capitalist",
+     "level": 10
+    }
+   ],
    "isCombinationUnlocked": false,
    "isStatic": false,
    "hasIniConfig": true,
@@ -5058,14 +5067,14 @@
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 90.0,
+       "value": 90,
        "unit": "currency",
        "display": "90 도쉬"
       },
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 150.0,
+       "value": 150,
        "unit": "currency",
        "display": "150 도쉬"
       }
@@ -5138,14 +5147,14 @@
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 90.0,
+       "value": 90,
        "unit": "currency",
        "display": "90 도쉬"
       },
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 150.0,
+       "value": 150,
        "unit": "currency",
        "display": "150 도쉬"
       }
@@ -5232,14 +5241,14 @@
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 100.0,
+       "value": 100,
        "unit": "currency",
        "display": "100 도쉬"
       },
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 200.0,
+       "value": 200,
        "unit": "currency",
        "display": "200 도쉬"
       }
@@ -5359,14 +5368,14 @@
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 90.0,
+       "value": 90,
        "unit": "currency",
        "display": "90 도쉬"
       },
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 150.0,
+       "value": 150,
        "unit": "currency",
        "display": "150 도쉬"
       }
@@ -5391,21 +5400,19 @@
    "grade": "B",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
-   "icon": "icons/gambler.png",
-   "baseDisplay": true
+   "icon": "icons/gambler.png"
   },
   {
    "key": "Tycoon",
    "name": "타이쿤",
-   "parentPerk": "Support",
-   "unlockLevel": 5,
+   "parentPerk": "Capitalist",
+   "unlockLevel": 15,
    "unlockRequirements": [
     {
-     "perk": "Support",
-     "level": 5
+     "perk": "Capitalist",
+     "level": 15
     }
    ],
    "isCombinationUnlocked": false,
@@ -5415,11 +5422,11 @@
     {
      "key": "RoundStipend",
      "label": "라운드 지원금",
-     "value": 20.0,
+     "value": 20,
      "unit": "count",
      "display": "20",
-     "lv10": 200.0,
-     "lv20": 400.0,
+     "lv10": 200,
+     "lv20": 400,
      "lv10Display": "200",
      "lv20Display": "400",
      "scaling": true
@@ -5656,14 +5663,14 @@
       {
        "key": "HODLDuration",
        "label": "존버 지속시간",
-       "value": 600.0,
+       "value": 600,
        "unit": "seconds",
        "display": "600초"
       },
       {
        "key": "HODLDuration",
        "label": "존버 지속시간",
-       "value": 450.0,
+       "value": 450,
        "unit": "seconds",
        "display": "450초"
       },
@@ -5914,11 +5921,9 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "구 0.200000 (복리 20%→10%, KOR 기술값 일치)",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
-   "icon": "icons/tycoon.png",
-   "unlockAchievement": "NoTrader5Waves"
+   "icon": "icons/tycoon.png"
   },
   {
    "key": "SpecialAgent",
@@ -6334,7 +6339,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.030000; 구 0.030000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/specialagent.png"
@@ -6621,28 +6625,28 @@
       {
        "key": "MarkRadius",
        "label": "표식 범위",
-       "value": 800.0,
+       "value": 800,
        "unit": "distance",
        "display": "800"
       },
       {
        "key": "MarkRadius",
        "label": "표식 범위",
-       "value": 1200.0,
+       "value": 1200,
        "unit": "distance",
        "display": "1,200"
       },
       {
        "key": "MarkDuration",
        "label": "표식 지속시간",
-       "value": 6.0,
+       "value": 6,
        "unit": "seconds",
        "display": "6초"
       },
       {
        "key": "MarkDuration",
        "label": "표식 지속시간",
-       "value": 8.0,
+       "value": 8,
        "unit": "seconds",
        "display": "8초"
       },
@@ -6902,14 +6906,14 @@
       {
        "key": "StackDuration",
        "label": "스택 지속시간",
-       "value": 4.0,
+       "value": 4,
        "unit": "seconds",
        "display": "4초"
       },
       {
        "key": "StackDuration",
        "label": "스택 지속시간",
-       "value": 6.0,
+       "value": 6,
        "unit": "seconds",
        "display": "6초"
       }
@@ -6934,7 +6938,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000; 밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -7072,11 +7075,11 @@
     {
      "key": "CloseRangeDistSq",
      "label": "근접 사거리 거리 제곱",
-     "value": 250000.0,
+     "value": 250000,
      "unit": "distance",
      "display": "250,000",
-     "lv10": 250000.0,
-     "lv20": 250000.0,
+     "lv10": 250000,
+     "lv20": 250000,
      "lv10Display": "250,000",
      "lv20Display": "250,000",
      "scaling": false,
@@ -7164,7 +7167,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.050→0.025→0.0125; 구 0.020000; 구 0.020000; 구 0.015000; 구 0.030000; 구 0.040→0.020→0.010; 구 0.010→0.005→0.0025",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/metronome.png"
@@ -7278,11 +7280,11 @@
     {
      "key": "HeadshotExtensionCooldown",
      "label": "헤드샷 연장 재사용 대기시간",
-     "value": 8.0,
+     "value": 8,
      "unit": "seconds",
      "display": "8초",
-     "lv10": 8.0,
-     "lv20": 8.0,
+     "lv10": 8,
+     "lv20": 8,
      "lv10Display": "8초",
      "lv20Display": "8초",
      "scaling": false,
@@ -7304,11 +7306,11 @@
     {
      "key": "KillExtensionSeconds",
      "label": "처치 연장 Seconds",
-     "value": 2.0,
+     "value": 2,
      "unit": "seconds",
      "display": "2초",
-     "lv10": 2.0,
-     "lv20": 2.0,
+     "lv10": 2,
+     "lv20": 2,
      "lv10Display": "2초",
      "lv20Display": "2초",
      "scaling": false,
@@ -7670,14 +7672,14 @@
       {
        "key": "CloakBonus",
        "label": "은신 보너스",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
       {
        "key": "CloakBonus",
        "label": "은신 보너스",
-       "value": 2.0,
+       "value": 2,
        "unit": "percent",
        "display": "+200%"
       }
@@ -7702,7 +7704,6 @@
    "grade": "SS",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.400000; 구 0.300000; ZED타임 무한연장 완화(2026-07-05), 구 0.300000 -- 카운터 우회 발동이라 3배 이상 축소; 구 0.600000; 구 0.500000; ZED타임 무한연장 완화(2026-07-05), 구 3.000000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-10",
     "type": "nerf"
@@ -7731,8 +7732,8 @@
      "value": 0.2,
      "unit": "percent",
      "display": "+20%",
-     "lv10": 2.0,
-     "lv20": 4.0,
+     "lv10": 2,
+     "lv20": 4,
      "lv10Display": "+200%",
      "lv20Display": "+400%",
      "scaling": true
@@ -7818,7 +7819,7 @@
       {
        "key": "DamageOverTime",
        "label": "지속 피해량",
-       "value": 3.0,
+       "value": 3,
        "unit": "percent",
        "display": "+300%"
       }
@@ -7851,7 +7852,7 @@
       {
        "key": "Armor",
        "label": "방어구",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       }
@@ -8074,7 +8075,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.400000; 만렙(Lv20) 50%로 너프, 구 0.050000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/maniac.png"
@@ -8302,14 +8302,14 @@
       {
        "key": "DamageOverTime",
        "label": "지속 피해량",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
       {
        "key": "DamageOverTime",
        "label": "지속 피해량",
-       "value": 2.0,
+       "value": 2,
        "unit": "percent",
        "display": "+200%"
       }
@@ -8349,7 +8349,7 @@
       {
        "key": "AmmoRestore",
        "label": "탄약 복구",
-       "value": 0.0,
+       "value": 0,
        "unit": "percent",
        "display": "+0%"
       },
@@ -8407,7 +8407,7 @@
       {
        "key": "InfernoDamageCap",
        "label": "지옥불 피해량 상한",
-       "value": 75.0,
+       "value": 75,
        "unit": "count",
        "display": "75"
       },
@@ -8578,7 +8578,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.040000; 구 0.050000; 구 0.250000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/forgewarden.png"
@@ -8737,7 +8736,6 @@
    "grade": "S",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [
     {
@@ -8760,7 +8758,7 @@
     }
    ],
    "isCombinationUnlocked": false,
-   "isStatic": true,
+   "isStatic": false,
    "hasIniConfig": false,
    "passiveStats": [],
    "fixedStats": [],
@@ -8883,7 +8881,6 @@
    "grade": "B",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/technician.png"
@@ -8900,7 +8897,7 @@
     }
    ],
    "isCombinationUnlocked": false,
-   "isStatic": true,
+   "isStatic": false,
    "hasIniConfig": false,
    "passiveStats": [],
    "fixedStats": [],
@@ -9005,7 +9002,6 @@
    "grade": "A",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/hacker.png"
@@ -9066,11 +9062,11 @@
     {
      "key": "Level10AuraHealing",
      "label": "레벨 10 오라 치유",
-     "value": 1.0,
+     "value": 1,
      "unit": "count",
      "display": "1",
-     "lv10": 1.0,
-     "lv20": 1.0,
+     "lv10": 1,
+     "lv20": 1,
      "lv10Display": "1",
      "lv20Display": "1",
      "scaling": false,
@@ -9092,11 +9088,11 @@
     {
      "key": "AllyProximityRange",
      "label": "아군 근접도 사거리",
-     "value": 600.0,
+     "value": 600,
      "unit": "distance",
      "display": "600",
-     "lv10": 600.0,
-     "lv20": 600.0,
+     "lv10": 600,
+     "lv20": 600,
      "lv10Display": "600",
      "lv20Display": "600",
      "scaling": false,
@@ -9404,7 +9400,7 @@
       {
        "key": "AmmoDivider",
        "label": "탄약 나눔값",
-       "value": 30.0,
+       "value": 30,
        "unit": "count",
        "display": "30"
       },
@@ -9476,7 +9472,7 @@
       {
        "key": "AllyRadiusSQ",
        "label": "아군 범위 제곱",
-       "value": 640000.0,
+       "value": 640000,
        "unit": "distance",
        "display": "640,000"
       },
@@ -9515,7 +9511,6 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.050000→0.030(이전)→0.015; 구 0.015000; 구 0.020000; 구 0.100000(확률, 유지)",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/archangel.png"
@@ -9562,11 +9557,11 @@
     {
      "key": "SiphonDuration",
      "label": "흡수 지속시간",
-     "value": 4.0,
+     "value": 4,
      "unit": "seconds",
      "display": "4초",
-     "lv10": 40.0,
-     "lv20": 80.0,
+     "lv10": 40,
+     "lv20": 80,
      "lv10Display": "40초",
      "lv20Display": "80초",
      "scaling": true
@@ -9654,11 +9649,11 @@
     {
      "key": "HemorrhagePulseDamage",
      "label": "출혈 파동 피해량",
-     "value": 75.0,
+     "value": 75,
      "unit": "count",
      "display": "75",
-     "lv10": 75.0,
-     "lv20": 75.0,
+     "lv10": 75,
+     "lv20": 75,
      "lv10Display": "75",
      "lv20Display": "75",
      "scaling": false,
@@ -9667,11 +9662,11 @@
     {
      "key": "HemorrhagePulseRadius",
      "label": "출혈 파동 범위",
-     "value": 400.0,
+     "value": 400,
      "unit": "distance",
      "display": "400",
-     "lv10": 400.0,
-     "lv20": 400.0,
+     "lv10": 400,
+     "lv20": 400,
      "lv10Display": "400",
      "lv20Display": "400",
      "scaling": false,
@@ -9706,11 +9701,11 @@
     {
      "key": "DoubleLifeStealDuration",
      "label": "2배 생명 흡수 지속시간",
-     "value": 8.0,
+     "value": 8,
      "unit": "seconds",
      "display": "8초",
-     "lv10": 8.0,
-     "lv20": 8.0,
+     "lv10": 8,
+     "lv20": 8,
      "lv10Display": "8초",
      "lv20Display": "8초",
      "scaling": false,
@@ -9842,14 +9837,14 @@
       {
        "key": "ShieldDuration",
        "label": "보호막 지속시간",
-       "value": 6.0,
+       "value": 6,
        "unit": "seconds",
        "display": "6초"
       },
       {
        "key": "ShieldDuration",
        "label": "보호막 지속시간",
-       "value": 10.0,
+       "value": 10,
        "unit": "seconds",
        "display": "10초"
       },
@@ -9882,21 +9877,21 @@
       {
        "key": "SpreadRadius",
        "label": "탄퍼짐 범위",
-       "value": 150.0,
+       "value": 150,
        "unit": "distance",
        "display": "150"
       },
       {
        "key": "SpreadRadius",
        "label": "탄퍼짐 범위",
-       "value": 250.0,
+       "value": 250,
        "unit": "distance",
        "display": "250"
       },
       {
        "key": "SpreadInterval",
        "label": "탄퍼짐 간격",
-       "value": 2.0,
+       "value": 2,
        "unit": "seconds",
        "display": "2초"
       },
@@ -9929,14 +9924,14 @@
       {
        "key": "BondDuration",
        "label": "결속 지속시간",
-       "value": 10.0,
+       "value": 10,
        "unit": "seconds",
        "display": "10초"
       },
       {
        "key": "BondDuration",
        "label": "결속 지속시간",
-       "value": 15.0,
+       "value": 15,
        "unit": "seconds",
        "display": "15초"
       },
@@ -10009,14 +10004,14 @@
       {
        "key": "FieldRadius",
        "label": "장 범위",
-       "value": 300.0,
+       "value": 300,
        "unit": "distance",
        "display": "300"
       },
       {
        "key": "FieldRadius",
        "label": "장 범위",
-       "value": 400.0,
+       "value": 400,
        "unit": "distance",
        "display": "400"
       },
@@ -10044,14 +10039,14 @@
       {
        "key": "HealPercent",
        "label": "치유량 비율",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
       {
        "key": "StationaryDelay",
        "label": "정지 지연",
-       "value": 2.0,
+       "value": 2,
        "unit": "count",
        "display": "2"
       }
@@ -10110,14 +10105,14 @@
       {
        "key": "BurstRadius",
        "label": "버스트 범위",
-       "value": 125.0,
+       "value": 125,
        "unit": "distance",
        "display": "125"
       },
       {
        "key": "BurstRadius",
        "label": "버스트 범위",
-       "value": 200.0,
+       "value": 200,
        "unit": "distance",
        "display": "200"
       }
@@ -10190,14 +10185,14 @@
       {
        "key": "HealRadius",
        "label": "치유 범위",
-       "value": 800.0,
+       "value": 800,
        "unit": "distance",
        "display": "800"
       },
       {
        "key": "HealRadius",
        "label": "치유 범위",
-       "value": 1200.0,
+       "value": 1200,
        "unit": "distance",
        "display": "1,200"
       }
@@ -10222,7 +10217,6 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.015000; 구 0.040000; 구 0.500000; 광역피해 남발 축소(2026-07-02), 구 150.000000; 구 800.000000; 구 1.000000; 구 0.500000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/parasite.png"
@@ -10297,11 +10291,11 @@
     {
      "key": "NeuralNetworkRadius",
      "label": "신경 네트워크 범위",
-     "value": 500.0,
+     "value": 500,
      "unit": "distance",
      "display": "500",
-     "lv10": 500.0,
-     "lv20": 500.0,
+     "lv10": 500,
+     "lv20": 500,
      "lv10Display": "500",
      "lv20Display": "500",
      "scaling": false,
@@ -10323,11 +10317,11 @@
     {
      "key": "SwarmCollectiveDuration",
      "label": "무리 집단 지속시간",
-     "value": 8.0,
+     "value": 8,
      "unit": "seconds",
      "display": "8초",
-     "lv10": 8.0,
-     "lv20": 8.0,
+     "lv10": 8,
+     "lv20": 8,
      "lv10Display": "8초",
      "lv20Display": "8초",
      "scaling": false,
@@ -10375,11 +10369,11 @@
     {
      "key": "SwarmCooldownSeconds",
      "label": "무리 재사용 대기시간 Seconds",
-     "value": 45.0,
+     "value": 45,
      "unit": "seconds",
      "display": "45초",
-     "lv10": 45.0,
-     "lv20": 45.0,
+     "lv10": 45,
+     "lv20": 45,
      "lv10Display": "45초",
      "lv20Display": "45초",
      "scaling": false,
@@ -10486,7 +10480,7 @@
       {
        "key": "CloakDetectionBonus",
        "label": "은신 탐지 보너스",
-       "value": 2.0,
+       "value": 2,
        "unit": "percent",
        "display": "+200%"
       }
@@ -10554,14 +10548,14 @@
       {
        "key": "HeadshotRadius",
        "label": "헤드샷 범위",
-       "value": 300.0,
+       "value": 300,
        "unit": "distance",
        "display": "300"
       },
       {
        "key": "BodyRadius",
        "label": "몸통 범위",
-       "value": 200.0,
+       "value": 200,
        "unit": "distance",
        "display": "200"
       }
@@ -10681,7 +10675,7 @@
       {
        "key": "Radius",
        "label": "범위",
-       "value": 1000.0,
+       "value": 1000,
        "unit": "distance",
        "display": "1,000"
       }
@@ -10797,7 +10791,6 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.010000; 구 0.020000; 구 0.010000; 광역피해 남발 축소(2026-07-02, 스택상한 불명이라 보수적으로 추가축소), 구 0.025000(그 이전 구 0.050000); 구 1000.000000; 구 0.200000; 형제 스탯(SwarmDamage/Movement) 대비 과도해 추가축소(2026-07-02), 구 0.250000(그 이전 구 0.500000); 구 0.150000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/hivemind.png"
@@ -10848,7 +10841,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%",
      "scaling": true
@@ -10897,11 +10890,11 @@
     {
      "key": "Level20KnockdownBonus",
      "label": "레벨 20 넉다운 보너스",
-     "value": 50.0,
+     "value": 50,
      "unit": "count",
      "display": "50",
-     "lv10": 50.0,
-     "lv20": 50.0,
+     "lv10": 50,
+     "lv20": 50,
      "lv10Display": "50",
      "lv20Display": "50",
      "scaling": false,
@@ -11439,7 +11432,6 @@
    "grade": "SS",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.0175; 구 0.500000; 구 0.300000; 구 0.250000; 구 100.000000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -11495,11 +11487,11 @@
     {
      "key": "HydeBodyScale",
      "label": "Hyde 몸통 Scale",
-     "value": 2.0,
+     "value": 2,
      "unit": "count",
      "display": "2",
-     "lv10": 2.0,
-     "lv20": 2.0,
+     "lv10": 2,
+     "lv20": 2,
      "lv10Display": "2",
      "lv20Display": "2",
      "scaling": false,
@@ -11547,11 +11539,11 @@
     {
      "key": "HydeAoERadius",
      "label": "Hyde Ao E 범위",
-     "value": 800.0,
+     "value": 800,
      "unit": "distance",
      "display": "800",
-     "lv10": 800.0,
-     "lv20": 800.0,
+     "lv10": 800,
+     "lv20": 800,
      "lv10Display": "800",
      "lv20Display": "800",
      "scaling": false,
@@ -11612,11 +11604,11 @@
     {
      "key": "HydeDurationBase",
      "label": "하이드 기본 지속시간",
-     "value": 10.0,
+     "value": 10,
      "unit": "seconds",
      "display": "10초",
-     "lv10": 10.0,
-     "lv20": 10.0,
+     "lv10": 10,
+     "lv20": 10,
      "lv10Display": "10초",
      "lv20Display": "10초",
      "scaling": false,
@@ -11625,11 +11617,11 @@
     {
      "key": "HydeDurationLv10",
      "label": "하이드 지속시간",
-     "value": 20.0,
+     "value": 20,
      "unit": "seconds",
      "display": "20초",
-     "lv10": 20.0,
-     "lv20": 20.0,
+     "lv10": 20,
+     "lv20": 20,
      "lv10Display": "20초",
      "lv20Display": "20초",
      "scaling": false,
@@ -11673,11 +11665,12 @@
    ],
    "skills": [],
    "skillCount": 0,
-   "verdict": null,
+   "verdict": {
+    "grade": "?"
+   },
    "grade": "?",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/jekyllhyde.png"
@@ -11809,7 +11802,7 @@
       {
        "key": "ZedTimeExt",
        "label": "제드 시간 연장",
-       "value": 0.0,
+       "value": 0,
        "unit": "seconds",
        "display": "0초"
       },
@@ -12001,14 +11994,14 @@
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 3.0,
+       "value": 3,
        "unit": "currency",
        "display": "3 도쉬"
       },
       {
        "key": "Dosh",
        "label": "도쉬",
-       "value": 6.0,
+       "value": 6,
        "unit": "currency",
        "display": "6 도쉬"
       }
@@ -12207,7 +12200,6 @@
    "grade": "B",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/pyrokinetic.png"
@@ -12347,11 +12339,11 @@
     {
      "key": "PhoenixDuration",
      "label": "불사조 지속시간",
-     "value": 10.0,
+     "value": 10,
      "unit": "seconds",
      "display": "10초",
-     "lv10": 10.0,
-     "lv20": 10.0,
+     "lv10": 10,
+     "lv20": 10,
      "lv10Display": "10초",
      "lv20Display": "10초",
      "scaling": false,
@@ -12360,11 +12352,11 @@
     {
      "key": "PhoenixRadius",
      "label": "불사조 범위",
-     "value": 1000.0,
+     "value": 1000,
      "unit": "distance",
      "display": "1,000",
-     "lv10": 1000.0,
-     "lv20": 1000.0,
+     "lv10": 1000,
+     "lv20": 1000,
      "lv10Display": "1,000",
      "lv20Display": "1,000",
      "scaling": false,
@@ -12466,7 +12458,7 @@
       {
        "key": "DoTBonus",
        "label": "보너스",
-       "value": 3.0,
+       "value": 3,
        "unit": "percent",
        "display": "+300%"
       }
@@ -12692,7 +12684,7 @@
       {
        "key": "Damage",
        "label": "피해량",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       }
@@ -12772,7 +12764,7 @@
       {
        "key": "Penetration",
        "label": "관통력",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       }
@@ -12797,7 +12789,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.020000; 구 0.200000; 구 0.050000; 구 0.300000; 구 0.100000; 구 0.080000; 구 0.010000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/cinder.png"
@@ -13314,7 +13305,6 @@
    "grade": "B",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/headhunter.png"
@@ -13598,7 +13588,7 @@
       {
        "key": "Mod",
        "label": "배율",
-       "value": 1.0,
+       "value": 1,
        "unit": "multiplier",
        "display": "×1"
       }
@@ -13649,7 +13639,7 @@
       {
        "key": "PandemicDamageCap",
        "label": "전염병 피해량 상한",
-       "value": 50.0,
+       "value": 50,
        "unit": "count",
        "display": "50"
       },
@@ -13851,7 +13841,6 @@
    "grade": "A",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -14106,7 +14095,6 @@
    "grade": "S",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [
     {
@@ -14370,7 +14358,7 @@
       {
        "key": "DetectionRange",
        "label": "탐지 사거리",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       }
@@ -14436,7 +14424,7 @@
       {
        "key": "DamageBonus",
        "label": "피해량 보너스",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
@@ -14457,14 +14445,14 @@
       {
        "key": "BuffDuration",
        "label": "버프 지속시간",
-       "value": 8.0,
+       "value": 8,
        "unit": "seconds",
        "display": "8초"
       },
       {
        "key": "BuffDuration",
        "label": "버프 지속시간",
-       "value": 10.0,
+       "value": 10,
        "unit": "seconds",
        "display": "10초"
       }
@@ -14649,7 +14637,6 @@
    "grade": "SS",
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.250000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -14838,14 +14825,14 @@
       {
        "key": "BoostDuration",
        "label": "증폭 지속시간",
-       "value": 4.0,
+       "value": 4,
        "unit": "seconds",
        "display": "4초"
       },
       {
        "key": "BoostDuration",
        "label": "증폭 지속시간",
-       "value": 6.0,
+       "value": 6,
        "unit": "seconds",
        "display": "6초"
       }
@@ -14904,14 +14891,14 @@
       {
        "key": "RegenInterval",
        "label": "재생 간격",
-       "value": 6.0,
+       "value": 6,
        "unit": "seconds",
        "display": "6초"
       },
       {
        "key": "RegenInterval",
        "label": "재생 간격",
-       "value": 3.0,
+       "value": 3,
        "unit": "seconds",
        "display": "3초"
       }
@@ -14944,7 +14931,7 @@
       {
        "key": "MagCapMultiplier",
        "label": "탄창 상한 배율",
-       "value": 2.0,
+       "value": 2,
        "unit": "multiplier",
        "display": "×2"
       }
@@ -15104,7 +15091,7 @@
       {
        "key": "BoostDuration",
        "label": "증폭 지속시간",
-       "value": 3.0,
+       "value": 3,
        "unit": "seconds",
        "display": "3초"
       }
@@ -15202,7 +15189,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.350→0.250→0.125",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/scavenger.png"
@@ -15605,14 +15591,14 @@
       {
        "key": "Ammo",
        "label": "탄약",
-       "value": 1.0,
+       "value": 1,
        "unit": "count",
        "display": "1"
       },
       {
        "key": "Ammo",
        "label": "탄약",
-       "value": 2.0,
+       "value": 2,
        "unit": "count",
        "display": "2"
       }
@@ -15703,7 +15689,6 @@
    "grade": "A",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -15756,8 +15741,8 @@
      "value": 0.1,
      "unit": "seconds",
      "display": "0.1초",
-     "lv10": 1.0,
-     "lv20": 2.0,
+     "lv10": 1,
+     "lv20": 2,
      "lv10Display": "1초",
      "lv20Display": "2초",
      "scaling": true
@@ -16161,28 +16146,28 @@
       {
        "key": "Ammo",
        "label": "탄약",
-       "value": 1.0,
+       "value": 1,
        "unit": "count",
        "display": "1"
       },
       {
        "key": "Ammo",
        "label": "탄약",
-       "value": 2.0,
+       "value": 2,
        "unit": "count",
        "display": "2"
       },
       {
        "key": "SpareAmmo",
        "label": "여분 탄약",
-       "value": 1.0,
+       "value": 1,
        "unit": "count",
        "display": "1"
       },
       {
        "key": "SpareAmmo",
        "label": "여분 탄약",
-       "value": 2.0,
+       "value": 2,
        "unit": "count",
        "display": "2"
       }
@@ -16207,7 +16192,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100→0.025→0.0125; 밸런스 패치(2026-07-07), 구 0.125000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-10",
     "type": "nerf"
@@ -16332,7 +16316,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [
     {
@@ -16394,7 +16377,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%",
      "scaling": true
@@ -16790,7 +16773,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.007500; 밸런스 패치(2026-07-07), 구 0.007500; 밸런스 패치(2026-07-07), 구 0.025000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -17132,14 +17114,14 @@
       {
        "key": "RechargeTime",
        "label": "재충전 시간",
-       "value": 20.0,
+       "value": 20,
        "unit": "seconds",
        "display": "20초"
       },
       {
        "key": "RechargeTime",
        "label": "재충전 시간",
-       "value": 12.0,
+       "value": 12,
        "unit": "seconds",
        "display": "12초"
       }
@@ -17271,14 +17253,14 @@
       {
        "key": "Bonus",
        "label": "보너스",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
       {
        "key": "Bonus",
        "label": "보너스",
-       "value": 2.0,
+       "value": 2,
        "unit": "percent",
        "display": "+200%"
       }
@@ -17336,7 +17318,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "260709 버프. 구 0.0175; 구 0.020→0.015→0.0075; 구 0.050→0.030→0.015; 구 1.000000; 구 0.700000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-10",
     "type": "buff"
@@ -17400,11 +17381,11 @@
     {
      "key": "IcicleArrowBonus",
      "label": "고드름 화살 보너스",
-     "value": 2.0,
+     "value": 2,
      "unit": "count",
      "display": "2",
-     "lv10": 2.0,
-     "lv20": 2.0,
+     "lv10": 2,
+     "lv20": 2,
      "lv10Display": "2",
      "lv20Display": "2",
      "scaling": false,
@@ -17559,14 +17540,14 @@
       {
        "key": "CloakDetectionRange",
        "label": "은신 탐지 사거리",
-       "value": 2000.0,
+       "value": 2000,
        "unit": "distance",
        "display": "2,000"
       },
       {
        "key": "CloakDetectionRange",
        "label": "은신 탐지 사거리",
-       "value": 4000.0,
+       "value": 4000,
        "unit": "distance",
        "display": "4,000"
       }
@@ -17658,14 +17639,14 @@
       {
        "key": "ZedTimeExtension",
        "label": "ZED타임 연장",
-       "value": 1.0,
+       "value": 1,
        "unit": "seconds",
        "display": "1초"
       },
       {
        "key": "ZedTimeExtension",
        "label": "ZED타임 연장",
-       "value": 2.0,
+       "value": 2,
        "unit": "seconds",
        "display": "2초"
       }
@@ -17771,14 +17752,14 @@
       {
        "key": "SpareAmmo",
        "label": "여분 탄약",
-       "value": 1.0,
+       "value": 1,
        "unit": "count",
        "display": "1"
       },
       {
        "key": "SpareAmmo",
        "label": "여분 탄약",
-       "value": 2.0,
+       "value": 2,
        "unit": "count",
        "display": "2"
       }
@@ -17850,7 +17831,6 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.007500; 밸런스 패치(2026-07-07), 구 0.0125; 구 0.030000; 구 5.0→3.0→4.0→2.0",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -17949,14 +17929,14 @@
       {
        "key": "Duration",
        "label": "지속시간",
-       "value": 3.0,
+       "value": 3,
        "unit": "seconds",
        "display": "3초"
       },
       {
        "key": "Duration",
        "label": "지속시간",
-       "value": 5.0,
+       "value": 5,
        "unit": "seconds",
        "display": "5초"
       }
@@ -18208,14 +18188,14 @@
       {
        "key": "MagnetRange",
        "label": "자석 사거리",
-       "value": 500.0,
+       "value": 500,
        "unit": "distance",
        "display": "500"
       },
       {
        "key": "MagnetRange",
        "label": "자석 사거리",
-       "value": 1000.0,
+       "value": 1000,
        "unit": "distance",
        "display": "1,000"
       }
@@ -18306,7 +18286,6 @@
    "grade": "SS",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.015000",
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/predator.png"
@@ -18638,56 +18617,56 @@
       {
        "key": "BaseDamage",
        "label": "기본 피해량",
-       "value": 30.0,
+       "value": 30,
        "unit": "count",
        "display": "30"
       },
       {
        "key": "BaseDamage",
        "label": "기본 피해량",
-       "value": 50.0,
+       "value": 50,
        "unit": "count",
        "display": "50"
       },
       {
        "key": "DamagePerMilestone",
        "label": "마일스톤 당 피해량",
-       "value": 20.0,
+       "value": 20,
        "unit": "count",
        "display": "20"
       },
       {
        "key": "DamagePerMilestone",
        "label": "마일스톤 당 피해량",
-       "value": 30.0,
+       "value": 30,
        "unit": "count",
        "display": "30"
       },
       {
        "key": "BaseRadius",
        "label": "기본 범위",
-       "value": 150.0,
+       "value": 150,
        "unit": "distance",
        "display": "150"
       },
       {
        "key": "BaseRadius",
        "label": "기본 범위",
-       "value": 200.0,
+       "value": 200,
        "unit": "distance",
        "display": "200"
       },
       {
        "key": "RadiusPerMilestone",
        "label": "마일스톤 당 범위",
-       "value": 50.0,
+       "value": 50,
        "unit": "distance",
        "display": "50"
       },
       {
        "key": "RadiusPerMilestone",
        "label": "마일스톤 당 범위",
-       "value": 60.0,
+       "value": 60,
        "unit": "distance",
        "display": "60"
       }
@@ -18786,14 +18765,14 @@
       {
        "key": "BurstDamage",
        "label": "버스트 피해량",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
       {
        "key": "BurstDamage",
        "label": "버스트 피해량",
-       "value": 2.0,
+       "value": 2,
        "unit": "percent",
        "display": "+200%"
       }
@@ -18999,7 +18978,6 @@
    "grade": "B",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 밸런스 패치(2026-07-07), 구 0.005000; 구 0.010000; 구 0.005000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -19041,7 +19019,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%",
      "scaling": true
@@ -19076,11 +19054,11 @@
     {
      "key": "FuryModeRateOfFireMult",
      "label": "분노 모드 연사 속도 배율",
-     "value": 1.0,
+     "value": 1,
      "unit": "multiplier",
      "display": "×1",
-     "lv10": 1.0,
-     "lv20": 1.0,
+     "lv10": 1,
+     "lv20": 1,
      "lv10Display": "×1",
      "lv20Display": "×1",
      "scaling": false,
@@ -19102,11 +19080,11 @@
     {
      "key": "FuryModeDuration",
      "label": "분노 모드 지속시간",
-     "value": 8.0,
+     "value": 8,
      "unit": "seconds",
      "display": "8초",
-     "lv10": 8.0,
-     "lv20": 8.0,
+     "lv10": 8,
+     "lv20": 8,
      "lv10Display": "8초",
      "lv20Display": "8초",
      "scaling": false,
@@ -19162,7 +19140,7 @@
       {
        "key": "DamageBonus",
        "label": "피해량 보너스",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
@@ -19249,7 +19227,7 @@
       {
        "key": "StackDuration",
        "label": "스택 지속시간",
-       "value": 2.0,
+       "value": 2,
        "unit": "seconds",
        "display": "2초"
       }
@@ -19348,21 +19326,21 @@
       {
        "key": "InvulnDuration",
        "label": "무적 지속시간",
-       "value": 3.0,
+       "value": 3,
        "unit": "seconds",
        "display": "3초"
       },
       {
        "key": "InvulnDuration",
        "label": "무적 지속시간",
-       "value": 5.0,
+       "value": 5,
        "unit": "seconds",
        "display": "5초"
       },
       {
        "key": "DamageBoostMult",
        "label": "피해량 증폭 배율",
-       "value": 2.0,
+       "value": 2,
        "unit": "multiplier",
        "display": "×2"
       }
@@ -19435,21 +19413,21 @@
       {
        "key": "DamageReflectMult",
        "label": "피해량 반사 배율",
-       "value": 1.0,
+       "value": 1,
        "unit": "multiplier",
        "display": "×1"
       },
       {
        "key": "Cooldown",
        "label": "재사용 대기시간",
-       "value": 30.0,
+       "value": 30,
        "unit": "seconds",
        "display": "30초"
       },
       {
        "key": "ExplosionRadius",
        "label": "폭발 범위",
-       "value": 400.0,
+       "value": 400,
        "unit": "distance",
        "display": "400"
       }
@@ -19489,14 +19467,14 @@
       {
        "key": "BoostDuration",
        "label": "증폭 지속시간",
-       "value": 5.0,
+       "value": 5,
        "unit": "seconds",
        "display": "5초"
       },
       {
        "key": "BoostDuration",
        "label": "증폭 지속시간",
-       "value": 8.0,
+       "value": 8,
        "unit": "seconds",
        "display": "8초"
       },
@@ -19510,7 +19488,7 @@
       {
        "key": "KillWindow",
        "label": "처치 시간창",
-       "value": 10.0,
+       "value": 10,
        "unit": "seconds",
        "display": "10초"
       }
@@ -19535,7 +19513,6 @@
    "grade": "S",
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.025000; 구 0.020000; 구 1.200000(+20%→+10%, 배율의 보너스분만 축소)",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -19682,14 +19659,14 @@
       {
        "key": "PassiveSnare",
        "label": "패시브 속박",
-       "value": 15.0,
+       "value": 15,
        "unit": "percent",
        "display": "+1500%"
       },
       {
        "key": "ToxicSnare",
        "label": "독성 속박",
-       "value": 10.0,
+       "value": 10,
        "unit": "count",
        "display": "10"
       }
@@ -19806,7 +19783,7 @@
       {
        "key": "MaxBonusDamage",
        "label": "최대 보너스 피해량",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       }
@@ -19872,7 +19849,7 @@
       {
        "key": "HealFactor",
        "label": "치유 계수",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
@@ -19962,7 +19939,6 @@
    "grade": "B",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/venomancer.png"
@@ -20013,7 +19989,7 @@
      "unit": "percent",
      "display": "+5%",
      "lv10": 0.5,
-     "lv20": 1.0,
+     "lv20": 1,
      "lv10Display": "+50%",
      "lv20Display": "+100%",
      "scaling": true
@@ -20036,11 +20012,11 @@
     {
      "key": "PoisonDuration",
      "label": "독 지속시간",
-     "value": 5.0,
+     "value": 5,
      "unit": "seconds",
      "display": "5초",
-     "lv10": 5.0,
-     "lv20": 5.0,
+     "lv10": 5,
+     "lv20": 5,
      "lv10Display": "5초",
      "lv20Display": "5초",
      "scaling": false,
@@ -20049,11 +20025,11 @@
     {
      "key": "VenomSpreadChance",
      "label": "맹독 탄퍼짐 확률",
-     "value": 1.0,
+     "value": 1,
      "unit": "percent",
      "display": "+100%",
-     "lv10": 1.0,
-     "lv20": 1.0,
+     "lv10": 1,
+     "lv20": 1,
      "lv10Display": "+100%",
      "lv20Display": "+100%",
      "scaling": false,
@@ -20154,14 +20130,14 @@
       {
        "key": "CurseDamageMultiplier",
        "label": "저주 피해량 배율",
-       "value": 1.0,
+       "value": 1,
        "unit": "multiplier",
        "display": "×1"
       },
       {
        "key": "CurseDamageMultiplier",
        "label": "저주 피해량 배율",
-       "value": 1.0,
+       "value": 1,
        "unit": "multiplier",
        "display": "×1"
       }
@@ -20248,14 +20224,14 @@
       {
        "key": "BuffDuration",
        "label": "버프 지속시간",
-       "value": 45.0,
+       "value": 45,
        "unit": "seconds",
        "display": "45초"
       },
       {
        "key": "BuffDuration",
        "label": "버프 지속시간",
-       "value": 60.0,
+       "value": 60,
        "unit": "seconds",
        "display": "60초"
       }
@@ -20309,14 +20285,14 @@
       {
        "key": "TransformDuration",
        "label": "변신 지속시간",
-       "value": 5.0,
+       "value": 5,
        "unit": "seconds",
        "display": "5초"
       },
       {
        "key": "TransformDuration",
        "label": "변신 지속시간",
-       "value": 10.0,
+       "value": 10,
        "unit": "seconds",
        "display": "10초"
       }
@@ -20342,28 +20318,28 @@
       {
        "key": "TriggerTime",
        "label": "발동 시간",
-       "value": 5.0,
+       "value": 5,
        "unit": "seconds",
        "display": "5초"
       },
       {
        "key": "TriggerTime",
        "label": "발동 시간",
-       "value": 3.0,
+       "value": 3,
        "unit": "seconds",
        "display": "3초"
       },
       {
        "key": "CloudRange",
        "label": "구름 사거리",
-       "value": 400.0,
+       "value": 400,
        "unit": "distance",
        "display": "400"
       },
       {
        "key": "CloudRange",
        "label": "구름 사거리",
-       "value": 600.0,
+       "value": 600,
        "unit": "distance",
        "display": "600"
       },
@@ -20417,21 +20393,21 @@
       {
        "key": "StumbleMultiplier",
        "label": "휘청임 배율",
-       "value": 2.0,
+       "value": 2,
        "unit": "multiplier",
        "display": "×2"
       },
       {
        "key": "StumbleMultiplier",
        "label": "휘청임 배율",
-       "value": 2.0,
+       "value": 2,
        "unit": "multiplier",
        "display": "×2"
       },
       {
        "key": "DamageMultiplier",
        "label": "피해량 배율",
-       "value": 0.0,
+       "value": 0,
        "unit": "multiplier",
        "display": "×0"
       },
@@ -20471,7 +20447,7 @@
       {
        "key": "WeaponSwitchBonus",
        "label": "무기 전환 속도 보너스",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       },
@@ -20539,14 +20515,14 @@
       {
        "key": "BuffDuration",
        "label": "버프 지속시간",
-       "value": 8.0,
+       "value": 8,
        "unit": "seconds",
        "display": "8초"
       },
       {
        "key": "BuffDuration",
        "label": "버프 지속시간",
-       "value": 12.0,
+       "value": 12,
        "unit": "seconds",
        "display": "12초"
       }
@@ -20619,14 +20595,14 @@
       {
        "key": "AuraRange",
        "label": "오라 사거리",
-       "value": 300.0,
+       "value": 300,
        "unit": "distance",
        "display": "300"
       },
       {
        "key": "AuraRange",
        "label": "오라 사거리",
-       "value": 500.0,
+       "value": 500,
        "unit": "distance",
        "display": "500"
       },
@@ -20745,7 +20721,6 @@
    "grade": "A",
    "isPatched": true,
    "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000; 밸런스 패치(2026-07-07), 구 0.015000",
-   "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
     "type": "buff"
@@ -20887,11 +20862,11 @@
     {
      "key": "DataMissingInvulnDuration",
      "label": "Data Missing 무적 지속시간",
-     "value": 4.0,
+     "value": 4,
      "unit": "seconds",
      "display": "4초",
-     "lv10": 4.0,
-     "lv20": 4.0,
+     "lv10": 4,
+     "lv20": 4,
      "lv10Display": "4초",
      "lv20Display": "4초",
      "scaling": false,
@@ -20900,11 +20875,11 @@
     {
      "key": "DataMissingSpeedMultiplier",
      "label": "Data Missing 속도 배율",
-     "value": 1.0,
+     "value": 1,
      "unit": "multiplier",
      "display": "×1",
-     "lv10": 1.0,
-     "lv20": 1.0,
+     "lv10": 1,
+     "lv20": 1,
      "lv10Display": "×1",
      "lv20Display": "×1",
      "scaling": false,
@@ -21196,7 +21171,7 @@
       {
        "key": "ProcSnarePower",
        "label": "Proc 속박 위력",
-       "value": 200.0,
+       "value": 200,
        "unit": "count",
        "display": "200"
       }
@@ -21332,7 +21307,6 @@
    "grade": "A",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/missingno.png"
@@ -21621,7 +21595,7 @@
       {
        "key": "ZedTimeAmplification",
        "label": "제드 시간 증폭",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       }
@@ -21687,7 +21661,7 @@
       {
        "key": "SingleAmplification",
        "label": "단일 증폭",
-       "value": 1.0,
+       "value": 1,
        "unit": "percent",
        "display": "+100%"
       }
@@ -21760,14 +21734,14 @@
       {
        "key": "PenetrationPerUtilityBuff",
        "label": "유틸리티 버프 당 관통력",
-       "value": 1.0,
+       "value": 1,
        "unit": "count",
        "display": "1"
       },
       {
        "key": "PenetrationPerUtilityBuff",
        "label": "유틸리티 버프 당 관통력",
-       "value": 2.0,
+       "value": 2,
        "unit": "count",
        "display": "2"
       },
@@ -21854,14 +21828,14 @@
       {
        "key": "ResidualTime",
        "label": "잔여 시간",
-       "value": 10.0,
+       "value": 10,
        "unit": "seconds",
        "display": "10초"
       },
       {
        "key": "ResidualTime",
        "label": "잔여 시간",
-       "value": 15.0,
+       "value": 15,
        "unit": "seconds",
        "display": "15초"
       }
@@ -21933,14 +21907,14 @@
       {
        "key": "Duration",
        "label": "지속시간",
-       "value": 10.0,
+       "value": 10,
        "unit": "seconds",
        "display": "10초"
       },
       {
        "key": "Duration",
        "label": "지속시간",
-       "value": 15.0,
+       "value": 15,
        "unit": "seconds",
        "display": "15초"
       }
@@ -21965,7 +21939,6 @@
    "grade": "S",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [
     {
@@ -21994,7 +21967,7 @@
     {
      "key": "Dosh",
      "label": "웨이브 생존 보상",
-     "value": 10.0,
+     "value": 10,
      "unit": "currency",
      "display": "10 도쉬",
      "scaling": true
@@ -22146,7 +22119,6 @@
    "grade": "A",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/capitalist.png",
@@ -22208,7 +22180,7 @@
     {
      "key": "MaxLifetimeSeconds",
      "label": "드론 최대 지속시간 (0 = 제한 없음)",
-     "value": 0.0,
+     "value": 0,
      "unit": "seconds",
      "display": "제한 없음"
     }
@@ -22337,21 +22309,20 @@
    "grade": "B",
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/engineer.png",
    "baseDisplay": true
   },
   {
-   "key": "Fastball",
-   "name": "패스트볼",
-   "parentPerk": "Support",
-   "unlockLevel": 20,
+   "key": "Goliath",
+   "name": "골리앗",
+   "parentPerk": "Berserker",
+   "unlockLevel": 5,
    "unlockRequirements": [
     {
-     "perk": "Support",
-     "level": 20
+     "perk": "Berserker",
+     "level": 5
     }
    ],
    "isCombinationUnlocked": false,
@@ -22359,501 +22330,266 @@
    "hasIniConfig": true,
    "passiveStats": [
     {
-     "key": "ImpactDamagePerLevel",
-     "label": "착지 충격파 피해량",
-     "value": 0.05,
+     "key": "Damage",
+     "label": "버서커 무기 피해량",
+     "value": 0.02,
      "unit": "percent",
-     "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
+     "scaling": true
+    },
+    {
+     "key": "Armor",
+     "label": "최대 방어력",
+     "value": 20,
+     "unit": "armor",
+     "display": "+20 AP",
+     "lv10": 200,
+     "lv20": 400,
+     "lv10Display": "+200 AP",
+     "lv20Display": "+400 AP",
      "scaling": true
     }
    ],
    "fixedStats": [],
-   "valueSourceNote": null,
-   "role": null,
+   "valueSourceNote": "최대 방어력은 기본 방어구 100 기준으로 레벨당 +20 AP입니다.",
+   "role": "버서커 무기 피해량과 최대 방어력을 함께 높이는 방어형 퍼크입니다.",
    "endgame": null,
    "descriptions": [
     {
-     "raw": "서로 마주 본 팀원을 조준하고 <font color=\\\"#ffc832\\\">M</font>을 눌러 조준 방향으로 발사합니다. 재사용 대기시간은 <font color=\\\"#be4d25\\\">10초</font>입니다.",
-     "text": "서로 마주 본 팀원을 조준하고 M을 눌러 조준 방향으로 발사합니다. 재사용 대기시간은 10초입니다.",
+     "raw": "버서커 무기의 <font color=\"#66CCFF\">피해량</font>이 골리앗 레벨당 <font color=\"#77D914\">+2%</font> 증가합니다.",
+     "text": "버서커 무기의 피해량이 골리앗 레벨당 +2% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "발사된 팀원은 낙하 피해를 받지 않으며, 착지할 때 자신을 회복시키는 폭발 충격파를 일으킵니다.",
-     "text": "발사된 팀원은 낙하 피해를 받지 않으며, 착지할 때 자신을 회복시키는 폭발 충격파를 일으킵니다.",
+     "raw": "최대 <font color=\"#66CCFF\">방어력</font>이 기본 방어구의 레벨당 <font color=\"#77D914\">20%</font>만큼 증가합니다. Lv20에서 <font color=\"#77D914\">+400 AP</font>입니다.",
+     "text": "최대 방어력이 기본 방어구의 레벨당 20%만큼 증가합니다. Lv20에서 +400 AP입니다.",
      "isCapstone": false
-    },
-    {
-     "raw": "레벨당 충격파 피해가 <font color=\\\"#77d914\\\">+%x%%</font> 증가하며 착지 속도에 따라 추가 증가합니다.",
-     "text": "레벨당 충격파 피해가 +%x%% 증가하며 착지 속도에 따라 추가 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\\\"#8B0000\\\">레벨 10:</font> 충격파 범위가 <font color=\\\"#77d914\\\">50%</font> 증가합니다.",
-     "text": "레벨 10: 충격파 범위가 50% 증가합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\\\"#8B0000\\\">레벨 20:</font> 발사력이 <font color=\\\"#77d914\\\">60%</font> 증가하고 착지 회복량이 크게 증가합니다.",
-     "text": "레벨 20: 발사력이 60% 증가하고 착지 회복량이 크게 증가합니다.",
-     "isCapstone": true
     }
    ],
    "skills": [
     {
-     "key": "Fastball_Bullpen",
-     "name": "불펜",
-     "standardDesc": "패스트볼 착지 충격파로 제드를 처치하면 발사 재사용 대기시간이 즉시 초기화됩니다.",
-     "deluxeDesc": "패스트볼로 착지할 때마다 발사 재사용 대기시간이 즉시 초기화됩니다.",
-     "standardDescRaw": "패스트볼 착지 충격파로 제드를 처치하면 발사 재사용 대기시간이 즉시 초기화됩니다.",
-     "deluxeDescRaw": "패스트볼로 착지할 때마다 발사 재사용 대기시간이 즉시 초기화됩니다.",
-     "rawValues": [],
+     "key": "MeleeGuard",
+     "name": "근접 방어",
+     "standardDesc": "제드의 타격·관통·참격 근접 피해와 분노한 대형 제드의 돌진 충격 피해를 10% 감소시킵니다.",
+     "deluxeDesc": "제드의 타격·관통·참격 근접 피해와 분노한 대형 제드의 돌진 충격 피해를 20% 감소시킵니다.",
+     "standardDescRaw": "제드의 <font color=\"#66CCFF\">타격</font>·<font color=\"#66CCFF\">관통</font>·<font color=\"#66CCFF\">참격</font> 근접 피해와 분노한 대형 제드의 돌진 충격 피해를 <font color=\"#77D914\">10%</font> 감소시킵니다.",
+     "deluxeDescRaw": "제드의 <font color=\"#66CCFF\">타격</font>·<font color=\"#66CCFF\">관통</font>·<font color=\"#66CCFF\">참격</font> 근접 피해와 분노한 대형 제드의 돌진 충격 피해를 <font color=\"#77D914\">20%</font> 감소시킵니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "20%"
+      }
+     ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fencer.png"
     },
     {
-     "key": "Fastball_DesignatedHitter",
-     "name": "지명 타자",
-     "standardDesc": "패스트볼로 발사된 뒤 착지하면 8초 동안 피해가 20% 증가합니다.",
-     "deluxeDesc": "패스트볼로 발사된 뒤 착지하면 8초 동안 피해가 40% 증가합니다.",
-     "standardDescRaw": "패스트볼로 발사된 뒤 착지하면 8초 동안 피해가 <font color=\\\"#ff3399\\\">20%</font> 증가합니다.",
-     "deluxeDescRaw": "패스트볼로 발사된 뒤 착지하면 8초 동안 피해가 <font color=\\\"#ff3399\\\">40%</font> 증가합니다.",
-     "rawValues": [],
+     "key": "FireproofPlating",
+     "name": "내화 장갑",
+     "standardDesc": "제드의 화염 피해를 10% 감소시킵니다.",
+     "deluxeDesc": "제드의 화염 피해를 20% 감소시킵니다.",
+     "standardDescRaw": "제드의 <font color=\"#66CCFF\">화염</font> 피해를 <font color=\"#77D914\">10%</font> 감소시킵니다.",
+     "deluxeDescRaw": "제드의 <font color=\"#66CCFF\">화염</font> 피해를 <font color=\"#77D914\">20%</font> 감소시킵니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "20%"
+      }
+     ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/AshenBulwark.png"
     },
     {
-     "key": "Fastball_FastballSpecial",
-     "name": "패스트볼 스페셜",
-     "standardDesc": "패스트볼 착지 회복량이 2배가 되고 대상이 방어구 15를 얻습니다.",
-     "deluxeDesc": "패스트볼 착지 회복량이 2배가 되고 대상이 방어구 30을 얻습니다.",
-     "standardDescRaw": "패스트볼 착지 회복량이 2배가 되고 대상이 방어구 <font color=\\\"#77d914\\\">15</font>를 얻습니다.",
-     "deluxeDescRaw": "패스트볼 착지 회복량이 2배가 되고 대상이 방어구 <font color=\\\"#77d914\\\">30</font>을 얻습니다.",
-     "rawValues": [],
+     "key": "SonicDampener",
+     "name": "음파 차폐",
+     "standardDesc": "제드의 음파 피해를 10% 감소시킵니다.",
+     "deluxeDesc": "제드의 음파 피해를 20% 감소시킵니다.",
+     "standardDescRaw": "제드의 <font color=\"#66CCFF\">음파</font> 피해를 <font color=\"#77D914\">10%</font> 감소시킵니다.",
+     "deluxeDescRaw": "제드의 <font color=\"#66CCFF\">음파</font> 피해를 <font color=\"#77D914\">20%</font> 감소시킵니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "20%"
+      }
+     ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/NoiseCancelling.png"
     },
     {
-     "key": "Fastball_FollowThrough",
-     "name": "팔로스루",
-     "standardDesc": "넘어지거나 공중에 뜨거나 무력화된 제드에게 주는 피해가 15% 증가합니다.",
-     "deluxeDesc": "넘어지거나 공중에 뜨거나 무력화된 제드에게 주는 피해가 30% 증가합니다.",
-     "standardDescRaw": "넘어지거나 공중에 뜨거나 무력화된 제드에게 주는 피해가 <font color=\\\"#ff3399\\\">15%</font> 증가합니다.",
-     "deluxeDescRaw": "넘어지거나 공중에 뜨거나 무력화된 제드에게 주는 피해가 <font color=\\\"#ff3399\\\">30%</font> 증가합니다.",
-     "rawValues": [],
+     "key": "BlastBaffle",
+     "name": "폭발 완충",
+     "standardDesc": "제드의 폭발 피해를 10% 감소시킵니다.",
+     "deluxeDesc": "제드의 폭발 피해를 20% 감소시킵니다.",
+     "standardDescRaw": "제드의 <font color=\"#66CCFF\">폭발</font> 피해를 <font color=\"#77D914\">10%</font> 감소시킵니다.",
+     "deluxeDescRaw": "제드의 <font color=\"#66CCFF\">폭발</font> 피해를 <font color=\"#77D914\">20%</font> 감소시킵니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "20%"
+      }
+     ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/FLAK.png"
     },
     {
-     "key": "Fastball_GroundRuleDouble",
-     "name": "인정 2루타",
-     "standardDesc": "패스트볼 착지 충격파 범위가 25% 증가합니다.",
-     "deluxeDesc": "패스트볼 착지 충격파 범위가 50% 증가합니다.",
-     "standardDescRaw": "패스트볼 착지 충격파 범위가 <font color=\\\"#77d914\\\">25%</font> 증가합니다.",
-     "deluxeDescRaw": "패스트볼 착지 충격파 범위가 <font color=\\\"#77d914\\\">50%</font> 증가합니다.",
-     "rawValues": [],
+     "key": "ToxicSeal",
+     "name": "독성 차단",
+     "standardDesc": "제드의 독성 피해를 10% 감소시킵니다.",
+     "deluxeDesc": "제드의 독성 피해를 20% 감소시킵니다.",
+     "standardDescRaw": "제드의 <font color=\"#66CCFF\">독성</font> 피해를 <font color=\"#77D914\">10%</font> 감소시킵니다.",
+     "deluxeDescRaw": "제드의 <font color=\"#66CCFF\">독성</font> 피해를 <font color=\"#77D914\">20%</font> 감소시킵니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "20%"
+      }
+     ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/BugFixing.png"
     },
     {
-     "key": "Fastball_Heater",
-     "name": "강속구",
-     "standardDesc": "패스트볼 발사력 +25%, 착지 충격파 피해 +15%.",
-     "deluxeDesc": "패스트볼 발사력 +50%, 착지 충격파 피해 +30%.",
-     "standardDescRaw": "패스트볼 발사력 +25%, 착지 충격파 피해 +15%.",
-     "deluxeDescRaw": "패스트볼 발사력 +50%, 착지 충격파 피해 +30%.",
-     "rawValues": [],
+     "key": "BallisticGuard",
+     "name": "탄도 방어",
+     "standardDesc": "EDAR 레이저 사격을 포함한 제드의 탄도 피해를 10% 감소시킵니다.",
+     "deluxeDesc": "EDAR 레이저 사격을 포함한 제드의 탄도 피해를 20% 감소시킵니다.",
+     "standardDescRaw": "EDAR 레이저 사격을 포함한 제드의 <font color=\"#66CCFF\">탄도 피해</font>를 <font color=\"#77D914\">10%</font> 감소시킵니다.",
+     "deluxeDescRaw": "EDAR 레이저 사격을 포함한 제드의 <font color=\"#66CCFF\">탄도 피해</font>를 <font color=\"#77D914\">20%</font> 감소시킵니다.",
+     "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      },
+      {
+       "key": "Damage",
+       "label": "피해 감소",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "20%"
+      }
+     ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Fastball_ReliefPitcher",
-     "name": "구원 투수",
-     "standardDesc": "패스트볼 대상이 착지하면 6초 동안 재장전 +20%, 이동 속도 +10%.",
-     "deluxeDesc": "패스트볼 대상이 착지하면 6초 동안 재장전 +35%, 이동 속도 +20%.",
-     "standardDescRaw": "패스트볼 대상이 착지하면 6초 동안 재장전 +20%, 이동 속도 +10%.",
-     "deluxeDescRaw": "패스트볼 대상이 착지하면 6초 동안 재장전 +35%, 이동 속도 +20%.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Fastball_SecondWindUp",
-     "name": "두 번째 와인드업",
-     "standardDesc": "무기 교체 속도와 재장전 속도가 각각 10% 증가합니다.",
-     "deluxeDesc": "무기 교체 속도와 재장전 속도가 각각 18% 증가합니다.",
-     "standardDescRaw": "무기 교체 속도와 재장전 속도가 각각 <font color=\\\"#77d914\\\">10%</font> 증가합니다.",
-     "deluxeDescRaw": "무기 교체 속도와 재장전 속도가 각각 <font color=\\\"#77d914\\\">18%</font> 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Fastball_Sinker",
-     "name": "싱커",
-     "standardDesc": "패스트볼 착지 충격파에 맞은 모든 제드가 느려집니다.",
-     "deluxeDesc": "패스트볼 착지 충격파에 맞은 모든 제드가 크게 느려집니다.",
-     "standardDescRaw": "패스트볼 착지 충격파에 맞은 모든 제드가 느려집니다.",
-     "deluxeDescRaw": "패스트볼 착지 충격파에 맞은 모든 제드가 크게 느려집니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Fastball_WindmillWindup",
-     "name": "윈드밀 와인드업",
-     "standardDesc": "패스트볼 재사용 대기시간이 30% 감소합니다.",
-     "deluxeDesc": "패스트볼 재사용 대기시간이 50% 감소합니다.",
-     "standardDescRaw": "패스트볼 재사용 대기시간이 <font color=\\\"#77d914\\\">30%</font> 감소합니다.",
-     "deluxeDescRaw": "패스트볼 재사용 대기시간이 <font color=\\\"#77d914\\\">50%</font> 감소합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
+     "icon": "icons/skills/Deflector.png"
     }
    ],
-   "skillCount": 10,
+   "skillCount": 6,
    "verdict": null,
    "grade": null,
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
-   "icon": null
+   "icon": "icons/goliath.png",
+   "strengths": [],
+   "weaknesses": []
   },
   {
-   "key": "Goalkeeper",
-   "name": "골키퍼",
-   "parentPerk": "Firebug",
-   "unlockLevel": 10,
+   "key": "WaveGambler",
+   "name": "웨이브 도박꾼",
+   "parentPerk": "Capitalist",
+   "unlockLevel": 5,
    "unlockRequirements": [
     {
-     "perk": "Firebug",
-     "level": 10
-    }
-   ],
-   "isCombinationUnlocked": false,
-   "isStatic": false,
-   "hasIniConfig": true,
-   "passiveStats": [
-    {
-     "key": "ReturnedDamagePerLevel",
-     "label": "반사 투사체 피해량",
-     "value": 0.05,
-     "unit": "percent",
-     "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [],
-   "valueSourceNote": null,
-   "role": null,
-   "endgame": null,
-   "descriptions": [
-    {
-     "raw": "<font color=\\\"#ffc832\\\">N</font>을 눌러 <font color=\\\"#77d914\\\">0.6초</font> 동안 전방의 적 투사체를 잡습니다. 실패하면 <font color=\\\"#be4d25\\\">6초</font>의 재사용 대기시간이 적용됩니다.",
-     "text": "N을 눌러 0.6초 동안 전방의 적 투사체를 잡습니다. 실패하면 6초의 재사용 대기시간이 적용됩니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "투사체를 보유한 상태에서 다시 누르면 폭발 화염구로 되던집니다.",
-     "text": "투사체를 보유한 상태에서 다시 누르면 폭발 화염구로 되던집니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "레벨당 반사 투사체 피해가 <font color=\\\"#77d914\\\">+%x%%</font> 증가합니다.",
-     "text": "레벨당 반사 투사체 피해가 +%x%% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\\\"#8B0000\\\">레벨 10:</font> 투사체를 잡을 때마다 방어구를 <font color=\\\"#77d914\\\">10</font> 회복합니다.",
-     "text": "레벨 10: 투사체를 잡을 때마다 방어구를 10 회복합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\\\"#8B0000\\\">레벨 20:</font> 근거리에서 완벽하게 잡으면 화염구 <font color=\\\"#ff3399\\\">3발</font>을 연속 발사합니다.",
-     "text": "레벨 20: 근거리에서 완벽하게 잡으면 화염구 3발을 연속 발사합니다.",
-     "isCapstone": true
-    }
-   ],
-   "skills": [
-    {
-     "key": "Goalkeeper_CleanSheet",
-     "name": "클린 시트",
-     "standardDesc": "8초 동안 피해를 받지 않으면 다음 피격까지 피해가 10% 증가합니다.",
-     "deluxeDesc": "8초 동안 피해를 받지 않으면 다음 피격까지 피해가 20% 증가합니다.",
-     "standardDescRaw": "8초 동안 피해를 받지 않으면 다음 피격까지 피해가 10% 증가합니다.",
-     "deluxeDescRaw": "8초 동안 피해를 받지 않으면 다음 피격까지 피해가 20% 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_CrowdFavorite",
-     "name": "관중의 총애",
-     "standardDesc": "골키퍼로 투사체를 잡을 때마다 주변 팀원의 체력을 5 회복합니다.",
-     "deluxeDesc": "골키퍼로 투사체를 잡을 때마다 주변 팀원의 체력을 10, 방어구를 10 회복합니다.",
-     "standardDescRaw": "골키퍼로 투사체를 잡을 때마다 주변 팀원의 체력을 5 회복합니다.",
-     "deluxeDescRaw": "골키퍼로 투사체를 잡을 때마다 주변 팀원의 체력을 10, 방어구를 10 회복합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_InterceptionBonus",
-     "name": "가로채기 보너스",
-     "standardDesc": "골키퍼로 투사체를 잡을 때마다 도쉬 15를 얻습니다.",
-     "deluxeDesc": "골키퍼로 투사체를 잡을 때마다 도쉬 35를 얻습니다.",
-     "standardDescRaw": "골키퍼로 투사체를 잡을 때마다 도쉬 15를 얻습니다.",
-     "deluxeDescRaw": "골키퍼로 투사체를 잡을 때마다 도쉬 35를 얻습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_IronPalms",
-     "name": "강철 손바닥",
-     "standardDesc": "제드의 투사체 및 원거리 공격 피해를 20% 덜 받습니다.",
-     "deluxeDesc": "제드의 투사체 및 원거리 공격 피해를 35% 덜 받습니다.",
-     "standardDescRaw": "제드의 투사체 및 원거리 공격 피해를 20% 덜 받습니다.",
-     "deluxeDescRaw": "제드의 투사체 및 원거리 공격 피해를 35% 덜 받습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_Punt",
-     "name": "펀트",
-     "standardDesc": "골키퍼의 완벽한 캐치 판정 거리가 75% 증가합니다.",
-     "deluxeDesc": "골키퍼의 완벽한 캐치 판정 거리가 150% 증가합니다.",
-     "standardDescRaw": "골키퍼의 완벽한 캐치 판정 거리가 75% 증가합니다.",
-     "deluxeDescRaw": "골키퍼의 완벽한 캐치 판정 거리가 150% 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_Rebound",
-     "name": "리바운드",
-     "standardDesc": "골키퍼가 되돌려 보낸 투사체의 피해가 25% 증가합니다.",
-     "deluxeDesc": "골키퍼가 되돌려 보낸 투사체의 피해가 50% 증가합니다.",
-     "standardDescRaw": "골키퍼가 되돌려 보낸 투사체의 피해가 25% 증가합니다.",
-     "deluxeDescRaw": "골키퍼가 되돌려 보낸 투사체의 피해가 50% 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_SafeSlide",
-     "name": "안전한 슬라이딩",
-     "standardDesc": "낙하 피해를 60% 덜 받습니다.",
-     "deluxeDesc": "낙하 피해를 받지 않습니다.",
-     "standardDescRaw": "낙하 피해를 60% 덜 받습니다.",
-     "deluxeDescRaw": "낙하 피해를 받지 않습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_StickyGloves",
-     "name": "끈끈한 장갑",
-     "standardDesc": "골키퍼의 캐치 실패 재사용 대기시간이 33% 빨리 회복됩니다.",
-     "deluxeDesc": "골키퍼의 캐치 실패 재사용 대기시간이 60% 빨리 회복됩니다.",
-     "standardDescRaw": "골키퍼의 캐치 실패 재사용 대기시간이 33% 빨리 회복됩니다.",
-     "deluxeDescRaw": "골키퍼의 캐치 실패 재사용 대기시간이 60% 빨리 회복됩니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_SweeperKeeper",
-     "name": "스위퍼 키퍼",
-     "standardDesc": "골키퍼 캐치 거리 +30%, 전방 캐치 각도가 더 넓어집니다.",
-     "deluxeDesc": "골키퍼 캐치 거리 +60%, 전방 캐치 각도가 크게 넓어집니다.",
-     "standardDescRaw": "골키퍼 캐치 거리 +30%, 전방 캐치 각도가 더 넓어집니다.",
-     "deluxeDescRaw": "골키퍼 캐치 거리 +60%, 전방 캐치 각도가 크게 넓어집니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Goalkeeper_TrophyCase",
-     "name": "트로피 진열장",
-     "standardDesc": "반사 투사체 처치당 방어구 +1. 웨이브당 최대 25회.",
-     "deluxeDesc": "반사 투사체 처치당 방어구 +2. 웨이브당 최대 25회.",
-     "standardDescRaw": "반사 투사체 처치당 방어구 +1. 웨이브당 최대 25회.",
-     "deluxeDescRaw": "반사 투사체 처치당 방어구 +2. 웨이브당 최대 25회.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    }
-   ],
-   "skillCount": 10,
-   "verdict": null,
-   "grade": null,
-   "isPatched": false,
-   "patchNote": null,
-   "testWarning": null,
-   "recentChangeTag": null,
-   "extraSections": [],
-   "icon": null
-  },
-  {
-   "key": "Wishmaster",
-   "name": "소원술사",
-   "parentPerk": "Survivalist",
-   "unlockLevel": 15,
-   "unlockRequirements": [
-    {
-     "perk": "Survivalist",
-     "level": 15
+     "perk": "Capitalist",
+     "level": 5
     }
    ],
    "isCombinationUnlocked": false,
@@ -22862,226 +22598,41 @@
    "passiveStats": [],
    "fixedStats": [],
    "valueSourceNote": null,
-   "role": null,
+   "role": "웨이브 상점 시간에 도쉬를 걸고 선택하는 퍼크입니다. 게임 내 표시 이름은 도박꾼입니다.",
    "endgame": null,
    "descriptions": [
     {
-     "raw": "매 거래 시간마다 도쉬, 체력, 방어구, 탄약, 축복 등을 제공하는 <font color=\\\"#ffc832\\\">3개의 소원</font>이 제시됩니다.",
-     "text": "매 거래 시간마다 도쉬, 체력, 방어구, 탄약, 축복 등을 제공하는 3개의 소원이 제시됩니다.",
+     "raw": "퍼크 Lv1부터 웨이브 완료 후 매 상점 시간에 잭팟 도박, 일반 도박, 스킵 중 하나를 선택합니다.",
+     "text": "퍼크 Lv1부터 웨이브 완료 후 매 상점 시간에 잭팟 도박, 일반 도박, 스킵 중 하나를 선택합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\\\"#ffc832\\\">쉼표</font>로 소원과 대상 플레이어를 순서대로 고르고 <font color=\\\"#ffc832\\\">마침표</font>로 확정합니다. 대상에는 자신도 포함될 수 있습니다.",
-     "text": "쉼표로 소원과 대상 플레이어를 순서대로 고르고 마침표로 확정합니다. 대상에는 자신도 포함될 수 있습니다.",
+     "raw": "잭팟 도박은 현재 도쉬의 +100%를 얻거나, 실패 시 현재 도쉬의 50%를 잃습니다.",
+     "text": "잭팟 도박은 현재 도쉬의 +100%를 얻거나, 실패 시 현재 도쉬의 50%를 잃습니다.",
      "isCapstone": false
     },
     {
-     "raw": "소원의 <font color=\\\"#be4d25\\\">25%</font>는 타락하여 정확히 반대 효과를 줍니다.",
-     "text": "소원의 25%는 타락하여 정확히 반대 효과를 줍니다.",
+     "raw": "일반 도박은 현재 도쉬의 +15%를 얻거나, 실패 시 현재 도쉬의 15%를 잃습니다. 스킵하면 도쉬를 유지합니다.",
+     "text": "일반 도박은 현재 도쉬의 +15%를 얻거나, 실패 시 현재 도쉬의 15%를 잃습니다. 스킵하면 도쉬를 유지합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\\\"#8B0000\\\">레벨 10:</font> 타락 확률이 <font color=\\\"#77d914\\\">15%</font>로 감소합니다.",
-     "text": "레벨 10: 타락 확률이 15%로 감소합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\\\"#8B0000\\\">레벨 20:</font> 선택 가능한 소원이 <font color=\\\"#FFD700\\\">4개</font>로 증가합니다.",
-     "text": "레벨 20: 선택 가능한 소원이 4개로 증가합니다.",
-     "isCapstone": true
+     "raw": "일반 도박 성공 확률은 Lv1–19에서 45–63%이며 Lv20에서 65%입니다. 잭팟 성공 확률은 Lv1 20%, Lv2–3 21%, Lv4 22%, Lv5–6 23%, Lv7–8 24%, Lv9 25%, Lv10–11 26%, Lv12–13 27%, Lv14 28%, Lv15–16 29%, Lv17–18 30%, Lv19 31%, Lv20 32%입니다. 선택하지 않으면 다음 웨이브 시작 시 스킵 처리됩니다.",
+     "text": "일반 도박 성공 확률은 Lv1–19에서 45–63%이며 Lv20에서 65%입니다. 잭팟 성공 확률은 Lv1 20%, Lv2–3 21%, Lv4 22%, Lv5–6 23%, Lv7–8 24%, Lv9 25%, Lv10–11 26%, Lv12–13 27%, Lv14 28%, Lv15–16 29%, Lv17–18 30%, Lv19 31%, Lv20 32%입니다. 선택하지 않으면 다음 웨이브 시작 시 스킵 처리됩니다.",
+     "isCapstone": false
     }
    ],
-   "skills": [
-    {
-     "key": "Wishmaster_BlessedVessel",
-     "name": "축복받은 그릇",
-     "standardDesc": "최대 방어구가 10 증가합니다.",
-     "deluxeDesc": "최대 방어구가 20 증가합니다.",
-     "standardDescRaw": "최대 방어구가 10 증가합니다.",
-     "deluxeDescRaw": "최대 방어구가 20 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_DjinnsVigor",
-     "name": "진의 활력",
-     "standardDesc": "최대 체력이 10% 증가합니다.",
-     "deluxeDesc": "최대 체력이 15% 증가합니다.",
-     "standardDescRaw": "최대 체력이 10% 증가합니다.",
-     "deluxeDescRaw": "최대 체력이 15% 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_GeniesStep",
-     "name": "지니의 발걸음",
-     "standardDesc": "이동 속도가 5% 증가합니다.",
-     "deluxeDesc": "이동 속도가 10% 증가합니다.",
-     "standardDescRaw": "이동 속도가 5% 증가합니다.",
-     "deluxeDescRaw": "이동 속도가 10% 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_GreaterBoon",
-     "name": "위대한 은혜",
-     "standardDesc": "소원의 양이 50% 증가합니다. 타락한 손실도 함께 증가합니다.",
-     "deluxeDesc": "소원의 양이 2배가 됩니다. 타락한 손실도 함께 증가합니다.",
-     "standardDescRaw": "소원의 양이 50% 증가합니다. 타락한 손실도 함께 증가합니다.",
-     "deluxeDescRaw": "소원의 양이 2배가 됩니다. 타락한 손실도 함께 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_KarmaShield",
-     "name": "카르마 방패",
-     "standardDesc": "한 번에 최대 체력의 25%를 넘는 피해를 받으면 5초 동안 피해를 20% 덜 받습니다.",
-     "deluxeDesc": "한 번에 최대 체력의 25%를 넘는 피해를 받으면 5초 동안 피해를 35% 덜 받습니다.",
-     "standardDescRaw": "한 번에 최대 체력의 25%를 넘는 피해를 받으면 5초 동안 피해를 20% 덜 받습니다.",
-     "deluxeDescRaw": "한 번에 최대 체력의 25%를 넘는 피해를 받으면 5초 동안 피해를 35% 덜 받습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_KarmicBond",
-     "name": "업의 결속",
-     "standardDesc": "팀원에게 준 소원이 절반의 세기로 자신에게도 적용됩니다. 타락한 소원도 포함됩니다.",
-     "deluxeDesc": "팀원에게 준 소원이 온전한 세기로 자신에게도 적용됩니다. 타락한 소원도 포함됩니다.",
-     "standardDescRaw": "팀원에게 준 소원이 절반의 세기로 자신에게도 적용됩니다. 타락한 소원도 포함됩니다.",
-     "deluxeDescRaw": "팀원에게 준 소원이 온전한 세기로 자신에게도 적용됩니다. 타락한 소원도 포함됩니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_PactOfGreed",
-     "name": "탐욕의 계약",
-     "standardDesc": "직접 처치할 때마다 추가 도쉬 1을 얻습니다.",
-     "deluxeDesc": "직접 처치할 때마다 추가 도쉬 2를 얻습니다.",
-     "standardDescRaw": "직접 처치할 때마다 추가 도쉬 1을 얻습니다.",
-     "deluxeDescRaw": "직접 처치할 때마다 추가 도쉬 2를 얻습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_SilverTongue",
-     "name": "달변가",
-     "standardDesc": "소원 타락 확률이 5% 감소합니다.",
-     "deluxeDesc": "소원 타락 확률이 10% 감소합니다.",
-     "standardDescRaw": "소원 타락 확률이 5% 감소합니다.",
-     "deluxeDescRaw": "소원 타락 확률이 10% 감소합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_TwinWishes",
-     "name": "쌍둥이 소원",
-     "standardDesc": "거래 시간마다 소원 2개를 부여할 수 있습니다.",
-     "deluxeDesc": "거래 시간마다 소원 3개를 부여할 수 있습니다.",
-     "standardDescRaw": "거래 시간마다 소원 2개를 부여할 수 있습니다.",
-     "deluxeDescRaw": "거래 시간마다 소원 3개를 부여할 수 있습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    },
-    {
-     "key": "Wishmaster_WiderAudience",
-     "name": "더 많은 청중",
-     "standardDesc": "소원 대상 후보가 최대 4명으로 증가합니다.",
-     "deluxeDesc": "소원 대상 후보가 최대 6명으로 증가합니다.",
-     "standardDescRaw": "소원 대상 후보가 최대 4명으로 증가합니다.",
-     "deluxeDescRaw": "소원 대상 후보가 최대 6명으로 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": null
-    }
-   ],
-   "skillCount": 10,
+   "skills": [],
+   "skillCount": 0,
    "verdict": null,
    "grade": null,
    "isPatched": false,
    "patchNote": null,
-   "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
-   "icon": null
+   "icon": "icons/wavegambler.png",
+   "strengths": [],
+   "weaknesses": []
   }
  ],
  "aurora": {
@@ -23105,7 +22656,7 @@
    0.9,
    0.8,
    1.5,
-   10.0,
+   10,
    2.5,
    0.85,
    0.85,
@@ -23125,15 +22676,15 @@
    1.2,
    1.3,
    1.2,
-   2.0,
+   2,
    1.3,
-   2.0,
+   2,
    1.3,
-   3.0,
+   3,
    1.4,
    1.25,
-   4.0,
-   4.0
+   4,
+   4
   ],
   "damageTaken": [
    1.3,
