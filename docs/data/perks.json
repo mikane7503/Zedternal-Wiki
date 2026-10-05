@@ -16797,14 +16797,14 @@
    "passiveStats": [
     {
      "key": "StalkDamageBonus",
-     "label": "추적 피해량 보너스",
-     "value": 0.025,
+     "label": "매복 첫 사격 피해량 (샤프슈터 무기)",
+     "value": 0.05,
      "unit": "percent",
-     "display": "+2.5%",
-     "lv10": 0.25,
-     "lv20": 0.5,
-     "lv10Display": "+25%",
-     "lv20Display": "+50%",
+     "display": "+5%",
+     "lv10": 0.5,
+     "lv20": 1,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
      "scaling": true
     },
     {
@@ -16821,7 +16821,7 @@
     },
     {
      "key": "SpareAmmoBonus",
-     "label": "여분 탄약 보너스",
+     "label": "예비 탄약",
      "value": 0.015,
      "unit": "percent",
      "display": "+1.5%",
@@ -16835,58 +16835,58 @@
    "fixedStats": [
     {
      "key": "PerfectAmbushBonus",
-     "label": "완벽한 매복 보너스",
-     "value": 0.5,
+     "label": "레벨 10 완벽한 매복 (10초 후 다음 샤프슈터 사격)",
+     "value": 1,
      "unit": "percent",
-     "display": "+50%",
-     "lv10": 0.5,
-     "lv20": 0.5,
-     "lv10Display": "+50%",
-     "lv20Display": "+50%",
+     "display": "+100%",
+     "lv10": 1,
+     "lv20": 0,
+     "lv10Display": "+100%",
+     "lv20Display": "—",
      "scaling": false,
-     "capstoneLevel": null
+     "capstoneLevel": 10
     },
     {
-     "key": "ApexStalkerBonus",
-     "label": "정점 스토커 보너스",
-     "value": 0.35,
+     "key": "ApexAmbushBonus",
+     "label": "레벨 20 최상위 매복 (10초 후 다음 샤프슈터 사격)",
+     "value": 2,
      "unit": "percent",
-     "display": "+35%",
-     "lv10": 0.35,
-     "lv20": 0.35,
-     "lv10Display": "+35%",
-     "lv20Display": "+35%",
+     "display": "+200%",
+     "lv10": 0,
+     "lv20": 2,
+     "lv10Display": "—",
+     "lv20Display": "+200%",
      "scaling": false,
-     "capstoneLevel": null
+     "capstoneLevel": 20
     }
    ],
-   "valueSourceNote": null,
-   "role": "매복 첫 공격의 피해를 폭발적으로 증폭시키는 헌터형 저격 전직입니다.",
+   "valueSourceNote": "10초 매복 보너스는 10레벨 +100%, 20레벨 +200%이며, 20레벨 효과가 10레벨 효과를 대체합니다. 각각 5초 대기 후 발동하는 레벨당 +5% 피해와 합산됩니다.",
+   "role": "5초 동안 사격하지 않은 뒤 샤프슈터 무기의 다음 사격을 강화하는 매복형 퍼크입니다. 이동 속도와 예비 탄약 보너스도 제공합니다.",
    "endgame": null,
    "descriptions": [
     {
-     "raw": "포식자의 인내심: <font color=\"#77D914\">5초</font> 이상 사격하지 않은 후 첫 타격의 <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">레벨업당 +2.5% · 만렙(Lv20) +50%</font>.",
-     "text": "포식자의 인내심: 5초 이상 사격하지 않은 후 첫 타격의 피해량 레벨업당 +2.5% · 만렙(Lv20) +50%.",
+     "raw": "포식자의 인내심: <font color=\"#77D914\">5초</font> 동안 사격하지 않으면 다음 <font color=\"#66CCFF\">샤프슈터 무기</font> 사격의 피해량이 레벨당 <font color=\"#77D914\">5%</font> 증가합니다. 빗나간 사격을 포함한 모든 사격은 대기 시간을 초기화합니다.",
+     "text": "포식자의 인내심: 5초 동안 사격하지 않으면 다음 샤프슈터 무기 사격의 피해량이 레벨당 5% 증가합니다. 빗나간 사격을 포함한 모든 사격은 대기 시간을 초기화합니다.",
      "isCapstone": false
     },
     {
-     "raw": "스토커의 은총: <font color=\"#66CCFF\">이동 속도</font> <font color=\"#77D914\">레벨업당 +0.75% · 만렙(Lv20) +15%</font>.",
-     "text": "스토커의 은총: 이동 속도 레벨업당 +0.75% · 만렙(Lv20) +15%.",
+     "raw": "스토커의 은총: <font color=\"#66CCFF\">이동 속도</font>가 레벨당 <font color=\"#77D914\">0.75%</font> 증가합니다.",
+     "text": "스토커의 은총: 이동 속도가 레벨당 0.75% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "사냥꾼 준비: 여분 <font color=\"#66CCFF\">탄약</font> <font color=\"#77D914\">레벨업당 +1.5% · 만렙(Lv20) +30%</font>.",
-     "text": "사냥꾼 준비: 여분 탄약 레벨업당 +1.5% · 만렙(Lv20) +30%.",
+     "raw": "사냥꾼 준비: <font color=\"#66CCFF\">예비 탄약</font>이 레벨당 <font color=\"#77D914\">1.5%</font> 증가합니다.",
+     "text": "사냥꾼 준비: 예비 탄약이 레벨당 1.5% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 완벽한 매복 - 사격하지 않고 <font color=\"#77D914\">10초</font> 대기 시 첫 <font color=\"#66CCFF\">공격</font>이 <font color=\"#77D914\">+50%</font>의 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "text": "레벨 10: 완벽한 매복 - 사격하지 않고 10초 대기 시 첫 공격이 +50%의 피해를 입힙니다.",
+     "raw": "레벨 <font color=\"#77D914\">10</font>: 완벽한 매복 — <font color=\"#77D914\">10초</font> 동안 사격하지 않으면 다음 <font color=\"#66CCFF\">샤프슈터 무기</font> 사격의 피해량이 <font color=\"#77D914\">+100%</font> 추가 증가합니다. 포식자의 인내심과 합산되어 웬디고 자체 보너스는 총 +150%입니다.",
+     "text": "레벨 10: 완벽한 매복 — 10초 동안 사격하지 않으면 다음 샤프슈터 무기 사격의 피해량이 +100% 추가 증가합니다. 포식자의 인내심과 합산되어 웬디고 자체 보너스는 총 +150%입니다.",
      "isCapstone": true
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 에이펙스 스토커 - <font color=\"#77D914\">30초</font> 이상 <font color=\"#66CCFF\">피해</font>를 받지 않으면 다음 <font color=\"#66CCFF\">공격</font>에 <font color=\"#77D914\">+35%</font>의 <font color=\"#66CCFF\">피해량</font> 보너스가 적용됩니다.",
-     "text": "레벨 20: 에이펙스 스토커 - 30초 이상 피해를 받지 않으면 다음 공격에 +35%의 피해량 보너스가 적용됩니다.",
+     "raw": "레벨 <font color=\"#77D914\">20</font>: 최상위 매복 — 같은 <font color=\"#77D914\">10초</font> 대기 후 다음 <font color=\"#66CCFF\">샤프슈터 무기</font> 사격에 <font color=\"#77D914\">+200%</font> 추가 피해를 줍니다. 레벨 10 보너스를 대체하며 포식자의 인내심과 합산되어 웬디고 자체 보너스는 총 +300%입니다.",
+     "text": "레벨 20: 최상위 매복 — 같은 10초 대기 후 다음 샤프슈터 무기 사격에 +200% 추가 피해를 줍니다. 레벨 10 보너스를 대체하며 포식자의 인내심과 합산되어 웬디고 자체 보너스는 총 +300%입니다.",
      "isCapstone": true
     }
    ],
@@ -17073,30 +17073,30 @@
     {
      "key": "Isolation",
      "name": "격리",
-     "standardDesc": "고립: 10미터 이내에 아군이 아무도 없을 때 피해 저항이 +10% 증가합니다.",
-     "deluxeDesc": "고립: 15미터 이내에 아군이 아무도 없을 때 피해 저항이 +20% 증가합니다.",
-     "standardDescRaw": "고립: <font color=\"#77D914\">10미터</font> 이내에 <font color=\"#66CCFF\">아군</font>이 아무도 없을 때 <font color=\"#66CCFF\">피해 저항</font>이 <font color=\"#77D914\">+10%</font> 증가합니다.",
-     "deluxeDescRaw": "고립: <font color=\"#77D914\">15미터</font> 이내에 <font color=\"#66CCFF\">아군</font>이 아무도 없을 때 <font color=\"#66CCFF\">피해 저항</font>이 <font color=\"#77D914\">+20%</font> 증가합니다.",
+     "standardDesc": "15m 이내에 살아 있는 팀원이 없으면 받는 피해가 15% 감소합니다.",
+     "deluxeDesc": "15m 이내에 살아 있는 팀원이 없으면 받는 피해가 25% 감소합니다.",
+     "standardDescRaw": "<font color=\"#77D914\">15m</font> 이내에 살아 있는 팀원이 없으면 받는 <font color=\"#66CCFF\">피해</font>가 <font color=\"#77D914\">15%</font> 감소합니다.",
+     "deluxeDescRaw": "<font color=\"#77D914\">15m</font> 이내에 살아 있는 팀원이 없으면 받는 <font color=\"#66CCFF\">피해</font>가 <font color=\"#77D914\">25%</font> 감소합니다.",
      "rawValues": [
       {
        "key": "Resistance",
-       "label": "저항력",
-       "value": 0.1,
+       "label": "피해 감소",
+       "value": 0.15,
        "unit": "percent",
-       "display": "+10%"
+       "display": "15%"
       },
       {
        "key": "Resistance",
-       "label": "저항력",
-       "value": 0.2,
+       "label": "피해 감소",
+       "value": 0.25,
        "unit": "percent",
-       "display": "+20%"
+       "display": "25%"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "격리: 15m 팀원 없음 조건, 피해 감소 15%/25%",
      "textFixed": true,
      "disabled": false,
      "disabledNote": null,
@@ -17278,30 +17278,30 @@
     {
      "key": "TrophyHunt",
      "name": "트로피 사냥",
-     "standardDesc": "트로피 사냥: 대형 좀비와 보스에게 입히는 피해량이 +25% 증가합니다.",
-     "deluxeDesc": "트로피 사냥: 대형 좀비와 보스에게 입히는 피해량이 +50% 증가합니다.",
-     "standardDescRaw": "트로피 사냥: 대형 좀비와 <font color=\"#66CCFF\">보스</font>에게 입히는 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+25%</font> 증가합니다.",
-     "deluxeDescRaw": "트로피 사냥: 대형 좀비와 <font color=\"#66CCFF\">보스</font>에게 입히는 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+50%</font> 증가합니다.",
+     "standardDesc": "대형 제드와 보스에게 입히는 피해가 20% 증가합니다.",
+     "deluxeDesc": "대형 제드와 보스에게 입히는 피해가 35% 증가합니다.",
+     "standardDescRaw": "<font color=\"#66CCFF\">대형 제드와 보스</font>에게 입히는 <font color=\"#66CCFF\">피해</font>가 <font color=\"#77D914\">20%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#66CCFF\">대형 제드와 보스</font>에게 입히는 <font color=\"#66CCFF\">피해</font>가 <font color=\"#77D914\">35%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Damage",
-       "label": "피해량",
-       "value": 0.25,
+       "label": "대형 제드/보스 피해량",
+       "value": 0.2,
        "unit": "percent",
-       "display": "+25%"
+       "display": "+20%"
       },
       {
        "key": "Damage",
-       "label": "피해량",
-       "value": 0.5,
+       "label": "대형 제드/보스 피해량",
+       "value": 0.35,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+35%"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "트로피 사냥: 피해 20%/35%",
      "textFixed": false,
      "disabled": false,
      "disabledNote": null,
@@ -17317,13 +17317,14 @@
    },
    "grade": "B",
    "isPatched": true,
-   "patchNote": "260709 버프. 구 0.0175; 구 0.020→0.015→0.0075; 구 0.050→0.030→0.015; 구 1.000000; 구 0.700000",
+   "patchNote": "첫 사격 강화 리워크: 샤프슈터 전용·레벨당 5%·10/20레벨 매복 보너스",
    "recentChangeTag": {
-    "date": "2026-07-10",
+    "date": "2026-10-05",
     "type": "buff"
    },
    "extraSections": [],
-   "icon": "icons/wendigo.png"
+   "icon": "icons/wendigo.png",
+   "testWarning": null
   },
   {
    "key": "Cryophilite",
@@ -18307,7 +18308,7 @@
    "passiveStats": [
     {
      "key": "DamagePerLevel",
-     "label": "레벨 당 피해량",
+     "label": "서포트 무기 피해량",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
@@ -18319,7 +18320,7 @@
     },
     {
      "key": "ReloadPerLevel",
-     "label": "레벨 당 재장전",
+     "label": "서포트 무기 재장전 속도",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
@@ -18330,270 +18331,59 @@
      "scaling": true
     }
    ],
-   "fixedStats": [
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 350,
-     "unit": "count",
-     "display": "350",
-     "lv10": 350,
-     "lv20": 350,
-     "lv10Display": "350",
-     "lv20Display": "350",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 320,
-     "unit": "count",
-     "display": "320",
-     "lv10": 320,
-     "lv20": 320,
-     "lv10Display": "320",
-     "lv20Display": "320",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 290,
-     "unit": "count",
-     "display": "290",
-     "lv10": 290,
-     "lv20": 290,
-     "lv10Display": "290",
-     "lv20Display": "290",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 255,
-     "unit": "count",
-     "display": "255",
-     "lv10": 255,
-     "lv20": 255,
-     "lv10Display": "255",
-     "lv20Display": "255",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 225,
-     "unit": "count",
-     "display": "225",
-     "lv10": 225,
-     "lv20": 225,
-     "lv10Display": "225",
-     "lv20Display": "225",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 195,
-     "unit": "count",
-     "display": "195",
-     "lv10": 195,
-     "lv20": 195,
-     "lv10Display": "195",
-     "lv20Display": "195",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 165,
-     "unit": "count",
-     "display": "165",
-     "lv10": 165,
-     "lv20": 165,
-     "lv10Display": "165",
-     "lv20Display": "165",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 130,
-     "unit": "count",
-     "display": "130",
-     "lv10": 130,
-     "lv20": 130,
-     "lv10Display": "130",
-     "lv20Display": "130",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ReforgeThreshold",
-     "label": "재련 임계값",
-     "value": 100,
-     "unit": "count",
-     "display": "100",
-     "lv10": 100,
-     "lv20": 100,
-     "lv10Display": "100",
-     "lv20Display": "100",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "MasteryMilestoneKills",
-     "label": "숙련도 마일스톤 처치",
-     "value": 100,
-     "unit": "count",
-     "display": "100",
-     "lv10": 100,
-     "lv20": 100,
-     "lv10Display": "100",
-     "lv20Display": "100",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "MasteryBonusPerRoll",
-     "label": "굴림 당 숙련도 보너스",
-     "value": 0.005,
-     "unit": "percent",
-     "display": "+0.5%",
-     "lv10": 0.005,
-     "lv20": 0.005,
-     "lv10Display": "+0.5%",
-     "lv20Display": "+0.5%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "ResonanceCrossBonus",
-     "label": "공명 교차 보너스",
-     "value": 0.0025,
-     "unit": "percent",
-     "display": "+0.25%",
-     "lv10": 0.0025,
-     "lv20": 0.0025,
-     "lv10Display": "+0.25%",
-     "lv20Display": "+0.25%",
-     "scaling": false,
-     "capstoneLevel": null
-    }
-   ],
-   "valueSourceNote": null,
-   "role": "무기를 오래 쓸수록 무작위 능력치 보너스가 영구히 누적되는 장인 컨셉의 서포트 1차 전직입니다.",
+   "fixedStats": [],
+   "valueSourceNote": "서포트 무기에만 적용됩니다. 무기 숙련 단계 보너스는 아래 게임 설명을 참고하세요.",
+   "role": "서포트 무기별 처치 숙련도를 쌓아 피해량, 관통력, 탄약 용량을 높이는 퍼크입니다. 무기 숙련도는 플레이어마다 무기 종류별로 따로 기록됩니다.",
    "endgame": null,
    "descriptions": [
     {
-     "raw": "단조 조건: <font color=\"#66CCFF\">모든 무기</font> <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">레벨업당 +1% · 만렙(Lv20) +20%</font>.",
-     "text": "단조 조건: 모든 무기 피해량 레벨업당 +1% · 만렙(Lv20) +20%.",
+     "raw": "무기 교정: <font color=\"#66CCFF\">서포트 무기 피해</font>가 레벨당 <font color=\"#77D914\">1%</font> 증가합니다. 현재 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "무기 교정: 서포트 무기 피해가 레벨당 1% 증가합니다. 현재 +%x%%.",
      "isCapstone": false
     },
     {
-     "raw": "단조 조건: <font color=\"#66CCFF\">재장전 속도</font> <font color=\"#77D914\">레벨업당 +1% · 만렙(Lv20) +20%</font>.",
-     "text": "단조 조건: 재장전 속도 레벨업당 +1% · 만렙(Lv20) +20%.",
+     "raw": "무기 교정: <font color=\"#66CCFF\">서포트 무기 재장전 속도</font>가 레벨당 <font color=\"#77D914\">1%</font> 증가합니다. 현재 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "무기 교정: 서포트 무기 재장전 속도가 레벨당 1% 증가합니다. 현재 +%x%%.",
      "isCapstone": false
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 무기 숙련도 - 무기로 <font color=\"#77D914\">100킬</font>을 달성할 때마다 무작위 <font color=\"#77D914\">+0.5%</font> 능력치 보너스를 획득합니다. <font color=\"#77D914\">10레벨</font>을 초과할 때마다 마일스톤 달성 시 추가 보너스 굴림 기회를 얻습니다.",
-     "text": "레벨 10: 무기 숙련도 - 무기로 100킬을 달성할 때마다 무작위 +0.5% 능력치 보너스를 획득합니다. 10레벨을 초과할 때마다 마일스톤 달성 시 추가 보너스 굴림 기회를 얻습니다.",
-     "isCapstone": true
+     "raw": "레벨 <font color=\"#77D914\">10</font> — 숙련: 서포트 무기로 <font color=\"#77D914\">50회</font> 처치할 때마다 해당 무기의 숙련도가 1단계 오릅니다. 단계당 피해 <font color=\"#77D914\">+2%</font>, 최대 <font color=\"#77D914\">20단계</font>(<font color=\"#77D914\">+40%</font>)입니다.",
+     "text": "레벨 10 — 숙련: 서포트 무기로 50회 처치할 때마다 해당 무기의 숙련도가 1단계 오릅니다. 단계당 피해 +2%, 최대 20단계(+40%)입니다.",
+     "isCapstone": false
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 공명 - 재련된 무기로 처치한 적의 수가 두 배로 계산됩니다. 숙련된 무기 하나당 <font color=\"#77D914\">+0.25%</font>의 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#66CCFF\">모든 무기</font>에 적용됩니다.",
-     "text": "레벨 20: 공명 - 재련된 무기로 처치한 적의 수가 두 배로 계산됩니다. 숙련된 무기 하나당 +0.25%의 피해량이 모든 무기에 적용됩니다.",
-     "isCapstone": true
+     "raw": "레벨 <font color=\"#77D914\">20</font> — 걸작: 기존 숙련도를 유지하고 상한을 <font color=\"#77D914\">100단계</font>로 확장합니다. 기존 단계와 새 단계 모두 단계당 피해와 관통력 <font color=\"#77D914\">+3%</font>가 적용됩니다. 10단계마다 탄창 용량 +1발, 휴대 탄약 +3발이 추가됩니다.",
+     "text": "레벨 20 — 걸작: 기존 숙련도를 유지하고 상한을 100단계로 확장합니다. 기존 단계와 새 단계 모두 단계당 피해와 관통력 +3%가 적용됩니다. 10단계마다 탄창 용량 +1발, 휴대 탄약 +3발이 추가됩니다.",
+     "isCapstone": false
     },
     {
-     "raw": "각 등급마다 재련된 변형이 더 빨리 잠금 해제됩니다(<font color=\"#77D914\">1</font>등급에서는 <font color=\"#77D914\">350킬</font>, <font color=\"#77D914\">9</font>등급에서는 <font color=\"#77D914\">100킬</font>).",
-     "text": "각 등급마다 재련된 변형이 더 빨리 잠금 해제됩니다(1등급에서는 350킬, 9등급에서는 100킬).",
+     "raw": "숙련도는 이번 게임 동안 서포트 무기 종류별·플레이어별로 기록됩니다. 일반/프레셔스 무기는 숙련도를 공유하고 무기 교체와 사망 후에도 유지됩니다. 서포트가 아닌 무기에는 적용되지 않으며 별도의 재련 무기를 구매할 필요가 없습니다.",
+     "text": "숙련도는 이번 게임 동안 서포트 무기 종류별·플레이어별로 기록됩니다. 일반/프레셔스 무기는 숙련도를 공유하고 무기 교체와 사망 후에도 유지됩니다. 서포트가 아닌 무기에는 적용되지 않으며 별도의 재련 무기를 구매할 필요가 없습니다.",
      "isCapstone": false
     }
    ],
    "skills": [
     {
      "key": "AlloyRounds",
-     "name": "합금 라운드",
-     "standardDesc": "재조립된 무기는 +40%의 관통력과 +15%의 경직 유발력을 얻습니다.",
-     "deluxeDesc": "재조립된 무기는 +80%의 관통력과 +30%의 경직 유발력을 얻습니다.",
-     "standardDescRaw": "재조립된 무기는 <font color=\"#77D914\">+40%</font>의 <font color=\"#66CCFF\">관통력</font>과 <font color=\"#77D914\">+15%</font>의 <font color=\"#FF6666\">경직</font> 유발력을 얻습니다.",
-     "deluxeDescRaw": "재조립된 무기는 <font color=\"#77D914\">+80%</font>의 <font color=\"#66CCFF\">관통력</font>과 <font color=\"#77D914\">+30%</font>의 <font color=\"#FF6666\">경직</font> 유발력을 얻습니다.",
+     "name": "합금 탄두",
+     "standardDesc": "서포트 무기의 관통력이 40% 증가합니다.",
+     "deluxeDesc": "서포트 무기의 관통력이 80% 증가합니다.",
+     "standardDescRaw": "서포트 무기의 관통력이 <font color=\"#77D914\">40%</font> 증가합니다.",
+     "deluxeDescRaw": "서포트 무기의 관통력이 <font color=\"#77D914\">80%</font> 증가합니다.",
      "rawValues": [
       {
-       "key": "PenetrationBonus",
-       "label": "관통력 보너스",
+       "key": "AlloyRounds",
+       "label": "합금 탄두",
        "value": 0.4,
        "unit": "percent",
        "display": "+40%"
       },
       {
-       "key": "PenetrationBonus",
-       "label": "관통력 보너스",
+       "key": "AlloyRounds",
+       "label": "합금 탄두",
        "value": 0.8,
        "unit": "percent",
        "display": "+80%"
-      },
-      {
-       "key": "StumbleBonus",
-       "label": "휘청임 보너스",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "StumbleBonus",
-       "label": "휘청임 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.300000; 구 0.600000",
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/AlloyRounds.png"
-    },
-    {
-     "key": "AnvilsEcho",
-     "name": "앤빌의 메아리",
-     "standardDesc": "타격 간격: 5초 · 메아리 피해량: +50%",
-     "deluxeDesc": "타격 간격: 3초 · 메아리 피해량: +50%",
-     "standardDescRaw": "타격 간격: 5초 · 메아리 피해량: +50%",
-     "deluxeDescRaw": "타격 간격: 3초 · 메아리 피해량: +50%",
-     "rawValues": [
-      {
-       "key": "HitInterval",
-       "label": "타격 간격",
-       "value": 5,
-       "unit": "seconds",
-       "display": "5초"
-      },
-      {
-       "key": "HitInterval",
-       "label": "타격 간격",
-       "value": 3,
-       "unit": "seconds",
-       "display": "3초"
-      },
-      {
-       "key": "EchoDamage",
-       "label": "메아리 피해량",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
       }
      ],
      "hasKorText": true,
@@ -18604,101 +18394,59 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/AnvilsEcho.png"
+     "icon": "icons/skills/AlloyRounds.png"
     },
     {
-     "key": "GildedTouch",
-     "name": "금박 터치",
-     "standardDesc": "숙련된 무기로 적을 처치하면 폭발을 일으킵니다. 폭발력은 무기의 숙련도 단계에 비례하여 강해집니다.",
-     "deluxeDesc": "숙련된 무기로 적을 처치하면 강력한 대장간 폭발을 일으킵니다. 폭발력은 무기의 숙련도 단계에 비례하여 강해집니다.",
-     "standardDescRaw": "숙련된 무기로 적을 처치하면 폭발을 일으킵니다. 폭발력은 무기의 숙련도 단계에 비례하여 강해집니다.",
-     "deluxeDescRaw": "숙련된 무기로 적을 처치하면 강력한 대장간 폭발을 일으킵니다. 폭발력은 무기의 숙련도 단계에 비례하여 강해집니다.",
+     "key": "RapidFeed",
+     "name": "신속 급탄",
+     "standardDesc": "서포트 무기의 재장전 속도가 10% 증가합니다.",
+     "deluxeDesc": "서포트 무기의 재장전 속도가 15% 증가합니다.",
+     "standardDescRaw": "서포트 무기의 재장전 속도가 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "서포트 무기의 재장전 속도가 <font color=\"#77D914\">15%</font> 증가합니다.",
      "rawValues": [
       {
-       "key": "BaseDamage",
-       "label": "기본 피해량",
-       "value": 30,
-       "unit": "count",
-       "display": "30"
+       "key": "RapidFeed",
+       "label": "신속 급탄",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
       },
       {
-       "key": "BaseDamage",
-       "label": "기본 피해량",
-       "value": 50,
-       "unit": "count",
-       "display": "50"
-      },
-      {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      },
-      {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 30,
-       "unit": "count",
-       "display": "30"
-      },
-      {
-       "key": "BaseRadius",
-       "label": "기본 범위",
-       "value": 150,
-       "unit": "distance",
-       "display": "150"
-      },
-      {
-       "key": "BaseRadius",
-       "label": "기본 범위",
-       "value": 200,
-       "unit": "distance",
-       "display": "200"
-      },
-      {
-       "key": "RadiusPerMilestone",
-       "label": "마일스톤 당 범위",
-       "value": 50,
-       "unit": "distance",
-       "display": "50"
-      },
-      {
-       "key": "RadiusPerMilestone",
-       "label": "마일스톤 당 범위",
-       "value": 60,
-       "unit": "distance",
-       "display": "60"
+       "key": "RapidFeed",
+       "label": "신속 급탄",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/GildedTouch.png"
+     "icon": null
     },
     {
-     "key": "HardenedPlate",
-     "name": "경화판",
-     "standardDesc": "재련된 무기를 들고 있는 동안 받는 피해가 +10% 감소합니다.",
-     "deluxeDesc": "재련된 무기를 들고 있는 동안 받는 피해가 +20% 감소합니다.",
-     "standardDescRaw": "재련된 무기를 들고 있는 동안 <font color=\"#66CCFF\">받는 피해</font>가 <font color=\"#77D914\">+10%</font> 감소합니다.",
-     "deluxeDescRaw": "재련된 무기를 들고 있는 동안 <font color=\"#66CCFF\">받는 피해</font>가 <font color=\"#77D914\">+20%</font> 감소합니다.",
+     "key": "ExtendedMagazine",
+     "name": "확장 탄창",
+     "standardDesc": "서포트 무기의 탄창 용량이 10% 증가합니다.",
+     "deluxeDesc": "서포트 무기의 탄창 용량이 20% 증가합니다.",
+     "standardDescRaw": "서포트 무기의 탄창 용량이 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "서포트 무기의 탄창 용량이 <font color=\"#77D914\">20%</font> 증가합니다.",
      "rawValues": [
       {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
+       "key": "ExtendedMagazine",
+       "label": "확장 탄창",
        "value": 0.1,
        "unit": "percent",
        "display": "+10%"
       },
       {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
+       "key": "ExtendedMagazine",
+       "label": "확장 탄창",
        "value": 0.2,
        "unit": "percent",
        "display": "+20%"
@@ -18712,200 +18460,59 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/HardenedPlate.png"
+     "icon": null
     },
     {
-     "key": "MasterworkTechnique",
-     "name": "걸작 기법",
-     "standardDesc": "현재 들고 있는 무기의 숙련도 등급(마일스톤)마다 피해량이 +1.5% 증가합니다.",
-     "deluxeDesc": "현재 들고 있는 무기의 숙련도 등급(마일스톤)마다 피해량이 +3% 증가합니다.",
-     "standardDescRaw": "현재 들고 있는 무기의 숙련도 등급(마일스톤)마다 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+1.5%</font> 증가합니다.",
-     "deluxeDescRaw": "현재 들고 있는 무기의 숙련도 등급(마일스톤)마다 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+3%</font> 증가합니다.",
+     "key": "AmmoReserve",
+     "name": "예비 탄약고",
+     "standardDesc": "서포트 무기의 휴대 탄약이 20% 증가합니다.",
+     "deluxeDesc": "서포트 무기의 휴대 탄약이 40% 증가합니다.",
+     "standardDescRaw": "서포트 무기의 휴대 탄약이 <font color=\"#77D914\">20%</font> 증가합니다.",
+     "deluxeDescRaw": "서포트 무기의 휴대 탄약이 <font color=\"#77D914\">40%</font> 증가합니다.",
      "rawValues": [
       {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 0.015,
+       "key": "AmmoReserve",
+       "label": "예비 탄약고",
+       "value": 0.2,
        "unit": "percent",
-       "display": "+1.5%"
+       "display": "+20%"
       },
       {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 0.03,
+       "key": "AmmoReserve",
+       "label": "예비 탄약고",
+       "value": 0.4,
        "unit": "percent",
-       "display": "+3%"
-      }
-     ],
-     "hasKorText": true,
-     "note": "마일스톤은 '무기별 100킬'(리포지 이후 킬 기준) 단위로 달성됩니다.",
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/MasterworkTechnique.png"
-    },
-    {
-     "key": "Overforge",
-     "name": "오버포지",
-     "standardDesc": "적중 시 대장간 열기(Forge Heat) 스택이 쌓입니다. 10스택에 도달하면 피해량이 +100% 증가된 오버포지 타격을 가합니다.",
-     "deluxeDesc": "적중 시 대장간 열기(Forge Heat) 스택이 쌓입니다. 10스택에 도달하면 피해량이 +200% 증가된 오버포지 타격을 가합니다.",
-     "standardDescRaw": "적중 시 대장간 열기(Forge Heat) 스택이 쌓입니다. <font color=\"#77D914\">10</font>스택에 도달하면 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+100%</font> 증가된 오버포지 타격을 가합니다.",
-     "deluxeDescRaw": "적중 시 대장간 열기(Forge Heat) 스택이 쌓입니다. <font color=\"#77D914\">10</font>스택에 도달하면 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+200%</font> 증가된 오버포지 타격을 가합니다.",
-     "rawValues": [
-      {
-       "key": "StackThreshold",
-       "label": "스택 임계값",
-       "value": 10,
-       "unit": "count",
-       "display": "10"
-      },
-      {
-       "key": "BurstDamage",
-       "label": "버스트 피해량",
-       "value": 1,
-       "unit": "percent",
-       "display": "+100%"
-      },
-      {
-       "key": "BurstDamage",
-       "label": "버스트 피해량",
-       "value": 2,
-       "unit": "percent",
-       "display": "+200%"
+       "display": "+40%"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Overforge.png"
+     "icon": null
     },
     {
-     "key": "QuenchingStrike",
-     "name": "소화 공격",
-     "standardDesc": "매 탄창마다 처음 3발은 피해량이 +25% 증가합니다.",
-     "deluxeDesc": "매 탄창마다 처음 3발은 피해량이 +50% 증가합니다.",
-     "standardDescRaw": "매 탄창마다 처음 <font color=\"#77D914\">3발</font>은 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+25%</font> 증가합니다.",
-     "deluxeDescRaw": "매 탄창마다 처음 <font color=\"#77D914\">3발</font>은 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+50%</font> 증가합니다.",
+     "key": "RecoilCompensation",
+     "name": "반동 보정",
+     "standardDesc": "서포트 무기의 반동이 15% 감소합니다.",
+     "deluxeDesc": "서포트 무기의 반동이 25% 감소합니다.",
+     "standardDescRaw": "서포트 무기의 반동이 <font color=\"#77D914\">15%</font> 감소합니다.",
+     "deluxeDescRaw": "서포트 무기의 반동이 <font color=\"#77D914\">25%</font> 감소합니다.",
      "rawValues": [
       {
-       "key": "BonusDamage",
-       "label": "보너스 피해량",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "BonusDamage",
-       "label": "보너스 피해량",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "BonusShotCount",
-       "label": "보너스 샷 횟수",
-       "value": 3,
-       "unit": "count",
-       "display": "3"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/QuenchingStrike.png"
-    },
-    {
-     "key": "Reclamation",
-     "name": "간척",
-     "standardDesc": "재련된 무기로 적을 처치하면 체력을 2 회복합니다. 체력이 가득 차 있을 때는 대신 방어력을 1 회복합니다.",
-     "deluxeDesc": "재련된 무기로 적을 처치하면 체력을 4 회복합니다. 체력이 가득 차 있을 때는 대신 방어력을 2 회복합니다.",
-     "standardDescRaw": "재련된 무기로 적을 처치하면 <font color=\"#66CCFF\">체력</font>을 <font color=\"#77D914\">2 회</font>복합니다. <font color=\"#66CCFF\">체력</font>이 가득 차 있을 때는 대신 방어력을 <font color=\"#77D914\">1 회</font>복합니다.",
-     "deluxeDescRaw": "재련된 무기로 적을 처치하면 <font color=\"#66CCFF\">체력</font>을 <font color=\"#77D914\">4 회</font>복합니다. <font color=\"#66CCFF\">체력</font>이 가득 차 있을 때는 대신 방어력을 <font color=\"#77D914\">2 회</font>복합니다.",
-     "rawValues": [
-      {
-       "key": "HealAmount",
-       "label": "치유량",
-       "value": 2,
-       "unit": "count",
-       "display": "2"
-      },
-      {
-       "key": "HealAmount",
-       "label": "치유량",
-       "value": 4,
-       "unit": "count",
-       "display": "4"
-      },
-      {
-       "key": "ArmorAmount",
-       "label": "방어구 량",
-       "value": 1,
-       "unit": "count",
-       "display": "1"
-      },
-      {
-       "key": "ArmorAmount",
-       "label": "방어구 량",
-       "value": 2,
-       "unit": "count",
-       "display": "2"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Reclamation.png"
-    },
-    {
-     "key": "ShatterPoint",
-     "name": "파쇄점",
-     "standardDesc": "적중 시 적에게 스트레스 골절 스택이 쌓입니다. 대상의 최대 체력의 +30%만큼 피해를 입히면 파괴가 발동되어 대상의 최대 체력 +15%만큼의 추가 피해를 줍니다.",
-     "deluxeDesc": "적중 시 적에게 스트레스 골절 스택이 쌓입니다. 대상의 최대 체력의 +25%만큼 피해를 입히면 파괴가 발동되어 대상의 최대 체력 +25%만큼의 추가 피해를 줍니다.",
-     "standardDescRaw": "적중 시 적에게 스트레스 골절 스택이 쌓입니다. 대상의 <font color=\"#66CCFF\">최대 체력</font>의 <font color=\"#77D914\">+30%</font>만큼 <font color=\"#66CCFF\">피해</font>를 입히면 파괴가 발동되어 대상의 <font color=\"#66CCFF\">최대 체력</font> <font color=\"#77D914\">+15%</font>만큼의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "적중 시 적에게 스트레스 골절 스택이 쌓입니다. 대상의 <font color=\"#66CCFF\">최대 체력</font>의 <font color=\"#77D914\">+25%</font>만큼 <font color=\"#66CCFF\">피해</font>를 입히면 파괴가 발동되어 대상의 <font color=\"#66CCFF\">최대 체력</font> <font color=\"#77D914\">+25%</font>만큼의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "rawValues": [
-      {
-       "key": "DamageThreshold",
-       "label": "피해량 임계값",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "DamageThreshold",
-       "label": "피해량 임계값",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "BurstPercent",
-       "label": "버스트 퍼센트",
+       "key": "RecoilCompensation",
+       "label": "반동 보정",
        "value": 0.15,
        "unit": "percent",
        "display": "+15%"
       },
       {
-       "key": "BurstPercent",
-       "label": "버스트 퍼센트",
+       "key": "RecoilCompensation",
+       "label": "반동 보정",
        "value": 0.25,
        "unit": "percent",
        "display": "+25%"
@@ -18919,71 +18526,60 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/ShatterPoint.png"
+     "icon": null
     },
     {
-     "key": "Soulbound",
-     "name": "소울바운드",
-     "standardDesc": "가장 숙련도가 높은 무기는 마일스톤 등급당 +5%의 피해량 보너스를 얻습니다. 다른 무기들은 마일스톤당 +2%를 얻습니다.",
-     "deluxeDesc": "가장 숙련도가 높은 무기는 마일스톤 등급당 +10%의 피해량 보너스를 얻습니다. 다른 무기들은 마일스톤당 +4%를 얻습니다.",
-     "standardDescRaw": "가장 숙련도가 높은 무기는 마일스톤 등급당 <font color=\"#77D914\">+5%</font>의 <font color=\"#66CCFF\">피해량</font> 보너스를 얻습니다. 다른 무기들은 마일스톤당 <font color=\"#77D914\">+2%</font>를 얻습니다.",
-     "deluxeDescRaw": "가장 숙련도가 높은 무기는 마일스톤 등급당 <font color=\"#77D914\">+10%</font>의 <font color=\"#66CCFF\">피해량</font> 보너스를 얻습니다. 다른 무기들은 마일스톤당 <font color=\"#77D914\">+4%</font>를 얻습니다.",
+     "key": "ShotgunCalibration",
+     "name": "산탄 교정",
+     "standardDesc": "서포트 샷건의 산탄 확산이 10% 감소합니다.",
+     "deluxeDesc": "서포트 샷건의 산탄 확산이 20% 감소합니다.",
+     "standardDescRaw": "서포트 샷건의 산탄 확산이 <font color=\"#77D914\">10%</font> 감소합니다.",
+     "deluxeDescRaw": "서포트 샷건의 산탄 확산이 <font color=\"#77D914\">20%</font> 감소합니다.",
      "rawValues": [
       {
-       "key": "SoulboundDamagePerMilestone",
-       "label": "마일스톤 당 영혼귀속 피해량",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "SoulboundDamagePerMilestone",
-       "label": "마일스톤 당 영혼귀속 피해량",
+       "key": "ShotgunCalibration",
+       "label": "산탄 교정",
        "value": 0.1,
        "unit": "percent",
        "display": "+10%"
       },
       {
-       "key": "CrossDamagePerMilestone",
-       "label": "마일스톤 당 교차 피해량",
-       "value": 0.02,
+       "key": "ShotgunCalibration",
+       "label": "산탄 교정",
+       "value": 0.2,
        "unit": "percent",
-       "display": "+2%"
-      },
-      {
-       "key": "CrossDamagePerMilestone",
-       "label": "마일스톤 당 교차 피해량",
-       "value": 0.04,
-       "unit": "percent",
-       "display": "+4%"
+       "display": "+20%"
       }
      ],
      "hasKorText": true,
-     "note": "MasterworkTechnique와 동일한 마일스톤(무기별 100킬 단위)을 사용합니다.",
+     "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Soulbound.png"
+     "icon": null
     }
    ],
-   "skillCount": 10,
+   "skillCount": 6,
    "verdict": {
     "tag": "적절",
-    "note": "유지 판정. MasterworkTechnique/Soulbound의 '마일스톤'은 퍼크 설명(무기로 100킬 달성마다 보너스)에 근거해 '무기별 100킬 단위'로 해석 — 점진적 성장형이라 극단적이지 않음.",
+    "note": "서포트 무기 피해·재장전과 무기별 처치 숙련 단계로 성장합니다. 20레벨에는 최대 100단계까지 쌓아 관통력과 탄약 용량도 강화합니다.",
     "grade": "B"
    },
    "grade": "B",
    "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 밸런스 패치(2026-07-07), 구 0.005000; 구 0.010000; 구 0.005000",
+   "patchNote": "아티피서 리메이크: 서포트 무기별 숙련 단계와 6종 스킬로 교체",
    "recentChangeTag": {
-    "date": "2026-07-07",
+    "date": "2026-10-05",
     "type": "buff"
    },
    "extraSections": [],
-   "icon": "icons/artificer.png"
+   "icon": "icons/artificer.png",
+   "strengths": [],
+   "weaknesses": [],
+   "testWarning": null
   },
   {
    "key": "Hydra",
