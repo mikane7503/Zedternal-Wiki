@@ -1743,9 +1743,14 @@
    "weaknesses": [],
    "unlocks": [
     {
-     "level": 10,
+     "level": 5,
      "perk": "Artificer",
      "name": "기술자"
+    },
+    {
+     "level": 10,
+     "perk": "Vanguard",
+     "name": "뱅가드"
     },
     {
      "level": 15,
@@ -4858,8 +4863,8 @@
      "isCapstone": false
     },
     {
-     "raw": "발동 <font color=\"#77D914\">2초</font> 전 시전자에게 감시자 시각 경고가 나타납니다.",
-     "text": "발동 2초 전 시전자에게 감시자 시각 경고가 나타납니다.",
+     "raw": "재앙이 예정되면 시전자에게 감시자 이미지 예고가 발동 10초 전부터 나타나며 점점 밝아집니다. 마지막 2초에는 기존 암전·반전·경고 문구가 표시됩니다.",
+     "text": "재앙이 예정되면 시전자에게 감시자 이미지 예고가 발동 10초 전부터 나타나며 점점 밝아집니다. 마지막 2초에는 기존 암전·반전·경고 문구가 표시됩니다.",
      "isCapstone": false
     }
    ],
@@ -4879,7 +4884,7 @@
   },
   {
    "key": "Gambler",
-   "name": "도박꾼",
+   "name": "딜러",
    "parentPerk": "Capitalist",
    "unlockLevel": 10,
    "unlockRequirements": [
@@ -18295,11 +18300,11 @@
    "key": "Artificer",
    "name": "기술자",
    "parentPerk": "Support",
-   "unlockLevel": 10,
+   "unlockLevel": 5,
    "unlockRequirements": [
     {
      "perk": "Support",
-     "level": 10
+     "level": 5
     }
    ],
    "isCombinationUnlocked": false,
@@ -18577,6 +18582,370 @@
    },
    "extraSections": [],
    "icon": "icons/artificer.png",
+   "strengths": [],
+   "weaknesses": [],
+   "testWarning": null
+  },
+  {
+   "key": "Vanguard",
+   "name": "뱅가드",
+   "parentPerk": "Support",
+   "unlockLevel": 10,
+   "unlockRequirements": [
+    {
+     "perk": "Support",
+     "level": 10
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "hasIniConfig": true,
+   "passiveStats": [
+    {
+     "key": "SupportDamagePerLevel",
+     "label": "서포트 무기 사격 피해량",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "SupportPenetrationPerLevel",
+     "label": "서포트 무기 관통력",
+     "value": 0.1,
+     "unit": "percent",
+     "display": "+10%",
+     "lv10": 1,
+     "lv20": 2,
+     "lv10Display": "+100%",
+     "lv20Display": "+200%",
+     "scaling": true
+    },
+    {
+     "key": "MaxHealthPerLevel",
+     "label": "최대 체력",
+     "value": 0.02,
+     "unit": "percent",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
+    {
+     "key": "ArmorBonus",
+     "label": "최대 방어구 증가",
+     "value": 0.5,
+     "unit": "percent",
+     "display": "+50% (Lv10)",
+     "lv10": 0.5,
+     "lv20": 1,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%",
+     "scaling": false,
+     "capstoneLevel": 10
+    },
+    {
+     "key": "ArmoredResistance",
+     "label": "방어구 보유 시 받는 피해 감소",
+     "value": 0.2,
+     "unit": "percent",
+     "display": "20% (Lv10)",
+     "lv10": 0.2,
+     "lv20": 0.3,
+     "lv10Display": "20%",
+     "lv20Display": "30%",
+     "scaling": false,
+     "capstoneLevel": 10
+    }
+   ],
+   "valueSourceNote": "레벨 20 캡스톤은 레벨 10 효과를 대체합니다. 피해 감소는 방어구가 남아 있는 동안 적용되며, 최대 방어구 보너스는 기본 최대 방어구 기준입니다. 최대 체력도 기본 체력 기준이며, 무기 보너스는 서포트 무기 사격에만 적용되고 무기 강타에는 적용되지 않습니다.",
+   "role": "서포트 무기의 사격 피해와 관통력, 최대 체력을 높이고 방어구가 있을 때 생존력을 보강하는 전직 퍼크입니다.",
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "전열 보강: 서포트 무기의 피해가 <font color=\"#77D914\">+%x%%</font> 증가합니다. 레벨당 <font color=\"#77D914\">+1%</font>입니다.",
+     "text": "전열 보강: 서포트 무기의 피해가 +%x%% 증가합니다. 레벨당 +1%입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "전열 보강: 서포트 무기의 관통력이 <font color=\"#77D914\">+%x%%</font> 증가합니다. 레벨당 <font color=\"#77D914\">+10%</font>입니다.",
+     "text": "전열 보강: 서포트 무기의 관통력이 +%x%% 증가합니다. 레벨당 +10%입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "전투 체력: 최대 체력이 <font color=\"#77D914\">+%x%%</font> 증가합니다. 레벨당 <font color=\"#77D914\">+2%</font>입니다.",
+     "text": "전투 체력: 최대 체력이 +%x%% 증가합니다. 레벨당 +2%입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">10</font> — 강화 진형: 최대 방어구가 <font color=\"#77D914\">50%</font> 증가합니다. 방어구가 남아 있으면 받는 피해가 <font color=\"#77D914\">20%</font> 감소합니다.",
+     "text": "레벨 10 — 강화 진형: 최대 방어구가 50% 증가합니다. 방어구가 남아 있으면 받는 피해가 20% 감소합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">20</font> — 선봉대: 10레벨 효과를 최대 방어구 <font color=\"#77D914\">+100%</font>, 방어구가 남아 있을 때 피해 감소 <font color=\"#77D914\">30%</font>로 대체합니다.",
+     "text": "레벨 20 — 선봉대: 10레벨 효과를 최대 방어구 +100%, 방어구가 남아 있을 때 피해 감소 30%로 대체합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "서포터 <font color=\"#77D914\">10</font>레벨에 해금되며, 뱅가드의 최대 레벨은 <font color=\"#77D914\">20</font>입니다. 무기 효과는 서포트 무기의 사격에만 적용되며, 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
+     "text": "서포터 10레벨에 해금되며, 뱅가드의 최대 레벨은 20입니다. 무기 효과는 서포트 무기의 사격에만 적용되며, 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
+     "isCapstone": false
+    }
+   ],
+   "skills": [
+    {
+     "key": "ReinforcedArmor",
+     "name": "보강 장갑",
+     "standardDesc": "기본 방어구를 기준으로 최대 방어구가 10% 증가합니다.",
+     "deluxeDesc": "기본 방어구를 기준으로 최대 방어구가 20% 증가합니다.",
+     "standardDescRaw": "기본 방어구를 기준으로 최대 방어구가 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "기본 방어구를 기준으로 최대 방어구가 <font color=\"#77D914\">20%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "최대 방어구",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Bonus",
+       "label": "최대 방어구",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "FieldConditioning",
+     "name": "야전 체력",
+     "standardDesc": "기본 체력을 기준으로 최대 체력이 10% 증가합니다.",
+     "deluxeDesc": "기본 체력을 기준으로 최대 체력이 15% 증가합니다.",
+     "standardDescRaw": "기본 체력을 기준으로 최대 체력이 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "기본 체력을 기준으로 최대 체력이 <font color=\"#77D914\">15%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "최대 체력",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Bonus",
+       "label": "최대 체력",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "BallisticLining",
+     "name": "방탄 내피",
+     "standardDesc": "EDAR 레이저 사격을 포함한 탄도 피해가 5% 감소합니다.",
+     "deluxeDesc": "EDAR 레이저 사격을 포함한 탄도 피해가 10% 감소합니다.",
+     "standardDescRaw": "EDAR 레이저 사격을 포함한 탄도 피해가 <font color=\"#77D914\">5%</font> 감소합니다.",
+     "deluxeDescRaw": "EDAR 레이저 사격을 포함한 탄도 피해가 <font color=\"#77D914\">10%</font> 감소합니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "탄도 피해 감소",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "5%"
+      },
+      {
+       "key": "Bonus",
+       "label": "탄도 피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "BlastPadding",
+     "name": "폭압 완충",
+     "standardDesc": "폭발 피해가 5% 감소합니다.",
+     "deluxeDesc": "폭발 피해가 10% 감소합니다.",
+     "standardDescRaw": "폭발 피해가 <font color=\"#77D914\">5%</font> 감소합니다.",
+     "deluxeDescRaw": "폭발 피해가 <font color=\"#77D914\">10%</font> 감소합니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "폭발 피해 감소",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "5%"
+      },
+      {
+       "key": "Bonus",
+       "label": "폭발 피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "ThermalLayer",
+     "name": "내열층",
+     "standardDesc": "화염 피해가 5% 감소합니다.",
+     "deluxeDesc": "화염 피해가 10% 감소합니다.",
+     "standardDescRaw": "화염 피해가 <font color=\"#77D914\">5%</font> 감소합니다.",
+     "deluxeDescRaw": "화염 피해가 <font color=\"#77D914\">10%</font> 감소합니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "화염 피해 감소",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "5%"
+      },
+      {
+       "key": "Bonus",
+       "label": "화염 피해 감소",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "10%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "RapidFeed",
+     "name": "신속 급탄",
+     "standardDesc": "서포트 무기의 재장전 속도가 10% 증가합니다.",
+     "deluxeDesc": "서포트 무기의 재장전 속도가 15% 증가합니다.",
+     "standardDescRaw": "서포트 무기의 재장전 속도가 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "서포트 무기의 재장전 속도가 <font color=\"#77D914\">15%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "재장전 속도",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Bonus",
+       "label": "재장전 속도",
+       "value": 0.15,
+       "unit": "percent",
+       "display": "+15%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "BreachRounds",
+     "name": "돌파 탄두",
+     "standardDesc": "서포트 무기의 사격 피해가 10% 증가합니다. 무기 강타에는 적용되지 않습니다.",
+     "deluxeDesc": "서포트 무기의 사격 피해가 20% 증가합니다. 무기 강타에는 적용되지 않습니다.",
+     "standardDescRaw": "서포트 무기의 사격 피해가 <font color=\"#77D914\">10%</font> 증가합니다. 무기 강타에는 적용되지 않습니다.",
+     "deluxeDescRaw": "서포트 무기의 사격 피해가 <font color=\"#77D914\">20%</font> 증가합니다. 무기 강타에는 적용되지 않습니다.",
+     "rawValues": [
+      {
+       "key": "Bonus",
+       "label": "서포트 무기 사격 피해",
+       "value": 0.1,
+       "unit": "percent",
+       "display": "+10%"
+      },
+      {
+       "key": "Bonus",
+       "label": "서포트 무기 사격 피해",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    }
+   ],
+   "skillCount": 7,
+   "verdict": {
+    "tag": "적절",
+    "note": "서포트 무기 화력과 생존력을 함께 강화하며, 캡스톤의 저항은 방어구 보유 여부에 따라 달라집니다.",
+    "grade": "B"
+   },
+   "grade": "B",
+   "isPatched": false,
+   "patchNote": "신규 서포터 전직. Support 10레벨 해금, 최대 20레벨, 스킬 7종.",
+   "recentChangeTag": null,
+   "extraSections": [],
+   "icon": "icons/vanguard.png",
    "strengths": [],
    "weaknesses": [],
    "testWarning": null
@@ -21593,8 +21962,8 @@
      "isCapstone": false
     },
     {
-     "raw": "전투 능력 보너스와 <font color=\"#77D914\">10</font>·<font color=\"#77D914\">20레벨</font> 캡스톤이 없습니다. <font color=\"#77D914\">5레벨</font>에 도박꾼, <font color=\"#77D914\">10레벨</font>에 타이쿤 전직을 해금합니다.",
-     "text": "전투 능력 보너스와 10·20레벨 캡스톤이 없습니다. 5레벨에 도박꾼, 10레벨에 타이쿤 전직을 해금합니다.",
+     "raw": "전투 능력 보너스와 <font color=\"#77D914\">10</font>·<font color=\"#77D914\">20레벨</font> 캡스톤이 없습니다. <font color=\"#77D914\">5레벨</font>에 도박꾼, <font color=\"#77D914\">10레벨</font>에 딜러, <font color=\"#77D914\">15레벨</font>에 타이쿤을 해금합니다.",
+     "text": "전투 능력 보너스와 10·20레벨 캡스톤이 없습니다. 5레벨에 도박꾼, 10레벨에 딜러, 15레벨에 타이쿤을 해금합니다.",
      "isCapstone": false
     }
    ],
@@ -22179,7 +22548,7 @@
   },
   {
    "key": "WaveGambler",
-   "name": "웨이브 도박꾼",
+   "name": "도박꾼",
    "parentPerk": "Capitalist",
    "unlockLevel": 5,
    "unlockRequirements": [
@@ -22294,8 +22663,8 @@
   "holdingMelee": 0.75
  },
  "meta": {
-  "advancedPerkCount": 43,
+  "advancedPerkCount": 44,
   "basePerkCount": 10,
-  "totalSkills": 463
+  "totalSkills": 472
  }
 }
