@@ -25,13 +25,12 @@ const DAMAGE_GIVEN_STATS = [
   { label: "샷건 피해", real: 0.6 },
 ];
 const DAMAGE_TAKEN_STATS = [
-  { label: "허스크 자폭 피해", real: 1.3 },
+  { label: "허스크 자폭 피해", real: 1.2 },
   { label: "플레쉬파운드 킹 가슴빔 피해", real: 0.75 },
   { label: "한스 유탄 피해", real: 0.75 },
   { label: "가부장 미사일 피해", real: 0.75 },
-  { label: "여장부 플라즈마포 피해", real: 0.6 },
-  { label: "허스크 화염구 피해", real: 1.25 },
-  { label: "허스크 화염방사기 피해", real: 1.5 },
+  { label: "여장부 플라즈마포 피해", real: 0.75 },
+  { label: "허스크 화염방사기 피해", real: 1.25 },
   { label: "근접무기 소지 중 전체 피해", real: 0.75 },
 ];
 
@@ -60,7 +59,6 @@ const WEAPON_AURORA_STATS = [
   { label: "MKB42", value: 1.2 },
   { label: "모신나강", value: 1.1 },
   { label: "모신나강 관통(스코프)", value: 1.4 },
-  { label: "미니건 (대체 피해)", value: 1.1 },
   { label: "HRG 탄도 바운서", value: 0.6 },
   { label: "M4 샷건", value: 1.2 },
   { label: "네일건", value: 1.3 },
@@ -579,14 +577,6 @@ function renderBaseDetail(key) {
   const wrap = document.createDocumentFragment();
   const container = el("div", {});
 
-  const strengths = p.strengths.length
-    ? `<ul class="strengths">${p.strengths.map(s => `<li>${escapeHtml(s)}</li>`).join("")}</ul>` : "";
-  const weaknesses = p.weaknesses.length
-    ? p.weaknesses.map(w =>
-        `<div class="weak-item"><span class="sev-${w.severity}">${escapeHtml(w.label || w.skill)}</span> — ${escapeHtml(w.issue)}</div>`
-      ).join("")
-    : "";
-
   const grid = el("div", { class: "adv-grid" });
   for (const u of p.unlocks) {
     const adv = ADV_BY_KEY[u.perk];
@@ -608,20 +598,7 @@ function renderBaseDetail(key) {
   }
 
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
-
-  const skillsHtml = (p.skills || []).map(s => `
-    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
-      ${s.icon ? `<img class="skill-icon" src="${s.icon}" alt="" loading="lazy" onerror="this.style.display='none'">` : ""}
-      <div class="skill-item-body">
-        <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
-        ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
-        ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
-        ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
-        ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
-        ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
-      </div>
-    </div>
-  `).join("") || '<div class="empty-state" style="padding:10px">등록된 스킬 없음</div>';
+  const maxLevel = p.maxLevel || 20;
 
   container.innerHTML = `
     <div class="detail-header">
@@ -634,22 +611,17 @@ function renderBaseDetail(key) {
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
 
-    <div class="section-title">설명</div>
-    <div class="desc-line">${p.role || ""}</div>
-
-    <div class="section-title">세부 효과 (강점)</div>
-    ${strengths || '<div class="empty-state" style="padding:10px">기록된 강점 없음</div>'}
-    ${weaknesses ? `<div class="section-title" style="margin-top:14px">세부 효과 (약점)</div>${weaknesses}` : ""}
-
-    <div class="section-title">레벨별 수치</div>
-    ${renderSliderSection(p.passiveStats, 20)}
-
-    <div class="section-title">스킬 목록 (표준 / 디럭스)</div>
-    <div class="skill-list">${skillsHtml}</div>
-
-    <div class="section-title">퍼크 트리 (클릭해서 상세 보기)</div>
+    ${renderPerkSummarySection(p)}
+    ${renderPassiveSection(p)}
+    ${renderCapstoneSection(p)}
+    <div class="section-title">4. 레벨별 수치</div>
+    ${renderSliderSection(p.passiveStats || [], maxLevel)}
+    ${renderSkillsSection(p.skills || [])}
+    <div class="section-title">6. 상위 퍼크 트리</div>
+    <div class="tree-hint">퍼크를 선택하면 상세 정보를 엽니다.</div>
   `;
   container.appendChild(grid);
+  container.insertAdjacentHTML("beforeend", renderFullInfoSection(p, true));
   wrap.appendChild(container);
   return wrap;
 }
@@ -670,7 +642,7 @@ function renderAdvDetail(key) {
       : "";
   const subtitle = combination
     ? `히든 퍼크 · <strong class="hidden-unlock-emphasis">${escapeHtml(unlockText)}</strong> · 스킬 ${p.skillCount}개`
-    : p.baseDisplay
+    : p.baseDisplay || p.key === "Capitalist" || p.key === "Engineer"
     ? `베이스 퍼크 · 스킬 ${p.skillCount}개`
     : p.isStatic
     ? `정적 퍼크 · 최대 Lv20 · 스킬 ${p.skillCount}개`
@@ -678,44 +650,24 @@ function renderAdvDetail(key) {
       ? `${escapeHtml(parentName)} Lv${p.unlockLevel ?? "?"} 해금${achievementUnlockText} · 스킬 ${p.skillCount}개`
       : `독립 퍼크 · 스킬 ${p.skillCount}개`;
 
-  const descLines = p.descriptions.map(d =>
-    `<div class="desc-line ${d.isCapstone ? "capstone" : ""}">${d.raw || escapeHtml(d.text)}</div>`
-  ).join("") || '<div class="empty-state" style="padding:10px">등록된 게임 내 설명이 없습니다 — 아래 시스템 규칙 섹션을 참고하세요.</div>';
-  const descNote = p.descriptions.length
-    ? '<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">※ 아래 수치는 레벨 20(만렙) 기준입니다.</div>' : "";
-
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
-
-  const hasPassive = p.passiveStats.length > 0;
-  const upperPerks = DATA.advancedPerks
-    .filter(child => child.parentPerk === p.key && !isCombinationUnlocked(child))
-    .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0));
+  const maxLevel = p.maxLevel || 20;
+  const isBaseLikeRoot = p.key === "Capitalist" || p.key === "Engineer";
+  const upperPerks = isBaseLikeRoot
+    ? DATA.advancedPerks
+        .filter(child => child.parentPerk === p.key && !isCombinationUnlocked(child))
+        .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0))
+    : [];
   const upperPerkCards = upperPerks.map(child => `
     <div class="adv-card upper-perk-card" data-advkey="${escapeHtml(child.key)}">
       <img class="icon-img" src="${escapeHtml(child.icon || "")}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
       <div class="adv-body">
-        <div class="lvl">${escapeHtml(parentName || p.name)} Lv${child.unlockLevel} 해금</div>
+        <div class="lvl">${escapeHtml(p.name)} Lv${child.unlockLevel} 해금</div>
         <div class="name">${escapeHtml(child.name)}</div>
         <div class="skillcount">스킬 ${child.skillCount}개</div>
       </div>
       ${child.grade ? `<span class="grade-badge-wrap">${gradeBadge(child.grade)}</span>` : ""}
     </div>`).join("");
-
-  const skillsHtml = p.skills.map(s => `
-    <div class="skill-item ${s.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(s.key)}">
-      ${s.icon ? `<img class="skill-icon" src="${s.icon}" alt="" loading="lazy" onerror="this.style.display='none'">` : ""}
-      <div class="skill-item-body">
-        <h4>${escapeHtml(s.name)} <span style="color:var(--text-dim);font-weight:400;font-size:11px">(${s.key})</span>${s.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
-        ${s.disabled ? `<div class="disabled-banner">🚫 이 스킬은 현재 인게임에서 비활성화되어 선택할 수 없습니다.${s.disabledNote ? ` (${escapeHtml(s.disabledNote)})` : ""}</div>` : ""}
-        ${s.noData ? `<div class="empty-state" style="padding:10px">이 스킬은 게임 데이터에 설명이 없어 정확한 효과를 표시할 수 없습니다.</div>` : ""}
-        ${s.standardDescRaw ? `<div class="std"><b>표준</b>${s.standardDescRaw}</div>` : ""}
-        ${s.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${s.deluxeDescRaw}</div>` : ""}
-        ${s.note ? `<div class="skillnote">${escapeHtml(s.note)}</div>` : ""}
-      </div>
-    </div>
-  `).join("") || (p.key === "Haunted"
-    ? '<div class="empty-state mystery" style="padding:10px">🌫️ 그 어떤 기록에도 남아있지 않다 — 이 존재의 진짜 힘을 알고 싶다면, 직접 웨이브 속에서 마주하는 수밖에 없다.</div>'
-    : '<div class="empty-state" style="padding:10px">이 퍼크는 구매형 스킬 없이 시스템 자체로 작동합니다 — 위의 설명과 규칙 섹션을 참고하세요.</div>');
 
   const container = el("div", {});
   container.innerHTML = `
@@ -730,45 +682,133 @@ function renderAdvDetail(key) {
       <div class="detail-grade">${gradeBadge(p.grade)}</div>
     </div>
 
-    <div class="section-title">설명</div>
-    <div class="desc-line">${escapeHtml(p.role || (p.baseDisplay ? "" : p.isStatic ? "베이스 퍼크 트리와 별도로 운영되는 정적 퍼크입니다." : ""))}</div>
-
-    <div class="section-title">세부 효과 (게임 내 텍스트)</div>
-    ${descNote}
-    ${descLines}
-
-    ${(p.extraSections || []).map(sec => `
-      <div class="section-title">${escapeHtml(sec.title)}</div>
-      ${sec.note ? `<div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">${escapeHtml(sec.note)}</div>` : ""}
-      ${sec.html}
-    `).join("")}
-
-    ${hasPassive ? `<div class="section-title">레벨별 수치</div>${renderSliderSection(p.passiveStats, 20, p.valueSourceNote)}` : ""}
-
-    ${renderFixedStatsSection(p.fixedStats)}
-
-    ${upperPerks.length ? `<div class="section-title">상위 퍼크</div><div class="adv-grid">${upperPerkCards}</div>` : ""}
-
-    <div class="section-title">스킬 목록 (표준 / 디럭스)</div>
-    <div class="skill-list">${skillsHtml}</div>
+    ${renderPerkSummarySection(p)}
+    ${renderPassiveSection(p)}
+    ${renderCapstoneSection(p)}
+    <div class="section-title">4. 레벨별 수치</div>
+    ${renderSliderSection(p.passiveStats || [], maxLevel, p.valueSourceNote)}
+    ${renderSkillsSection(p.skills || [])}
+    ${isBaseLikeRoot ? `
+      <div class="section-title">6. 상위 퍼크 트리</div>
+      <div class="tree-hint">퍼크를 선택하면 상세 정보를 엽니다.</div>
+      <div class="adv-grid">${upperPerkCards || '<div class="empty-state perk-empty">현재 활성화된 상위 퍼크가 없습니다.</div>'}</div>
+    ` : ""}
   `;
+  container.insertAdjacentHTML("beforeend", renderFullInfoSection(p));
   const wrap = document.createDocumentFragment();
   wrap.appendChild(container);
   return wrap;
 }
 
-function renderFixedStatsSection(fixedStats) {
-  if (!fixedStats || !fixedStats.length) return "";
-  const rows = fixedStats.map(s => `
-    <div class="fixed-stat-row">
-      <span class="fixed-stat-label">${escapeHtml(s.label)}</span>
-      <span class="fixed-stat-val">${s.display}</span>
-      ${s.capstoneLevel ? `<span class="capstone-badge">Lv${s.capstoneLevel} 캡스톤</span>` : ""}
-    </div>`).join("");
+function renderPerkSummarySection(perk) {
   return `
-    <div class="section-title">고정 효과 (레벨과 무관하게 일정)</div>
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:6px">⚠ 아래 수치는 레벨업으로 커지지 않는 고정값입니다. "Lv10/20 캡스톤"은 해당 레벨에 도달하는 순간 1회 적용되는 효과입니다.</div>
-    <div class="fixed-stat-list">${rows}</div>
+    <div class="section-title">1. 설명</div>
+    <div class="perk-role-summary">${escapeHtml(perk.role || perk.summary || "설명이 등록되지 않았습니다.")}</div>
+  `;
+}
+
+function renderPassiveSection(perk) {
+  const stats = perk.passiveStats || [];
+  const maxLevel = perk.maxLevel || 20;
+  const rows = stats.map(stat => `
+    <div class="passive-summary-row">
+      <span class="passive-summary-label">${escapeHtml(stat.label)}</span>
+      <span class="passive-summary-rate">${escapeHtml(stat.display)} / 레벨</span>
+      <span class="passive-summary-total">Lv${maxLevel} ${escapeHtml(formatByUnit(stat.value * maxLevel, stat.unit))}</span>
+    </div>
+  `).join("");
+  return `
+    <div class="section-title">2. 패시브</div>
+    ${rows || '<div class="empty-state perk-empty">레벨당 선형 증가 수치가 없습니다. 단계별·확률형 효과는 아래 상세 정보에서 확인할 수 있습니다.</div>'}
+  `;
+}
+
+function renderCapstoneSection(perk) {
+  const descriptions = perk.capstoneDescriptions || (perk.descriptions || []).filter(description => description.isCapstone);
+  const fixedCapstones = (perk.fixedStats || []).filter(stat => stat.capstoneLevel);
+  if (!descriptions.length && !fixedCapstones.length) return "";
+  const descriptionRows = descriptions.map(description =>
+    `<div class="desc-line capstone">${description.raw || escapeHtml(description.text || "")}</div>`
+  ).join("");
+  const statRows = !descriptions.length ? fixedCapstones.map(stat => `
+    <div class="capstone-stat-row"><span>${escapeHtml(stat.label)}</span><b>${escapeHtml(stat.display)}</b><small>Lv${stat.capstoneLevel}</small></div>
+  `).join("") : "";
+  return `
+    <div class="section-title">3. 캡스톤</div>
+    <div class="capstone-list">${descriptionRows}${statRows}</div>
+  `;
+}
+
+function renderSkillsSection(skills) {
+  const skillsHtml = skills.map(skill => `
+    <div class="skill-item ${skill.disabled ? "skill-disabled" : ""}" data-skillkey="${escapeHtml(skill.key)}">
+      ${skill.icon ? `<img class="skill-icon" src="${escapeHtml(skill.icon)}" alt="" loading="lazy" onerror="this.style.display='none'">` : ""}
+      <div class="skill-item-body">
+        <h4>${escapeHtml(skill.name)} <span class="skill-key">(${escapeHtml(skill.key)})</span>${skill.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
+        ${skill.disabled ? `<div class="disabled-banner">🚫 현재 인게임에서 선택할 수 없습니다.${skill.disabledNote ? ` (${escapeHtml(skill.disabledNote)})` : ""}</div>` : ""}
+        ${skill.noData ? '<div class="empty-state perk-empty">게임 설명과 수치 자료가 등록되지 않았습니다.</div>' : ""}
+        ${skill.standardDescRaw ? `<div class="std"><b>표준</b>${skill.standardDescRaw}</div>` : ""}
+        ${skill.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${skill.deluxeDescRaw}</div>` : ""}
+        ${skill.note ? `<div class="skillnote">${escapeHtml(skill.note)}</div>` : ""}
+      </div>
+    </div>
+  `).join("");
+  return `
+    <div class="section-title">5. 스킬 목록 (표준 / 디럭스)</div>
+    <div class="skill-list">${skillsHtml || '<div class="empty-state perk-empty">별도 구매 스킬이 없습니다. 퍼크의 자동 효과와 규칙은 상세 정보에 정리했습니다.</div>'}</div>
+  `;
+}
+
+function renderFullInfoSection(perk, isBase = false) {
+  const passiveStats = perk.passiveStats || [];
+  const fixedStats = perk.fixedStats || [];
+  const descriptions = perk.descriptions || [];
+  const maxLevel = perk.maxLevel || 20;
+  const detailLevels = maxLevel > 10 ? [10, maxLevel] : [maxLevel];
+  const detailLevelHeaders = detailLevels.map(level => `<th>${level === maxLevel ? `만렙 Lv${level}` : `Lv${level}`}</th>`).join("");
+  const passiveRows = passiveStats.map(stat => `
+    <tr><td>${escapeHtml(stat.label)}</td><td>${escapeHtml(stat.display)} / 레벨</td>${detailLevels.map(level => `<td>${escapeHtml(formatByUnit(stat.value * level, stat.unit))}</td>`).join("")}</tr>
+  `).join("");
+  const fixedRows = fixedStats.map(stat => `
+    <tr><td>${escapeHtml(stat.label)}</td><td>${escapeHtml(stat.display)}</td><td>${stat.capstoneLevel ? `Lv${stat.capstoneLevel} 도달 시` : "고정 / 조건부"}</td></tr>
+  `).join("");
+  const descriptionHtml = descriptions.map(description => `
+    <div class="desc-line ${description.isCapstone ? "capstone" : ""}">${description.raw || escapeHtml(description.text || "")}</div>
+  `).join("");
+  const detailSkillRows = (perk.skills || []).flatMap(skill => {
+    const byKey = new Map();
+    for (const stat of skill.rawValues || []) {
+      const values = byKey.get(stat.key) || [];
+      values.push(stat);
+      byKey.set(stat.key, values);
+    }
+    return [...byKey.entries()].map(([key, values]) => `
+      <tr><td>${escapeHtml(skill.name)} · ${escapeHtml(values[0].label || key)}</td><td>${escapeHtml(values[0].display)}</td><td>${escapeHtml(values[1]?.display || values[0].display)}</td></tr>
+    `);
+  }).join("");
+  const extraSections = (perk.extraSections || []).map(section => `
+    <div class="full-info-subtitle">${escapeHtml(section.title)}</div>
+    ${section.note ? `<div class="full-info-note">${escapeHtml(section.note)}</div>` : ""}
+    ${section.html}
+  `).join("");
+  const strengths = isBase && perk.strengths?.length
+    ? `<div class="full-info-subtitle">강점</div><ul class="strengths">${perk.strengths.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : "";
+  const weaknesses = isBase && perk.weaknesses?.length
+    ? `<div class="full-info-subtitle">약점</div>${perk.weaknesses.map(item => `<div class="weak-item"><span class="sev-${escapeHtml(item.severity || "normal")}">${escapeHtml(item.label || item.skill || "")}</span> — ${escapeHtml(item.issue || "")}</div>`).join("")}` : "";
+  return `
+    <div class="section-title">7. 전체 상세 정보</div>
+    <details class="perk-full-details">
+      <summary>더 깊게 보기 · 세부 수치와 모든 작동 규칙</summary>
+      <div class="perk-full-body">
+        ${passiveRows ? `<div class="full-info-subtitle">레벨당 패시브 전체 수치</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>항목</th><th>레벨당</th>${detailLevelHeaders}</tr>${passiveRows}</table></div>` : ""}
+        ${fixedRows ? `<div class="full-info-subtitle">고정·조건부 수치 전체</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>항목</th><th>수치</th><th>적용</th></tr>${fixedRows}</table></div>` : ""}
+        ${detailSkillRows ? `<div class="full-info-subtitle">스킬 설정 수치 (표준 / 디럭스)</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>스킬 / 항목</th><th>표준</th><th>디럭스</th></tr>${detailSkillRows}</table></div>` : ""}
+        ${descriptions.length ? `<div class="full-info-subtitle">게임 내 퍼크 설명 원문</div>${descriptionHtml}` : ""}
+        ${strengths}${weaknesses}${extraSections}
+        ${!passiveRows && !fixedRows && !detailSkillRows && !descriptions.length && !strengths && !weaknesses && !extraSections
+          ? '<div class="empty-state perk-empty">현재 공개할 추가 수치가 없습니다.</div>' : ""}
+      </div>
+    </details>
   `;
 }
 
@@ -779,7 +819,7 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
     return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
   }).join("");
   return `
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 SV_Zedternal_Tempered 운영 폴더의 KFZedternalUnlimited.ini 기준입니다."}</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. ${sourceNote ? escapeHtml(sourceNote) : "운영 INI 수치와 해당 퍼크의 소스 기본값을 사용합니다."}</div>
     <div class="level-slider-row">
       <label for="levelSlider">퍼크 레벨</label>
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">

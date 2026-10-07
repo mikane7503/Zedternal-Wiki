@@ -81,11 +81,11 @@ def parse_player_aurora(path):
                 match = re.search(r'HOE=([+-]?[\d.]+)', line)
                 if match:
                     holding_melee = float(match.group(1))
-    # The live Tempered profile currently has ten general damage rows, 38
-    # weapon-specific rows, seven incoming-damage rows, and the melee-held
+    # The live Tempered profile currently has ten general damage rows, 37
+    # weapon-specific rows, six incoming-damage rows, and the melee-held
     # modifier. Keep this check aligned with the labels in docs/app.js so a
     # changed config cannot silently attach values to the wrong names.
-    if len(given) != 48 or len(taken) != 7 or holding_melee is None:
+    if len(given) != 47 or len(taken) != 6 or holding_melee is None:
         raise ValueError(
             f"Unexpected damage config in {path}: {len(given)} given, {len(taken)} taken, "
             f"holding-melee={'present' if holding_melee is not None else 'missing'}"
@@ -139,6 +139,15 @@ STATIC_PERK_STAT_DEFS = {
         {"index": 0, "key": "Dosh", "label": "웨이브 생존 보상", "unit": "currency", "scale": 1},
         {"index": 1, "key": "DoshPerKill", "label": "직접 처치 도쉬 보너스", "unit": "percent", "scale": 0.01},
     ],
+    "Goliath": [
+        {"index": 0, "key": "Damage", "label": "버서커 무기 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 1, "key": "ArmorPerLevel", "label": "기본 방어구 증가량", "unit": "percent", "scale": 0.01},
+    ],
+    "Vanguard": [
+        {"index": 0, "key": "SupportDamagePerLevel", "label": "서포트 무기 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 1, "key": "SupportPenetrationPerLevel", "label": "서포트 무기 관통력", "unit": "percent", "scale": 0.01},
+        {"index": 2, "key": "HealthPerLevel", "label": "최대 체력", "unit": "percent", "scale": 0.01},
+    ],
 }
 
 STATIC_PERK_BONUS_FALLBACKS = {"Capitalist": [10, 1]}
@@ -178,7 +187,101 @@ def build_static_perk_stats(key, bonus_values):
             "unit": definition["unit"],
             "display": format_value_as(value, definition["unit"]),
             "scaling": True,
+            "lv10": value * 10,
+            "lv20": value * 20,
+            "lv10Display": format_value_as(value * 10, definition["unit"]),
+            "lv20Display": format_value_as(value * 20, definition["unit"]),
         })
+    return stats
+
+
+PERK_LEVEL_STAT_LABELS = {
+    "Diablo": {
+        "HeavyDamagePerLevel": "강공격 피해량",
+        "LargeMeleeDamagePerLevel": "대형 제드 대상 근접 피해량",
+    },
+    "Shapeshifter": {
+        "Buff_Carnage_PerLevel": "전체 피해량",
+        "Buff_Executioner_PerLevel": "헤드샷 피해량",
+        "Buff_Rampage_PerLevel": "연사 속도",
+        "Buff_Crusher_PerLevel": "강공격 피해량",
+        "Buff_Berserker_PerLevel": "근접 공격 속도",
+        "Buff_Fortress_PerLevel": "받는 피해 감소",
+        "Buff_Leech_PerLevel": "처치 시 체력 회복",
+        "Buff_Anchor_PerLevel": "반동 감소",
+        "Buff_Hawk_PerLevel": "탄퍼짐 감소",
+        "Buff_Speedloader_PerLevel": "재장전 속도",
+        "Buff_Switchblade_PerLevel": "무기 전환 속도",
+        "Buff_Speedfreak_PerLevel": "이동 속도",
+        "Buff_Hoarder_PerLevel": "예비 탄약",
+        "Buff_Drumfire_PerLevel": "탄창 크기",
+        "Buff_Phantom_PerLevel": "ZED 타임 연사 속도",
+    },
+}
+
+PERK_STAT_LABEL_OVERRIDES = {
+    "Diablo": {
+        "DeathwaveInterval": "데스웨이브 간격", "DeathwaveRadius": "데스웨이브 반경",
+        "FearDeathwavePct": "공포 데스웨이브 피해 비율", "HellDeathwavePct": "지옥 데스웨이브 피해 비율",
+        "ReservoirPct": "누적 피해 보너스 비율", "MeleeLedgerBonus": "근접 공격 누적 보너스",
+        "ScorchedWakePct": "그을린 흔적 피해 비율", "EchoPct": "메아리 피해 비율",
+        "DemonSkinResistance": "악마 가죽 피해 저항", "BloodTributeHealPct": "피의 헌납 치유 비율",
+        "HellgateRadiusBonus": "지옥문 범위 보너스", "ApocalypsePct": "종말 피해 비율",
+    },
+    "Agony": {"CapstoneDamageBonus": "캡스톤 피해량 보너스", "KillExtensionSeconds": "처치 시 ZED 타임 연장"},
+    "Hivemind": {"SwarmCooldownSeconds": "무리 재사용 대기시간"},
+    "JekyllHyde": {
+        "HydeDuration": "하이드 변신 지속시간", "HydeDurationCapstoneMult": "캡스톤 변신 지속시간 배율",
+        "HydeBodyScale": "하이드 몸집 배율", "HydeScaleRate": "하이드 변신 속도",
+        "HydeMeleeBonus": "하이드 근접 피해 보너스", "HydeGunDamageMult": "하이드 총기 피해 배율",
+        "HydeAoERadius": "하이드 충격파 반경", "HydeAoEMinDamageFrac": "하이드 충격파 최소 피해 비율",
+        "HydeChargesBase": "웨이브당 기본 변신 횟수", "HydeChargesCapstone2": "20레벨 변신 횟수",
+        "HydeFinalDamageTakenMult": "하이드 받는 피해 배율", "Jekyll_MovePerRank": "지킬 랭크당 이동 속도",
+        "Jekyll_ReloadPerRank": "지킬 랭크당 재장전 속도",
+    },
+    "Haunted": {
+        "DisasterDamagePerLevel": "유령 단계당 재앙 피해량", "DisasterMinWaveProgress": "재앙 최소 웨이브 진행도",
+        "DisasterMaxWaveProgress": "재앙 최대 웨이브 진행도", "DisasterWarningDuration": "재앙 예고 지속시간",
+    },
+    "MissingNO": {
+        "GlitchProcChancePerLevel": "레벨당 글리치 발동 확률", "GlitchDamageBonus": "글리치 추가 피해량",
+        "GlitchDoshAmount": "글리치 도쉬 획득량", "GlitchAmmoRefillFraction": "글리치 탄약 환급 비율",
+        "GlitchHealAmount": "글리치 체력 회복량", "TypeMismatchDamageScale": "타입 불일치 추가 피해량",
+        "DataMissingProcChance": "데이터 누락 발동 확률", "DataMissingInvulnDuration": "데이터 누락 무적 지속시간",
+        "DataMissingSpeedMultiplier": "데이터 누락 이동 속도 배율", "WaveEndDuplicateChance": "웨이브 종료 무기 복제 확률",
+    },
+}
+
+
+def apply_perk_stat_labels(perk_key, stats):
+    labels = PERK_STAT_LABEL_OVERRIDES.get(perk_key, {})
+    for stat in stats:
+        if stat["key"] in labels:
+            stat["label"] = labels[stat["key"]]
+    return stats
+
+ENGINEER_LEVEL_STAT_PATTERNS = {
+    "DamageBonus": ("드론 피해량", r"S\.DamageBonus\s*=\s*([+-]?[\d.]+)f?\s*\*\s*S\.Level"),
+    "AmmoBonus": ("드론 탄약 용량", r"S\.AmmoBonus\s*=\s*([+-]?[\d.]+)f?\s*\*\s*S\.Level"),
+    "RangeBonus": ("드론 탐지 반경", r"S\.RangeBonus\s*=\s*([+-]?[\d.]+)f?\s*\*\s*S\.Level"),
+}
+
+
+def build_engineer_perk_level_stats():
+    """Read Engineer's per-level drone bonuses from the live implementation."""
+    source_path = os.path.join(SOURCE_CLASS_DIR, "ZTEngineerDroneSystem.uc")
+    with open(source_path, encoding="utf-8-sig") as f:
+        source = f.read()
+    rows = []
+    for key, (_, pattern) in ENGINEER_LEVEL_STAT_PATTERNS.items():
+        match = re.search(pattern, source, re.IGNORECASE)
+        if not match:
+            raise ValueError(f"Could not read Engineer per-level stat {key} from {source_path}")
+        rows.append((key, float(match.group(1))))
+    stats = build_stat_entries(rows, with_levels=True)
+    for stat in stats:
+        stat["label"] = ENGINEER_LEVEL_STAT_PATTERNS[stat["key"]][0]
+        stat["scaling"] = True
     return stats
 
 
@@ -785,6 +888,17 @@ SKILL_COST_STATS = {
 
 PLACEHOLDER_RE = re.compile(r"([+-]?)%x(%%?)?")
 CAPSTONE_LINE_RE = re.compile(r"^(?:<font[^>]*>)?레벨\s*\d+:")
+CAPSTONE_TEXT_RE = re.compile(
+    r"(?:캡스톤|^(?:레벨|LEVEL)\s*(?:10|20)\s*[-—:：]|^(?:10|20)\s*레벨\s*[-—:：]|^Lv\.?\s*(?:10|20)\s*[-—:：])",
+    re.IGNORECASE,
+)
+
+
+def is_capstone_description(text):
+    visible = strip_font(text).strip()
+    if re.search(r"(?:캡스톤.{0,12}(?:없|미구현|미적용)|(?:없|미구현|미적용).{0,12}캡스톤)", visible):
+        return False
+    return bool(CAPSTONE_LINE_RE.match(text) or CAPSTONE_TEXT_RE.search(visible))
 
 
 def reorder_placeholder_targets(passive_stats, raw_descriptions):
@@ -1306,19 +1420,38 @@ def build():
                     stat["unit"] = "seconds"
                     stat["display"] = "제한 없음" if stat["value"] == 0 else format_value_as(stat["value"], "seconds")
             fixed_stats.extend(drone_stats)
+            scaling_stats.extend(build_engineer_perk_level_stats())
+        if key in {"Goliath", "Vanguard"}:
+            scaling_stats.extend(build_static_perk_stats(key, parse_source_perk_bonus(key)))
+        if key in PERK_LEVEL_STAT_LABELS:
+            level_keys = set(PERK_LEVEL_STAT_LABELS[key])
+            promoted, remaining = [], []
+            for stat in fixed_stats:
+                (promoted if stat["key"] in level_keys else remaining).append(stat)
+            if promoted:
+                level_stats = build_stat_entries(
+                    [(stat["key"], stat["value"]) for stat in promoted], with_levels=True
+                )
+                for stat in level_stats:
+                    stat["label"] = PERK_LEVEL_STAT_LABELS[key][stat["key"]]
+                    stat["scaling"] = True
+                scaling_stats.extend(level_stats)
+                fixed_stats = remaining
         filled_descriptions = reconcile_perk_descriptions(raw_descs, filled_descriptions, fixed_stats, placeholder_groups)
         # Hand-authored replacements for lines the automatic reconciler
-        # can't safely fix: full original-KOR sentences (prose and font
-        # markup intact) with each number individually corrected against
-        # operations INI. Keyed by 0-based index into the perk's
-        # PerkUpgradeDescriptionN list.
-        if not use_current_source_kor:
-            for idx_str, text in manual_perk_descs.get(key, {}).items():
-                i = int(idx_str)
-                if 0 <= i < len(filled_descriptions):
-                    filled_descriptions[i] = text
+        # cannot safely fix. These preserve the KOR prose and markup while
+        # correcting values against the active implementation. Vanguard is
+        # the one explicit current-source KOR repair: its source text still
+        # says the per-level values are private even though the perk class
+        # exposes them in PerkBonus. Keys are zero-based description indices.
+        for idx_str, text in manual_perk_descs.get(key, {}).items():
+            if use_current_source_kor and key != "Vanguard":
+                continue
+            i = int(idx_str)
+            if 0 <= i < len(filled_descriptions):
+                filled_descriptions[i] = text
         descriptions = [
-            {"raw": d, "text": strip_font(d), "isCapstone": bool(CAPSTONE_LINE_RE.match(d)) or d.startswith("레벨")}
+            {"raw": d, "text": strip_font(d), "isCapstone": is_capstone_description(d)}
             for d in filled_descriptions
         ]
         perk_patch_note = "; ".join(patch_notes.get(f"DKUpgrade_Perk_{key}", []))
@@ -1412,15 +1545,19 @@ def build():
             "isCombinationUnlocked": rule.get("isCombinationUnlocked", False),
             "isStatic": is_static,
             "hasIniConfig": bool(ini_kv),
-            "passiveStats": scaling_stats,
-            "fixedStats": fixed_stats,
+            "maxLevel": 10 if key in {"Engineer", "Technician", "Hacker"} else 20,
+            "passiveStats": apply_perk_stat_labels(key, scaling_stats),
+            "fixedStats": apply_perk_stat_labels(key, fixed_stats),
             "valueSourceNote": (
-                "PerkBonus 값은 현재 운영 INI에 별도 섹션이 없어 ZedternalTempered 소스 클래스 기본값을 표시합니다."
-                if key == "Capitalist" and static_perk_stats else None
+                "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다."
+                if key in {"Capitalist", "Goliath", "Vanguard"} else
+                "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 운영 INI를 읽습니다."
+                if key == "Engineer" else None
             ),
             "role": role_desc.get("role"),
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
+            "capstoneDescriptions": [d for d in descriptions if d["isCapstone"]],
             "skills": skills,
             "skillCount": len(skills),
             "verdict": verdict,
@@ -1528,6 +1665,7 @@ def build():
             "role": bdata.get("role"),
             "endgame": bdata.get("endgame"),
             "passiveStats": passive_stats,
+            "maxLevel": 20,
             "strengths": bdata.get("strengths", []),
             "weaknesses": bdata.get("weaknesses", []),
             "unlocks": unlocks,
