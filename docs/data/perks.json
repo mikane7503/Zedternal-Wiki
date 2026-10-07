@@ -3138,8 +3138,10 @@
     }
    ],
    "skillCount": 6,
-   "verdict": null,
-   "grade": null,
+   "verdict": {
+    "grade": "B"
+   },
+   "grade": "B",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
@@ -4439,9 +4441,9 @@
    "verdict": {
     "tag": "적절 (고위험 설계)",
     "note": "스킬 6개가 전부 '체력 -X% 소모형'. 엔진 레벨 클램프(Cap_MinHealth=1, KFZedternalUnlimited.ini DKConfig_PlayerCaps에 명시)가 최소 체력 1을 보장하므로 자멸은 불가능 — 여러 개 동시 장착 시 극단적으로 낮은 체력의 하이리스크-하이리턴 빌드가 되도록 의도된 설계로 판단.",
-    "grade": "A"
+    "grade": "?"
    },
-   "grade": "A",
+   "grade": "?",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100000; 구 0.100000; 구 0.100000",
    "testWarning": null,
@@ -5029,6 +5031,62 @@
    "recentChangeTag": null,
    "extraSections": [],
    "icon": "icons/diablo.png"
+  },
+  {
+   "key": "WaveGambler",
+   "name": "도박꾼",
+   "parentPerk": "Capitalist",
+   "unlockLevel": 5,
+   "unlockRequirements": [
+    {
+     "perk": "Capitalist",
+     "level": 5
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 20,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "role": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#77D914\">1레벨</font>부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "text": "1레벨부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "잭팟도박: 현재 도쉬의 <font color=\"#77D914\">100%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">50%</font>를 잃습니다.",
+     "text": "잭팟도박: 현재 도쉬의 100%를 추가로 얻거나, 실패하면 50%를 잃습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "도박: 현재 도쉬의 <font color=\"#77D914\">15%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">15%</font>를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "text": "도박: 현재 도쉬의 15%를 추가로 얻거나, 실패하면 15%를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 <font color=\"#77D914\">20레벨</font>. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "text": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 20레벨. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [],
+   "skills": [],
+   "skillCount": 0,
+   "verdict": {
+    "grade": "?"
+   },
+   "grade": "?",
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "icon": "icons/wavegambler.png"
   },
   {
    "key": "Gambler",
@@ -13122,6 +13180,10 @@
     },
     {
      "perk": "Demolitionist",
+     "level": 5
+    },
+    {
+     "perk": "Survivalist",
      "level": 5
     }
    ],
@@ -23303,7 +23365,7 @@
   "holdingMelee": 0.75
  },
  "meta": {
-  "advancedPerkCount": 45,
+  "advancedPerkCount": 46,
   "basePerkCount": 10,
   "totalSkills": 475
  }

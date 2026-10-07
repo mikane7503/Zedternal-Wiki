@@ -173,7 +173,7 @@
     "Voodoo": {
       "tag": "적절 (고위험 설계)",
       "note": "스킬 6개가 전부 '체력 -X% 소모형'. 엔진 레벨 클램프(Cap_MinHealth=1, KFZedternalUnlimited.ini DKConfig_PlayerCaps에 명시)가 최소 체력 1을 보장하므로 자멸은 불가능 — 여러 개 동시 장착 시 극단적으로 낮은 체력의 하이리스크-하이리턴 빌드가 되도록 의도된 설계로 판단.",
-      "grade": "A"
+      "grade": "?"
     },
     "Warlord": {
       "tag": "적절",
@@ -202,6 +202,12 @@
     },
     "Technician": {
       "grade": "B"
+    },
+    "Goliath": {
+      "grade": "B"
+    },
+    "WaveGambler": {
+      "grade": "?"
     }
   },
   "skillNotes": {

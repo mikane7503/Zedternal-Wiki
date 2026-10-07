@@ -498,7 +498,6 @@ function renderCombinationPerksBox(perks) {
 
   const body = el("div", { class: "accordion-body" });
   for (const perk of perks) {
-    const requirementText = (perk.unlockRequirements || []).map(unlockRequirementLabel).join(" + ");
     const row = el("div", {
       class: `child-row combination-perk-row ${perk.key === SELECTED_ADV_KEY ? "active" : ""}`,
       "data-advkey": perk.key,
@@ -509,7 +508,6 @@ function renderCombinationPerksBox(perks) {
           el("span", { class: "name", text: perk.name }),
           el("span", { class: "grade-badge-wrap", html: gradeBadge("?") }),
         ]),
-        el("div", { class: "combination-requirements", text: requirementText }),
       ]),
     ]);
     row.addEventListener("click", event => { event.stopPropagation(); selectAdv(perk.key); });

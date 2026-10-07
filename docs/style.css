@@ -321,8 +321,8 @@ body {
 
 /* Requested sidebar category emphasis */
 .balance-aurora-item .accordion-header h3,
-.weapon-aurora-item .accordion-header h3 { color: #00ff00; }
-.combination-perks-item .accordion-header h3 { color: var(--gold); }
+.weapon-aurora-item .accordion-header h3 { color: var(--gold); }
+.combination-perks-item .accordion-header h3 { color: #dc143c; }
 .combination-perk-row { align-items: flex-start; }
 .combination-perk-info { flex: 1; min-width: 0; }
 .combination-perk-heading { display: flex; align-items: center; gap: 8px; }

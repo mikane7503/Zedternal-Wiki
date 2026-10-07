@@ -406,9 +406,9 @@ def strip_font(s):
 
 UNLOCK_RULE_RE = re.compile(r'PerkUnlockRules=\(PerkName="(?:ZT|DK)Upgrade_Perk_(\w+)",([^)]*)\)')
 UNLOCK_REQUIREMENT_PERK_RE = re.compile(
-    r'Req([12])Perk="(?:ZUTUpgrade_Perk_Base_|WMUpgrade_Perk_|ZTUpgrade_Perk_|DKUpgrade_Perk_)(\w+)"'
+    r'Req([123])Perk="(?:ZUTUpgrade_Perk_Base_|WMUpgrade_Perk_|ZTUpgrade_Perk_|DKUpgrade_Perk_)(\w+)"'
 )
-UNLOCK_REQUIREMENT_LEVEL_RE = re.compile(r'Req([12])Level=(\d+)')
+UNLOCK_REQUIREMENT_LEVEL_RE = re.compile(r'Req([123])Level=(\d+)')
 
 
 def parse_unlock_rules(main_sections):
@@ -1335,6 +1335,11 @@ def build():
     wm_skill_registry = parse_wm_skill_registry(INI_UPGRADES)
     active_advanced_perks = parse_active_advanced_perks(INI_UPGRADES)
     unlock_rules = parse_unlock_rules(main_sections)
+    # WaveGambler is injected into the perk progression catalog at runtime,
+    # rather than listed in Config_PerkUpgrade. Its active unlock rule and
+    # localization section are the authoritative signals that it is present.
+    if "WaveGambler" in unlock_rules and "DKUpgrade_Perk_WaveGambler" in kor_sections:
+        active_advanced_perks.setdefault("WaveGambler", False)
     patch_notes = parse_patch_notes(INI_MAIN)
     if os.path.isfile(INI_BALANCE):
         for section, notes in parse_patch_notes(INI_BALANCE).items():
