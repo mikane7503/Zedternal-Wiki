@@ -612,10 +612,10 @@ function renderBaseDetail(key) {
     ${renderPerkSummarySection(p)}
     ${renderPassiveSection(p)}
     ${renderCapstoneSection(p)}
-    <div class="section-title">4. 레벨별 수치</div>
+    <div class="section-title perk-section-title">4. 레벨별 수치</div>
     ${renderSliderSection(p.passiveStats || [], maxLevel)}
     ${renderSkillsSection(p.skills || [])}
-    <div class="section-title">6. 상위 퍼크 트리</div>
+    <div class="section-title perk-section-title">6. 상위 퍼크 트리</div>
     <div class="tree-hint">퍼크를 선택하면 상세 정보를 엽니다.</div>
   `;
   container.appendChild(grid);
@@ -683,16 +683,16 @@ function renderAdvDetail(key) {
     ${renderPerkSummarySection(p)}
     ${renderPassiveSection(p)}
     ${renderCapstoneSection(p)}
-    <div class="section-title">4. 레벨별 수치</div>
+    <div class="section-title perk-section-title">4. 레벨별 수치</div>
     ${renderSliderSection(p.passiveStats || [], maxLevel, p.valueSourceNote)}
     ${renderSkillsSection(p.skills || [])}
     ${isBaseLikeRoot ? `
-      <div class="section-title">6. 상위 퍼크 트리</div>
+      <div class="section-title perk-section-title">6. 상위 퍼크 트리</div>
       <div class="tree-hint">퍼크를 선택하면 상세 정보를 엽니다.</div>
       <div class="adv-grid">${upperPerkCards || '<div class="empty-state perk-empty">현재 활성화된 상위 퍼크가 없습니다.</div>'}</div>
     ` : ""}
   `;
-  container.insertAdjacentHTML("beforeend", renderFullInfoSection(p));
+  if (p.key !== "WaveGambler") container.insertAdjacentHTML("beforeend", renderFullInfoSection(p));
   const wrap = document.createDocumentFragment();
   wrap.appendChild(container);
   return wrap;
@@ -700,8 +700,9 @@ function renderAdvDetail(key) {
 
 function renderPerkSummarySection(perk) {
   return `
-    <div class="section-title">1. 설명</div>
+    <div class="section-title perk-section-title">1. 설명</div>
     <div class="perk-role-summary">${escapeHtml(perk.role || perk.summary || "설명이 등록되지 않았습니다.")}</div>
+    ${perk.summaryHtml ? `<div class="perk-explanation-detail">${perk.summaryHtml}</div>` : ""}
   `;
 }
 
@@ -716,7 +717,7 @@ function renderPassiveSection(perk) {
     </div>
   `).join("");
   return `
-    <div class="section-title">2. 패시브</div>
+    <div class="section-title perk-section-title">2. 패시브</div>
     ${rows || '<div class="empty-state perk-empty">레벨당 선형 증가 수치가 없습니다. 단계별·확률형 효과는 아래 상세 정보에서 확인할 수 있습니다.</div>'}
   `;
 }
@@ -732,7 +733,7 @@ function renderCapstoneSection(perk) {
     <div class="capstone-stat-row"><span>${escapeHtml(stat.label)}</span><b>${escapeHtml(stat.display)}</b><small>Lv${stat.capstoneLevel}</small></div>
   `).join("") : "";
   return `
-    <div class="section-title">3. 캡스톤</div>
+    <div class="section-title perk-section-title">3. 캡스톤</div>
     <div class="capstone-list">${descriptionRows}${statRows}</div>
   `;
 }
@@ -752,7 +753,7 @@ function renderSkillsSection(skills) {
     </div>
   `).join("");
   return `
-    <div class="section-title">5. 스킬 목록 (표준 / 디럭스)</div>
+    <div class="section-title perk-section-title">5. 스킬 목록 (표준 / 디럭스)</div>
     <div class="skill-list">${skillsHtml || '<div class="empty-state perk-empty">별도 구매 스킬이 없습니다. 퍼크의 자동 효과와 규칙은 상세 정보에 정리했습니다.</div>'}</div>
   `;
 }
@@ -794,7 +795,7 @@ function renderFullInfoSection(perk, isBase = false) {
   const weaknesses = isBase && perk.weaknesses?.length
     ? `<div class="full-info-subtitle">약점</div>${perk.weaknesses.map(item => `<div class="weak-item"><span class="sev-${escapeHtml(item.severity || "normal")}">${escapeHtml(item.label || item.skill || "")}</span> — ${escapeHtml(item.issue || "")}</div>`).join("")}` : "";
   return `
-    <div class="section-title">7. 전체 상세 정보</div>
+    <div class="section-title perk-section-title">7. 전체 상세 정보</div>
     <details class="perk-full-details">
       <summary>더 깊게 보기 · 세부 수치와 모든 작동 규칙</summary>
       <div class="perk-full-body">

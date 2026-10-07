@@ -2489,6 +2489,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "Berserker·Firebug 무기의 피해량, 체력, 방어구를 동시에 끌어올리는 탱커형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -2923,6 +2924,7 @@
    ],
    "valueSourceNote": "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
    "role": "버서커 무기 피해와 최대 방어구를 레벨에 따라 높여 근접 전투의 화력과 생존력을 함께 키우는 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -3323,6 +3325,7 @@
    ],
    "valueSourceNote": null,
    "role": "근접 처치가 누적될수록 피해량·공격 속도가 눈덩이처럼 강해지는 폭동 진압 특화 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -3979,6 +3982,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "체력·방어구를 스스로 깎는 대신 피해량을 대폭 폭증시키는 하이리스크-하이리턴 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -4808,6 +4812,7 @@
    ],
    "valueSourceNote": null,
    "role": "근접 강공격과 대형 제드 피해를 올리고, 저장한 피해를 주기적인 데스웨이브로 방출하는 광전사 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -5050,7 +5055,8 @@
    "passiveStats": [],
    "fixedStats": [],
    "valueSourceNote": null,
-   "role": null,
+   "role": "전투 능력치 대신, 매 웨이브 상점에서 보유 도쉬를 걸고 선택한 도박의 확률에 따라 자금을 늘리거나 잃는 경제 퍼크입니다.",
+   "summaryHtml": "\n<h4>도박 확률과 성공 판정</h4>\n<p>성공 판정은 서버에서 0~99 난수 하나를 뽑아 난수가 성공 확률보다 작으면 성공 처리합니다. 일반 도박 확률은 1~19레벨에서 <b>44 + 퍼크 레벨%</b>로 매 레벨 1%p씩 선형 증가하고, 20레벨은 예외적으로 65%입니다. 잭팟 확률은 선형이 아니라 아래처럼 레벨 구간별로 상승합니다.</p>\n<div class=\"table-scroll\"><table class=\"stat-table compact-stat-table\"><tr><th>레벨</th><th>일반 도박</th><th>잭팟</th></tr>\n<tr><td>1</td><td>45%</td><td>20%</td></tr><tr><td>2</td><td>46%</td><td>21%</td></tr><tr><td>3</td><td>47%</td><td>21%</td></tr><tr><td>4</td><td>48%</td><td>22%</td></tr><tr><td>5</td><td>49%</td><td>23%</td></tr><tr><td>6</td><td>50%</td><td>23%</td></tr><tr><td>7</td><td>51%</td><td>24%</td></tr><tr><td>8</td><td>52%</td><td>24%</td></tr><tr><td>9</td><td>53%</td><td>25%</td></tr><tr><td>10</td><td>54%</td><td>26%</td></tr><tr><td>11</td><td>55%</td><td>26%</td></tr><tr><td>12</td><td>56%</td><td>27%</td></tr><tr><td>13</td><td>57%</td><td>27%</td></tr><tr><td>14</td><td>58%</td><td>28%</td></tr><tr><td>15</td><td>59%</td><td>29%</td></tr><tr><td>16</td><td>60%</td><td>29%</td></tr><tr><td>17</td><td>61%</td><td>30%</td></tr><tr><td>18</td><td>62%</td><td>30%</td></tr><tr><td>19</td><td>63%</td><td>31%</td></tr><tr><td>20</td><td>65%</td><td>32%</td></tr></table></div>\n<h4>선택별 도쉬 계산</h4>\n<ul><li><b>잭팟</b>: 성공하면 판정 직전 보유 도쉬만큼 추가 획득(+100%). 실패하면 보유액의 50%를 반올림해 차감합니다.</li><li><b>일반 도박</b>: 성공/실패 모두 보유액의 15%를 반올림해 더하거나 뺍니다.</li><li><b>스킵</b>: 보유액을 그대로 둡니다. 전투 피해·공격 속도 등 별도 전투 패시브는 없습니다.</li></ul>\n<h4>발동 시점과 중복 방지</h4>\n<p>퍼크 레벨 1 이상인 비관전자에게 성공한 웨이브 뒤 상점 시간에 선택창을 띄웁니다. 매 웨이브 한 번만 결과가 확정되며, 웨이브·상점 상태, 요청 토큰, 중복 응답 여부를 서버가 검증합니다. 응답하지 않거나 상점이 닫히면 스킵 처리되고, 끊겼다가 다시 접속해도 미완료 선택만 다시 받을 수 있습니다. 레벨은 1~20으로 제한되어 판정합니다.</p>\n",
    "endgame": null,
    "descriptions": [
     {
@@ -5146,6 +5152,7 @@
    ],
    "valueSourceNote": null,
    "role": "확률적 잭팟과 웨이브 보너스로 도쉬 수입을 늘리는 경제형 서포트 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -5701,6 +5708,7 @@
    ],
    "valueSourceNote": null,
    "role": "복리 이자가 눈덩이처럼 불어나 웨이브가 지날수록 도쉬 수입이 기하급수적으로 늘어나는 최상급 경제형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -6209,6 +6217,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "좀비 타입별로 피해를 집중 증폭시키는 잠입 요원 컨셉의 특화 딜러 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -6680,6 +6689,7 @@
    ],
    "valueSourceNote": null,
    "role": "소총의 피해·헤드샷·재장전·반동·전환·탄약 6속성을 한 번에 강화하는 만능 화력 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -7349,6 +7359,7 @@
    ],
    "valueSourceNote": null,
    "role": "4가지 위상을 자동 순환하며 상황에 맞는 강력한 보너스를 끊임없이 부여하는 리듬형 서포트 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -7568,6 +7579,7 @@
    ],
    "valueSourceNote": null,
    "role": "ZED타임 중 이동속도·피해량을 대폭 증폭시키고, 헤드샷으로 ZED타임을 연장하는 시간 지배형 최종 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -8017,6 +8029,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "수류탄 피해량을 스킬로 겹겹이 증폭시키는 폭발 스페셜리스트 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -8415,6 +8428,7 @@
    ],
    "valueSourceNote": null,
    "role": "화염과 폭발, 두 속성의 피해를 동시에 끌어올리는 하이브리드 소각 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -8905,6 +8919,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "처치 카운터가 쌓이면 처치하는 적을 연쇄 폭발로 지워버리는 트리거형 광역 딜러 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -9047,6 +9062,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "엔지니어 드론의 조준·은신 탐지·배치·대형 제드 대응을 특화하는 드론 지원 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -9195,6 +9211,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "엔지니어 드론에 특수 탄종을 추가하고 해금한 탄종을 정해진 발사 간격으로 발사하는 드론 공격 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -9402,6 +9419,7 @@
    ],
    "valueSourceNote": null,
    "role": "치유량을 크게 늘리고, 확률적으로 팀원을 완전 회복시키는 힐러 특화 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -10042,6 +10060,7 @@
    ],
    "valueSourceNote": null,
    "role": "적을 공격할수록 체력을 흡수해 자생력을 확보하고, 팀원까지 회복시키는 흡혈 서포트 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -10711,6 +10730,7 @@
    ],
    "valueSourceNote": null,
    "role": "팀원 전체의 피해량·재장전 속도를 함께 끌어올리고, 일제 처치 시 파티 버프를 터뜨리는 팀 버퍼 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -11241,6 +11261,7 @@
    ],
    "valueSourceNote": null,
    "role": "치유 능력을 유지하면서 재장전·관통력·탄약까지 얹어주는 최종 필드메딕 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -11982,6 +12003,7 @@
    ],
    "valueSourceNote": null,
    "role": "하이드 혈청으로 제한 시간 동안 변신해 근접 공격과 충격파를 강화하는 변신형 퍼크입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -12108,6 +12130,7 @@
    ],
    "valueSourceNote": null,
    "role": "화염 피해량을 레벨마다 착실하게 쌓아가는 파이어버그 1차 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -12745,6 +12768,7 @@
    ],
    "valueSourceNote": null,
    "role": "불타는 적이 많을수록 화염 피해가 스스로 불어나고, 웨이브당 1회 죽음까지 회피하는 스노우볼형 화염 딜러 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -13286,7 +13310,8 @@
     }
    ],
    "valueSourceNote": null,
-   "role": "그 진정한 힘을 아는 자가 없는 베일에 싸인 최종 전직입니다. 어둠 속에서 무언가가 당신을 지켜보고 있습니다.",
+   "role": "직접 전투 능력치나 구매 스킬 없이, 처치로 감시자의 공포 단계가 오르고 매 웨이브 한 번 무작위 재앙이 살아 있는 제드 전체를 덮치는 퍼크입니다.",
+   "summaryHtml": "\n<h4>핵심 작동</h4>\n<p>유령을 보유하면 감시자가 즉시 활성화됩니다. 이 퍼크는 직접 올려 주는 전투 스탯·캡스톤·선택 스킬이 없습니다. 대신 퍼크 레벨에 따라 재앙 피해가 커지고, 처치할수록 감시자 연출이 5단계까지 강해집니다. 현재 설정은 <b>웨이브마다 재앙 1회</b>, 웨이브 진행도 30~70% 사이 무작위 발동, 기본 피해 <b>퍼크 레벨당 100</b>입니다. 폭발 재앙은 여기에 2배 배율을 적용합니다.</p>\n",
    "endgame": null,
    "descriptions": [
     {
@@ -13308,7 +13333,13 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "감시자 재앙·단계별 동작",
+     "note": "운영 INI의 Haunted 설정과 ZTUpgrade_Perk_Haunted_Helper 구현 기준입니다. 피해는 살아 있는 제드 대상입니다.",
+     "html": "<div class=\"desc-line\"><b>발동 조건:</b> 각 웨이브의 처치 진행도 30~70% 구간에서 시점을 무작위로 하나 정하고, 해당 구간에 도달하면 한 번 발동을 예약합니다. 경고 시간은 HUD의 10초 예고 시간과 INI의 2초 중 큰 값인 10초입니다. 70%를 넘긴 뒤 늦게 헬퍼가 생성되면 그 웨이브 재앙은 발동하지 않습니다.</div><div class=\"desc-line\"><b>피해 계산:</b> 기본 피해 = 유령 레벨 × 100 (INI: DisasterDamagePerLevel=100). 폭발은 기본 피해 × 2 (ExplosionDamageMultiplier=2.0), 그 외 세 재앙은 기본 피해를 사용합니다. 레벨 20이면 기본 2,000, 폭발 4,000입니다.</div><div class=\"desc-line\"><b>무작위 재앙 4종:</b> 동결+피해(FreezePower 100), 폭발 피해(2배), 넉다운+피해(대상이 생존하고 넉다운 가능할 때), 화염+피해(BurnPower 100, 이 피해 유형의 추가 화상 DoT는 0). 네 유형 중 하나를 선택합니다.</div><div class=\"desc-line\"><b>예고·발동 연출:</b> 플레이어에게 10초 전 유령 이미지를 예고하고 불투명도를 10%에서 30%까지 올립니다. 마지막 짧은 구간에는 정전기·색 반전·화면 어둡게 하기와 “IT COMES” 문구를 표시합니다. 서버에서 재앙이 확정되면 이미지가 50% 불투명도로 잠깐 나타나며, 웨이브 종료 시 진행 중인 경고를 취소합니다.</div><div class=\"desc-line\"><b>처치 단계:</b> 시작은 1단계이며 10킬마다 한 단계 올라 최대 5단계입니다(40킬부터 5단계). 비네트 강도는 단계별 5%, 15%, 20%, 25%, 30%입니다. 눈 최대치는 1·1·2·3·4개이고 생성 간격은 각 단계별 15~30초, 10~20초, 8~15초, 5~10초, 3~6초입니다. 심장박동 소리는 4단계부터 2초 간격, 5단계에서 1.2초 간격으로 빨라집니다.</div><div class=\"desc-line\"><b>현재 설정:</b> KillsPerStage=10, MaxStage=5, DisasterMinWaveProgress=0.30, DisasterMaxWaveProgress=0.70, DisasterWarningDuration=2.0초. 웨이브당 발동 표시는 플레이어 컨트롤러에 기록되어 같은 플레이어에게 한 웨이브 재앙이 중복 실행되지 않습니다.</div>"
+    }
+   ],
    "icon": "icons/haunted.png"
   },
   {
@@ -13343,6 +13374,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "헤드샷 처치마다 도쉬를 안겨주는 건슬링거 1차 경제형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -14045,6 +14077,7 @@
    ],
    "valueSourceNote": null,
    "role": "피해·치유·탄창·관통·재장전·이동 등 14가지 속성을 골고루 강화하는 균형형 최종 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -14391,6 +14424,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "매 웨이브 랜덤 챌린지를 완료할 때마다 스탯이 영구히 누적되는 로그라이크형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -14718,6 +14752,7 @@
    ],
    "valueSourceNote": null,
    "role": "전체 피해량·이동속도·헤드샷을 얹으면서, 일정 확률로 적을 즉사시키는 히트앤런형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -15305,6 +15340,7 @@
    ],
    "valueSourceNote": null,
    "role": "탄약이 마르지 않게 해주고 재장전·무기 전환 속도를 크게 끌어올리는 SWAT 1차 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -15959,6 +15995,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "14가지 무기 능력치를 동시에 균등하게 끌어올리는 올라운더형 SWAT 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -16321,6 +16358,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "동결 피해와 지속시간을 함께 늘려 제드를 얼려 무력화시키는 냉기 특화 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -16827,6 +16865,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "피해량과 피해 저항을 동시에 끌어올려 공격·생존 두 가지를 모두 챙기는 균형형 최종 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -16973,6 +17012,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "샤프슈터·건슬링거 무기의 피해량과 헤드샷 피해를 함께 강화하는 1차 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -17463,6 +17503,7 @@
    ],
    "valueSourceNote": null,
    "role": "매복 첫 공격의 피해를 폭발적으로 증폭시키는 헌터형 저격 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -18035,6 +18076,7 @@
    ],
    "valueSourceNote": null,
    "role": "헤드샷·기본 피해를 동시에 대폭 끌어올리고, 조건 충족 시 냉동 폭발을 터뜨리는 최종 저격형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -18498,6 +18540,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "트로피 세트를 수집할수록 영구 보너스가 무한히 쌓여 점점 강해지는 컬렉션형 최종 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -19133,6 +19176,7 @@
    ],
    "valueSourceNote": null,
    "role": "무기를 오래 쓸수록 무작위 능력치 보너스가 영구히 누적되는 장인 컨셉의 서포트 1차 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -19692,6 +19736,7 @@
    "fixedStats": [],
    "valueSourceNote": "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
    "role": "서포트 무기 피해·관통력과 체력을 높이고, 방어구가 남아 있을 때 피해를 줄이는 전열 방어형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -19984,6 +20029,7 @@
    ],
    "valueSourceNote": null,
    "role": "연사 속도와 관통력을 크게 늘리고, 조건 충족 시 화력이 폭발하는 분노 모드로 버스트 극딜을 뽑는 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -20494,6 +20540,7 @@
    ],
    "valueSourceNote": null,
    "role": "독 피해량을 레벨마다 착실하게 증폭시키는 서바이벌리스트 1차 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -20946,6 +20993,7 @@
    ],
    "valueSourceNote": null,
    "role": "독·석화로 적을 무력화하고, 조건 충족 시 광역 맹독을 퍼뜨리는 뱀 컨셉의 저격형 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -21823,6 +21871,7 @@
    ],
    "valueSourceNote": null,
    "role": "탄창과 예비 탄약을 늘리고 공격 때마다 무작위 글리치 효과를 발동시키는 변칙형 퍼크입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -22446,6 +22495,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "웨이브마다 무작위 버프가 영구적으로 쌓여, 시간이 갈수록 능력치가 무한히 확장되는 최종 서바이벌리스트 전직입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -22927,6 +22977,7 @@
    "fixedStats": [],
    "valueSourceNote": "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
    "role": "웨이브 생존과 직접 처치로 도쉬를 모으고 상위 경제 퍼크로 전직하는 성장형 퍼크입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -23169,6 +23220,7 @@
    ],
    "valueSourceNote": "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 운영 INI를 읽습니다.",
    "role": "센티널과 HRG 워트호그 드론을 배치해 원거리 화력을 지원하고 드론의 피해·탄약·탐지를 강화하는 퍼크입니다.",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {

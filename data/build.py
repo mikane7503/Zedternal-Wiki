@@ -1560,6 +1560,7 @@ def build():
                 if key == "Engineer" else None
             ),
             "role": role_desc.get("role"),
+            "summaryHtml": perk_extras.get("summaryHtml"),
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
             "capstoneDescriptions": [d for d in descriptions if d["isCapstone"]],

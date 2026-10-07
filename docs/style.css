@@ -470,6 +470,28 @@ body {
   padding-bottom: 4px;
 }
 
+.perk-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  color: var(--cyan);
+}
+
+.perk-explanation-detail {
+  margin-top: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: rgba(21, 215, 250, 0.025);
+}
+.perk-explanation-detail h4 { margin: 10px 0 5px; color: var(--cyan); font-size: 14px; }
+.perk-explanation-detail h4:first-child { margin-top: 0; }
+.perk-explanation-detail p { margin: 5px 0; line-height: 1.65; }
+.perk-explanation-detail ul { margin: 5px 0 10px; padding-left: 22px; line-height: 1.7; }
+.perk-explanation-detail li + li { margin-top: 3px; }
+.perk-explanation-detail .table-scroll { margin: 7px 0 12px; }
+.perk-explanation-detail .stat-table { margin: 0; }
+
 .desc-line { padding: 6px 0; border-bottom: 1px dashed var(--border); font-size: 14px; }
 .desc-line i { color: var(--text-dim); font-style: normal; font-size: 12px; }
 .desc-line:last-child { border-bottom: none; }
