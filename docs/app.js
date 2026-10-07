@@ -824,10 +824,10 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">
       <span class="lvl-val" id="lvlValLabel">Lv ${maxLevel}</span>
     </div>
-    <table class="stat-table">
+    <div class="table-scroll level-stat-scroll"><table class="stat-table">
       <tr><th>항목</th><th>레벨당</th><th>선택 레벨 값</th></tr>
       ${rows}
-    </table>
+    </table></div>
   `;
 }
 
