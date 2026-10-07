@@ -319,6 +319,17 @@ body {
 .icon-img.sm { width: 26px; height: 26px; }
 .icon-img.lg { width: 76px; height: 76px; }
 
+/* Requested sidebar category emphasis */
+.balance-aurora-item .accordion-header h3,
+.weapon-aurora-item .accordion-header h3 { color: #00ff00; }
+.combination-perks-item .accordion-header h3 { color: var(--gold); }
+.combination-perk-row { align-items: flex-start; }
+.combination-perk-info { flex: 1; min-width: 0; }
+.combination-perk-heading { display: flex; align-items: center; gap: 8px; }
+.combination-perk-heading .name { white-space: normal; }
+.combination-requirements,
+.hidden-unlock-emphasis { color: var(--gold); font-weight: 800; }
+.combination-requirements { margin-top: 2px; font-size: 10px; line-height: 1.3; overflow-wrap: anywhere; }
 /* ---- sidebar accordion ---- */
 .sidebar {
   width: 280px;

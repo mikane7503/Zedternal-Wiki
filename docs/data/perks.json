@@ -4150,9 +4150,9 @@
    "verdict": {
     "tag": "적절 (고위험 설계)",
     "note": "스킬 6개가 전부 '체력 -X% 소모형'. 엔진 레벨 클램프(Cap_MinHealth=1, KFZedternalUnlimited.ini DKConfig_PlayerCaps에 명시)가 최소 체력 1을 보장하므로 자멸은 불가능 — 여러 개 동시 장착 시 극단적으로 낮은 체력의 하이리스크-하이리턴 빌드가 되도록 의도된 설계로 판단.",
-    "grade": "A"
+    "grade": "?"
    },
-   "grade": "A",
+   "grade": "?",
    "isPatched": true,
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.100000; 구 0.100000; 구 0.100000",
    "recentChangeTag": null,
@@ -22537,7 +22537,7 @@
    ],
    "skillCount": 6,
    "verdict": null,
-   "grade": null,
+   "grade": "B",
    "isPatched": false,
    "patchNote": null,
    "recentChangeTag": null,
@@ -22590,7 +22590,7 @@
    "skills": [],
    "skillCount": 0,
    "verdict": null,
-   "grade": null,
+   "grade": "?",
    "isPatched": false,
    "patchNote": null,
    "recentChangeTag": null,

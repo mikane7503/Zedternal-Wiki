@@ -500,14 +500,20 @@ function renderCombinationPerksBox(perks) {
 
   const body = el("div", { class: "accordion-body" });
   for (const perk of perks) {
+    const requirementText = (perk.unlockRequirements || []).map(unlockRequirementLabel).join(" + ");
     const row = el("div", {
-      class: `child-row ${perk.key === SELECTED_ADV_KEY ? "active" : ""}`,
+      class: `child-row combination-perk-row ${perk.key === SELECTED_ADV_KEY ? "active" : ""}`,
       "data-advkey": perk.key,
     }, [
       iconImg(perk, "sm"),
-      el("span", { class: "name", text: perk.name }),
+      el("div", { class: "combination-perk-info" }, [
+        el("div", { class: "combination-perk-heading" }, [
+          el("span", { class: "name", text: perk.name }),
+          el("span", { class: "grade-badge-wrap", html: gradeBadge("?") }),
+        ]),
+        el("div", { class: "combination-requirements", text: requirementText }),
+      ]),
     ]);
-    row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge("?") }));
     row.addEventListener("click", event => { event.stopPropagation(); selectAdv(perk.key); });
     body.appendChild(row);
   }
@@ -663,7 +669,7 @@ function renderAdvDetail(key) {
       ? `<div class="back-link" data-advkey="${escapeHtml(parentAdv.key)}">← ${escapeHtml(parentAdv.name)} 개요로</div>`
       : "";
   const subtitle = combination
-    ? `히든 퍼크 · ${escapeHtml(unlockText)} · 스킬 ${p.skillCount}개`
+    ? `히든 퍼크 · <strong class="hidden-unlock-emphasis">${escapeHtml(unlockText)}</strong> · 스킬 ${p.skillCount}개`
     : p.baseDisplay
     ? `베이스 퍼크 · 스킬 ${p.skillCount}개`
     : p.isStatic
