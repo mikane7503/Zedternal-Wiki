@@ -322,11 +322,6 @@
      "name": "군벌"
     },
     {
-     "level": 15,
-     "perk": "Metronome",
-     "name": "메트로놈"
-    },
-    {
      "level": 20,
      "perk": "Agony",
      "name": "에고니"
@@ -1307,8 +1302,8 @@
     },
     {
      "level": 15,
-     "perk": "Gambit",
-     "name": "갬빗"
+     "perk": "JohnWick",
+     "name": "존 윅"
     },
     {
      "level": 20,
@@ -1318,12 +1313,12 @@
    ],
    "skills": [
     {
-     "key": "BoneBreaker",
-     "name": "뼈 분쇄자",
-     "standardDesc": "모든 무기로 좀비의 머리 및 사지 타격 시 비틀거림 30%, 넉다운 위력 30%, 헤드샷 피해량이 20% 증가합니다.",
-     "deluxeDesc": "모든 무기로 좀비 타격 시 비틀거림 75%, 사지 넉다운 위력 60%, 헤드샷 피해량이 50% 증가합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">모든 무기</font>로 좀비의 머리 및 사지 타격 시 <font color=\"#FF6666\">비틀거림</font> <font color=\"#77D914\">30%</font>, <font color=\"#FF6666\">넉다운</font> 위력 <font color=\"#77D914\">30%</font>, <font color=\"#66CCFF\">헤드샷 피해</font>량이 <font color=\"#77D914\">20%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">모든 무기</font>로 좀비 타격 시 <font color=\"#FF6666\">비틀거림</font> <font color=\"#77D914\">75%</font>, 사지 <font color=\"#FF6666\">넉다운</font> 위력 <font color=\"#77D914\">60%</font>, <font color=\"#66CCFF\">헤드샷 피해</font>량이 <font color=\"#77D914\">50%</font> 증가합니다.",
+     "key": "RackEmUp",
+     "name": "Rack ’em Up",
+     "standardDesc": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: 1~5단계 8/7/6/5/4%, 6~10단계 3/3/2/2/2%, 11단계 이후 각 1%. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
+     "deluxeDesc": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: 1~5단계 8/7/6/5/4%, 6~10단계 3/3/2/2/2%, 11단계 이후 각 1%. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
+     "standardDescRaw": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: <font color=\"#77D914\">1</font>~5단계 <font color=\"#77D914\">8</font>/<font color=\"#77D914\">7</font>/<font color=\"#77D914\">6</font>/<font color=\"#77D914\">5</font>/<font color=\"#77D914\">4%</font>, <font color=\"#77D914\">6</font>~10단계 <font color=\"#77D914\">3</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2%</font>, 11단계 이후 각 <font color=\"#77D914\">1%</font>. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
+     "deluxeDescRaw": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: <font color=\"#77D914\">1</font>~5단계 <font color=\"#77D914\">8</font>/<font color=\"#77D914\">7</font>/<font color=\"#77D914\">6</font>/<font color=\"#77D914\">5</font>/<font color=\"#77D914\">4%</font>, <font color=\"#77D914\">6</font>~10단계 <font color=\"#77D914\">3</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2%</font>, 11단계 이후 각 <font color=\"#77D914\">1%</font>. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -1333,7 +1328,7 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/BoneBreaker.png"
+     "icon": "icons/skills/RackEmUp.png"
     },
     {
      "key": "FirstBlood",
@@ -1545,6 +1540,24 @@
    ],
    "skills": [
     {
+     "key": "RackEmUp",
+     "name": "Rack ’em Up",
+     "standardDesc": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: 1~5단계 8/7/6/5/4%, 6~10단계 3/3/2/2/2%, 11단계 이후 각 1%. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
+     "deluxeDesc": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: 1~5단계 8/7/6/5/4%, 6~10단계 3/3/2/2/2%, 11단계 이후 각 1%. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
+     "standardDescRaw": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: <font color=\"#77D914\">1</font>~5단계 <font color=\"#77D914\">8</font>/<font color=\"#77D914\">7</font>/<font color=\"#77D914\">6</font>/<font color=\"#77D914\">5</font>/<font color=\"#77D914\">4%</font>, <font color=\"#77D914\">6</font>~10단계 <font color=\"#77D914\">3</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2%</font>, 11단계 이후 각 <font color=\"#77D914\">1%</font>. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
+     "deluxeDescRaw": "건슬링거 또는 샤프슈터 무기로 헤드샷을 맞히면 공용 Rack ’em Up 단계가 쌓입니다. 단계별 추가 피해: <font color=\"#77D914\">1</font>~5단계 <font color=\"#77D914\">8</font>/<font color=\"#77D914\">7</font>/<font color=\"#77D914\">6</font>/<font color=\"#77D914\">5</font>/<font color=\"#77D914\">4%</font>, <font color=\"#77D914\">6</font>~10단계 <font color=\"#77D914\">3</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2</font>/<font color=\"#77D914\">2%</font>, 11단계 이후 각 <font color=\"#77D914\">1%</font>. 기본 상한은 5단계이며 존 윅 10레벨에서 10단계, 20레벨에서 무제한이 됩니다. 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다. 두 번 구매해도 효과는 중첩되지 않습니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/RackEmUp.png"
+    },
+    {
      "key": "Assassin",
      "name": "암살자",
      "standardDesc": "모든 무기의 헤드샷 피해량이 20% 증가합니다.",
@@ -1579,24 +1592,6 @@
      "disabledNote": null,
      "noData": false,
      "icon": "icons/skills/Marksman.png"
-    },
-    {
-     "key": "RankThemUp",
-     "name": "순서대로",
-     "standardDesc": "모든 무기로 헤드샷 5회 연속 적중 시 다음 헤드샷 피해량이 150% 증가합니다.",
-     "deluxeDesc": "모든 무기로 헤드샷 5회 연속 적중 시 다음 헤드샷 피해량이 375% 증가합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">모든 무기</font>로 헤드샷 <font color=\"#77D914\">5회</font> 연속 적중 시 다음 <font color=\"#66CCFF\">헤드샷 피해</font>량이 <font color=\"#77D914\">150%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">모든 무기</font>로 헤드샷 <font color=\"#77D914\">5회</font> 연속 적중 시 다음 <font color=\"#66CCFF\">헤드샷 피해</font>량이 <font color=\"#77D914\">375%</font> 증가합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/RankThemUp.png"
     },
     {
      "key": "Sniper",
@@ -6162,6 +6157,287 @@
    "icon": "icons/tycoon.png"
   },
   {
+   "key": "Gambit",
+   "name": "갬빗",
+   "parentPerk": "Capitalist",
+   "unlockLevel": null,
+   "unlockRequirements": [
+    {
+     "perk": "Capitalist",
+     "level": 5
+    },
+    {
+     "perk": "Gunslinger",
+     "level": 10
+    }
+   ],
+   "isCombinationUnlocked": true,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 20,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "role": "매 웨이브 랜덤 챌린지를 완료할 때마다 스탯이 영구히 누적되는 로그라이크형 전직입니다.",
+   "summaryHtml": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "text": "각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">10</font>: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
+     "text": "레벨 10: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">20</font>: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "text": "레벨 20: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "보상은 특전 레벨에 비례하여 증가하며, <font color=\"#66CCFF\">피해량</font>, 도쉬, 속도, 재장전, <font color=\"#66CCFF\">반동</font>, 탄창 크기, <font color=\"#66CCFF\">예비 탄약</font> 보너스 등이 포함됩니다.",
+     "text": "보상은 특전 레벨에 비례하여 증가하며, 피해량, 도쉬, 속도, 재장전, 반동, 탄창 크기, 예비 탄약 보너스 등이 포함됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [
+    {
+     "raw": "레벨 <font color=\"#77D914\">10</font>: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
+     "text": "레벨 10: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">20</font>: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "text": "레벨 20: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "isCapstone": true
+    }
+   ],
+   "skills": [
+    {
+     "key": "RaiseTheStakes",
+     "name": "판돈을 높이다",
+     "standardDesc": "모든 갬빗의 목표 수치가 50% 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
+     "deluxeDesc": "모든 갬빗의 목표 수치가 25%만 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
+     "standardDescRaw": "모든 갬빗의 목표 수치가 <font color=\"#77D914\">50%</font> 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
+     "deluxeDescRaw": "모든 갬빗의 목표 수치가 <font color=\"#77D914\">25%</font>만 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/RaiseTheStakes.png"
+    },
+    {
+     "key": "HotStreak",
+     "name": "핫 스트릭",
+     "standardDesc": "갬빗을 연속으로 완료하면 보상 배율이 최대 2배까지 증가합니다. 도중 실패하면 연속 완료 기록이 초기화됩니다.",
+     "deluxeDesc": "갬빗을 연속으로 완료하면 보상 배율이 최대 2배까지 증가합니다. 실패하더라도 연속 기록이 1만 감소합니다.",
+     "standardDescRaw": "갬빗을 연속으로 완료하면 보상 배율이 최대 <font color=\"#77D914\">2</font>배까지 증가합니다. 도중 실패하면 연속 완료 기록이 초기화됩니다.",
+     "deluxeDescRaw": "갬빗을 연속으로 완료하면 보상 배율이 최대 <font color=\"#77D914\">2</font>배까지 증가합니다. 실패하더라도 연속 기록이 <font color=\"#77D914\">1</font>만 감소합니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/HotStreak.png"
+    },
+    {
+     "key": "TheHouseAlwaysWins",
+     "name": "하우스는 항상 이긴다",
+     "standardDesc": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 20%씩 감소합니다. (최대 3회, 60%까지 누적).",
+     "deluxeDesc": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 20%씩 감소합니다. (최대 5회, 100%까지 누적).",
+     "standardDescRaw": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 <font color=\"#77D914\">20%</font>씩 감소합니다. (최대 <font color=\"#77D914\">3회</font>, <font color=\"#77D914\">60%</font>까지 누적).",
+     "deluxeDescRaw": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 <font color=\"#77D914\">20%</font>씩 감소합니다. (최대 <font color=\"#77D914\">5회</font>, <font color=\"#77D914\">100%</font>까지 누적).",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/TheHouseAlwaysWins.png"
+    },
+    {
+     "key": "CardShark",
+     "name": "카드 샤크",
+     "standardDesc": "갬빗에 실패하면 영구적인 +2% 피해량 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 100 도쉬로 환전합니다.",
+     "deluxeDesc": "갬빗에 실패하면 영구적인 +3% 피해량 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 150 도쉬로 환전합니다.",
+     "standardDescRaw": "갬빗에 실패하면 영구적인 <font color=\"#77D914\">+2%</font> <font color=\"#66CCFF\">피해량</font> 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 <font color=\"#77D914\">100 도쉬</font>로 환전합니다.",
+     "deluxeDescRaw": "갬빗에 실패하면 영구적인 <font color=\"#77D914\">+3%</font> <font color=\"#66CCFF\">피해량</font> 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 <font color=\"#77D914\">150 도쉬</font>로 환전합니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/CardShark.png"
+    },
+    {
+     "key": "WildCard",
+     "name": "와일드카드",
+     "standardDesc": "갬빗이 활성화된 동안, 적을 처치할 때마다 1% 확률로 해당 갬빗이 즉시 완료됩니다.",
+     "deluxeDesc": "갬빗이 활성화된 동안, 적을 처치할 때마다 2% 확률로 해당 갬빗이 즉시 완료됩니다.",
+     "standardDescRaw": "갬빗이 활성화된 동안, 적을 처치할 때마다 <font color=\"#77D914\">1%</font> 확률로 해당 갬빗이 즉시 완료됩니다.",
+     "deluxeDescRaw": "갬빗이 활성화된 동안, 적을 처치할 때마다 <font color=\"#77D914\">2%</font> 확률로 해당 갬빗이 즉시 완료됩니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/WildCard.png"
+    },
+    {
+     "key": "DoubleOrNothing",
+     "name": "더블 오어 나씽",
+     "standardDesc": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (확률: 50/50).",
+     "deluxeDesc": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (당신에게 유리한 확률: 60/40).",
+     "standardDescRaw": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (확률: <font color=\"#77D914\">50</font>/<font color=\"#77D914\">50</font>).",
+     "deluxeDescRaw": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (당신에게 유리한 확률: <font color=\"#77D914\">60</font>/<font color=\"#77D914\">40</font>).",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/DoubleOrNothing.png"
+    },
+    {
+     "key": "RoyalFlush",
+     "name": "로얄 플러시",
+     "standardDesc": "매 5번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 3배가 됩니다.",
+     "deluxeDesc": "매 3번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 3배가 됩니다.",
+     "standardDescRaw": "매 <font color=\"#77D914\">5</font>번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 <font color=\"#77D914\">3</font>배가 됩니다.",
+     "deluxeDescRaw": "매 <font color=\"#77D914\">3</font>번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 <font color=\"#77D914\">3</font>배가 됩니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/RoyalFlush.png"
+    },
+    {
+     "key": "AceUpYourSleeve",
+     "name": "당신의 비장의 무기",
+     "standardDesc": "갬빗을 완료한 후, 다음 10발의 사격은 +50%의 추가 피해를 줍니다.",
+     "deluxeDesc": "갬빗을 완료한 후, 다음 15발의 사격은 +75%의 추가 피해를 줍니다.",
+     "standardDescRaw": "갬빗을 완료한 후, 다음 <font color=\"#77D914\">10발</font>의 사격은 <font color=\"#77D914\">+50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "deluxeDescRaw": "갬빗을 완료한 후, 다음 <font color=\"#77D914\">15발</font>의 사격은 <font color=\"#77D914\">+75%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/AceUpYourSleeve.png"
+    },
+    {
+     "key": "Bluff",
+     "name": "블러프",
+     "standardDesc": "갬빗이 활성화된 상태에서 치명적인 피해를 입으면 1 HP로 생존합니다. 생존 시 갬빗은 포기됩니다. 재사용 대기시간: 90초. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
+     "deluxeDesc": "갬빗이 활성화된 상태에서 치명적인 피해를 입으면 1 HP로 생존하고 2초간 무적이 됩니다. 생존 시 갬빗은 포기됩니다. 재사용 대기시간: 45초. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
+     "standardDescRaw": "갬빗이 활성화된 상태에서 치명적인 <font color=\"#66CCFF\">피해</font>를 입으면 <font color=\"#77D914\">1 HP</font>로 생존합니다. 생존 시 갬빗은 포기됩니다. <font color=\"#FFD700\">재사용 대기시간</font>: <font color=\"#77D914\">90초</font>. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
+     "deluxeDescRaw": "갬빗이 활성화된 상태에서 치명적인 <font color=\"#66CCFF\">피해</font>를 입으면 <font color=\"#77D914\">1 HP</font>로 생존하고 <font color=\"#77D914\">2초간</font> 무적이 됩니다. 생존 시 갬빗은 포기됩니다. <font color=\"#FFD700\">재사용 대기시간</font>: <font color=\"#77D914\">45초</font>. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Bluff.png"
+    },
+    {
+     "key": "HouseEdge",
+     "name": "하우스 엣지",
+     "standardDesc": "슬롯 머신 발동: 25",
+     "deluxeDesc": "슬롯 머신 발동: 20",
+     "standardDescRaw": "슬롯 머신 발동: 25",
+     "deluxeDescRaw": "슬롯 머신 발동: 20",
+     "rawValues": [
+      {
+       "key": "SlotMachineTrigger",
+       "label": "슬롯 머신 발동",
+       "value": 25,
+       "unit": "count",
+       "display": "25"
+      },
+      {
+       "key": "SlotMachineTrigger",
+       "label": "슬롯 머신 발동",
+       "value": 20,
+       "unit": "count",
+       "display": "20"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": true,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/HouseEdge.png"
+    }
+   ],
+   "skillCount": 10,
+   "verdict": {
+    "tag": "OP 소지",
+    "note": "웨이브당 1회로 축적 속도는 제한되지만(실패해도 다음 웨이브로 넘어갈 뿐 하방 리스크는 낮음), 성장 자체에는 상한이 없고 승수 스킬(×2~×3)까지 중첩 가능. 보상값이 순수 하드코딩이라 조정 불가 — 장기전(엔들리스)에서 위험.",
+    "grade": "S"
+   },
+   "grade": "S",
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [
+    {
+     "title": "갬빗 시스템 규칙",
+     "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
+     "html": "<div class=\"desc-line\">매 웨이브 시작 시 갬빗 1개가 무작위로 발동됩니다. 추첨 가중치는 <font color=\"#c8c8c8\">일반 100</font> : <font color=\"#50a0ff\">희귀 50</font> : <font color=\"#b450ff\">전설 25</font>입니다.</div><div class=\"desc-line\">등급 해금 — <font color=\"#c8c8c8\">일반</font>: 항상 / <font color=\"#50a0ff\">희귀</font>: 퍼크 Lv10부터 / <font color=\"#b450ff\">전설</font>: 퍼크 Lv20부터 / <font color=\"#ffc832\">신화</font>: 퍼크 Lv10부터, 매 추첨마다 별도 <font color=\"#FFFFFF\">1%</font> 확률 판정에 성공하면 일반 추첨을 무시하고 등장합니다.</div><div class=\"desc-line\">목표치 = 기본 목표 + (웨이브 배율 × 현재 웨이브 번호), 최소 1. 보상 = 기본 보상 × <font color=\"#77d914\">퍼크 레벨</font>.</div><div class=\"desc-line\"><font color=\"#FF6666\">피해량</font>·<font color=\"#77d914\">이동 속도</font> 보상은 게임이 끝날 때까지 영구 누적되고(무기 기본 피해/기본 이동 속도 기준 가산), <font color=\"#FFD700\">도쉬</font>는 즉시 지급됩니다.</div><div class=\"desc-line\">처치형 갬빗은 목표 달성 즉시 완료가 확정되며, '강철 피부'·'무적'처럼 웨이브 내내 유지해야 하는 갬빗은 웨이브 종료 시 최종 판정됩니다.</div><div class=\"desc-line\">대형 좀비 판정: 스크레이크, 플레시파운드(미니 포함), 보스. 진행도와 누적 보상은 HUD에 실시간 표시됩니다.</div>"
+    },
+    {
+     "title": "갬빗 목록 (14종)",
+     "note": "목표치의 W = 현재 웨이브 번호. 보상의 ×L = 퍼크 레벨 배율 (Lv20 기준 값 병기).",
+     "html": "<table class=\"stat-table\"><tr><th>갬빗</th><th>등급</th><th>조건</th><th>보상 (퍼크 레벨 ×L)</th></tr><tr><td><font color=\"#c8c8c8\">명사수</font> (Marksman)</td><td><font color=\"#c8c8c8\">일반</font></td><td>헤드샷으로 5+W마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#c8c8c8\">처치 수</font> (Body Count)</td><td><font color=\"#c8c8c8\">일반</font></td><td>좀비 10+3W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">강철 피부</font> (Iron Skin)</td><td><font color=\"#c8c8c8\">일반</font></td><td>받는 피해 150+30W 이하</td><td>이동 속도 +0.25%×L (Lv20 +5%)</td></tr><tr><td><font color=\"#c8c8c8\">전격전</font> (Blitz)</td><td><font color=\"#c8c8c8\">일반</font></td><td>첫 60초 안에 좀비 5+W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">대물 사냥</font> (Big Game)</td><td><font color=\"#c8c8c8\">일반</font></td><td>대형 좀비 1마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">완벽주의자</font> (Perfectionist)</td><td><font color=\"#50a0ff\">희귀</font></td><td>헤드샷 비율 70%+ (최소 10+W 처치)</td><td>피해 +1%×L (Lv20 +20%)</td></tr><tr><td><font color=\"#50a0ff\">무적</font> (Untouchable)</td><td><font color=\"#50a0ff\">희귀</font></td><td>웨이브 동안 피해 받지 않기</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">연사</font> (Rapid Fire)</td><td><font color=\"#50a0ff\">희귀</font></td><td>8초 이내에 5마리 처치</td><td>피해 +1%×L + 도쉬 100×L</td></tr><tr><td><font color=\"#50a0ff\">무법자</font> (Desperado)</td><td><font color=\"#50a0ff\">희귀</font></td><td>체력 30% 미만일 때 좀비 3+W마리 처치</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#b450ff\">명중자</font> (Deadeye)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷으로 대형 좀비 3마리 처치</td><td>피해 +1.5%×L (Lv20 +30%)</td></tr><tr><td><font color=\"#b450ff\">완벽</font> (Flawless)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷 비율 90%+, 최소 15+W 처치, 받은 피해 50 미만</td><td>피해 +1.5%×L + 이동 속도 +0.75%×L</td></tr><tr><td><font color=\"#b450ff\">인내</font> (Endurance)</td><td><font color=\"#b450ff\">전설</font></td><td>재장전 3회 이내로 좀비 15+2W마리 처치</td><td>도쉬 200×L (Lv20 4,000)</td></tr><tr><td><font color=\"#ffc832\">불가능한 확률</font> (Impossible Odds)</td><td><font color=\"#ffc832\">신화</font></td><td>보조무기로 대형 좀비 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr><tr><td><font color=\"#ffc832\">한 발의 탄환</font> (One Bullet)</td><td><font color=\"#ffc832\">신화</font></td><td>재장전 없이 좀비 5마리 연속 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr></table>"
+    }
+   ],
+   "icon": "icons/gambit.png"
+  },
+  {
    "key": "SpecialAgent",
    "name": "특별 요원",
    "parentPerk": "Commando",
@@ -7190,247 +7466,6 @@
    "icon": "icons/warlord.png"
   },
   {
-   "key": "Metronome",
-   "name": "메트로놈",
-   "parentPerk": "Commando",
-   "unlockLevel": 15,
-   "unlockRequirements": [
-    {
-     "perk": "Commando",
-     "level": 15
-    }
-   ],
-   "isCombinationUnlocked": false,
-   "isStatic": false,
-   "hasIniConfig": true,
-   "maxLevel": 20,
-   "passiveStats": [
-    {
-     "key": "AssaultDamage",
-     "label": "돌격 피해량",
-     "value": 0.015,
-     "unit": "percent",
-     "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
-    },
-    {
-     "key": "AssaultPenetration",
-     "label": "돌격 관통력",
-     "value": 0.0125,
-     "unit": "percent",
-     "display": "+1.25%",
-     "lv10": 0.125,
-     "lv20": 0.25,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+25%",
-     "scaling": true
-    },
-    {
-     "key": "TempoReload",
-     "label": "템포 재장전",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    },
-    {
-     "key": "TempoRateOfFire",
-     "label": "템포 연사 속도",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    },
-    {
-     "key": "MomentumSpeed",
-     "label": "탄력 속도",
-     "value": 0.0075,
-     "unit": "percent",
-     "display": "+0.75%",
-     "lv10": 0.075,
-     "lv20": 0.15,
-     "lv10Display": "+7.5%",
-     "lv20Display": "+15%",
-     "scaling": true
-    },
-    {
-     "key": "MomentumWeaponSwitch",
-     "label": "탄력 무기 전환",
-     "value": 0.015,
-     "unit": "percent",
-     "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
-    },
-    {
-     "key": "BastionDamage",
-     "label": "요새 피해량",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
-    {
-     "key": "BastionResistance",
-     "label": "요새 저항력",
-     "value": 0.1,
-     "unit": "percent",
-     "display": "+10%",
-     "lv10": 0.1,
-     "lv20": 0.1,
-     "lv10Display": "+10%",
-     "lv20Display": "+10%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "BastionVampireHP",
-     "label": "요새 흡혈 체력",
-     "value": 1,
-     "unit": "count",
-     "display": "1",
-     "lv10": 1,
-     "lv20": 1,
-     "lv10Display": "1",
-     "lv20Display": "1",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "CloseRangeDistSq",
-     "label": "근접 사거리 거리 제곱",
-     "value": 250000.0,
-     "unit": "distance",
-     "display": "250,000",
-     "lv10": 250000.0,
-     "lv20": 250000.0,
-     "lv10Display": "250,000",
-     "lv20Display": "250,000",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SyncKillsForBonus",
-     "label": "동기화 처치 보너스",
-     "value": 5,
-     "unit": "count",
-     "display": "5",
-     "lv10": 5,
-     "lv20": 5,
-     "lv10Display": "5",
-     "lv20Display": "5",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "PermanentBonusPerStack",
-     "label": "스택 당 영구 보너스",
-     "value": 0.0025,
-     "unit": "percent",
-     "display": "+0.25%",
-     "lv10": 0.0025,
-     "lv20": 0.0025,
-     "lv10Display": "+0.25%",
-     "lv20Display": "+0.25%",
-     "scaling": false,
-     "capstoneLevel": null
-    }
-   ],
-   "valueSourceNote": null,
-   "role": "4가지 위상을 자동 순환하며 상황에 맞는 강력한 보너스를 끊임없이 부여하는 리듬형 서포트 전직입니다.",
-   "summaryHtml": null,
-   "endgame": null,
-   "descriptions": [
-    {
-     "raw": "위상은 ASSAULT, TEMPO, MOMENTUM, BASTION 순으로 자동 순환됩니다. 각 위상마다 고유한 보너스가 부여됩니다.",
-     "text": "위상은 ASSAULT, TEMPO, MOMENTUM, BASTION 순으로 자동 순환됩니다. 각 위상마다 고유한 보너스가 부여됩니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "돌격: 레벨당 <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">+1.5%</font> 및 <font color=\"#66CCFF\">관통력</font> <font color=\"#77D914\">+1.25%</font>. 동기화 조건: 헤드샷 처치.",
-     "text": "돌격: 레벨당 피해량 +1.5% 및 관통력 +1.25%. 동기화 조건: 헤드샷 처치.",
-     "isCapstone": false
-    },
-    {
-     "raw": "템포: 레벨당 <font color=\"#66CCFF\">재장전 속도</font> <font color=\"#77D914\">+1%</font> 및 <font color=\"#66CCFF\">연사 속도</font> <font color=\"#77D914\">+1%</font>. 동기화 조건: 빠른 연속 처치 (<font color=\"#77D914\">3초</font> 이내).",
-     "text": "템포: 레벨당 재장전 속도 +1% 및 연사 속도 +1%. 동기화 조건: 빠른 연속 처치 (3초 이내).",
-     "isCapstone": false
-    },
-    {
-     "raw": "모멘텀: 레벨당 <font color=\"#66CCFF\">이동 속도</font> <font color=\"#77D914\">+0.75%</font> 및 무기 전환 속도 <font color=\"#77D914\">+1.5%</font>. 동기화 조건: 이동 중 처치.",
-     "text": "모멘텀: 레벨당 이동 속도 +0.75% 및 무기 전환 속도 +1.5%. 동기화 조건: 이동 중 처치.",
-     "isCapstone": false
-    },
-    {
-     "raw": "BASTION: 레벨당 <font color=\"#66CCFF\">근접 피해</font>량 <font color=\"#77D914\">+1%</font>, <font color=\"#FFD700\">처치 시</font> <font color=\"#77D914\">1 HP</font> 회복, <font color=\"#66CCFF\">피해 저항</font> <font color=\"#77D914\">10%</font>. 동기화 조건: 근거리 처치 (<font color=\"#77D914\">5m</font> 미만).",
-     "text": "BASTION: 레벨당 근접 피해량 +1%, 처치 시 1 HP 회복, 피해 저항 10%. 동기화 조건: 근거리 처치 (5m 미만).",
-     "isCapstone": false
-    },
-    {
-     "raw": "각 위상과 일치하는 조건으로 <font color=\"#77D914\">5회</font> 동기화 처치를 달성하면, 해당 위상에 영구적인 <font color=\"#77D914\">+0.25%</font> 중첩 보너스가 부여됩니다.",
-     "text": "각 위상과 일치하는 조건으로 5회 동기화 처치를 달성하면, 해당 위상에 영구적인 +0.25% 중첩 보너스가 부여됩니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
-     "text": "레벨 10: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
-     "text": "레벨 20: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
-     "isCapstone": true
-    }
-   ],
-   "capstoneDescriptions": [
-    {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
-     "text": "레벨 10: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
-     "text": "레벨 20: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
-     "isCapstone": true
-    }
-   ],
-   "skills": [],
-   "skillCount": 0,
-   "verdict": {
-    "tag": "적절",
-    "note": "위상 순환 시스템(20초/위상, 4위상=80초 1사이클). Lv10 조화: 전환 시 직전 위상 보너스가 2초(동기화 실패)~4초(동기화 성공) 겹침 유지. Lv20 크레센도: 한 사이클 내 4위상 전부 동기화 성공 시 ASSAULT 복귀 순간 5초간 비활성 위상 3개가 각각 50%씩 추가 적용(활성 위상은 100% 그대로). 특이 OP/Trash 없음.",
-    "grade": "B"
-   },
-   "grade": "B",
-   "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.050→0.025→0.0125; 구 0.020000; 구 0.020000; 구 0.015000; 구 0.030000; 구 0.040→0.020→0.010; 구 0.010→0.005→0.0025",
-   "testWarning": null,
-   "recentChangeTag": null,
-   "extraSections": [],
-   "icon": "icons/metronome.png"
-  },
-  {
    "key": "Agony",
    "name": "에고니",
    "parentPerk": "Commando",
@@ -7984,6 +8019,255 @@
    },
    "extraSections": [],
    "icon": "icons/agony.png"
+  },
+  {
+   "key": "Metronome",
+   "name": "메트로놈",
+   "parentPerk": "Commando",
+   "unlockLevel": null,
+   "unlockRequirements": [
+    {
+     "perk": "Commando",
+     "level": 5
+    },
+    {
+     "perk": "Sharpshooter",
+     "level": 5
+    },
+    {
+     "perk": "Gunslinger",
+     "level": 5
+    }
+   ],
+   "isCombinationUnlocked": true,
+   "isStatic": false,
+   "hasIniConfig": true,
+   "maxLevel": 20,
+   "passiveStats": [
+    {
+     "key": "AssaultDamage",
+     "label": "돌격 피해량",
+     "value": 0.015,
+     "unit": "percent",
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
+    },
+    {
+     "key": "AssaultPenetration",
+     "label": "돌격 관통력",
+     "value": 0.0125,
+     "unit": "percent",
+     "display": "+1.25%",
+     "lv10": 0.125,
+     "lv20": 0.25,
+     "lv10Display": "+12.5%",
+     "lv20Display": "+25%",
+     "scaling": true
+    },
+    {
+     "key": "TempoReload",
+     "label": "템포 재장전",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "TempoRateOfFire",
+     "label": "템포 연사 속도",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "MomentumSpeed",
+     "label": "탄력 속도",
+     "value": 0.0075,
+     "unit": "percent",
+     "display": "+0.75%",
+     "lv10": 0.075,
+     "lv20": 0.15,
+     "lv10Display": "+7.5%",
+     "lv20Display": "+15%",
+     "scaling": true
+    },
+    {
+     "key": "MomentumWeaponSwitch",
+     "label": "탄력 무기 전환",
+     "value": 0.015,
+     "unit": "percent",
+     "display": "+1.5%",
+     "lv10": 0.15,
+     "lv20": 0.3,
+     "lv10Display": "+15%",
+     "lv20Display": "+30%",
+     "scaling": true
+    },
+    {
+     "key": "BastionDamage",
+     "label": "요새 피해량",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    }
+   ],
+   "fixedStats": [
+    {
+     "key": "BastionResistance",
+     "label": "요새 저항력",
+     "value": 0.1,
+     "unit": "percent",
+     "display": "+10%",
+     "lv10": 0.1,
+     "lv20": 0.1,
+     "lv10Display": "+10%",
+     "lv20Display": "+10%",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "BastionVampireHP",
+     "label": "요새 흡혈 체력",
+     "value": 1,
+     "unit": "count",
+     "display": "1",
+     "lv10": 1,
+     "lv20": 1,
+     "lv10Display": "1",
+     "lv20Display": "1",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "CloseRangeDistSq",
+     "label": "근접 사거리 거리 제곱",
+     "value": 250000.0,
+     "unit": "distance",
+     "display": "250,000",
+     "lv10": 250000.0,
+     "lv20": 250000.0,
+     "lv10Display": "250,000",
+     "lv20Display": "250,000",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "SyncKillsForBonus",
+     "label": "동기화 처치 보너스",
+     "value": 5,
+     "unit": "count",
+     "display": "5",
+     "lv10": 5,
+     "lv20": 5,
+     "lv10Display": "5",
+     "lv20Display": "5",
+     "scaling": false,
+     "capstoneLevel": null
+    },
+    {
+     "key": "PermanentBonusPerStack",
+     "label": "스택 당 영구 보너스",
+     "value": 0.0025,
+     "unit": "percent",
+     "display": "+0.25%",
+     "lv10": 0.0025,
+     "lv20": 0.0025,
+     "lv10Display": "+0.25%",
+     "lv20Display": "+0.25%",
+     "scaling": false,
+     "capstoneLevel": null
+    }
+   ],
+   "valueSourceNote": null,
+   "role": "4가지 위상을 자동 순환하며 상황에 맞는 강력한 보너스를 끊임없이 부여하는 리듬형 서포트 전직입니다.",
+   "summaryHtml": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "위상은 ASSAULT, TEMPO, MOMENTUM, BASTION 순으로 자동 순환됩니다. 각 위상마다 고유한 보너스가 부여됩니다.",
+     "text": "위상은 ASSAULT, TEMPO, MOMENTUM, BASTION 순으로 자동 순환됩니다. 각 위상마다 고유한 보너스가 부여됩니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "돌격: 레벨당 <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">+1.5%</font> 및 <font color=\"#66CCFF\">관통력</font> <font color=\"#77D914\">+1.25%</font>. 동기화 조건: 헤드샷 처치.",
+     "text": "돌격: 레벨당 피해량 +1.5% 및 관통력 +1.25%. 동기화 조건: 헤드샷 처치.",
+     "isCapstone": false
+    },
+    {
+     "raw": "템포: 레벨당 <font color=\"#66CCFF\">재장전 속도</font> <font color=\"#77D914\">+1%</font> 및 <font color=\"#66CCFF\">연사 속도</font> <font color=\"#77D914\">+1%</font>. 동기화 조건: 빠른 연속 처치 (<font color=\"#77D914\">3초</font> 이내).",
+     "text": "템포: 레벨당 재장전 속도 +1% 및 연사 속도 +1%. 동기화 조건: 빠른 연속 처치 (3초 이내).",
+     "isCapstone": false
+    },
+    {
+     "raw": "모멘텀: 레벨당 <font color=\"#66CCFF\">이동 속도</font> <font color=\"#77D914\">+0.75%</font> 및 무기 전환 속도 <font color=\"#77D914\">+1.5%</font>. 동기화 조건: 이동 중 처치.",
+     "text": "모멘텀: 레벨당 이동 속도 +0.75% 및 무기 전환 속도 +1.5%. 동기화 조건: 이동 중 처치.",
+     "isCapstone": false
+    },
+    {
+     "raw": "BASTION: 레벨당 <font color=\"#66CCFF\">근접 피해</font>량 <font color=\"#77D914\">+1%</font>, <font color=\"#FFD700\">처치 시</font> <font color=\"#77D914\">1 HP</font> 회복, <font color=\"#66CCFF\">피해 저항</font> <font color=\"#77D914\">10%</font>. 동기화 조건: 근거리 처치 (<font color=\"#77D914\">5m</font> 미만).",
+     "text": "BASTION: 레벨당 근접 피해량 +1%, 처치 시 1 HP 회복, 피해 저항 10%. 동기화 조건: 근거리 처치 (5m 미만).",
+     "isCapstone": false
+    },
+    {
+     "raw": "각 위상과 일치하는 조건으로 <font color=\"#77D914\">5회</font> 동기화 처치를 달성하면, 해당 위상에 영구적인 <font color=\"#77D914\">+0.25%</font> 중첩 보너스가 부여됩니다.",
+     "text": "각 위상과 일치하는 조건으로 5회 동기화 처치를 달성하면, 해당 위상에 영구적인 +0.25% 중첩 보너스가 부여됩니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">10</font>: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
+     "text": "레벨 10: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">20</font>: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
+     "text": "레벨 20: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
+     "isCapstone": true
+    }
+   ],
+   "capstoneDescriptions": [
+    {
+     "raw": "레벨 <font color=\"#77D914\">10</font>: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
+     "text": "레벨 10: 조화 - 위상이 전환될 때 잠시 겹치며 두 위상의 보너스가 동시에 적용됩니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">20</font>: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
+     "text": "레벨 20: 크레센도 - 동기화를 높게 유지하며 전체 사이클을 완료하면, 모든 위상의 보너스가 한 번에 활성화됩니다.",
+     "isCapstone": true
+    }
+   ],
+   "skills": [],
+   "skillCount": 0,
+   "verdict": {
+    "tag": "적절",
+    "note": "위상 순환 시스템(20초/위상, 4위상=80초 1사이클). Lv10 조화: 전환 시 직전 위상 보너스가 2초(동기화 실패)~4초(동기화 성공) 겹침 유지. Lv20 크레센도: 한 사이클 내 4위상 전부 동기화 성공 시 ASSAULT 복귀 순간 5초간 비활성 위상 3개가 각각 50%씩 추가 적용(활성 위상은 100% 그대로). 특이 OP/Trash 없음.",
+    "grade": "B"
+   },
+   "grade": "B",
+   "isPatched": true,
+   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.050→0.025→0.0125; 구 0.020000; 구 0.020000; 구 0.015000; 구 0.030000; 구 0.040→0.020→0.010; 구 0.010→0.005→0.0025",
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "icon": "icons/metronome.png"
   },
   {
    "key": "Maniac",
@@ -13381,6 +13665,11 @@
      "raw": "헤드샷으로 처치할 때마다 레벨업당 +1 · 만렙(Lv20) +20 도쉬를 획득합니다.",
      "text": "헤드샷으로 처치할 때마다 레벨업당 +1 · 만렙(Lv20) +20 도쉬를 획득합니다.",
      "isCapstone": false
+    },
+    {
+     "raw": "헤드샷 피해가 레벨마다 <font color=\"#77D914\">+2%</font> 증가합니다. (<font color=\"#77D914\">20레벨</font>에서 <font color=\"#77D914\">+40%</font>).",
+     "text": "헤드샷 피해가 레벨마다 +2% 증가합니다. (20레벨에서 +40%).",
+     "isCapstone": false
     }
    ],
    "capstoneDescriptions": [],
@@ -14406,8 +14695,8 @@
    "icon": "icons/timetraveler.png"
   },
   {
-   "key": "Gambit",
-   "name": "갬빗",
+   "key": "JohnWick",
+   "name": "존 윅",
    "parentPerk": "Gunslinger",
    "unlockLevel": 15,
    "unlockRequirements": [
@@ -14420,54 +14709,185 @@
    "isStatic": false,
    "hasIniConfig": false,
    "maxLevel": 20,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "Damage",
+     "label": "모든 무기 피해량",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "AttackSpeed",
+     "label": "공격·발사 속도",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "WeaponSwitch",
+     "label": "무기 교체 속도",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "Penetration",
+     "label": "관통력",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "ReloadSpeed",
+     "label": "재장전 속도",
+     "value": 0.005,
+     "unit": "percent",
+     "display": "+0.5%",
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
+    },
+    {
+     "key": "RecoilReduction",
+     "label": "반동 감소",
+     "value": 0.005,
+     "unit": "percent",
+     "display": "+0.5%",
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%",
+     "scaling": true
+    },
+    {
+     "key": "MovementSpeed",
+     "label": "이동 속도",
+     "value": 0.0025,
+     "unit": "percent",
+     "display": "+0.25%",
+     "lv10": 0.025,
+     "lv20": 0.05,
+     "lv10Display": "+2.5%",
+     "lv20Display": "+5%",
+     "scaling": true
+    },
+    {
+     "key": "DamageReduction",
+     "label": "받는 피해 감소",
+     "value": 0.002,
+     "unit": "percent",
+     "display": "+0.2%",
+     "lv10": 0.02,
+     "lv20": 0.04,
+     "lv10Display": "+2%",
+     "lv20Display": "+4%",
+     "scaling": true
+    },
+    {
+     "key": "MagazineCapacity",
+     "label": "건슬링거 무기 탄창 용량",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
+    },
+    {
+     "key": "SpareAmmo",
+     "label": "건슬링거 무기 휴대 탄약",
+     "value": 0.02,
+     "unit": "percent",
+     "display": "+2%",
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%",
+     "scaling": true
+    }
+   ],
    "fixedStats": [],
-   "valueSourceNote": null,
-   "role": "매 웨이브 랜덤 챌린지를 완료할 때마다 스탯이 영구히 누적되는 로그라이크형 전직입니다.",
+   "valueSourceNote": "레벨별 효과는 현재 ZTUpgrade_Perk_JohnWick 클래스 구현을 기준으로 표시합니다.",
+   "role": "건슬링거 무기 피해와 전투 취급 능력을 강화하고, Rack ’em Up의 누적 상한을 확장하는 건슬링거 3차 전직입니다.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-     "text": "각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "raw": "전문 살인청부업자: 레벨당 모든 무기 피해, 공격·발사 속도, 무기 교체 속도와 관통력이 각각 <font color=\"#77D914\">1%</font> 증가합니다.",
+     "text": "전문 살인청부업자: 레벨당 모든 무기 피해, 공격·발사 속도, 무기 교체 속도와 관통력이 각각 1% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
-     "text": "레벨 10: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
+     "raw": "레벨당 재장전 속도 <font color=\"#77D914\">+0.5%</font>, 반동 감소 <font color=\"#77D914\">0.5%</font>, 이동 속도 <font color=\"#77D914\">+0.25%</font>, 받는 피해 감소 <font color=\"#77D914\">0.2</font>%를 얻습니다.",
+     "text": "레벨당 재장전 속도 +0.5%, 반동 감소 0.5%, 이동 속도 +0.25%, 받는 피해 감소 0.2%를 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "건슬링거 무기에 한해 레벨당 탄창 용량 <font color=\"#77D914\">+1%</font>, 최대 휴대 탄약 <font color=\"#77D914\">+2</font>%를 얻습니다.",
+     "text": "건슬링거 무기에 한해 레벨당 탄창 용량 +1%, 최대 휴대 탄약 +2%를 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "10레벨: 구매한 Rack ’em Up의 누적 상한이 10단계로 늘어납니다.",
+     "text": "10레벨: 구매한 Rack ’em Up의 누적 상한이 10단계로 늘어납니다.",
      "isCapstone": true
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
-     "text": "레벨 20: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "raw": "20레벨: 구매한 Rack ’em Up의 누적 상한이 사라집니다. 이미 쌓은 단계는 유지됩니다.",
+     "text": "20레벨: 구매한 Rack ’em Up의 누적 상한이 사라집니다. 이미 쌓은 단계는 유지됩니다.",
      "isCapstone": true
     },
     {
-     "raw": "보상은 특전 레벨에 비례하여 증가하며, <font color=\"#66CCFF\">피해량</font>, 도쉬, 속도, 재장전, <font color=\"#66CCFF\">반동</font>, 탄창 크기, <font color=\"#66CCFF\">예비 탄약</font> 보너스 등이 포함됩니다.",
-     "text": "보상은 특전 레벨에 비례하여 증가하며, 피해량, 도쉬, 속도, 재장전, 반동, 탄창 크기, 예비 탄약 보너스 등이 포함됩니다.",
+     "raw": "Rack ’em Up은 건슬링거 또는 샤프슈터에서 별도로 구매해야 합니다. 두 번 구매해도 카운터는 하나이며, 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다.",
+     "text": "Rack ’em Up은 건슬링거 또는 샤프슈터에서 별도로 구매해야 합니다. 두 번 구매해도 카운터는 하나이며, 헤드샷을 맞히지 않으면 2초마다 1단계가 감소합니다.",
      "isCapstone": false
     }
    ],
    "capstoneDescriptions": [
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
-     "text": "레벨 10: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
+     "raw": "10레벨: 구매한 Rack ’em Up의 누적 상한이 10단계로 늘어납니다.",
+     "text": "10레벨: 구매한 Rack ’em Up의 누적 상한이 10단계로 늘어납니다.",
      "isCapstone": true
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
-     "text": "레벨 20: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "raw": "20레벨: 구매한 Rack ’em Up의 누적 상한이 사라집니다. 이미 쌓은 단계는 유지됩니다.",
+     "text": "20레벨: 구매한 Rack ’em Up의 누적 상한이 사라집니다. 이미 쌓은 단계는 유지됩니다.",
      "isCapstone": true
     }
    ],
    "skills": [
     {
-     "key": "RaiseTheStakes",
-     "name": "판돈을 높이다",
-     "standardDesc": "모든 갬빗의 목표 수치가 50% 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
-     "deluxeDesc": "모든 갬빗의 목표 수치가 25%만 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
-     "standardDescRaw": "모든 갬빗의 목표 수치가 <font color=\"#77D914\">50%</font> 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
-     "deluxeDescRaw": "모든 갬빗의 목표 수치가 <font color=\"#77D914\">25%</font>만 증가하지만, 클리어 시 얻는 보상은 두 배가 됩니다.",
+     "key": "JohnWick_StackCalibration",
+     "name": "스택 교정",
+     "standardDesc": "Rack ’em Up의 1~5단계 피해 증가율을 단계마다 +1%p 높입니다. 6단계부터는 추가 보너스가 없습니다.",
+     "deluxeDesc": "Rack ’em Up의 1~5단계 피해 증가율을 단계마다 +1%p 높입니다. 6단계부터는 추가 보너스가 없습니다.",
+     "standardDescRaw": "Rack ’em Up의 <font color=\"#77D914\">1</font>~5단계 피해 증가율을 단계마다 <font color=\"#77D914\">+1%p</font> 높입니다. 6단계부터는 추가 보너스가 없습니다.",
+     "deluxeDescRaw": "Rack ’em Up의 <font color=\"#77D914\">1</font>~5단계 피해 증가율을 단계마다 <font color=\"#77D914\">+1%p</font> 높입니다. 6단계부터는 추가 보너스가 없습니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14477,15 +14897,15 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/RaiseTheStakes.png"
+     "icon": "icons/skills/JohnWick_StackCalibration.png"
     },
     {
-     "key": "HotStreak",
-     "name": "핫 스트릭",
-     "standardDesc": "갬빗을 연속으로 완료하면 보상 배율이 최대 2배까지 증가합니다. 도중 실패하면 연속 완료 기록이 초기화됩니다.",
-     "deluxeDesc": "갬빗을 연속으로 완료하면 보상 배율이 최대 2배까지 증가합니다. 실패하더라도 연속 기록이 1만 감소합니다.",
-     "standardDescRaw": "갬빗을 연속으로 완료하면 보상 배율이 최대 <font color=\"#77D914\">2</font>배까지 증가합니다. 도중 실패하면 연속 완료 기록이 초기화됩니다.",
-     "deluxeDescRaw": "갬빗을 연속으로 완료하면 보상 배율이 최대 <font color=\"#77D914\">2</font>배까지 증가합니다. 실패하더라도 연속 기록이 <font color=\"#77D914\">1</font>만 감소합니다.",
+     "key": "JohnWick_PerfectChain",
+     "name": "완벽한 연쇄",
+     "standardDesc": "발사한 탄환이 헤드샷을 맞히지 못하면 Rack ’em Up이 초기화됩니다. 단계별 추가 피해: 1~5단계 15/12/10/8/6%, 6~10단계 4/4/3/3/2%, 11~20단계 각 2%, 21단계 이후 각 1%. 기존 2초당 1단계 감소는 유지됩니다.",
+     "deluxeDesc": "발사한 탄환이 헤드샷을 맞히지 못하면 Rack ’em Up이 초기화됩니다. 단계별 추가 피해: 1~5단계 15/12/10/8/6%, 6~10단계 4/4/3/3/2%, 11~20단계 각 2%, 21단계 이후 각 1%. 기존 2초당 1단계 감소는 유지됩니다.",
+     "standardDescRaw": "발사한 탄환이 헤드샷을 맞히지 못하면 Rack ’em Up이 초기화됩니다. 단계별 추가 피해: <font color=\"#77D914\">1</font>~5단계 <font color=\"#77D914\">15</font>/<font color=\"#77D914\">12</font>/<font color=\"#77D914\">10</font>/<font color=\"#77D914\">8</font>/<font color=\"#77D914\">6%</font>, <font color=\"#77D914\">6</font>~10단계 <font color=\"#77D914\">4</font>/<font color=\"#77D914\">4</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">2%</font>, <font color=\"#77D914\">11</font>~20단계 각 <font color=\"#77D914\">2%</font>, 21단계 이후 각 <font color=\"#77D914\">1%</font>. 기존 2초당 1단계 감소는 유지됩니다.",
+     "deluxeDescRaw": "발사한 탄환이 헤드샷을 맞히지 못하면 Rack ’em Up이 초기화됩니다. 단계별 추가 피해: <font color=\"#77D914\">1</font>~5단계 <font color=\"#77D914\">15</font>/<font color=\"#77D914\">12</font>/<font color=\"#77D914\">10</font>/<font color=\"#77D914\">8</font>/<font color=\"#77D914\">6%</font>, <font color=\"#77D914\">6</font>~10단계 <font color=\"#77D914\">4</font>/<font color=\"#77D914\">4</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">3</font>/<font color=\"#77D914\">2%</font>, <font color=\"#77D914\">11</font>~20단계 각 <font color=\"#77D914\">2%</font>, 21단계 이후 각 <font color=\"#77D914\">1%</font>. 기존 2초당 1단계 감소는 유지됩니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14495,15 +14915,15 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/HotStreak.png"
+     "icon": "icons/skills/JohnWick_PerfectChain.png"
     },
     {
-     "key": "TheHouseAlwaysWins",
-     "name": "하우스는 항상 이긴다",
-     "standardDesc": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 20%씩 감소합니다. (최대 3회, 60%까지 누적).",
-     "deluxeDesc": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 20%씩 감소합니다. (최대 5회, 100%까지 누적).",
-     "standardDescRaw": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 <font color=\"#77D914\">20%</font>씩 감소합니다. (최대 <font color=\"#77D914\">3회</font>, <font color=\"#77D914\">60%</font>까지 누적).",
-     "deluxeDescRaw": "갬빗에 실패할 때마다 다음 갬빗의 목표치가 <font color=\"#77D914\">20%</font>씩 감소합니다. (최대 <font color=\"#77D914\">5회</font>, <font color=\"#77D914\">100%</font>까지 누적).",
+     "key": "JohnWick_HeadFocus",
+     "name": "머리 집중",
+     "standardDesc": "건슬링거 무기로 사격할 때 몸통 피해가 70% 감소하고 헤드샷 피해가 20% 증가합니다.",
+     "deluxeDesc": "건슬링거 무기로 사격할 때 몸통 피해가 70% 감소하고 헤드샷 피해가 20% 증가합니다.",
+     "standardDescRaw": "건슬링거 무기로 사격할 때 몸통 피해가 <font color=\"#77D914\">70%</font> 감소하고 헤드샷 피해가 <font color=\"#77D914\">20%</font> 증가합니다.",
+     "deluxeDescRaw": "건슬링거 무기로 사격할 때 몸통 피해가 <font color=\"#77D914\">70%</font> 감소하고 헤드샷 피해가 <font color=\"#77D914\">20%</font> 증가합니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14513,15 +14933,15 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/TheHouseAlwaysWins.png"
+     "icon": "icons/skills/JohnWick_HeadFocus.png"
     },
     {
-     "key": "CardShark",
-     "name": "카드 샤크",
-     "standardDesc": "갬빗에 실패하면 영구적인 +2% 피해량 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 100 도쉬로 환전합니다.",
-     "deluxeDesc": "갬빗에 실패하면 영구적인 +3% 피해량 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 150 도쉬로 환전합니다.",
-     "standardDescRaw": "갬빗에 실패하면 영구적인 <font color=\"#77D914\">+2%</font> <font color=\"#66CCFF\">피해량</font> 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 <font color=\"#77D914\">100 도쉬</font>로 환전합니다.",
-     "deluxeDescRaw": "갬빗에 실패하면 영구적인 <font color=\"#77D914\">+3%</font> <font color=\"#66CCFF\">피해량</font> 스택이 쌓입니다. 이후 갬빗을 완료하면 쌓인 스택을 소모하여 스택당 <font color=\"#77D914\">150 도쉬</font>로 환전합니다.",
+     "key": "JohnWick_BodyFocus",
+     "name": "몸통 집중",
+     "standardDesc": "건슬링거 무기로 사격할 때 헤드샷 피해가 70% 감소하고 몸통 피해가 100% 증가합니다.",
+     "deluxeDesc": "건슬링거 무기로 사격할 때 헤드샷 피해가 70% 감소하고 몸통 피해가 100% 증가합니다.",
+     "standardDescRaw": "건슬링거 무기로 사격할 때 헤드샷 피해가 <font color=\"#77D914\">70%</font> 감소하고 몸통 피해가 <font color=\"#77D914\">100%</font> 증가합니다.",
+     "deluxeDescRaw": "건슬링거 무기로 사격할 때 헤드샷 피해가 <font color=\"#77D914\">70%</font> 감소하고 몸통 피해가 <font color=\"#77D914\">100%</font> 증가합니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14531,15 +14951,15 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/CardShark.png"
+     "icon": "icons/skills/JohnWick_BodyFocus.png"
     },
     {
-     "key": "WildCard",
-     "name": "와일드카드",
-     "standardDesc": "갬빗이 활성화된 동안, 적을 처치할 때마다 1% 확률로 해당 갬빗이 즉시 완료됩니다.",
-     "deluxeDesc": "갬빗이 활성화된 동안, 적을 처치할 때마다 2% 확률로 해당 갬빗이 즉시 완료됩니다.",
-     "standardDescRaw": "갬빗이 활성화된 동안, 적을 처치할 때마다 <font color=\"#77D914\">1%</font> 확률로 해당 갬빗이 즉시 완료됩니다.",
-     "deluxeDescRaw": "갬빗이 활성화된 동안, 적을 처치할 때마다 <font color=\"#77D914\">2%</font> 확률로 해당 갬빗이 즉시 완료됩니다.",
+     "key": "JohnWick_LargeMagazine",
+     "name": "대용량 탄창",
+     "standardDesc": "건슬링거 무기의 탄창 용량이 10% 증가합니다.",
+     "deluxeDesc": "건슬링거 무기의 탄창 용량이 20% 증가합니다.",
+     "standardDescRaw": "건슬링거 무기의 탄창 용량이 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "건슬링거 무기의 탄창 용량이 <font color=\"#77D914\">20%</font> 증가합니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14549,15 +14969,15 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/WildCard.png"
+     "icon": "icons/skills/JohnWick_LargeMagazine.png"
     },
     {
-     "key": "DoubleOrNothing",
-     "name": "더블 오어 나씽",
-     "standardDesc": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (확률: 50/50).",
-     "deluxeDesc": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (당신에게 유리한 확률: 60/40).",
-     "standardDescRaw": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (확률: <font color=\"#77D914\">50</font>/<font color=\"#77D914\">50</font>).",
-     "deluxeDescRaw": "갬빗을 완료하면 동전 던지기가 발동됩니다. 앞면: 보상이 두 배가 됩니다. 뒷면: 보상이 모두 사라집니다. (당신에게 유리한 확률: <font color=\"#77D914\">60</font>/<font color=\"#77D914\">40</font>).",
+     "key": "JohnWick_EmergencyReserve",
+     "name": "비상 탄약고",
+     "standardDesc": "건슬링거 무기의 최대 휴대 탄약이 20% 증가합니다.",
+     "deluxeDesc": "건슬링거 무기의 최대 휴대 탄약이 40% 증가합니다.",
+     "standardDescRaw": "건슬링거 무기의 최대 휴대 탄약이 <font color=\"#77D914\">20%</font> 증가합니다.",
+     "deluxeDescRaw": "건슬링거 무기의 최대 휴대 탄약이 <font color=\"#77D914\">40%</font> 증가합니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14567,15 +14987,15 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/DoubleOrNothing.png"
+     "icon": "icons/skills/JohnWick_EmergencyReserve.png"
     },
     {
-     "key": "RoyalFlush",
-     "name": "로얄 플러시",
-     "standardDesc": "매 5번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 3배가 됩니다.",
-     "deluxeDesc": "매 3번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 3배가 됩니다.",
-     "standardDescRaw": "매 <font color=\"#77D914\">5</font>번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 <font color=\"#77D914\">3</font>배가 됩니다.",
-     "deluxeDescRaw": "매 <font color=\"#77D914\">3</font>번째 갬빗을 완료할 때마다 로얄 플러시가 발동되어 보상이 <font color=\"#77D914\">3</font>배가 됩니다.",
+     "key": "JohnWick_Hawkeye",
+     "name": "존 윅의 매의 눈",
+     "standardDesc": "쌍권총을 포함한 건슬링거 권총으로 15m 이상 떨어진 적의 머리를 맞히면 헤드샷 피해가 100% 증가합니다.",
+     "deluxeDesc": "쌍권총을 포함한 건슬링거 권총으로 15m 이상 떨어진 적의 머리를 맞히면 헤드샷 피해가 100% 증가합니다.",
+     "standardDescRaw": "쌍권총을 포함한 건슬링거 권총으로 <font color=\"#77D914\">15m</font> 이상 떨어진 적의 머리를 맞히면 헤드샷 피해가 <font color=\"#77D914\">100%</font> 증가합니다.",
+     "deluxeDescRaw": "쌍권총을 포함한 건슬링거 권총으로 <font color=\"#77D914\">15m</font> 이상 떨어진 적의 머리를 맞히면 헤드샷 피해가 <font color=\"#77D914\">100%</font> 증가합니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14585,15 +15005,15 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/RoyalFlush.png"
+     "icon": "icons/skills/JohnWick_Hawkeye.png"
     },
     {
-     "key": "AceUpYourSleeve",
-     "name": "당신의 비장의 무기",
-     "standardDesc": "갬빗을 완료한 후, 다음 10발의 사격은 +50%의 추가 피해를 줍니다.",
-     "deluxeDesc": "갬빗을 완료한 후, 다음 15발의 사격은 +75%의 추가 피해를 줍니다.",
-     "standardDescRaw": "갬빗을 완료한 후, 다음 <font color=\"#77D914\">10발</font>의 사격은 <font color=\"#77D914\">+50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "갬빗을 완료한 후, 다음 <font color=\"#77D914\">15발</font>의 사격은 <font color=\"#77D914\">+75%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "key": "JohnWick_CustomWeapon",
+     "name": "맞춤형 무기",
+     "standardDesc": "건슬링거 무기의 반동이 15% 감소합니다.",
+     "deluxeDesc": "건슬링거 무기의 반동이 25% 감소합니다.",
+     "standardDescRaw": "건슬링거 무기의 반동이 <font color=\"#77D914\">15%</font> 감소합니다.",
+     "deluxeDescRaw": "건슬링거 무기의 반동이 <font color=\"#77D914\">25%</font> 감소합니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14603,84 +15023,18 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/AceUpYourSleeve.png"
-    },
-    {
-     "key": "Bluff",
-     "name": "블러프",
-     "standardDesc": "갬빗이 활성화된 상태에서 치명적인 피해를 입으면 1 HP로 생존합니다. 생존 시 갬빗은 포기됩니다. 재사용 대기시간: 90초. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
-     "deluxeDesc": "갬빗이 활성화된 상태에서 치명적인 피해를 입으면 1 HP로 생존하고 2초간 무적이 됩니다. 생존 시 갬빗은 포기됩니다. 재사용 대기시간: 45초. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
-     "standardDescRaw": "갬빗이 활성화된 상태에서 치명적인 <font color=\"#66CCFF\">피해</font>를 입으면 <font color=\"#77D914\">1 HP</font>로 생존합니다. 생존 시 갬빗은 포기됩니다. <font color=\"#FFD700\">재사용 대기시간</font>: <font color=\"#77D914\">90초</font>. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
-     "deluxeDescRaw": "갬빗이 활성화된 상태에서 치명적인 <font color=\"#66CCFF\">피해</font>를 입으면 <font color=\"#77D914\">1 HP</font>로 생존하고 <font color=\"#77D914\">2초간</font> 무적이 됩니다. 생존 시 갬빗은 포기됩니다. <font color=\"#FFD700\">재사용 대기시간</font>: <font color=\"#77D914\">45초</font>. 자동 발동 능력의 타이머는 실시간 스탯 박스 위에 표시되며, 쿨다운 후에도 발동 조건을 충족해야 합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Bluff.png"
-    },
-    {
-     "key": "HouseEdge",
-     "name": "하우스 엣지",
-     "standardDesc": "슬롯 머신 발동: 25",
-     "deluxeDesc": "슬롯 머신 발동: 20",
-     "standardDescRaw": "슬롯 머신 발동: 25",
-     "deluxeDescRaw": "슬롯 머신 발동: 20",
-     "rawValues": [
-      {
-       "key": "SlotMachineTrigger",
-       "label": "슬롯 머신 발동",
-       "value": 25,
-       "unit": "count",
-       "display": "25"
-      },
-      {
-       "key": "SlotMachineTrigger",
-       "label": "슬롯 머신 발동",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/HouseEdge.png"
+     "icon": "icons/skills/JohnWick_CustomWeapon.png"
     }
    ],
-   "skillCount": 10,
-   "verdict": {
-    "tag": "OP 소지",
-    "note": "웨이브당 1회로 축적 속도는 제한되지만(실패해도 다음 웨이브로 넘어갈 뿐 하방 리스크는 낮음), 성장 자체에는 상한이 없고 승수 스킬(×2~×3)까지 중첩 가능. 보상값이 순수 하드코딩이라 조정 불가 — 장기전(엔들리스)에서 위험.",
-    "grade": "S"
-   },
-   "grade": "S",
+   "skillCount": 8,
+   "verdict": null,
+   "grade": null,
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [
-    {
-     "title": "갬빗 시스템 규칙",
-     "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
-     "html": "<div class=\"desc-line\">매 웨이브 시작 시 갬빗 1개가 무작위로 발동됩니다. 추첨 가중치는 <font color=\"#c8c8c8\">일반 100</font> : <font color=\"#50a0ff\">희귀 50</font> : <font color=\"#b450ff\">전설 25</font>입니다.</div><div class=\"desc-line\">등급 해금 — <font color=\"#c8c8c8\">일반</font>: 항상 / <font color=\"#50a0ff\">희귀</font>: 퍼크 Lv10부터 / <font color=\"#b450ff\">전설</font>: 퍼크 Lv20부터 / <font color=\"#ffc832\">신화</font>: 퍼크 Lv10부터, 매 추첨마다 별도 <font color=\"#FFFFFF\">1%</font> 확률 판정에 성공하면 일반 추첨을 무시하고 등장합니다.</div><div class=\"desc-line\">목표치 = 기본 목표 + (웨이브 배율 × 현재 웨이브 번호), 최소 1. 보상 = 기본 보상 × <font color=\"#77d914\">퍼크 레벨</font>.</div><div class=\"desc-line\"><font color=\"#FF6666\">피해량</font>·<font color=\"#77d914\">이동 속도</font> 보상은 게임이 끝날 때까지 영구 누적되고(무기 기본 피해/기본 이동 속도 기준 가산), <font color=\"#FFD700\">도쉬</font>는 즉시 지급됩니다.</div><div class=\"desc-line\">처치형 갬빗은 목표 달성 즉시 완료가 확정되며, '강철 피부'·'무적'처럼 웨이브 내내 유지해야 하는 갬빗은 웨이브 종료 시 최종 판정됩니다.</div><div class=\"desc-line\">대형 좀비 판정: 스크레이크, 플레시파운드(미니 포함), 보스. 진행도와 누적 보상은 HUD에 실시간 표시됩니다.</div>"
-    },
-    {
-     "title": "갬빗 목록 (14종)",
-     "note": "목표치의 W = 현재 웨이브 번호. 보상의 ×L = 퍼크 레벨 배율 (Lv20 기준 값 병기).",
-     "html": "<table class=\"stat-table\"><tr><th>갬빗</th><th>등급</th><th>조건</th><th>보상 (퍼크 레벨 ×L)</th></tr><tr><td><font color=\"#c8c8c8\">명사수</font> (Marksman)</td><td><font color=\"#c8c8c8\">일반</font></td><td>헤드샷으로 5+W마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#c8c8c8\">처치 수</font> (Body Count)</td><td><font color=\"#c8c8c8\">일반</font></td><td>좀비 10+3W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">강철 피부</font> (Iron Skin)</td><td><font color=\"#c8c8c8\">일반</font></td><td>받는 피해 150+30W 이하</td><td>이동 속도 +0.25%×L (Lv20 +5%)</td></tr><tr><td><font color=\"#c8c8c8\">전격전</font> (Blitz)</td><td><font color=\"#c8c8c8\">일반</font></td><td>첫 60초 안에 좀비 5+W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">대물 사냥</font> (Big Game)</td><td><font color=\"#c8c8c8\">일반</font></td><td>대형 좀비 1마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">완벽주의자</font> (Perfectionist)</td><td><font color=\"#50a0ff\">희귀</font></td><td>헤드샷 비율 70%+ (최소 10+W 처치)</td><td>피해 +1%×L (Lv20 +20%)</td></tr><tr><td><font color=\"#50a0ff\">무적</font> (Untouchable)</td><td><font color=\"#50a0ff\">희귀</font></td><td>웨이브 동안 피해 받지 않기</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">연사</font> (Rapid Fire)</td><td><font color=\"#50a0ff\">희귀</font></td><td>8초 이내에 5마리 처치</td><td>피해 +1%×L + 도쉬 100×L</td></tr><tr><td><font color=\"#50a0ff\">무법자</font> (Desperado)</td><td><font color=\"#50a0ff\">희귀</font></td><td>체력 30% 미만일 때 좀비 3+W마리 처치</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#b450ff\">명중자</font> (Deadeye)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷으로 대형 좀비 3마리 처치</td><td>피해 +1.5%×L (Lv20 +30%)</td></tr><tr><td><font color=\"#b450ff\">완벽</font> (Flawless)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷 비율 90%+, 최소 15+W 처치, 받은 피해 50 미만</td><td>피해 +1.5%×L + 이동 속도 +0.75%×L</td></tr><tr><td><font color=\"#b450ff\">인내</font> (Endurance)</td><td><font color=\"#b450ff\">전설</font></td><td>재장전 3회 이내로 좀비 15+2W마리 처치</td><td>도쉬 200×L (Lv20 4,000)</td></tr><tr><td><font color=\"#ffc832\">불가능한 확률</font> (Impossible Odds)</td><td><font color=\"#ffc832\">신화</font></td><td>보조무기로 대형 좀비 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr><tr><td><font color=\"#ffc832\">한 발의 탄환</font> (One Bullet)</td><td><font color=\"#ffc832\">신화</font></td><td>재장전 없이 좀비 5마리 연속 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr></table>"
-    }
-   ],
-   "icon": "icons/gambit.png"
+   "extraSections": [],
+   "icon": "icons/gunslinger.png"
   },
   {
    "key": "Reaper",
@@ -23417,8 +23771,8 @@
   "holdingMelee": 0.75
  },
  "meta": {
-  "advancedPerkCount": 46,
+  "advancedPerkCount": 47,
   "basePerkCount": 10,
-  "totalSkills": 475
+  "totalSkills": 483
  }
 }

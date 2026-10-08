@@ -59,6 +59,7 @@ OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
 SKILL_ICON_DIR = os.path.join(ROOT, "docs", "icons", "skills")
 PERK_ICON_DIR = os.path.join(ROOT, "docs", "icons")
 SOURCE_CLASS_DIR = os.path.join(SOURCE_DIR, "Classes")
+PROGRESSION_CATALOG = os.path.join(SOURCE_CLASS_DIR, "ZTPerkProgressionCatalog.uc")
 
 
 def parse_player_aurora(path):
@@ -513,6 +514,21 @@ def parse_active_advanced_perks(path):
     return active
 
 
+def merge_runtime_perk_registrations(active, catalog_path):
+    """Include perks inserted into the live catalog by Tempered at runtime."""
+    if not os.path.isfile(catalog_path):
+        return active
+    with open(catalog_path, encoding="utf-8-sig") as f:
+        source = f.read()
+    for key, is_static in re.findall(
+        r'EnsurePerk\("ZedternalTempered\.ZTUpgrade_Perk_(\w+)",\s*(True|False)\)',
+        source,
+        flags=re.IGNORECASE,
+    ):
+        active.setdefault(key, is_static.lower() == "true")
+    return active
+
+
 def to_num(s):
     try:
         if re.match(r"^-?\d+$", s):
@@ -563,6 +579,37 @@ def build_stat_entries(kv_pairs, with_levels=False):
             entry["lv20Display"] = format_value_as(lv20, unit)
         entries.append(entry)
     return entries
+
+
+def build_john_wick_passives():
+    """Level scaling implemented directly by ZTUpgrade_Perk_JohnWick.uc."""
+    definitions = [
+        ("Damage", "모든 무기 피해량", 0.01),
+        ("AttackSpeed", "공격·발사 속도", 0.01),
+        ("WeaponSwitch", "무기 교체 속도", 0.01),
+        ("Penetration", "관통력", 0.01),
+        ("ReloadSpeed", "재장전 속도", 0.005),
+        ("RecoilReduction", "반동 감소", 0.005),
+        ("MovementSpeed", "이동 속도", 0.0025),
+        ("DamageReduction", "받는 피해 감소", 0.002),
+        ("MagazineCapacity", "건슬링거 무기 탄창 용량", 0.01),
+        ("SpareAmmo", "건슬링거 무기 휴대 탄약", 0.02),
+    ]
+    result = []
+    for key, label, value in definitions:
+        result.append({
+            "key": key,
+            "label": label,
+            "value": value,
+            "unit": "percent",
+            "display": f"+{value * 100:g}%",
+            "lv10": value * 10,
+            "lv20": value * 20,
+            "lv10Display": f"+{value * 1000:g}%",
+            "lv20Display": f"+{value * 2000:g}%",
+            "scaling": True,
+        })
+    return result
 
 
 def split_tiers(raw_values):
@@ -1334,6 +1381,7 @@ def build():
     dk_skill_registry = parse_dk_skill_registry(INI_UPGRADES)
     wm_skill_registry = parse_wm_skill_registry(INI_UPGRADES)
     active_advanced_perks = parse_active_advanced_perks(INI_UPGRADES)
+    merge_runtime_perk_registrations(active_advanced_perks, PROGRESSION_CATALOG)
     unlock_rules = parse_unlock_rules(main_sections)
     # WaveGambler is injected into the perk progression catalog at runtime,
     # rather than listed in Config_PerkUpgrade. Its active unlock rule and
@@ -1393,6 +1441,8 @@ def build():
         placeholder_groups, fixed_stats = compute_placeholder_groups(
             passive_stats, raw_descs, IMPLICIT_SCALING_COUNTS.get(key, 0))
         scaling_stats = [stat for group in placeholder_groups for stat in group]
+        if key == "JohnWick" and not scaling_stats:
+            scaling_stats = build_john_wick_passives()
         filled_descriptions = list(raw_descs) if is_static else fill_percent_placeholders(raw_descs, placeholder_groups)
         static_perk_stats = build_static_perk_stats(key, static_bonus_values)
         if is_static and not scaling_stats:
@@ -1554,6 +1604,8 @@ def build():
             "passiveStats": apply_perk_stat_labels(key, scaling_stats),
             "fixedStats": apply_perk_stat_labels(key, fixed_stats),
             "valueSourceNote": (
+                "레벨별 효과는 현재 ZTUpgrade_Perk_JohnWick 클래스 구현을 기준으로 표시합니다."
+                if key == "JohnWick" else
                 "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다."
                 if key in {"Capitalist", "Goliath", "Vanguard"} else
                 "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 운영 INI를 읽습니다."
