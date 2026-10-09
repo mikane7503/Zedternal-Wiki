@@ -3107,7 +3107,7 @@
      "capstoneLevel": null
     }
    ],
-   "valueSourceNote": "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
+   "valueSourceNote": "공개 빌드에 적용된 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
    "role": "골리앗 레벨당 버서커 무기의 피해량이 2% 증가합니다.",
    "summaryHtml": null,
    "endgame": null,
@@ -19661,7 +19661,7 @@
     }
    ],
    "fixedStats": [],
-   "valueSourceNote": "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
+   "valueSourceNote": "공개 빌드에 적용된 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
    "role": "전열 보강: 서포트 무기의 피해가 +%x%% 증가합니다. 레벨당 +1%입니다.",
    "summaryHtml": null,
    "endgame": null,
@@ -22961,7 +22961,7 @@
     }
    ],
    "fixedStats": [],
-   "valueSourceNote": "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
+   "valueSourceNote": "공개 빌드에 적용된 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다.",
    "role": "급여: 웨이브 시작부터 사망 없이 생존하여 성공적으로 완료하면 +%x 도쉬.",
    "summaryHtml": null,
    "endgame": null,
@@ -23210,7 +23210,7 @@
      "display": "제한 없음"
     }
    ],
-   "valueSourceNote": "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 운영 INI를 읽습니다.",
+   "valueSourceNote": "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 공개 빌드의 기본 INI를 읽습니다.",
    "role": "엔지니어 레벨당 드론 피해가 2% 증가합니다.",
    "summaryHtml": null,
    "endgame": null,
@@ -23382,14 +23382,14 @@
    1.5,
    1.3,
    1.2,
+   1.1,
+   1.1,
+   1.1,
+   1.1,
    1.2,
-   1.5,
-   1.2,
-   1.2,
-   1.2,
-   1.2,
+   1.1,
    1.4,
-   0.7,
+   0.6,
    1.2,
    1.3,
    1.2,
@@ -23416,6 +23416,14 @@
  "meta": {
   "advancedPerkCount": 47,
   "basePerkCount": 10,
-  "totalSkills": 460
+  "totalSkills": 460,
+  "release": {
+   "version": "10.09.14",
+   "workshopId": "3809067086",
+   "publishedUtc": "2026-10-09T11:49:08.4485834Z",
+   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
+   "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
+   "serverGameConfigDiffers": true
+  }
  }
 }

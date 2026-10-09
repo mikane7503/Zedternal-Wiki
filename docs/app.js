@@ -10,7 +10,7 @@ let SEARCH_INDEX = [];
 let SEARCH_RESULTS = [];
 let SEARCH_ACTIVE_IDX = -1;
 
-// 표시값은 빌드 시 운영 폴더의 KFZedternalReborn_Game.ini에서 읽습니다.
+// 표시값은 마지막 공개 빌드의 소스 기본 KFZedternalReborn_Game.ini에서 읽습니다.
 // 표시값 = (실제값 + 1) / 2 로 절반만 반영해 서술합니다.
 const DAMAGE_GIVEN_STATS = [
   { label: "화염 피해", real: 0.5 },
@@ -178,6 +178,7 @@ async function init() {
   // perks.json is never masked by a stale browser-cached copy
   const res = await fetch("data/perks.json", { cache: "no-cache" });
   DATA = await res.json();
+  renderReleaseFooter();
   applyLiveAuroraData();
   ADV_BY_KEY = Object.fromEntries(DATA.advancedPerks.map(p => [p.key, p]));
   BASE_BY_KEY = Object.fromEntries(DATA.basePerks.map(p => [p.key, p]));
@@ -479,6 +480,23 @@ function renderSidebar() {
     item.appendChild(body);
     sidebar.appendChild(item);
   }
+}
+
+function renderReleaseFooter() {
+  const footer = document.getElementById("releaseFoot");
+  if (!footer) return;
+  const release = DATA.meta && DATA.meta.release;
+  if (!release || !release.version || release.version === "미연동") {
+    footer.textContent = "데이터 기준: 마지막 공개 빌드 정보를 아직 연결하지 않았습니다.";
+    return;
+  }
+  const published = release.publishedUtc
+    ? ` · 공개 ${new Date(release.publishedUtc).toLocaleDateString("ko-KR")}`
+    : "";
+  const serverNote = release.serverGameConfigDiffers
+    ? " · 운영 서버의 Game INI는 공개 기본값과 다를 수 있습니다"
+    : "";
+  footer.textContent = `데이터 기준: Zedternal Tempered v${release.version} 공개 빌드 (${release.workshopId})${published} · 퍼크·스킬 설명과 기본 수치 기준${serverNote}`;
 }
 
 function renderCombinationPerksBox(perks) {
@@ -805,7 +823,7 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
     return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
   }).join("");
   return `
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">레벨 슬라이더에서 선택한 단계의 누적 수치를 표시합니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 운영 INI와 퍼크 구현 기준입니다."}</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">레벨 슬라이더에서 선택한 단계의 누적 수치를 표시합니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 마지막 공개 빌드의 기본 INI와 퍼크 구현 기준입니다."}</div>
     <div class="level-slider-row">
       <label for="levelSlider">퍼크 레벨</label>
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">
