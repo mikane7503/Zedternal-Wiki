@@ -102,5 +102,19 @@
         "html": "<div class=\"desc-line\"><b>발동 조건:</b> 각 웨이브의 처치 진행도 30~70% 구간에서 시점을 무작위로 하나 정하고, 해당 구간에 도달하면 한 번 발동을 예약합니다. 경고 시간은 HUD의 10초 예고 시간과 INI의 2초 중 큰 값인 10초입니다. 70%를 넘긴 뒤 늦게 헬퍼가 생성되면 그 웨이브 재앙은 발동하지 않습니다.</div><div class=\"desc-line\"><b>피해 계산:</b> 기본 피해 = 유령 레벨 × 100 (INI: DisasterDamagePerLevel=100). 폭발은 기본 피해 × 2 (ExplosionDamageMultiplier=2.0), 그 외 세 재앙은 기본 피해를 사용합니다. 레벨 20이면 기본 2,000, 폭발 4,000입니다.</div><div class=\"desc-line\"><b>무작위 재앙 4종:</b> 동결+피해(FreezePower 100), 폭발 피해(2배), 넉다운+피해(대상이 생존하고 넉다운 가능할 때), 화염+피해(BurnPower 100, 이 피해 유형의 추가 화상 DoT는 0). 네 유형 중 하나를 선택합니다.</div><div class=\"desc-line\"><b>예고·발동 연출:</b> 플레이어에게 10초 전 유령 이미지를 예고하고 불투명도를 10%에서 30%까지 올립니다. 마지막 짧은 구간에는 정전기·색 반전·화면 어둡게 하기와 “IT COMES” 문구를 표시합니다. 서버에서 재앙이 확정되면 이미지가 50% 불투명도로 잠깐 나타나며, 웨이브 종료 시 진행 중인 경고를 취소합니다.</div><div class=\"desc-line\"><b>처치 단계:</b> 시작은 1단계이며 10킬마다 한 단계 올라 최대 5단계입니다(40킬부터 5단계). 비네트 강도는 단계별 5%, 15%, 20%, 25%, 30%입니다. 눈 최대치는 1·1·2·3·4개이고 생성 간격은 각 단계별 15~30초, 10~20초, 8~15초, 5~10초, 3~6초입니다. 심장박동 소리는 4단계부터 2초 간격, 5단계에서 1.2초 간격으로 빨라집니다.</div><div class=\"desc-line\"><b>현재 설정:</b> KillsPerStage=10, MaxStage=5, DisasterMinWaveProgress=0.30, DisasterMaxWaveProgress=0.70, DisasterWarningDuration=2.0초. 웨이브당 발동 표시는 플레이어 컨트롤러에 기록되어 같은 플레이어에게 한 웨이브 재앙이 중복 실행되지 않습니다.</div>"
       }
     ]
+  },
+  "JohnWick": {
+    "extraSections": [
+      {
+        "title": "Rack ’em Up 실제 스택 계산",
+        "note": "ZTRackEmUpNative 및 ZTJohnWickSystem 구현 기준입니다. 피해 보너스는 Gunslinger·Sharpshooter 무기의 사격 피해에 적용됩니다.",
+        "html": "<div class=\"desc-line\"><b>기본 누적 보너스:</b> 0스택 0%, 1~10스택은 차례대로 <font color=\"#77d914\">8%, 15%, 21%, 26%, 30%, 33%, 36%, 38%, 40%, 42%</font>입니다. 11스택부터는 스택마다 <font color=\"#77d914\">+1%p</font>를 더합니다.</div><div class=\"desc-line\"><b>스택 한도:</b> John Wick Lv1~9는 최대 5스택, Lv10~19는 최대 10스택, Lv20은 무제한입니다. 해금 레벨 도달 시 기존 스택은 유지되며 새 한도에 맞춰 표시됩니다.</div><div class=\"desc-line\"><b>스택 감소:</b> 한 번의 감소마다 스택 1개를 잃습니다. 현재 스택 수가 1~5일 때 2초, 6~10일 때 1.75초, 11~20일 때 1.5초, 21~40일 때 1.25초, 41~60일 때 1초, 61~80일 때 0.75초, 81~100일 때 0.5초, 101 이상일 때 0.25초마다 감소합니다. 헤드샷이나 스택 감소 후 현재 스택 구간에 맞춰 다음 간격을 다시 계산합니다.</div><div class=\"desc-line\"><b>스택 보정:</b> 장착 시 1~5스택에 스택당 <font color=\"#77d914\">+1%p</font>를 더하며, 6스택부터 추가 보너스가 없습니다.</div><div class=\"desc-line\"><b>완벽주의자:</b> 장착 시 누적 보너스 전체(스택 보정 포함)를 <font color=\"#77d914\">2배</font>로 적용합니다. 헤드샷에 실패한 사격은 스택을 즉시 0으로 초기화합니다.</div>"
+      },
+      {
+        "title": "존 윅 스킬의 실제 효과",
+        "note": "표준·디럭스 제공 여부는 각 스킬 클래스의 bHasDeluxe와 Bonus 값을 사용했습니다. 피해 배율은 해당 Gunslinger 무기의 적중 부위와 거리 조건을 확인합니다.",
+        "html": "<table class=\"stat-table compact-stat-table\"><tr><th>스킬</th><th>실제 효과</th><th>표준 / 디럭스</th></tr><tr><td>기본에 집중하기</td><td>Gunslinger 무기 몸통 피해 ×0.30, 헤드샷 피해 ×1.20</td><td>표준만</td></tr><tr><td>뉴메타로의 도전</td><td>Gunslinger 무기 헤드샷 피해 ×0.30, 몸통 피해 ×2.00</td><td>표준만</td></tr><tr><td>존 윅의 매의 눈</td><td>Gunslinger 권총으로 15m 이상 거리에서 헤드샷 시 피해 ×2.00</td><td>표준만</td></tr><tr><td>대용량 탄창</td><td>Gunslinger 무기 탄창 용량 증가</td><td>+10% / +20%</td></tr><tr><td>비상 탄약고</td><td>Gunslinger 무기 예비 탄약 증가</td><td>+20% / +40%</td></tr><tr><td>맞춤형 무기</td><td>Gunslinger 무기 반동 감소</td><td>-15% / -25%</td></tr><tr><td>스택 보정</td><td>Rack ’em Up 첫 5스택에 스택당 피해 보너스 +1%p</td><td>표준만</td></tr><tr><td>완벽주의자</td><td>Rack ’em Up 누적 보너스 2배, 헤드샷 실패 시 스택 초기화</td><td>표준만</td></tr></table><div class=\"desc-line\">두 피해 집중 스킬을 함께 장착하면 효과는 곱연산됩니다: 헤드샷은 ×0.36, 몸통 사격은 ×0.60입니다. 모든 효과는 해당 스킬과 John Wick 퍼크를 실제로 구매했을 때 적용됩니다.</div>"
+      }
+    ]
   }
 }

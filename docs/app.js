@@ -596,7 +596,6 @@ function renderBaseDetail(key) {
   }
 
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
-  const maxLevel = p.maxLevel || 20;
 
   container.innerHTML = `
     <div class="detail-header">
@@ -612,10 +611,8 @@ function renderBaseDetail(key) {
     ${renderPerkSummarySection(p)}
     ${renderPassiveSection(p)}
     ${renderCapstoneSection(p)}
-    <div class="section-title perk-section-title">4. 레벨별 수치</div>
-    ${renderSliderSection(p.passiveStats || [], maxLevel)}
     ${renderSkillsSection(p.skills || [])}
-    <div class="section-title perk-section-title">6. 상위 퍼크 트리</div>
+    <div class="section-title perk-section-title">5. 상위 퍼크 트리</div>
     <div class="tree-hint">퍼크를 선택하면 상세 정보를 엽니다.</div>
   `;
   container.appendChild(grid);
@@ -649,7 +646,6 @@ function renderAdvDetail(key) {
       : `독립 퍼크 · 스킬 ${p.skillCount}개`;
 
   const recentChangeBadge = renderRecentChangeBadge(p.recentChangeTag);
-  const maxLevel = p.maxLevel || 20;
   const isBaseLikeRoot = p.key === "Capitalist" || p.key === "Engineer";
   const upperPerks = isBaseLikeRoot
     ? DATA.advancedPerks
@@ -683,11 +679,9 @@ function renderAdvDetail(key) {
     ${renderPerkSummarySection(p)}
     ${renderPassiveSection(p)}
     ${renderCapstoneSection(p)}
-    <div class="section-title perk-section-title">4. 레벨별 수치</div>
-    ${renderSliderSection(p.passiveStats || [], maxLevel, p.valueSourceNote)}
     ${renderSkillsSection(p.skills || [])}
     ${isBaseLikeRoot ? `
-      <div class="section-title perk-section-title">6. 상위 퍼크 트리</div>
+      <div class="section-title perk-section-title">5. 상위 퍼크 트리</div>
       <div class="tree-hint">퍼크를 선택하면 상세 정보를 엽니다.</div>
       <div class="adv-grid">${upperPerkCards || '<div class="empty-state perk-empty">현재 활성화된 상위 퍼크가 없습니다.</div>'}</div>
     ` : ""}
@@ -709,16 +703,9 @@ function renderPerkSummarySection(perk) {
 function renderPassiveSection(perk) {
   const stats = perk.passiveStats || [];
   const maxLevel = perk.maxLevel || 20;
-  const rows = stats.map(stat => `
-    <div class="passive-summary-row">
-      <span class="passive-summary-label">${escapeHtml(stat.label)}</span>
-      <span class="passive-summary-rate">${escapeHtml(stat.display)} / 레벨</span>
-      <span class="passive-summary-total">Lv${maxLevel} ${escapeHtml(formatByUnit(stat.value * maxLevel, stat.unit))}</span>
-    </div>
-  `).join("");
   return `
     <div class="section-title perk-section-title">2. 패시브</div>
-    ${rows || '<div class="empty-state perk-empty">레벨당 선형 증가 수치가 없습니다. 단계별·확률형 효과는 아래 상세 정보에서 확인할 수 있습니다.</div>'}
+    ${renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
   `;
 }
 
@@ -753,7 +740,7 @@ function renderSkillsSection(skills) {
     </div>
   `).join("");
   return `
-    <div class="section-title perk-section-title">5. 스킬 목록 (표준 / 디럭스)</div>
+    <div class="section-title perk-section-title">4. 스킬 목록 (표준 / 디럭스)</div>
     <div class="skill-list">${skillsHtml || '<div class="empty-state perk-empty">별도 구매 스킬이 없습니다. 퍼크의 자동 효과와 규칙은 상세 정보에 정리했습니다.</div>'}</div>
   `;
 }
@@ -795,7 +782,7 @@ function renderFullInfoSection(perk, isBase = false) {
   const weaknesses = isBase && perk.weaknesses?.length
     ? `<div class="full-info-subtitle">약점</div>${perk.weaknesses.map(item => `<div class="weak-item"><span class="sev-${escapeHtml(item.severity || "normal")}">${escapeHtml(item.label || item.skill || "")}</span> — ${escapeHtml(item.issue || "")}</div>`).join("")}` : "";
   return `
-    <div class="section-title perk-section-title">7. 전체 상세 정보</div>
+    <div class="section-title perk-section-title">6. 전체 상세 정보</div>
     <details class="perk-full-details">
       <summary>더 깊게 보기 · 세부 수치와 모든 작동 규칙</summary>
       <div class="perk-full-body">
@@ -818,7 +805,7 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
     return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
   }).join("");
   return `
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">⚠ 게임 내 상한(클램프)이 적용되는 항목이 있어 아래 수치는 단순 계산 참고값입니다. ${sourceNote ? escapeHtml(sourceNote) : "운영 INI 수치와 해당 퍼크의 소스 기본값을 사용합니다."}</div>
+    <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">레벨 슬라이더에서 선택한 단계의 누적 수치를 표시합니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 운영 INI와 퍼크 구현 기준입니다."}</div>
     <div class="level-slider-row">
       <label for="levelSlider">퍼크 레벨</label>
       <input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}">

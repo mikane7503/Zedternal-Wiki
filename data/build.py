@@ -612,6 +612,17 @@ def build_john_wick_passives():
     return result
 
 
+def source_skill_has_deluxe(short):
+    """Return a skill's actual deluxe availability when its class declares it."""
+    class_path = os.path.join(SOURCE_CLASS_DIR, f"ZTUpgrade_Skill_{short}.uc")
+    if not os.path.isfile(class_path):
+        return None
+    with open(class_path, encoding="utf-8-sig") as f:
+        source = f.read()
+    match = re.search(r"\bbHasDeluxe\s*=\s*(True|False)", source, re.IGNORECASE)
+    return match.group(1).lower() == "true" if match else None
+
+
 def split_tiers(raw_values):
     """Split a skill's build_stat_entries() output (one entry per ini
     occurrence, in file order) into a T1 view and a T2 view, one entry per
@@ -936,7 +947,7 @@ SKILL_COST_STATS = {
 PLACEHOLDER_RE = re.compile(r"([+-]?)%x(%%?)?")
 CAPSTONE_LINE_RE = re.compile(r"^(?:<font[^>]*>)?레벨\s*\d+:")
 CAPSTONE_TEXT_RE = re.compile(
-    r"(?:캡스톤|^(?:레벨|LEVEL)\s*(?:10|20)\s*[-—:：]|^(?:10|20)\s*레벨\s*[-—:：]|^Lv\.?\s*(?:10|20)\s*[-—:：])",
+    r"(?:캡스톤|^(?:레벨|LEVEL)\s*(?:10|20)\s*[-—:：]|^(?:10|20)\s*레벨(?:부터|(?=\s*[-—:：]))|^Lv\.?\s*(?:10|20)\s*[-—:：])",
     re.IGNORECASE,
 )
 
@@ -1567,6 +1578,10 @@ def build():
                     if fallback:
                         delx_raw, delx_fixed = fallback, True
 
+            deluxe_available = source_skill_has_deluxe(short)
+            if deluxe_available is False:
+                delx_raw, delx_fixed = None, False
+
             skills.append({
                 "key": short,
                 "name": override.get("name") or skor.get("UpgradeName", short),
@@ -1581,6 +1596,7 @@ def build():
                 "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
                 "disabled": is_disabled,
+                "deluxeAvailable": deluxe_available,
                 "disabledNote": disabled_note,
                 "noData": not skor and not raw_values and not ("standardDesc" in override or "deluxeDesc" in override),
                 "icon": skill_icon_path(short),
