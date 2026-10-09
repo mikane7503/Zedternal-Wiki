@@ -7176,10 +7176,10 @@
     {
      "key": "DeepReserves",
      "name": "심층 매장량",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
+     "standardDesc": "탄창 용량이 25% 증가합니다.",
+     "deluxeDesc": "탄창 용량이 40% 증가합니다.",
+     "standardDescRaw": "<font color=\"#66CCFF\">탄창 용량</font>이 <font color=\"#77D914\">25%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#66CCFF\">탄창 용량</font>이 <font color=\"#77D914\">40%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "MagCapacity",
@@ -13868,488 +13868,16 @@
      "raw": "헤드샷 피해가 레벨마다 <font color=\"#77D914\">+2%</font> 증가합니다. (<font color=\"#77D914\">20레벨</font>에서 <font color=\"#77D914\">+40%</font>).",
      "text": "헤드샷 피해가 레벨마다 +2% 증가합니다. (20레벨에서 +40%).",
      "isCapstone": false
+    },
+    {
+     "raw": "레벨당 모든 무기의 <font color=\"#66CCFF\">플레이어 치명타 확률</font>이 <font color=\"#77D914\">0.5%</font> 증가합니다. 20레벨에서 <font color=\"#77D914\">10%</font>이며, 무기 전용 치명타 확률과 합산됩니다.",
+     "text": "레벨당 모든 무기의 플레이어 치명타 확률이 0.5% 증가합니다. 20레벨에서 10%이며, 무기 전용 치명타 확률과 합산됩니다.",
+     "isCapstone": false
     }
    ],
    "capstoneDescriptions": [],
-   "skills": [
-    {
-     "key": "AmishParadise",
-     "name": "아미쉬 파라다이스",
-     "standardDesc": "DAR을 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "DAR을 처치할 때마다 3 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "DAR을 처치할 때마다 <font color=\"#77D914\">2 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "DAR을 처치할 때마다 <font color=\"#77D914\">3 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 2,
-       "unit": "currency",
-       "display": "2 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 3,
-       "unit": "currency",
-       "display": "3 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/AmishParadise.png"
-    },
-    {
-     "key": "CeaseAndDesist",
-     "name": "중지 및 금지",
-     "standardDesc": "도쉬: 1 도쉬",
-     "deluxeDesc": "스토커를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "도쉬: 1 도쉬",
-     "deluxeDescRaw": "스토커를 처치할 때마다 <font color=\"#77D914\">2 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 1,
-       "unit": "currency",
-       "display": "1 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 2,
-       "unit": "currency",
-       "display": "2 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/CeaseAndDesist.png"
-    },
-    {
-     "key": "Clotbuster",
-     "name": "클로트버스터",
-     "standardDesc": "클롯을 처치할 때마다 1 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "클롯을 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "클롯을 처치할 때마다 <font color=\"#77D914\">1 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "클롯을 처치할 때마다 <font color=\"#77D914\">2 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 1,
-       "unit": "currency",
-       "display": "1 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 2,
-       "unit": "currency",
-       "display": "2 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Clotbuster.png"
-    },
-    {
-     "key": "Dietician",
-     "name": "영양사",
-     "standardDesc": "블로트를 처치할 때마다 1 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "블로트를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "블로트를 처치할 때마다 <font color=\"#77D914\">1 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "블로트를 처치할 때마다 <font color=\"#77D914\">2 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 1,
-       "unit": "currency",
-       "display": "1 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 2,
-       "unit": "currency",
-       "display": "2 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Dietician.png"
-    },
-    {
-     "key": "Feminist",
-     "name": "페미니스트",
-     "standardDesc": "패트리아크를 처치할 때마다 200 도쉬를 추가로 얻습니다.",
-     "deluxeDesc": "패트리아크를 처치할 때마다 300 도쉬를 추가로 얻습니다.",
-     "standardDescRaw": "패트리아크를 처치할 때마다 <font color=\"#77D914\">200 도쉬</font>를 추가로 얻습니다.",
-     "deluxeDescRaw": "패트리아크를 처치할 때마다 <font color=\"#77D914\">300 도쉬</font>를 추가로 얻습니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 200,
-       "unit": "currency",
-       "display": "200 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 300,
-       "unit": "currency",
-       "display": "300 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Feminist.png"
-    },
-    {
-     "key": "Firefighter",
-     "name": "소방관",
-     "standardDesc": "허스크를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "허스크를 처치할 때마다 3 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "허스크를 처치할 때마다 <font color=\"#77D914\">2 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "허스크를 처치할 때마다 <font color=\"#77D914\">3 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 2,
-       "unit": "currency",
-       "display": "2 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 3,
-       "unit": "currency",
-       "display": "3 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Firefighter.png"
-    },
-    {
-     "key": "GorefastSlayer",
-     "name": "고어패스트 슬레이어",
-     "standardDesc": "고어패스트를 처치할 때마다 1 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "고어패스트를 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "고어패스트를 처치할 때마다 <font color=\"#77D914\">1 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "고어패스트를 처치할 때마다 <font color=\"#77D914\">2 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 1,
-       "unit": "currency",
-       "display": "1 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 2,
-       "unit": "currency",
-       "display": "2 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/GorefastSlayer.png"
-    },
-    {
-     "key": "Kingslayer",
-     "name": "왕을 죽이는 자",
-     "standardDesc": "플레시파운드 킹을 처치할 때마다 200 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "플레시파운드 킹을 처치할 때마다 300 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "플레시파운드 킹을 처치할 때마다 <font color=\"#77D914\">200 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "플레시파운드 킹을 처치할 때마다 <font color=\"#77D914\">300 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 200,
-       "unit": "currency",
-       "display": "200 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 300,
-       "unit": "currency",
-       "display": "300 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Kingslayer.png"
-    },
-    {
-     "key": "NoCloneZone",
-     "name": "클론 영역 없음",
-     "standardDesc": "한스 볼터를 처치할 때마다 200 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "한스 볼터를 처치할 때마다 300 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "한스 볼터를 처치할 때마다 <font color=\"#77D914\">200 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "한스 볼터를 처치할 때마다 <font color=\"#77D914\">300 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 200,
-       "unit": "currency",
-       "display": "200 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 300,
-       "unit": "currency",
-       "display": "300 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/NoCloneZone.png"
-    },
-    {
-     "key": "NoWomanNoCry",
-     "name": "여자가 없으면 울지 않는다",
-     "standardDesc": "매트리아크를 처치할 때마다 200 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "매트리아크를 처치할 때마다 300 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "매트리아크를 처치할 때마다 <font color=\"#77D914\">200 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "매트리아크를 처치할 때마다 <font color=\"#77D914\">300 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 200,
-       "unit": "currency",
-       "display": "200 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 300,
-       "unit": "currency",
-       "display": "300 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/NoWomanNoCry.png"
-    },
-    {
-     "key": "NoiseComplaint",
-     "name": "소음 민원",
-     "standardDesc": "사이렌을 처치할 때마다 2 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "사이렌을 처치할 때마다 3 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "사이렌을 처치할 때마다 <font color=\"#77D914\">2 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "사이렌을 처치할 때마다 <font color=\"#77D914\">3 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 2,
-       "unit": "currency",
-       "display": "2 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 3,
-       "unit": "currency",
-       "display": "3 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/NoiseComplaint.png"
-    },
-    {
-     "key": "SomeoneYourOwnSize",
-     "name": "당신과 비슷한 크기의 누군가",
-     "standardDesc": "플레시파운드를 처치할 때마다 10 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "플레시파운드를 처치할 때마다 15 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "플레시파운드를 처치할 때마다 <font color=\"#77D914\">10 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "플레시파운드를 처치할 때마다 <font color=\"#77D914\">15 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 10,
-       "unit": "currency",
-       "display": "10 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 15,
-       "unit": "currency",
-       "display": "15 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/SomeoneYourOwnSize.png"
-    },
-    {
-     "key": "SupersizeMe",
-     "name": "슈퍼사이즈 미",
-     "standardDesc": "블로트 킹을 처치할 때마다 200 도쉬를 추가로 획득합니다.",
-     "deluxeDesc": "블로트 킹을 처치할 때마다 300 도쉬를 추가로 획득합니다.",
-     "standardDescRaw": "블로트 킹을 처치할 때마다 <font color=\"#77D914\">200 도쉬</font>를 추가로 획득합니다.",
-     "deluxeDescRaw": "블로트 킹을 처치할 때마다 <font color=\"#77D914\">300 도쉬</font>를 추가로 획득합니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 200,
-       "unit": "currency",
-       "display": "200 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 300,
-       "unit": "currency",
-       "display": "300 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/SupersizeMe.png"
-    },
-    {
-     "key": "TexasChainsawMassacre",
-     "name": "텍사스 전기톱 학살",
-     "standardDesc": "스크레이크를 처치할 때마다 10 도쉬를 추가로 얻습니다.",
-     "deluxeDesc": "스크레이크를 처치할 때마다 15 도쉬를 추가로 얻습니다.",
-     "standardDescRaw": "스크레이크를 처치할 때마다 <font color=\"#77D914\">10 도쉬</font>를 추가로 얻습니다.",
-     "deluxeDescRaw": "스크레이크를 처치할 때마다 <font color=\"#77D914\">15 도쉬</font>를 추가로 얻습니다.",
-     "rawValues": [
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 10,
-       "unit": "currency",
-       "display": "10 도쉬"
-      },
-      {
-       "key": "Dosh",
-       "label": "도쉬",
-       "value": 15,
-       "unit": "currency",
-       "display": "15 도쉬"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TexasChainsawMassacre.png"
-    }
-   ],
-   "skillCount": 14,
+   "skills": [],
+   "skillCount": 0,
    "verdict": {
     "tag": "적절",
     "note": "유지 판정. 경제 퍼크.",
@@ -14390,60 +13918,18 @@
      "lv10Display": "+10%",
      "lv20Display": "+20%",
      "scaling": true
-    }
-   ],
-   "fixedStats": [
+    },
     {
      "key": "Resistance",
      "label": "저항력",
-     "value": 0.004,
-     "unit": "percent",
-     "display": "+0.4%",
-     "lv10": 0.004,
-     "lv20": 0.004,
-     "lv10Display": "+0.4%",
-     "lv20Display": "+0.4%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Heal",
-     "label": "치유",
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "KnockdownPower",
-     "label": "넉다운 위력",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "MagSize",
-     "label": "탄창 크기",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "MeleeAttackSpeed",
@@ -14451,12 +13937,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "Penetration",
@@ -14464,12 +13949,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "RateOfFire",
@@ -14477,12 +13961,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "Recoil",
@@ -14490,12 +13973,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "ReloadRate",
@@ -14503,64 +13985,11 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "SpareAmmo",
-     "label": "여분 탄약",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "StumblePower",
-     "label": "휘청임 위력",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "StunPower",
-     "label": "기절 위력",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Speed",
-     "label": "속도",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     },
     {
      "key": "Spread",
@@ -14568,53 +13997,74 @@
      "value": 0.01,
      "unit": "percent",
      "display": "+1%",
-     "lv10": 0.01,
-     "lv20": 0.01,
-     "lv10Display": "+1%",
-     "lv20Display": "+1%",
-     "scaling": false,
-     "capstoneLevel": null
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
+     "scaling": true
     }
    ],
+   "fixedStats": [],
    "valueSourceNote": null,
    "role": "피해·치유·탄창·관통·재장전·이동 등 14가지 속성을 골고루 강화하는 균형형 최종 전직입니다.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "무기 능력치는 등급당 <font color=\"#77D914\">1%</font>, <font color=\"#66CCFF\">피해 저항</font>은 등급당 <font color=\"#77D914\">0.4%</font> 증가합니다.",
-     "text": "무기 능력치는 등급당 1%, 피해 저항은 등급당 0.4% 증가합니다.",
+     "raw": "<font color=\"#FFD700\">제드타임</font> 동안에만 레벨당 <font color=\"#66CCFF\">피해량·피해 저항·근접 공격 속도·관통력</font>이 <font color=\"#77D914\">1%</font> 증가합니다.",
+     "text": "제드타임 동안에만 레벨당 피해량·피해 저항·근접 공격 속도·관통력이 1% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#FFD700\">ZED 타임</font> 지속 시간이 레벨업당 +0.01 · 만렙(Lv20) +0.2초 연장됩니다.",
-     "text": "ZED 타임 지속 시간이 레벨업당 +0.01 · 만렙(Lv20) +0.2초 연장됩니다.",
+     "raw": "<font color=\"#FFD700\">제드타임</font> 동안 레벨당 <font color=\"#66CCFF\">발사 속도·재장전 속도</font>가 <font color=\"#77D914\">1%</font> 증가하고, <font color=\"#66CCFF\">반동·탄 퍼짐</font>이 <font color=\"#77D914\">1%</font> 감소합니다.",
+     "text": "제드타임 동안 레벨당 발사 속도·재장전 속도가 1% 증가하고, 반동·탄 퍼짐이 1% 감소합니다.",
      "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#77D914\">10레벨</font>: <font color=\"#FFD700\">제드타임</font> 동안 <font color=\"#66CCFF\">무기 탄약</font>을 소모하지 않습니다. 드론 배터리는 제외됩니다.",
+     "text": "10레벨: 제드타임 동안 무기 탄약을 소모하지 않습니다. 드론 배터리는 제외됩니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#77D914\">20레벨</font>: <font color=\"#FFD700\">제드타임</font>이 끝나면 소지 무기마다 남아 있는 <font color=\"#66CCFF\">탄약</font>의 <font color=\"#77D914\">10%</font>를 추가로 얻습니다. 소수점은 버리며 휴대 한도를 넘지 않습니다. 자동 충전 에너지와 드론 배터리는 제외됩니다.",
+     "text": "20레벨: 제드타임이 끝나면 소지 무기마다 남아 있는 탄약의 10%를 추가로 얻습니다. 소수점은 버리며 휴대 한도를 넘지 않습니다. 자동 충전 에너지와 드론 배터리는 제외됩니다.",
+     "isCapstone": true
     }
    ],
-   "capstoneDescriptions": [],
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#77D914\">10레벨</font>: <font color=\"#FFD700\">제드타임</font> 동안 <font color=\"#66CCFF\">무기 탄약</font>을 소모하지 않습니다. 드론 배터리는 제외됩니다.",
+     "text": "10레벨: 제드타임 동안 무기 탄약을 소모하지 않습니다. 드론 배터리는 제외됩니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#77D914\">20레벨</font>: <font color=\"#FFD700\">제드타임</font>이 끝나면 소지 무기마다 남아 있는 <font color=\"#66CCFF\">탄약</font>의 <font color=\"#77D914\">10%</font>를 추가로 얻습니다. 소수점은 버리며 휴대 한도를 넘지 않습니다. 자동 충전 에너지와 드론 배터리는 제외됩니다.",
+     "text": "20레벨: 제드타임이 끝나면 소지 무기마다 남아 있는 탄약의 10%를 추가로 얻습니다. 소수점은 버리며 휴대 한도를 넘지 않습니다. 자동 충전 에너지와 드론 배터리는 제외됩니다.",
+     "isCapstone": true
+    }
+   ],
    "skills": [
     {
      "key": "BulletTime",
      "name": "불릿 타임",
-     "standardDesc": "ZED 타임 동안 모든 무기의 피해량이 +30% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 모든 무기의 피해량이 +60% 증가합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 <font color=\"#66CCFF\">모든 무기</font>의 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+30%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 <font color=\"#66CCFF\">모든 무기</font>의 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+60%</font> 증가합니다.",
+     "standardDesc": "제드타임 동안 모든 무기 피해량이 +20% 증가합니다.",
+     "deluxeDesc": "제드타임 동안 모든 무기 피해량이 +30% 증가합니다.",
+     "standardDescRaw": "<font color=\"#FFD700\">제드타임</font> 동안 <font color=\"#66CCFF\">모든 무기 피해량</font>이 <font color=\"#77D914\">+20%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">제드타임</font> 동안 <font color=\"#66CCFF\">모든 무기 피해량</font>이 <font color=\"#77D914\">+30%</font> 증가합니다.",
      "rawValues": [
+      {
+       "key": "Damage",
+       "label": "피해량",
+       "value": 0.2,
+       "unit": "percent",
+       "display": "+20%"
+      },
       {
        "key": "Damage",
        "label": "피해량",
        "value": 0.3,
        "unit": "percent",
        "display": "+30%"
-      },
-      {
-       "key": "Damage",
-       "label": "피해량",
-       "value": 0.6,
-       "unit": "percent",
-       "display": "+60%"
       }
      ],
      "hasKorText": true,
@@ -14631,24 +14081,24 @@
     {
      "key": "HighNoon",
      "name": "정오",
-     "standardDesc": "ZED 타임 동안 재장전 속도가 +50% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 재장전 속도가 +100% 증가합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 <font color=\"#66CCFF\">재장전 속도</font>가 <font color=\"#77D914\">+50%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 <font color=\"#66CCFF\">재장전 속도</font>가 <font color=\"#77D914\">+100%</font> 증가합니다.",
+     "standardDesc": "제드타임 동안 재장전·무기 교체의 느려진 속도를 평상시 속도 기준 +25%만큼 회복합니다.",
+     "deluxeDesc": "제드타임 동안 재장전·무기 교체의 느려진 속도를 평상시 속도 기준 +50%만큼 회복합니다.",
+     "standardDescRaw": "<font color=\"#FFD700\">제드타임</font> 동안 <font color=\"#66CCFF\">재장전·무기 교체</font>의 느려진 속도를 평상시 속도 기준 <font color=\"#77D914\">+25%</font>만큼 회복합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">제드타임</font> 동안 <font color=\"#66CCFF\">재장전·무기 교체</font>의 느려진 속도를 평상시 속도 기준 <font color=\"#77D914\">+50%</font>만큼 회복합니다.",
      "rawValues": [
+      {
+       "key": "Mod",
+       "label": "배율",
+       "value": 0.25,
+       "unit": "multiplier",
+       "display": "×0.25"
+      },
       {
        "key": "Mod",
        "label": "배율",
        "value": 0.5,
        "unit": "multiplier",
        "display": "×0.5"
-      },
-      {
-       "key": "Mod",
-       "label": "배율",
-       "value": 1.0,
-       "unit": "multiplier",
-       "display": "×1"
       }
      ],
      "hasKorText": true,
@@ -14665,10 +14115,10 @@
     {
      "key": "Minuteman",
      "name": "미니트맨",
-     "standardDesc": "적의 체력 바를 볼 수 있으며, 체력이 35% 미만인 ZED에게 35%의 추가 피해를 줍니다.",
-     "deluxeDesc": "적의 체력 바를 볼 수 있으며, 체력이 35% 미만인 ZED에게 70%의 추가 피해를 줍니다.",
-     "standardDescRaw": "적의 <font color=\"#66CCFF\">체력</font> 바를 볼 수 있으며, <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">35%</font> 미만인 ZED에게 <font color=\"#77D914\">35%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "적의 <font color=\"#66CCFF\">체력</font> 바를 볼 수 있으며, <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">35%</font> 미만인 ZED에게 <font color=\"#77D914\">70%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "standardDesc": "적 체력을 확인할 수 있습니다.",
+     "deluxeDesc": "적 체력을 확인할 수 있습니다.",
+     "standardDescRaw": "<font color=\"#66CCFF\">적 체력</font>을 확인할 수 있습니다.",
+     "deluxeDescRaw": "<font color=\"#66CCFF\">적 체력</font>을 확인할 수 있습니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14682,79 +14132,12 @@
      "icon": "icons/skills/Minuteman.png"
     },
     {
-     "key": "Pandemic",
-     "name": "팬데믹",
-     "standardDesc": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +20%",
-     "deluxeDesc": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +50%",
-     "standardDescRaw": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +20%",
-     "deluxeDescRaw": "전염병 확률: +50% · 전염병 피해량 상한: 50 · 피해량 계수: +50%",
-     "rawValues": [
-      {
-       "key": "PandemicProbability",
-       "label": "전염병 확률",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "PandemicDamageCap",
-       "label": "전염병 피해량 상한",
-       "value": 50.0,
-       "unit": "count",
-       "display": "50"
-      },
-      {
-       "key": "DamageFactor",
-       "label": "피해량 계수",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "DamageFactor",
-       "label": "피해량 계수",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Pandemic.png"
-    },
-    {
-     "key": "Shifter",
-     "name": "시프터",
-     "standardDesc": "ZED 타임을 10회 추가로 연장할 수 있습니다.",
-     "deluxeDesc": "ZED 타임을 20회 추가로 연장할 수 있습니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font>을 <font color=\"#77D914\">10회</font> 추가로 연장할 수 있습니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font>을 <font color=\"#77D914\">20회</font> 추가로 연장할 수 있습니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": "ZED타임 연장 횟수를 표준 +10회 / 디럭스 +20회 고정 지급하는 로직이 하드코딩되어 있어 ini로 조정할 수 없습니다.",
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Shifter.png"
-    },
-    {
      "key": "TemporalFracture",
      "name": "시간적 골절",
-     "standardDesc": "ZED 타임 동안 이동 속도가 25% 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
-     "deluxeDesc": "ZED 타임 동안 이동 속도가 50% 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">25%</font> 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">50%</font> 빨라지며 접촉하는 ZED를 쓰러뜨립니다.",
+     "standardDesc": "제드타임의 감속 없이 이동하며, 이동 속도가 50% 증가합니다. 제드와 부딪혀도 쓰러뜨리지 않습니다.",
+     "deluxeDesc": "제드타임의 감속 없이 이동하며, 이동 속도가 100% 증가합니다. 제드와 부딪혀도 쓰러뜨리지 않습니다.",
+     "standardDescRaw": "<font color=\"#FFD700\">제드타임</font>의 감속 없이 이동하며, <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">50%</font> 증가합니다. 제드와 부딪혀도 쓰러뜨리지 않습니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">제드타임</font>의 감속 없이 이동하며, <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">100%</font> 증가합니다. 제드와 부딪혀도 쓰러뜨리지 않습니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -14766,139 +14149,9 @@
      "disabledNote": null,
      "noData": false,
      "icon": "icons/skills/TemporalFracture.png"
-    },
-    {
-     "key": "TimeHealsAllWounds",
-     "name": "시간은 모든 상처를 치유한다",
-     "standardDesc": "의료용 주사기의 치유량과 재충전 속도가 최대 체력의 +30%만큼 비례하여 증가합니다.",
-     "deluxeDesc": "의료용 주사기의 치유량과 재충전 속도가 최대 체력의 +60%만큼 비례하여 증가합니다.",
-     "standardDescRaw": "의료용 <font color=\"#66CCFF\">주사기</font>의 <font color=\"#66CCFF\">치유</font>량과 재충전 속도가 <font color=\"#66CCFF\">최대 체력</font>의 <font color=\"#77D914\">+30%</font>만큼 비례하여 증가합니다.",
-     "deluxeDescRaw": "의료용 <font color=\"#66CCFF\">주사기</font>의 <font color=\"#66CCFF\">치유</font>량과 재충전 속도가 <font color=\"#66CCFF\">최대 체력</font>의 <font color=\"#77D914\">+60%</font>만큼 비례하여 증가합니다.",
-     "rawValues": [
-      {
-       "key": "Bonus",
-       "label": "보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "Bonus",
-       "label": "보너스",
-       "value": 0.6,
-       "unit": "percent",
-       "display": "+60%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TimeHealsAllWounds.png"
-    },
-    {
-     "key": "TimeSpiral",
-     "name": "시간 나선",
-     "standardDesc": "연사 속도: +10% · 특수 속도: +40%",
-     "deluxeDesc": "연사 속도: +20% · 특수 속도: +40%",
-     "standardDescRaw": "연사 속도: +10% · 특수 속도: +40%",
-     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +40%",
-     "rawValues": [
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TimeSpiral.png"
-    },
-    {
-     "key": "Timewalk",
-     "name": "타임워크",
-     "standardDesc": "연사 속도: +10% · 특수 속도: +25%",
-     "deluxeDesc": "연사 속도: +20% · 특수 속도: +50%",
-     "standardDescRaw": "연사 속도: +10% · 특수 속도: +25%",
-     "deluxeDescRaw": "연사 속도: +20% · 특수 속도: +50%",
-     "rawValues": [
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "FireRate",
-       "label": "연사 속도",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "SpecialRate",
-       "label": "특수 속도",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Timewalk.png"
     }
    ],
-   "skillCount": 9,
+   "skillCount": 4,
    "verdict": {
     "tag": "적절 (상향 완료) / 연장계수 하드코딩 확인",
     "note": "유지 판정이자 최종 심화 퍼크(Lv20) 상향 대상 중 하나 — 전 속성 상향 조정되었으나, 이후 전체 밸런스 재조정으로 현재 Lv20 기준 +15%. 2026-07-05 조사: ZED타임 연장 횟수를 '퍼크 레벨만큼(최대 20)'으로 지급하는 로직이 하드코딩되어 있어 ini 조정 불가 — 다만 상한이 명확하고(레벨 20 = +20회) 에고니처럼 카운터를 우회하지 않아 위험도는 낮음.",
@@ -15295,13 +14548,13 @@
     {
      "key": "CritChance",
      "label": "치명타 확률",
-     "value": 0.01,
+     "value": 0.0025,
      "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
+     "display": "+0.25%",
+     "lv10": 0.025,
+     "lv20": 0.05,
+     "lv10Display": "+2.5%",
+     "lv20Display": "+5%",
      "scaling": true
     },
     {
@@ -15319,59 +14572,45 @@
     {
      "key": "MovementSpeed",
      "label": "이동 속도",
-     "value": 0.02,
+     "value": 0.01,
      "unit": "percent",
-     "display": "+2%",
-     "lv10": 0.2,
-     "lv20": 0.4,
-     "lv10Display": "+20%",
-     "lv20Display": "+40%",
+     "display": "+1%",
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%",
      "scaling": true
     }
    ],
-   "fixedStats": [
-    {
-     "key": "Level10DamageBonus",
-     "label": "레벨 10 피해량 보너스",
-     "value": 0.125,
-     "unit": "percent",
-     "display": "+12.5%",
-     "lv10": 0.125,
-     "lv20": 0.125,
-     "lv10Display": "+12.5%",
-     "lv20Display": "+12.5%",
-     "scaling": false,
-     "capstoneLevel": 10
-    }
-   ],
+   "fixedStats": [],
    "valueSourceNote": null,
    "role": "전체 피해량·이동속도·헤드샷을 얹으면서, 일정 확률로 적을 즉사시키는 히트앤런형 전직입니다.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "죽음의 정밀도: <font color=\"#77D914\">레벨업당 +1% · 만렙(Lv20) +20%</font> 확률로 기본 <font color=\"#66CCFF\">피해</font> <font color=\"#77D914\">+100%</font>.",
-     "text": "죽음의 정밀도: 레벨업당 +1% · 만렙(Lv20) +20% 확률로 기본 피해 +100%.",
+     "raw": "레벨당 모든 무기의 <font color=\"#66CCFF\">플레이어 치명타 확률</font>이 <font color=\"#77D914\">0.25%</font> 증가합니다. 치명타는 공격 보너스 계산 후 <font color=\"#77D914\">2배</font>의 피해를 주며, 무기 전용 치명타 확률과 합산됩니다.",
+     "text": "레벨당 모든 무기의 플레이어 치명타 확률이 0.25% 증가합니다. 치명타는 공격 보너스 계산 후 2배의 피해를 주며, 무기 전용 치명타 확률과 합산됩니다.",
      "isCapstone": false
     },
     {
-     "raw": "소울 스트라이크: <font color=\"#66CCFF\">헤드샷 피해</font>량 <font color=\"#77D914\">레벨업당 +2% · 만렙(Lv20) +40%</font>.",
-     "text": "소울 스트라이크: 헤드샷 피해량 레벨업당 +2% · 만렙(Lv20) +40%.",
+     "raw": "레벨당 <font color=\"#66CCFF\">헤드샷 피해량</font>이 <font color=\"#77D914\">2%</font> 증가합니다. 20레벨에서 <font color=\"#77D914\">40%</font> 증가합니다.",
+     "text": "레벨당 헤드샷 피해량이 2% 증가합니다. 20레벨에서 40% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "섀도우 스텝: <font color=\"#66CCFF\">이동 속도</font> <font color=\"#77D914\">레벨업당 +2% · 만렙(Lv20) +40%</font>.",
-     "text": "섀도우 스텝: 이동 속도 레벨업당 +2% · 만렙(Lv20) +40%.",
+     "raw": "레벨당 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">1%</font> 증가합니다. 20레벨에서 <font color=\"#77D914\">20%</font> 증가합니다.",
+     "text": "레벨당 이동 속도가 1% 증가합니다. 20레벨에서 20% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 리퍼의 승천 - 추가 <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">+12.5%</font>.",
-     "text": "레벨 10: 리퍼의 승천 - 추가 피해량 +12.5%.",
+     "raw": "레벨 <font color=\"#77D914\">10</font>: <font color=\"#66CCFF\">플레이어 치명타 확률</font>이 추가로 <font color=\"#77D914\">5%</font> 증가합니다.",
+     "text": "레벨 10: 플레이어 치명타 확률이 추가로 5% 증가합니다.",
      "isCapstone": true
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 죽음의 손길 - 타격 시 <font color=\"#77D914\">5%</font> 확률로 즉시 처치합니다.",
-     "text": "레벨 20: 죽음의 손길 - 타격 시 5% 확률로 즉시 처치합니다.",
+     "raw": "레벨 <font color=\"#77D914\">20</font>: <font color=\"#66CCFF\">건슬링거·샤프슈터 무기</font>로 제드의 머리를 타격하면 <font color=\"#77D914\">4%</font> 확률로 즉사시킵니다. 보스는 제외되며, 건슬링거 글록은 쌍권총을 포함해 <font color=\"#77D914\">2%</font>가 적용됩니다.",
+     "text": "레벨 20: 건슬링거·샤프슈터 무기로 제드의 머리를 타격하면 4% 확률로 즉사시킵니다. 보스는 제외되며, 건슬링거 글록은 쌍권총을 포함해 2%가 적용됩니다.",
      "isCapstone": true
     },
     {
@@ -15382,13 +14621,13 @@
    ],
    "capstoneDescriptions": [
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 리퍼의 승천 - 추가 <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">+12.5%</font>.",
-     "text": "레벨 10: 리퍼의 승천 - 추가 피해량 +12.5%.",
+     "raw": "레벨 <font color=\"#77D914\">10</font>: <font color=\"#66CCFF\">플레이어 치명타 확률</font>이 추가로 <font color=\"#77D914\">5%</font> 증가합니다.",
+     "text": "레벨 10: 플레이어 치명타 확률이 추가로 5% 증가합니다.",
      "isCapstone": true
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 죽음의 손길 - 타격 시 <font color=\"#77D914\">5%</font> 확률로 즉시 처치합니다.",
-     "text": "레벨 20: 죽음의 손길 - 타격 시 5% 확률로 즉시 처치합니다.",
+     "raw": "레벨 <font color=\"#77D914\">20</font>: <font color=\"#66CCFF\">건슬링거·샤프슈터 무기</font>로 제드의 머리를 타격하면 <font color=\"#77D914\">4%</font> 확률로 즉사시킵니다. 보스는 제외되며, 건슬링거 글록은 쌍권총을 포함해 <font color=\"#77D914\">2%</font>가 적용됩니다.",
+     "text": "레벨 20: 건슬링거·샤프슈터 무기로 제드의 머리를 타격하면 4% 확률로 즉사시킵니다. 보스는 제외되며, 건슬링거 글록은 쌍권총을 포함해 2%가 적용됩니다.",
      "isCapstone": true
     }
    ],
@@ -15396,10 +14635,10 @@
     {
      "key": "DanceOfDeath",
      "name": "죽음의 춤",
-     "standardDesc": "죽음의 춤: 이동 중 가하는 피해량이 최대 +20% 증가합니다. 보너스 수치는 현재 이동 속도에 비례합니다. 제자리에 멈춰 서면 당신은 그저 필멸자일 뿐입니다.",
-     "deluxeDesc": "죽음의 춤: 이동 중 가하는 피해량이 최대 +50% 증가합니다. 보너스 수치는 현재 이동 속도에 비례합니다. 제자리에 멈춰 서면 당신은 그저 필멸자일 뿐입니다.",
-     "standardDescRaw": "죽음의 춤: 이동 중 가하는 <font color=\"#66CCFF\">피해량</font>이 최대 <font color=\"#77D914\">+20%</font> 증가합니다. 보너스 수치는 현재 <font color=\"#66CCFF\">이동 속도</font>에 비례합니다. 제자리에 멈춰 서면 당신은 그저 필멸자일 뿐입니다.",
-     "deluxeDescRaw": "죽음의 춤: 이동 중 가하는 <font color=\"#66CCFF\">피해량</font>이 최대 <font color=\"#77D914\">+50%</font> 증가합니다. 보너스 수치는 현재 <font color=\"#66CCFF\">이동 속도</font>에 비례합니다. 제자리에 멈춰 서면 당신은 그저 필멸자일 뿐입니다.",
+     "standardDesc": "이동 중 주는 피해량이 최대 +20% 증가합니다. 수평 이동 속도가 빠를수록 효과가 커집니다.",
+     "deluxeDesc": "이동 중 주는 피해량이 최대 +35% 증가합니다. 수평 이동 속도가 빠를수록 효과가 커집니다.",
+     "standardDescRaw": "이동 중 주는 <font color=\"#66CCFF\">피해량</font>이 최대 <font color=\"#77D914\">+20%</font> 증가합니다. 수평 이동 속도가 빠를수록 효과가 커집니다.",
+     "deluxeDescRaw": "이동 중 주는 <font color=\"#66CCFF\">피해량</font>이 최대 <font color=\"#77D914\">+35%</font> 증가합니다. 수평 이동 속도가 빠를수록 효과가 커집니다.",
      "rawValues": [
       {
        "key": "MaxDamageBonus",
@@ -15411,16 +14650,16 @@
       {
        "key": "MaxDamageBonus",
        "label": "최대 피해량 보너스",
-       "value": 0.5,
+       "value": 0.35,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+35%"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "deluxeAvailable": null,
      "disabledNote": null,
@@ -15478,24 +14717,24 @@
     {
      "key": "DeathSentence",
      "name": "사형 선고",
-     "standardDesc": "사형 선고: 체력이 +40% 미만인 적을 공격 시 +30%의 추가 피해를 입힙니다. 시작한 일의 끝을 맺으십시오.",
-     "deluxeDesc": "사형 선고: 체력이 +80% 미만인 적을 공격 시 +40%의 추가 피해를 입힙니다. 시작한 일의 끝을 맺으십시오.",
-     "standardDescRaw": "사형 선고: <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">+40%</font> 미만인 적을 <font color=\"#66CCFF\">공격</font> 시 <font color=\"#77D914\">+30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다. 시작한 일의 끝을 맺으십시오.",
-     "deluxeDescRaw": "사형 선고: <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">+80%</font> 미만인 적을 <font color=\"#66CCFF\">공격</font> 시 <font color=\"#77D914\">+40%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다. 시작한 일의 끝을 맺으십시오.",
+     "standardDesc": "체력이 +30% 미만인 적에게 주는 피해량이 +30% 증가합니다.",
+     "deluxeDesc": "체력이 +30% 미만인 적에게 주는 피해량이 +40% 증가합니다.",
+     "standardDescRaw": "체력이 <font color=\"#77D914\">+30%</font> 미만인 적에게 주는 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+30%</font> 증가합니다.",
+     "deluxeDescRaw": "체력이 <font color=\"#77D914\">+30%</font> 미만인 적에게 주는 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+40%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "DamageBonus",
        "label": "피해량 보너스",
-       "value": 0.4,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+40%"
+       "display": "+30%"
       },
       {
        "key": "DamageBonus",
        "label": "피해량 보너스",
-       "value": 0.8,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+80%"
+       "display": "+30%"
       },
       {
        "key": "HealthThreshold",
@@ -15560,10 +14799,10 @@
     {
      "key": "GrimTithe",
      "name": "그림 십일조",
-     "standardDesc": "그림 십일조: 킬당 2 도쉬씩 누적되어, 웨이브 종료 시 일시불로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
-     "deluxeDesc": "그림 십일조: 킬당 4 도쉬씩 누적되어, 웨이브 종료 시 일시불로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
-     "standardDescRaw": "그림 십일조: 킬당 <font color=\"#77D914\">2 도쉬</font>씩 누적되어, 웨이브 종료 시 일시불로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
-     "deluxeDescRaw": "그림 십일조: 킬당 <font color=\"#77D914\">4 도쉬</font>씩 누적되어, 웨이브 종료 시 일시불로 지급받습니다. 죽음은 언제나 대가를 받아냅니다.",
+     "standardDesc": "적 처치마다 2 도쉬를 적립하고, 웨이브 종료 시 지급받습니다.",
+     "deluxeDesc": "적 처치마다 3 도쉬를 적립하고, 웨이브 종료 시 지급받습니다.",
+     "standardDescRaw": "적 처치마다 <font color=\"#77D914\">2 도쉬</font>를 적립하고, 웨이브 종료 시 지급받습니다.",
+     "deluxeDescRaw": "적 처치마다 <font color=\"#77D914\">3 도쉬</font>를 적립하고, 웨이브 종료 시 지급받습니다.",
      "rawValues": [
       {
        "key": "DoshPerKill",
@@ -15575,9 +14814,9 @@
       {
        "key": "DoshPerKill",
        "label": "처치당 도쉬",
-       "value": 4,
+       "value": 3,
        "unit": "currency",
-       "display": "4 도쉬"
+       "display": "3 도쉬"
       }
      ],
      "hasKorText": true,
@@ -15592,204 +14831,26 @@
      "icon": "icons/skills/GrimTithe.png"
     },
     {
-     "key": "LastBreath",
-     "name": "마지막 숨결",
-     "standardDesc": "마지막 숨결: 체력이 +50% 미만으로 떨어지면 8초 동안 피해량이 +30% 증가합니다. 웨이브당 1회만 발동합니다.",
-     "deluxeDesc": "마지막 숨결: 체력이 +100% 미만으로 떨어지면 10초 동안 피해량이 +40% 증가합니다. 웨이브당 1회만 발동합니다.",
-     "standardDescRaw": "마지막 숨결: <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">+50%</font> 미만으로 떨어지면 <font color=\"#77D914\">8초</font> 동안 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+30%</font> 증가합니다. <font color=\"#FFD700\">웨이브당</font> <font color=\"#77D914\">1회</font>만 발동합니다.",
-     "deluxeDescRaw": "마지막 숨결: <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">+100%</font> 미만으로 떨어지면 <font color=\"#77D914\">10초</font> 동안 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+40%</font> 증가합니다. <font color=\"#FFD700\">웨이브당</font> <font color=\"#77D914\">1회</font>만 발동합니다.",
+     "key": "VeilWalker",
+     "name": "베일 워커",
+     "standardDesc": "조준 중 이동 속도가 +30%, 앉아서 이동하는 속도가 +20% 증가합니다.",
+     "deluxeDesc": "조준 중 이동 속도가 +40%, 앉아서 이동하는 속도가 +30% 증가합니다.",
+     "standardDescRaw": "<font color=\"#66CCFF\">조준 중 이동 속도</font>가 <font color=\"#77D914\">+30%</font>, <font color=\"#66CCFF\">앉아서 이동하는 속도</font>가 <font color=\"#77D914\">+20%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#66CCFF\">조준 중 이동 속도</font>가 <font color=\"#77D914\">+40%</font>, <font color=\"#66CCFF\">앉아서 이동하는 속도</font>가 <font color=\"#77D914\">+30%</font> 증가합니다.",
      "rawValues": [
       {
-       "key": "DamageBonus",
-       "label": "피해량 보너스",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "DamageBonus",
-       "label": "피해량 보너스",
-       "value": 1.0,
-       "unit": "percent",
-       "display": "+100%"
-      },
-      {
-       "key": "HealthThreshold",
-       "label": "체력 임계값",
+       "key": "IronSightBonus",
+       "label": "강철 조준경 보너스",
        "value": 0.3,
        "unit": "percent",
        "display": "+30%"
       },
       {
-       "key": "HealthThreshold",
-       "label": "체력 임계값",
+       "key": "IronSightBonus",
+       "label": "강철 조준경 보너스",
        "value": 0.4,
        "unit": "percent",
        "display": "+40%"
-      },
-      {
-       "key": "BuffDuration",
-       "label": "버프 지속시간",
-       "value": 8.0,
-       "unit": "seconds",
-       "display": "8초"
-      },
-      {
-       "key": "BuffDuration",
-       "label": "버프 지속시간",
-       "value": 10.0,
-       "unit": "seconds",
-       "display": "10초"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/LastBreath.png"
-    },
-    {
-     "key": "MementoMori",
-     "name": "메멘토 모리",
-     "standardDesc": "메멘토 모리: 웨이브 종료 시 생존 보상으로 최대 체력이 영구적으로 상승합니다. 스택: 생존한 웨이브당 +2 HP 씩 누적 적용됩니다 (웨이브1 생존시 2 HP 증가, 웨이브5 생존시 누적 10 HP 증가 등).",
-     "deluxeDesc": "메멘토 모리: 웨이브 종료 시 생존 보상으로 최대 체력이 영구적으로 상승합니다. 스택: 생존한 웨이브당 +4 HP 씩 누적 적용됩니다 (웨이브1 생존시 4 HP 증가, 웨이브5 생존시 누적 20 HP 증가 등).",
-     "standardDescRaw": "메멘토 모리: 웨이브 종료 시 생존 보상으로 <font color=\"#66CCFF\">최대 체력</font>이 영구적으로 상승합니다. 스택: 생존한 <font color=\"#FFD700\">웨이브당</font> <font color=\"#77D914\">+2 HP</font> 씩 누적 적용됩니다 (웨이브<font color=\"#77D914\">1</font> 생존시 <font color=\"#77D914\">2 HP</font> 증가, 웨이브<font color=\"#77D914\">5</font> 생존시 누적 <font color=\"#77D914\">10 HP</font> 증가 등).",
-     "deluxeDescRaw": "메멘토 모리: 웨이브 종료 시 생존 보상으로 <font color=\"#66CCFF\">최대 체력</font>이 영구적으로 상승합니다. 스택: 생존한 <font color=\"#FFD700\">웨이브당</font> <font color=\"#77D914\">+4 HP</font> 씩 누적 적용됩니다 (웨이브<font color=\"#77D914\">1</font> 생존시 <font color=\"#77D914\">4 HP</font> 증가, 웨이브<font color=\"#77D914\">5</font> 생존시 누적 <font color=\"#77D914\">20 HP</font> 증가 등).",
-     "rawValues": [
-      {
-       "key": "HealPerWave",
-       "label": "웨이브 당 치유",
-       "value": 2,
-       "unit": "count",
-       "display": "2"
-      },
-      {
-       "key": "HealPerWave",
-       "label": "웨이브 당 치유",
-       "value": 4,
-       "unit": "count",
-       "display": "4"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/MementoMori.png"
-    },
-    {
-     "key": "SoulChain",
-     "name": "소울 체인",
-     "standardDesc": "스택 당 피해량: +5% · 최대 스택 수: 5",
-     "deluxeDesc": "스택 당 피해량: +8% · 최대 스택 수: 8",
-     "standardDescRaw": "스택 당 피해량: +5% · 최대 스택 수: 5",
-     "deluxeDescRaw": "스택 당 피해량: +8% · 최대 스택 수: 8",
-     "rawValues": [
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.08,
-       "unit": "percent",
-       "display": "+8%"
-      },
-      {
-       "key": "MaxStacks",
-       "label": "최대 스택 수",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "MaxStacks",
-       "label": "최대 스택 수",
-       "value": 8,
-       "unit": "count",
-       "display": "8"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": true,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/SoulChain.png"
-    },
-    {
-     "key": "SoulOverflow",
-     "name": "영혼의 넘침",
-     "standardDesc": "영혼의 넘침: 처치할 때마다 예비 탄약에서 현재 탄창으로 1발의 탄약이 자동으로 장전됩니다. 수확을 계속하십시오.",
-     "deluxeDesc": "영혼의 넘침: 처치할 때마다 예비 탄약에서 현재 탄창으로 3발의 탄약이 자동으로 장전됩니다. 수확을 계속하십시오.",
-     "standardDescRaw": "영혼의 넘침: 처치할 때마다 <font color=\"#66CCFF\">예비 탄약</font>에서 현재 탄창으로 <font color=\"#77D914\">1발</font>의 <font color=\"#66CCFF\">탄약</font>이 자동으로 장전됩니다. 수확을 계속하십시오.",
-     "deluxeDescRaw": "영혼의 넘침: 처치할 때마다 <font color=\"#66CCFF\">예비 탄약</font>에서 현재 탄창으로 <font color=\"#77D914\">3발</font>의 <font color=\"#66CCFF\">탄약</font>이 자동으로 장전됩니다. 수확을 계속하십시오.",
-     "rawValues": [
-      {
-       "key": "Ammo",
-       "label": "탄약",
-       "value": 1,
-       "unit": "count",
-       "display": "1"
-      },
-      {
-       "key": "Ammo",
-       "label": "탄약",
-       "value": 3,
-       "unit": "count",
-       "display": "3"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/SoulOverflow.png"
-    },
-    {
-     "key": "VeilWalker",
-     "name": "베일 워커",
-     "standardDesc": "베일 워커: 조준 중 이동 속도가 +30%, 웅크린 상태의 이동 속도가 +20% 증가합니다. 살아있는 자들 사이를 유령처럼 움직이십시오.",
-     "deluxeDesc": "베일 워커: 조준 중 이동 속도가 +75%, 웅크린 상태의 이동 속도가 +50% 증가합니다. 살아있는 자들 사이를 유령처럼 움직이십시오.",
-     "standardDescRaw": "베일 워커: 조준 중 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">+30%</font>, 웅크린 상태의 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">+20%</font> 증가합니다. 살아있는 자들 사이를 유령처럼 움직이십시오.",
-     "deluxeDescRaw": "베일 워커: 조준 중 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">+75%</font>, 웅크린 상태의 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">+50%</font> 증가합니다. 살아있는 자들 사이를 유령처럼 움직이십시오.",
-     "rawValues": [
-      {
-       "key": "IronSightBonus",
-       "label": "강철 조준경 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "IronSightBonus",
-       "label": "강철 조준경 보너스",
-       "value": 0.75,
-       "unit": "percent",
-       "display": "+75%"
       },
       {
        "key": "CrouchBonus",
@@ -15801,16 +14862,16 @@
       {
        "key": "CrouchBonus",
        "label": "앉기 보너스",
-       "value": 0.5,
+       "value": 0.3,
        "unit": "percent",
-       "display": "+50%"
+       "display": "+30%"
       }
      ],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
-     "textFixed": false,
+     "textFixed": true,
      "disabled": false,
      "deluxeAvailable": null,
      "disabledNote": null,
@@ -15818,15 +14879,15 @@
      "icon": "icons/skills/VeilWalker.png"
     }
    ],
-   "skillCount": 10,
+   "skillCount": 6,
    "verdict": {
     "tag": "적절",
     "note": "즉사 확률 5%는 하드코딩(대형 ZED 포함, 진짜 보스만 제외). Level10DamageBonus는 기존에 이미 너프 반영되었고, 최근 전체 조정으로 현재 Lv20 기준 +12.5%.",
     "grade": "SS"
    },
    "grade": "SS",
-   "isPatched": true,
-   "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.250000",
+   "isPatched": false,
+   "patchNote": null,
    "testWarning": null,
    "recentChangeTag": {
     "date": "2026-07-07",
@@ -19940,10 +19001,10 @@
     {
      "key": "AnvilsEcho",
      "name": "AnvilsEcho",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
+     "standardDesc": "5번째 공격마다 환영의 메아리를 발사하여 +50%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "3번째 공격마다 환영의 메아리를 발사하여 +50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "<font color=\"#FFFFFF\">5번째 공격</font>마다 <font color=\"#FFD700\">환영의 메아리</font>를 발사하여 <font color=\"#FFFFFF\">+50%</font>의 추가 피해를 입힙니다.",
+     "deluxeDescRaw": "<font color=\"#FFFFFF\">3번째 공격</font>마다 <font color=\"#FFD700\">환영의 메아리</font>를 발사하여 <font color=\"#FFFFFF\">+50%</font>의 추가 피해를 입힙니다.",
      "rawValues": [
       {
        "key": "HitInterval",
@@ -24175,6 +23236,6 @@
  "meta": {
   "advancedPerkCount": 47,
   "basePerkCount": 10,
-  "totalSkills": 483
+  "totalSkills": 460
  }
 }

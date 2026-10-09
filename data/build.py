@@ -392,6 +392,13 @@ def parse_kor_ini(path, encoding="utf-8-sig"):
                 sections[current]["UpgradeName"] = val
             elif key.startswith("PerkUpgradeDescription"):
                 sections[current]["descriptions"].append(val)
+            elif key == "SkillUpgradeDescription1":
+                # Current Tempered localization uses numbered tier keys for
+                # some remade skills; keep the older explicit key format
+                # supported below for the rest of the catalog.
+                sections[current].setdefault("StandardSkillUpgradeDescription", val)
+            elif key == "SkillUpgradeDescription2":
+                sections[current].setdefault("DeluxeSkillUpgradeDescription", val)
             else:
                 sections[current][key] = val
     return sections
@@ -1548,7 +1555,9 @@ def build():
             override = manual_skill_overrides.get(short, {})
 
             t1_entries, t2_entries = split_tiers(raw_values)
-            if "standardDesc" in override and not use_current_source_kor:
+            if "standardDesc" in override and (
+                not use_current_source_kor or not skor.get("StandardSkillUpgradeDescription")
+            ):
                 # Hand-authored from the ini values directly (KOR ini has no
                 # description at all for this skill) -- already accurate,
                 # skip the reconcile/fallback pipeline meant for KOR text.
@@ -1564,7 +1573,9 @@ def build():
                     fallback = build_ini_only_text(t1_entries)
                     if fallback:
                         std_raw, std_fixed = fallback, True
-            if "deluxeDesc" in override and not use_current_source_kor:
+            if "deluxeDesc" in override and (
+                not use_current_source_kor or not skor.get("DeluxeSkillUpgradeDescription")
+            ):
                 delx_raw, delx_fixed = override["deluxeDesc"], False
             else:
                 delx_orig = skor.get("DeluxeSkillUpgradeDescription")
