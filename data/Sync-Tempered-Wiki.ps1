@@ -149,7 +149,7 @@ try {
         $headers = @{ 'User-Agent'='ZedternalWikiSync'; Accept='application/vnd.github+json' }
         $workflowUrl = 'https://api.github.com/repos/mikane7503/Zedternal-Wiki/actions/workflows/pages.yml/runs?branch=main&per_page=5'
         $deployment = $null
-        for ($attempt = 0; $attempt -lt 6; $attempt++) {
+        for ($attempt = 0; $attempt -lt 12; $attempt++) {
             $runs = Invoke-RestMethod -Uri $workflowUrl -Headers $headers -TimeoutSec 20
             $matchingRuns = @($runs.workflow_runs | Where-Object { $_.head_sha -eq $commit } | Select-Object -First 1)
             if ($matchingRuns.Count -gt 0) { $deployment = $matchingRuns[0] }
