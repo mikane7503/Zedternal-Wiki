@@ -34,11 +34,6 @@
     "name": "자유로운 영혼",
     "_note": "KOR ini에 UpgradeName이 번역되지 않고 영문 원문(\"No Strings On Me\")으로 남아있어 한국어 이름을 추가함."
   },
-  "DeepReserves": {
-    "standardDesc": "<font color=\"#66CCFF\">탄창 용량</font>이 <font color=\"#77D914\">25%</font> 증가합니다.",
-    "deluxeDesc": "<font color=\"#66CCFF\">탄창 용량</font>이 <font color=\"#77D914\">40%</font> 증가합니다.",
-    "_note": "한국어 원문에 설명 문장이 없어 최신 운영 KFZedternalUnlimited.ini [ZTUpgrade_Skill_DeepReserves]의 MagCapacity=0.25/0.40 기준으로 보완."
-  },
   "HouseEdge": {
     "standardDesc": "매 <font color=\"#ffaa33\">25번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">80% 꽝</font>, <font color=\"#ffaa33\">15% +50 도쉬</font>, <font color=\"#ff6600\">4% +150 도쉬</font>, <font color=\"#ff0000\">1% +300 도쉬</font>.",
     "deluxeDesc": "매 <font color=\"#ffaa33\">20번째 킬</font>마다 슬롯머신이 발동됩니다: <font color=\"#777777\">60% 꽝</font>, <font color=\"#ffaa33\">25% +50 도쉬</font>, <font color=\"#ff6600\">10% +150 도쉬</font>, <font color=\"#ff0000\">5% +300 도쉬</font>.",

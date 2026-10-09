@@ -53,7 +53,6 @@ MANUAL_BASE = os.path.join(ROOT, "data", "manual_base_perks.json")
 MANUAL_VERDICTS = os.path.join(ROOT, "data", "manual_verdicts.json")
 MANUAL_ROLES = os.path.join(ROOT, "data", "manual_role_descriptions.json")
 MANUAL_SKILL_OVERRIDES = os.path.join(ROOT, "data", "manual_skill_overrides.json")
-MANUAL_PERK_DESCS = os.path.join(ROOT, "data", "manual_perk_desc_overrides.json")
 MANUAL_PERK_EXTRAS = os.path.join(ROOT, "data", "manual_perk_extras.json")
 OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
 SKILL_ICON_DIR = os.path.join(ROOT, "docs", "icons", "skills")
@@ -1211,15 +1210,27 @@ IMPLICIT_SCALING_KEY_ORDER = {
 RECENT_CHANGES_PATH = os.path.join(ROOT, "data", "recent_changes.json")
 
 
-def normalize_terminology(value):
+KOR_DESCRIPTION_FIELDS = {
+    "descriptions", "capstoneDescriptions", "role",
+    "raw", "text", "standardDesc", "deluxeDesc",
+    "standardDescRaw", "deluxeDescRaw",
+}
+
+
+def normalize_terminology(value, preserve_kor=False):
+    if preserve_kor:
+        return value
     if isinstance(value, str):
         for old, new in TERMINOLOGY_FIXES:
             value = value.replace(old, new)
         return value
     if isinstance(value, list):
-        return [normalize_terminology(v) for v in value]
+        return [normalize_terminology(v, preserve_kor) for v in value]
     if isinstance(value, dict):
-        return {k: normalize_terminology(v) for k, v in value.items()}
+        return {
+            k: normalize_terminology(v, k in KOR_DESCRIPTION_FIELDS)
+            for k, v in value.items()
+        }
     return value
 
 
@@ -1394,7 +1405,6 @@ def build():
     aurora_stats = parse_player_aurora(INI_GAME)
     kor_encoding = "utf-16" if INI_KOR.lower().endswith(".kor") else "utf-8-sig"
     kor_sections = parse_kor_ini(INI_KOR, encoding=kor_encoding)
-    use_current_source_kor = INI_KOR.lower().endswith("zedternaltempered.kor")
     reborn_kor_sections = parse_kor_ini(INI_REBORN_KOR, encoding="utf-16")
     dk_skill_registry = parse_dk_skill_registry(INI_UPGRADES)
     wm_skill_registry = parse_wm_skill_registry(INI_UPGRADES)
@@ -1419,8 +1429,6 @@ def build():
         manual_roles = json.load(f)
     with open(MANUAL_SKILL_OVERRIDES, encoding="utf-8") as f:
         manual_skill_overrides = json.load(f)
-    with open(MANUAL_PERK_DESCS, encoding="utf-8") as f:
-        manual_perk_descs = json.load(f)
     with open(MANUAL_PERK_EXTRAS, encoding="utf-8") as f:
         manual_perk_extras = json.load(f)
     recent_changes = {}
@@ -1461,27 +1469,13 @@ def build():
         scaling_stats = [stat for group in placeholder_groups for stat in group]
         if key == "JohnWick" and not scaling_stats:
             scaling_stats = build_john_wick_passives()
-        filled_descriptions = list(raw_descs) if is_static else fill_percent_placeholders(raw_descs, placeholder_groups)
+        # The wiki's explanation text is an exact copy of the active Korean
+        # localization. Keep %x% placeholders and wording intact; INI values
+        # are displayed separately in the passive/stat sections.
+        filled_descriptions = list(raw_descs)
         static_perk_stats = build_static_perk_stats(key, static_bonus_values)
         if is_static and not scaling_stats:
             scaling_stats = static_perk_stats
-        if is_static and static_bonus_values:
-            bonus_index = 0
-            def replace_static_bonus(match):
-                nonlocal bonus_index
-                value = static_bonus_values.get(bonus_index)
-                bonus_index += 1
-                if value is None:
-                    return match.group(0)
-                # Percent descriptions encode the suffix as %% in Unreal
-                # localization strings; currency descriptions have no suffix.
-                if match.group(0).endswith("%%"):
-                    return f"{value:g}%"
-                return f"{value:g}"
-            filled_descriptions = [
-                re.sub(r"%x%%|%x", replace_static_bonus, text)
-                for text in filled_descriptions
-            ]
         if key == "Engineer":
             drone_rows = main_sections.get("ZTConfig_EngineerDrones", [])
             drone_stats = build_stat_entries(
@@ -1510,26 +1504,12 @@ def build():
                     stat["scaling"] = True
                 scaling_stats.extend(level_stats)
                 fixed_stats = remaining
-        filled_descriptions = reconcile_perk_descriptions(raw_descs, filled_descriptions, fixed_stats, placeholder_groups)
-        # Hand-authored replacements for lines the automatic reconciler
-        # cannot safely fix. These preserve the KOR prose and markup while
-        # correcting values against the active implementation. Vanguard is
-        # the one explicit current-source KOR repair: its source text still
-        # says the per-level values are private even though the perk class
-        # exposes them in PerkBonus. Keys are zero-based description indices.
-        for idx_str, text in manual_perk_descs.get(key, {}).items():
-            if use_current_source_kor and key != "Vanguard":
-                continue
-            i = int(idx_str)
-            if 0 <= i < len(filled_descriptions):
-                filled_descriptions[i] = text
         descriptions = [
             {"raw": d, "text": strip_font(d), "isCapstone": is_capstone_description(d)}
             for d in filled_descriptions
         ]
         perk_patch_note = "; ".join(patch_notes.get(f"DKUpgrade_Perk_{key}", []))
 
-        skill_notes = manual_verdicts.get("skillNotes", {}).get(key, {})
         perk_extras = manual_perk_extras.get(key, {})
         # Skills confirmed to exist in the perk's game code + KOR sections
         # but absent from the Config_SkillUpgrade registry (e.g. Gambit's
@@ -1554,44 +1534,12 @@ def build():
             skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
             override = manual_skill_overrides.get(short, {})
 
-            t1_entries, t2_entries = split_tiers(raw_values)
-            if "standardDesc" in override and (
-                not use_current_source_kor or not skor.get("StandardSkillUpgradeDescription")
-            ):
-                # Hand-authored from the ini values directly (KOR ini has no
-                # description at all for this skill) -- already accurate,
-                # skip the reconcile/fallback pipeline meant for KOR text.
-                std_raw, std_fixed = override["standardDesc"], False
-            else:
-                std_orig = skor.get("StandardSkillUpgradeDescription")
-                std_pre, std_entries = reconcile_fold_matches(std_orig, t1_entries)
-                std_pre, std_entries = reconcile_health_cost_text(std_pre, std_entries)
-                std_pre, std_entries = reconcile_stack_total_text(std_pre, std_entries)
-                std_raw, std_ok, std_fixed = reconcile_skill_text(std_pre, std_entries)
-                std_fixed = std_fixed or std_pre != std_orig
-                if not std_ok:
-                    fallback = build_ini_only_text(t1_entries)
-                    if fallback:
-                        std_raw, std_fixed = fallback, True
-            if "deluxeDesc" in override and (
-                not use_current_source_kor or not skor.get("DeluxeSkillUpgradeDescription")
-            ):
-                delx_raw, delx_fixed = override["deluxeDesc"], False
-            else:
-                delx_orig = skor.get("DeluxeSkillUpgradeDescription")
-                delx_pre, delx_entries = reconcile_fold_matches(delx_orig, t2_entries)
-                delx_pre, delx_entries = reconcile_health_cost_text(delx_pre, delx_entries)
-                delx_pre, delx_entries = reconcile_stack_total_text(delx_pre, delx_entries)
-                delx_raw, delx_ok, delx_fixed = reconcile_skill_text(delx_pre, delx_entries)
-                delx_fixed = delx_fixed or delx_pre != delx_orig
-                if not delx_ok:
-                    fallback = build_ini_only_text(t2_entries)
-                    if fallback:
-                        delx_raw, delx_fixed = fallback, True
-
+            # The localization file is the sole source for visible skill prose.
+            # Do not reconcile it with INI values or substitute manual text.
+            std_raw = skor.get("StandardSkillUpgradeDescription")
+            delx_raw = skor.get("DeluxeSkillUpgradeDescription")
+            std_fixed = delx_fixed = False
             deluxe_available = source_skill_has_deluxe(short)
-            if deluxe_available is False:
-                delx_raw, delx_fixed = None, False
 
             skills.append({
                 "key": short,
@@ -1602,14 +1550,14 @@ def build():
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
-                "note": skill_notes.get(short),
+                "note": None,
                 "isPatched": bool(skill_patch_note),
                 "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
                 "disabled": is_disabled,
                 "deluxeAvailable": deluxe_available,
                 "disabledNote": disabled_note,
-                "noData": not skor and not raw_values and not ("standardDesc" in override or "deluxeDesc" in override),
+                "noData": not std_raw and not delx_raw,
                 "icon": skill_icon_path(short),
             })
 
@@ -1617,6 +1565,10 @@ def build():
         verdict = manual_verdicts.get("advancedPerks", {}).get(key)
         is_patched = bool(perk_patch_note)
         role_desc = manual_roles.get(key, {})
+        kor_role = next(
+            (strip_font(d) for d in raw_descs if not is_capstone_description(d)),
+            strip_font(raw_descs[0]) if raw_descs else None,
+        )
 
         advanced_perks.append({
             "key": key,
@@ -1638,7 +1590,7 @@ def build():
                 "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 운영 INI를 읽습니다."
                 if key == "Engineer" else None
             ),
-            "role": role_desc.get("role"),
+            "role": kor_role,
             "summaryHtml": perk_extras.get("summaryHtml"),
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
@@ -1660,6 +1612,20 @@ def build():
     # ---- base perks (오퍼 / WM) ----
     base_perks = []
     for bkey, bdata in manual_base.items():
+        base_kor = (
+            ci_lookup(reborn_kor_sections, f"WMUpgrade_Perk_{bkey}")
+            or ci_lookup(kor_sections, f"DKWrapper_Perk_{bkey}")
+            or {}
+        )
+        base_raw_descs = base_kor.get("descriptions", [])
+        base_descriptions = [
+            {"raw": d, "text": strip_font(d), "isCapstone": is_capstone_description(d)}
+            for d in base_raw_descs
+        ]
+        base_kor_role = next(
+            (strip_font(d) for d in base_raw_descs if not is_capstone_description(d)),
+            strip_font(base_raw_descs[0]) if base_raw_descs else None,
+        )
         wrapper_kv = main_sections.get(f"DKWrapper_Perk_{bkey}", [])
         passive_stats = build_stat_entries([(k, v) for k, v in wrapper_kv if k != "MODEVERSION"], with_levels=True)
         if bkey == "Demolitionist":
@@ -1678,7 +1644,6 @@ def build():
         base_patch_note = "; ".join(patch_notes.get(f"DKWrapper_Perk_{bkey}", []))
         base_is_patched = bool(base_patch_note)
 
-        base_skill_notes = manual_verdicts.get("skillNotes", {}).get(bkey, {})
         base_skills = []
         for short, is_disabled, disabled_note in wm_skill_registry.get(bkey, []):
             skill_section = f"DKWrapper_Skill_{short}"
@@ -1695,33 +1660,10 @@ def build():
             skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
             override = manual_skill_overrides.get(short, {})
 
-            t1_entries, t2_entries = split_tiers(raw_values)
-            if "standardDesc" in override and not skor.get("StandardSkillUpgradeDescription"):
-                std_raw, std_fixed = override["standardDesc"], False
-            else:
-                std_orig = skor.get("StandardSkillUpgradeDescription")
-                std_pre, std_entries = reconcile_fold_matches(std_orig, t1_entries)
-                std_pre, std_entries = reconcile_health_cost_text(std_pre, std_entries)
-                std_pre, std_entries = reconcile_stack_total_text(std_pre, std_entries)
-                std_raw, std_ok, std_fixed = reconcile_skill_text(std_pre, std_entries)
-                std_fixed = std_fixed or std_pre != std_orig
-                if not std_ok:
-                    fallback = build_ini_only_text(t1_entries)
-                    if fallback:
-                        std_raw, std_fixed = fallback, True
-            if "deluxeDesc" in override and not skor.get("DeluxeSkillUpgradeDescription"):
-                delx_raw, delx_fixed = override["deluxeDesc"], False
-            else:
-                delx_orig = skor.get("DeluxeSkillUpgradeDescription")
-                delx_pre, delx_entries = reconcile_fold_matches(delx_orig, t2_entries)
-                delx_pre, delx_entries = reconcile_health_cost_text(delx_pre, delx_entries)
-                delx_pre, delx_entries = reconcile_stack_total_text(delx_pre, delx_entries)
-                delx_raw, delx_ok, delx_fixed = reconcile_skill_text(delx_pre, delx_entries)
-                delx_fixed = delx_fixed or delx_pre != delx_orig
-                if not delx_ok:
-                    fallback = build_ini_only_text(t2_entries)
-                    if fallback:
-                        delx_raw, delx_fixed = fallback, True
+            # Use the exact Standard/Deluxe text present in the Korean source.
+            std_raw = skor.get("StandardSkillUpgradeDescription")
+            delx_raw = skor.get("DeluxeSkillUpgradeDescription")
+            std_fixed = delx_fixed = False
 
             base_skills.append({
                 "key": short,
@@ -1732,13 +1674,13 @@ def build():
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
-                "note": base_skill_notes.get(short),
+                "note": None,
                 "isPatched": bool(skill_patch_note),
                 "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
                 "disabled": is_disabled,
                 "disabledNote": disabled_note,
-                "noData": not skor and not raw_values and not ("standardDesc" in override or "deluxeDesc" in override),
+                "noData": not std_raw and not delx_raw,
                 "icon": skill_icon_path(short),
             })
 
@@ -1746,9 +1688,11 @@ def build():
             "key": bkey,
             "name": bdata["name"],
             "grade": bdata.get("grade"),
-            "summary": bdata.get("summary"),
-            "role": bdata.get("role"),
+            "summary": None,
+            "role": base_kor_role,
             "endgame": bdata.get("endgame"),
+            "descriptions": base_descriptions,
+            "capstoneDescriptions": [d for d in base_descriptions if d["isCapstone"]],
             "passiveStats": passive_stats,
             "maxLevel": 20,
             "strengths": bdata.get("strengths", []),

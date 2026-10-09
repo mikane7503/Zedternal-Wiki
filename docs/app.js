@@ -696,7 +696,6 @@ function renderPerkSummarySection(perk) {
   return `
     <div class="section-title perk-section-title">1. 설명</div>
     <div class="perk-role-summary">${escapeHtml(perk.role || perk.summary || "설명이 등록되지 않았습니다.")}</div>
-    ${perk.summaryHtml ? `<div class="perk-explanation-detail">${perk.summaryHtml}</div>` : ""}
   `;
 }
 
@@ -732,7 +731,7 @@ function renderSkillsSection(skills) {
       <div class="skill-item-body">
         <h4>${escapeHtml(skill.name)} <span class="skill-key">(${escapeHtml(skill.key)})</span>${skill.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
         ${skill.disabled ? `<div class="disabled-banner">🚫 현재 인게임에서 선택할 수 없습니다.${skill.disabledNote ? ` (${escapeHtml(skill.disabledNote)})` : ""}</div>` : ""}
-        ${skill.noData ? '<div class="empty-state perk-empty">게임 설명과 수치 자료가 등록되지 않았습니다.</div>' : ""}
+        ${skill.noData ? '<div class="empty-state perk-empty">한국어 KOR 파일에 이 스킬의 설명이 없습니다.</div>' : ""}
         ${skill.standardDescRaw ? `<div class="std"><b>표준</b>${skill.standardDescRaw}</div>` : ""}
         ${skill.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${skill.deluxeDescRaw}</div>` : ""}
         ${skill.note ? `<div class="skillnote">${escapeHtml(skill.note)}</div>` : ""}
@@ -790,8 +789,9 @@ function renderFullInfoSection(perk, isBase = false) {
         ${fixedRows ? `<div class="full-info-subtitle">고정·조건부 수치 전체</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>항목</th><th>수치</th><th>적용</th></tr>${fixedRows}</table></div>` : ""}
         ${detailSkillRows ? `<div class="full-info-subtitle">스킬 설정 수치 (표준 / 디럭스)</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>스킬 / 항목</th><th>표준</th><th>디럭스</th></tr>${detailSkillRows}</table></div>` : ""}
         ${descriptions.length ? `<div class="full-info-subtitle">게임 내 퍼크 설명 원문</div>${descriptionHtml}` : ""}
+        ${perk.summaryHtml ? `<div class="full-info-subtitle">코드 동작 추가 정보</div><div class="perk-explanation-detail">${perk.summaryHtml}</div>` : ""}
         ${strengths}${weaknesses}${extraSections}
-        ${!passiveRows && !fixedRows && !detailSkillRows && !descriptions.length && !strengths && !weaknesses && !extraSections
+        ${!passiveRows && !fixedRows && !detailSkillRows && !descriptions.length && !perk.summaryHtml && !strengths && !weaknesses && !extraSections
           ? '<div class="empty-state perk-empty">현재 공개할 추가 수치가 없습니다.</div>' : ""}
       </div>
     </details>
