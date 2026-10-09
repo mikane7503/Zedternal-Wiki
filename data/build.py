@@ -17,9 +17,9 @@ from labels import translate_key, classify_unit_group, format_value_as
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Local working copies are fallbacks for contributors who do not have the
-# source checkout or game server mounted. The canonical Windows paths are
-# used automatically on the maintainer's machine and can be overridden with
-# ZEDTERNAL_SOURCE_DIR / ZEDTERNAL_OPERATIONS_DIR.
+# source checkout. Published perk/config data always comes from the source
+# snapshot used by the Workshop release; operating-server overrides are not
+# silently presented as subscriber defaults.
 SOURCE_DIR = os.environ.get(
     "ZEDTERNAL_SOURCE_DIR",
     r"C:\Users\yss19\Documents\Projects\zedternal-unlimited-main\ZedternalTempered",
@@ -35,9 +35,18 @@ def preferred_file(directory, filename, fallback):
     return candidate if os.path.isfile(candidate) else os.path.join(ROOT, fallback)
 
 
-INI_MAIN = preferred_file(OPERATIONS_DIR, "KFZedternalUnlimited.ini", "KFZedternalUnlimited.ini")
+def file_sha256(path):
+    import hashlib
+    digest = hashlib.sha256()
+    with open(path, "rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+INI_MAIN = preferred_file(SOURCE_DIR, "KFZedternalUnlimited.ini", "KFZedternalUnlimited.ini")
 INI_BALANCE = preferred_file(
-    OPERATIONS_DIR, "KFZedternalUnlimited_Balance.ini", "KFZedternalUnlimited_Balance.ini"
+    SOURCE_DIR, "KFZedternalUnlimited_Balance.ini", "KFZedternalUnlimited_Balance.ini"
 )
 INI_KOR = preferred_file(
     os.path.join(SOURCE_DIR, "Localization", "KOR"), "ZedternalTempered.kor", "ZedternalRBPerkpackage.KOR.ini"
@@ -48,7 +57,8 @@ INI_REBORN_KOR = preferred_file(
     "ZedternalReborn.kor.ini",
 )
 INI_UPGRADES = preferred_file(SOURCE_DIR, "KFZedternalReborn_Upgrades.ini", "KFZedternalReborn_Upgrades.ini")
-INI_GAME = preferred_file(OPERATIONS_DIR, "KFZedternalReborn_Game.ini", "KFZedternalReborn_Game.ini")
+INI_GAME = preferred_file(SOURCE_DIR, "KFZedternalReborn_Game.ini", "KFZedternalReborn_Game.ini")
+INI_OPERATIONS_GAME = preferred_file(OPERATIONS_DIR, "KFZedternalReborn_Game.ini", "KFZedternalReborn_Game.ini")
 MANUAL_BASE = os.path.join(ROOT, "data", "manual_base_perks.json")
 MANUAL_VERDICTS = os.path.join(ROOT, "data", "manual_verdicts.json")
 MANUAL_ROLES = os.path.join(ROOT, "data", "manual_role_descriptions.json")
@@ -62,21 +72,40 @@ PROGRESSION_CATALOG = os.path.join(SOURCE_CLASS_DIR, "ZTPerkProgressionCatalog.u
 
 
 def parse_player_aurora(path):
-    """Return the live server's ordered damage multipliers for the aurora UI."""
+    """Return configured damage multipliers in stable first-seen order."""
     given, taken = [], []
+    seen_given = {}
+    seen_taken = {}
     holding_melee = None
     value_re = re.compile(r'Multiplier=([+-]?[\d.]+)')
+    type_re = re.compile(r'DamageType="([^"]+)"')
     with open(path, encoding="utf-8-sig") as f:
         for raw in f:
             line = raw.strip()
             if line.startswith("Player_DamageGiven="):
                 match = value_re.search(line)
-                if match:
-                    given.append(float(match.group(1)))
+                damage_type = type_re.search(line)
+                if match and damage_type:
+                    value = float(match.group(1))
+                    key = damage_type.group(1).lower()
+                    if key in seen_given:
+                        if seen_given[key] != value:
+                            raise ValueError(f"Conflicting duplicate Player_DamageGiven for {damage_type.group(1)} in {path}")
+                        continue
+                    seen_given[key] = value
+                    given.append(value)
             elif line.startswith("Player_DamageTaken="):
                 match = value_re.search(line)
-                if match:
-                    taken.append(float(match.group(1)))
+                damage_type = type_re.search(line)
+                if match and damage_type:
+                    value = float(match.group(1))
+                    key = damage_type.group(1).lower()
+                    if key in seen_taken:
+                        if seen_taken[key] != value:
+                            raise ValueError(f"Conflicting duplicate Player_DamageTaken for {damage_type.group(1)} in {path}")
+                        continue
+                    seen_taken[key] = value
+                    taken.append(value)
             elif line.startswith("Player_DamageTakenMultiplierWhileHoldingMelee="):
                 match = re.search(r'HOE=([+-]?[\d.]+)', line)
                 if match:
@@ -1393,11 +1422,11 @@ def reconcile_perk_descriptions(raw_descriptions, filled_descriptions, fixed_sta
 
 
 def build():
-    print(f"[build] 운영 수치: {INI_MAIN}")
-    print(f"[build] 추가 밸런스 수치: {INI_BALANCE}")
+    print(f"[build] 공개 빌드 기본 수치: {INI_MAIN}")
+    print(f"[build] 추가 밸런스 기본 수치: {INI_BALANCE}")
     print(f"[build] 소스 스킬 배정: {INI_UPGRADES}")
     print(f"[build] 소스 한국어: {INI_KOR}")
-    print(f"[build] 피해 오로라: {INI_GAME}")
+    print(f"[build] 공개 빌드 피해 오로라: {INI_GAME}")
     main_sections = merge_ini_sections(
         parse_ini_generic(INI_MAIN),
         parse_ini_generic(INI_BALANCE) if os.path.isfile(INI_BALANCE) else {},
@@ -1585,9 +1614,9 @@ def build():
             "valueSourceNote": (
                 "레벨별 효과는 현재 ZTUpgrade_Perk_JohnWick 클래스 구현을 기준으로 표시합니다."
                 if key == "JohnWick" else
-                "현재 운영 INI에 별도 수치가 없어 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다."
+                "공개 빌드에 적용된 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다."
                 if key in {"Capitalist", "Goliath", "Vanguard"} else
-                "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 운영 INI를 읽습니다."
+                "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 공개 빌드의 기본 INI를 읽습니다."
                 if key == "Engineer" else None
             ),
             "role": kor_role,
@@ -1715,6 +1744,17 @@ def build():
             "advancedPerkCount": len(advanced_perks),
             "basePerkCount": len(base_perks),
             "totalSkills": sum(p["skillCount"] for p in advanced_perks) + sum(p["skillCount"] for p in base_perks),
+            "release": {
+                "version": os.environ.get("ZEDTERNAL_RELEASE_VERSION", "미연동"),
+                "workshopId": os.environ.get("ZEDTERNAL_WORKSHOP_ID", "3809067086"),
+                "publishedUtc": os.environ.get("ZEDTERNAL_PUBLISHED_UTC", ""),
+                "workshopUrl": os.environ.get(
+                    "ZEDTERNAL_WORKSHOP_URL",
+                    "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
+                ),
+                "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
+                "serverGameConfigDiffers": file_sha256(INI_GAME) != file_sha256(INI_OPERATIONS_GAME),
+            },
         },
     }
     data = normalize_terminology(data)

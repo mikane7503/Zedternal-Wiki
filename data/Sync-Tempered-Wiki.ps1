@@ -128,7 +128,7 @@ try {
     $staged = @(& git diff --cached --name-only)
     if ($LASTEXITCODE -ne 0) { throw 'Could not inspect staged wiki changes.' }
     if ($staged.Count -gt 0) { throw 'Refusing to publish wiki with pre-staged changes; review/commit them first.' }
-    & git add -- AGENTS.md data/release-manifest.json data/Sync-Tempered-Wiki.ps1 docs/data/perks.json docs/index.html docs/app.js
+    & git add -- data/build.py data/release-manifest.json data/Sync-Tempered-Wiki.ps1 docs/data/perks.json docs/index.html docs/app.js
     if ($LASTEXITCODE -ne 0) { throw 'Could not stage generated wiki files.' }
     & git diff --cached --check
     if ($LASTEXITCODE -ne 0) { throw 'Wiki diff has whitespace errors.' }
@@ -151,7 +151,8 @@ try {
         $deployment = $null
         for ($attempt = 0; $attempt -lt 6; $attempt++) {
             $runs = Invoke-RestMethod -Uri $workflowUrl -Headers $headers -TimeoutSec 20
-            $deployment = @($runs.workflow_runs | Where-Object { $_.head_sha -eq $commit } | Select-Object -First 1)[0]
+            $matchingRuns = @($runs.workflow_runs | Where-Object { $_.head_sha -eq $commit } | Select-Object -First 1)
+            if ($matchingRuns.Count -gt 0) { $deployment = $matchingRuns[0] }
             if ($null -ne $deployment -and $deployment.status -eq 'completed') { break }
             Start-Sleep -Seconds 10
         }
