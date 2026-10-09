@@ -44,6 +44,22 @@ def file_sha256(path):
     return digest.hexdigest()
 
 
+def current_release_metadata():
+    manifest_path = os.path.join(ROOT, "data", "release-manifest.json")
+    manifest = {}
+    if os.path.isfile(manifest_path):
+        with open(manifest_path, encoding="utf-8-sig") as stream:
+            manifest = json.load(stream)
+    return {
+        "version": os.environ.get("ZEDTERNAL_RELEASE_VERSION") or manifest.get("version", "미연동"),
+        "workshopId": os.environ.get("ZEDTERNAL_WORKSHOP_ID") or manifest.get("workshopId", "3809067086"),
+        "publishedUtc": os.environ.get("ZEDTERNAL_PUBLISHED_UTC") or manifest.get("publishedUtc", ""),
+        "workshopUrl": os.environ.get("ZEDTERNAL_WORKSHOP_URL") or manifest.get(
+            "workshopUrl", "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086"
+        ),
+    }
+
+
 INI_MAIN = preferred_file(SOURCE_DIR, "KFZedternalUnlimited.ini", "KFZedternalUnlimited.ini")
 INI_BALANCE = preferred_file(
     SOURCE_DIR, "KFZedternalUnlimited_Balance.ini", "KFZedternalUnlimited_Balance.ini"
@@ -1736,6 +1752,11 @@ def build():
             "icon": f"icons/{bkey.lower()}.png",
         })
 
+    release_metadata = current_release_metadata()
+    release_metadata.update({
+        "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
+        "serverGameConfigDiffers": file_sha256(INI_GAME) != file_sha256(INI_OPERATIONS_GAME),
+    })
     data = {
         "basePerks": base_perks,
         "advancedPerks": advanced_perks,
@@ -1744,17 +1765,7 @@ def build():
             "advancedPerkCount": len(advanced_perks),
             "basePerkCount": len(base_perks),
             "totalSkills": sum(p["skillCount"] for p in advanced_perks) + sum(p["skillCount"] for p in base_perks),
-            "release": {
-                "version": os.environ.get("ZEDTERNAL_RELEASE_VERSION", "미연동"),
-                "workshopId": os.environ.get("ZEDTERNAL_WORKSHOP_ID", "3809067086"),
-                "publishedUtc": os.environ.get("ZEDTERNAL_PUBLISHED_UTC", ""),
-                "workshopUrl": os.environ.get(
-                    "ZEDTERNAL_WORKSHOP_URL",
-                    "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-                ),
-                "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
-                "serverGameConfigDiffers": file_sha256(INI_GAME) != file_sha256(INI_OPERATIONS_GAME),
-            },
+            "release": release_metadata,
         },
     }
     data = normalize_terminology(data)
