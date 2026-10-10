@@ -14,27 +14,15 @@
     ]
   },
   "Gambit": {
-    "skills": [
-      "RaiseTheStakes",
-      "HotStreak",
-      "TheHouseAlwaysWins",
-      "CardShark",
-      "WildCard",
-      "DoubleOrNothing",
-      "RoyalFlush",
-      "AceUpYourSleeve",
-      "Bluff",
-      "HouseEdge"
-    ],
     "extraSections": [
       {
         "title": "갬빗 시스템 규칙",
         "note": "모든 수치는 게임 내부에 고정된 값으로, 서버 설정과 무관하게 항상 동일합니다.",
-        "html": "<div class=\"desc-line\">매 웨이브 시작 시 갬빗 1개가 무작위로 발동됩니다. 추첨 가중치는 <font color=\"#c8c8c8\">일반 100</font> : <font color=\"#50a0ff\">희귀 50</font> : <font color=\"#b450ff\">전설 25</font>입니다.</div><div class=\"desc-line\">등급 해금 — <font color=\"#c8c8c8\">일반</font>: 항상 / <font color=\"#50a0ff\">희귀</font>: 퍼크 Lv10부터 / <font color=\"#b450ff\">전설</font>: 퍼크 Lv20부터 / <font color=\"#ffc832\">신화</font>: 퍼크 Lv10부터, 매 추첨마다 별도 <font color=\"#FFFFFF\">1%</font> 확률 판정에 성공하면 일반 추첨을 무시하고 등장합니다.</div><div class=\"desc-line\">목표치 = 기본 목표 + (웨이브 배율 × 현재 웨이브 번호), 최소 1. 보상 = 기본 보상 × <font color=\"#77d914\">퍼크 레벨</font>.</div><div class=\"desc-line\"><font color=\"#FF6666\">피해량</font>·<font color=\"#77d914\">이동 속도</font> 보상은 게임이 끝날 때까지 영구 누적되고(무기 기본 피해/기본 이동 속도 기준 가산), <font color=\"#FFD700\">도쉬</font>는 즉시 지급됩니다.</div><div class=\"desc-line\">처치형 갬빗은 목표 달성 즉시 완료가 확정되며, '강철 피부'·'무적'처럼 웨이브 내내 유지해야 하는 갬빗은 웨이브 종료 시 최종 판정됩니다.</div><div class=\"desc-line\">대형 좀비 판정: 스크레이크, 플레시파운드(미니 포함), 보스. 진행도와 누적 보상은 HUD에 실시간 표시됩니다.</div>"
+        "html": "<div class=\"desc-line\"><b>분류·등록:</b> 복합 조건으로 해금되는 히든 퍼크입니다. 자본가 5레벨과 건슬링거 10레벨이 필요하며, 최대 레벨은 20입니다. 이 퍼크 자체에 연결된 활성 스킬은 <font color=\"#77d914\">0개</font>입니다. 갬빗 보조 스킬 10종은 별도 퍼크인 딜러(코드 클래스명 Gambler)에 등록되어 있고, 갬빗 헬퍼가 그 효과를 조회합니다.</div><div class=\"desc-line\">매 웨이브 시작 때 서버가 챌린지 하나를 뽑습니다. 일반은 각 100 가중치, 희귀는 각 50(레벨 10 해금), 전설은 각 25(레벨 20 해금)로 가중 추첨합니다. 레벨 10부터는 추첨마다 별도로 <font color=\"#FFFFFF\">1%</font> 신화 판정을 먼저 하며, 성공하면 신화 2종 중 하나를 뽑습니다.</div><div class=\"desc-line\">기본 목표는 <font color=\"#77d914\">기본 목표 + (웨이브당 증가량 × 현재 웨이브)</font>입니다. 표의 목표는 스킬 보정 전 값입니다. Raise the Stakes는 표준에서 목표 ×1.5, 디럭스에서 ×1.25로 높이고, House Always Wins는 실패 중첩 하나마다 목표를 20% 줄입니다(최소 목표 1).</div><div class=\"desc-line\">완료 보상은 기본 보상 × 갬빗 레벨입니다. 코드상 보상 종류는 <font color=\"#66CCFF\">피해</font>, <font color=\"#FFD700\">도쉬</font>, <font color=\"#66CCFF\">이동 속도</font>이며, 피해·이동 보너스는 현재 게임 동안 누적되고 도쉬는 즉시 지급됩니다. 조건 중 피해 상한·무피해·명중률은 웨이브 종료 시 판정하고, 처치 목표는 달성 즉시 완료됩니다. 진행 정보는 서버 상태를 소유 클라이언트 HUD로 복제합니다.</div>"
       },
       {
         "title": "갬빗 목록 (14종)",
-        "note": "목표치의 W = 현재 웨이브 번호. 보상의 ×L = 퍼크 레벨 배율 (Lv20 기준 값 병기).",
+        "note": "W = 현재 웨이브 번호. 표의 목표치는 기본 목표 + 웨이브 증가량 × W로 계산하며 Raise the Stakes/House Always Wins 보정 전 값입니다. 보상의 ×L = 갬빗 레벨 배율 (Lv20 기준 값 병기).",
         "html": "<table class=\"stat-table\"><tr><th>갬빗</th><th>등급</th><th>조건</th><th>보상 (퍼크 레벨 ×L)</th></tr><tr><td><font color=\"#c8c8c8\">명사수</font> (Marksman)</td><td><font color=\"#c8c8c8\">일반</font></td><td>헤드샷으로 5+W마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#c8c8c8\">처치 수</font> (Body Count)</td><td><font color=\"#c8c8c8\">일반</font></td><td>좀비 10+3W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">강철 피부</font> (Iron Skin)</td><td><font color=\"#c8c8c8\">일반</font></td><td>받는 피해 150+30W 이하</td><td>이동 속도 +0.25%×L (Lv20 +5%)</td></tr><tr><td><font color=\"#c8c8c8\">전격전</font> (Blitz)</td><td><font color=\"#c8c8c8\">일반</font></td><td>첫 60초 안에 좀비 5+W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">대물 사냥</font> (Big Game)</td><td><font color=\"#c8c8c8\">일반</font></td><td>대형 좀비 1마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">완벽주의자</font> (Perfectionist)</td><td><font color=\"#50a0ff\">희귀</font></td><td>헤드샷 비율 70%+ (최소 10+W 처치)</td><td>피해 +1%×L (Lv20 +20%)</td></tr><tr><td><font color=\"#50a0ff\">무적</font> (Untouchable)</td><td><font color=\"#50a0ff\">희귀</font></td><td>웨이브 동안 피해 받지 않기</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">연사</font> (Rapid Fire)</td><td><font color=\"#50a0ff\">희귀</font></td><td>8초 이내에 5마리 처치</td><td>피해 +1%×L + 도쉬 100×L</td></tr><tr><td><font color=\"#50a0ff\">무법자</font> (Desperado)</td><td><font color=\"#50a0ff\">희귀</font></td><td>체력 30% 미만일 때 좀비 3+W마리 처치</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#b450ff\">명중자</font> (Deadeye)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷으로 대형 좀비 3마리 처치</td><td>피해 +1.5%×L (Lv20 +30%)</td></tr><tr><td><font color=\"#b450ff\">완벽</font> (Flawless)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷 비율 90%+, 최소 15+W 처치, 받은 피해 50 미만</td><td>피해 +1.5%×L + 이동 속도 +0.75%×L</td></tr><tr><td><font color=\"#b450ff\">인내</font> (Endurance)</td><td><font color=\"#b450ff\">전설</font></td><td>재장전 3회 이내로 좀비 15+2W마리 처치</td><td>도쉬 200×L (Lv20 4,000)</td></tr><tr><td><font color=\"#ffc832\">불가능한 확률</font> (Impossible Odds)</td><td><font color=\"#ffc832\">신화</font></td><td>보조무기로 대형 좀비 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr><tr><td><font color=\"#ffc832\">한 발의 탄환</font> (One Bullet)</td><td><font color=\"#ffc832\">신화</font></td><td>재장전 없이 좀비 5마리 연속 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr></table>"
       }
     ]
@@ -114,6 +102,87 @@
         "title": "존 윅 스킬의 실제 효과",
         "note": "표준·디럭스 제공 여부는 각 스킬 클래스의 bHasDeluxe와 Bonus 값을 사용했습니다. 피해 배율은 해당 Gunslinger 무기의 적중 부위와 거리 조건을 확인합니다.",
         "html": "<table class=\"stat-table compact-stat-table\"><tr><th>스킬</th><th>실제 효과</th><th>표준 / 디럭스</th></tr><tr><td>기본에 집중하기</td><td>Gunslinger 무기 몸통 피해 ×0.30, 헤드샷 피해 ×1.20</td><td>표준만</td></tr><tr><td>뉴메타로의 도전</td><td>Gunslinger 무기 헤드샷 피해 ×0.30, 몸통 피해 ×2.00</td><td>표준만</td></tr><tr><td>존 윅의 매의 눈</td><td>Gunslinger 권총으로 15m 이상 거리에서 헤드샷 시 피해 ×2.00</td><td>표준만</td></tr><tr><td>대용량 탄창</td><td>Gunslinger 무기 탄창 용량 증가</td><td>+10% / +20%</td></tr><tr><td>비상 탄약고</td><td>Gunslinger 무기 예비 탄약 증가</td><td>+20% / +40%</td></tr><tr><td>맞춤형 무기</td><td>Gunslinger 무기 반동 감소</td><td>-15% / -25%</td></tr><tr><td>스택 보정</td><td>Rack ’em Up 첫 5스택에 스택당 피해 보너스 +1%p</td><td>표준만</td></tr><tr><td>완벽주의자</td><td>Rack ’em Up 누적 보너스 2배, 헤드샷 실패 시 스택 초기화</td><td>표준만</td></tr></table><div class=\"desc-line\">두 피해 집중 스킬을 함께 장착하면 효과는 곱연산됩니다: 헤드샷은 ×0.36, 몸통 사격은 ×0.60입니다. 모든 효과는 해당 스킬과 John Wick 퍼크를 실제로 구매했을 때 적용됩니다.</div>"
+      }
+    ]
+  },
+  "Bulwark": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 불워크",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 버서커 <font color=\"#77d914\">5레벨</font>. 최대 레벨은 <font color=\"#77d914\">20</font>이며, 별도의 10/20레벨 캡스톤은 없습니다.</div><div class=\"desc-line\">패시브는 퍼크 레벨에 따라 버서커 무기 피해 <font color=\"#77d914\">+2%/레벨</font>, 최대 체력 <font color=\"#77d914\">+10%/레벨</font>을 적용합니다. 피해 보너스는 버서커 무기/피해 유형 판정에만 적용됩니다.</div><div class=\"desc-line\">활성 스킬은 <font color=\"#77d914\">10개</font>입니다. 각각 특정 제드 계열(스토커, 크롤러, 허스크, DAR, 고어패스트, 클롯, 사이렌, 스크레이크, 플레시파운드, 블로트)로부터 받는 피해를 줄입니다. 스킬이 지정한 공격자 종류에만 적용되며 일반 피해 저항과는 별도입니다.</div><div class=\"desc-line\">피해·체력 패시브는 서버/클라이언트의 공용 퍼크 스탯 경로에서 반영되고, 실제 적용 표본은 <font color=\"#77d914\">[ZT_BULWARK]</font> 로그로 확인합니다.</div>"
+      }
+    ]
+  },
+  "Goliath": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 골리앗",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 버서커 <font color=\"#77d914\">5레벨</font>. 불워크와 같은 레벨에서 함께 해금되며 최대 레벨은 <font color=\"#77d914\">20</font>입니다.</div><div class=\"desc-line\">버서커 무기 피해는 레벨당 <font color=\"#77d914\">+2%</font>입니다. 최대 방어구는 기본 방어구의 레벨당 <font color=\"#77d914\">20%</font>만큼 증가합니다. 계산식은 <font color=\"#77d914\">반올림(기본 방어구 × 0.20 × 레벨)</font>이며, 기본 방어구 100 기준 20레벨에서 +400 AP입니다.</div><div class=\"desc-line\">활성 스킬은 <font color=\"#77d914\">6개</font>입니다. 근접(타격·관통·참격 및 대형 제드 돌진 충격), 화염, 음파, 폭발, 독성, 탄도 피해를 각각 줄입니다. 탄도 스킬에는 EDAR 레이저 사격이 포함됩니다. 표준/디럭스는 각각 10%/20% 감소입니다.</div><div class=\"desc-line\">저항은 피해 처리 중 해당 타입에만 적용됩니다. 퍼크는 피해와 방어구를 서버·클라이언트 공용 업그레이드 콜백으로 계산하고, 제한 로그 <font color=\"#77d914\">[ZT_GOLIATH]</font>와 전투 감사 로그로 확인합니다.</div>"
+      }
+    ]
+  },
+  "Riot": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 폭동",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 버서커 <font color=\"#77d914\">10레벨</font>. 최대 레벨은 <font color=\"#77d914\">20</font>입니다.</div><div class=\"desc-line\">기본 패시브는 근접 피해 <font color=\"#77d914\">+1.25%/레벨</font>, 피해 저항 <font color=\"#77d914\">+0.4%/레벨</font>, 공격 속도 <font color=\"#77d914\">+0.75%/레벨</font>입니다. 주변 적 보너스는 10레벨부터 반경 <font color=\"#77d914\">2.5m</font>, 최대 <font color=\"#77d914\">5마리</font>를 셉니다. 적마다 근접 피해와 저항이 각각 +1% 추가됩니다.</div><div class=\"desc-line\">20레벨 폭동 진압은 주변 적 3마리부터 넘어짐 면역, 5마리부터 이동 속도 +15%와 공격 속도 +10%를 부여합니다. 적이 범위를 떠난 뒤 보너스는 <font color=\"#77d914\">3초</font> 유지됩니다.</div><div class=\"desc-line\">서버 권한 헬퍼가 근처 적 수와 유지 시간을 추적합니다. 9개 활성 스킬과 퍼크 패시브는 서로 별도 효과이며, 전직 해금 규칙은 업그레이드 규칙 목록을 따릅니다. 받는 피해 감소 표본은 공용 <font color=\"#77d914\">[ZT_DAMAGE_REDUCTION]</font> 로그에서 perk=Riot으로 구분합니다. 군중 유지 상태 자체에는 별도 반복 로그를 추가하지 않았습니다.</div>"
+      }
+    ]
+  },
+  "Voodoo": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 부두교",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 버서커 <font color=\"#77d914\">15레벨</font>. 퍼크 레벨당 최대 체력과 최대 방어구가 각각 <font color=\"#77d914\">5%</font> 감소하며 각 감소는 <font color=\"#77d914\">50%</font>에서 제한됩니다. 모든 무기 피해는 레벨당 <font color=\"#77d914\">5%</font> 증가합니다.</div><div class=\"desc-line\">세 패시브는 무기 종류 제한이 없는 플레이어 스탯입니다. 활성 스킬은 <font color=\"#77d914\">9개</font>이며, 각 스킬은 체력·치유량 등 대가와 공격/유틸리티 효과를 맞바꿉니다. 표준과 디럭스 수치는 해당 스킬 설명에 표시된 값이 기준입니다.</div><div class=\"desc-line\">스킬 구매 이후 퍼크 레벨을 바꾸거나 사망해도 패시브 값은 현재 레벨을 기준으로 다시 계산됩니다. 별도 웨이브 지속 타이머나 고유 캡스톤은 없습니다.</div>"
+      }
+    ]
+  },
+  "Diablo": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 디아블로",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 버서커 <font color=\"#77d914\">20레벨</font>. 레벨당 강공격 피해 +2%, 대형 제드·보스에게 가하는 근접 피해 +3%가 적용됩니다.</div><div class=\"desc-line\">서버 헬퍼가 피해를 누적합니다. 10레벨부터 매 <font color=\"#77d914\">60초</font>마다 발동하며, 발동 시점 직전 구간에 가한 피해의 <font color=\"#77d914\">20%</font>를 반경 <font color=\"#77d914\">2m</font> 내 각 적에게 폭발 피해로 전달합니다. 20레벨에서는 같은 발동을 중복하지 않고 전달 비율을 <font color=\"#77d914\">50%</font>로 대체합니다.</div><div class=\"desc-line\">데스웨이브 자체 피해는 재누적에서 제외됩니다. 쿨다운은 공용 상태 패널에 표시되며, 활성 스킬은 <font color=\"#77d914\">10개</font>입니다. <font color=\"#77d914\">[ZT_DIABLO]</font> 피해 감사 로그와 서버 발동 로그로 확인합니다.</div>"
+      }
+    ]
+  },
+  "SpecialAgent": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 스페츠나츠",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 코만도 <font color=\"#77d914\">5레벨</font>. 코만도·샤프슈터·SWAT 무기에 한정해 피해 +1.5%/레벨, 반동 -1%/레벨, 재장전 속도 +1%/레벨을 적용합니다. 다른 무기는 영향을 받지 않습니다.</div><div class=\"desc-line\">10레벨 처형은 클롯 계열(클롯·시스트·슬래셔·알파 클롯), 20레벨 처형은 폭도 대상입니다. 지정된 무기/피해 유형으로 명중해야 하며, 보스·비대상 제드에는 적용하지 않습니다. 대상의 남은 체력보다 큰 피해를 서버 판정에 넣어 한 번의 유효 타격으로 처치합니다.</div><div class=\"desc-line\">활성 스킬은 <font color=\"#77d914\">10개</font>이며 스킬 효과도 해당 세 무기 계열로 제한됩니다. 무기 분류와 처형 적용은 <font color=\"#77d914\">[ZT_SPETZNAZ]</font> 로그로 확인합니다.</div>"
+      }
+    ]
+  },
+  "Warlord": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 워로드",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 코만도 <font color=\"#77d914\">10레벨</font>. 퍼크 패시브는 소총 분류에 피해, 헤드샷 피해, 재장전, 반동, 무기 전환, 탄약 보너스를 적용합니다. 수류탄 용량은 5레벨마다 +1입니다.</div><div class=\"desc-line\">무기 분류는 코만도 무기 태그를 우선 사용하고, 그 외에는 클래스 경로의 Rifle 표기 등을 검사합니다. 활성 스킬은 <font color=\"#77d914\">10개</font>이며 소총 한정 추가 피해·관통, 제드타임 연장, 표식, 무탄약 발동, 억제 사격 효과 등을 제공합니다.</div><div class=\"desc-line\">심층 매장량은 코만도/샤프슈터 무기의 탄창 용량과 주 탄약만 증가시킵니다. 보조 탄약에는 예비 탄약 증가가 적용되지 않습니다. 보너스 수치는 각 스킬의 표준/디럭스 설명과 설정 기본값을 따릅니다.</div>"
+      }
+    ]
+  },
+  "Agony": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 에고니",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\">해금: 코만도 <font color=\"#77d914\">20레벨</font>. ZED 타임 중 레벨당 피해 +2%가 적용되며, 10레벨 캡스톤에서는 레벨별 값을 따로 더하지 않고 총 피해 보너스를 +50%로 대체합니다. ZED 타임 이동 속도는 실시간 이동을 사용합니다.</div><div class=\"desc-line\">20레벨부터 서버가 확인한 ZED 타임 처치마다 남은 ZED 타임을 <font color=\"#77d914\">2초</font> 연장합니다. 기존 제한형 연장 경로 대신 이 처치 처리가 먼저 반영되어 3초 고정 초기화 등으로 잘리지 않게 합니다.</div><div class=\"desc-line\">활성 스킬은 <font color=\"#77d914\">10개</font>이며 ZED 타임 조건을 쓰는 효과는 해당 상태에서만 발동합니다. 고유 헬퍼는 소유자별로 생성·정리되고 사망/퍼크 변경 시 제거됩니다.</div>"
+      }
+    ]
+  },
+  "Metronome": {
+    "extraSections": [
+      {
+        "title": "코드 기준 상세 — 메트로놈 (히든 퍼크)",
+        "note": "현재 ZedternalTempered 코드·설정 기본값 기준. 활성 등록된 스킬만 아래 목록에 표시합니다.",
+        "html": "<div class=\"desc-line\"><b>분류·해금:</b> 코만도·샤프슈터·건슬링거가 각각 <font color=\"#77d914\">5레벨</font>이어야 열리는 히든 퍼크입니다. 최대 레벨 <font color=\"#77d914\">20</font>, 활성 스킬 등록은 <font color=\"#77d914\">0개</font>입니다. 각 웨이브 시작 때 ASSAULT부터 시작하며, 위상은 웨이브 중에만 작동하고 상점 시간에는 멈춥니다.</div><div class=\"desc-line\"><b>위상 주기:</b> 각 위상은 <font color=\"#77d914\">20초</font> 지속됩니다. ASSAULT는 레벨당 피해 +1.5%·관통력 +1.25%이며 헤드샷 처치로 동기화합니다. TEMPO는 재장전 +1%·연사 +1%이며 직전 처치 후 3초 이내 추가 처치가 조건입니다. MOMENTUM은 이동 속도 +0.75%·무기 전환 +1.5%이며 속도 50 UU/s 초과 중 처치가 조건입니다. BASTION은 5m 이내 피해 +1%/레벨, 처치마다 1 HP, 받는 피해 10% 감소이며 5m 이내 처치로 동기화합니다.</div><div class=\"desc-line\"><b>영구 중첩:</b> 위상 전환 시 해당 위상에서 동기화 처치가 <font color=\"#77d914\">5회 이상</font>이면 영구 <font color=\"#77d914\">+0.25%</font> 중첩 하나를 받습니다. 제한 없이 쌓입니다. 코드상 중첩은 ASSAULT 피해, TEMPO 재장전, MOMENTUM 이동 속도, BASTION 피해 경로에 적용됩니다. BASTION의 누적 피해 중첩은 일반 위상 피해와 달리 5m 조건문 바깥에서 더해집니다. 관통력·연사 속도·무기 전환 속도에는 이 영구 중첩이 적용되지 않습니다.</div><div class=\"desc-line\"><b>레벨 10 — 조화:</b> 매 위상 전환 때 이전·현재 위상이 <font color=\"#77d914\">2초</font> 겹칩니다. 전환하는 위상에서 동기화에 성공하면 겹침은 <font color=\"#77d914\">4초</font>입니다. 동기화 성공은 전환 시점까지 위상 조건 처치가 5회 이상인지 판정합니다.</div><div class=\"desc-line\"><b>레벨 20 — 크레센도:</b> 한 사이클의 네 위상 모두가 각각 5회 이상 동기화 처치를 달성하면 다음 ASSAULT 진입 시 전 위상 보너스를 <font color=\"#77d914\">5초</font> 함께 활성화합니다. 새 웨이브는 ASSAULT로 초기화되지만 이미 발동한 크레센도와 영구 중첩은 웨이브 경계에서 유지됩니다.</div>"
       }
     ]
   }

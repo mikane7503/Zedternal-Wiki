@@ -685,7 +685,7 @@ function renderAdvDetail(key) {
   container.innerHTML = `
     ${backLink}
     <div class="detail-header">
-      <img class="icon-img lg" src="${p.icon}" alt="" onerror="this.style.display='none'">
+      <img class="icon-img lg" src="${p.icon}" data-rank-icons="${escapeHtml(JSON.stringify(p.rankIcons || []))}" alt="" onerror="this.style.display='none'">
       <div class="detail-titles">
         <h2>${escapeHtml(p.name)}</h2>
         <div class="subtitle">${subtitle}</div>
@@ -729,7 +729,12 @@ function renderPassiveSection(perk) {
 function renderCapstoneSection(perk) {
   const descriptions = perk.capstoneDescriptions || (perk.descriptions || []).filter(description => description.isCapstone);
   const fixedCapstones = (perk.fixedStats || []).filter(stat => stat.capstoneLevel);
-  if (!descriptions.length && !fixedCapstones.length) return "";
+  if (!descriptions.length && !fixedCapstones.length) {
+    return perk.noCapstoneNote ? `
+      <div class="section-title perk-section-title">3. 캡스톤</div>
+      <div class="empty-state perk-empty">${escapeHtml(perk.noCapstoneNote)}</div>
+    ` : "";
+  }
   const descriptionRows = descriptions.map(description =>
     `<div class="desc-line capstone">${description.raw || escapeHtml(description.text || "")}</div>`
   ).join("");
@@ -839,6 +844,14 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
 function onLevelSlide(e) {
   const lvl = Number(e.target.value);
   document.getElementById("lvlValLabel").textContent = `Lv ${lvl}`;
+  const rankIcon = document.querySelector("#mainArea img[data-rank-icons]");
+  if (rankIcon) {
+    try {
+      const icons = JSON.parse(rankIcon.dataset.rankIcons || "[]");
+      const tier = lvl >= 20 ? 4 : lvl >= 15 ? 3 : lvl >= 10 ? 2 : lvl >= 5 ? 1 : 0;
+      if (icons[tier]) rankIcon.src = icons[tier];
+    } catch (_) {}
+  }
   document.querySelectorAll("#mainArea table tr[data-perlevel]").forEach(row => {
     const perLevel = Number(row.dataset.perlevel);
     row.querySelector(".live-val").textContent = formatByUnit(perLevel * lvl, row.dataset.unit);

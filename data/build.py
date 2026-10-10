@@ -165,10 +165,27 @@ PERK_ICON_FALLBACKS = {
     "Diablo": "icons/berserker.png",
     "JekyllHyde": "icons/shapeshifter.png",
     "Capitalist": "icons/support.png",
+    # The perk's code name remains SpecialAgent, while the shipped perk and
+    # localization name/icon were renamed to Spetsnaz.
+    "SpecialAgent": "icons/spetsnaz.png",
 }
 
 
+def skill_allows_deluxe(short):
+    class_path = next((
+        os.path.join(SOURCE_CLASS_DIR, f"{prefix}{short}.uc")
+        for prefix in ("ZUTUpgrade_Skill_", "ZTUpgrade_Skill_")
+        if os.path.isfile(os.path.join(SOURCE_CLASS_DIR, f"{prefix}{short}.uc"))
+    ), None)
+    if class_path is None:
+        return True
+    with open(class_path, encoding="utf-8-sig") as stream:
+        return not re.search(r"\bbAllowDeluxe\s*=\s*False\b", stream.read(), re.IGNORECASE)
+
+
 def perk_icon_path(short, parent=None):
+    if short == "SpecialAgent":
+        return "icons/spetsnaz.png"
     candidate = f"icons/{short.lower()}.png"
     if os.path.isfile(os.path.join(PERK_ICON_DIR, f"{short.lower()}.png")):
         return candidate
@@ -265,6 +282,12 @@ PERK_LEVEL_STAT_LABELS = {
 }
 
 PERK_STAT_LABEL_OVERRIDES = {
+    "Archangel": {
+        "HealingPerLevel": "치유량",
+        "MaximumHealthPerLevel": "최대 체력",
+        "AuraHealPerSecond": "10레벨 오라 회복량",
+        "DartFullHealChance": "20레벨 의료 다트 완전 회복 확률",
+    },
     "Diablo": {
         "DeathwaveInterval": "데스웨이브 간격", "DeathwaveRadius": "데스웨이브 반경",
         "FearDeathwavePct": "공포 데스웨이브 피해 비율", "HellDeathwavePct": "지옥 데스웨이브 피해 비율",
@@ -296,6 +319,50 @@ PERK_STAT_LABEL_OVERRIDES = {
         "DataMissingSpeedMultiplier": "데이터 누락 이동 속도 배율", "WaveEndDuplicateChance": "웨이브 종료 무기 복제 확률",
     },
 }
+
+
+def build_archangel_code_stats():
+    """Expose only Archangel values consumed by its current class implementation.
+
+    The captured INI still contains retired fields and pre-migration values.
+    ZTUpgrade_Perk_Archangel.UpdateConfig() migrates those fields to the
+    current defaults, while the class applies healing/max-health passives
+    directly. Read the actual class defaults so stale INI entries cannot
+    appear as live perk stats in the wiki.
+    """
+    source_path = os.path.join(SOURCE_CLASS_DIR, "ZTUpgrade_Perk_Archangel.uc")
+    with open(source_path, encoding="utf-8-sig") as f:
+        source = f.read()
+
+    def source_number(pattern, label):
+        match = re.search(pattern, source, re.IGNORECASE)
+        if not match:
+            raise ValueError(f"Could not read Archangel {label} from {source_path}")
+        return float(match.group(1))
+
+    healing_per_level = source_number(r"PerkBonus\(0\)=\(baseValue=0,\s*incValue=([\d.]+)", "healing bonus") / 100.0
+    health_per_level = source_number(r"PerkBonus\(2\)=\(baseValue=0,\s*incValue=([\d.]+)", "health bonus")
+    aura_heal = source_number(r"default\.Level10AuraHealing\s*=\s*([\d.]+)f", "level 10 aura healing")
+    miracle_chance = source_number(r"default\.Level20MiracleChance\s*=\s*([\d.]+)f", "level 20 miracle chance")
+
+    passive_stats = build_stat_entries([
+        ("HealingPerLevel", healing_per_level),
+        ("MaximumHealthPerLevel", health_per_level),
+    ], with_levels=True)
+    for stat in passive_stats:
+        stat["scaling"] = True
+
+    fixed_stats = build_stat_entries([
+        ("AuraHealPerSecond", aura_heal),
+        ("DartFullHealChance", miracle_chance),
+    ])
+    fixed_stats[0]["unit"] = "count"
+    fixed_stats[0]["display"] = f"{aura_heal:g} HP/초"
+    fixed_stats[0]["capstoneLevel"] = 10
+    fixed_stats[1]["unit"] = "percent"
+    fixed_stats[1]["display"] = f"+{miracle_chance * 100:g}%"
+    fixed_stats[1]["capstoneLevel"] = 20
+    return passive_stats, fixed_stats
 
 
 def apply_perk_stat_labels(perk_key, stats):
@@ -1530,6 +1597,10 @@ def build():
         placeholder_groups, fixed_stats = compute_placeholder_groups(
             passive_stats, raw_descs, IMPLICIT_SCALING_COUNTS.get(key, 0))
         scaling_stats = [stat for group in placeholder_groups for stat in group]
+        if key == "Archangel":
+            # Its old INI has retired passives and values superseded by
+            # UpdateConfig migrations. The current perk class is authoritative.
+            scaling_stats, fixed_stats = build_archangel_code_stats()
         if key == "JohnWick" and not scaling_stats:
             scaling_stats = build_john_wick_passives()
         # The wiki's explanation text is an exact copy of the active Korean
@@ -1587,13 +1658,17 @@ def build():
         skill_roster += [(short, False, None) for short in perk_extras.get("skills", [])]
         skills = []
         for short, is_disabled, disabled_note in skill_roster:
-            skill_section = f"DKUpgrade_Skill_{short}"
+            skill_section = f"ZTUpgrade_Skill_{short}"
             # The game's Config_SkillUpgrade registry and the KOR/main ini
             # section headers disagree on casing for a handful of skills
             # (registry "ShowOff" vs section "[DKUpgrade_Skill_Showoff]").
             # UnrealScript resolves names case-insensitively so it works
             # in-game; mirror that here or those skills read as "no data".
-            skor = ci_lookup(kor_sections, skill_section) or {}
+            skor = (
+                ci_lookup(kor_sections, skill_section)
+                or ci_lookup(kor_sections, f"DKUpgrade_Skill_{short}")
+                or {}
+            )
             sini = ci_lookup(main_sections, skill_section) or []
             cost_keys = set(SKILL_COST_STATS.get(short, []))
             signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
@@ -1605,7 +1680,8 @@ def build():
             # The localization file is the sole source for visible skill prose.
             # Do not reconcile it with INI values or substitute manual text.
             std_raw = skor.get("StandardSkillUpgradeDescription")
-            delx_raw = skor.get("DeluxeSkillUpgradeDescription")
+            allows_deluxe = skill_allows_deluxe(short)
+            delx_raw = skor.get("DeluxeSkillUpgradeDescription") if allows_deluxe else None
             std_fixed = delx_fixed = False
             deluxe_available = source_skill_has_deluxe(short)
 
@@ -1616,6 +1692,7 @@ def build():
                 "deluxeDesc": strip_font(delx_raw),
                 "standardDescRaw": std_raw,
                 "deluxeDescRaw": delx_raw,
+                "allowsDeluxe": allows_deluxe,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
                 "note": override.get("note"),
@@ -1678,11 +1755,20 @@ def build():
     advanced_perks.sort(key=lambda p: ((p["parentPerk"] or "zzz"), p["unlockLevel"] or 99))
 
     # ---- base perks (오퍼 / WM) ----
+    # These base perk UI classes select one of five bordered icon variants by
+    # rank. Keep the wiki's artwork on the same actual UPK exports.
+    base_rank_icon_names = {
+        "Berserker": "Berserker",
+        "Commando": "Commando",
+        "Demolitionist": "Demolitionist",
+        "FieldMedic": "FieldMedic",
+    }
     base_perks = []
     for bkey, bdata in manual_base.items():
         base_kor = (
-            ci_lookup(reborn_kor_sections, f"WMUpgrade_Perk_{bkey}")
+            ci_lookup(kor_sections, f"ZUTUpgrade_Perk_Base_{bkey}")
             or ci_lookup(kor_sections, f"DKWrapper_Perk_{bkey}")
+            or ci_lookup(reborn_kor_sections, f"WMUpgrade_Perk_{bkey}")
             or {}
         )
         base_raw_descs = base_kor.get("descriptions", [])
@@ -1696,6 +1782,28 @@ def build():
         )
         wrapper_kv = main_sections.get(f"DKWrapper_Perk_{bkey}", [])
         passive_stats = build_stat_entries([(k, v) for k, v in wrapper_kv if k != "MODEVERSION"], with_levels=True)
+        base_stat_labels = {
+            "Berserker": {
+                "Cfg_Damage": "버서커 무기 피해량",
+                "Cfg_AttackSpeed": "근접 공격·연사 속도",
+                "Cfg_HealthFlat": "최대 체력",
+            },
+            "Commando": {
+                "Cfg_Damage": "코만도 무기 피해량",
+                "Cfg_ReloadRate": "재장전 속도",
+            },
+        }
+        for stat in passive_stats:
+            label = base_stat_labels.get(bkey, {}).get(stat["key"])
+            if label:
+                stat["label"] = label
+            if bkey == "Berserker" and stat["key"] == "Cfg_HealthFlat":
+                stat.update({
+                    "unit": "health",
+                    "display": f"+{stat['value']:g} HP",
+                    "lv10Display": f"+{stat['value'] * 10:g} HP",
+                    "lv20Display": f"+{stat['value'] * 20:g} HP",
+                })
         if bkey == "Demolitionist":
             # Demolitionist's plain "피해량" field is a flat perk-weapon
             # damage bonus that applies to both direct hits and splash --
@@ -1719,6 +1827,7 @@ def build():
             skill_section = f"DKWrapper_Skill_{short}"
             skor = (
                 ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}")
+                or ci_lookup(kor_sections, f"ZTUpgrade_Skill_{short}")
                 or ci_lookup(kor_sections, f"DKUpgrade_Skill_{short}")
                 or {}
             )
@@ -1732,7 +1841,8 @@ def build():
 
             # Use the exact Standard/Deluxe text present in the Korean source.
             std_raw = skor.get("StandardSkillUpgradeDescription")
-            delx_raw = skor.get("DeluxeSkillUpgradeDescription")
+            allows_deluxe = skill_allows_deluxe(short)
+            delx_raw = skor.get("DeluxeSkillUpgradeDescription") if allows_deluxe else None
             std_fixed = delx_fixed = False
 
             base_skills.append({
@@ -1743,6 +1853,8 @@ def build():
                 "standardDescRaw": std_raw,
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
+                "allowsDeluxe": allows_deluxe,
+                "deluxeAvailable": source_skill_has_deluxe(short),
                 "hasKorText": bool(skor),
                 "note": override.get("note"),
                 "isPatched": bool(skill_patch_note),
@@ -1758,7 +1870,7 @@ def build():
             "key": bkey,
             "name": bdata["name"],
             "grade": bdata.get("grade"),
-            "summary": None,
+            "summary": bdata.get("summary"),
             "role": base_kor_role,
             "endgame": bdata.get("endgame"),
             "descriptions": base_descriptions,
@@ -1767,6 +1879,12 @@ def build():
             "maxLevel": 20,
             "strengths": bdata.get("strengths", []),
             "weaknesses": bdata.get("weaknesses", []),
+            "noCapstoneNote": bdata.get("noCapstoneNote"),
+            "extraSections": bdata.get("extraSections", []),
+            "rankIcons": [
+                f"icons/ranks/{base_rank_icon_names[bkey]}-rank-{tier}.png"
+                for tier in range(5)
+            ] if bkey in base_rank_icon_names else [],
             "unlocks": unlocks,
             "skills": base_skills,
             "skillCount": len(base_skills),
@@ -1774,7 +1892,7 @@ def build():
             "patchNote": base_patch_note or None,
             "testWarning": None,
             "recentChangeTag": recent_changes.get(bkey),
-            "icon": f"icons/{bkey.lower()}.png",
+            "icon": f"icons/ranks/{base_rank_icon_names[bkey]}-rank-4.png" if bkey in base_rank_icon_names else f"icons/{bkey.lower()}.png",
         })
 
     release_metadata = current_release_metadata()
@@ -1782,6 +1900,14 @@ def build():
         "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
         "serverGameConfigDiffers": file_sha256(INI_GAME) != file_sha256(INI_OPERATIONS_GAME),
     })
+    if os.environ.get("ZEDTERNAL_WIKI_DRAFT") == "1":
+        # Local code/localization edits are not yet a Workshop release. Never
+        # present the last published version stamp as if it described this draft.
+        release_metadata.update({
+            "version": "미게시 초안",
+            "publishedUtc": "",
+            "publicationState": "unpublished-draft",
+        })
     data = {
         "basePerks": base_perks,
         "advancedPerks": advanced_perks,

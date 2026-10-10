@@ -27,7 +27,12 @@ def main():
     checked_perks = checked_skills = 0
 
     for perk in data.get("basePerks", []):
-        section = build.ci_lookup(reborn, f"WMUpgrade_Perk_{perk['key']}") or {}
+        section = (
+            build.ci_lookup(kor, f"ZUTUpgrade_Perk_Base_{perk['key']}")
+            or build.ci_lookup(kor, f"DKWrapper_Perk_{perk['key']}")
+            or build.ci_lookup(reborn, f"WMUpgrade_Perk_{perk['key']}")
+            or {}
+        )
         expected = section.get("descriptions", [])
         actual = [entry.get("raw", "") for entry in perk.get("descriptions", [])]
         if expected != actual:
@@ -38,11 +43,14 @@ def main():
                 failures.append(f"retired skill is listed: {perk['key']}/{skill['key']}")
             localized = (
                 build.ci_lookup(reborn, f"WMUpgrade_Skill_{skill['key']}")
+                or build.ci_lookup(kor, f"ZTUpgrade_Skill_{skill['key']}")
                 or build.ci_lookup(kor, f"DKUpgrade_Skill_{skill['key']}")
                 or {}
             )
             standard = localized.get("StandardSkillUpgradeDescription") or localized.get("SkillUpgradeDescription1")
             deluxe = localized.get("DeluxeSkillUpgradeDescription") or localized.get("SkillUpgradeDescription2")
+            if not skill.get("allowsDeluxe", True):
+                deluxe = None
             if (skill.get("standardDescRaw") or None) != standard:
                 failures.append(f"standard KOR mismatch: {perk['key']}/{skill['key']}")
             if (skill.get("deluxeDescRaw") or None) != deluxe:
@@ -52,7 +60,11 @@ def main():
             checked_skills += 1
 
     for perk in data.get("advancedPerks", []):
-        section = build.ci_lookup(kor, f"DKUpgrade_Perk_{perk['key']}") or {}
+        section = (
+            build.ci_lookup(kor, f"ZTUpgrade_Perk_{perk['key']}")
+            or build.ci_lookup(kor, f"DKUpgrade_Perk_{perk['key']}")
+            or {}
+        )
         expected = section.get("descriptions", [])
         actual = [entry.get("raw", "") for entry in perk.get("descriptions", [])]
         if expected != actual:
@@ -62,9 +74,15 @@ def main():
         for skill in perk.get("skills", []):
             if skill["key"].lower() in retired_skills:
                 failures.append(f"retired skill is listed: {perk['key']}/{skill['key']}")
-            localized = build.ci_lookup(kor, f"DKUpgrade_Skill_{skill['key']}") or {}
+            localized = (
+                build.ci_lookup(kor, f"ZTUpgrade_Skill_{skill['key']}")
+                or build.ci_lookup(kor, f"DKUpgrade_Skill_{skill['key']}")
+                or {}
+            )
             standard = localized.get("StandardSkillUpgradeDescription") or localized.get("SkillUpgradeDescription1")
             deluxe = localized.get("DeluxeSkillUpgradeDescription") or localized.get("SkillUpgradeDescription2")
+            if not skill.get("allowsDeluxe", True):
+                deluxe = None
             if (skill.get("standardDescRaw") or None) != standard:
                 failures.append(f"standard KOR mismatch: {perk['key']}/{skill['key']}")
             if (skill.get("deluxeDescRaw") or None) != deluxe:
