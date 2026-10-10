@@ -115,6 +115,8 @@ Push-Location $wikiRoot
 try {
     & $Python 'data\build.py'
     if ($LASTEXITCODE -ne 0) { throw 'Wiki data generation failed.' }
+    & $Python 'data\verify_kor_alignment.py'
+    if ($LASTEXITCODE -ne 0) { throw 'Wiki KOR alignment or description completeness validation failed.' }
     $data = Get-Content -LiteralPath 'docs\data\perks.json' -Raw -Encoding UTF8 | ConvertFrom-Json
     if ($data.meta.release.version -ne $Version -or $data.meta.release.workshopId -ne '3809067086') { throw 'Generated wiki data has stale release metadata.' }
     foreach ($perk in @($data.basePerks) + @($data.advancedPerks)) {
@@ -128,7 +130,9 @@ try {
     $staged = @(& git diff --cached --name-only)
     if ($LASTEXITCODE -ne 0) { throw 'Could not inspect staged wiki changes.' }
     if ($staged.Count -gt 0) { throw 'Refusing to publish wiki with pre-staged changes; review/commit them first.' }
-    & git add -- data/build.py data/release-manifest.json data/Sync-Tempered-Wiki.ps1 docs/data/perks.json docs/index.html docs/app.js
+    & git add -- data/build.py data/manual_skill_overrides.json data/release-manifest.json `
+        data/Sync-Tempered-Wiki.ps1 data/verify_kor_alignment.py `
+        docs/data/perks.json docs/index.html docs/app.js
     if ($LASTEXITCODE -ne 0) { throw 'Could not stage generated wiki files.' }
     & git diff --cached --check
     if ($LASTEXITCODE -ne 0) { throw 'Wiki diff has whitespace errors.' }

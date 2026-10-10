@@ -551,6 +551,20 @@ def parse_wm_skill_registry(path):
     return registry
 
 
+def parse_retired_upgrade_paths(path):
+    """Read permanently retired skills and skill-owning perks from runtime filter.
+
+    The runtime removes these entries even when their old registry rows or
+    localization sections remain on disk, so they must not appear as active
+    choices in the wiki.
+    """
+    with open(path, encoding="utf-8-sig") as f:
+        source = f.read()
+    retired_skills = set(re.findall(r"ZTUpgrade_Skill_(\w+)", source, flags=re.IGNORECASE))
+    retired_perks = set(re.findall(r"ZTUpgrade_Perk_(\w+)", source, flags=re.IGNORECASE))
+    return {name.lower() for name in retired_skills}, {name.lower() for name in retired_perks}
+
+
 def parse_active_advanced_perks(path):
     """Return active perk registrations and whether each is a static perk."""
     active = {}
@@ -1481,6 +1495,10 @@ def build():
         with open(RECENT_CHANGES_PATH, encoding="utf-8") as f:
             recent_changes = json.load(f)
 
+    retired_skill_names, retired_perk_names = parse_retired_upgrade_paths(
+        os.path.join(SOURCE_CLASS_DIR, "ZTRetiredSkillFilter.uc")
+    )
+
     # ---- advanced perks (커퍼 / DK) ----
     localized_perks = {k[len("DKUpgrade_Perk_"):] for k in kor_sections if k.startswith("DKUpgrade_Perk_")}
     adv_keys = sorted(localized_perks & set(active_advanced_perks))
@@ -1560,7 +1578,12 @@ def build():
         # but absent from the Config_SkillUpgrade registry (e.g. Gambit's
         # entire hardcoded skill set) -- run them through the exact same
         # pipeline as registry skills.
-        skill_roster = list(dk_skill_registry.get(key, []))
+        skill_roster = [
+            entry for entry in dk_skill_registry.get(key, [])
+            if entry[0].lower() not in retired_skill_names
+        ]
+        if key.lower() in retired_perk_names:
+            skill_roster = []
         skill_roster += [(short, False, None) for short in perk_extras.get("skills", [])]
         skills = []
         for short, is_disabled, disabled_note in skill_roster:
@@ -1595,7 +1618,7 @@ def build():
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
-                "note": None,
+                "note": override.get("note"),
                 "isPatched": bool(skill_patch_note),
                 "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,
@@ -1691,6 +1714,8 @@ def build():
 
         base_skills = []
         for short, is_disabled, disabled_note in wm_skill_registry.get(bkey, []):
+            if short.lower() in retired_skill_names:
+                continue
             skill_section = f"DKWrapper_Skill_{short}"
             skor = (
                 ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}")
@@ -1719,7 +1744,7 @@ def build():
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "hasKorText": bool(skor),
-                "note": None,
+                "note": override.get("note"),
                 "isPatched": bool(skill_patch_note),
                 "patchNote": skill_patch_note or None,
                 "textFixed": std_fixed or delx_fixed,

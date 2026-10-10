@@ -334,6 +334,9 @@
     "deluxeDesc": "<font color=\"#8B008B\">독성 면역(디럭스):</font> <font color=\"#FFD700\">독에 완전히 면역</font>되며, <font color=\"#00FF00\">독 피해를 받을 때 오히려 체력을 회복</font>합니다.",
     "_note": "디럭스 티어는 '% 저항'이 아닌 '완전 면역+반사 회복'으로 효과 자체가 질적으로 바뀌어 PoisonResistance=0.166667(16.67%) 수치를 문장에 넣는 것이 부정확함. 원문 그대로 수동 등록(표준 티어는 자동 조정이 정상 동작해 그대로 둠)."
   },
+  "DeepReserves": {
+    "note": "KOR 원문에는 설명 문구가 없어 보충했습니다. 실제 코드와 INI 기준: 코만도 또는 샤프슈터 퍼크 무기의 탄창 용량이 표준 +25% / 디럭스 +40% 증가합니다. 주무기 휴대 탄약은 표준 +20% / 디럭스 +35% 증가합니다."
+  },
   "HighRiskInvestment": {
     "standardDesc": "상점에서 한 번에 <font color=\"#ff3399\">4,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",
     "deluxeDesc": "상점에서 한 번에 <font color=\"#ff3399\">3,000</font> 도쉬 이상을 지출할 때마다 <font color=\"#ffaa33\">10% 확률</font>로 지불한 금액을 그대로 <font color=\"#00ff00\">환불</font>받습니다.",

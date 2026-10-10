@@ -749,7 +749,7 @@ function renderSkillsSection(skills) {
       <div class="skill-item-body">
         <h4>${escapeHtml(skill.name)} <span class="skill-key">(${escapeHtml(skill.key)})</span>${skill.disabled ? '<span class="disabled-badge">비활성화</span>' : ""}</h4>
         ${skill.disabled ? `<div class="disabled-banner">🚫 현재 인게임에서 선택할 수 없습니다.${skill.disabledNote ? ` (${escapeHtml(skill.disabledNote)})` : ""}</div>` : ""}
-        ${skill.noData ? '<div class="empty-state perk-empty">한국어 KOR 파일에 이 스킬의 설명이 없습니다.</div>' : ""}
+        ${skill.noData ? `<div class="empty-state perk-empty">${skill.note ? "한국어 원문 설명이 없어 코드·설정 기준으로 보충했습니다." : "한국어 KOR 파일에 이 스킬의 설명이 없습니다."}</div>` : ""}
         ${skill.standardDescRaw ? `<div class="std"><b>표준</b>${skill.standardDescRaw}</div>` : ""}
         ${skill.deluxeDescRaw ? `<div class="delx"><b>디럭스</b>${skill.deluxeDescRaw}</div>` : ""}
         ${skill.note ? `<div class="skillnote">${escapeHtml(skill.note)}</div>` : ""}

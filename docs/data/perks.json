@@ -350,7 +350,7 @@
     {
      "level": 5,
      "perk": "SpecialAgent",
-     "name": "특별 요원"
+     "name": "스페츠나츠"
     },
     {
      "level": 10,
@@ -859,13 +859,13 @@
     {
      "key": "Cfg_HealRate",
      "label": "치유 속도",
-     "value": 0.05,
+     "value": 0.03,
      "unit": "percent",
-     "display": "+5%",
-     "lv10": 0.5,
-     "lv20": 1.0,
-     "lv10Display": "+50%",
-     "lv20Display": "+100%"
+     "display": "+3%",
+     "lv10": 0.3,
+     "lv20": 0.6,
+     "lv10Display": "+30%",
+     "lv20Display": "+60%"
     },
     {
      "key": "Cfg_Health",
@@ -921,30 +921,12 @@
    ],
    "skills": [
     {
-     "key": "AcidicRounds",
-     "name": "산성탄",
-     "standardDesc": "모든 무기가 좀비를 중독시켜 지속적인 독 피해를 입힙니다.",
-     "deluxeDesc": "모든 무기가 좀비를 중독시켜 강력한 지속 독 피해를 입힙니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">모든 무기</font>가 좀비를 <font color=\"#FF6666\">중독</font>시켜 지속적인 독 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">모든 무기</font>가 좀비를 <font color=\"#FF6666\">중독</font>시켜 강력한 지속 독 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/AcidicRounds.png"
-    },
-    {
      "key": "AirborneAgent",
      "name": "공중 작용제",
-     "standardDesc": "자신이나 주변 팀원이 위험할 때 치유 가스를 방출합니다.",
-     "deluxeDesc": "자신이나 주변 팀원이 위험할 때 강력한 치유 가스를 방출합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">자신</font>이나 주변 <font color=\"#66CCFF\">팀원</font>이 위험할 때 <font color=\"#66CCFF\">치유</font> 가스를 방출합니다.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">자신</font>이나 주변 <font color=\"#66CCFF\">팀원</font>이 위험할 때 강력한 <font color=\"#66CCFF\">치유</font> 가스를 방출합니다.",
+     "standardDesc": "제드타임에 자신을 중심으로 KF2 원본 메딕의 치유 가스를 방출합니다. 주변 아군을 치료하고 제드에게 피해를 줍니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "<font color=\"#FFD700\">제드타임</font>에 자신을 중심으로 KF2 원본 메딕의 <font color=\"#66CCFF\">치유 가스</font>를 방출합니다. 주변 아군을 치료하고 제드에게 피해를 줍니다.",
+     "deluxeDescRaw": null,
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -975,12 +957,30 @@
      "icon": "icons/skills/BattleSurgeon.png"
     },
     {
+     "key": "AdrenalineShot",
+     "name": "아드레날린 샷",
+     "standardDesc": "팀원을 치료하면 해당 팀원의 이동 속도가 5초 동안 5% 증가합니다. 최대 4회 중첩되어 20%까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "팀원을 치료하면 해당 팀원의 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">5초</font> 동안 <font color=\"#77D914\">5%</font> 증가합니다. 최대 <font color=\"#77D914\">4회</font> 중첩되어 <font color=\"#77D914\">20%</font>까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
+     "deluxeDescRaw": null,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
      "key": "CoagulantBooster",
-     "name": "응고제 부스터",
-     "standardDesc": "잃은 체력 1포인트당 피해 저항이 0.125% 증가합니다 (최대 5%).",
-     "deluxeDesc": "잃은 체력 1포인트당 피해 저항이 0.333% 증가합니다 (최대 10%).",
-     "standardDescRaw": "잃은 <font color=\"#66CCFF\">체력</font> <font color=\"#77D914\">1</font>포인트당 <font color=\"#66CCFF\">피해 저항</font>이 <font color=\"#77D914\">0.125%</font> 증가합니다 (최대 <font color=\"#77D914\">5%</font>).",
-     "deluxeDescRaw": "잃은 <font color=\"#66CCFF\">체력</font> <font color=\"#77D914\">1</font>포인트당 <font color=\"#66CCFF\">피해 저항</font>이 <font color=\"#77D914\">0.333%</font> 증가합니다 (최대 <font color=\"#77D914\">10%</font>).",
+     "name": "코아굴런트 부스터",
+     "standardDesc": "팀원을 치료하면 해당 팀원에게 5초 동안 5%의 피해 저항을 부여합니다. 최대 4회 중첩되어 20%까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "팀원을 치료하면 해당 팀원에게 <font color=\"#77D914\">5초</font> 동안 <font color=\"#77D914\">5%</font>의 <font color=\"#66CCFF\">피해 저항</font>을 부여합니다. 최대 <font color=\"#77D914\">4회</font> 중첩되어 <font color=\"#77D914\">20%</font>까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
+     "deluxeDescRaw": null,
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -1009,24 +1009,6 @@
      "disabledNote": null,
      "noData": false,
      "icon": "icons/skills/CombatantDoctor.png"
-    },
-    {
-     "key": "Hemoglobin",
-     "name": "헤모글로빈",
-     "standardDesc": "독 피해가 좀비에게 장기 부전을 유발합니다.",
-     "deluxeDesc": "독 피해가 좀비에게 심각한 장기 부전을 유발합니다.",
-     "standardDescRaw": "독 <font color=\"#66CCFF\">피해</font>가 좀비에게 장기 부전을 유발합니다.",
-     "deluxeDescRaw": "독 <font color=\"#66CCFF\">피해</font>가 좀비에게 심각한 장기 부전을 유발합니다.",
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Hemoglobin.png"
     },
     {
      "key": "Safeguard",
@@ -1066,11 +1048,11 @@
     },
     {
      "key": "Zedatif",
-     "name": "ZED-진정제",
-     "standardDesc": "독 효과가 좀비를 둔화시키며 독 피해량 및 치유 효력이 25% 증가합니다.",
-     "deluxeDesc": "독 효과가 좀비를 둔화시키며 독 피해량 및 치유 효력이 60% 증가합니다.",
-     "standardDescRaw": "독 효과가 좀비를 <font color=\"#FF6666\">둔화</font>시키며 독 <font color=\"#66CCFF\">피해량</font> 및 <font color=\"#66CCFF\">치유</font> 효력이 <font color=\"#77D914\">25%</font> 증가합니다.",
-     "deluxeDescRaw": "독 효과가 좀비를 <font color=\"#FF6666\">둔화</font>시키며 독 <font color=\"#66CCFF\">피해량</font> 및 <font color=\"#66CCFF\">치유</font> 효력이 <font color=\"#77D914\">60%</font> 증가합니다.",
+     "name": "제더티브",
+     "standardDesc": "제드타임에 제드를 처치하면 KF2 원본 메딕의 치유 구름이 발생합니다. 구름은 주변 플레이어를 치료하고 제드에게 피해를 주며, 구름으로 처치한 제드에게서도 연쇄 발생합니다. 모든 무기에 적용됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "<font color=\"#FFD700\">제드타임</font>에 제드를 처치하면 KF2 원본 메딕의 <font color=\"#66CCFF\">치유 구름</font>이 발생합니다. 구름은 주변 플레이어를 치료하고 제드에게 피해를 주며, 구름으로 처치한 제드에게서도 연쇄 발생합니다. 모든 무기에 적용됩니다.",
+     "deluxeDescRaw": null,
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -1119,7 +1101,7 @@
      "icon": "icons/skills/Fastball.png"
     }
    ],
-   "skillCount": 11,
+   "skillCount": 10,
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
@@ -6694,7 +6676,7 @@
   },
   {
    "key": "SpecialAgent",
-   "name": "특별 요원",
+   "name": "스페츠나츠",
    "parentPerk": "Commando",
    "unlockLevel": 5,
    "unlockRequirements": [
@@ -6747,35 +6729,56 @@
    ],
    "fixedStats": [],
    "valueSourceNote": null,
-   "role": "Commando 및 Sharpshooter 무기의 피해량이 %x%% 증가합니다.",
+   "role": "레벨마다 코만도·샤프슈터·SWAT 무기 피해량이 1.5% 증가합니다.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "Commando 및 Sharpshooter 무기의 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "Commando 및 Sharpshooter 무기의 피해량이 %x%% 증가합니다.",
+     "raw": "레벨마다 <font color=\"#66CCFF\">코만도·샤프슈터·SWAT 무기 피해량</font>이 <font color=\"#77D914\">1.5%</font> 증가합니다.",
+     "text": "레벨마다 코만도·샤프슈터·SWAT 무기 피해량이 1.5% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#66CCFF\">반동</font>이 <font color=\"#77D914\">%x%%</font> 감소합니다 (최대 <font color=\"#77D914\">30%</font>).",
-     "text": "반동이 %x%% 감소합니다 (최대 30%).",
+     "raw": "레벨마다 해당 무기의 <font color=\"#66CCFF\">반동</font>이 <font color=\"#77D914\">1%</font> 감소합니다.",
+     "text": "레벨마다 해당 무기의 반동이 1% 감소합니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#66CCFF\">재장전 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "재장전 속도가 %x%% 증가합니다.",
+     "raw": "레벨마다 해당 무기의 <font color=\"#66CCFF\">재장전 속도</font>가 <font color=\"#77D914\">1%</font> 증가합니다.",
+     "text": "레벨마다 해당 무기의 재장전 속도가 1% 증가합니다.",
      "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 </font><font color=\"#77D914\">10</font><font color=\"#8B0000\">:</font> 코만도·샤프슈터·SWAT 무기로 클롯, 시스트, 슬래셔, 알파 클롯을 한 발에 처치합니다.",
+     "text": "레벨 10: 코만도·샤프슈터·SWAT 무기로 클롯, 시스트, 슬래셔, 알파 클롯을 한 발에 처치합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 </font><font color=\"#77D914\">20</font><font color=\"#8B0000\">:</font> 해당 무기로 폭도를 한 발에 처치합니다.",
+     "text": "레벨 20: 해당 무기로 폭도를 한 발에 처치합니다.",
+     "isCapstone": true
     }
    ],
-   "capstoneDescriptions": [],
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#8B0000\">레벨 </font><font color=\"#77D914\">10</font><font color=\"#8B0000\">:</font> 코만도·샤프슈터·SWAT 무기로 클롯, 시스트, 슬래셔, 알파 클롯을 한 발에 처치합니다.",
+     "text": "레벨 10: 코만도·샤프슈터·SWAT 무기로 클롯, 시스트, 슬래셔, 알파 클롯을 한 발에 처치합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#8B0000\">레벨 </font><font color=\"#77D914\">20</font><font color=\"#8B0000\">:</font> 해당 무기로 폭도를 한 발에 처치합니다.",
+     "text": "레벨 20: 해당 무기로 폭도를 한 발에 처치합니다.",
+     "isCapstone": true
+    }
+   ],
    "skills": [
     {
      "key": "ApronHunter",
      "name": "앞치마 사냥꾼",
-     "standardDesc": "스크레이크 및 모든 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "스크레이크 및 모든 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "스크레이크 및 모든 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "스크레이크 및 모든 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "스크레이크 및 모든 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "스크레이크 및 모든 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "스크레이크 및 모든 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "스크레이크 및 모든 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -6806,10 +6809,10 @@
     {
      "key": "Arachnophobia",
      "name": "거미공포증",
-     "standardDesc": "크롤러 및 모든 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "크롤러 및 모든 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "크롤러 및 모든 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "크롤러 및 모든 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "크롤러 및 모든 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "크롤러 및 모든 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "크롤러 및 모든 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "크롤러 및 모든 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -6840,10 +6843,10 @@
     {
      "key": "Extinguisher",
      "name": "소화기",
-     "standardDesc": "허스크 및 모든 허스크 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "허스크 및 모든 허스크 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "허스크 및 모든 허스크 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "허스크 및 모든 허스크 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "허스크 및 모든 허스크 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "허스크 및 모든 허스크 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "허스크 및 모든 허스크 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "허스크 및 모든 허스크 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -6874,10 +6877,10 @@
     {
      "key": "GoreFasting",
      "name": "고어 단식",
-     "standardDesc": "고어패스트 및 모든 변형에게 30%의 추가 피해를 줍니다.",
-     "deluxeDesc": "고어패스트 및 모든 변형에게 60%의 추가 피해를 줍니다.",
-     "standardDescRaw": "고어패스트 및 모든 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "고어패스트 및 모든 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "standardDesc": "고어패스트 및 모든 변형에게 25%의 추가 피해를 줍니다.",
+     "deluxeDesc": "고어패스트 및 모든 변형에게 50%의 추가 피해를 줍니다.",
+     "standardDescRaw": "고어패스트 및 모든 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "deluxeDescRaw": "고어패스트 및 모든 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -6908,10 +6911,10 @@
     {
      "key": "Muted",
      "name": "음소거됨",
-     "standardDesc": "사이렌 및 모든 사이렌 변형에게 30%의 추가 피해를 줍니다.",
-     "deluxeDesc": "사이렌 및 모든 사이렌 변형에게 60%의 추가 피해를 줍니다.",
-     "standardDescRaw": "사이렌 및 모든 사이렌 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "사이렌 및 모든 사이렌 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "standardDesc": "사이렌 및 모든 사이렌 변형에게 25%의 추가 피해를 줍니다.",
+     "deluxeDesc": "사이렌 및 모든 사이렌 변형에게 50%의 추가 피해를 줍니다.",
+     "standardDescRaw": "사이렌 및 모든 사이렌 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "deluxeDescRaw": "사이렌 및 모든 사이렌 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -6942,10 +6945,10 @@
     {
      "key": "Pounded",
      "name": "두들겨 맞혔다",
-     "standardDesc": "플레시파운드 및 모든 변형에게 30%의 추가 피해를 줍니다.",
-     "deluxeDesc": "플레시파운드 및 모든 변형에게 60%의 추가 피해를 줍니다.",
-     "standardDescRaw": "플레시파운드 및 모든 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "플레시파운드 및 모든 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "standardDesc": "플레시파운드 및 모든 변형에게 25%의 추가 피해를 줍니다.",
+     "deluxeDesc": "플레시파운드 및 모든 변형에게 50%의 추가 피해를 줍니다.",
+     "standardDescRaw": "플레시파운드 및 모든 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "deluxeDescRaw": "플레시파운드 및 모든 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -6976,10 +6979,10 @@
     {
      "key": "RestrainingOrder",
      "name": "금지 명령",
-     "standardDesc": "스토커와 모든 스토커 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "스토커와 모든 스토커 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "스토커와 모든 스토커 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "스토커와 모든 스토커 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "스토커와 모든 스토커 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "스토커와 모든 스토커 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "스토커와 모든 스토커 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "스토커와 모든 스토커 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -7010,10 +7013,10 @@
     {
      "key": "Technophobe",
      "name": "기술혐오자",
-     "standardDesc": "EDAR 및 모든 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "EDAR 및 모든 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "EDAR 및 모든 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "EDAR 및 모든 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "EDAR 및 모든 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "EDAR 및 모든 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "EDAR 및 모든 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "EDAR 및 모든 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -7044,10 +7047,10 @@
     {
      "key": "Untouchable",
      "name": "불가촉천민",
-     "standardDesc": "클롯 및 모든 클롯 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "클롯 및 모든 클롯 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "클롯 및 모든 클롯 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "클롯 및 모든 클롯 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -7078,10 +7081,10 @@
     {
      "key": "Weightwatcher",
      "name": "웨이트워처",
-     "standardDesc": "블로트 및 모든 블로트 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "블로트 및 모든 블로트 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "블로트 및 모든 블로트 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "블로트 및 모든 블로트 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "블로트 및 모든 블로트 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "블로트 및 모든 블로트 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "블로트 및 모든 블로트 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "블로트 및 모든 블로트 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -7391,7 +7394,7 @@
       }
      ],
      "hasKorText": true,
-     "note": null,
+     "note": "KOR 원문에는 설명 문구가 없어 보충했습니다. 실제 코드와 INI 기준: 코만도 또는 샤프슈터 퍼크 무기의 탄창 용량이 표준 +25% / 디럭스 +40% 증가합니다. 주무기 휴대 탄약은 표준 +20% / 디럭스 +35% 증가합니다.",
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
@@ -10020,45 +10023,35 @@
     }
    ],
    "valueSourceNote": null,
-   "role": "야전 의학: 모든 출처에서 얻는 치유량 +%x%%.",
+   "role": "치유의 오라: 주변 아군이 초당 1 HP를 회복합니다. 범위는 레벨당 0.5m씩 늘어나 1레벨은 0.5m, 20레벨은 10m입니다. 레벨마다 치유량 +1%와 최대 체력 +2를 얻습니다.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "야전 의학: 모든 출처에서 얻는 <font color=\"#66CCFF\">치유</font>량 <font color=\"#77D914\">+%x%%</font>.",
-     "text": "야전 의학: 모든 출처에서 얻는 치유량 +%x%%.",
+     "raw": "치유의 오라: 주변 아군이 초당 <font color=\"#77D914\">1 HP</font>를 회복합니다. 범위는 레벨당 <font color=\"#77D914\">0.5m</font>씩 늘어나 1레벨은 <font color=\"#77D914\">0.5m</font>, 20레벨은 <font color=\"#77D914\">10m</font>입니다. 레벨마다 치유량 <font color=\"#77D914\">+1%</font>와 최대 체력 <font color=\"#77D914\">+2</font>를 얻습니다.",
+     "text": "치유의 오라: 주변 아군이 초당 1 HP를 회복합니다. 범위는 레벨당 0.5m씩 늘어나 1레벨은 0.5m, 20레벨은 10m입니다. 레벨마다 치유량 +1%와 최대 체력 +2를 얻습니다.",
      "isCapstone": false
     },
     {
-     "raw": "전투 준비 태세: <font color=\"#66CCFF\">아군</font> 근처(<font color=\"#77D914\">6m</font>)에 있을 때 <font color=\"#66CCFF\">재장전 속도</font> <font color=\"#77D914\">+%x%%</font>.",
-     "text": "전투 준비 태세: 아군 근처(6m)에 있을 때 재장전 속도 +%x%%.",
-     "isCapstone": false
-    },
-    {
-     "raw": "힐링 터치: <font color=\"#66CCFF\">주사기</font> 및 의료 무기 사용 시 <font color=\"#66CCFF\">치유</font> 효과 <font color=\"#77D914\">+%x%%</font>.",
-     "text": "힐링 터치: 주사기 및 의료 무기 사용 시 치유 효과 +%x%%.",
-     "isCapstone": false
-    },
-    {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: <font color=\"#66CCFF\">치유</font>의 오라 - <font color=\"#77D914\">6m</font> 이내의 <font color=\"#66CCFF\">아군</font>이 초당 <font color=\"#77D914\">1 HP</font>를 회복합니다.",
-     "text": "레벨 10: 치유의 오라 - 6m 이내의 아군이 초당 1 HP를 회복합니다.",
+     "raw": "레벨 <font color=\"#77D914\">10</font>: 치유의 오라가 초당 <font color=\"#77D914\">2 HP</font>를 회복합니다.",
+     "text": "레벨 10: 치유의 오라가 초당 2 HP를 회복합니다.",
      "isCapstone": true
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 기적의 회복 - <font color=\"#66CCFF\">치유</font> 시 <font color=\"#77D914\">5%</font> 확률로 대상의 <font color=\"#66CCFF\">체력</font>을 완전히 회복시킵니다.",
-     "text": "레벨 20: 기적의 회복 - 치유 시 5% 확률로 대상의 체력을 완전히 회복시킵니다.",
+     "raw": "레벨 <font color=\"#77D914\">20</font>: 의료 다트로 아군을 치유하면 <font color=\"#77D914\">6%</font> 확률로 대상의 체력을 완전히 회복시킵니다.",
+     "text": "레벨 20: 의료 다트로 아군을 치유하면 6% 확률로 대상의 체력을 완전히 회복시킵니다.",
      "isCapstone": true
     }
    ],
    "capstoneDescriptions": [
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: <font color=\"#66CCFF\">치유</font>의 오라 - <font color=\"#77D914\">6m</font> 이내의 <font color=\"#66CCFF\">아군</font>이 초당 <font color=\"#77D914\">1 HP</font>를 회복합니다.",
-     "text": "레벨 10: 치유의 오라 - 6m 이내의 아군이 초당 1 HP를 회복합니다.",
+     "raw": "레벨 <font color=\"#77D914\">10</font>: 치유의 오라가 초당 <font color=\"#77D914\">2 HP</font>를 회복합니다.",
+     "text": "레벨 10: 치유의 오라가 초당 2 HP를 회복합니다.",
      "isCapstone": true
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 기적의 회복 - <font color=\"#66CCFF\">치유</font> 시 <font color=\"#77D914\">5%</font> 확률로 대상의 <font color=\"#66CCFF\">체력</font>을 완전히 회복시킵니다.",
-     "text": "레벨 20: 기적의 회복 - 치유 시 5% 확률로 대상의 체력을 완전히 회복시킵니다.",
+     "raw": "레벨 <font color=\"#77D914\">20</font>: 의료 다트로 아군을 치유하면 <font color=\"#77D914\">6%</font> 확률로 대상의 체력을 완전히 회복시킵니다.",
+     "text": "레벨 20: 의료 다트로 아군을 치유하면 6% 확률로 대상의 체력을 완전히 회복시킵니다.",
      "isCapstone": true
     }
    ],
@@ -10066,10 +10059,10 @@
     {
      "key": "CelestialVitality",
      "name": "천상의 활력",
-     "standardDesc": "자신에게 시전하는 치유 효과가 8% 증가합니다.",
-     "deluxeDesc": "자신에게 시전하는 치유 효과가 16% 증가합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">자신</font>에게 시전하는 <font color=\"#66CCFF\">치유</font> 효과가 <font color=\"#77D914\">8%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">자신</font>에게 시전하는 <font color=\"#66CCFF\">치유</font> 효과가 <font color=\"#77D914\">16%</font> 증가합니다.",
+     "standardDesc": "자신에게 적용되는 치유 효과가 15% 증가합니다.",
+     "deluxeDesc": "디럭스. 자신에게 적용되는 치유 효과가 30% 증가합니다.",
+     "standardDescRaw": "자신에게 적용되는 치유 효과가 <font color=\"#77D914\">15%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 자신에게 적용되는 치유 효과가 <font color=\"#77D914\">30%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "SelfHealBonus",
@@ -10101,9 +10094,9 @@
      "key": "DivineFortitude",
      "name": "신성한 용기",
      "standardDesc": "최대 체력과 최대 방어력이 10% 증가합니다.",
-     "deluxeDesc": "디럭스. 최대 체력 및 최대 방어력이 25% 증가합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">최대 체력</font>과 최대 방어력이 <font color=\"#77D914\">10%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. <font color=\"#66CCFF\">최대 체력</font> 및 최대 방어력이 <font color=\"#77D914\">25%</font> 증가합니다.",
+     "deluxeDesc": "디럭스. 최대 체력과 최대 방어력이 20% 증가합니다.",
+     "standardDescRaw": "최대 <font color=\"#FF6666\">체력</font>과 최대 <font color=\"#4444FF\">방어력</font>이 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 최대 <font color=\"#FF6666\">체력</font>과 최대 <font color=\"#4444FF\">방어력</font>이 <font color=\"#77D914\">20%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "HealthBonus",
@@ -10148,10 +10141,10 @@
     {
      "key": "HolyResilience",
      "name": "신성한 회복력",
-     "standardDesc": "잃은 체력에 비례하여 최대 5%의 피해 저항을 얻습니다.",
-     "deluxeDesc": "디럭스. 잃은 체력에 비례하여 최대 10%의 피해 저항을 얻습니다.",
-     "standardDescRaw": "잃은 <font color=\"#66CCFF\">체력</font>에 비례하여 최대 <font color=\"#77D914\">5%</font>의 <font color=\"#66CCFF\">피해 저항</font>을 얻습니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. 잃은 <font color=\"#66CCFF\">체력</font>에 비례하여 최대 <font color=\"#77D914\">10%</font>의 <font color=\"#66CCFF\">피해 저항</font>을 얻습니다.",
+     "standardDesc": "잃은 체력에 비례해 최대 5%의 피해 저항을 얻습니다.",
+     "deluxeDesc": "디럭스. 잃은 체력에 비례해 최대 10%의 피해 저항을 얻습니다.",
+     "standardDescRaw": "잃은 체력에 비례해 최대 <font color=\"#77D914\">5%</font>의 <font color=\"#87CEEB\">피해 저항</font>을 얻습니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 잃은 체력에 비례해 최대 <font color=\"#77D914\">10%</font>의 <font color=\"#87CEEB\">피해 저항</font>을 얻습니다.",
      "rawValues": [
       {
        "key": "MaxResistance",
@@ -10180,60 +10173,12 @@
      "icon": "icons/skills/HolyResilience.png"
     },
     {
-     "key": "MartyrBlessing",
-     "name": "순교자의 축복",
-     "standardDesc": "아군 치유마다 피해 저항 5%, 최대 10%.",
-     "deluxeDesc": "아군 치유마다 피해 저항 8%, 최대 20%.",
-     "standardDescRaw": "<font color=\"#66CCFF\">아군</font> <font color=\"#66CCFF\">치유</font>마다 <font color=\"#66CCFF\">피해 저항</font> <font color=\"#77D914\">5%</font>, 최대 <font color=\"#77D914\">10%</font>.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">아군</font> <font color=\"#66CCFF\">치유</font>마다 <font color=\"#66CCFF\">피해 저항</font> <font color=\"#77D914\">8%</font>, 최대 <font color=\"#77D914\">20%</font>.",
-     "rawValues": [
-      {
-       "key": "ShieldPerHeal",
-       "label": "치유 당 보호막",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "ShieldPerHeal",
-       "label": "치유 당 보호막",
-       "value": 8,
-       "unit": "count",
-       "display": "8"
-      },
-      {
-       "key": "MaxShield",
-       "label": "최대 보호막",
-       "value": 10,
-       "unit": "count",
-       "display": "10"
-      },
-      {
-       "key": "MaxShield",
-       "label": "최대 보호막",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/MartyrBlessing.png"
-    },
-    {
      "key": "OverflowingGrace",
      "name": "넘치는 은혜",
-     "standardDesc": "아군을 치유하면 대상 아군에게 +3 방어력을 회복시켜 줍니다.",
-     "deluxeDesc": "디럭스. 아군을 치유하면 대상 아군에게 +8 방어력을 회복시켜 줍니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>하면 대상 <font color=\"#66CCFF\">아군</font>에게 <font color=\"#77D914\">+3</font> 방어력을 회복시켜 줍니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. <font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>하면 대상 <font color=\"#66CCFF\">아군</font>에게 <font color=\"#77D914\">+8</font> 방어력을 회복시켜 줍니다.",
+     "standardDesc": "아군을 실제로 치유할 때마다 대상의 방어력을 1 회복시킵니다.",
+     "deluxeDesc": "디럭스. 아군을 실제로 치유할 때마다 대상의 방어력을 2 회복시킵니다.",
+     "standardDescRaw": "아군을 실제로 치유할 때마다 대상의 <font color=\"#4444FF\">방어력</font>을 <font color=\"#77D914\">1</font> 회복시킵니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 아군을 실제로 치유할 때마다 대상의 <font color=\"#4444FF\">방어력</font>을 <font color=\"#77D914\">2</font> 회복시킵니다.",
      "rawValues": [
       {
        "key": "ArmorGrant",
@@ -10264,10 +10209,10 @@
     {
      "key": "PhoenixPrayer",
      "name": "피닉스 기도",
-     "standardDesc": "아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 25%를 보너스 도쉬로 환산하여 획득합니다.",
-     "deluxeDesc": "디럭스. 아군을 치유하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 아군을 치유해 준 HP 총량의 50%를 보너스 도쉬로 환산하여 획득합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 <font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>해 준 HP 총량의 <font color=\"#77D914\">25%</font>를 보너스 도쉬로 환산하여 획득합니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. <font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>하면 신의 은총이 누적됩니다. 웨이브가 끝날 때, 그동안 <font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>해 준 HP 총량의 <font color=\"#77D914\">50%</font>를 보너스 도쉬로 환산하여 획득합니다.",
+     "standardDesc": "웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 7%를 보너스 도쉬로 받습니다.",
+     "deluxeDesc": "디럭스. 웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 15%를 보너스 도쉬로 받습니다.",
+     "standardDescRaw": "웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 <font color=\"#77D914\">7%</font>를 보너스 도쉬로 받습니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 <font color=\"#77D914\">15%</font>를 보너스 도쉬로 받습니다.",
      "rawValues": [
       {
        "key": "DoshConversion",
@@ -10298,10 +10243,10 @@
     {
      "key": "SanctifiedRounds",
      "name": "성스러운 라운드",
-     "standardDesc": "아군을 치유한 직후, 5초 동안 자신의 피해량이 10% 증가합니다.",
-     "deluxeDesc": "디럭스. 아군을 치유한 직후, 5초 동안 자신의 피해량이 25% 증가합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>한 직후, <font color=\"#77D914\">5초</font> 동안 <font color=\"#66CCFF\">자신</font>의 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">10%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. <font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>한 직후, <font color=\"#77D914\">5초</font> 동안 <font color=\"#66CCFF\">자신</font>의 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">25%</font> 증가합니다.",
+     "standardDesc": "아군을 치유한 뒤 5초 동안 피해량이 10% 증가합니다.",
+     "deluxeDesc": "디럭스. 아군을 치유한 뒤 5초 동안 피해량이 20% 증가합니다.",
+     "standardDescRaw": "아군을 치유한 뒤 <font color=\"#77D914\">5초</font> 동안 <font color=\"#FF4444\">피해량</font>이 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 아군을 치유한 뒤 <font color=\"#77D914\">5초</font> 동안 <font color=\"#FF4444\">피해량</font>이 <font color=\"#77D914\">20%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -10330,53 +10275,12 @@
      "icon": "icons/skills/SanctifiedRounds.png"
     },
     {
-     "key": "TriageExpert",
-     "name": "분류 전문가",
-     "standardDesc": "아군을 치유할 때마다 무기의 탄약이 회복됩니다. 아군을 200 HP만큼 회복시킬 때마다 무기의 탄약이 재충전됩니다.",
-     "deluxeDesc": "디럭스. 아군을 치유할 때마다 무기의 탄약이 회복됩니다. 아군을 100 HP만큼 회복시킬 때마다 무기의 탄약이 재충전됩니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>할 때마다 무기의 <font color=\"#66CCFF\">탄약</font>이 회복됩니다. <font color=\"#66CCFF\">아군</font>을 <font color=\"#77D914\">200 HP</font>만큼 회복시킬 때마다 무기의 <font color=\"#66CCFF\">탄약</font>이 재충전됩니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. <font color=\"#66CCFF\">아군</font>을 <font color=\"#66CCFF\">치유</font>할 때마다 무기의 <font color=\"#66CCFF\">탄약</font>이 회복됩니다. <font color=\"#66CCFF\">아군</font>을 <font color=\"#77D914\">100 HP</font>만큼 회복시킬 때마다 무기의 <font color=\"#66CCFF\">탄약</font>이 재충전됩니다.",
-     "rawValues": [
-      {
-       "key": "AmmoDivider",
-       "label": "탄약 나눔값",
-       "value": 30.0,
-       "unit": "count",
-       "display": "30"
-      },
-      {
-       "key": "HealthThreshold",
-       "label": "체력 임계값",
-       "value": 200,
-       "unit": "count",
-       "display": "200"
-      },
-      {
-       "key": "HealthThreshold",
-       "label": "체력 임계값",
-       "value": 100,
-       "unit": "count",
-       "display": "100"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TriageExpert.png"
-    },
-    {
      "key": "UnwaveringFaith",
      "name": "흔들림 없는 믿음",
-     "standardDesc": "당신은 클롯의 잡기에 면역이 됩니다.",
-     "deluxeDesc": "디럭스. 당신은 클롯의 잡기에 완벽히 면역이 됩니다.",
-     "standardDescRaw": "당신은 클롯의 잡기에 면역이 됩니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. 당신은 클롯의 잡기에 완벽히 면역이 됩니다.",
+     "standardDesc": "클롯의 잡기에 붙잡히지 않습니다.",
+     "deluxeDesc": "디럭스. 클롯의 잡기에 붙잡히지 않습니다.",
+     "standardDescRaw": "클롯의 잡기에 붙잡히지 않습니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 클롯의 잡기에 붙잡히지 않습니다.",
      "rawValues": [],
      "hasKorText": true,
      "note": null,
@@ -10392,10 +10296,10 @@
     {
      "key": "WingsOfMercy",
      "name": "자비의 날개",
-     "standardDesc": "주변 아군의 체력이 50% 미만일 때 이동 속도가 최대 10%까지 증가합니다.",
-     "deluxeDesc": "디럭스. 주변 아군의 체력이 25% 미만일 때 이동 속도가 최대 25%까지 증가합니다.",
-     "standardDescRaw": "주변 <font color=\"#66CCFF\">아군</font>의 <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">50%</font> 미만일 때 <font color=\"#66CCFF\">이동 속도</font>가 최대 <font color=\"#77D914\">10%</font>까지 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#B346EA\">디럭스</font>. 주변 <font color=\"#66CCFF\">아군</font>의 <font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">25%</font> 미만일 때 <font color=\"#66CCFF\">이동 속도</font>가 최대 <font color=\"#77D914\">25%</font>까지 증가합니다.",
+     "standardDesc": "8m 이내에서 체력이 40% 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 10%까지, 최대 3명에게 적용됩니다.",
+     "deluxeDesc": "디럭스. 8m 이내에서 체력이 40% 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 20%까지, 최대 3명에게 적용됩니다.",
+     "standardDescRaw": "<font color=\"#77D914\">8m</font> 이내에서 체력이 <font color=\"#77D914\">40%</font> 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 <font color=\"#77D914\">10%</font>까지, 최대 3명에게 적용됩니다.",
+     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> <font color=\"#77D914\">8m</font> 이내에서 체력이 <font color=\"#77D914\">40%</font> 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 <font color=\"#77D914\">20%</font>까지, 최대 3명에게 적용됩니다.",
      "rawValues": [
       {
        "key": "MaxSpeedBonus",
@@ -10445,7 +10349,7 @@
      "icon": "icons/skills/WingsOfMercy.png"
     }
    ],
-   "skillCount": 10,
+   "skillCount": 8,
    "verdict": {
     "tag": "적절",
     "note": "치유 특화, 이번 재조사에서 특이사항 없음.",
@@ -17245,10 +17149,10 @@
     {
      "key": "Untouchable",
      "name": "불가촉천민",
-     "standardDesc": "클롯 및 모든 클롯 변형에게 30%의 추가 피해를 입힙니다.",
-     "deluxeDesc": "클롯 및 모든 클롯 변형에게 60%의 추가 피해를 입힙니다.",
-     "standardDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "standardDesc": "클롯 및 모든 클롯 변형에게 25%의 추가 피해를 입힙니다.",
+     "deluxeDesc": "클롯 및 모든 클롯 변형에게 50%의 추가 피해를 입힙니다.",
+     "standardDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">25%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "deluxeDescRaw": "클롯 및 모든 클롯 변형에게 <font color=\"#77D914\">50%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
      "rawValues": [
       {
        "key": "Damage",
@@ -19177,420 +19081,9 @@
      "disabledNote": null,
      "noData": false,
      "icon": "icons/skills/AlloyRounds.png"
-    },
-    {
-     "key": "AnvilsEcho",
-     "name": "AnvilsEcho",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "HitInterval",
-       "label": "타격 간격",
-       "value": 5,
-       "unit": "seconds",
-       "display": "5초"
-      },
-      {
-       "key": "HitInterval",
-       "label": "타격 간격",
-       "value": 3,
-       "unit": "seconds",
-       "display": "3초"
-      },
-      {
-       "key": "EchoDamage",
-       "label": "메아리 피해량",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/AnvilsEcho.png"
-    },
-    {
-     "key": "GildedTouch",
-     "name": "GildedTouch",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "BaseDamage",
-       "label": "기본 피해량",
-       "value": 30.0,
-       "unit": "count",
-       "display": "30"
-      },
-      {
-       "key": "BaseDamage",
-       "label": "기본 피해량",
-       "value": 50.0,
-       "unit": "count",
-       "display": "50"
-      },
-      {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 20.0,
-       "unit": "count",
-       "display": "20"
-      },
-      {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 30.0,
-       "unit": "count",
-       "display": "30"
-      },
-      {
-       "key": "BaseRadius",
-       "label": "기본 범위",
-       "value": 150.0,
-       "unit": "distance",
-       "display": "150"
-      },
-      {
-       "key": "BaseRadius",
-       "label": "기본 범위",
-       "value": 200.0,
-       "unit": "distance",
-       "display": "200"
-      },
-      {
-       "key": "RadiusPerMilestone",
-       "label": "마일스톤 당 범위",
-       "value": 50.0,
-       "unit": "distance",
-       "display": "50"
-      },
-      {
-       "key": "RadiusPerMilestone",
-       "label": "마일스톤 당 범위",
-       "value": 60.0,
-       "unit": "distance",
-       "display": "60"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/GildedTouch.png"
-    },
-    {
-     "key": "HardenedPlate",
-     "name": "HardenedPlate",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/HardenedPlate.png"
-    },
-    {
-     "key": "MasterworkTechnique",
-     "name": "MasterworkTechnique",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 0.015,
-       "unit": "percent",
-       "display": "+1.5%"
-      },
-      {
-       "key": "DamagePerMilestone",
-       "label": "마일스톤 당 피해량",
-       "value": 0.03,
-       "unit": "percent",
-       "display": "+3%"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/MasterworkTechnique.png"
-    },
-    {
-     "key": "Overforge",
-     "name": "Overforge",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "StackThreshold",
-       "label": "스택 임계값",
-       "value": 10,
-       "unit": "count",
-       "display": "10"
-      },
-      {
-       "key": "BurstDamage",
-       "label": "버스트 피해량",
-       "value": 1.0,
-       "unit": "percent",
-       "display": "+100%"
-      },
-      {
-       "key": "BurstDamage",
-       "label": "버스트 피해량",
-       "value": 2.0,
-       "unit": "percent",
-       "display": "+200%"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/Overforge.png"
-    },
-    {
-     "key": "QuenchingStrike",
-     "name": "QuenchingStrike",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "BonusDamage",
-       "label": "보너스 피해량",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "BonusDamage",
-       "label": "보너스 피해량",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "BonusShotCount",
-       "label": "보너스 샷 횟수",
-       "value": 3,
-       "unit": "count",
-       "display": "3"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/QuenchingStrike.png"
-    },
-    {
-     "key": "Reclamation",
-     "name": "Reclamation",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "HealAmount",
-       "label": "치유량",
-       "value": 2,
-       "unit": "count",
-       "display": "2"
-      },
-      {
-       "key": "HealAmount",
-       "label": "치유량",
-       "value": 4,
-       "unit": "count",
-       "display": "4"
-      },
-      {
-       "key": "ArmorAmount",
-       "label": "방어구 량",
-       "value": 1,
-       "unit": "count",
-       "display": "1"
-      },
-      {
-       "key": "ArmorAmount",
-       "label": "방어구 량",
-       "value": 2,
-       "unit": "count",
-       "display": "2"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/Reclamation.png"
-    },
-    {
-     "key": "ShatterPoint",
-     "name": "ShatterPoint",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "DamageThreshold",
-       "label": "피해량 임계값",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "DamageThreshold",
-       "label": "피해량 임계값",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "BurstPercent",
-       "label": "버스트 퍼센트",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "BurstPercent",
-       "label": "버스트 퍼센트",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/ShatterPoint.png"
-    },
-    {
-     "key": "Soulbound",
-     "name": "Soulbound",
-     "standardDesc": null,
-     "deluxeDesc": null,
-     "standardDescRaw": null,
-     "deluxeDescRaw": null,
-     "rawValues": [
-      {
-       "key": "SoulboundDamagePerMilestone",
-       "label": "마일스톤 당 영혼귀속 피해량",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "SoulboundDamagePerMilestone",
-       "label": "마일스톤 당 영혼귀속 피해량",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "CrossDamagePerMilestone",
-       "label": "마일스톤 당 교차 피해량",
-       "value": 0.02,
-       "unit": "percent",
-       "display": "+2%"
-      },
-      {
-       "key": "CrossDamagePerMilestone",
-       "label": "마일스톤 당 교차 피해량",
-       "value": 0.04,
-       "unit": "percent",
-       "display": "+4%"
-      }
-     ],
-     "hasKorText": false,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": true,
-     "icon": "icons/skills/Soulbound.png"
     }
    ],
-   "skillCount": 10,
+   "skillCount": 1,
    "verdict": {
     "tag": "적절",
     "note": "유지 판정. MasterworkTechnique/Soulbound의 '마일스톤'은 퍼크 설명(무기로 100킬 달성마다 보너스)에 근거해 '무기별 100킬 단위'로 해석 — 점진적 성장형이라 극단적이지 않음.",
@@ -19962,56 +19455,197 @@
     }
    ],
    "valueSourceNote": null,
-   "role": "하이드라의 분노: 연사 속도 +%x%%.",
+   "role": "모든 무기 연사 속도가 레벨당 1.5% 증가합니다.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "하이드라의 분노: <font color=\"#66CCFF\">연사 속도</font> <font color=\"#77D914\">+%x%%</font>.",
-     "text": "하이드라의 분노: 연사 속도 +%x%%.",
+     "raw": "<font color=\"#66CCFF\">모든 무기 연사 속도</font>가 레벨당 <font color=\"#77D914\">1.5%</font> 증가합니다.",
+     "text": "모든 무기 연사 속도가 레벨당 1.5% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "뱀의 일격: <font color=\"#66CCFF\">관통력</font> <font color=\"#77D914\">+%x%%</font>.",
-     "text": "뱀의 일격: 관통력 +%x%%.",
+     "raw": "<font color=\"#66CCFF\">모든 무기 관통력</font>이 레벨당 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "text": "모든 무기 관통력이 레벨당 10% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "무한 <font color=\"#66CCFF\">탄약</font>: <font color=\"#66CCFF\">탄창 용량</font> <font color=\"#77D914\">+%x%%</font>.",
-     "text": "무한 탄약: 탄창 용량 +%x%%.",
+     "raw": "<font color=\"#66CCFF\">모든 무기의 탄창 용량</font>이 레벨당 <font color=\"#77D914\">1%</font> 증가합니다.",
+     "text": "모든 무기의 탄창 용량이 레벨당 1% 증가합니다.",
      "isCapstone": false
     },
     {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 트윈 스트라이크 - <font color=\"#66CCFF\">공격</font> 시 <font color=\"#77D914\">25%</font> 확률로 두 번 명중합니다.",
-     "text": "레벨 10: 트윈 스트라이크 - 공격 시 25% 확률로 두 번 명중합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 분노 모드 - <font color=\"#77D914\">75킬</font>마다 <font color=\"#77D914\">8초</font> 동안 분노 모드가 발동합니다: <font color=\"#66CCFF\">연사 속도</font> <font color=\"#77D914\">+100%</font> 및 <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">1.1</font>배.",
-     "text": "레벨 20: 분노 모드 - 75킬마다 8초 동안 분노 모드가 발동합니다: 연사 속도 +100% 및 피해량 1.1배.",
-     "isCapstone": true
+     "raw": "레벨 <font color=\"#77D914\">10</font>부터 <font color=\"#77D914\">100</font>회 처치할 때마다 히드라의 분노가 <font color=\"#77D914\">10초</font> 동안 발동합니다. 레벨 <font color=\"#77D914\">20</font>부터는 <font color=\"#77D914\">90초</font>마다 추가로 발동합니다. 발동이 겹치면 지속시간이 더해지며, 분노 중에는 모든 무기의 탄약이 소모되지 않습니다.",
+     "text": "레벨 10부터 100회 처치할 때마다 히드라의 분노가 10초 동안 발동합니다. 레벨 20부터는 90초마다 추가로 발동합니다. 발동이 겹치면 지속시간이 더해지며, 분노 중에는 모든 무기의 탄약이 소모되지 않습니다.",
+     "isCapstone": false
     }
    ],
-   "capstoneDescriptions": [
-    {
-     "raw": "레벨 <font color=\"#77D914\">10</font>: 트윈 스트라이크 - <font color=\"#66CCFF\">공격</font> 시 <font color=\"#77D914\">25%</font> 확률로 두 번 명중합니다.",
-     "text": "레벨 10: 트윈 스트라이크 - 공격 시 25% 확률로 두 번 명중합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "레벨 <font color=\"#77D914\">20</font>: 분노 모드 - <font color=\"#77D914\">75킬</font>마다 <font color=\"#77D914\">8초</font> 동안 분노 모드가 발동합니다: <font color=\"#66CCFF\">연사 속도</font> <font color=\"#77D914\">+100%</font> 및 <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">1.1</font>배.",
-     "text": "레벨 20: 분노 모드 - 75킬마다 8초 동안 분노 모드가 발동합니다: 연사 속도 +100% 및 피해량 1.1배.",
-     "isCapstone": true
-    }
-   ],
+   "capstoneDescriptions": [],
    "skills": [
     {
+     "key": "Bloodthirst",
+     "name": "강화 장약",
+     "standardDesc": "모든 샷건의 직격 피해가 5% 증가합니다.",
+     "deluxeDesc": "모든 샷건의 직격 피해가 8% 증가합니다.",
+     "standardDescRaw": "모든 샷건의 직격 피해가 <font color=\"#77D914\">5%</font> 증가합니다.",
+     "deluxeDescRaw": "모든 샷건의 직격 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "MaxDamageBonus",
+       "label": "최대 피해량 보너스",
+       "value": 0.3,
+       "unit": "percent",
+       "display": "+30%"
+      },
+      {
+       "key": "MaxDamageBonus",
+       "label": "최대 피해량 보너스",
+       "value": 0.6,
+       "unit": "percent",
+       "display": "+60%"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Bloodthirst.png"
+    },
+    {
+     "key": "HuntDown",
+     "name": "근거리 파쇄",
+     "standardDesc": "적과의 거리가 6m 이내일 때 샷건 피해가 8% 증가합니다.",
+     "deluxeDesc": "적과의 거리가 6m 이내일 때 샷건 피해가 12% 증가합니다.",
+     "standardDescRaw": "적과의 거리가 <font color=\"#77D914\">6m</font> 이내일 때 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
+     "deluxeDescRaw": "적과의 거리가 <font color=\"#77D914\">6m</font> 이내일 때 샷건 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "DamagePerStack",
+       "label": "스택 당 피해량",
+       "value": 0.03,
+       "unit": "percent",
+       "display": "+3%"
+      },
+      {
+       "key": "DamagePerStack",
+       "label": "스택 당 피해량",
+       "value": 0.05,
+       "unit": "percent",
+       "display": "+5%"
+      },
+      {
+       "key": "MaxStacks",
+       "label": "최대 스택 수",
+       "value": 5,
+       "unit": "count",
+       "display": "5"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": true,
+     "patchNote": "구 0.05/0.10(5스택+50%) → 5스택+25%. CascadingMassacre와 합산 시 최대 +65%로 억제(구 +125%)",
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/HuntDown.png"
+    },
+    {
+     "key": "LernaeanImmortality",
+     "name": "두개골 파쇄",
+     "standardDesc": "샷건으로 머리를 맞히면 헤드샷 피해가 8% 증가합니다.",
+     "deluxeDesc": "샷건으로 머리를 맞히면 헤드샷 피해가 12% 증가합니다.",
+     "standardDescRaw": "샷건으로 머리를 맞히면 헤드샷 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
+     "deluxeDescRaw": "샷건으로 머리를 맞히면 헤드샷 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "InvulnDuration",
+       "label": "무적 지속시간",
+       "value": 3.0,
+       "unit": "seconds",
+       "display": "3초"
+      },
+      {
+       "key": "InvulnDuration",
+       "label": "무적 지속시간",
+       "value": 5.0,
+       "unit": "seconds",
+       "display": "5초"
+      },
+      {
+       "key": "DamageBoostMult",
+       "label": "피해량 증폭 배율",
+       "value": 2.0,
+       "unit": "multiplier",
+       "display": "×2"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/LernaeanImmortality.png"
+    },
+    {
+     "key": "Overkill",
+     "name": "대형 사냥",
+     "standardDesc": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 샷건 피해가 8% 증가합니다.",
+     "deluxeDesc": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 샷건 피해가 12% 증가합니다.",
+     "standardDescRaw": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
+     "deluxeDescRaw": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 샷건 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
+     "rawValues": [
+      {
+       "key": "ExcessCarryMult",
+       "label": "초과 휴대 배율",
+       "value": 0.5,
+       "unit": "multiplier",
+       "display": "×0.5"
+      },
+      {
+       "key": "ExcessCarryMult",
+       "label": "초과 휴대 배율",
+       "value": 0.75,
+       "unit": "multiplier",
+       "display": "×0.75"
+      },
+      {
+       "key": "MaxStoredDamage",
+       "label": "최대 저장된 피해량",
+       "value": 500,
+       "unit": "count",
+       "display": "500"
+      }
+     ],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Overkill.png"
+    },
+    {
      "key": "ApexPredator",
-     "name": "최상위 포식자",
-     "standardDesc": "체력이 30% 미만인 적에게 +50% 추가 피해를 줍니다.",
-     "deluxeDesc": "체력이 30% 미만인 적에게 +100% 추가 피해를 줍니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">30%</font> 미만인 적에게 <font color=\"#77D914\">+50%</font> 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">체력</font>이 <font color=\"#77D914\">30%</font> 미만인 적에게 <font color=\"#77D914\">+100%</font> 추가 <font color=\"#66CCFF\">피해</font>를 줍니다.",
+     "name": "마무리 산탄",
+     "standardDesc": "보스가 아닌 적의 체력이 30% 미만이면 샷건 피해가 8% 증가합니다.",
+     "deluxeDesc": "보스가 아닌 적의 체력이 30% 미만이면 샷건 피해가 12% 증가합니다.",
+     "standardDescRaw": "보스가 아닌 적의 체력이 <font color=\"#77D914\">30%</font> 미만이면 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
+     "deluxeDescRaw": "보스가 아닌 적의 체력이 <font color=\"#77D914\">30%</font> 미만이면 샷건 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "DamageBonus",
@@ -20047,46 +19681,12 @@
      "icon": "icons/skills/ApexPredator.png"
     },
     {
-     "key": "Bloodthirst",
-     "name": "피의 갈증",
-     "standardDesc": "잃은 체력에 비례하여 최대 +30%의 추가 피해를 줍니다. 체력이 낮을수록 피해량이 증가합니다.",
-     "deluxeDesc": "잃은 체력에 비례하여 최대 +60%의 추가 피해를 줍니다. 체력이 낮을수록 피해량이 증가합니다.",
-     "standardDescRaw": "잃은 <font color=\"#66CCFF\">체력</font>에 비례하여 최대 <font color=\"#77D914\">+30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다. <font color=\"#66CCFF\">체력</font>이 낮을수록 <font color=\"#66CCFF\">피해량</font>이 증가합니다.",
-     "deluxeDescRaw": "잃은 <font color=\"#66CCFF\">체력</font>에 비례하여 최대 <font color=\"#77D914\">+60%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 줍니다. <font color=\"#66CCFF\">체력</font>이 낮을수록 <font color=\"#66CCFF\">피해량</font>이 증가합니다.",
-     "rawValues": [
-      {
-       "key": "MaxDamageBonus",
-       "label": "최대 피해량 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "MaxDamageBonus",
-       "label": "최대 피해량 보너스",
-       "value": 0.6,
-       "unit": "percent",
-       "display": "+60%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Bloodthirst.png"
-    },
-    {
      "key": "CascadingMassacre",
-     "name": "연쇄 학살",
-     "standardDesc": "2초 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 +5% (최대 5스택, +40%).",
-     "deluxeDesc": "2초 이내에 연속으로 적을 처치하면 중첩되는 피해량 보너스를 얻습니다: 스택당 +8% (최대 5스택, +75%).",
-     "standardDescRaw": "<font color=\"#77D914\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 <font color=\"#66CCFF\">피해량</font> 보너스를 얻습니다: 스택당 <font color=\"#77D914\">+5%</font> (최대 <font color=\"#77D914\">5</font>스택, <font color=\"#77D914\">+40%</font>).",
-     "deluxeDescRaw": "<font color=\"#77D914\">2초</font> 이내에 연속으로 적을 처치하면 중첩되는 <font color=\"#66CCFF\">피해량</font> 보너스를 얻습니다: 스택당 <font color=\"#77D914\">+8%</font> (최대 <font color=\"#77D914\">5</font>스택, <font color=\"#77D914\">+75%</font>).",
+     "name": "추격탄",
+     "standardDesc": "같은 적을 샷건으로 연속 명중할 때마다 피해가 1%씩 증가합니다. 최대 5%까지 누적되며, 2초 동안 명중하지 못하면 초기화됩니다.",
+     "deluxeDesc": "같은 적을 샷건으로 연속 명중할 때마다 피해가 2%씩 증가합니다. 최대 10%까지 누적되며, 2초 동안 명중하지 못하면 초기화됩니다.",
+     "standardDescRaw": "같은 적을 샷건으로 연속 명중할 때마다 피해가 <font color=\"#77D914\">1%</font>씩 증가합니다. 최대 <font color=\"#77D914\">5%</font>까지 누적되며, <font color=\"#77D914\">2초</font> 동안 명중하지 못하면 초기화됩니다.",
+     "deluxeDescRaw": "같은 적을 샷건으로 연속 명중할 때마다 피해가 <font color=\"#77D914\">2%</font>씩 증가합니다. 최대 <font color=\"#77D914\">10%</font>까지 누적되며, <font color=\"#77D914\">2초</font> 동안 명중하지 못하면 초기화됩니다.",
      "rawValues": [
       {
        "key": "DamagePerStack",
@@ -20129,169 +19729,12 @@
      "icon": "icons/skills/CascadingMassacre.png"
     },
     {
-     "key": "EndlessRampage",
-     "name": "끝없는 광란",
-     "standardDesc": "ZED 타임이 +50% 더 오래 지속됩니다.",
-     "deluxeDesc": "ZED 타임이 +100% 더 오래 지속됩니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font>이 <font color=\"#77D914\">+50%</font> 더 오래 지속됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font>이 <font color=\"#77D914\">+100%</font> 더 오래 지속됩니다.",
-     "rawValues": [
-      {
-       "key": "ZedTimeExtension",
-       "label": "ZED타임 연장",
-       "value": 0.25,
-       "unit": "seconds",
-       "display": "0.25초"
-      },
-      {
-       "key": "ZedTimeExtension",
-       "label": "ZED타임 연장",
-       "value": 0.5,
-       "unit": "seconds",
-       "display": "0.5초"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 0.500000; 구 1.000000",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/EndlessRampage.png"
-    },
-    {
-     "key": "HuntDown",
-     "name": "헌트 다운",
-     "standardDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 +3%씩 증가합니다. 최대 3 스택(+25%)까지 중첩됩니다.",
-     "deluxeDesc": "동일한 적을 연속해서 공격하면 타격당 피해량이 +5%씩 증가합니다. 최대 5 스택(+50%)까지 중첩됩니다.",
-     "standardDescRaw": "동일한 적을 연속해서 <font color=\"#66CCFF\">공격</font>하면 타격당 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+3%</font>씩 증가합니다. 최대 <font color=\"#77D914\">3</font> 스택(<font color=\"#77D914\">+25%</font>)까지 중첩됩니다.",
-     "deluxeDescRaw": "동일한 적을 연속해서 <font color=\"#66CCFF\">공격</font>하면 타격당 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+5%</font>씩 증가합니다. 최대 <font color=\"#77D914\">5</font> 스택(<font color=\"#77D914\">+50%</font>)까지 중첩됩니다.",
-     "rawValues": [
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.03,
-       "unit": "percent",
-       "display": "+3%"
-      },
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "MaxStacks",
-       "label": "최대 스택 수",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "구 0.05/0.10(5스택+50%) → 5스택+25%. CascadingMassacre와 합산 시 최대 +65%로 억제(구 +125%)",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/HuntDown.png"
-    },
-    {
-     "key": "LernaeanImmortality",
-     "name": "레르나이아 불멸성",
-     "standardDesc": "웨이브당 한 번, 치명적인 피해를 입어도 1 HP로 버텨내며 3초 동안 무적이 되고 피해량이 2배가 됩니다.",
-     "deluxeDesc": "웨이브당 한 번, 치명적인 피해를 입어도 1 HP로 버텨내며 5초 동안 무적이 되고 피해량이 2배가 됩니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">웨이브당</font> 한 번, 치명적인 <font color=\"#66CCFF\">피해</font>를 입어도 <font color=\"#77D914\">1 HP</font>로 버텨내며 <font color=\"#77D914\">3초</font> 동안 무적이 되고 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">2</font>배가 됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">웨이브당</font> 한 번, 치명적인 <font color=\"#66CCFF\">피해</font>를 입어도 <font color=\"#77D914\">1 HP</font>로 버텨내며 <font color=\"#77D914\">5초</font> 동안 무적이 되고 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">2</font>배가 됩니다.",
-     "rawValues": [
-      {
-       "key": "InvulnDuration",
-       "label": "무적 지속시간",
-       "value": 3.0,
-       "unit": "seconds",
-       "display": "3초"
-      },
-      {
-       "key": "InvulnDuration",
-       "label": "무적 지속시간",
-       "value": 5.0,
-       "unit": "seconds",
-       "display": "5초"
-      },
-      {
-       "key": "DamageBoostMult",
-       "label": "피해량 증폭 배율",
-       "value": 2.0,
-       "unit": "multiplier",
-       "display": "×2"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/LernaeanImmortality.png"
-    },
-    {
-     "key": "Overkill",
-     "name": "과잉살",
-     "standardDesc": "적을 처치하고 남은 잉여(초과) 피해량의 50%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관).",
-     "deluxeDesc": "적을 처치하고 남은 잉여(초과) 피해량의 75%가 다음 공격의 피해량에 추가됩니다. (최대 500까지 보관).",
-     "standardDescRaw": "적을 처치하고 남은 잉여(초과) <font color=\"#66CCFF\">피해량</font>의 <font color=\"#77D914\">50%</font>가 다음 <font color=\"#66CCFF\">공격</font>의 <font color=\"#66CCFF\">피해량</font>에 추가됩니다. (최대 <font color=\"#77D914\">500</font>까지 보관).",
-     "deluxeDescRaw": "적을 처치하고 남은 잉여(초과) <font color=\"#66CCFF\">피해량</font>의 <font color=\"#77D914\">75%</font>가 다음 <font color=\"#66CCFF\">공격</font>의 <font color=\"#66CCFF\">피해량</font>에 추가됩니다. (최대 <font color=\"#77D914\">500</font>까지 보관).",
-     "rawValues": [
-      {
-       "key": "ExcessCarryMult",
-       "label": "초과 휴대 배율",
-       "value": 0.5,
-       "unit": "multiplier",
-       "display": "×0.5"
-      },
-      {
-       "key": "ExcessCarryMult",
-       "label": "초과 휴대 배율",
-       "value": 0.75,
-       "unit": "multiplier",
-       "display": "×0.75"
-      },
-      {
-       "key": "MaxStoredDamage",
-       "label": "최대 저장된 피해량",
-       "value": 500,
-       "unit": "count",
-       "display": "500"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Overkill.png"
-    },
-    {
      "key": "ReflectedFury",
-     "name": "반사된 분노",
-     "standardDesc": "피격 시, 받은 피해의 50%만큼을 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 30초.",
-     "deluxeDesc": "피격 시, 받은 피해의 100%를 반경 4미터 내의 모든 적에게 되돌려줍니다. 재사용 대기시간: 30초.",
-     "standardDescRaw": "<font color=\"#FFD700\">피격 시</font>, 받은 <font color=\"#66CCFF\">피해</font>의 <font color=\"#77D914\">50%</font>만큼을 반경 <font color=\"#77D914\">4미터</font> 내의 모든 적에게 되돌려줍니다. <font color=\"#FFD700\">재사용 대기시간</font>: <font color=\"#77D914\">30초</font>.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">피격 시</font>, 받은 <font color=\"#66CCFF\">피해</font>의 <font color=\"#77D914\">100%</font>를 반경 <font color=\"#77D914\">4미터</font> 내의 모든 적에게 되돌려줍니다. <font color=\"#FFD700\">재사용 대기시간</font>: <font color=\"#77D914\">30초</font>.",
+     "name": "침착한 일격",
+     "standardDesc": "0.75초 동안 사격하지 않은 뒤 발사한 샷건의 첫 명중 피해가 10% 증가합니다.",
+     "deluxeDesc": "0.75초 동안 사격하지 않은 뒤 발사한 샷건의 첫 명중 피해가 15% 증가합니다.",
+     "standardDescRaw": "<font color=\"#77D914\">0.75초</font> 동안 사격하지 않은 뒤 발사한 샷건의 첫 명중 피해가 <font color=\"#77D914\">10%</font> 증가합니다.",
+     "deluxeDescRaw": "<font color=\"#77D914\">0.75초</font> 동안 사격하지 않은 뒤 발사한 샷건의 첫 명중 피해가 <font color=\"#77D914\">15%</font> 증가합니다.",
      "rawValues": [
       {
        "key": "DamageReflectMult",
@@ -20334,69 +19777,41 @@
      "icon": "icons/skills/ReflectedFury.png"
     },
     {
-     "key": "SymphonyOfSlaughter",
-     "name": "학살의 교향곡",
-     "standardDesc": "10초 이내에 5킬을 달성하면 5초 동안 이동 속도가 30% 증가합니다.",
-     "deluxeDesc": "10초 이내에 5킬을 달성하면 8초 동안 이동 속도가 50% 증가합니다.",
-     "standardDescRaw": "<font color=\"#77D914\">10초</font> 이내에 <font color=\"#77D914\">5킬</font>을 달성하면 <font color=\"#77D914\">5초</font> 동안 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">30%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#77D914\">10초</font> 이내에 <font color=\"#77D914\">5킬</font>을 달성하면 <font color=\"#77D914\">8초</font> 동안 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">50%</font> 증가합니다.",
+     "key": "EndlessRampage",
+     "name": "분노 집중",
+     "standardDesc": "히드라의 분노가 지속되는 동안 샷건 피해가 5% 증가합니다.",
+     "deluxeDesc": "히드라의 분노가 지속되는 동안 샷건 피해가 8% 증가합니다.",
+     "standardDescRaw": "히드라의 분노가 지속되는 동안 샷건 피해가 <font color=\"#77D914\">5%</font> 증가합니다.",
+     "deluxeDescRaw": "히드라의 분노가 지속되는 동안 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
      "rawValues": [
       {
-       "key": "SpeedBoost",
-       "label": "속도 증폭",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
+       "key": "ZedTimeExtension",
+       "label": "ZED타임 연장",
+       "value": 0.25,
+       "unit": "seconds",
+       "display": "0.25초"
       },
       {
-       "key": "SpeedBoost",
-       "label": "속도 증폭",
+       "key": "ZedTimeExtension",
+       "label": "ZED타임 연장",
        "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "BoostDuration",
-       "label": "증폭 지속시간",
-       "value": 5.0,
        "unit": "seconds",
-       "display": "5초"
-      },
-      {
-       "key": "BoostDuration",
-       "label": "증폭 지속시간",
-       "value": 8.0,
-       "unit": "seconds",
-       "display": "8초"
-      },
-      {
-       "key": "KillsRequired",
-       "label": "처치 필요",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "KillWindow",
-       "label": "처치 시간창",
-       "value": 10.0,
-       "unit": "seconds",
-       "display": "10초"
+       "display": "0.5초"
       }
      ],
      "hasKorText": true,
      "note": null,
-     "isPatched": false,
-     "patchNote": null,
+     "isPatched": true,
+     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 0.500000; 구 1.000000",
      "textFixed": false,
      "disabled": false,
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/SymphonyOfSlaughter.png"
+     "icon": "icons/skills/EndlessRampage.png"
     }
    ],
-   "skillCount": 9,
+   "skillCount": 8,
    "verdict": {
     "tag": "적절 (너프 완료)",
     "note": "CascadingMassacre+HuntDown 스택 합산이 +125%까지 나와 패시브 너프 취지를 훼손해 +65%로 조정 완료.",
@@ -23416,11 +22831,11 @@
  "meta": {
   "advancedPerkCount": 47,
   "basePerkCount": 10,
-  "totalSkills": 460,
+  "totalSkills": 447,
   "release": {
-   "version": "10.09.14",
+   "version": "10.10.13",
    "workshopId": "3809067086",
-   "publishedUtc": "2026-10-09T11:49:08.4485834Z",
+   "publishedUtc": "2026-10-10 오전 8:21:21",
    "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
    "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
    "serverGameConfigDiffers": true
