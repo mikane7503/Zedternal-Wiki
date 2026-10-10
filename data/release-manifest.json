@@ -4,8 +4,8 @@
   "version": "10.10.16",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-10T11:05:12.0046338Z",
-  "releaseReportId": "20261010-200156-2d12a5b5",
+  "publishedUtc": "2026-10-10T11:29:45.7502095Z",
+  "releaseReportId": "20261010-202630-a859b476",
   "releaseSourceSnapshotSha256": "5b225fee89a2b1604615252e62ae8c2128a3d94570df26d37fcf40f28d9c0bab",
   "uploadedFiles": [
     {
@@ -21,7 +21,7 @@
     {
       "path": "BrewedPC\\ZedternalTempered.u",
       "size": 21030664,
-      "sha256": "5b5cd29e9222dd123e2b65ea243eed898d34c4de3101d22c57ab8986d8c95b4d"
+      "sha256": "47e6851c3a04af92614ec5487f878925344f33b455d8a0dc1eafa73e74c27ff2"
     },
     {
       "path": "BrewedPC\\ZedternalTemperedPerkIcons.upk",
