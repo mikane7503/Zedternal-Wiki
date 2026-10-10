@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "product": "Zedternal Tempered",
-  "version": "10.10.15",
+  "version": "10.10.16",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-10T10:42:39.7385699Z",
-  "releaseReportId": "20261010-193927-d68ef4c9",
-  "releaseSourceSnapshotSha256": "2d428f937bcf1f9d0acc5e464f85f70fdb65d79d5a8a5e2d6483743dbf877f77",
+  "publishedUtc": "2026-10-10T11:05:12.0046338Z",
+  "releaseReportId": "20261010-200156-2d12a5b5",
+  "releaseSourceSnapshotSha256": "5b225fee89a2b1604615252e62ae8c2128a3d94570df26d37fcf40f28d9c0bab",
   "uploadedFiles": [
     {
       "path": "BrewedPC\\ZedternalRBPerkpackage_Menus.upk",
@@ -20,8 +20,8 @@
     },
     {
       "path": "BrewedPC\\ZedternalTempered.u",
-      "size": 21008009,
-      "sha256": "2bb96c0e6c9ca3c0efc2521e89d54cda6d410632d3d368bb5483a8b34f3170b2"
+      "size": 21030664,
+      "sha256": "5b5cd29e9222dd123e2b65ea243eed898d34c4de3101d22c57ab8986d8c95b4d"
     },
     {
       "path": "BrewedPC\\ZedternalTemperedPerkIcons.upk",
