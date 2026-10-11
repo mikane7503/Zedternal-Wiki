@@ -486,6 +486,11 @@ function renderReleaseFooter() {
   const footer = document.getElementById("releaseFoot");
   if (!footer) return;
   const release = DATA.meta && DATA.meta.release;
+  if (release && release.publicationState === "unpublished-draft") {
+    const sourceVersion = release.sourceVersion || release.version || "미게시";
+    footer.textContent = `데이터 기준: Zedternal Tempered v${sourceVersion} 로컬 소스 초안 (Workshop 공개 전) · 퍼크·스킬 설명과 기본 수치 기준`;
+    return;
+  }
   if (!release || !release.version || release.version === "미연동") {
     footer.textContent = "데이터 기준: 마지막 공개 빌드 정보를 아직 연결하지 않았습니다.";
     return;

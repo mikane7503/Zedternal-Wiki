@@ -28,8 +28,9 @@ def main():
 
     for perk in data.get("basePerks", []):
         section = (
-            build.ci_lookup(kor, f"ZUTUpgrade_Perk_Base_{perk['key']}")
+            build.ci_lookup(kor, f"ZTWrapper_Perk_{perk['key']}")
             or build.ci_lookup(kor, f"DKWrapper_Perk_{perk['key']}")
+            or build.ci_lookup(kor, f"ZUTUpgrade_Perk_Base_{perk['key']}")
             or build.ci_lookup(reborn, f"WMUpgrade_Perk_{perk['key']}")
             or {}
         )
@@ -75,6 +76,10 @@ def main():
             if skill["key"].lower() in retired_skills:
                 failures.append(f"retired skill is listed: {perk['key']}/{skill['key']}")
             localized = (
+                build.ci_lookup(reborn, f"WMUpgrade_Skill_{skill['key']}")
+                if perk["key"] == "Taskmaster" and skill["key"] == "Tank"
+                else None
+            ) or (
                 build.ci_lookup(kor, f"ZTUpgrade_Skill_{skill['key']}")
                 or build.ci_lookup(kor, f"DKUpgrade_Skill_{skill['key']}")
                 or {}

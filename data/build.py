@@ -60,6 +60,17 @@ def current_release_metadata():
     }
 
 
+def current_source_version():
+    version_path = os.path.join(os.path.dirname(SOURCE_DIR), "Tempered-Version.json")
+    if not os.path.isfile(version_path):
+        return ""
+    try:
+        with open(version_path, encoding="utf-8-sig") as stream:
+            return str(json.load(stream).get("Version", ""))
+    except (OSError, ValueError, TypeError):
+        return ""
+
+
 INI_MAIN = preferred_file(SOURCE_DIR, "KFZedternalUnlimited.ini", "KFZedternalUnlimited.ini")
 INI_BALANCE = preferred_file(
     SOURCE_DIR, "KFZedternalUnlimited_Balance.ini", "KFZedternalUnlimited_Balance.ini"
@@ -172,6 +183,9 @@ PERK_ICON_FALLBACKS = {
 
 
 def skill_allows_deluxe(short):
+    # Rack 'em Up is globally standard-only for both Gunslinger and Sharpshooter.
+    if short.lower() == "rackemup":
+        return False
     class_path = next((
         os.path.join(SOURCE_CLASS_DIR, f"{prefix}{short}.uc")
         for prefix in ("ZUTUpgrade_Skill_", "ZTUpgrade_Skill_")
@@ -180,7 +194,13 @@ def skill_allows_deluxe(short):
     if class_path is None:
         return True
     with open(class_path, encoding="utf-8-sig") as stream:
-        return not re.search(r"\bbAllowDeluxe\s*=\s*False\b", stream.read(), re.IGNORECASE)
+        source = stream.read()
+    if re.search(r"\bbAllowDeluxe\s*=\s*False\b", source, re.IGNORECASE):
+        return False
+    # Tempered skills use bHasDeluxe to control the runtime menu. Do not infer
+    # availability from the existence of a localized deluxe string.
+    has_deluxe = re.search(r"\bbHasDeluxe\s*=\s*(True|False)\b", source, re.IGNORECASE)
+    return has_deluxe.group(1).lower() != "false" if has_deluxe else True
 
 
 def perk_icon_path(short, parent=None):
@@ -379,6 +399,37 @@ ENGINEER_LEVEL_STAT_PATTERNS = {
 }
 
 
+def build_native_taskmaster_tank_values():
+    """Read the inherited Reborn Tank skill values used by Taskmaster.
+
+    Taskmaster registers WMUpgrade_Skill_Tank and ZTConfig_WrapperSwap only
+    adds an audit subclass; the configured ZTWrapper_Skill_Tank (5%/10%) is a
+    different skill and must not be shown for Taskmaster.
+    """
+    source_path = os.path.join(os.path.dirname(SOURCE_DIR), "Zedternal-Reborn-master", "Classes", "WMUpgrade_Skill_Tank.uc")
+    with open(source_path, encoding="utf-8-sig") as f:
+        source = f.read()
+
+    def read_value(key, index):
+        match = re.search(rf"{key}\({index}\)\s*=\s*([\d.]+)f?", source, re.IGNORECASE)
+        if not match:
+            raise ValueError(f"Could not read native Taskmaster Tank {key}({index}) from {source_path}")
+        return float(match.group(1))
+
+    rows = []
+    for key, label in (("Resistance", "받는 피해 감소"), ("Critical", "발동에 필요한 체력 비율")):
+        for level in (0, 1):
+            value = read_value(key, level)
+            rows.append({
+                "key": label,
+                "label": label,
+                "value": value,
+                "unit": "percent",
+                "display": f"{value * 100:g}%",
+            })
+    return rows
+
+
 def build_engineer_perk_level_stats():
     """Read Engineer's per-level drone bonuses from the live implementation."""
     source_path = os.path.join(SOURCE_CLASS_DIR, "ZTEngineerDroneSystem.uc")
@@ -438,8 +489,8 @@ def canonical_section(section):
     """Map current ZT/ZUT config namespaces onto the site's stable data keys."""
     replacements = (
         ("ZUTUpgrade_Perk_Base_", "DKWrapper_Perk_"),
-        ("ZTWrapper_Perk_", "DKWrapper_Perk_"),
         ("ZUTUpgrade_Skill_", "WMUpgrade_Skill_"),
+        ("ZTWrapper_Perk_", "DKWrapper_Perk_"),
         ("ZTWrapper_Skill_", "WMUpgrade_Skill_"),
         ("ZTUpgrade_Perk_", "DKUpgrade_Perk_"),
         ("ZTUpgrade_Skill_", "DKUpgrade_Skill_"),
@@ -558,7 +609,7 @@ def parse_unlock_rules(main_sections):
 
 DK_SKILL_REGISTRY_RE = re.compile(
     r'([#;])?SkillUpgrade_Upgrade=\(PerkPath="(?:ZedternalTempered|ZedternalRBPerkpackage)\.(?:ZT|DK)Upgrade_Perk_(\w+)",'
-    r'SkillPath="(?:ZedternalTempered|ZedternalRBPerkpackage)\.(?:ZT|DK)Upgrade_Skill_(\w+)"\)(?:\s*;\s*(.*))?'
+    r'SkillPath="(?:ZedternalTempered\.(?:ZT|DK)Upgrade_Skill_|ZedternalReborn\.WMUpgrade_Skill_)(\w+)"\)(?:\s*;\s*(.*))?'
 )
 
 # Same registry file, but the base (10-perk) skill roster -- registered under
@@ -1603,6 +1654,14 @@ def build():
             scaling_stats, fixed_stats = build_archangel_code_stats()
         if key == "JohnWick" and not scaling_stats:
             scaling_stats = build_john_wick_passives()
+        if key == "Hydra":
+            # Legacy INI fields are no longer read by the active Hydra class.
+            scaling_stats = [
+                {"key":"RateOfFireBonus","label":"연사 속도 보너스","value":0.015,"unit":"percent","display":"+1.5%","lv10":0.15,"lv20":0.30,"lv10Display":"+15%","lv20Display":"+30%","scaling":True},
+                {"key":"PenetrationBonus","label":"관통력 보너스","value":0.10,"unit":"percent","display":"+10%","lv10":1.0,"lv20":2.0,"lv10Display":"+100%","lv20Display":"+200%","scaling":True},
+                {"key":"MagazineSizeBonus","label":"탄창 크기 보너스","value":0.01,"unit":"percent","display":"+1%","lv10":0.10,"lv20":0.20,"lv10Display":"+10%","lv20Display":"+20%","scaling":True},
+            ]
+            fixed_stats = []
         # The wiki's explanation text is an exact copy of the active Korean
         # localization. Keep %x% placeholders and wording intact; INI values
         # are displayed separately in the passive/stat sections.
@@ -1658,22 +1717,25 @@ def build():
         skill_roster += [(short, False, None) for short in perk_extras.get("skills", [])]
         skills = []
         for short, is_disabled, disabled_note in skill_roster:
-            skill_section = f"ZTUpgrade_Skill_{short}"
+            is_reborn_skill = key == "Taskmaster" and short == "Tank"
+            skill_section = "WMUpgrade_Skill_Tank" if is_reborn_skill else f"ZTUpgrade_Skill_{short}"
             # The game's Config_SkillUpgrade registry and the KOR/main ini
             # section headers disagree on casing for a handful of skills
             # (registry "ShowOff" vs section "[DKUpgrade_Skill_Showoff]").
             # UnrealScript resolves names case-insensitively so it works
             # in-game; mirror that here or those skills read as "no data".
             skor = (
+                (ci_lookup(reborn_kor_sections, skill_section) if is_reborn_skill else None)
+                or
                 ci_lookup(kor_sections, skill_section)
                 or ci_lookup(kor_sections, f"DKUpgrade_Skill_{short}")
                 or {}
             )
-            sini = ci_lookup(main_sections, skill_section) or []
+            sini = ci_lookup(main_sections, "DKWrapper_Skill_Tank" if is_reborn_skill else skill_section) or []
             cost_keys = set(SKILL_COST_STATS.get(short, []))
             signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
                            for k, v in sini if k != "MODEVERSION"]
-            raw_values = build_stat_entries(signed_sini)
+            raw_values = build_native_taskmaster_tank_values() if is_reborn_skill else build_stat_entries(signed_sini)
             skill_patch_note = "; ".join(patch_notes.get(skill_section, []))
             override = manual_skill_overrides.get(short, {})
 
@@ -1683,7 +1745,10 @@ def build():
             allows_deluxe = skill_allows_deluxe(short)
             delx_raw = skor.get("DeluxeSkillUpgradeDescription") if allows_deluxe else None
             std_fixed = delx_fixed = False
-            deluxe_available = source_skill_has_deluxe(short)
+            deluxe_available = (
+                bool(skor.get("DeluxeSkillUpgradeDescription")) if is_reborn_skill
+                else source_skill_has_deluxe(short)
+            )
 
             skills.append({
                 "key": short,
@@ -1762,12 +1827,19 @@ def build():
         "Commando": "Commando",
         "Demolitionist": "Demolitionist",
         "FieldMedic": "FieldMedic",
+        "Firebug": "Firebug",
+        "Gunslinger": "Gunslinger",
+        "Sharpshooter": "Sharpshooter",
+        "Support": "Support",
+        "SWAT": "SWAT",
+        "Survivalist": "Survivalist",
     }
     base_perks = []
     for bkey, bdata in manual_base.items():
         base_kor = (
-            ci_lookup(kor_sections, f"ZUTUpgrade_Perk_Base_{bkey}")
+            ci_lookup(kor_sections, f"ZTWrapper_Perk_{bkey}")
             or ci_lookup(kor_sections, f"DKWrapper_Perk_{bkey}")
+            or ci_lookup(kor_sections, f"ZUTUpgrade_Perk_Base_{bkey}")
             or ci_lookup(reborn_kor_sections, f"WMUpgrade_Perk_{bkey}")
             or {}
         )
@@ -1791,6 +1863,16 @@ def build():
             "Commando": {
                 "Cfg_Damage": "코만도 무기 피해량",
                 "Cfg_ReloadRate": "재장전 속도",
+            },
+            "SWAT": {
+                "Cfg_Armor": "최대 방어구",
+                "Cfg_Damage": "SWAT 무기 피해량",
+                "Cfg_MagSize": "모든 무기 탄창 용량",
+            },
+            "Survivalist": {
+                "Cfg_SpareAmmo": "모든 무기 예비 탄약",
+                "Cfg_Damage": "모든 무기 피해량",
+                "Cfg_WeightPerLevel": "소지 무게 한도",
             },
         }
         for stat in passive_stats:
@@ -1904,7 +1986,9 @@ def build():
         # Local code/localization edits are not yet a Workshop release. Never
         # present the last published version stamp as if it described this draft.
         release_metadata.update({
-            "version": "미게시 초안",
+            "version": current_source_version() or "미게시 초안",
+            "sourceVersion": current_source_version(),
+            "dataSource": "현재 로컬 소스·한국어 설명·퍼크 구현 (Workshop 미공개)",
             "publishedUtc": "",
             "publicationState": "unpublished-draft",
         })
