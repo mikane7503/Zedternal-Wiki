@@ -12,7 +12,11 @@ for perk in local['basePerks']+local['advancedPerks']:
  if perk['key'] in SCOPE:
   paths.add(perk['icon']);paths.update(perk.get('rankIcons',[]));paths.update(s['icon'] for s in perk['skills'] if s.get('icon'))
 def check(path):
- assert hashlib.sha256(fetch(path)).hexdigest()==sha(WIKI/'docs'/path),'Live resource differs: '+path
+ expected=(WIKI/'docs'/path).read_bytes();actual=fetch(path)
+ # Git stores text with LF; Windows checkout preserves the existing CRLF.
+ if path in ['app.js','index.html']:
+  expected=expected.replace(b'\r\n',b'\n');actual=actual.replace(b'\r\n',b'\n')
+ assert hashlib.sha256(actual).digest()==hashlib.sha256(expected).digest(),'Live resource differs: '+path
  return path
 with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:list(pool.map(check,sorted(paths)))
 print('LIVE PASS: complete JSON matches local audited output; '+str(len(paths))+' referenced icons/frontend resources match SHA256; unrelated perk data unchanged')
