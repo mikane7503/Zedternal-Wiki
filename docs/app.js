@@ -486,6 +486,10 @@ function renderReleaseFooter() {
   const footer = document.getElementById("releaseFoot");
   if (!footer) return;
   const release = DATA.meta && DATA.meta.release;
+  if (release && release.publicationState === "scoped-published") {
+    footer.textContent = `SWAT 시리즈 5개 퍼크: 공개 v${release.version} 기준 검증·갱신 · 다른 퍼크 자료는 이전 상태 유지`;
+    return;
+  }
   if (release && release.publicationState === "unpublished-draft") {
     const sourceVersion = release.sourceVersion || release.version || "미게시";
     footer.textContent = `데이터 기준: Zedternal Tempered v${sourceVersion} 로컬 소스 초안 (Workshop 공개 전) · 퍼크·스킬 설명과 기본 수치 기준`;
@@ -780,7 +784,7 @@ function renderFullInfoSection(perk, isBase = false) {
   const detailLevels = maxLevel > 10 ? [10, maxLevel] : [maxLevel];
   const detailLevelHeaders = detailLevels.map(level => `<th>${level === maxLevel ? `만렙 Lv${level}` : `Lv${level}`}</th>`).join("");
   const passiveRows = passiveStats.map(stat => `
-    <tr><td>${escapeHtml(stat.label)}</td><td>${escapeHtml(stat.display)} / 레벨</td>${detailLevels.map(level => `<td>${escapeHtml(formatByUnit(stat.value * level, stat.unit))}</td>`).join("")}</tr>
+    <tr><td>${escapeHtml(stat.label)}</td><td>${escapeHtml(stat.display)} / 레벨</td>${detailLevels.map(level => `<td>${escapeHtml(formatByUnit(statTotal(stat, level), stat.unit))}</td>`).join("")}</tr>
   `).join("");
   const fixedRows = fixedStats.map(stat => `
     <tr><td>${escapeHtml(stat.label)}</td><td>${escapeHtml(stat.display)}</td><td>${stat.capstoneLevel ? `Lv${stat.capstoneLevel} 도달 시` : "고정 / 조건부"}</td></tr>
@@ -830,7 +834,7 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
   if (!passiveStats.length) return '<div class="empty-state" style="padding:10px">등록된 패시브 수치 없음</div>';
   const rows = passiveStats.map(s => {
     const signClass = s.value < 0 ? "stat-neg" : s.value > 0 ? "stat-pos" : "";
-    return `<tr data-perlevel="${s.value}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(s.value * maxLevel, s.unit)}</td></tr>`;
+    return `<tr data-perlevel="${s.value}" data-base="${s.baseValue || 0}" data-cap-level="${s.capstoneLevelBonus || 0}" data-cap-bonus="${s.capstoneBonus || 0}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(statTotal(s, maxLevel), s.unit)}</td></tr>`;
   }).join("");
   return `
     <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">레벨 슬라이더에서 선택한 단계의 누적 수치를 표시합니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 마지막 공개 빌드의 기본 INI와 퍼크 구현 기준입니다."}</div>
@@ -859,8 +863,13 @@ function onLevelSlide(e) {
   }
   document.querySelectorAll("#mainArea table tr[data-perlevel]").forEach(row => {
     const perLevel = Number(row.dataset.perlevel);
-    row.querySelector(".live-val").textContent = formatByUnit(perLevel * lvl, row.dataset.unit);
+    const value = statTotal({value: perLevel, baseValue: Number(row.dataset.base || 0), capstoneLevelBonus: Number(row.dataset.capLevel || 0), capstoneBonus: Number(row.dataset.capBonus || 0)}, lvl);
+    row.querySelector(".live-val").textContent = formatByUnit(value, row.dataset.unit);
   });
+}
+
+function statTotal(stat, level) {
+  return (stat.baseValue || 0) + stat.value * level + (stat.capstoneLevelBonus && level >= stat.capstoneLevelBonus ? stat.capstoneBonus || 0 : 0);
 }
 
 function formatByUnit(value, unit) {

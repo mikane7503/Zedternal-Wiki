@@ -3,7 +3,8 @@ param(
     [Parameter(Mandatory = $true)][string]$ReleaseReport,
     [Parameter(Mandatory = $true)][string]$Version,
     [string]$Python = 'python',
-    [switch]$NoPush
+    [switch]$NoPush,
+    [string]$PerkScope = ''
 )
 
 $ErrorActionPreference = 'Stop'
@@ -32,6 +33,15 @@ foreach ($file in $report.files) {
     if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing uploaded artifact: $($file.path)" }
     if ((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ne $file.sha256) { throw "Uploaded artifact hash mismatch: $($file.path)" }
 }
+
+# AGENTS.md requires all four per-perk audit steps before wiki publication.
+if ($PerkScope) {
+    if ($PerkScope -ne 'SWAT,Scavenger,Taskmaster,Frost,Omen' -or $Version -ne '10.11.21') { throw 'This scoped release supports the explicitly requested SWAT series v10.11.21 only.' }
+    & $Python (Join-Path $wikiRoot 'data\verify_release_perk_audit.py') $Version $PerkScope
+} else {
+    & $Python (Join-Path $wikiRoot 'data\verify_release_perk_audit.py') $Version
+}
+if ($LASTEXITCODE -ne 0) { throw 'Required four-step per-perk wiki audit is incomplete; Workshop upload remains successful.' }
 
 $iniNames = @(
     'KFZedternalReborn_Difficulty.ini', 'KFZedternalReborn_Events.ini',
@@ -113,19 +123,28 @@ $env:ZEDTERNAL_PUBLISHED_UTC = $releaseUtc
 $env:ZEDTERNAL_WORKSHOP_URL = 'https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086'
 Push-Location $wikiRoot
 try {
-    & $Python 'data\build.py'
-    if ($LASTEXITCODE -ne 0) { throw 'Wiki data generation failed.' }
-    & $Python 'data\verify_kor_alignment.py'
-    if ($LASTEXITCODE -ne 0) { throw 'Wiki KOR alignment or description completeness validation failed.' }
+    if ($PerkScope) {
+        & $Python 'data\update_swat_series.py' $reportPath
+        if ($LASTEXITCODE -ne 0) { throw 'Scoped SWAT generation failed.' }
+        & $Python 'data\verify_swat_wiki.py'
+        if ($LASTEXITCODE -ne 0) { throw 'Scoped SWAT code/localization/icon verification failed.' }
+    } else {
+        & $Python 'data\build.py'
+        if ($LASTEXITCODE -ne 0) { throw 'Wiki data generation failed.' }
+        & $Python 'data\verify_kor_alignment.py'
+        if ($LASTEXITCODE -ne 0) { throw 'Wiki KOR alignment or description completeness validation failed.' }
+    }
     $data = Get-Content -LiteralPath 'docs\data\perks.json' -Raw -Encoding UTF8 | ConvertFrom-Json
     if ($data.meta.release.version -ne $Version -or $data.meta.release.workshopId -ne '3809067086') { throw 'Generated wiki data has stale release metadata.' }
-    foreach ($perk in @($data.basePerks) + @($data.advancedPerks)) {
+    $releasePerks = @($data.basePerks) + @($data.advancedPerks)
+    if ($PerkScope) { $scopeKeys = $PerkScope.Split(','); $releasePerks = @($releasePerks | Where-Object { $_.key -in $scopeKeys }) }
+    foreach ($perk in $releasePerks) {
         if ($perk.icon -and -not (Test-Path -LiteralPath (Join-Path 'docs' $perk.icon) -PathType Leaf)) { throw "Missing perk icon: $($perk.key) -> $($perk.icon)" }
         foreach ($skill in $perk.skills) {
             if ($skill.icon -and -not (Test-Path -LiteralPath (Join-Path 'docs' $skill.icon) -PathType Leaf)) { throw "Missing skill icon: $($skill.key) -> $($skill.icon)" }
         }
     }
-    $releaseIcons = @(@($data.basePerks) + @($data.advancedPerks) | ForEach-Object {
+    $releaseIcons = @($releasePerks | ForEach-Object {
         if ($_.icon) { Join-Path 'docs' $_.icon }
         if ($_.PSObject.Properties['rankIcons']) {
             foreach ($rankIcon in $_.rankIcons) { if ($rankIcon) { Join-Path 'docs' $rankIcon } }
@@ -140,9 +159,14 @@ try {
     $staged = @(& git diff --cached --name-only)
     if ($LASTEXITCODE -ne 0) { throw 'Could not inspect staged wiki changes.' }
     if ($staged.Count -gt 0) { throw 'Refusing to publish wiki with pre-staged changes; review/commit them first.' }
-    & git add -- data/build.py data/manual_base_perks.json data/manual_perk_extras.json data/manual_skill_overrides.json data/release-manifest.json `
-        data/Sync-Tempered-Wiki.ps1 data/verify_kor_alignment.py `
-        docs/data/perks.json docs/index.html docs/app.js
+    if ($PerkScope) {
+        & git add -- data/Sync-Tempered-Wiki.ps1 data/release-manifest.json data/update_swat_series.py data/verify_release_perk_audit.py data/verify_swat_wiki.py data/verify_swat_live.py `
+            docs/data/perks.json docs/index.html docs/app.js docs/audits/swat-series-2026-10-11-ko.md
+    } else {
+        & git add -- data/build.py data/manual_base_perks.json data/manual_perk_extras.json data/manual_skill_overrides.json data/release-manifest.json `
+            data/Sync-Tempered-Wiki.ps1 data/verify_kor_alignment.py data/verify_release_perk_audit.py `
+            docs/data/perks.json docs/index.html docs/app.js
+    }
     if ($LASTEXITCODE -ne 0) { throw 'Could not stage generated wiki files.' }
     for ($iconOffset = 0; $iconOffset -lt $releaseIcons.Count; $iconOffset += 64) {
         $iconBatch = @($releaseIcons | Select-Object -Skip $iconOffset -First 64)
@@ -184,6 +208,10 @@ try {
     $liveRelease = if ($live.meta -and $live.meta.PSObject.Properties['release']) { $live.meta.release } else { $null }
     if ($null -eq $liveRelease -or $liveRelease.version -ne $Version -or $liveRelease.workshopId -ne '3809067086') {
         throw "Live wiki does not report uploaded Tempered v$Version."
+    }
+    if ($PerkScope) {
+        & $Python 'data\verify_swat_live.py'
+        if ($LASTEXITCODE -ne 0) { throw 'Scoped live wiki verification failed.' }
     }
     Write-Output "Wiki pushed for Zedternal Tempered v$Version."
 } finally { Pop-Location }
