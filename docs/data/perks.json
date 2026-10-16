@@ -1091,7 +1091,7 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/FocusInjection.png"
     },
     {
      "key": "CoagulantBooster",
@@ -8812,7 +8812,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Fanatic.png"
+     "icon": "icons/skills/Executioner_Fanatic.png"
     },
     {
      "key": "ArtIsAnExplosion",
@@ -8832,7 +8832,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_ArtIsAnExplosion.png"
     },
     {
      "key": "MineGirl",
@@ -8852,7 +8852,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_MineGirl.png"
     },
     {
      "key": "SuperEMP",
@@ -8872,7 +8872,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_SuperEMP.png"
     },
     {
      "key": "SuperGrenade",
@@ -8892,7 +8892,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_SuperGrenade.png"
     },
     {
      "key": "SuperMolotov",
@@ -8912,7 +8912,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_SuperMolotov.png"
     },
     {
      "key": "SuperFlashbang",
@@ -8932,7 +8932,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_SuperFlashbang.png"
     },
     {
      "key": "SuperHealingGrenade",
@@ -8952,7 +8952,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_SuperHealingGrenade.png"
     },
     {
      "key": "SuperFreezeGrenade",
@@ -8972,7 +8972,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_SuperFreezeGrenade.png"
     },
     {
      "key": "DoublePeace",
@@ -8992,7 +8992,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Executioner_DoublePeace.png"
     }
    ],
    "skillCount": 10,
@@ -9079,7 +9079,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_ReserveShells.png"
     },
     {
      "key": "RapidFeed",
@@ -9099,7 +9099,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_RapidFeed.png"
     },
     {
      "key": "CloseRangeDemolition",
@@ -9119,7 +9119,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_CloseRangeDemolition.png"
     },
     {
      "key": "SafetyFirst",
@@ -9139,7 +9139,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/SafetyFirst.png"
+     "icon": "icons/skills/Fraulein_SafetyFirst.png"
     },
     {
      "key": "NakedApron",
@@ -9159,7 +9159,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_NakedApron.png"
     },
     {
      "key": "AngerManagementDisorder",
@@ -9179,7 +9179,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_AngerManagementDisorder.png"
     },
     {
      "key": "IgnoreNerfs",
@@ -9199,7 +9199,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_IgnoreNerfs.png"
     },
     {
      "key": "ConsiderationForTeammates",
@@ -9219,7 +9219,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_ConsiderationForTeammates.png"
     },
     {
      "key": "DisregardForTeammates",
@@ -9239,7 +9239,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_DisregardForTeammates.png"
     },
     {
      "key": "RearHole",
@@ -9259,7 +9259,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Fraulein_RearHole.png"
     }
    ],
    "skillCount": 10,
@@ -9320,7 +9320,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/ExtraRounds.png"
     },
     {
      "key": "SeekerB",
@@ -9340,7 +9340,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/ExtraRounds.png"
     },
     {
      "key": "SealSquealA",
@@ -9360,7 +9360,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/ExtraRounds.png"
     },
     {
      "key": "SealSquealB",
@@ -9380,7 +9380,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/ExtraRounds.png"
     }
    ],
    "skillCount": 4,
@@ -9477,7 +9477,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Armageddon_SovietTechnology.png"
     },
     {
      "key": "AmericanTechnology",
@@ -9497,7 +9497,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Armageddon_AmericanTechnology.png"
     },
     {
      "key": "OneBigBlast",
@@ -9517,7 +9517,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Armageddon_OneBigBlast.png"
     },
     {
      "key": "ThermonuclearBomb",
@@ -9537,7 +9537,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Armageddon_ThermonuclearBomb.png"
     },
     {
      "key": "ZeroRadiation",
@@ -9557,7 +9557,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Armageddon_ZeroRadiation.png"
     },
     {
      "key": "RadiationBoost",
@@ -9577,7 +9577,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Armageddon_RadiationBoost.png"
     },
     {
      "key": "MOAB",
@@ -9597,7 +9597,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Armageddon_MOAB.png"
     }
    ],
    "skillCount": 7,
@@ -15383,7 +15383,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_EmergencyReload.png"
     },
     {
      "key": "SAS_AmmoSiphon",
@@ -15418,7 +15418,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_AmmoSiphon.png"
     },
     {
      "key": "SAS_BottomlessReserves",
@@ -15453,7 +15453,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_BottomlessReserves.png"
     },
     {
      "key": "SAS_SilenceForTheFuture",
@@ -15488,7 +15488,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_SilenceForTheFuture.png"
     },
     {
      "key": "SAS_OneRoundLeft",
@@ -15523,7 +15523,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_OneRoundLeft.png"
     },
     {
      "key": "SAS_FrenchRaid",
@@ -15572,7 +15572,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_FrenchRaid.png"
     },
     {
      "key": "SAS_CaptainPriceAndSergeantSoap",
@@ -15607,7 +15607,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_CaptainPriceAndSergeantSoap.png"
     },
     {
      "key": "SAS_SupplyPouch",
@@ -15656,7 +15656,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_SupplyPouch.png"
     },
     {
      "key": "SAS_ForTheBritishPeople",
@@ -15698,7 +15698,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_ForTheBritishPeople.png"
     },
     {
      "key": "SAS_RecoveryFire",
@@ -15733,7 +15733,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Scavenger_SAS_RecoveryFire.png"
     }
    ],
    "skillCount": 10,
@@ -16017,7 +16017,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_RiotSuppression.png"
     },
     {
      "key": "GIGN_RiotResponse",
@@ -16037,7 +16037,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_RiotResponse.png"
     },
     {
      "key": "GIGN_ExcessiveForce",
@@ -16057,7 +16057,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_ExcessiveForce.png"
     },
     {
      "key": "GIGN_RiotSuppressionAssault",
@@ -16077,7 +16077,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_RiotSuppressionAssault.png"
     },
     {
      "key": "GIGN_CloseQuartersBreach",
@@ -16097,7 +16097,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_CloseQuartersBreach.png"
     },
     {
      "key": "GIGN_Deadshot",
@@ -16117,7 +16117,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_Deadshot.png"
     },
     {
      "key": "GIGN_HammerShot",
@@ -16137,7 +16137,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_HammerShot.png"
     },
     {
      "key": "GIGN_TailoredAmmunition",
@@ -16157,7 +16157,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_TailoredAmmunition.png"
     },
     {
      "key": "GIGN_RacialDiscrimination",
@@ -16177,7 +16177,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_RacialDiscrimination.png"
     },
     {
      "key": "GIGN_StrikeOrRevolution",
@@ -16197,7 +16197,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_StrikeOrRevolution.png"
     },
     {
      "key": "GIGN_PrideOfFrance",
@@ -16217,7 +16217,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Taskmaster_GIGN_PrideOfFrance.png"
     }
    ],
    "skillCount": 11,
@@ -16350,7 +16350,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_SoulAbsorption.png"
     },
     {
      "key": "IceThor_WoundsOfTheBitingWind",
@@ -16370,7 +16370,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_WoundsOfTheBitingWind.png"
     },
     {
      "key": "IceThor_Blizzard",
@@ -16390,7 +16390,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_Blizzard.png"
     },
     {
      "key": "IceThor_Frostbite",
@@ -16410,7 +16410,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_Frostbite.png"
     },
     {
      "key": "IceThor_SoulOfAntarctica",
@@ -16430,7 +16430,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_SoulOfAntarctica.png"
     },
     {
      "key": "IceThor_SoulOfTheArctic",
@@ -16450,7 +16450,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_SoulOfTheArctic.png"
     },
     {
      "key": "IceThor_LikeAPolarBear",
@@ -16470,7 +16470,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_LikeAPolarBear.png"
     },
     {
      "key": "IceThor_IcicleRounds",
@@ -16490,7 +16490,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Frost_IceThor_IcicleRounds.png"
     }
    ],
    "skillCount": 8,
@@ -16626,7 +16626,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_ThickIronPlating.png"
     },
     {
      "key": "Reinhardt_UnbreakableWill",
@@ -16646,7 +16646,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_UnbreakableWill.png"
     },
     {
      "key": "Reinhardt_ShortAndPowerful",
@@ -16666,7 +16666,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_ShortAndPowerful.png"
     },
     {
      "key": "Reinhardt_BulkUp",
@@ -16686,7 +16686,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_BulkUp.png"
     },
     {
      "key": "Reinhardt_FortressFire",
@@ -16706,7 +16706,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_FortressFire.png"
     },
     {
      "key": "Reinhardt_HeroArrives",
@@ -16726,7 +16726,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_HeroArrives.png"
     },
     {
      "key": "Reinhardt_BeAwed",
@@ -16746,7 +16746,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_BeAwed.png"
     },
     {
      "key": "Reinhardt_ClearTheWay",
@@ -16766,7 +16766,7 @@
      "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_ClearTheWay.png"
     },
     {
      "key": "Reinhardt_JetEngine",
@@ -16786,7 +16786,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Omen_Reinhardt_JetEngine.png"
     },
     {
      "key": "TwistOfFate",
@@ -16902,7 +16902,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Untouchable.png"
+     "icon": "icons/skills/Punisher_Untouchable.png"
     },
     {
      "key": "Trueshot",
@@ -16922,7 +16922,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Trueshot.png"
+     "icon": "icons/skills/Punisher_Trueshot.png"
     },
     {
      "key": "Truesprint",
@@ -16942,7 +16942,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Punisher_Truesprint.png"
     },
     {
      "key": "CloseCall",
@@ -16962,7 +16962,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/CloseCall.png"
+     "icon": "icons/skills/Punisher_CloseCall.png"
     },
     {
      "key": "FullMetalJacket",
@@ -16982,7 +16982,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/FullMetalJacket.png"
+     "icon": "icons/skills/Punisher_FullMetalJacket.png"
     },
     {
      "key": "GlassCannon",
@@ -17002,7 +17002,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/GlassCannon.png"
+     "icon": "icons/skills/Punisher_GlassCannon.png"
     },
     {
      "key": "Primed",
@@ -17022,7 +17022,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Primed.png"
+     "icon": "icons/skills/Punisher_Primed.png"
     },
     {
      "key": "DMRModification",
@@ -17042,7 +17042,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Punisher_DMRModification.png"
     },
     {
      "key": "ExpertsMistake",
@@ -17062,7 +17062,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Punisher_ExpertsMistake.png"
     },
     {
      "key": "ExcellentSidearm",
@@ -17082,7 +17082,7 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/Punisher_ExcellentSidearm.png"
     }
    ],
    "skillCount": 10,

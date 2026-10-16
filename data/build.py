@@ -164,7 +164,20 @@ def merge_ini_sections(base, overrides):
     return merged
 
 
-def skill_icon_path(short):
+def skill_icon_path(short, perk_key=None):
+    # Redesigned perks use class-qualified textures. Their names differ from
+    # the short registry key, so resolve the dedicated wiki asset first.
+    if perk_key:
+        qualified = f"{perk_key}_{short}"
+        if os.path.isfile(os.path.join(SKILL_ICON_DIR, f"{qualified}.png")):
+            return f"icons/skills/{qualified}.png"
+    if perk_key == "Gilgamesh" and os.path.isfile(os.path.join(SKILL_ICON_DIR, "ExtraRounds.png")):
+        # The live classes inherit the stock Extra Rounds texture.
+        return "icons/skills/ExtraRounds.png"
+    if perk_key == "FieldMedic" and short == "AdrenalineShot" and os.path.isfile(
+        os.path.join(SKILL_ICON_DIR, "FocusInjection.png")
+    ):
+        return "icons/skills/FocusInjection.png"
     if os.path.exists(os.path.join(SKILL_ICON_DIR, f"{short}.png")):
         return f"icons/skills/{short}.png"
     return None
@@ -1842,7 +1855,7 @@ def build():
                 "deluxeAvailable": deluxe_available,
                 "disabledNote": disabled_note,
                 "noData": not std_raw and not delx_raw,
-                "icon": skill_icon_path(short),
+                "icon": skill_icon_path(short, key),
             })
 
         rule = unlock_rules.get(key, {})
@@ -2021,7 +2034,7 @@ def build():
                 "disabled": is_disabled,
                 "disabledNote": disabled_note,
                 "noData": not std_raw and not delx_raw,
-                "icon": skill_icon_path(short),
+                "icon": skill_icon_path(short, bkey),
             })
 
         base_perks.append({
