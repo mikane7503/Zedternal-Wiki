@@ -75,15 +75,16 @@ def main():
         for skill in perk.get("skills", []):
             if skill["key"].lower() in retired_skills:
                 failures.append(f"retired skill is listed: {perk['key']}/{skill['key']}")
-            localized = (
-                build.ci_lookup(reborn, f"WMUpgrade_Skill_{skill['key']}")
-                if perk["key"] == "Taskmaster" and skill["key"] == "Tank"
-                else None
-            ) or (
-                build.ci_lookup(kor, f"ZTUpgrade_Skill_{skill['key']}")
-                or build.ci_lookup(kor, f"DKUpgrade_Skill_{skill['key']}")
-                or {}
-            )
+            perk_key, short = perk["key"], skill["key"]
+            localized = build.ci_lookup(reborn, f"WMUpgrade_Skill_{short}") if perk_key == "Taskmaster" and short == "Tank" else None
+            if localized is None:
+                localized = next((
+                    build.ci_lookup(kor, section_name)
+                    for section_name in (
+                        f"ZTUpgrade_Skill_{perk_key}_{short}", f"DKUpgrade_Skill_{perk_key}_{short}",
+                        f"ZTUpgrade_Skill_{short}", f"DKUpgrade_Skill_{short}",
+                    ) if build.ci_lookup(kor, section_name) is not None
+                ), {})
             standard = localized.get("StandardSkillUpgradeDescription") or localized.get("SkillUpgradeDescription1")
             deluxe = localized.get("DeluxeSkillUpgradeDescription") or localized.get("SkillUpgradeDescription2")
             if not skill.get("allowsDeluxe", True):

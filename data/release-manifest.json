@@ -1,73 +1,107 @@
 {
-  "version": "10.11.21",
-  "scope": [
-    "SWAT",
-    "Scavenger",
-    "Taskmaster",
-    "Frost",
-    "Omen"
-  ],
-  "report": "C:\\Users\\yss19\\Documents\\Projects\\KF_Mutators\\Workshop\\runs\\20261011-211919-58d2d723\\report.json",
-  "sourceHash": "BD1DF071A682B4B7A471D08F54FC38415C53C031E5FAD33590115BBAABF4ACC0",
-  "sourceSnapshotSha256": "f5fe11a6e15b00928a94f846f17dc5649b5629d9c0d4d1eee663076b5cae180d",
+  "schemaVersion": 1,
+  "product": "Zedternal Tempered",
+  "version": "10.16.0",
+  "workshopId": "3809067086",
+  "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
+  "publishedUtc": "2026-10-15T15:08:14Z",
+  "releaseReportId": "ReleaseProof-v10.16.0",
+  "releaseSourceSnapshotSha256": "70b4449e71e69aa739b03d9e32c2db7509821aba1949dbc644e9c02f54e5cb7a",
   "uploadedFiles": [
     {
-      "path": "BrewedPC\\ZedternalRBPerkpackage_Menus.upk",
+      "path": "BrewedPC/ZedternalRBPerkpackage_Menus.upk",
       "size": 421998,
-      "sha256": "A6CB82FF50F94C70EB207FDAD67B5DE1EAB76B2EB7BF9EF0F27DE98E1189667E"
+      "sha256": "a6cb82ff50f94c70eb207fdad67b5de1eab76b2eb7bf9ef0f27de98e1189667e"
     },
     {
-      "path": "BrewedPC\\ZedternalRBPerkpackage_Resources.upk",
-      "size": 507142860,
-      "sha256": "83B1C179422DBF0AE4EF7875D4C8ABFA02035890A3B4AD0A9D1F73748D1AC748"
+      "path": "BrewedPC/ZedternalRBPerkpackage_Resources.upk",
+      "size": 551486676,
+      "sha256": "81b8d06ae6d1c9f26527f9b3112c88f78c20038bcfe9d1046994ea66d7dc2321"
     },
     {
-      "path": "BrewedPC\\ZedternalTempered.u",
-      "size": 23352752,
-      "sha256": "9FD253F1A2B4B058251C41BA1AF1EFFF62761E12E14F9C1E575BD50B3C6DB1F2"
+      "path": "BrewedPC/ZedternalTempered.u",
+      "size": 27155711,
+      "sha256": "f81b41636fbb19ad5eaf2cc869e5237d598d3b95652d6ed0083a4e746423cef4"
     },
     {
-      "path": "BrewedPC\\ZedternalTemperedPerkIcons.upk",
-      "size": 22131950,
-      "sha256": "8734FE1CB0D48A3B61485F218FF0B7639888CA4E16C8C2ACF6E491841F94EF1F"
+      "path": "BrewedPC/ZedternalTemperedPerkIcons.upk",
+      "size": 29715787,
+      "sha256": "d617680a1f10ba274a789b4b0db4e1cd19775060aac8878e48fc1d39c3c6892f"
     },
     {
-      "path": "BrewedPC\\WwiseAudio\\Windows\\WwiseDefaultBank_ZTDroneAudio.bnk",
+      "path": "BrewedPC/WwiseAudio/Windows/WwiseDefaultBank_ZTDroneAudio.bnk",
       "size": 367,
-      "sha256": "48798D3D37336B50C69E80C0A2C75590615EBB0B7D2C68FE3BCF6393E7EF0E4D"
+      "sha256": "48798d3d37336b50c69e80c0a2c75590615ebb0b7d2c68fe3bcf6393e7ef0e4d"
     },
     {
-      "path": "Localization\\INT\\ZedternalReborn.int",
-      "size": 107982,
-      "sha256": "4B8A62C0E703F12AEB334E7D64D7A237BBB0C428764D9FCE14E58AD171B5DEF0"
+      "path": "Localization/JPN/ZedternalReborn.jpn",
+      "size": 87046,
+      "sha256": "28ef46746440f58325dae1fde7ca11121367b49d5cce6e4e143121e7101171a8"
     },
     {
-      "path": "Localization\\INT\\ZedternalTempered.int",
-      "size": 218672,
-      "sha256": "E981312914F015502D99346616A480D3CE0DCAEBE3F500EE2CC57595FF989946"
+      "path": "Localization/JPN/ZedternalTempered.jpn",
+      "size": 586904,
+      "sha256": "689dca0d50a539dea95c0c7fc8bf74b9c5cd4cd3a5e9db0cc5d9ca2d18f81c86"
     },
     {
-      "path": "Localization\\JPN\\ZedternalReborn.jpn",
-      "size": 87400,
-      "sha256": "9694674EAA004F165FCE82223610A5E5FE42B2D753AC4AA8A52BA90A7ACEAB53"
+      "path": "Localization/KOR/ZedternalReborn.kor",
+      "size": 104894,
+      "sha256": "0131a874e90260aef851a5c18c7e2771b47f688ef30a58b57c4a573c610a0c28"
     },
     {
-      "path": "Localization\\JPN\\ZedternalTempered.jpn",
-      "size": 536578,
-      "sha256": "174741335785227C53E5292B8E9D758D9C94D184A1C9A46DAB28ECE0E780F419"
-    },
-    {
-      "path": "Localization\\KOR\\ZedternalReborn.kor",
-      "size": 105484,
-      "sha256": "AA18EB7CE239B44BEE1A1BB2353201C8E85F17D18066C869AA43881E75E41C81"
-    },
-    {
-      "path": "Localization\\KOR\\ZedternalTempered.kor",
-      "size": 592886,
-      "sha256": "214A6B2E639FFEC6416D251B140EB5873131050BE0C96AD729EFBE89E9D961B2"
+      "path": "Localization/KOR/ZedternalTempered.kor",
+      "size": 642618,
+      "sha256": "2c7a3ea991f8bf7cd8cfc36e8be947edac2702079dbdd73cb40a1cf16132590c"
     }
   ],
   "sourceIni": [
+    {
+      "name": "KFZedternalReborn_Difficulty.ini",
+      "sha256": "47efee36239741a336d7d95697d4c6f4024cf2e915fbe6a78b25942dcc2df224",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalReborn_Events.ini",
+      "sha256": "3ea6bc0af901efe13fe17d9d53f309bdacda2aa2db6a5e0748a57fff8aeb7709",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalReborn_Game.ini",
+      "sha256": "7864e55deb722a4ed1553536f111a3572d1b9f4488fab45925837a440fcd795d",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalReborn_Upgrades.ini",
+      "sha256": "c4214970b1ae4ec3d24e02703cc9cbb562ccf6dc7a6b9a048ef2315c38aedeb2",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalReborn_Weapons.ini",
+      "sha256": "001ca624b30ae3c1337a0180820b826327a01eab5916517ca7e43cdd745494df",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalReborn_ZedWaves.ini",
+      "sha256": "98290c4ed8039e055725da6bb7f409d8a285169c033eed54f13e8f2934ee41d3",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalUnlimited.ini",
+      "sha256": "a71d3eddb85de0270ae61a00798bcada11604b1b8dcddaad49fd049d4ff40d5f",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalUnlimited_Balance.ini",
+      "sha256": "ba881676b42bf4b8c5242bf35eb0e08eaa35abcf21799ef472dbbc0fe9bd3de1",
+      "snapshotVerified": true
+    },
+    {
+      "name": "KFZedternalUnlimited_Local.ini",
+      "sha256": "e8d5bfd40a8b72350d00e6f55cb3a97d6e8cc1bb34c1a4b63d1d311b585eb1be",
+      "snapshotVerified": true
+    }
+  ],
+  "operatingIni": [
     {
       "name": "KFZedternalReborn_Difficulty.ini",
       "sourceSha256": "47efee36239741a336d7d95697d4c6f4024cf2e915fbe6a78b25942dcc2df224",
@@ -83,14 +117,14 @@
     {
       "name": "KFZedternalReborn_Game.ini",
       "sourceSha256": "7864e55deb722a4ed1553536f111a3572d1b9f4488fab45925837a440fcd795d",
-      "operatingSha256": "7864e55deb722a4ed1553536f111a3572d1b9f4488fab45925837a440fcd795d",
-      "differs": false
+      "operatingSha256": "c7b0a571e68e703d3a4906c236d072d04f557f4b0778b4e071306adcd0fcf8be",
+      "differs": true
     },
     {
       "name": "KFZedternalReborn_Upgrades.ini",
-      "sourceSha256": "98862d420eef1aa288b403298dc6a499e95d1674d7a9853d6f9572d3be7a8bfa",
-      "operatingSha256": "98862d420eef1aa288b403298dc6a499e95d1674d7a9853d6f9572d3be7a8bfa",
-      "differs": false
+      "sourceSha256": "c4214970b1ae4ec3d24e02703cc9cbb562ccf6dc7a6b9a048ef2315c38aedeb2",
+      "operatingSha256": "95419b10330c0923589a231f47dd860acf12484f6c34dbe9ebe912f64f37dd98",
+      "differs": true
     },
     {
       "name": "KFZedternalReborn_Weapons.ini",
@@ -106,8 +140,8 @@
     },
     {
       "name": "KFZedternalUnlimited.ini",
-      "sourceSha256": "d1667c38df7c7ebed545212b7d90e109537b3d6045eeaeb6d5fe60cf39c8d140",
-      "operatingSha256": "932268870e0cd3564c4066c31e1315489e6fb93dba148a597ad577f1771d28e8",
+      "sourceSha256": "a71d3eddb85de0270ae61a00798bcada11604b1b8dcddaad49fd049d4ff40d5f",
+      "operatingSha256": "f150ec67683065fe9973682bca238de53425ea85936e68df4ec8d77788839ea4",
       "differs": true
     },
     {
@@ -123,60 +157,14 @@
       "differs": false
     }
   ],
-  "scopeOnly": true,
-  "unchangedPerks": [
-    "Berserker",
-    "Commando",
-    "Demolitionist",
-    "FieldMedic",
-    "Firebug",
-    "Gunslinger",
-    "Sharpshooter",
-    "Support",
-    "Survivalist",
-    "Bulwark",
-    "Goliath",
-    "Riot",
-    "Voodoo",
-    "Diablo",
-    "WaveGambler",
-    "Gambler",
-    "Tycoon",
-    "Gambit",
-    "SpecialAgent",
-    "Warlord",
-    "Agony",
-    "Metronome",
-    "Maniac",
-    "ForgeWarden",
-    "Detonator",
-    "Technician",
-    "Hacker",
-    "Archangel",
-    "Parasite",
-    "Hivemind",
-    "Symbiote",
-    "JekyllHyde",
-    "Pyrokinetic",
-    "Cinder",
-    "Haunted",
-    "Headhunter",
-    "TimeTraveler",
-    "JohnWick",
-    "Reaper",
-    "Daredevil",
-    "Wendigo",
-    "Cryophilite",
-    "Predator",
-    "Artificer",
-    "Vanguard",
-    "Hydra",
-    "Venomancer",
-    "Medusa",
-    "MissingNO",
-    "Shapeshifter",
-    "Capitalist",
-    "Engineer"
-  ],
-  "outputSha256": "8c36f67e0685167d81189347e937be9df710f6c57040259b0d1e93b9070fc3aa"
+  "localizationKor": [
+    {
+      "name": "ZedternalReborn.kor",
+      "sha256": "0131a874e90260aef851a5c18c7e2771b47f688ef30a58b57c4a573c610a0c28"
+    },
+    {
+      "name": "ZedternalTempered.kor",
+      "sha256": "2c7a3ea991f8bf7cd8cfc36e8be947edac2702079dbdd73cb40a1cf16132590c"
+    }
+  ]
 }

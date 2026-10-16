@@ -182,15 +182,23 @@ PERK_ICON_FALLBACKS = {
 }
 
 
-def skill_allows_deluxe(short):
+def skill_class_path(short, perk_key=None):
+    names = [short]
+    if perk_key and not short.lower().startswith(perk_key.lower() + "_"):
+        names.insert(0, f"{perk_key}_{short}")
+    return next((
+        os.path.join(SOURCE_CLASS_DIR, f"{prefix}{name}.uc")
+        for name in names
+        for prefix in ("ZUTUpgrade_Skill_", "ZTUpgrade_Skill_")
+        if os.path.isfile(os.path.join(SOURCE_CLASS_DIR, f"{prefix}{name}.uc"))
+    ), None)
+
+
+def skill_allows_deluxe(short, perk_key=None):
     # Rack 'em Up is globally standard-only for both Gunslinger and Sharpshooter.
     if short.lower() == "rackemup":
         return False
-    class_path = next((
-        os.path.join(SOURCE_CLASS_DIR, f"{prefix}{short}.uc")
-        for prefix in ("ZUTUpgrade_Skill_", "ZTUpgrade_Skill_")
-        if os.path.isfile(os.path.join(SOURCE_CLASS_DIR, f"{prefix}{short}.uc"))
-    ), None)
+    class_path = skill_class_path(short, perk_key)
     if class_path is None:
         return True
     with open(class_path, encoding="utf-8-sig") as stream:
@@ -204,6 +212,23 @@ def skill_allows_deluxe(short):
 
 
 def perk_icon_path(short, parent=None):
+    # These redesigned perk icons live in Tempered_Build/Icons and are copied
+    # into docs/icons by the wiki sync. Prefer their current named assets over
+    # the old generic Demolitionist fallback.
+    custom_icons = {
+        "Executioner": "icons/executioner.png",
+        "Fraulein": "icons/fraulein.png",
+        "Armageddon": "icons/armageddon.png",
+        "Punisher": "icons/punisher.png",
+        "Scavenger": "icons/sas.png",
+        "Taskmaster": "icons/gign.png",
+        "Frost": "icons/thor.png",
+        "Omen": "icons/reinhardt.png",
+        # Gilgamesh has no dedicated texture in the SDK UPK yet.
+        "Gilgamesh": "icons/demolitionist.png",
+    }
+    if short in custom_icons and os.path.isfile(os.path.join(ROOT, "docs", custom_icons[short].replace("/", os.sep))):
+        return custom_icons[short]
     if short == "SpecialAgent":
         return "icons/spetsnaz.png"
     candidate = f"icons/{short.lower()}.png"
@@ -709,7 +734,48 @@ def merge_runtime_perk_registrations(active, catalog_path):
         flags=re.IGNORECASE,
     ):
         active.setdefault(key, is_static.lower() == "true")
+    # These catalog systems register their perks directly in PrepareCatalog()
+    # instead of through EnsurePerk in the progression catalog.
+    for key in ("Armageddon", "Gilgamesh"):
+        system_path = os.path.join(SOURCE_CLASS_DIR, f"ZT{key}System.uc")
+        if os.path.isfile(system_path):
+            with open(system_path, encoding="utf-8-sig") as stream:
+                source = stream.read()
+            if re.search(rf"ZTUpgrade_Perk_{key}", source, re.IGNORECASE):
+                active.setdefault(key, False)
     return active
+
+
+def merge_runtime_unlock_rules(rules):
+    """Read runtime-configured child unlocks, including dynamic catalog perks."""
+    path = os.path.join(SOURCE_CLASS_DIR, "ZTConfig_PerkUnlockRules.uc")
+    if not os.path.isfile(path):
+        return rules
+    with open(path, encoding="utf-8-sig") as stream:
+        source = stream.read()
+    for key, parent, level in re.findall(
+        r'AddOrUpdateSingleBaseUnlock\("ZTUpgrade_Perk_(\w+)"\s*,\s*"ZUTUpgrade_Perk_Base_(\w+)"\s*,\s*(\d+)\)',
+        source,
+        flags=re.IGNORECASE,
+    ):
+        rules.setdefault(key, {
+            "parentPerk": parent,
+            "unlockLevel": int(level),
+            "requirements": [{"perk": parent, "level": int(level)}],
+            "isCombinationUnlocked": False,
+        })
+    return rules
+
+
+def runtime_skill_roster(key):
+    """Return skill short names inserted by a perk's runtime catalog system."""
+    path = os.path.join(SOURCE_CLASS_DIR, f"ZT{key}System.uc")
+    if not os.path.isfile(path):
+        return []
+    with open(path, encoding="utf-8-sig") as stream:
+        source = stream.read()
+    names = re.findall(r"Skills\(\d+\)\s*=\s*class'ZTUpgrade_Skill_" + re.escape(key) + r"_(\w+)'", source, re.IGNORECASE)
+    return list(dict.fromkeys(names))
 
 
 def to_num(s):
@@ -795,10 +861,10 @@ def build_john_wick_passives():
     return result
 
 
-def source_skill_has_deluxe(short):
+def source_skill_has_deluxe(short, perk_key=None):
     """Return a skill's actual deluxe availability when its class declares it."""
-    class_path = os.path.join(SOURCE_CLASS_DIR, f"ZTUpgrade_Skill_{short}.uc")
-    if not os.path.isfile(class_path):
+    class_path = skill_class_path(short, perk_key)
+    if class_path is None:
         return None
     with open(class_path, encoding="utf-8-sig") as f:
         source = f.read()
@@ -1587,7 +1653,7 @@ def build():
     wm_skill_registry = parse_wm_skill_registry(INI_UPGRADES)
     active_advanced_perks = parse_active_advanced_perks(INI_UPGRADES)
     merge_runtime_perk_registrations(active_advanced_perks, PROGRESSION_CATALOG)
-    unlock_rules = parse_unlock_rules(main_sections)
+    unlock_rules = merge_runtime_unlock_rules(parse_unlock_rules(main_sections))
     # WaveGambler is injected into the perk progression catalog at runtime,
     # rather than listed in Config_PerkUpgrade. Its active unlock rule and
     # localization section are the authoritative signals that it is present.
@@ -1712,13 +1778,21 @@ def build():
             entry for entry in dk_skill_registry.get(key, [])
             if entry[0].lower() not in retired_skill_names
         ]
+        skill_roster += [(short, False, None) for short in runtime_skill_roster(key)]
         if key.lower() in retired_perk_names:
             skill_roster = []
         skill_roster += [(short, False, None) for short in perk_extras.get("skills", [])]
         skills = []
         for short, is_disabled, disabled_note in skill_roster:
             is_reborn_skill = key == "Taskmaster" and short == "Tank"
-            skill_section = "WMUpgrade_Skill_Tank" if is_reborn_skill else f"ZTUpgrade_Skill_{short}"
+            loc_candidates = [
+                f"ZTUpgrade_Skill_{key}_{short}", f"DKUpgrade_Skill_{key}_{short}",
+                f"ZTUpgrade_Skill_{short}", f"DKUpgrade_Skill_{short}",
+            ]
+            skill_section = "WMUpgrade_Skill_Tank" if is_reborn_skill else next(
+                (candidate for candidate in loc_candidates if ci_lookup(kor_sections, candidate)),
+                loc_candidates[-1],
+            )
             # The game's Config_SkillUpgrade registry and the KOR/main ini
             # section headers disagree on casing for a handful of skills
             # (registry "ShowOff" vs section "[DKUpgrade_Skill_Showoff]").
@@ -1742,12 +1816,12 @@ def build():
             # The localization file is the sole source for visible skill prose.
             # Do not reconcile it with INI values or substitute manual text.
             std_raw = skor.get("StandardSkillUpgradeDescription")
-            allows_deluxe = skill_allows_deluxe(short)
+            allows_deluxe = skill_allows_deluxe(short, key)
             delx_raw = skor.get("DeluxeSkillUpgradeDescription") if allows_deluxe else None
             std_fixed = delx_fixed = False
             deluxe_available = (
                 bool(skor.get("DeluxeSkillUpgradeDescription")) if is_reborn_skill
-                else source_skill_has_deluxe(short)
+                else source_skill_has_deluxe(short, key)
             )
 
             skills.append({
@@ -1801,7 +1875,9 @@ def build():
                 if key == "Engineer" else None
             ),
             "role": kor_role,
-            "summaryHtml": perk_extras.get("summaryHtml"),
+            # Numeric/mechanic prose is sourced from the active KOR strings;
+            # hand-maintained summaries have drifted from current code.
+            "summaryHtml": None,
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
             "capstoneDescriptions": [d for d in descriptions if d["isCapstone"]],
@@ -1813,7 +1889,7 @@ def build():
             "patchNote": perk_patch_note or None,
             "testWarning": None,
             "recentChangeTag": recent_changes.get(key),
-            "extraSections": perk_extras.get("extraSections", []),
+            "extraSections": [],
             "icon": perk_icon_path(key, rule.get("parentPerk")),
         })
 
@@ -1962,7 +2038,7 @@ def build():
             "strengths": bdata.get("strengths", []),
             "weaknesses": bdata.get("weaknesses", []),
             "noCapstoneNote": bdata.get("noCapstoneNote"),
-            "extraSections": bdata.get("extraSections", []),
+            "extraSections": [],
             "rankIcons": [
                 f"icons/ranks/{base_rank_icon_names[bkey]}-rank-{tier}.png"
                 for tier in range(5)
