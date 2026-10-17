@@ -714,7 +714,7 @@ function renderAdvDetail(key) {
       <div class="adv-grid">${upperPerkCards || '<div class="empty-state perk-empty">현재 활성화된 상위 퍼크가 없습니다.</div>'}</div>
     ` : ""}
   `;
-  if (p.key !== "WaveGambler") container.insertAdjacentHTML("beforeend", renderFullInfoSection(p));
+  container.insertAdjacentHTML("beforeend", renderFullInfoSection(p));
   const wrap = document.createDocumentFragment();
   wrap.appendChild(container);
   return wrap;
