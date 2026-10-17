@@ -1709,6 +1709,7 @@ def build():
     aurora_stats = parse_player_aurora(INI_GAME)
     kor_encoding = "utf-16" if INI_KOR.lower().endswith(".kor") else "utf-8-sig"
     kor_sections = parse_kor_ini(INI_KOR, encoding=kor_encoding)
+    perk_summary_texts = ci_lookup(kor_sections, "ZTUI_UPGMenu") or {}
     reborn_kor_sections = parse_kor_ini(INI_REBORN_KOR, encoding="utf-16")
     dk_skill_registry = parse_dk_skill_registry(INI_UPGRADES)
     wm_skill_registry = parse_wm_skill_registry(INI_UPGRADES)
@@ -1935,6 +1936,7 @@ def build():
         is_patched = bool(perk_patch_note)
         role_desc = manual_roles.get(key, {})
         kor_role = next((d["text"] for d in overview_descriptions), None)
+        perk_summary = perk_summary_texts.get(f"PerkSummary_{key}") or kor_role
         code_info_html = None
         if key == "Gambit":
             requirements = rule.get("requirements", [])
@@ -1992,7 +1994,8 @@ def build():
                 "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 공개 빌드의 기본 INI를 읽습니다."
                 if key == "Engineer" else None
             ),
-            "role": kor_role,
+            "summary": perk_summary,
+            "role": perk_summary,
             # Numeric/mechanic prose is sourced from the active KOR strings;
             # hand-maintained summaries have drifted from current code.
             "summaryHtml": code_info_html,
@@ -2066,6 +2069,7 @@ def build():
             (strip_font(d) for d in base_raw_descs if not is_capstone_description(d)),
             strip_font(base_raw_descs[0]) if base_raw_descs else None,
         )
+        perk_summary = perk_summary_texts.get(f"PerkSummary_{bkey}") or base_kor_role
         wrapper_kv = main_sections.get(f"DKWrapper_Perk_{bkey}", [])
         passive_stats = build_stat_entries([(k, v) for k, v in wrapper_kv if k != "MODEVERSION"], with_levels=True)
         base_stat_labels = {
@@ -2166,8 +2170,8 @@ def build():
             "key": bkey,
             "name": bdata["name"],
             "grade": bdata.get("grade"),
-            "summary": bdata.get("summary"),
-            "role": base_kor_role,
+            "summary": perk_summary,
+            "role": perk_summary,
             "overviewDescriptions": base_overview_descriptions,
             "passiveDescriptions": base_passive_descriptions,
             "endgame": bdata.get("endgame"),

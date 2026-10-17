@@ -19,6 +19,7 @@ def main():
 
     encoding = "utf-16" if build.INI_KOR.lower().endswith(".kor") else "utf-8-sig"
     kor = build.parse_kor_ini(build.INI_KOR, encoding=encoding)
+    perk_summaries = build.ci_lookup(kor, "ZTUI_UPGMenu") or {}
     reborn = build.parse_kor_ini(build.INI_REBORN_KOR, encoding="utf-16")
     retired_skills, retired_perks = build.parse_retired_upgrade_paths(
         os.path.join(build.SOURCE_CLASS_DIR, "ZTRetiredSkillFilter.uc")
@@ -27,6 +28,9 @@ def main():
     checked_perks = checked_skills = 0
 
     for perk in data.get("basePerks", []):
+        expected_summary = perk_summaries.get(f"PerkSummary_{perk['key']}")
+        if expected_summary and (perk.get("role") != expected_summary or perk.get("summary") != expected_summary):
+            failures.append(f"base perk summary mismatch: {perk['key']}")
         section = (
             build.ci_lookup(kor, f"ZTWrapper_Perk_{perk['key']}")
             or build.ci_lookup(kor, f"DKWrapper_Perk_{perk['key']}")
@@ -72,6 +76,9 @@ def main():
             checked_skills += 1
 
     for perk in data.get("advancedPerks", []):
+        expected_summary = perk_summaries.get(f"PerkSummary_{perk['key']}")
+        if expected_summary and (perk.get("role") != expected_summary or perk.get("summary") != expected_summary):
+            failures.append(f"advanced perk summary mismatch: {perk['key']}")
         section = (
             build.ci_lookup(kor, f"ZTUpgrade_Perk_{perk['key']}")
             or build.ci_lookup(kor, f"DKUpgrade_Perk_{perk['key']}")
