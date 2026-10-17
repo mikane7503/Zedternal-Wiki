@@ -6,6 +6,30 @@
    "grade": "A",
    "summary": "체력과 공속을 높이고, 버서커 무기에 한정된 피해 보너스를 제공하는 근접 전투 퍼크입니다.",
    "role": "[패시브] 최대 체력: +%x HP입니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 최대 체력: <font color=\"#77D914\">+%x HP</font>입니다.",
+     "text": "[패시브] 최대 체력: +%x HP입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">근접 공격 및 발사 속도</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "근접 공격 및 발사 속도: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">버서커 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "버서커 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 최대 체력: <font color=\"#77D914\">+%x HP</font>입니다.",
+     "text": "[패시브] 최대 체력: +%x HP입니다.",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -321,6 +345,30 @@
    "grade": "S",
    "summary": "돌격소총 화력과 재장전을 보강하고, 제드 타임을 연장하는 중거리 전투 퍼크입니다.",
    "role": "[패시브] 제드 타임 연장: +%x초 (최대 10초).",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">제드 타임 연장</font>: <font color=\"#77D914\">+%x초</font> (최대 <font color=\"#77D914\">10초</font>).",
+     "text": "[패시브] 제드 타임 연장: +%x초 (최대 10초).",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">재장전 속도</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "재장전 속도: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">코만도 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "코만도 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">제드 타임 연장</font>: <font color=\"#77D914\">+%x초</font> (최대 <font color=\"#77D914\">10초</font>).",
+     "text": "[패시브] 제드 타임 연장: +%x초 (최대 10초).",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -615,6 +663,20 @@
    "grade": "B",
    "summary": "폭발 무기와 수류탄 피해를 키우고, 대형 제드와 보스에게 추가 화력을 보태는 폭발 전문 퍼크입니다.",
    "role": "[패시브] 데몰리션 무기 피해: +%x%% 증가합니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">데몰리션 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 데몰리션 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">데몰리션 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 데몰리션 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -685,6 +747,11 @@
      "level": 10,
      "perk": "Fraulein",
      "name": "프로일라인"
+    },
+    {
+     "level": 15,
+     "perk": "Override",
+     "name": "오버라이드"
     },
     {
      "level": 20,
@@ -910,6 +977,30 @@
    "grade": "SS",
    "summary": "치유 장비와 팀 지원 효과를 강화하면서 모든 무기의 피해와 자신의 생존력도 함께 높이는 지원형 베이스 퍼크입니다.",
    "role": "[패시브] 최대 체력: +%x HP입니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">최대 체력</font>: <font color=\"#77D914\">+%x HP</font>입니다.",
+     "text": "[패시브] 최대 체력: +%x HP입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">주사기 및 치료 다트 재충전 속도</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "주사기 및 치료 다트 재충전 속도: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">모든 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "모든 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">최대 체력</font>: <font color=\"#77D914\">+%x HP</font>입니다.",
+     "text": "[패시브] 최대 체력: +%x HP입니다.",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -1220,6 +1311,25 @@
    "grade": "C",
    "summary": "화염 피해와 지속 효과에 더해 속성 저항을 갖춘 화염 전문 퍼크입니다.",
    "role": "[패시브] 화염·폭발·독성·음파 저항: +%x%% (최대 40%).",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">화염·폭발·독성·음파 저항</font>: <font color=\"#77D914\">+%x%%</font> (최대 <font color=\"#77D914\">40%</font>).",
+     "text": "[패시브] 화염·폭발·독성·음파 저항: +%x%% (최대 40%).",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">파이어버그 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "파이어버그 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">화염·폭발·독성·음파 저항</font>: <font color=\"#77D914\">+%x%%</font> (최대 <font color=\"#77D914\">40%</font>).",
+     "text": "[패시브] 화염·폭발·독성·음파 저항: +%x%% (최대 40%).",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -1263,7 +1373,7 @@
     "레벨당 파이어버그 무기 피해 +2%와 네 가지 속성 피해 저항 +1%를 함께 얻습니다."
    ],
    "weaknesses": [],
-   "noCapstoneNote": null,
+   "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Firebug-rank-0.png",
@@ -1439,6 +1549,30 @@
    "grade": "S",
    "summary": "건슬링거 무기 피해, 전 무기 헤드샷 피해와 이동 속도를 함께 높이는 기동 사격 퍼크입니다.",
    "role": "[패시브] 이동 속도: +%x%% 증가합니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">이동 속도</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 이동 속도: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">모든 무기의 헤드샷 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "모든 무기의 헤드샷 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">건슬링거 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "건슬링거 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">이동 속도</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 이동 속도: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -1498,7 +1632,7 @@
     "레벨당 이동 속도 +1.5%, 건슬링거 무기 피해 +2%, 전 무기 헤드샷 피해 +2%를 얻습니다."
    ],
    "weaknesses": [],
-   "noCapstoneNote": null,
+   "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Gunslinger-rank-0.png",
@@ -1707,6 +1841,30 @@
    "grade": "S",
    "summary": "전 무기의 반동과 헤드샷 피해를 보강하고, 샤프슈터 무기 피해를 높이는 정밀 사격 퍼크입니다.",
    "role": "[패시브] 모든 무기의 반동: -%x%% (최대 80%).",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기의 반동</font>: <font color=\"#77D914\">-%x%%</font> (최대 <font color=\"#77D914\">80%</font>).",
+     "text": "[패시브] 모든 무기의 반동: -%x%% (최대 80%).",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">모든 무기의 헤드샷 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "모든 무기의 헤드샷 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">샤프슈터 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "샤프슈터 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기의 반동</font>: <font color=\"#77D914\">-%x%%</font> (최대 <font color=\"#77D914\">80%</font>).",
+     "text": "[패시브] 모든 무기의 반동: -%x%% (최대 80%).",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -1768,7 +1926,7 @@
     "반동 감소는 80%에서 제한됩니다."
    ],
    "weaknesses": [],
-   "noCapstoneNote": null,
+   "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Sharpshooter-rank-0.png",
@@ -1957,6 +2115,30 @@
    "grade": "A",
    "summary": "서포트 무기의 피해와 관통력을 높이고 비틀거림·넉다운 위력을 강화하는 전선 지원 퍼크입니다.",
    "role": "[패시브] 비틀거림 및 넉다운 위력: +%x%% 증가합니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">비틀거림 및 넉다운 위력</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 비틀거림 및 넉다운 위력: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">관통력</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "관통력: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">서포트 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "서포트 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">비틀거림 및 넉다운 위력</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 비틀거림 및 넉다운 위력: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -2018,7 +2200,7 @@
     "별도 10·20레벨 캡스톤은 없습니다."
    ],
    "weaknesses": [],
-   "noCapstoneNote": null,
+   "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Support-rank-0.png",
@@ -2242,6 +2424,30 @@
    "grade": "A",
    "summary": "방어구와 탄창 용량, SWAT 무기 화력을 높이는 근거리 전투 퍼크입니다.",
    "role": "[패시브] 최대 방어구: +%x%% 증가합니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">최대 방어구</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 최대 방어구: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">탄창 용량</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "탄창 용량: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">SWAT 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "SWAT 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">최대 방어구</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 최대 방어구: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -2303,7 +2509,7 @@
     "SWAT 무기 피해 레벨당 +2%"
    ],
    "weaknesses": [],
-   "noCapstoneNote": null,
+   "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/SWAT-rank-0.png",
@@ -2549,6 +2755,30 @@
    "grade": "A",
    "summary": "무게 한도와 예비 탄약, 모든 무기 피해를 고르게 보강하는 만능 퍼크입니다.",
    "role": "[패시브] 휴대 무게: +%x 증가합니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">휴대 무게</font>: <font color=\"#77D914\">+%x</font> 증가합니다.",
+     "text": "[패시브] 휴대 무게: +%x 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">예비 탄약</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "예비 탄약: +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">모든 무기 피해</font>: <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "모든 무기 피해: +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">휴대 무게</font>: <font color=\"#77D914\">+%x</font> 증가합니다.",
+     "text": "[패시브] 휴대 무게: +%x 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "endgame": null,
    "descriptions": [
     {
@@ -2610,7 +2840,7 @@
     "모든 무기 피해 레벨당 +2%, 20레벨에서 +40%"
    ],
    "weaknesses": [],
-   "noCapstoneNote": null,
+   "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Survivalist-rank-0.png",
@@ -2913,7 +3143,27 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">버서커 무기 피해</font>: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 버서커 무기 피해: +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">최대 체력</font>: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "최대 체력: +%x%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">버서커 무기 피해</font>: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 버서커 무기 피해: +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "Aware",
@@ -3365,7 +3615,27 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 버서커 무기 <font color=\"#00BFFF\">피해량</font>: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 버서커 무기 피해량: +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">최대 방어구</font>: 기본 방어구의 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "최대 방어구: 기본 방어구의 +%x%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 버서커 무기 <font color=\"#00BFFF\">피해량</font>: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 버서커 무기 피해량: +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "Goliath_MeleeGuard",
@@ -3783,6 +4053,20 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 현재 근접 공격 피해 보너스 <font color=\"#77D914\">+%x1_1%%</font>, 피해 저항 <font color=\"#77D914\">+%x1_2%%</font>, 공격 속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 현재 근접 공격 피해 보너스 +%x1_1%%, 피해 저항 +%x1_2%%, 공격 속도 +%x1_3%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 현재 근접 공격 피해 보너스 <font color=\"#77D914\">+%x1_1%%</font>, 피해 저항 <font color=\"#77D914\">+%x1_2%%</font>, 공격 속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 현재 근접 공격 피해 보너스 +%x1_1%%, 피해 저항 +%x1_2%%, 공격 속도 +%x1_3%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">브롤러즈 엣지</font>:  10번째 근접 공격마다 무기의 기본 사거리 안 모든 적에게 <font color=\"#77D914\">360도</font> 공격을 가합니다.",
@@ -3795,6 +4079,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AdrenalineRush",
@@ -4453,7 +4738,32 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 저주받은 그릇: <font color=\"#00BFFF\">최대 체력</font> <font color=\"#77D914\">-%x%%</font> (최대 <font color=\"#77D914\">50%</font> 감소).",
+     "text": "[패시브] 저주받은 그릇: 최대 체력 -%x%% (최대 50% 감소).",
+     "isCapstone": false
+    },
+    {
+     "raw": "저주받은 그릇: 최대 방어력 <font color=\"#77D914\">-%x%%</font> (최대 <font color=\"#77D914\">50%</font> 감소).",
+     "text": "저주받은 그릇: 최대 방어력 -%x%% (최대 50% 감소).",
+     "isCapstone": false
+    },
+    {
+     "raw": "혈맹: <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "혈맹: 피해량 +%x%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 저주받은 그릇: <font color=\"#00BFFF\">최대 체력</font> <font color=\"#77D914\">-%x%%</font> (최대 <font color=\"#77D914\">50%</font> 감소).",
+     "text": "[패시브] 저주받은 그릇: 최대 체력 -%x%% (최대 50% 감소).",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "BloodRush",
@@ -5301,6 +5611,20 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 지옥의 힘: <font color=\"#77D914\">+%x1_1%%</font> 강공격 근접 피해, 대형 제드와 보스에 대한 근접 피해 <font color=\"#77D914\">+%x1_2%%</font>.",
+     "text": "[패시브] 지옥의 힘: +%x1_1%% 강공격 근접 피해, 대형 제드와 보스에 대한 근접 피해 +%x1_2%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 지옥의 힘: <font color=\"#77D914\">+%x1_1%%</font> 강공격 근접 피해, 대형 제드와 보스에 대한 근접 피해 <font color=\"#77D914\">+%x1_2%%</font>.",
+     "text": "[패시브] 지옥의 힘: +%x1_1%% 강공격 근접 피해, 대형 제드와 보스에 대한 근접 피해 +%x1_2%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">공포의 데스웨이브</font>:  <font color=\"#77D914\">60초</font>마다 플레이어 반경 <font color=\"#77D914\">2</font><font color=\"#00BFFF\">m</font>의 모든 적에게, 그 동안 가한 총피해의 <font color=\"#77D914\">20%</font>를 폭발 피해로 각각 전달합니다. 각 파동은 대형 화염 폭발 이펙트 두 겹과 폭발음을 발생시킵니다. 이펙트는 실제 피해 반경보다 큽니다. 다음 발동까지 남은 시간은 실시간 스탯 박스 위에 표시됩니다.",
@@ -5313,6 +5637,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "InfernalReservoir",
@@ -5570,7 +5895,52 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#77D914\">1레벨</font>부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "text": "1레벨부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "잭팟도박: 현재 도쉬의 <font color=\"#77D914\">100%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">50%</font>를 잃습니다.",
+     "text": "잭팟도박: 현재 도쉬의 100%를 추가로 얻거나, 실패하면 50%를 잃습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "도박: 현재 도쉬의 <font color=\"#77D914\">15%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">15%</font>를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "text": "도박: 현재 도쉬의 15%를 추가로 얻거나, 실패하면 15%를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 <font color=\"#77D914\">20레벨</font>. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "text": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 20레벨. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#77D914\">1레벨</font>부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "text": "1레벨부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "잭팟도박: 현재 도쉬의 <font color=\"#77D914\">100%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">50%</font>를 잃습니다.",
+     "text": "잭팟도박: 현재 도쉬의 100%를 추가로 얻거나, 실패하면 50%를 잃습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "도박: 현재 도쉬의 <font color=\"#77D914\">15%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">15%</font>를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "text": "도박: 현재 도쉬의 15%를 추가로 얻거나, 실패하면 15%를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 <font color=\"#77D914\">20레벨</font>. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "text": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 20레벨. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [],
    "skillCount": 0,
    "verdict": {
@@ -5656,7 +6026,27 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 매 웨이브 종료 시 %x 도쉬를 획득합니다.",
+     "text": "[패시브] 매 웨이브 종료 시 %x 도쉬를 획득합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "헤드샷으로 처치할 때마다 <font color=\"#77D914\">%x%%</font> 확률로 <font color=\"#77D914\">1 도쉬</font>를 획득합니다.",
+     "text": "헤드샷으로 처치할 때마다 %x%% 확률로 1 도쉬를 획득합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 매 웨이브 종료 시 %x 도쉬를 획득합니다.",
+     "text": "[패시브] 매 웨이브 종료 시 %x 도쉬를 획득합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "ArmoredUp",
@@ -6252,6 +6642,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 라운드 지원금: 각 웨이브 종료 시 추가 지급금 +%x.",
+     "text": "[패시브] 라운드 지원금: 각 웨이브 종료 시 추가 지급금 +%x.",
+     "isCapstone": false
+    },
+    {
+     "raw": "대량 할인: 상점 아이템 가격 <font color=\"#77D914\">-%x%%</font> 감소.",
+     "text": "대량 할인: 상점 아이템 가격 -%x%% 감소.",
+     "isCapstone": false
+    },
+    {
+     "raw": "비용 절감: 무기 및 장비 업그레이드 비용 <font color=\"#77D914\">-%x%%</font>  <font color=\"#DC143C\">복리</font>: 감소.",
+     "text": "비용 절감: 무기 및 장비 업그레이드 비용 -%x%%  복리: 감소.",
+     "isCapstone": false
+    },
+    {
+     "raw": "포트폴리오 성장: 누적 <font color=\"#77D914\">2500 도쉬</font>를 획득할 때마다, 매 웨이브 종료 시 받는 기본 지원금이 영구적으로 <font color=\"#77D914\">+50</font> 증가합니다.",
+     "text": "포트폴리오 성장: 누적 2500 도쉬를 획득할 때마다, 매 웨이브 종료 시 받는 기본 지원금이 영구적으로 +50 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 라운드 지원금: 각 웨이브 종료 시 추가 지급금 +%x.",
+     "text": "[패시브] 라운드 지원금: 각 웨이브 종료 시 추가 지급금 +%x.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">복리</font>: 웨이브 종료 시 현재 소지한 <font color=\"#00BFFF\">도쉬</font>의 <font color=\"#77D914\">10%</font>를 이자로 획득합니다.",
@@ -6264,6 +6683,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AssetLiquidation",
@@ -6716,7 +7136,7 @@
    "fixedStats": [],
    "valueSourceNote": null,
    "role": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-   "summaryHtml": null,
+   "summaryHtml": "<p>해금 조건: 자본가 레벨 5 + 건슬링거 레벨 10. 최대 레벨은 20이며, 현재 공개 코드에 등록된 구매 스킬은 0개입니다.</p>",
    "endgame": null,
    "descriptions": [
     {
@@ -6740,6 +7160,25 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, <font color=\"#00BFFF\">피해량</font>, <font color=\"#FFD700\">도쉬</font>, <font color=\"#00BFFF\">이동 속도</font> 중 하나를 얻습니다.",
+     "text": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, 피해량, 도쉬, 이동 속도 중 하나를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">판돈 상승</font>: 더 큰 보상을 주는 <font color=\"#00BFFF\">희귀 갬빗</font>이 잠금 해제됩니다. <font color=\"#00BFFF\">신화 갬빗</font>은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
@@ -6752,6 +7191,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [],
    "skillCount": 0,
    "verdict": {
@@ -6852,6 +7292,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">코만도·샤프슈터·SWAT 무기 피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 코만도·샤프슈터·SWAT 무기 피해량이 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "해당 무기의 <font color=\"#00BFFF\">반동</font>이 <font color=\"#77D914\">%x%%</font> 감소합니다.",
+     "text": "해당 무기의 반동이 %x%% 감소합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨마다 해당 무기의 <font color=\"#00BFFF\">재장전 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "레벨마다 해당 무기의 재장전 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">코만도·샤프슈터·SWAT 무기 피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 코만도·샤프슈터·SWAT 무기 피해량이 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">치명 처분</font>: <font color=\"#00BFFF\">코만도·샤프슈터·SWAT 무기</font>로 <font color=\"#00BFFF\">클롯·시스트·슬래셔·알파 클롯</font>을 한 발에 처치합니다.",
@@ -6864,6 +7328,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "ApronHunter",
@@ -7375,7 +7840,52 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 소총 <font color=\"#00BFFF\">피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 소총 피해량이 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "소총 <font color=\"#00BFFF\">헤드샷 피해</font>량이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "소총 헤드샷 피해량이 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">재장전 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "재장전 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">반동</font>이 <font color=\"#77D914\">%x%%</font> 감소합니다.",
+     "text": "반동이 %x%% 감소합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "무기 전환 속도가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "무기 전환 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">탄약</font> 용량이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "탄약 용량이 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#77D914\">5 레벨</font>마다 <font color=\"#00BFFF\">수류탄</font> 용량이 <font color=\"#77D914\">+1</font>씩 증가합니다.",
+     "text": "5 레벨마다 수류탄 용량이 +1씩 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 소총 <font color=\"#00BFFF\">피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 소총 피해량이 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "ArmorPiercingProtocol",
@@ -8025,6 +8535,20 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> ZED 타임 중 무기 피해 보너스: <font color=\"#77D914\">+%x%%</font>. 패시브 증가는 9레벨에서 멈춥니다.",
+     "text": "[패시브] ZED 타임 중 무기 피해 보너스: +%x%%. 패시브 증가는 9레벨에서 멈춥니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> ZED 타임 중 무기 피해 보너스: <font color=\"#77D914\">+%x%%</font>. 패시브 증가는 9레벨에서 멈춥니다.",
+     "text": "[패시브] ZED 타임 중 무기 피해 보너스: +%x%%. 패시브 증가는 9레벨에서 멈춥니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">시간의 숙련</font>:  ZED 타임 중 실시간 속도로 이동합니다. 에고니의 ZED 타임 피해 보너스는 레벨당 패시브를 포함해 합계 <font color=\"#77D914\">+50%</font>가 됩니다.",
@@ -8037,6 +8561,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AcceleratedDecay",
@@ -8654,6 +9179,45 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 활성 웨이브 동안 <font color=\"#77D914\">20초</font>마다 <font color=\"#00BFFF\">돌격, 템포, 가속, 방벽</font> 순서로 위상이 바뀝니다. 상점 시간에는 멈추며 각 위상 보너스는 해당 위상에서 활성화됩니다.",
+     "text": "[패시브] 활성 웨이브 동안 20초마다 돌격, 템포, 가속, 방벽 순서로 위상이 바뀝니다. 상점 시간에는 멈추며 각 위상 보너스는 해당 위상에서 활성화됩니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">돌격</font>: 피해 <font color=\"#77D914\">+%x1_1%%</font>, 관통력 <font color=\"#77D914\">+%x1_2%%</font>. 동기화 조건: 헤드샷 처치.",
+     "text": "돌격: 피해 +%x1_1%%, 관통력 +%x1_2%%. 동기화 조건: 헤드샷 처치.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">템포</font>: 재장전 속도 <font color=\"#77D914\">+%x1_1%%</font>, 발사 속도 <font color=\"#77D914\">+%x1_2%%</font>. 동기화 조건: 3초 이내 연속 처치.",
+     "text": "템포: 재장전 속도 +%x1_1%%, 발사 속도 +%x1_2%%. 동기화 조건: 3초 이내 연속 처치.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">가속</font>: 이동 속도 <font color=\"#77D914\">+%x1_1%%</font>, 무기 전환 속도 <font color=\"#77D914\">+%x1_2%%</font>. 동기화 조건: 이동 중 처치.",
+     "text": "가속: 이동 속도 +%x1_1%%, 무기 전환 속도 +%x1_2%%. 동기화 조건: 이동 중 처치.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">방벽</font>: 근거리 피해 <font color=\"#77D914\">+%x1_1%%</font>, 처치 시 <font color=\"#77D914\">1 HP</font>, 피해 저항 <font color=\"#77D914\">10%</font>. 동기화 조건: <font color=\"#77D914\">5m 이내 처치</font>.",
+     "text": "방벽: 근거리 피해 +%x1_1%%, 처치 시 1 HP, 피해 저항 10%. 동기화 조건: 5m 이내 처치.",
+     "isCapstone": false
+    },
+    {
+     "raw": "위상 전환 시 해당 위상에서 동기화 처치 <font color=\"#77D914\">5회 이상</font>을 달성했다면, 그 위상에 영구 <font color=\"#77D914\">+0.25%</font> 보너스 중첩 <font color=\"#77D914\">1회</font>를 얻습니다.",
+     "text": "위상 전환 시 해당 위상에서 동기화 처치 5회 이상을 달성했다면, 그 위상에 영구 +0.25% 보너스 중첩 1회를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 활성 웨이브 동안 <font color=\"#77D914\">20초</font>마다 <font color=\"#00BFFF\">돌격, 템포, 가속, 방벽</font> 순서로 위상이 바뀝니다. 상점 시간에는 멈추며 각 위상 보너스는 해당 위상에서 활성화됩니다.",
+     "text": "[패시브] 활성 웨이브 동안 20초마다 돌격, 템포, 가속, 방벽 순서로 위상이 바뀝니다. 상점 시간에는 멈추며 각 위상 보너스는 해당 위상에서 활성화됩니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">조화</font> - 위상 전환 시 두 위상이 <font color=\"#77D914\">2초</font>간 겹칩니다. 직전 위상에서 동기화에 성공하면 <font color=\"#77D914\">4초</font>간 겹칩니다.",
@@ -8666,6 +9230,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [],
    "skillCount": 0,
    "verdict": {
@@ -8719,6 +9284,20 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 수류탄 피해가 레벨당 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 수류탄 피해가 레벨당 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 수류탄 피해가 레벨당 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 수류탄 피해가 레벨당 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">10레벨 — 증폭</font>: 다른 피해 보너스 계산 후 수류탄 피해에 <font color=\"#77D914\">1</font> + (현재 웨이브 − <font color=\"#77D914\">1</font>) × <font color=\"#77D914\">0.1</font> 배율을 적용합니다.",
@@ -8731,6 +9310,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Fanatic",
@@ -8986,6 +9566,25 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 폭발 피해 <font color=\"#77D914\">%x1_1%%</font>, 스크레이크 추가 피해 <font color=\"#77D914\">%x1_2%%</font>",
+     "text": "[패시브] 폭발 피해 %x1_1%%, 스크레이크 추가 피해 %x1_2%%",
+     "isCapstone": false
+    },
+    {
+     "raw": "플레시파운드류 추가 피해 <font color=\"#77D914\">%x2_1%%</font>, 폭발 범위 <font color=\"#77D914\">%x2_2%%</font>",
+     "text": "플레시파운드류 추가 피해 %x2_1%%, 폭발 범위 %x2_2%%",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 폭발 피해 <font color=\"#77D914\">%x1_1%%</font>, 스크레이크 추가 피해 <font color=\"#77D914\">%x1_2%%</font>",
+     "text": "[패시브] 폭발 피해 %x1_1%%, 스크레이크 추가 피해 %x1_2%%",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">뉴크</font>: 데몰리션 제드타임 스킬 ‘<font color=\"#00BFFF\">세계의 파괴자</font>’를 얻습니다.",
@@ -8998,6 +9597,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "ReserveShells",
@@ -9211,6 +9811,302 @@
    "icon": "icons/fraulein.png"
   },
   {
+   "key": "Override",
+   "name": "오버라이드",
+   "parentPerk": "Demolitionist",
+   "unlockLevel": 15,
+   "unlockRequirements": [
+    {
+     "perk": "Demolitionist",
+     "level": 15
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 10,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "role": "[패시브] 패시브 능력과 캡스톤이 없습니다.",
+   "summaryHtml": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 패시브 능력과 캡스톤이 없습니다.",
+     "text": "[패시브] 패시브 능력과 캡스톤이 없습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "시커-6·실스퀄·RPG-7·ZED MKIII·분쇄기·M16 M203·M79 강화 모듈은 무기별로 가장 최근에 구매한 모듈이 이전 효과를 대체합니다.",
+     "text": "시커-6·실스퀄·RPG-7·ZED MKIII·분쇄기·M16 M203·M79 강화 모듈은 무기별로 가장 최근에 구매한 모듈이 이전 효과를 대체합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "최대 레벨: <font color=\"#77D914\">10</font>. 해금: <font color=\"#00BFFF\">데몰리션 레벨</font> <font color=\"#77D914\">15</font>.",
+     "text": "최대 레벨: 10. 해금: 데몰리션 레벨 15.",
+     "isCapstone": false
+    }
+   ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 패시브 능력과 캡스톤이 없습니다.",
+     "text": "[패시브] 패시브 능력과 캡스톤이 없습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "시커-6·실스퀄·RPG-7·ZED MKIII·분쇄기·M16 M203·M79 강화 모듈은 무기별로 가장 최근에 구매한 모듈이 이전 효과를 대체합니다.",
+     "text": "시커-6·실스퀄·RPG-7·ZED MKIII·분쇄기·M16 M203·M79 강화 모듈은 무기별로 가장 최근에 구매한 모듈이 이전 효과를 대체합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "최대 레벨: <font color=\"#77D914\">10</font>. 해금: <font color=\"#00BFFF\">데몰리션 레벨</font> <font color=\"#77D914\">15</font>.",
+     "text": "최대 레벨: 10. 해금: 데몰리션 레벨 15.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 패시브 능력과 캡스톤이 없습니다.",
+     "text": "[패시브] 패시브 능력과 캡스톤이 없습니다.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [],
+   "noCapstoneNote": "<font color=\"#FFD700\">[패시브]</font> 패시브 능력과 캡스톤이 없습니다.",
+   "skills": [
+    {
+     "key": "SeekerA",
+     "name": "시커 강화 모듈 A",
+     "standardDesc": "시커의 탄창과 예비 탄약이 2배, 연사 속도가 2배가 됩니다. 마우스를 누르고 있으면 연속 사격합니다. 발사 시 락온한 적마다 미사일을 한 발씩 발사하며, 발사 수는 탄창 잔량을 넘지 않습니다. 락온 대상 수 제한이 사라집니다. 피해량과 폭발 반경은 30% 감소합니다. 시커 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "시커의 탄창과 예비 탄약이 2배, 연사 속도가 2배가 됩니다. 마우스를 누르고 있으면 연속 사격합니다. 발사 시 락온한 적마다 미사일을 한 발씩 발사하며, 발사 수는 탄창 잔량을 넘지 않습니다. 락온 대상 수 제한이 사라집니다. 피해량과 폭발 반경은 30% 감소합니다. 시커 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "SeekerB",
+     "name": "시커 강화 모듈 B",
+     "standardDesc": "한 번 발사하면 장전된 시커 로켓을 모두 동시에 발사합니다. 중앙에 한 발을 쏘고 나머지는 360도 원형으로 퍼집니다. 20m 지점 기준 원형 배치 반경은 약 0.5m입니다. 피해량과 폭발 반경이 25% 증가합니다. 시커 강화 모듈 A를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "한 번 발사하면 장전된 시커 로켓을 모두 동시에 발사합니다. 중앙에 한 발을 쏘고 나머지는 360도 원형으로 퍼집니다. 20m 지점 기준 원형 배치 반경은 약 0.5m입니다. 피해량과 폭발 반경이 25% 증가합니다. 시커 강화 모듈 A를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "SealSquealA",
+     "name": "실스퀄 강화 모듈 A",
+     "standardDesc": "실스퀄이 폭발하지 않고 직격 피해만 줍니다. 직격 피해가 5배가 되며 피해가 남아 있는 동안 적을 관통합니다. 투사체 메시지는 시간이 지나면 사라집니다. 실스퀄 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "실스퀄이 폭발하지 않고 직격 피해만 줍니다. 직격 피해가 5배가 되며 피해가 남아 있는 동안 적을 관통합니다. 투사체 메시지는 시간이 지나면 사라집니다. 실스퀄 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "SealSquealB",
+     "name": "실스퀄 강화 모듈 B",
+     "standardDesc": "지형에 박힌 작살이 지뢰가 됩니다. 적이 3m 안에 접근하면 1초 뒤 폭발합니다. 직격·폭발 피해는 40%, 폭발 반경과 이펙트 크기는 50% 감소하고, 탄창과 예비 탄약은 2.5배가 됩니다. 180초 동안 발동하지 않은 지뢰는 제거됩니다. 실스퀄 강화 모듈 A를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "지형에 박힌 작살이 지뢰가 됩니다. 적이 3m 안에 접근하면 1초 뒤 폭발합니다. 직격·폭발 피해는 40%, 폭발 반경과 이펙트 크기는 50% 감소하고, 탄창과 예비 탄약은 2.5배가 됩니다. 180초 동안 발동하지 않은 지뢰는 제거됩니다. 실스퀄 강화 모듈 A를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "RPGA",
+     "name": "RPG 강화 모듈 A",
+     "standardDesc": "RPG 로켓이 폭발하지 않고 직격 피해만 줍니다. 직격 피해는 5배가 되며 남은 피해가 있는 동안 적을 관통합니다. 적을 직격할 때마다 헤드샷 머리 터짐 사운드가 재생됩니다. RPG 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "RPG 로켓이 폭발하지 않고 직격 피해만 줍니다. 직격 피해는 5배가 되며 남은 피해가 있는 동안 적을 관통합니다. 적을 직격할 때마다 헤드샷 머리 터짐 사운드가 재생됩니다. RPG 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "RPGB",
+     "name": "RPG 강화 모듈 B",
+     "standardDesc": "재장전 모션 없이 연속 발사합니다. 예비 탄약 용량이 50% 증가하고, 직격 및 폭발 피해와 폭발 반경이 20% 감소합니다. RPG 강화 모듈 A를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "재장전 모션 없이 연속 발사합니다. 예비 탄약 용량이 50% 증가하고, 직격 및 폭발 피해와 폭발 반경이 20% 감소합니다. RPG 강화 모듈 A를 나중에 구매하면 이 효과는 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "ZedMK4",
+     "name": "ZED MK4 로켓 모듈",
+     "standardDesc": "ZED MKIII의 두 발사 모드를 로켓으로 바꿔 에너지탄 발사를 제거합니다. 로켓 피해가 25% 감소하고 탄창과 예비 탄약 용량이 30% 감소합니다. 나중에 ZED MK5 샤프슈터 모듈을 구매하면 효과가 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "ZED MKIII의 두 발사 모드를 로켓으로 바꿔 에너지탄 발사를 제거합니다. 로켓 피해가 25% 감소하고 탄창과 예비 탄약 용량이 30% 감소합니다. 나중에 ZED MK5 샤프슈터 모듈을 구매하면 효과가 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "ZedMK5",
+     "name": "ZED MK5 샤프슈터 모듈",
+     "standardDesc": "ZED MKIII 에너지탄 피해가 10% 증가하고, 헤드샷 피해가 추가로 30% 증가합니다. 에너지탄 공격 속도가 15% 증가합니다. 로켓 발사 간격은 기존의 2배가 됩니다. 나중에 ZED MK4 로켓 모듈을 구매하면 효과가 교체됩니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "ZED MKIII 에너지탄 피해가 10% 증가하고, 헤드샷 피해가 추가로 30% 증가합니다. 에너지탄 공격 속도가 15% 증가합니다. 로켓 발사 간격은 기존의 2배가 됩니다. 나중에 ZED MK4 로켓 모듈을 구매하면 효과가 교체됩니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Pulverizer",
+     "name": "분쇄기 강화 모듈",
+     "standardDesc": "분쇄기의 공격마다 해당 공격의 최종 무기 피해량 절반에 해당하는 폭발 피해를 추가합니다. 폭발 피해는 제드를 휘청이게 하지 않습니다. 공격 속도가 70% 감소하고 탄약 용량이 50% 감소합니다. 특수 공격은 유지되며 기본 강공격 3회를 0.2초 간격으로 빠르게 가합니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "분쇄기의 공격마다 해당 공격의 최종 무기 피해량 절반에 해당하는 폭발 피해를 추가합니다. 폭발 피해는 제드를 휘청이게 하지 않습니다. 공격 속도가 70% 감소하고 탄약 용량이 50% 감소합니다. 특수 공격은 유지되며 기본 강공격 3회를 0.2초 간격으로 빠르게 가합니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "M4M320",
+     "name": "M4 M320 모듈",
+     "standardDesc": "M16 M203을 M4 M320으로 개조합니다. 탄환 피해가 25%, 장탄 용량이 20%, 예비 탄약이 30% 증가하고 유탄이 4발 추가됩니다. 유탄이 폭발한 뒤 0.5초 후 충돌 지점 주변에서 추가 폭발 4회가 일어납니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "M16 M203을 M4 M320으로 개조합니다. 탄환 피해가 25%, 장탄 용량이 20%, 예비 탄약이 30% 증가하고 유탄이 4발 추가됩니다. 유탄이 폭발한 뒤 0.5초 후 충돌 지점 주변에서 추가 폭발 4회가 일어납니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "M79Cluster",
+     "name": "M79 집속탄 모듈",
+     "standardDesc": "M79 유탄발사기를 집속탄 모듈로 개조합니다. 유탄이 폭발한 뒤 0.5초 후 충돌 지점 주변에서 추가 폭발 4회가 일어납니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "M79 유탄발사기를 집속탄 모듈로 개조합니다. 유탄이 폭발한 뒤 0.5초 후 충돌 지점 주변에서 추가 폭발 4회가 일어납니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    }
+   ],
+   "skillCount": 11,
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "icon": "icons/demolitionist.png"
+  },
+  {
    "key": "Armageddon",
    "name": "아마겟돈",
    "parentPerk": "Demolitionist",
@@ -9258,6 +10154,25 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 뉴크 폭발·방사능 피해: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 뉴크 폭발·방사능 피해: +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "제드 타임이 아닐 때의 일반 뉴크 확률: 표시 레벨 기준 <font color=\"#77D914\">%x%%</font>. 데몰리션 폭발 무기 사격과 투척 다이너마이트에 적용되며, 다른 투척 수류탄은 제외됩니다.",
+     "text": "제드 타임이 아닐 때의 일반 뉴크 확률: 표시 레벨 기준 %x%%. 데몰리션 폭발 무기 사격과 투척 다이너마이트에 적용되며, 다른 투척 수류탄은 제외됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 뉴크 폭발·방사능 피해: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 뉴크 폭발·방사능 피해: +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">리틀보이</font>: 사격당 테스트 확률 <font color=\"#77D914\">50%</font>. 직격·폭발 피해와 폭발 반경이 <font color=\"#77D914\">2배</font>, 뉴크 이펙트 크기가 <font color=\"#77D914\">4.5배</font>가 되며 사운드가 재생됩니다.",
@@ -9275,6 +10190,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "SovietTechnology",
@@ -9504,7 +10420,42 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 폭발 숙련도: <font color=\"#00BFFF\">모든 무기</font> <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 폭발 숙련도: 모든 무기 피해량 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "폭발 숙련도: 여분 <font color=\"#00BFFF\">탄약</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "폭발 숙련도: 여분 탄약 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "처치할 때마다 카운터가 충전됩니다. 임계값에 도달하면 <font color=\"#77D914\">10초간</font> 활성화되며, 이 동안 처치한 적은 폭발합니다.",
+     "text": "처치할 때마다 카운터가 충전됩니다. 임계값에 도달하면 10초간 활성화되며, 이 동안 처치한 적은 폭발합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "처치 충전 기준: <font color=\"#77D914\">%x4_1%</font>회. 폭발 피해: <font color=\"#77D914\">%x4_2%</font>, 반경: <font color=\"#77D914\">%x4_3% UU</font>.",
+     "text": "처치 충전 기준: %x4_1%회. 폭발 피해: %x4_2%, 반경: %x4_3% UU.",
+     "isCapstone": false
+    },
+    {
+     "raw": "카운터는 웨이브 간에도 유지됩니다. 자가 <font color=\"#00BFFF\">피해</font>는 받지 않습니다. 히든 퍼크: 데몰리션 10레벨 + 서바이벌리스트 10레벨.",
+     "text": "카운터는 웨이브 간에도 유지됩니다. 자가 피해는 받지 않습니다. 히든 퍼크: 데몰리션 10레벨 + 서바이벌리스트 10레벨.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 폭발 숙련도: <font color=\"#00BFFF\">모든 무기</font> <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 폭발 숙련도: 모든 무기 피해량 +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "HairTrigger",
@@ -9644,6 +10595,30 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 패시브 효과 없음.",
+     "text": "[패시브] 패시브 효과 없음.",
+     "isCapstone": false
+    },
+    {
+     "raw": "엔지니어 <font color=\"#77D914\">5레벨</font>에서 해금됩니다. 최대 레벨은 <font color=\"#77D914\">10</font>입니다.",
+     "text": "엔지니어 5레벨에서 해금됩니다. 최대 레벨은 10입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "헤드 우선 조준, 은신 제드 탐지, 드론 배치 속도 향상, 스크레이크·플레시파운드·쿼터파운드 대상 피해 증가를 별도 스킬로 제공합니다. 보너스는 자신의 드론에만 적용됩니다.",
+     "text": "헤드 우선 조준, 은신 제드 탐지, 드론 배치 속도 향상, 스크레이크·플레시파운드·쿼터파운드 대상 피해 증가를 별도 스킬로 제공합니다. 보너스는 자신의 드론에만 적용됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 패시브 효과 없음.",
+     "text": "[패시브] 패시브 효과 없음.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">배치 확장</font>: 자신의 <font color=\"#00BFFF\">센티널</font>과 <font color=\"#00BFFF\">HRG 워트호그</font> 공용 배치 한도 <font color=\"#77D914\">+1대</font>(최대 총 <font color=\"#77D914\">3대</font>).",
@@ -9651,6 +10626,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Technician_ThermalOptics",
@@ -9808,6 +10784,30 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 패시브 효과 없음.",
+     "text": "[패시브] 패시브 효과 없음.",
+     "isCapstone": false
+    },
+    {
+     "raw": "엔지니어 <font color=\"#77D914\">10레벨</font>에서 해금됩니다. 최대 레벨은 <font color=\"#77D914\">10</font>입니다.",
+     "text": "엔지니어 10레벨에서 해금됩니다. 최대 레벨은 10입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "구매한 해커 탄종은 <font color=\"#77D914\">드론 10발마다</font> 한 번씩 확정 발사됩니다. 탄종은 서로 다른 발사 순번에 배정되어 한 발에 특수탄 하나만 나갑니다. 네 탄종을 모두 보유하면 소이는 <font color=\"#77D914\">1</font>번째, 출혈은 <font color=\"#77D914\">3</font>번째, 에너지는 <font color=\"#77D914\">5</font>번째, 볼트는 <font color=\"#77D914\">7</font>번째 발사에 나갑니다. 보유 탄종이 적으면 주기 안에서 간격을 균등하게 배치합니다. 일반과 디럭스의 발사 주기는 같습니다.",
+     "text": "구매한 해커 탄종은 드론 10발마다 한 번씩 확정 발사됩니다. 탄종은 서로 다른 발사 순번에 배정되어 한 발에 특수탄 하나만 나갑니다. 네 탄종을 모두 보유하면 소이는 1번째, 출혈은 3번째, 에너지는 5번째, 볼트는 7번째 발사에 나갑니다. 보유 탄종이 적으면 주기 안에서 간격을 균등하게 배치합니다. 일반과 디럭스의 발사 주기는 같습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 패시브 효과 없음.",
+     "text": "[패시브] 패시브 효과 없음.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">네트워크 확장</font>: 자신의 <font color=\"#00BFFF\">센티널</font>과 <font color=\"#00BFFF\">HRG 워트호그</font> 공용 배치 한도 <font color=\"#77D914\">+1대</font>(엔지니어·테크니션과 합해 최대 <font color=\"#77D914\">4대</font>).",
@@ -9815,6 +10815,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Hacker_FirePayload",
@@ -9989,6 +10990,20 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 치유 오라: 주변 아군이 <font color=\"#77D914\">초당 1 HP</font>를 회복하고 <font color=\"#77D914\">%x1_1%m</font> 범위 안에 있을 때 적용됩니다. 퍼크 레벨마다 치유량 <font color=\"#77D914\">%x1_2%%</font>와 최대 체력 <font color=\"#77D914\">%x1_3%</font>를 얻습니다.",
+     "text": "[패시브] 치유 오라: 주변 아군이 초당 1 HP를 회복하고 %x1_1%m 범위 안에 있을 때 적용됩니다. 퍼크 레벨마다 치유량 %x1_2%%와 최대 체력 %x1_3%를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 치유 오라: 주변 아군이 <font color=\"#77D914\">초당 1 HP</font>를 회복하고 <font color=\"#77D914\">%x1_1%m</font> 범위 안에 있을 때 적용됩니다. 퍼크 레벨마다 치유량 <font color=\"#77D914\">%x1_2%%</font>와 최대 체력 <font color=\"#77D914\">%x1_3%</font>를 얻습니다.",
+     "text": "[패시브] 치유 오라: 주변 아군이 초당 1 HP를 회복하고 %x1_1%m 범위 안에 있을 때 적용됩니다. 퍼크 레벨마다 치유량 %x1_2%%와 최대 체력 %x1_3%를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">성역</font>: <font color=\"#00BFFF\">치유 오라</font>가 초당 <font color=\"#77D914\">2 HP</font>를 회복합니다.",
@@ -10001,6 +11016,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "CelestialVitality",
@@ -10554,6 +11570,25 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">피의 십일조</font>: 모든 피해로 생명력 흡수 <font color=\"#77D914\">%x%%</font>를 얻습니다(타격당 최대 <font color=\"#77D914\">3 HP</font>).",
+     "text": "[패시브] 피의 십일조: 모든 피해로 생명력 흡수 %x%%를 얻습니다(타격당 최대 3 HP).",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">활력 추출</font>: 받는 치유량이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "활력 추출: 받는 치유량이 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">피의 십일조</font>: 모든 피해로 생명력 흡수 <font color=\"#77D914\">%x%%</font>를 얻습니다(타격당 최대 <font color=\"#77D914\">3 HP</font>).",
+     "text": "[패시브] 피의 십일조: 모든 피해로 생명력 흡수 %x%%를 얻습니다(타격당 최대 3 HP).",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">흡수 네트워크</font> - 모든 <font color=\"#00BFFF\">피해</font>에 흡수 효과가 적용됩니다. 흡수된 적 <font color=\"#77D914\">1명</font>당 <font color=\"#77D914\">+%x%%</font>의 추가 <font color=\"#00BFFF\">피해량</font>을 얻습니다 (최대 <font color=\"#77D914\">8명</font>). <font color=\"#00BFFF\">아군</font>을 <font color=\"#00BFFF\">치유</font>할 때, 흡수된 적에게도 <font color=\"#00BFFF\">치유</font>량의 <font color=\"#77D914\">25%</font>만큼 <font color=\"#00BFFF\">피해</font>를 줍니다.",
@@ -10566,6 +11601,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "BloodBank",
@@ -11249,6 +12285,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 시냅스 연결: <font color=\"#77D914\">5m</font> 이내 <font color=\"#00BFFF\">아군</font>의 <font color=\"#00BFFF\">피해량</font>이 하이브마인드 레벨당 <font color=\"#77D914\">0.5%</font> 증가합니다.",
+     "text": "[패시브] 시냅스 연결: 5m 이내 아군의 피해량이 하이브마인드 레벨당 0.5% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "신경 효율: <font color=\"#77D914\">5m</font> 이내 <font color=\"#00BFFF\">아군</font>의 <font color=\"#00BFFF\">재장전 속도</font>가 하이브마인드 레벨당 <font color=\"#77D914\">1%</font> 증가합니다.",
+     "text": "신경 효율: 5m 이내 아군의 재장전 속도가 하이브마인드 레벨당 1% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "벌집 이동: <font color=\"#77D914\">5m</font> 이내 아군의 <font color=\"#00BFFF\">이동 속도</font>가 공생체 진화 단계마다 <font color=\"#77D914\">0.5%</font> 증가합니다. 상태 패널에 실시간 지속시간이 표시되며, 재사용 대기시간이 끝난 뒤 처치 진행도가 다시 쌓입니다.",
+     "text": "벌집 이동: 5m 이내 아군의 이동 속도가 공생체 진화 단계마다 0.5% 증가합니다. 상태 패널에 실시간 지속시간이 표시되며, 재사용 대기시간이 끝난 뒤 처치 진행도가 다시 쌓입니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 시냅스 연결: <font color=\"#77D914\">5m</font> 이내 <font color=\"#00BFFF\">아군</font>의 <font color=\"#00BFFF\">피해량</font>이 하이브마인드 레벨당 <font color=\"#77D914\">0.5%</font> 증가합니다.",
+     "text": "[패시브] 시냅스 연결: 5m 이내 아군의 피해량이 하이브마인드 레벨당 0.5% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">신경망</font> - <font color=\"#77D914\">5m</font> 이내 아군은 공생체 진화 단계마다 <font color=\"#77D914\">+1.25%</font>의 피해량을 얻습니다 (최대 <font color=\"#77D914\">+12.5%</font>).",
@@ -11261,6 +12321,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "BioelectricDischarge",
@@ -11825,6 +12886,50 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">공생 효율</font>: 재장전 속도가 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 공생 효율: 재장전 속도가 +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "신경 인터페이스: 무기 전환 속도 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "신경 인터페이스: 무기 전환 속도 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "단단한 갑각: <font color=\"#00BFFF\">관통력</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "단단한 갑각: 관통력 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">3</font>: 기생 시야 - 적의 <font color=\"#00BFFF\">체력</font> 바를 볼 수 있습니다.",
+     "text": "레벨 3: 기생 시야 - 적의 체력 바를 볼 수 있습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">6</font>: 적응 저항 - 사이렌의 비명에 면역이 됩니다.",
+     "text": "레벨 6: 적응 저항 - 사이렌의 비명에 면역이 됩니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨 <font color=\"#77D914\">9</font>: 향상된 감각 - 항상 은폐한 적을 볼 수 있습니다.",
+     "text": "레벨 9: 향상된 감각 - 항상 은폐한 적을 볼 수 있습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "적응형 변이: <font color=\"#77D914\">100킬</font>을 달성할 때마다 무작위로 영구적인 능력치 증가를 얻으며, 이는 무한히 중첩됩니다.",
+     "text": "적응형 변이: 100킬을 달성할 때마다 무작위로 영구적인 능력치 증가를 얻으며, 이는 무한히 중첩됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">공생 효율</font>: 재장전 속도가 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 공생 효율: 재장전 속도가 +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">기생 통합</font> - 여분 <font color=\"#00BFFF\">탄약</font> <font color=\"#77D914\">+25%</font> 및 <font color=\"#00BFFF\">기절</font> 파워 <font color=\"#77D914\">+15%</font>.",
@@ -11837,6 +12942,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AcidicBlood",
@@ -12572,6 +13678,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 이동 속도가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 이동 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "재장전 속도가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "재장전 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "하이드 혈청 키(기본 H)를 누르면 <font color=\"#77D914\">10초</font> 동안 하이드로 변신합니다. 몸집 <font color=\"#77D914\">2</font>배, 받는 피해 <font color=\"#77D914\">10%</font> 감소, 근접 피해 <font color=\"#77D914\">+150%</font> 및 충격파. 변신 중 총기 피해는 <font color=\"#77D914\">95%</font> 감소합니다.",
+     "text": "하이드 혈청 키(기본 H)를 누르면 10초 동안 하이드로 변신합니다. 몸집 2배, 받는 피해 10% 감소, 근접 피해 +150% 및 충격파. 변신 중 총기 피해는 95% 감소합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "해금 조건: 필드 메딕과 버서커가 모두 <font color=\"#77D914\">10레벨</font>에 도달해야 합니다.",
+     "text": "해금 조건: 필드 메딕과 버서커가 모두 10레벨에 도달해야 합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 이동 속도가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 이동 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">해방된 하이드</font>: <font color=\"#00BFFF\">하이드</font> 지속시간이 두 배인 <font color=\"#77D914\">20초</font>로 늘어납니다.",
@@ -12584,6 +13719,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [],
    "skillCount": 0,
    "verdict": null,
@@ -12684,7 +13820,32 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기</font>가 <font color=\"#77D914\">%x%%</font> 확률로 사격 시 테르밋탄을 발사합니다.",
+     "text": "[패시브] 모든 무기가 %x%% 확률로 사격 시 테르밋탄을 발사합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "당신의 <font color=\"#00BFFF\">화상</font> 효과가 <font color=\"#77D914\">%x%%</font> 더 많은 <font color=\"#00BFFF\">피해</font>를 입힙니다.",
+     "text": "당신의 화상 효과가 %x%% 더 많은 피해를 입힙니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "당신의 <font color=\"#00BFFF\">화상</font> 효과가 <font color=\"#77D914\">%x%%</font> 더 오래 지속됩니다.",
+     "text": "당신의 화상 효과가 %x%% 더 오래 지속됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기</font>가 <font color=\"#77D914\">%x%%</font> 확률로 사격 시 테르밋탄을 발사합니다.",
+     "text": "[패시브] 모든 무기가 %x%% 확률로 사격 시 테르밋탄을 발사합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "Backdraft",
@@ -13352,6 +14513,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">화염 폭발</font>: 화염 피해 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 화염 폭발: 화염 피해 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">인페르노</font>: 불타는 적에게 주는 비화염 피해 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "인페르노: 불타는 적에게 주는 비화염 피해 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "잔여 화염: <font color=\"#77D914\">5레벨</font>마다 <font color=\"#00BFFF\">화상</font> 지속 시간이 <font color=\"#77D914\">0.1초</font> 늘어납니다.",
+     "text": "잔여 화염: 5레벨마다 화상 지속 시간이 0.1초 늘어납니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">화염 폭발</font>: 화염 피해 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 화염 폭발: 화염 피해 +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">공생 시너지</font>: 불타는 적 한 명당 화염 <font color=\"#00BFFF\">피해량</font>이 <font color=\"#77D914\">2.5%</font> 증가합니다. 최대 <font color=\"#77D914\">10명</font>까지 적용됩니다.",
@@ -13364,6 +14549,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AshenBulwark",
@@ -13900,7 +15086,22 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 활성 웨이브마다 1회, 웨이브 진행도 <font color=\"#77D914\">30</font>~<font color=\"#77D914\">70%</font> 구간에서 최소 2초의 경고 후 무작위 재앙 하나가 생존한 모든 제드에게 발생합니다. 빙결·폭발·넉다운·화염은 Haunted 레벨당 <font color=\"#77D914\">100</font> 피해를 주며, 폭발 피해는 2배입니다. 처치 10회마다 감시자 단계가 오르며 최대 5단계입니다.",
+     "text": "[패시브] 활성 웨이브마다 1회, 웨이브 진행도 30~70% 구간에서 최소 2초의 경고 후 무작위 재앙 하나가 생존한 모든 제드에게 발생합니다. 빙결·폭발·넉다운·화염은 Haunted 레벨당 100 피해를 주며, 폭발 피해는 2배입니다. 처치 10회마다 감시자 단계가 오르며 최대 5단계입니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 활성 웨이브마다 1회, 웨이브 진행도 <font color=\"#77D914\">30</font>~<font color=\"#77D914\">70%</font> 구간에서 최소 2초의 경고 후 무작위 재앙 하나가 생존한 모든 제드에게 발생합니다. 빙결·폭발·넉다운·화염은 Haunted 레벨당 <font color=\"#77D914\">100</font> 피해를 주며, 폭발 피해는 2배입니다. 처치 10회마다 감시자 단계가 오르며 최대 5단계입니다.",
+     "text": "[패시브] 활성 웨이브마다 1회, 웨이브 진행도 30~70% 구간에서 최소 2초의 경고 후 무작위 재앙 하나가 생존한 모든 제드에게 발생합니다. 빙결·폭발·넉다운·화염은 Haunted 레벨당 100 피해를 주며, 폭발 피해는 2배입니다. 처치 10회마다 감시자 단계가 오르며 최대 5단계입니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [],
    "skillCount": 0,
    "verdict": {
@@ -13967,7 +15168,32 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 헤드샷으로 처치할 때마다 %x 도쉬를 획득합니다.",
+     "text": "[패시브] 헤드샷으로 처치할 때마다 %x 도쉬를 획득합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "헤드샷 피해가 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "헤드샷 피해가 +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "모든 무기의 <font color=\"#00BFFF\">플레이어 치명타 확률</font>이 <font color=\"#77D914\">+%x%%</font> 증가합니다. 무기별 치명타 확률에 추가됩니다.",
+     "text": "모든 무기의 플레이어 치명타 확률이 +%x%% 증가합니다. 무기별 치명타 확률에 추가됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 헤드샷으로 처치할 때마다 %x 도쉬를 획득합니다.",
+     "text": "[패시브] 헤드샷으로 처치할 때마다 %x 도쉬를 획득합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [],
    "skillCount": 0,
    "verdict": {
@@ -14130,6 +15356,25 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> ZED 타임 중 <font color=\"#00BFFF\">피해, 피해 저항, 근접 공격 속도, 관통력</font>이 각각 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] ZED 타임 중 피해, 피해 저항, 근접 공격 속도, 관통력이 각각 +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "ZED 타임 중 <font color=\"#00BFFF\">발사 속도, 재장전 속도, 반동, 탄 퍼짐</font>이 각각 <font color=\"#77D914\">%x%%</font> 개선됩니다.",
+     "text": "ZED 타임 중 발사 속도, 재장전 속도, 반동, 탄 퍼짐이 각각 %x%% 개선됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> ZED 타임 중 <font color=\"#00BFFF\">피해, 피해 저항, 근접 공격 속도, 관통력</font>이 각각 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] ZED 타임 중 피해, 피해 저항, 근접 공격 속도, 관통력이 각각 +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">시간 탄약</font>: <font color=\"#00BFFF\">제드타임</font> 동안 <font color=\"#00BFFF\">무기 탄약</font>을 소모하지 않습니다. 드론 배터리는 제외됩니다.",
@@ -14142,6 +15387,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "BulletTime",
@@ -14445,6 +15691,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 전문 청부업자: 현재 <font color=\"#00BFFF\">무기 피해, 공격·발사 속도, 무기 전환 속도, 관통력</font> 보너스는 <font color=\"#77D914\">+%x1_1%%</font>입니다.",
+     "text": "[패시브] 전문 청부업자: 현재 무기 피해, 공격·발사 속도, 무기 전환 속도, 관통력 보너스는 +%x1_1%%입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "현재 <font color=\"#00BFFF\">재장전 속도, 반동, 이동 속도, 받는 피해</font> 보너스는 각각 <font color=\"#77D914\">%x1_1%%</font>, <font color=\"#77D914\">%x1_2%%</font>, <font color=\"#77D914\">%x1_3%%</font>, <font color=\"#77D914\">%x1_4%%</font>입니다.",
+     "text": "현재 재장전 속도, 반동, 이동 속도, 받는 피해 보너스는 각각 %x1_1%%, %x1_2%%, %x1_3%%, %x1_4%%입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">건슬링거 무기</font>의 탄창 용량은 <font color=\"#77D914\">+%x1_1%%</font>, 예비 탄약은 <font color=\"#77D914\">+%x1_2%%</font> 증가합니다.",
+     "text": "건슬링거 무기의 탄창 용량은 +%x1_1%%, 예비 탄약은 +%x1_2%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "건슬링거나 샤프슈터에서 Rack ’em Up을 해금할 수 있습니다. 두 퍼크는 하나의 카운터를 공유하며, 헤드샷을 이어가지 못하면 보너스가 서서히 줄어듭니다.",
+     "text": "건슬링거나 샤프슈터에서 Rack ’em Up을 해금할 수 있습니다. 두 퍼크는 하나의 카운터를 공유하며, 헤드샷을 이어가지 못하면 보너스가 서서히 줄어듭니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 전문 청부업자: 현재 <font color=\"#00BFFF\">무기 피해, 공격·발사 속도, 무기 전환 속도, 관통력</font> 보너스는 <font color=\"#77D914\">+%x1_1%%</font>입니다.",
+     "text": "[패시브] 전문 청부업자: 현재 무기 피해, 공격·발사 속도, 무기 전환 속도, 관통력 보너스는 +%x1_1%%입니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#77D914\">10레벨</font>부터 Rack ’em Up 스택의 최대 누적이 10단계까지 늘어납니다.",
@@ -14457,6 +15732,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "JohnWick_StackCalibration",
@@ -14719,6 +15995,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기의 <font color=\"#00BFFF\">플레이어 치명타 확률</font>이 <font color=\"#77D914\">+%x%%</font> 증가합니다. 치명타는 공격 보너스 계산 후 피해량이 <font color=\"#77D914\">2배</font>가 됩니다. 무기별 치명타 확률에 추가됩니다.",
+     "text": "[패시브] 모든 무기의 플레이어 치명타 확률이 +%x%% 증가합니다. 치명타는 공격 보너스 계산 후 피해량이 2배가 됩니다. 무기별 치명타 확률에 추가됩니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">헤드샷 피해</font>가 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "헤드샷 피해가 +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">이동 속도</font>가 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "이동 속도가 +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "영혼 수확: <font color=\"#77D914\">100킬</font>마다 <font color=\"#77D914\">100 도쉬</font>를 획득합니다.",
+     "text": "영혼 수확: 100킬마다 100 도쉬를 획득합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기의 <font color=\"#00BFFF\">플레이어 치명타 확률</font>이 <font color=\"#77D914\">+%x%%</font> 증가합니다. 치명타는 공격 보너스 계산 후 피해량이 <font color=\"#77D914\">2배</font>가 됩니다. 무기별 치명타 확률에 추가됩니다.",
+     "text": "[패시브] 모든 무기의 플레이어 치명타 확률이 +%x%% 증가합니다. 치명타는 공격 보너스 계산 후 피해량이 2배가 됩니다. 무기별 치명타 확률에 추가됩니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">치명타 급증</font>: <font color=\"#00BFFF\">플레이어 치명타 확률</font>이 추가로 <font color=\"#77D914\">5%</font> 증가합니다.",
@@ -14731,6 +16036,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "DanceOfDeath",
@@ -15140,6 +16446,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">예비 탄약 용량</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 예비 탄약 용량가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">재장전 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "재장전 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">탄창 용량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "탄창 용량이 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">예비 탄약 용량</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 예비 탄약 용량가 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">현장 보급</font>: 제드 처치 시 <font color=\"#77D914\">10%</font> 확률로 장착 중인 무기에 예비 탄약 <font color=\"#77D914\">20</font>발을 보충합니다. 예비 탄약 용량을 넘지 않습니다.",
@@ -15152,6 +16482,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "SAS_EmergencyReload",
@@ -15815,6 +17146,35 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">직접 총탄 피해</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 직접 총탄 피해가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">반동</font>이 <font color=\"#77D914\">%x%%</font> 감소합니다.",
+     "text": "반동이 %x%% 감소합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "모든 무기의 <font color=\"#00BFFF\">V 밀치기 피해</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "모든 무기의 V 밀치기 피해가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨마다 <font color=\"#00BFFF\">이동 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "레벨마다 이동 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">직접 총탄 피해</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 직접 총탄 피해가 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#77D914\">10</font>레벨 — <font color=\"#DC143C\">강제 진입</font>: 모든 무기의 V 밀치기 피해가 <font color=\"#77D914\">1.5</font>배가 되고 피해 <font color=\"#77D914\">50</font>이 추가됩니다. 타격점 반경 <font color=\"#77D914\">0.75m</font>의 적을 강하게 기절시킵니다. 추가 피해는 최종 배율·피해 상한 전에 적용되며 적의 기절 저항·지속시간·쿨다운을 따릅니다.",
@@ -15827,6 +17187,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "GIGN_RiotSuppression",
@@ -16146,6 +17507,25 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 무기 적중 시 <font color=\"#77D914\">%x%</font>% 확률로 적을 얼립니다. 발사 1회마다 적별로 한 번 판정합니다.",
+     "text": "[패시브] 무기 적중 시 %x%% 확률로 적을 얼립니다. 발사 1회마다 적별로 한 번 판정합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "서리가 대상을 즉시 얼리고 <font color=\"#77D914\">%x%</font>초 동안 빙결 상태로 둡니다.",
+     "text": "서리가 대상을 즉시 얼리고 %x%초 동안 빙결 상태로 둡니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 무기 적중 시 <font color=\"#77D914\">%x%</font>% 확률로 적을 얼립니다. 발사 1회마다 적별로 한 번 판정합니다.",
+     "text": "[패시브] 무기 적중 시 %x%% 확률로 적을 얼립니다. 발사 1회마다 적별로 한 번 판정합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">서리의 손아귀</font>: 서리 발동 확률이 <font color=\"#77D914\">1</font>퍼센트포인트 증가합니다. 현재 총 발동 확률: <font color=\"#77D914\">%x3_1%%</font>.",
@@ -16158,6 +17538,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "IceThor_SoulAbsorption",
@@ -16422,6 +17803,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">최대 체력</font>이 <font color=\"#77D914\">%x%</font>% 증가합니다. 레벨마다 <font color=\"#77D914\">+3%</font>. (<font color=\"#77D914\">20</font>레벨: <font color=\"#77D914\">+60%</font>)",
+     "text": "[패시브] 최대 체력이 %x%% 증가합니다. 레벨마다 +3%. (20레벨: +60%)",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">최대 방어구</font>가 <font color=\"#77D914\">%x%</font>% 증가합니다. 레벨마다 <font color=\"#77D914\">+3%</font>. (<font color=\"#77D914\">20</font>레벨: <font color=\"#77D914\">+60%</font>)",
+     "text": "최대 방어구가 %x%% 증가합니다. 레벨마다 +3%. (20레벨: +60%)",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">모든 피해 저항</font>이 <font color=\"#77D914\">%x%</font>% 증가합니다. 레벨마다 <font color=\"#77D914\">+1.5%p</font>. (<font color=\"#77D914\">20</font>레벨: <font color=\"#77D914\">+30%</font>) 다른 저항과 곱연산됩니다.",
+     "text": "모든 피해 저항이 %x%% 증가합니다. 레벨마다 +1.5%p. (20레벨: +30%) 다른 저항과 곱연산됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">최대 체력</font>이 <font color=\"#77D914\">%x%</font>% 증가합니다. 레벨마다 <font color=\"#77D914\">+3%</font>. (<font color=\"#77D914\">20</font>레벨: <font color=\"#77D914\">+60%</font>)",
+     "text": "[패시브] 최대 체력이 %x%% 증가합니다. 레벨마다 +3%. (20레벨: +60%)",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">철갑 돌진</font>:  [I] 키를 누르면 <font color=\"#77D914\">0</font>.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 <font color=\"#77D914\">12m</font> 돌진합니다. 적마다 한 번 충돌합니다. 돌진 접촉 판정은 플레이어 충돌 반경과 높이를 각각 2배로 계산해 대미지와 넉다운 범위도 넓어집니다. 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(<font color=\"#77D914\">40%</font>), 돌진 중 노란 효과(<font color=\"#77D914\">30%</font>), 푸른 성채 발동 시 파란 효과(<font color=\"#77D914\">20%</font>)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
@@ -16434,6 +17839,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Reinhardt_ThickIronPlating",
@@ -16698,6 +18104,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기의 피해가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 모든 무기의 피해가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "모든 무기의 헤드샷 피해가 <font color=\"#77D914\">%x%%</font> 추가로 증가합니다.",
+     "text": "모든 무기의 헤드샷 피해가 %x%% 추가로 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "모든 무기의 관통력이 레벨당 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "모든 무기의 관통력이 레벨당 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다.",
+     "text": "[20레벨 캡스톤] 20레벨 — 끊임없는 사격: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 30%(총 50%) 증가합니다. M14 EBR·FN FAL의 반동이 50% 감소하고 총탄 피해가 20% 추가로 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기의 피해가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 모든 무기의 피해가 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">10레벨 — <font color=\"#DC143C\">DMR 전문가</font></font>: M14 EBR·FN FAL의 총탄 피해가 <font color=\"#77D914\">50%</font>, 탄창 최대 용량이 10발, 예비 탄약 용량이 <font color=\"#77D914\">20%</font> 증가합니다. M14 EBR의 발사 속도가 <font color=\"#77D914\">20%</font> 증가합니다.",
@@ -16705,6 +18140,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Untouchable",
@@ -17040,6 +18476,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 포식자의 인내심: <font color=\"#77D914\">5초</font> 동안 사격하지 않으면 다음 <font color=\"#00BFFF\">샤프슈터 무기</font> 사격의 피해량이 <font color=\"#77D914\">%x%%</font> 증가합니다 (<font color=\"#77D914\">레벨당 5%</font>). 빗나간 사격을 포함한 모든 사격은 대기 시간을 초기화합니다.",
+     "text": "[패시브] 포식자의 인내심: 5초 동안 사격하지 않으면 다음 샤프슈터 무기 사격의 피해량이 %x%% 증가합니다 (레벨당 5%). 빗나간 사격을 포함한 모든 사격은 대기 시간을 초기화합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "스토커의 은총: <font color=\"#00BFFF\">이동 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "스토커의 은총: 이동 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "사냥꾼 준비: <font color=\"#00BFFF\">예비 탄약</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "사냥꾼 준비: 예비 탄약이 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 포식자의 인내심: <font color=\"#77D914\">5초</font> 동안 사격하지 않으면 다음 <font color=\"#00BFFF\">샤프슈터 무기</font> 사격의 피해량이 <font color=\"#77D914\">%x%%</font> 증가합니다 (<font color=\"#77D914\">레벨당 5%</font>). 빗나간 사격을 포함한 모든 사격은 대기 시간을 초기화합니다.",
+     "text": "[패시브] 포식자의 인내심: 5초 동안 사격하지 않으면 다음 샤프슈터 무기 사격의 피해량이 %x%% 증가합니다 (레벨당 5%). 빗나간 사격을 포함한 모든 사격은 대기 시간을 초기화합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">완벽한 매복</font>: <font color=\"#77D914\">10초</font> 동안 사격하지 않으면 다음 <font color=\"#00BFFF\">샤프슈터 무기</font> 사격의 피해량이 <font color=\"#77D914\">%x%%</font> 추가 증가합니다. 포식자의 인내심과 합산됩니다.",
@@ -17052,6 +18512,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Consume",
@@ -17637,6 +19098,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 서리 숙련도: 모든 <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 서리 숙련도: 모든 피해량 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "정밀 얼음: <font color=\"#00BFFF\">헤드샷 피해</font>량 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "정밀 얼음: 헤드샷 피해량 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "빠른 재장전: <font color=\"#00BFFF\">재장전 속도</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "빠른 재장전: 재장전 속도 +%x%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 서리 숙련도: 모든 <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 서리 숙련도: 모든 피해량 +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">고드름 화살</font>: 얼음 화살 - 헤드샷으로 <font color=\"#77D914\">10킬</font>을 달성할 때마다 다음 사격 시 <font color=\"#77D914\">+200%</font>의 <font color=\"#00BFFF\">피해량</font>이 충전됩니다.",
@@ -17649,6 +19134,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AvalancheProtocol",
@@ -18116,6 +19602,25 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 제드를 처치하면 <font color=\"#77D914\">%x%%</font> 확률로 해골이 떨어집니다.",
+     "text": "[패시브] 제드를 처치하면 %x%% 확률로 해골이 떨어집니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: <font color=\"#66CCFF\">Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%</font>. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
+     "text": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 제드를 처치하면 <font color=\"#77D914\">%x%%</font> 확률로 해골이 떨어집니다.",
+     "text": "[패시브] 제드를 처치하면 %x%% 확률로 해골이 떨어집니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">에이펙스 마스터</font>: 해골 드롭 확률이 <font color=\"#77D914\">0.5%p</font> 증가합니다.",
@@ -18128,6 +19633,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [],
    "skillCount": 0,
    "verdict": {
@@ -18373,6 +19879,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 무기 교정: 서포트 무기 피해가 레벨당 <font color=\"#77D914\">1%</font> 증가합니다. 현재 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 무기 교정: 서포트 무기 피해가 레벨당 1% 증가합니다. 현재 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "무기 교정: 서포트 무기 재장전 속도가 레벨당 <font color=\"#77D914\">1%</font> 증가합니다. 현재 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "무기 교정: 서포트 무기 재장전 속도가 레벨당 1% 증가합니다. 현재 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "숙련은 <font color=\"#77D914\">1레벨</font>부터 시작합니다. 서포트 무기로 <font color=\"#77D914\">50회</font> 처치할 때마다 숙련도 1단계를 얻고, 단계마다 피해가 <font color=\"#77D914\">+0.8%</font> 증가합니다. 숙련 상한은 기술자 레벨당 <font color=\"#77D914\">5단계</font>입니다. <font color=\"#77D914\">10레벨</font>부터는 숙련도 <font color=\"#77D914\">10단계</font>마다 관통력 <font color=\"#77D914\">+5%</font>, 재장전 속도 <font color=\"#77D914\">+2%</font>도 얻습니다.",
+     "text": "숙련은 1레벨부터 시작합니다. 서포트 무기로 50회 처치할 때마다 숙련도 1단계를 얻고, 단계마다 피해가 +0.8% 증가합니다. 숙련 상한은 기술자 레벨당 5단계입니다. 10레벨부터는 숙련도 10단계마다 관통력 +5%, 재장전 속도 +2%도 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "숙련도는 이번 게임 동안 서포트 무기 종류별로 기록되며 무기 교체와 사망 후에도 유지됩니다. 일반형과 프레셔스형은 같은 기록을 공유합니다. 다른 무기에는 적용되지 않으며 현재 상한을 넘긴 처치는 저장되지 않습니다.",
+     "text": "숙련도는 이번 게임 동안 서포트 무기 종류별로 기록되며 무기 교체와 사망 후에도 유지됩니다. 일반형과 프레셔스형은 같은 기록을 공유합니다. 다른 무기에는 적용되지 않으며 현재 상한을 넘긴 처치는 저장되지 않습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 무기 교정: 서포트 무기 피해가 레벨당 <font color=\"#77D914\">1%</font> 증가합니다. 현재 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 무기 교정: 서포트 무기 피해가 레벨당 1% 증가합니다. 현재 +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#77D914\">20레벨</font> - <font color=\"#DC143C\">걸작</font>: 현재 숙련도를 유지하며 상한을 <font color=\"#77D914\">100단계</font>로 확장합니다. 단계마다 피해 <font color=\"#77D914\">+1.2%</font>, 관통력 <font color=\"#77D914\">+1%</font>를 얻고, 10레벨의 재장전 보너스도 유지됩니다. 숙련도 10단계마다 탄창 용량 +1발, 휴대 탄약 +3발을 얻습니다. 100단계에서 피해 <font color=\"#77D914\">+120%</font>, 관통력 <font color=\"#77D914\">+100%</font>, 재장전 속도 <font color=\"#77D914\">+20%</font>, 탄창 +10발, 휴대 탄약 +30발입니다.",
@@ -18380,6 +19915,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AlloyRounds",
@@ -18543,6 +20079,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "전선 보강: 지원 무기 관통력 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "전선 보강: 지원 무기 관통력 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "전투 단련: 최대 체력 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "전투 단련: 최대 체력 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "서포터 <font color=\"#77D914\">10</font>레벨에 해금되며, 뱅가드의 최대 레벨은 <font color=\"#77D914\">20</font>입니다. 무기 효과는 서포트 무기의 사격에만 적용되며 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
+     "text": "서포터 10레벨에 해금되며, 뱅가드의 최대 레벨은 20입니다. 무기 효과는 서포트 무기의 사격에만 적용되며 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "최대 방어구 <font color=\"#77D914\">+%x%%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
@@ -18560,6 +20125,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Vanguard_ReinforcedArmor",
@@ -18792,6 +20358,30 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기 연사 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 모든 무기 연사 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">모든 무기 관통력</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "모든 무기 관통력이 %x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">모든 무기의 탄창 용량</font>이 레벨당 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "모든 무기의 탄창 용량이 레벨당 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기 연사 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
+     "text": "[패시브] 모든 무기 연사 속도가 %x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">히드라의 분노</font>: <font color=\"#00BFFF\">100회 처치</font>할 때마다 <font color=\"#77D914\">10초</font> 동안 발동합니다. <font color=\"#77D914\">20레벨</font>부터는 <font color=\"#77D914\">90초</font>마다 추가로 발동합니다. 발동이 겹치면 지속시간이 더해지며, 효과 중에는 모든 무기의 탄약이 소모되지 않습니다.",
@@ -18799,6 +20389,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Bloodthirst",
@@ -19243,7 +20834,32 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기</font>가 <font color=\"#77D914\">%x%%</font> 확률로 적을 신경독에 <font color=\"#00BFFF\">중독</font>시킵니다.",
+     "text": "[패시브] 모든 무기가 %x%% 확률로 적을 신경독에 중독시킵니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "당신의 독 효과가 <font color=\"#77D914\">%x%%</font> 더 많은 <font color=\"#00BFFF\">피해</font>를 입힙니다.",
+     "text": "당신의 독 효과가 %x%% 더 많은 피해를 입힙니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "당신의 독 효과가 <font color=\"#77D914\">%x%%</font> 더 오래 지속됩니다.",
+     "text": "당신의 독 효과가 %x%% 더 오래 지속됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">모든 무기</font>가 <font color=\"#77D914\">%x%%</font> 확률로 적을 신경독에 <font color=\"#00BFFF\">중독</font>시킵니다.",
+     "text": "[패시브] 모든 무기가 %x%% 확률로 적을 신경독에 중독시킵니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
    "skills": [
     {
      "key": "AdaptiveVenom",
@@ -19731,6 +21347,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 독성 정밀도: <font color=\"#00BFFF\">헤드샷 피해</font>량 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 독성 정밀도: 헤드샷 피해량 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "뱀처럼 구불구불한 속도: <font color=\"#00BFFF\">재장전 속도</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "뱀처럼 구불구불한 속도: 재장전 속도 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "독 비축량: 여분 <font color=\"#00BFFF\">탄약</font> <font color=\"#77D914\">+%x%%</font>.",
+     "text": "독 비축량: 여분 탄약 +%x%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "독 <font color=\"#00BFFF\">피해</font>를 <font color=\"#77D914\">2500</font> 입힐 때마다 뱀 비늘을 <font color=\"#77D914\">1개</font> 획득합니다 (비늘당 <font color=\"#77D914\">피해 저항 +3%</font>, <font color=\"#77D914\">이동 속도 +2%</font>, <font color=\"#77D914\">재장전 속도 +1%</font>). 비늘 <font color=\"#77D914\">6개</font> 달성 시: 풀 고르곤 상태가 됩니다 (독 <font color=\"#00BFFF\">피해</font> <font color=\"#77D914\">+100%</font>).",
+     "text": "독 피해를 2500 입힐 때마다 뱀 비늘을 1개 획득합니다 (비늘당 피해 저항 +3%, 이동 속도 +2%, 재장전 속도 +1%). 비늘 6개 달성 시: 풀 고르곤 상태가 됩니다 (독 피해 +100%).",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 독성 정밀도: <font color=\"#00BFFF\">헤드샷 피해</font>량 <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 독성 정밀도: 헤드샷 피해량 +%x%%.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">독의 손길</font> - 모든 <font color=\"#00BFFF\">공격</font>에 독 효과가 적용됩니다 (<font color=\"#77D914\">5초간</font> 초당 <font color=\"#77D914\">5</font> <font color=\"#00BFFF\">피해</font>).",
@@ -19743,6 +21388,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "AthenasWrath",
@@ -20635,6 +22281,35 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">메모리 누수:</font> 모든 무기의 예비 탄약이 레벨당 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 메모리 누수: 모든 무기의 예비 탄약이 레벨당 +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">에코 탄창:</font> 모든 무기의 탄창 크기가 레벨당 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "에코 탄창: 모든 무기의 탄창 크기가 레벨당 +%x%% 증가합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#00BFFF\">글리치 발동</font>: 공격 적중 시 <font color=\"#77D914\">%x%%</font> 확률로 무작위 효과를 발동합니다: 추가 피해, <font color=\"#77D914\">1 도쉬</font>, 탄창의 <font color=\"#77D914\">5%</font> 보충(최소 <font color=\"#77D914\">1발</font>) 또는 <font color=\"#77D914\">1 HP</font> 회복.",
+     "text": "글리치 발동: 공격 적중 시 %x%% 확률로 무작위 효과를 발동합니다: 추가 피해, 1 도쉬, 탄창의 5% 보충(최소 1발) 또는 1 HP 회복.",
+     "isCapstone": false
+    },
+    {
+     "raw": "해금 조건: 서바이벌리스트 <font color=\"#77D914\">15레벨</font>.",
+     "text": "해금 조건: 서바이벌리스트 15레벨.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">메모리 누수:</font> 모든 무기의 예비 탄약이 레벨당 <font color=\"#77D914\">+%x%%</font> 증가합니다.",
+     "text": "[패시브] 메모리 누수: 모든 무기의 예비 탄약이 레벨당 +%x%% 증가합니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">타입 불일치</font>:  매 웨이브마다 화염·흑빙·독성·테르밋·저체온증 중 하나가 무작위로 선택됩니다. 무기 적중마다 해당 타격 기본 피해의 <font color=\"#77D914\">20</font>%에 해당하는 원소 지속 피해를 추가합니다. 무기의 피해 유형 자체는 바뀌지 않습니다.",
@@ -20647,6 +22322,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "BufferOverflow",
@@ -21264,6 +22940,20 @@
      "isCapstone": true
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 변신술사: 각 웨이브마다 레벨에 비례하는 무작위 전투 버프를 <font color=\"#77D914\">1개</font> 부여받습니다.",
+     "text": "[패시브] 변신술사: 각 웨이브마다 레벨에 비례하는 무작위 전투 버프를 1개 부여받습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 변신술사: 각 웨이브마다 레벨에 비례하는 무작위 전투 버프를 <font color=\"#77D914\">1개</font> 부여받습니다.",
+     "text": "[패시브] 변신술사: 각 웨이브마다 레벨에 비례하는 무작위 전투 버프를 1개 부여받습니다.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">이중 형상</font>: 듀얼 폼 - 이제 <font color=\"#FFD700\">웨이브당</font> <font color=\"#77D914\">2개</font>의 버프를 받습니다.",
@@ -21276,6 +22966,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "ChimeraProtocol",
@@ -21755,7 +23446,32 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 급여: 웨이브 시작부터 사망 없이 생존하여 성공적으로 완료하면 +%x 도쉬.",
+     "text": "[패시브] 급여: 웨이브 시작부터 사망 없이 생존하여 성공적으로 완료하면 +%x 도쉬.",
+     "isCapstone": false
+    },
+    {
+     "raw": "직접 처치 도쉬 보상 <font color=\"#77D914\">+%x%%</font>. 도움 보상은 그대로입니다.",
+     "text": "직접 처치 도쉬 보상 +%x%%. 도움 보상은 그대로입니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "전투 능력 보너스와 캡스톤이 없습니다. <font color=\"#77D914\">5레벨</font>에 도박꾼, <font color=\"#77D914\">10레벨</font>에 딜러, <font color=\"#77D914\">15레벨</font>에 타이쿤 전직을 해금합니다.",
+     "text": "전투 능력 보너스와 캡스톤이 없습니다. 5레벨에 도박꾼, 10레벨에 딜러, 15레벨에 타이쿤 전직을 해금합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 급여: 웨이브 시작부터 사망 없이 생존하여 성공적으로 완료하면 +%x 도쉬.",
+     "text": "[패시브] 급여: 웨이브 시작부터 사망 없이 생존하여 성공적으로 완료하면 +%x 도쉬.",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [],
+   "noCapstoneNote": "전투 능력 보너스와 캡스톤이 없습니다. <font color=\"#77D914\">5레벨</font>에 도박꾼, <font color=\"#77D914\">10레벨</font>에 딜러, <font color=\"#77D914\">15레벨</font>에 타이쿤 전직을 해금합니다.",
    "skills": [
     {
      "key": "Capitalist_Overtime",
@@ -22015,6 +23731,30 @@
      "isCapstone": false
     }
    ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 현재 드론 피해 보너스: <font color=\"#77D914\">+%x%%</font> (엔지니어 레벨당 <font color=\"#77D914\">+2%</font>).",
+     "text": "[패시브] 현재 드론 피해 보너스: +%x%% (엔지니어 레벨당 +2%).",
+     "isCapstone": false
+    },
+    {
+     "raw": "현재 드론 탄약 용량 보너스: <font color=\"#77D914\">+%x2_1%%</font>, 탐지 반경 보너스: <font color=\"#77D914\">+%x2_2%%</font> (엔지니어 레벨당 각각 <font color=\"#77D914\">+3%</font>, <font color=\"#77D914\">+1%</font>).",
+     "text": "현재 드론 탄약 용량 보너스: +%x2_1%%, 탐지 반경 보너스: +%x2_2%% (엔지니어 레벨당 각각 +3%, +1%).",
+     "isCapstone": false
+    },
+    {
+     "raw": "누구든 엔지니어 <font color=\"#77D914\">5레벨</font>을 달성하면 다음 상점 리스트에 드론류가 나타납니다. 개인 강화는 자신의 드론에만 적용됩니다. 드론 무기 업그레이드는 비활성화됩니다. HRG 워트호그 탄환은 넉다운·비틀거림·기절 등 강제 제어 효과를 주지 않으며 피해와 탄두 효과는 유지됩니다.",
+     "text": "누구든 엔지니어 5레벨을 달성하면 다음 상점 리스트에 드론류가 나타납니다. 개인 강화는 자신의 드론에만 적용됩니다. 드론 무기 업그레이드는 비활성화됩니다. HRG 워트호그 탄환은 넉다운·비틀거림·기절 등 강제 제어 효과를 주지 않으며 피해와 탄두 효과는 유지됩니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 현재 드론 피해 보너스: <font color=\"#77D914\">+%x%%</font> (엔지니어 레벨당 <font color=\"#77D914\">+2%</font>).",
+     "text": "[패시브] 현재 드론 피해 보너스: +%x%% (엔지니어 레벨당 +2%).",
+     "isCapstone": false
+    }
+   ],
    "capstoneDescriptions": [
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">드론 과충전</font>: <font color=\"#00BFFF\">드론 발사 속도</font> <font color=\"#77D914\">+15%</font>, <font color=\"#00BFFF\">탄약 용량</font> <font color=\"#77D914\">+20%</font>, 공용 드론 배치 한도 <font color=\"#77D914\">+1대</font>(총 <font color=\"#77D914\">2대</font>).",
@@ -22022,6 +23762,7 @@
      "isCapstone": true
     }
    ],
+   "noCapstoneNote": null,
    "skills": [
     {
      "key": "Engineer_BatteryPack",
@@ -22198,9 +23939,9 @@
   "holdingMelee": 0.75
  },
  "meta": {
-  "advancedPerkCount": 48,
+  "advancedPerkCount": 49,
   "basePerkCount": 10,
-  "totalSkills": 443,
+  "totalSkills": 454,
   "release": {
    "version": "10.17.10",
    "workshopId": "3809067086",

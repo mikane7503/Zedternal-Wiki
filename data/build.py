@@ -196,6 +196,10 @@ PERK_ICON_FALLBACKS = {
 
 
 def skill_class_path(short, perk_key=None):
+    if perk_key == "Override":
+        module_path = os.path.join(SOURCE_CLASS_DIR, "ZTUpgrade_Skill_Overclock_Module.uc")
+        if os.path.isfile(module_path):
+            return module_path
     names = [short]
     if perk_key and not short.lower().startswith(perk_key.lower() + "_"):
         names.insert(0, f"{perk_key}_{short}")
@@ -209,7 +213,7 @@ def skill_class_path(short, perk_key=None):
 
 def skill_allows_deluxe(short, perk_key=None):
     # Rack 'em Up is globally standard-only for both Gunslinger and Sharpshooter.
-    if short.lower() == "rackemup":
+    if short.lower() == "rackemup" or perk_key == "Override":
         return False
     class_path = skill_class_path(short, perk_key)
     if class_path is None:
@@ -749,12 +753,18 @@ def merge_runtime_perk_registrations(active, catalog_path):
         active.setdefault(key, is_static.lower() == "true")
     # These catalog systems register their perks directly in PrepareCatalog()
     # instead of through EnsurePerk in the progression catalog.
-    for key in ("Armageddon", "Gilgamesh"):
-        system_path = os.path.join(SOURCE_CLASS_DIR, f"ZT{key}System.uc")
+    # These systems insert their catalog entries directly instead of using
+    # the shared EnsurePerk helper. Override is dynamically registered by
+    # ZTOverclockSystem.PrepareCatalog(), so include it in the same active set.
+    for key, system_class in (("Armageddon", "ZTArmageddonSystem"),
+                              ("Gilgamesh", "ZTGilgameshSystem"),
+                              ("Override", "ZTOverclockSystem")):
+        system_path = os.path.join(SOURCE_CLASS_DIR, f"{system_class}.uc")
         if os.path.isfile(system_path):
             with open(system_path, encoding="utf-8-sig") as stream:
                 source = stream.read()
-            if re.search(rf"ZTUpgrade_Perk_{key}", source, re.IGNORECASE):
+            if (re.search(rf"ZTUpgrade_Perk_{key}", source, re.IGNORECASE)
+                    and (key != "Override" or re.search(r"PrepareCatalog\s*\(\)", source, re.IGNORECASE))):
                 active.setdefault(key, False)
     return active
 
@@ -782,6 +792,17 @@ def merge_runtime_unlock_rules(rules):
 
 def runtime_skill_roster(key):
     """Return skill short names inserted by a perk's runtime catalog system."""
+    # Override's module catalog is owned by ZTOverclockSystem and its skill
+    # class names have an extra Overclock_Module segment.
+    if key == "Override":
+        path = os.path.join(SOURCE_CLASS_DIR, "ZTOverclockSystem.uc")
+        if not os.path.isfile(path):
+            return []
+        with open(path, encoding="utf-8-sig") as stream:
+            source = stream.read()
+        return list(dict.fromkeys(re.findall(
+            r"Skills\(\d+\)\s*=\s*class'ZTUpgrade_Skill_Overclock_Module_(\w+)'",
+            source, re.IGNORECASE)))
     path = os.path.join(SOURCE_CLASS_DIR, f"ZT{key}System.uc")
     if not os.path.isfile(path):
         return []
@@ -1697,13 +1718,19 @@ def build():
     )
 
     # ---- advanced perks (커퍼 / DK) ----
-    localized_perks = {k[len("DKUpgrade_Perk_"):] for k in kor_sections if k.startswith("DKUpgrade_Perk_")}
+    localized_perks = {
+        k[len(prefix):]
+        for k in kor_sections
+        for prefix in ("DKUpgrade_Perk_", "ZTUpgrade_Perk_")
+        if k.startswith(prefix)
+    }
     adv_keys = sorted(localized_perks & set(active_advanced_perks))
 
     advanced_perks = []
     for key in adv_keys:
         is_static = active_advanced_perks.get(key, False)
-        kor = kor_sections.get(f"DKUpgrade_Perk_{key}", {})
+        kor = (ci_lookup(kor_sections, f"DKUpgrade_Perk_{key}")
+               or ci_lookup(kor_sections, f"ZTUpgrade_Perk_{key}") or {})
         ini_kv = main_sections.get(f"DKUpgrade_Perk_{key}", [])
         static_bonus_values = parse_source_perk_bonus(key) if is_static else {}
         raw_descs = kor.get("descriptions", [])
@@ -1780,6 +1807,22 @@ def build():
             {"raw": d, "text": strip_font(d), "isCapstone": is_capstone_description(d)}
             for d in filled_descriptions
         ]
+        overview_descriptions = [d for d in descriptions if not d["isCapstone"]]
+        # Keep the complete KOR prose available to the compact sections too;
+        # previously it only appeared inside the collapsed full-details panel.
+        passive_descriptions = [d for d in overview_descriptions
+                                if "[패시브]" in d["text"] or "패시브 능력과 캡스톤이 없습니다" in d["text"]]
+        if not passive_descriptions and not scaling_stats:
+            # Some older perk strings omit the explicit [패시브] label. Keep
+            # their active non-capstone prose visible instead of showing an
+            # empty passive section next to populated full details.
+            passive_descriptions = overview_descriptions
+        capstone_stats = [stat for stat in fixed_stats if stat.get("capstoneLevel")]
+        no_capstone_note = None
+        if not any(d["isCapstone"] for d in descriptions) and not capstone_stats:
+            no_capstone_note = next((d["raw"] for d in overview_descriptions
+                                     if "캡스톤이 없습니다" in d["text"] or "캡스톤 없음" in d["text"]),
+                                    "등록된 캡스톤 효과가 없습니다.")
         perk_patch_note = "; ".join(patch_notes.get(f"DKUpgrade_Perk_{key}", []))
 
         perk_extras = manual_perk_extras.get(key, {})
@@ -1802,6 +1845,8 @@ def build():
                 f"ZTUpgrade_Skill_{key}_{short}", f"DKUpgrade_Skill_{key}_{short}",
                 f"ZTUpgrade_Skill_{short}", f"DKUpgrade_Skill_{short}",
             ]
+            if key == "Override":
+                loc_candidates.insert(0, f"DKUpgrade_Skill_Overclock_Module_{short}")
             skill_section = "WMUpgrade_Skill_Tank" if is_reborn_skill else next(
                 (candidate for candidate in loc_candidates if ci_lookup(kor_sections, candidate)),
                 loc_candidates[-1],
@@ -1862,10 +1907,19 @@ def build():
         verdict = manual_verdicts.get("advancedPerks", {}).get(key)
         is_patched = bool(perk_patch_note)
         role_desc = manual_roles.get(key, {})
-        kor_role = next(
-            (strip_font(d) for d in raw_descs if not is_capstone_description(d)),
-            strip_font(raw_descs[0]) if raw_descs else None,
-        )
+        kor_role = next((d["text"] for d in overview_descriptions), None)
+        code_info_html = None
+        if key == "Gambit":
+            requirements = rule.get("requirements", [])
+            req_text = " + ".join(
+                f"{req.get('perk', '').replace('Capitalist', '자본가').replace('Gunslinger', '건슬링거')} 레벨 {req.get('level')}"
+                for req in requirements
+            )
+            unlock_text = f"해금 조건: {req_text}. " if req_text else ""
+            code_info_html = (
+                f"<p>{unlock_text}최대 레벨은 {10 if key in {'Engineer', 'Technician', 'Hacker', 'Override'} else 20}이며, "
+                f"현재 공개 코드에 등록된 구매 스킬은 {len(skills)}개입니다.</p>"
+            )
 
         advanced_perks.append({
             "key": key,
@@ -1876,7 +1930,7 @@ def build():
             "isCombinationUnlocked": rule.get("isCombinationUnlocked", False),
             "isStatic": is_static,
             "hasIniConfig": bool(ini_kv),
-            "maxLevel": 10 if key in {"Engineer", "Technician", "Hacker"} else 20,
+            "maxLevel": 10 if key in {"Engineer", "Technician", "Hacker", "Override"} else 20,
             "passiveStats": apply_perk_stat_labels(key, scaling_stats),
             "fixedStats": apply_perk_stat_labels(key, fixed_stats),
             "valueSourceNote": (
@@ -1890,10 +1944,13 @@ def build():
             "role": kor_role,
             # Numeric/mechanic prose is sourced from the active KOR strings;
             # hand-maintained summaries have drifted from current code.
-            "summaryHtml": None,
+            "summaryHtml": code_info_html,
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
+            "overviewDescriptions": overview_descriptions,
+            "passiveDescriptions": passive_descriptions,
             "capstoneDescriptions": [d for d in descriptions if d["isCapstone"]],
+            "noCapstoneNote": no_capstone_note,
             "skills": skills,
             "skillCount": len(skills),
             "verdict": verdict,
@@ -1902,6 +1959,8 @@ def build():
             "patchNote": perk_patch_note or None,
             "testWarning": None,
             "recentChangeTag": recent_changes.get(key),
+            # Hand-curated extras have drifted from shipped gameplay values;
+            # keep the public wiki anchored to active KOR/code-derived fields.
             "extraSections": [],
             "icon": perk_icon_path(key, rule.get("parentPerk")),
         })
@@ -1937,6 +1996,14 @@ def build():
             {"raw": d, "text": strip_font(d), "isCapstone": is_capstone_description(d)}
             for d in base_raw_descs
         ]
+        base_overview_descriptions = [d for d in base_descriptions if not d["isCapstone"]]
+        base_passive_descriptions = [d for d in base_overview_descriptions
+                                     if "[패시브]" in d["text"]]
+        if not base_passive_descriptions:
+            base_passive_descriptions = base_overview_descriptions
+        base_no_capstone_note = bdata.get("noCapstoneNote")
+        if not any(d["isCapstone"] for d in base_descriptions):
+            base_no_capstone_note = base_no_capstone_note or "기본 퍼크에는 별도 캡스톤 효과가 없습니다."
         base_kor_role = next(
             (strip_font(d) for d in base_raw_descs if not is_capstone_description(d)),
             strip_font(base_raw_descs[0]) if base_raw_descs else None,
@@ -2043,6 +2110,8 @@ def build():
             "grade": bdata.get("grade"),
             "summary": bdata.get("summary"),
             "role": base_kor_role,
+            "overviewDescriptions": base_overview_descriptions,
+            "passiveDescriptions": base_passive_descriptions,
             "endgame": bdata.get("endgame"),
             "descriptions": base_descriptions,
             "capstoneDescriptions": [d for d in base_descriptions if d["isCapstone"]],
@@ -2050,7 +2119,7 @@ def build():
             "maxLevel": 20,
             "strengths": bdata.get("strengths", []),
             "weaknesses": bdata.get("weaknesses", []),
-            "noCapstoneNote": bdata.get("noCapstoneNote"),
+            "noCapstoneNote": base_no_capstone_note,
             "extraSections": [],
             "rankIcons": [
                 f"icons/ranks/{base_rank_icon_names[bkey]}-rank-{tier}.png"

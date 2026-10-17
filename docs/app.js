@@ -720,36 +720,38 @@ function renderAdvDetail(key) {
 }
 
 function renderPerkSummarySection(perk) {
+  const overview = perk.overviewDescriptions || [];
+  const extraLines = overview.filter(description => description.text !== (perk.role || perk.summary));
   return `
     <div class="section-title perk-section-title">1. 설명</div>
     <div class="perk-role-summary">${escapeHtml(perk.role || perk.summary || "설명이 등록되지 않았습니다.")}</div>
+    ${extraLines.map(description => `<div class="desc-line">${description.raw || escapeHtml(description.text || "")}</div>`).join("")}
   `;
 }
 
 function renderPassiveSection(perk) {
   const stats = perk.passiveStats || [];
+  const descriptions = perk.passiveDescriptions || [];
   const maxLevel = perk.maxLevel || 20;
   return `
     <div class="section-title perk-section-title">2. 패시브</div>
-    ${renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
+    ${stats.length ? renderSliderSection(stats, maxLevel, perk.valueSourceNote || "") : descriptions.map(description => `<div class="desc-line">${description.raw || escapeHtml(description.text || "")}</div>`).join("") || renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
   `;
 }
 
 function renderCapstoneSection(perk) {
   const descriptions = perk.capstoneDescriptions || (perk.descriptions || []).filter(description => description.isCapstone);
   const fixedCapstones = (perk.fixedStats || []).filter(stat => stat.capstoneLevel);
-  if (!descriptions.length && !fixedCapstones.length) {
-    return perk.noCapstoneNote ? `
-      <div class="section-title perk-section-title">3. 캡스톤</div>
-      <div class="empty-state perk-empty">${escapeHtml(perk.noCapstoneNote)}</div>
-    ` : "";
-  }
+  if (!descriptions.length && !fixedCapstones.length) return `
+    <div class="section-title perk-section-title">3. 캡스톤</div>
+    <div class="empty-state perk-empty">${perk.noCapstoneNote || "별도 캡스톤 효과가 없습니다."}</div>
+  `;
   const descriptionRows = descriptions.map(description =>
     `<div class="desc-line capstone">${description.raw || escapeHtml(description.text || "")}</div>`
   ).join("");
-  const statRows = !descriptions.length ? fixedCapstones.map(stat => `
+  const statRows = fixedCapstones.map(stat => `
     <div class="capstone-stat-row"><span>${escapeHtml(stat.label)}</span><b>${escapeHtml(stat.display)}</b><small>Lv${stat.capstoneLevel}</small></div>
-  `).join("") : "";
+  `).join("");
   return `
     <div class="section-title perk-section-title">3. 캡스톤</div>
     <div class="capstone-list">${descriptionRows}${statRows}</div>

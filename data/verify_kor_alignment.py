@@ -38,6 +38,17 @@ def main():
         actual = [entry.get("raw", "") for entry in perk.get("descriptions", [])]
         if expected != actual:
             failures.append(f"base perk text mismatch: {perk['key']}")
+        expected_overview = [text for text in expected if not build.is_capstone_description(text)]
+        actual_overview = [entry.get("raw", "") for entry in perk.get("overviewDescriptions", [])]
+        if expected_overview != actual_overview:
+            failures.append(f"base overview section is incomplete: {perk['key']}")
+        if not (perk.get("role") or perk.get("summary")):
+            failures.append(f"base description section is empty: {perk['key']}")
+        if not (perk.get("passiveStats") or perk.get("passiveDescriptions")):
+            failures.append(f"base passive section is empty: {perk['key']}")
+        capstone_stats = [stat for stat in perk.get("fixedStats", []) if stat.get("capstoneLevel")]
+        if not (perk.get("capstoneDescriptions") or capstone_stats or perk.get("noCapstoneNote")):
+            failures.append(f"base capstone section is empty: {perk['key']}")
         checked_perks += 1
         for skill in perk.get("skills", []):
             if skill["key"].lower() in retired_skills:
@@ -70,6 +81,17 @@ def main():
         actual = [entry.get("raw", "") for entry in perk.get("descriptions", [])]
         if expected != actual:
             failures.append(f"advanced perk text mismatch: {perk['key']}")
+        expected_overview = [text for text in expected if not build.is_capstone_description(text)]
+        actual_overview = [entry.get("raw", "") for entry in perk.get("overviewDescriptions", [])]
+        if expected_overview != actual_overview:
+            failures.append(f"overview section is incomplete: {perk['key']}")
+        if not (perk.get("role") or perk.get("overviewDescriptions")):
+            failures.append(f"description section is empty: {perk['key']}")
+        if not (perk.get("passiveStats") or perk.get("passiveDescriptions")):
+            failures.append(f"passive section is empty: {perk['key']}")
+        capstone_stats = [stat for stat in perk.get("fixedStats", []) if stat.get("capstoneLevel")]
+        if not (perk.get("capstoneDescriptions") or capstone_stats or perk.get("noCapstoneNote")):
+            failures.append(f"capstone section is empty: {perk['key']}")
         checked_perks += 1
 
         for skill in perk.get("skills", []):
@@ -81,6 +103,7 @@ def main():
                 localized = next((
                     build.ci_lookup(kor, section_name)
                     for section_name in (
+                        *((f"DKUpgrade_Skill_Overclock_Module_{short}",) if perk_key == "Override" else ()),
                         f"ZTUpgrade_Skill_{perk_key}_{short}", f"DKUpgrade_Skill_{perk_key}_{short}",
                         f"ZTUpgrade_Skill_{short}", f"DKUpgrade_Skill_{short}",
                     ) if build.ci_lookup(kor, section_name) is not None
@@ -96,6 +119,19 @@ def main():
             if not standard and not deluxe and not skill.get("note"):
                 failures.append(f"active skill lacks KOR prose and supplement: {perk['key']}/{skill['key']}")
             checked_skills += 1
+
+    by_key = {perk["key"]: perk for perk in data.get("advancedPerks", [])}
+    override = by_key.get("Override")
+    if not override:
+        failures.append("active runtime perk missing: Override")
+    else:
+        if (override.get("parentPerk"), override.get("unlockLevel"), override.get("maxLevel")) != ("Demolitionist", 15, 10):
+            failures.append("Override progression/max-level metadata mismatch")
+        if override.get("skillCount") != 11 or any(not skill.get("standardDescRaw") for skill in override.get("skills", [])):
+            failures.append("Override runtime module roster or KOR descriptions incomplete")
+    gambit = by_key.get("Gambit")
+    if not gambit or not gambit.get("summaryHtml") or not gambit.get("unlockRequirements"):
+        failures.append("Capitalist Gambit summary/unlock data is null or incomplete")
 
     if failures:
         for item in failures:
