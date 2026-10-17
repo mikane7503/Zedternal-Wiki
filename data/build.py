@@ -240,6 +240,7 @@ def perk_icon_path(short, parent=None):
     # into docs/icons by the wiki sync. Prefer their current named assets over
     # the old generic Demolitionist fallback.
     custom_icons = {
+        "Override": "icons/override.png",
         "Executioner": "icons/executioner.png",
         "Fraulein": "icons/fraulein.png",
         "Armageddon": "icons/armageddon.png",
