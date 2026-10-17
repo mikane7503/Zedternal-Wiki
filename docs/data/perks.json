@@ -6023,8 +6023,8 @@
     }
    ],
    "valueSourceNote": null,
-   "summary": "[패시브] 매 웨이브 종료 시 %x 도쉬를 획득합니다.",
-   "role": "[패시브] 매 웨이브 종료 시 %x 도쉬를 획득합니다.",
+   "summary": "행운에 따른 보상과 치명타 기회를 노리는 확률형 퍼크",
+   "role": "행운에 따른 보상과 치명타 기회를 노리는 확률형 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
@@ -7184,8 +7184,8 @@
    ],
    "fixedStats": [],
    "valueSourceNote": null,
-   "summary": "[패시브] 코만도·샤프슈터·SWAT 무기 피해량이 %x% 증가합니다.",
-   "role": "[패시브] 코만도·샤프슈터·SWAT 무기 피해량이 %x%% 증가합니다.",
+   "summary": "코만도·샤프슈터·SWAT 총기로 화력을 내는 특수부대 퍼크",
+   "role": "코만도·샤프슈터·SWAT 총기로 화력을 내는 특수부대 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
@@ -16504,8 +16504,8 @@
     }
    ],
    "valueSourceNote": null,
-   "summary": "[패시브] 예비 탄약 용량가 %x% 증가합니다.",
-   "role": "[패시브] 예비 탄약 용량가 %x%% 증가합니다.",
+   "summary": "탄약 보급과 빠른 재장전으로 사격을 이어가는 특수부대 퍼크",
+   "role": "탄약 보급과 빠른 재장전으로 사격을 이어가는 특수부대 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
@@ -17201,8 +17201,8 @@
    ],
    "fixedStats": [],
    "valueSourceNote": null,
-   "summary": "[패시브] 직접 총탄 피해가 %x% 증가합니다.",
-   "role": "[패시브] 직접 총탄 피해가 %x%% 증가합니다.",
+   "summary": "총격과 강력한 밀치기로 적진을 돌파하는 특수부대 퍼크",
+   "role": "총격과 강력한 밀치기로 적진을 돌파하는 특수부대 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
@@ -17574,8 +17574,8 @@
    ],
    "fixedStats": [],
    "valueSourceNote": null,
-   "summary": "[패시브] 무기 적중 시 %x% 확률로 적을 얼립니다. 발사 1회마다 적별로 한 번 판정합니다.",
-   "role": "[패시브] 무기 적중 시 %x%% 확률로 적을 얼립니다. 발사 1회마다 적별로 한 번 판정합니다.",
+   "summary": "적을 얼리고 서리 폭풍으로 진형을 멈추는 빙결 퍼크",
+   "role": "적을 얼리고 서리 폭풍으로 진형을 멈추는 빙결 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
@@ -17867,8 +17867,8 @@
    ],
    "fixedStats": [],
    "valueSourceNote": null,
-   "summary": "[패시브] 최대 체력이 %x% 증가합니다. 레벨마다 +3%. (20레벨: +60%)",
-   "role": "[패시브] 최대 체력이 %x%% 증가합니다. 레벨마다 +3%. (20레벨: +60%)",
+   "summary": "철갑 돌진으로 적진을 뚫고 아군을 지키는 전위 퍼크",
+   "role": "철갑 돌진으로 적진을 뚫고 아군을 지키는 전위 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [

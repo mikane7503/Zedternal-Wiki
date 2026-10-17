@@ -27,10 +27,15 @@ def main():
     failures = []
     checked_perks = checked_skills = 0
 
+    def verify_perk_summary(perk, kind):
+        expected = build.perk_summary_for(perk["key"], perk_summaries)
+        if not expected:
+            return
+        if perk.get("role") != expected or perk.get("summary") != expected:
+            failures.append(f"{kind} perk summary mismatch: {perk['key']}")
+
     for perk in data.get("basePerks", []):
-        expected_summary = perk_summaries.get(f"PerkSummary_{perk['key']}")
-        if expected_summary and (perk.get("role") != expected_summary or perk.get("summary") != expected_summary):
-            failures.append(f"base perk summary mismatch: {perk['key']}")
+        verify_perk_summary(perk, "base")
         section = (
             build.ci_lookup(kor, f"ZTWrapper_Perk_{perk['key']}")
             or build.ci_lookup(kor, f"DKWrapper_Perk_{perk['key']}")
@@ -76,9 +81,7 @@ def main():
             checked_skills += 1
 
     for perk in data.get("advancedPerks", []):
-        expected_summary = perk_summaries.get(f"PerkSummary_{perk['key']}")
-        if expected_summary and (perk.get("role") != expected_summary or perk.get("summary") != expected_summary):
-            failures.append(f"advanced perk summary mismatch: {perk['key']}")
+        verify_perk_summary(perk, "advanced")
         section = (
             build.ci_lookup(kor, f"ZTUpgrade_Perk_{perk['key']}")
             or build.ci_lookup(kor, f"DKUpgrade_Perk_{perk['key']}")

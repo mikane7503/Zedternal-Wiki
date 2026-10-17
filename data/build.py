@@ -93,6 +93,23 @@ MANUAL_SKILL_OVERRIDES = os.path.join(ROOT, "data", "manual_skill_overrides.json
 MANUAL_PERK_EXTRAS = os.path.join(ROOT, "data", "manual_perk_extras.json")
 OUT_JSON = os.path.join(ROOT, "docs", "data", "perks.json")
 SKILL_ICON_DIR = os.path.join(ROOT, "docs", "icons", "skills")
+
+# Runtime perk class names do not always match the public/UI name used by the
+# PerkSummary localization keys. Keep these aliases explicit so the wiki reads
+# the same summary shown by the upgrade menu.
+PERK_SUMMARY_KEY_ALIASES = {
+    "Gambler": "Dealer",
+    "Frost": "IceThor",
+    "Scavenger": "SAS",
+    "SpecialAgent": "Spetsnaz",
+    "Taskmaster": "GIGN",
+    "Omen": "Reinhardt",
+}
+
+
+def perk_summary_for(key, localized_summaries, fallback=None):
+    summary_key = PERK_SUMMARY_KEY_ALIASES.get(key, key)
+    return localized_summaries.get(f"PerkSummary_{summary_key}") or fallback
 PERK_ICON_DIR = os.path.join(ROOT, "docs", "icons")
 SOURCE_CLASS_DIR = os.path.join(SOURCE_DIR, "Classes")
 PROGRESSION_CATALOG = os.path.join(SOURCE_CLASS_DIR, "ZTPerkProgressionCatalog.uc")
@@ -1936,7 +1953,7 @@ def build():
         is_patched = bool(perk_patch_note)
         role_desc = manual_roles.get(key, {})
         kor_role = next((d["text"] for d in overview_descriptions), None)
-        perk_summary = perk_summary_texts.get(f"PerkSummary_{key}") or kor_role
+        perk_summary = perk_summary_for(key, perk_summary_texts, kor_role)
         code_info_html = None
         if key == "Gambit":
             requirements = rule.get("requirements", [])
@@ -2069,7 +2086,7 @@ def build():
             (strip_font(d) for d in base_raw_descs if not is_capstone_description(d)),
             strip_font(base_raw_descs[0]) if base_raw_descs else None,
         )
-        perk_summary = perk_summary_texts.get(f"PerkSummary_{bkey}") or base_kor_role
+        perk_summary = perk_summary_for(bkey, perk_summary_texts, base_kor_role)
         wrapper_kv = main_sections.get(f"DKWrapper_Perk_{bkey}", [])
         passive_stats = build_stat_entries([(k, v) for k, v in wrapper_kv if k != "MODEVERSION"], with_levels=True)
         base_stat_labels = {
