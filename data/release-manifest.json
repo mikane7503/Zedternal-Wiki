@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "product": "Zedternal Tempered",
-  "version": "10.17.10",
+  "version": "10.17.13",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-17T08:43:55Z",
-  "releaseReportId": "ReleaseProof-v10.17.10",
-  "releaseSourceSnapshotSha256": "d69cc1d1dc8b13b8b5611df1a15a836f8c02df42517f179ef85082ef011cadd4",
+  "publishedUtc": "2026-10-17T12:11:35Z",
+  "releaseReportId": "ReleaseProof-v10.17.13",
+  "releaseSourceSnapshotSha256": "68be22d1dab36ea9cec1ca0bba3a696f900e72e10b1a9523e3e139cd192c2a00",
   "uploadedFiles": [
     {
       "path": "BrewedPC/ZedternalRBPerkpackage_Menus.upk",
@@ -20,8 +20,8 @@
     },
     {
       "path": "BrewedPC/ZedternalTempered.u",
-      "size": 27541873,
-      "sha256": "f42b8fd2794aa7a1aea7511923f2b6cb94052e715eea4c205e8aede82b207175"
+      "size": 27542583,
+      "sha256": "92804e6db31ae00a99389b325596e1dde7f5eea2b8d7972cd1eb0fcf7280f889"
     },
     {
       "path": "BrewedPC/ZedternalTemperedPerkIcons.upk",
@@ -40,8 +40,8 @@
     },
     {
       "path": "Localization/JPN/ZedternalTempered.jpn",
-      "size": 595840,
-      "sha256": "abdfb27fe4467ff1f9d911f5430c5153e52399c96481d8e1002d5fb3ea508d2d"
+      "size": 594208,
+      "sha256": "5cf34d4d3f06be9e5aee638a0b5e437dbb2aaa55eab4cfafb213d7363ccb5ebf"
     },
     {
       "path": "Localization/KOR/ZedternalReborn.kor",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Localization/KOR/ZedternalTempered.kor",
-      "size": 609368,
-      "sha256": "e2133424398dac08a6e96697ab1a731621a948a246b7030ad7abd87f890bc15e"
+      "size": 607788,
+      "sha256": "e3222fce89577f49ccf66075ef009dc7b17ae44e64d226b1fe73e1661cd20fb6"
     }
   ],
   "sourceIni": [
@@ -87,7 +87,7 @@
     },
     {
       "name": "KFZedternalUnlimited.ini",
-      "sha256": "d1b7425db08e75f880b9e5922aeaa35a7da7470bc4a13fcd46b6bf58ed803338",
+      "sha256": "4cb73eef1bdf19ad5c5fd283d1ad7520d3cf991ef7c81c523ea9860a3f93bf6e",
       "snapshotVerified": true
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "name": "KFZedternalUnlimited.ini",
-      "sourceSha256": "d1b7425db08e75f880b9e5922aeaa35a7da7470bc4a13fcd46b6bf58ed803338",
+      "sourceSha256": "4cb73eef1bdf19ad5c5fd283d1ad7520d3cf991ef7c81c523ea9860a3f93bf6e",
       "operatingSha256": "c18343a18d1e8446648fb50fc96faec81a7783e5792ad098b4f1f3141301eba9",
       "differs": true
     },
@@ -164,7 +164,7 @@
     },
     {
       "name": "ZedternalTempered.kor",
-      "sha256": "e2133424398dac08a6e96697ab1a731621a948a246b7030ad7abd87f890bc15e"
+      "sha256": "e3222fce89577f49ccf66075ef009dc7b17ae44e64d226b1fe73e1661cd20fb6"
     }
   ]
 }
