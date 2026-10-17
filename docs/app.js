@@ -777,54 +777,19 @@ function renderSkillsSection(skills) {
 }
 
 function renderFullInfoSection(perk, isBase = false) {
-  const passiveStats = perk.passiveStats || [];
-  const fixedStats = perk.fixedStats || [];
-  const descriptions = perk.descriptions || [];
-  const maxLevel = perk.maxLevel || 20;
-  const detailLevels = maxLevel > 10 ? [10, maxLevel] : [maxLevel];
-  const detailLevelHeaders = detailLevels.map(level => `<th>${level === maxLevel ? `만렙 Lv${level}` : `Lv${level}`}</th>`).join("");
-  const passiveRows = passiveStats.map(stat => `
-    <tr><td>${escapeHtml(stat.label)}</td><td>${escapeHtml(stat.display)} / 레벨</td>${detailLevels.map(level => `<td>${escapeHtml(formatByUnit(statTotal(stat, level), stat.unit))}</td>`).join("")}</tr>
-  `).join("");
-  const fixedRows = fixedStats.map(stat => `
-    <tr><td>${escapeHtml(stat.label)}</td><td>${escapeHtml(stat.display)}</td><td>${stat.capstoneLevel ? `Lv${stat.capstoneLevel} 도달 시` : "고정 / 조건부"}</td></tr>
-  `).join("");
-  const descriptionHtml = descriptions.map(description => `
-    <div class="desc-line ${description.isCapstone ? "capstone" : ""}">${description.raw || escapeHtml(description.text || "")}</div>
-  `).join("");
-  const detailSkillRows = (perk.skills || []).flatMap(skill => {
-    const byKey = new Map();
-    for (const stat of skill.rawValues || []) {
-      const values = byKey.get(stat.key) || [];
-      values.push(stat);
-      byKey.set(stat.key, values);
-    }
-    return [...byKey.entries()].map(([key, values]) => `
-      <tr><td>${escapeHtml(skill.name)} · ${escapeHtml(values[0].label || key)}</td><td>${escapeHtml(values[0].display)}</td><td>${escapeHtml(values[1]?.display || values[0].display)}</td></tr>
-    `);
-  }).join("");
   const extraSections = (perk.extraSections || []).map(section => `
     <div class="full-info-subtitle">${escapeHtml(section.title)}</div>
     ${section.note ? `<div class="full-info-note">${escapeHtml(section.note)}</div>` : ""}
     ${section.html}
   `).join("");
-  const strengths = isBase && perk.strengths?.length
-    ? `<div class="full-info-subtitle">강점</div><ul class="strengths">${perk.strengths.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : "";
-  const weaknesses = isBase && perk.weaknesses?.length
-    ? `<div class="full-info-subtitle">약점</div>${perk.weaknesses.map(item => `<div class="weak-item"><span class="sev-${escapeHtml(item.severity || "normal")}">${escapeHtml(item.label || item.skill || "")}</span> — ${escapeHtml(item.issue || "")}</div>`).join("")}` : "";
+  const detailHtml = [perk.summaryHtml ? `<div class="perk-explanation-detail">${perk.summaryHtml}</div>` : "", extraSections].filter(Boolean).join("");
+  if (!detailHtml) return "";
   return `
     <div class="section-title perk-section-title">6. 전체 상세 정보</div>
     <details class="perk-full-details">
-      <summary>더 깊게 보기 · 세부 수치와 모든 작동 규칙</summary>
+      <summary>1~5번에 없는 추가 작동 규칙</summary>
       <div class="perk-full-body">
-        ${passiveRows ? `<div class="full-info-subtitle">레벨당 패시브 전체 수치</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>항목</th><th>레벨당</th>${detailLevelHeaders}</tr>${passiveRows}</table></div>` : ""}
-        ${fixedRows ? `<div class="full-info-subtitle">고정·조건부 수치 전체</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>항목</th><th>수치</th><th>적용</th></tr>${fixedRows}</table></div>` : ""}
-        ${detailSkillRows ? `<div class="full-info-subtitle">스킬 설정 수치 (표준 / 디럭스)</div><div class="table-scroll"><table class="stat-table compact-stat-table"><tr><th>스킬 / 항목</th><th>표준</th><th>디럭스</th></tr>${detailSkillRows}</table></div>` : ""}
-        ${descriptions.length ? `<div class="full-info-subtitle">게임 내 퍼크 설명 원문</div>${descriptionHtml}` : ""}
-        ${perk.summaryHtml ? `<div class="full-info-subtitle">코드 동작 추가 정보</div><div class="perk-explanation-detail">${perk.summaryHtml}</div>` : ""}
-        ${strengths}${weaknesses}${extraSections}
-        ${!passiveRows && !fixedRows && !detailSkillRows && !descriptions.length && !perk.summaryHtml && !strengths && !weaknesses && !extraSections
-          ? '<div class="empty-state perk-empty">현재 공개할 추가 수치가 없습니다.</div>' : ""}
+        ${detailHtml}
       </div>
     </details>
   `;

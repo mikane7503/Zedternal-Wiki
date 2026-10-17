@@ -17,6 +17,20 @@ def main():
     with open(data_path, encoding="utf-8-sig") as stream:
         data = json.load(stream)
 
+    app_path = os.path.join(build.ROOT, "docs", "app.js")
+    with open(app_path, encoding="utf-8") as stream:
+        app_source = stream.read()
+    full_info_start = app_source.find("function renderFullInfoSection(")
+    full_info_end = app_source.find("function renderSliderSection(", full_info_start)
+    full_info_renderer = app_source[full_info_start:full_info_end] if full_info_start >= 0 and full_info_end > full_info_start else ""
+    if not full_info_renderer or 'if (!detailHtml) return "";' not in full_info_renderer:
+        failures = ["full detail section must be omitted when it has no supplemental information"]
+    else:
+        failures = []
+    for duplicate_source in ("perk.passiveStats", "perk.fixedStats", "perk.descriptions", "perk.skills", "perk.strengths", "perk.weaknesses"):
+        if duplicate_source in full_info_renderer:
+            failures.append(f"full detail renderer repeats section 1–5 data: {duplicate_source}")
+
     encoding = "utf-16" if build.INI_KOR.lower().endswith(".kor") else "utf-8-sig"
     kor = build.parse_kor_ini(build.INI_KOR, encoding=encoding)
     perk_summaries = build.ci_lookup(kor, "ZTUI_UPGMenu") or {}
@@ -24,8 +38,8 @@ def main():
     retired_skills, retired_perks = build.parse_retired_upgrade_paths(
         os.path.join(build.SOURCE_CLASS_DIR, "ZTRetiredSkillFilter.uc")
     )
-    failures = []
     checked_perks = checked_skills = 0
+    detail_perks = 0
 
     def verify_perk_summary(perk, kind):
         expected = build.perk_summary_for(perk["key"], perk_summaries)
@@ -35,6 +49,8 @@ def main():
             failures.append(f"{kind} perk summary mismatch: {perk['key']}")
 
     for perk in data.get("basePerks", []):
+        if perk.get("summaryHtml") or any(section.get("html", "").strip() for section in perk.get("extraSections", [])):
+            detail_perks += 1
         verify_perk_summary(perk, "base")
         section = (
             build.ci_lookup(kor, f"ZTWrapper_Perk_{perk['key']}")
@@ -81,6 +97,8 @@ def main():
             checked_skills += 1
 
     for perk in data.get("advancedPerks", []):
+        if perk.get("summaryHtml") or any(section.get("html", "").strip() for section in perk.get("extraSections", [])):
+            detail_perks += 1
         verify_perk_summary(perk, "advanced")
         section = (
             build.ci_lookup(kor, f"ZTUpgrade_Perk_{perk['key']}")
@@ -140,15 +158,19 @@ def main():
         if override.get("skillCount") != 11 or any(not skill.get("standardDescRaw") for skill in override.get("skills", [])):
             failures.append("Override runtime module roster or KOR descriptions incomplete")
     gambit = by_key.get("Gambit")
-    if not gambit or not gambit.get("summaryHtml") or not gambit.get("unlockRequirements"):
-        failures.append("Capitalist Gambit summary/unlock data is null or incomplete")
+    if not gambit or not gambit.get("unlockRequirements"):
+        failures.append("Capitalist Gambit unlock data is null or incomplete")
+    elif gambit.get("summaryHtml"):
+        failures.append("Capitalist Gambit has duplicated full-detail summary content")
+    elif not any(section.get("html", "").strip() for section in gambit.get("extraSections", [])):
+        failures.append("Capitalist Gambit supplemental details are missing")
 
     if failures:
         for item in failures:
             print(f"[WIKI_KOR_AUDIT] FAIL {item}")
         print(f"[WIKI_KOR_AUDIT] failures={len(failures)} perks={checked_perks} skills={checked_skills}")
         return 1
-    print(f"[WIKI_KOR_AUDIT] PASS perks={checked_perks} activeSkills={checked_skills} exactKOR=100% retired=excluded uncoveredText=0")
+    print(f"[WIKI_KOR_AUDIT] PASS perks={checked_perks} activeSkills={checked_skills} exactKOR=100% retired=excluded uncoveredText=0 supplementalDetailPerks={detail_perks}")
     return 0
 
 

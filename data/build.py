@@ -1954,18 +1954,7 @@ def build():
         role_desc = manual_roles.get(key, {})
         kor_role = next((d["text"] for d in overview_descriptions), None)
         perk_summary = perk_summary_for(key, perk_summary_texts, kor_role)
-        code_info_html = None
-        if key == "Gambit":
-            requirements = rule.get("requirements", [])
-            req_text = " + ".join(
-                f"{req.get('perk', '').replace('Capitalist', '자본가').replace('Gunslinger', '건슬링거')} 레벨 {req.get('level')}"
-                for req in requirements
-            )
-            unlock_text = f"해금 조건: {req_text}. " if req_text else ""
-            code_info_html = (
-                f"<p>{unlock_text}최대 레벨은 {10 if key in {'Engineer', 'Technician', 'Hacker', 'Override'} else 20}이며, "
-                f"현재 공개 코드에 등록된 구매 스킬은 {len(skills)}개입니다.</p>"
-            )
+        supplemental_detail = manual_perk_extras.get(key, {})
 
         # These perks implement per-level passive values directly in their
         # class/system code instead of through a Config_* INI section. Surface
@@ -2015,7 +2004,7 @@ def build():
             "role": perk_summary,
             # Numeric/mechanic prose is sourced from the active KOR strings;
             # hand-maintained summaries have drifted from current code.
-            "summaryHtml": code_info_html,
+            "summaryHtml": supplemental_detail.get("summaryHtml"),
             "endgame": role_desc.get("endgame"),
             "descriptions": descriptions,
             "overviewDescriptions": overview_descriptions,
@@ -2030,9 +2019,10 @@ def build():
             "patchNote": perk_patch_note or None,
             "testWarning": None,
             "recentChangeTag": recent_changes.get(key),
-            # Hand-curated extras have drifted from shipped gameplay values;
-            # keep the public wiki anchored to active KOR/code-derived fields.
-            "extraSections": [],
+            # This file is restricted to supplemental mechanics not already
+            # shown in sections 1–5; repeated stat/description tables are not
+            # rendered here.
+            "extraSections": supplemental_detail.get("extraSections", []),
             "rankIcons": [
                 f"icons/ranks/{ADVANCED_RANK_ICON_NAMES[key]}-rank-{tier}.png"
                 for tier in range(5)
@@ -2199,7 +2189,8 @@ def build():
             "strengths": bdata.get("strengths", []),
             "weaknesses": bdata.get("weaknesses", []),
             "noCapstoneNote": base_no_capstone_note,
-            "extraSections": [],
+            "summaryHtml": manual_perk_extras.get(bkey, {}).get("summaryHtml"),
+            "extraSections": manual_perk_extras.get(bkey, {}).get("extraSections", []),
             "rankIcons": [
                 f"icons/ranks/{base_rank_icon_names[bkey]}-rank-{tier}.png"
                 for tier in range(5)

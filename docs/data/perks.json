@@ -92,6 +92,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "별도 10·20레벨 캡스톤은 없습니다. 이 퍼크의 기본 효과는 레벨에 따라 계속 증가합니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Berserker-rank-0.png",
@@ -420,6 +421,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "별도 10·20레벨 캡스톤은 없습니다. 제드 타임 연장만 레벨 10에서 +10초로 상한에 도달합니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Commando-rank-0.png",
@@ -729,6 +731,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "별도의 10·20레벨 캡스톤은 없습니다. 기본 피해 보너스는 퍼크 레벨에 따라 20레벨까지 증가합니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Demolitionist-rank-0.png",
@@ -1063,6 +1066,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "별도의 10·20레벨 캡스톤은 없습니다. 기본 효과는 퍼크 레벨에 따라 20레벨까지 증가합니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/FieldMedic-rank-0.png",
@@ -1374,6 +1378,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Firebug-rank-0.png",
@@ -1633,6 +1638,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Gunslinger-rank-0.png",
@@ -1927,6 +1933,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Sharpshooter-rank-0.png",
@@ -2201,6 +2208,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Support-rank-0.png",
@@ -2510,6 +2518,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/SWAT-rank-0.png",
@@ -2841,6 +2850,7 @@
    ],
    "weaknesses": [],
    "noCapstoneNote": "기본 퍼크에는 별도 캡스톤 효과가 없습니다.",
+   "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
     "icons/ranks/Survivalist-rank-0.png",
@@ -6535,7 +6545,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "갬빗과 딜러의 스킬 연결",
+     "html": "<p>딜러(코드 클래스명 Gambler)의 스킬 구매 상태는 갬빗 진행 시스템에서도 조회합니다. 갬빗은 이 스킬들을 별도 복제하거나 자체 스킬 목록에 추가하지 않으며, 딜러의 구매 데이터를 참조해 관련 효과를 처리합니다. 웨이브 겜블러는 딜러와 별도 퍼크입니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/gambler.png"
   },
@@ -7125,7 +7140,12 @@
    "patchNote": "구 0.200000 (복리 20%→10%, KOR 기술값 일치)",
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "자금 추적 중복 방지",
+     "html": "<p>포트폴리오 추적은 플레이어 잔액 변화를 관찰하되, 되찾은 투척 도쉬와 타이쿤 자신이 지급한 급여·이자·인수·환급을 새 수입으로 다시 계산하지 않습니다. 추적 상태는 현재 매치의 helper에 보관되며 계정 영구 기록으로 저장되지 않습니다. 보스 처치 보상은 보스 처치 판정에 기여한 시전자에게만 계산합니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/tycoon.png"
   },
@@ -9172,7 +9192,12 @@
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.030000; 구 0.050→0.025→0.0125; 구 0.020000; 구 0.020000; 구 0.015000; 구 0.030000; 구 0.040→0.020→0.010; 구 0.010→0.005→0.0025",
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "위상별 효과·동기화 규칙",
+     "html": "<p>돌격은 레벨당 피해 +1.5%·관통력 +1.25%를 얻고 헤드샷 처치로 동기화합니다. 템포는 재장전 +1%·연사 +1%를 얻고, 직전 처치 후 3초 안에 추가 처치하면 동기화합니다. 가속은 이동 속도 +0.75%·무기 교체 +1.5%를 얻고, 이동 속도 50 UU/s를 넘긴 상태에서 처치하면 동기화합니다. 방벽은 5m 안에서 레벨당 피해 +1%, 처치마다 체력 1, 받는 피해 10% 감소를 얻으며 5m 안의 처치로 동기화합니다. 위상 전환 때 해당 위상에서 동기화 처치가 5회 이상이면 영구 중첩을 하나 획득합니다. 이 중첩은 제한 없이 쌓이며 돌격 피해, 템포 재장전, 가속 이동 속도, 방벽 피해에 적용됩니다. 방벽의 누적 피해 보너스는 5m 거리 조건과 별도로 적용됩니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/metronome.png"
   },
@@ -10502,89 +10527,8 @@
    ],
    "capstoneDescriptions": [],
    "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
-   "skills": [
-    {
-     "key": "HairTrigger",
-     "name": "헤어 트리거",
-     "standardDesc": "폭발 카운터 충전에 필요한 임계값이 5킬 줄어듭니다. 활성 창 지속 시간이 +3초 연장됩니다.",
-     "deluxeDesc": "폭발 카운터 충전에 필요한 임계값이 10킬 줄어듭니다. 활성 창 지속 시간이 +6초 연장됩니다.",
-     "standardDescRaw": "폭발 카운터 충전에 필요한 임계값이 <font color=\"#77D914\">5킬</font> 줄어듭니다. 활성 창 지속 시간이 <font color=\"#77D914\">+3초</font> 연장됩니다.",
-     "deluxeDescRaw": "폭발 카운터 충전에 필요한 임계값이 <font color=\"#77D914\">10킬</font> 줄어듭니다. 활성 창 지속 시간이 <font color=\"#77D914\">+6초</font> 연장됩니다.",
-     "allowsDeluxe": true,
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/HairTrigger.png"
-    },
-    {
-     "key": "SlowBurn",
-     "name": "슬로우 번",
-     "standardDesc": "폭발 시 지면에 불길을 남깁니다: 6초 지속, 초당 30 피해.",
-     "deluxeDesc": "폭발 시 지면에 불길을 남깁니다: 10초 지속, 초당 60 피해.",
-     "standardDescRaw": "폭발 시 지면에 불길을 남깁니다: <font color=\"#77D914\">6초</font> 지속, 초당 <font color=\"#77D914\">30</font> <font color=\"#66CCFF\">피해</font>.",
-     "deluxeDescRaw": "폭발 시 지면에 불길을 남깁니다: <font color=\"#77D914\">10초</font> 지속, 초당 <font color=\"#77D914\">60</font> <font color=\"#66CCFF\">피해</font>.",
-     "allowsDeluxe": true,
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/SlowBurn.png"
-    },
-    {
-     "key": "ApexCharge",
-     "name": "에이펙스 차지",
-     "standardDesc": "보스 처치 시 활성화 카운터가 즉시 가득 찹니다. 활성 창 내에서 보스가 폭발할 경우: 피해량 1.5배, 반경 1.25배.",
-     "deluxeDesc": "활성 창 내에서 보스가 폭발할 경우: 피해량 2.5배, 반경 1.5배. 활성 창 밖에서 보스를 처치하면 다음 사이클에 50% 보너스 스택을 추가합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">보스</font> <font color=\"#FFD700\">처치 시</font> 활성화 카운터가 즉시 가득 찹니다. 활성 창 내에서 <font color=\"#66CCFF\">보스</font>가 폭발할 경우: <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">1.5</font>배, 반경 <font color=\"#77D914\">1.25</font>배.",
-     "deluxeDescRaw": "활성 창 내에서 <font color=\"#66CCFF\">보스</font>가 폭발할 경우: <font color=\"#66CCFF\">피해량</font> <font color=\"#77D914\">2.5</font>배, 반경 <font color=\"#77D914\">1.5</font>배. 활성 창 밖에서 <font color=\"#66CCFF\">보스</font>를 처치하면 다음 사이클에 <font color=\"#77D914\">50%</font> 보너스 스택을 추가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/ApexCharge.png"
-    },
-    {
-     "key": "DaisyChain",
-     "name": "데이지 체인",
-     "standardDesc": "폭발 시 반경 내의 생존한 적 최대 8명에게 표식을 남깁니다. 표식이 남은 적을 처치하면 시체가 폭발합니다. 표식은 20초 후에 사라집니다.",
-     "deluxeDesc": "표식 반경이 1.5배 증가하고, 최대 12명에게 표식을 남깁니다. 표식은 30초 후에 사라지며, 연쇄 폭발이 한 번 더 표식을 남길 수 있습니다.",
-     "standardDescRaw": "폭발 시 반경 내의 생존한 적 최대 <font color=\"#77D914\">8명</font>에게 표식을 남깁니다. 표식이 남은 적을 처치하면 시체가 폭발합니다. 표식은 <font color=\"#77D914\">20초</font> 후에 사라집니다.",
-     "deluxeDescRaw": "표식 반경이 <font color=\"#77D914\">1.5</font>배 증가하고, 최대 <font color=\"#77D914\">12명</font>에게 표식을 남깁니다. 표식은 <font color=\"#77D914\">30초</font> 후에 사라지며, 연쇄 폭발이 한 번 더 표식을 남길 수 있습니다.",
-     "allowsDeluxe": true,
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/DaisyChain.png"
-    }
-   ],
-   "skillCount": 4,
+   "skills": [],
+   "skillCount": 0,
    "verdict": {
     "tag": "적절 (설계상)",
     "note": "소스 전체 확인 완료. 패시브 2종은 코드 기본값 +2%/레벨(만렙 +40%) — 'ZedternalUnlimited_Balance' ini 부재 시 이 기본값이 적용됨. 임계값 50-레벨, 폭발 400+30×레벨/반경 300+5×레벨 등 시스템 수치 전부 검증.",
@@ -10595,7 +10539,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "폭발 충전 상태",
+     "html": "<p>유효한 처치가 폭발 카운터를 하나씩 채웁니다. 필요한 처치 수는 퍼크 레벨에 따라 줄어들며, 충전이 끝나면 활성 시간이 시작됩니다. 활성 중에는 카운터가 더 쌓이지 않고, 창이 끝난 뒤 새 충전을 시작합니다. 카운터는 웨이브가 바뀌어도 유지되며, 폭발은 아군에게 피해를 주지 않습니다. 진행도와 남은 활성 시간은 공용 HUD 상태로 전달됩니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/detonator.png"
   },
@@ -14368,7 +14317,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "추가 화상 판정 범위",
+     "html": "<p>추가 화상은 서버에서 유효한 화염 계열 무기 타격을 처리할 때 판정합니다. 피해 유형이 없는 공격과 이미 테르밋 효과가 적용된 타격은 추가 판정에서 제외되어 같은 공격이 재귀적으로 화상 피해를 만들지 않습니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/pyrokinetic.png"
   },
@@ -15193,7 +15147,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "감시자 시각 단계·예고 취소",
+     "html": "<p>처치 수에 따라 감시자 비네트, 눈, 심장박동 연출이 다섯 단계로 강해집니다. 재앙 경고가 끝나기 전에 웨이브가 종료되면 예고를 취소합니다. 감시 단계와 웨이브별 재앙 실행 여부는 플레이어별로 관리해 중복 발동을 막습니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/haunted.png"
   },
@@ -15987,7 +15946,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "Rack ’em Up 스택 계산·감소",
+     "html": "<p>첫 10스택의 누적 피해 보너스는 차례로 8%, 15%, 21%, 26%, 30%, 33%, 36%, 38%, 40%, 42%이며, 11스택부터는 스택마다 1%p를 더합니다. 스택 감소 간격은 현재 스택 수에 따라 1~5에서 2초, 6~10에서 1.75초, 11~20에서 1.5초, 21~40에서 1.25초, 41~60에서 1초, 61~80에서 0.75초, 81~100에서 0.5초, 101 이상에서 0.25초입니다. 건슬링거와 샤프슈터는 같은 스택과 HUD 카운터를 공유합니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/johnwick.png"
   },
@@ -18115,29 +18079,9 @@
      "disabledNote": null,
      "noData": false,
      "icon": "icons/skills/Omen_Reinhardt_JetEngine.png"
-    },
-    {
-     "key": "TwistOfFate",
-     "name": "운명의 반전",
-     "standardDesc": "예언을 완료할 때마다 동전을 던집니다. 50% 확률로 보상이 두 배가 되거나, 50% 확률로 아무 보상도 받지 못합니다.",
-     "deluxeDesc": "예언을 완료할 때마다 동전을 던집니다. 55% 확률로 보상이 두 배가 되거나, 45% 확률로 아무 보상도 받지 못합니다.",
-     "standardDescRaw": "예언을 완료할 때마다 동전을 던집니다. <font color=\"#77D914\">50%</font> 확률로 보상이 두 배가 되거나, <font color=\"#77D914\">50%</font> 확률로 아무 보상도 받지 못합니다.",
-     "deluxeDescRaw": "예언을 완료할 때마다 동전을 던집니다. <font color=\"#77D914\">55%</font> 확률로 보상이 두 배가 되거나, <font color=\"#77D914\">45%</font> 확률로 아무 보상도 받지 못합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TwistOfFate.png"
     }
    ],
-   "skillCount": 10,
+   "skillCount": 9,
    "verdict": {
     "tag": "적절",
     "note": "유지 판정.",
@@ -18148,7 +18092,17 @@
    "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.020000",
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "예언 판정 규칙",
+     "html": "<p>직전 예언은 최대 20회 재추첨해 피하고, 새 예언을 받은 뒤 1.5초 동안은 조건 위반을 검사하지 않습니다. 웨이브 종료 시 조건을 지키면 보상을 누적하고, 실패하면 같은 보상 항목에서 두 배를 차감합니다. 체력 보상은 최대 체력과 현재 체력을 함께 회복하지만, 방어구 보상은 최대치만 올리고 현재 방어구는 채우지 않습니다.</p>"
+    },
+    {
+     "title": "예언 목록 (19종)",
+     "note": "예언 19종의 조건과 보상은 ZTUpgrade_Perk_Omen_Helper.BuildProphecyPool의 현재 값을 대조했습니다.",
+     "html": "<table class=\"stat-table\"><tr><th>예언</th><th>티어</th><th>조건</th><th>보상</th></tr><tr><td><font color=\"#c8c8c8\">명사수의 맹세</font> (Marksman's Oath)</td><td><font color=\"#c8c8c8\">1</font></td><td>모든 사격은 헤드샷이어야 함</td><td>헤드샷 피해량 +3%</td></tr><tr><td><font color=\"#c8c8c8\">강철의 규율</font> (Iron Discipline)</td><td><font color=\"#c8c8c8\">1</font></td><td>수동 재장전 금지</td><td>재장전 속도 +2%</td></tr><tr><td><font color=\"#c8c8c8\">흔들림 없음</font> (Unwavering)</td><td><font color=\"#c8c8c8\">1</font></td><td>전력질주 금지</td><td>피해량 +3%</td></tr><tr><td><font color=\"#c8c8c8\">돌가죽</font> (Stoneskin)</td><td><font color=\"#c8c8c8\">1</font></td><td>치유 받지 않음</td><td>최대 체력 +10</td></tr><tr><td><font color=\"#c8c8c8\">근접전</font> (Close Quarters)</td><td><font color=\"#c8c8c8\">1</font></td><td>10미터 이상 거리의 좀비에게 피해 주지 않음</td><td>피해 저항 +2%</td></tr><tr><td><font color=\"#c8c8c8\">대지에 붙음</font> (Grounded)</td><td><font color=\"#c8c8c8\">1</font></td><td>점프 금지</td><td>피해량 +3%</td></tr><tr><td><font color=\"#c8c8c8\">굴하지 않음</font> (Unyielding)</td><td><font color=\"#c8c8c8\">1</font></td><td>무기 교체 금지</td><td>재장전 속도 +3%</td></tr><tr><td><font color=\"#c8c8c8\">무손상</font> (Untouched)</td><td><font color=\"#c8c8c8\">1</font></td><td>피해 받지 않음</td><td>피해 저항 +3%, 최대 방어구 +10</td></tr><tr><td><font color=\"#50a0ff\">평화주의자의 역설</font> (Pacifist's Paradox)</td><td><font color=\"#50a0ff\">2</font></td><td>근접 또는 타격 피해 주지 않음</td><td>피해량 +5%</td></tr><tr><td><font color=\"#50a0ff\">하나의 탄창</font> (One Magazine)</td><td><font color=\"#50a0ff\">2</font></td><td>무기당 탄창 하나 - 재장전은 무기 교체로</td><td>재장전 속도 +5%</td></tr><tr><td><font color=\"#50a0ff\">시야 좁힘</font> (Tunnel Vision)</td><td><font color=\"#50a0ff\">2</font></td><td>0.2초 간격 검사에서 약 77°를 넘게 회전하지 않음</td><td>헤드샷 피해량 +5%</td></tr><tr><td><font color=\"#50a0ff\">맹목적인 믿음</font> (Blind Faith)</td><td><font color=\"#50a0ff\">2</font></td><td>조준 사격 금지</td><td>피해 저항 +5%</td></tr><tr><td><font color=\"#50a0ff\">정적의 서약</font> (Vow of Stillness)</td><td><font color=\"#50a0ff\">2</font></td><td>3초 넘게 연속으로 이동하지 않음</td><td>헤드샷 피해량 +5%</td></tr><tr><td><font color=\"#50a0ff\">무장 해제</font> (Disarmed)</td><td><font color=\"#50a0ff\">2</font></td><td>보조무기 또는 칼만 사용</td><td>피해량 +8%</td></tr><tr><td><font color=\"#b450ff\">처형자</font> (Executioner)</td><td><font color=\"#b450ff\">3</font></td><td>모든 처치는 헤드샷으로</td><td>헤드샷 피해량 +10%</td></tr><tr><td><font color=\"#b450ff\">고행자</font> (Ascetic)</td><td><font color=\"#b450ff\">3</font></td><td>칼과 타격만 - 사격 금지</td><td>피해량 +10% + 피해 저항 +5%</td></tr><tr><td><font color=\"#b450ff\">침묵</font> (Silence)</td><td><font color=\"#b450ff\">3</font></td><td>사격만 - 수류탄, 근접, 점프, 전력질주 금지</td><td>피해량 +8% + 재장전 속도 +5%</td></tr><tr><td><font color=\"#b450ff\">방아쇠 절제</font> (Trigger Discipline)</td><td><font color=\"#b450ff\">3</font></td><td>최대 3발 후 2초 대기</td><td>피해량 +8% + 피해 저항 +5%</td></tr><tr><td><font color=\"#b450ff\">외로운 늑대</font> (Lone Wolf)</td><td><font color=\"#b450ff\">3</font></td><td>공격마다 무기 교체</td><td>피해량 +10% + 이동 속도 +5%</td></tr></table>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/reinhardt.png"
   },
@@ -20125,7 +20079,12 @@
     "date": "2026-07-07",
     "type": "buff"
    },
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "무기별 숙련 기록",
+     "html": "<p>숙련 처치는 무기 종류별로 따로 기록됩니다. 숙련 단계가 오르는 기준과 단계별 보너스는 위 패시브·캡스톤 수치에 따르며, 다른 무기로 바꿔도 각 무기의 진행도는 유지됩니다. 서버가 기록을 관리하고 플레이어 복제 정보로 소유 클라이언트에 동기화하므로 사망·무기 교체 뒤에도 현재 매치 중에는 진행도가 보존됩니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/artificer.png"
   },
@@ -21366,7 +21325,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "독 피해 재적용 방지",
+     "html": "<p>독 지속 피해가 다시 독 발동 확률을 굴려 무한히 증식하지 않도록 독 피해 유형은 추가 독 판정에서 제외됩니다. 발동·지속 피해 계산은 서버의 피해 처리 경로에서 수행합니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/venomancer.png"
   },
@@ -22224,7 +22188,12 @@
     "date": "2026-07-07",
     "type": "buff"
    },
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "비늘 누적 처리",
+     "html": "<p>독으로 실제 적용된 피해량을 누적해 기준에 도달하면 비늘을 얻습니다. 비늘 수와 이에 따른 보너스는 플레이어 상태로 관리되며, 최대 비늘 상태에서는 추가 획득을 멈춥니다. 처치 시 주변 확산은 별도 서버 판정으로 처리됩니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/medusa.png"
   },
@@ -22874,7 +22843,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "글리치 사건 처리",
+     "html": "<p>글리치 효과는 서버에서 사건별로 판정하며 피해·회복·탄약·도쉬·임시 방어 효과를 서로 다른 처리 경로로 적용합니다. 치명 피해 생존 판정과 웨이브 종료 보상은 일반 타격 글리치와 분리되어 있어 같은 사건으로 중복 발동하지 않습니다. 선택된 사건 상태는 소유 플레이어에게 복제됩니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/missingno.png"
   },
@@ -23543,7 +23517,17 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "버프 재추첨 규칙",
+     "html": "<p>버프를 다시 뽑을 때는 같은 슬롯에서 직전 웨이브에 선택된 효과를 제외합니다. 영구 수집 단계에서는 이미 획득한 효과를 후보에서 빼고 아직 얻지 못한 효과만 추첨합니다. 버프 중첩 시 피해 저항·반동·탄퍼짐은 각각의 상한을 적용합니다.</p>"
+    },
+    {
+     "title": "버프별 선택 확률",
+     "html": "<table class=\"stat-table\"><tr><th>버프</th><th>분류</th><th>선택 확률</th></tr><tr><td>Carnage (학살)</td><td>공격</td><td>8.1%</td></tr><tr><td>Executioner (처형자)</td><td>공격</td><td>8.1%</td></tr><tr><td>Rampage (광란)</td><td>공격</td><td>8.1%</td></tr><tr><td>Crusher (파쇄자)</td><td>공격</td><td>5.7%</td></tr><tr><td>Berserker (버서커)</td><td>공격</td><td>5.7%</td></tr><tr><td>Fortress (요새)</td><td>방어</td><td>8.1%</td></tr><tr><td>Leech (흡혈)</td><td>방어</td><td>3.3%</td></tr><tr><td>Anchor (닻)</td><td>취급</td><td>8.1%</td></tr><tr><td>Hawk (매)</td><td>취급</td><td>5.7%</td></tr><tr><td>Speedloader (신속 장전)</td><td>취급</td><td>8.1%</td></tr><tr><td>Switchblade (전환날)</td><td>취급</td><td>5.7%</td></tr><tr><td>Speedfreak (질주광)</td><td>유틸리티</td><td>8.1%</td></tr><tr><td>Hoarder (수집가)</td><td>유틸리티</td><td>8.1%</td></tr><tr><td>Drumfire (연속 사격)</td><td>유틸리티</td><td>5.7%</td></tr><tr><td>Phantom (환영)</td><td>유틸리티</td><td>3.3%</td></tr></table>",
+     "note": "확률은 가중치 합계 123을 기준으로 반올림해 표시합니다."
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/shapeshifter.png"
   },
@@ -23763,7 +23747,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "웨이브 정산 자격·반올림",
+     "html": "<p>웨이브 급여는 웨이브 시작 때 생존해 있고, 승리 종료까지 사망하지 않은 플레이어에게만 지급됩니다. 중도 입장·웨이브 중 사망·패배는 급여 대상이 아니며 연속 근속 기록도 초기화됩니다. 직접 처치 보너스의 소수 도쉬는 플레이어별 잔여값으로 누적해 정수에 도달할 때 지급하고, 도움 처치 보상에는 적용하지 않습니다. 상점 할인은 구매 결제 때 요청 가격에만 적용하며 기본 가격표를 바꾸지 않습니다.</p>"
+    }
+   ],
    "rankIcons": [
     "icons/ranks/Capitalist-rank-0.png",
     "icons/ranks/Capitalist-rank-1.png",
@@ -24042,7 +24031,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "드론 소유권·상점 등록",
+     "html": "<p>엔지니어 보너스는 소유 플레이어가 배치한 Sentinel과 HRG Warthog에 적용되며 드론 한도도 소유자별로 계산합니다. 엔지니어 5레벨 플레이어가 있으면 이후 상점 목록 초기화부터 두 드론 무기가 팀 카탈로그에 등록됩니다. 드론에는 일반 무기 업그레이드를 적용하지 않습니다.</p>"
+    }
+   ],
    "rankIcons": [
     "icons/ranks/Engineer-rank-0.png",
     "icons/ranks/Engineer-rank-1.png",
@@ -24076,7 +24070,7 @@
    "valueSourceNote": null,
    "summary": "웨이브 도전을 완수하고 무작위 영구 보상을 얻는 도전형 퍼크",
    "role": "웨이브 도전을 완수하고 무작위 영구 보상을 얻는 도전형 퍼크",
-   "summaryHtml": "<p>해금 조건: 자본가 레벨 5 + 건슬링거 레벨 10. 최대 레벨은 20이며, 현재 공개 코드에 등록된 구매 스킬은 0개입니다.</p>",
+   "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
@@ -24144,7 +24138,17 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "도전 생성·보상 규칙",
+     "html": "<p>웨이브마다 도전 하나를 서버에서 무작위로 뽑습니다. 티어별 가중치는 일반 100, 희귀 50, 전설 25이며, 희귀·전설은 각각 해당 레벨에 도달하면 추첨 풀에 추가됩니다. 레벨 10부터는 각 추첨 전에 신화 도전을 별도로 판정합니다. 처치형 목표는 조건을 채우는 즉시 완료되고, 피해량·무피해·명중률 목표는 웨이브 종료 때 판정합니다. 보상은 도전의 기본값에 갬빗 레벨을 곱하며, 전투 보너스는 현재 게임 동안 누적되고 도쉬는 지급 즉시 잔액에 반영됩니다. 도전 종류와 각 조건·보상은 아래 표에 정리했습니다.</p>"
+    },
+    {
+     "title": "갬빗 목록 (14종)",
+     "note": "W = 현재 웨이브 번호. 표의 목표치는 기본 목표 + 웨이브 증가량 × W로 계산하며 Raise the Stakes/House Always Wins 보정 전 값입니다. 보상의 ×L = 갬빗 레벨 배율 (Lv20 기준 값 병기).",
+     "html": "<table class=\"stat-table\"><tr><th>갬빗</th><th>등급</th><th>조건</th><th>보상 (퍼크 레벨 ×L)</th></tr><tr><td><font color=\"#c8c8c8\">명사수</font> (Marksman)</td><td><font color=\"#c8c8c8\">일반</font></td><td>헤드샷으로 5+W마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#c8c8c8\">처치 수</font> (Body Count)</td><td><font color=\"#c8c8c8\">일반</font></td><td>좀비 10+3W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">강철 피부</font> (Iron Skin)</td><td><font color=\"#c8c8c8\">일반</font></td><td>받는 피해 150+30W 이하</td><td>이동 속도 +0.25%×L (Lv20 +5%)</td></tr><tr><td><font color=\"#c8c8c8\">전격전</font> (Blitz)</td><td><font color=\"#c8c8c8\">일반</font></td><td>첫 60초 안에 좀비 5+W마리 처치</td><td>도쉬 50×L (Lv20 1,000)</td></tr><tr><td><font color=\"#c8c8c8\">대물 사냥</font> (Big Game)</td><td><font color=\"#c8c8c8\">일반</font></td><td>대형 좀비 1마리 처치</td><td>피해 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">완벽주의자</font> (Perfectionist)</td><td><font color=\"#50a0ff\">희귀</font></td><td>헤드샷 비율 70%+ (최소 10+W 처치)</td><td>피해 +1%×L (Lv20 +20%)</td></tr><tr><td><font color=\"#50a0ff\">무적</font> (Untouchable)</td><td><font color=\"#50a0ff\">희귀</font></td><td>웨이브 동안 피해 받지 않기</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#50a0ff\">연사</font> (Rapid Fire)</td><td><font color=\"#50a0ff\">희귀</font></td><td>8초 이내에 5마리 처치</td><td>피해 +1%×L + 도쉬 100×L</td></tr><tr><td><font color=\"#50a0ff\">무법자</font> (Desperado)</td><td><font color=\"#50a0ff\">희귀</font></td><td>체력 30% 미만일 때 좀비 3+W마리 처치</td><td>이동 속도 +0.5%×L (Lv20 +10%)</td></tr><tr><td><font color=\"#b450ff\">명중자</font> (Deadeye)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷으로 대형 좀비 3마리 처치</td><td>피해 +1.5%×L (Lv20 +30%)</td></tr><tr><td><font color=\"#b450ff\">완벽</font> (Flawless)</td><td><font color=\"#b450ff\">전설</font></td><td>헤드샷 비율 90%+, 최소 15+W 처치, 받은 피해 50 미만</td><td>피해 +1.5%×L + 이동 속도 +0.75%×L</td></tr><tr><td><font color=\"#b450ff\">인내</font> (Endurance)</td><td><font color=\"#b450ff\">전설</font></td><td>재장전 3회 이내로 좀비 15+2W마리 처치</td><td>도쉬 200×L (Lv20 4,000)</td></tr><tr><td><font color=\"#ffc832\">불가능한 확률</font> (Impossible Odds)</td><td><font color=\"#ffc832\">신화</font></td><td>보조무기로 대형 좀비 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr><tr><td><font color=\"#ffc832\">한 발의 탄환</font> (One Bullet)</td><td><font color=\"#ffc832\">신화</font></td><td>재장전 없이 좀비 5마리 연속 처치</td><td>피해 +3%×L + 도쉬 500×L + 이동 속도 +1.5%×L (Lv20: +60% / 10,000 / +30%)</td></tr></table>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/gambit.png"
   }
@@ -24212,7 +24216,7 @@
  "meta": {
   "advancedPerkCount": 49,
   "basePerkCount": 10,
-  "totalSkills": 454,
+  "totalSkills": 449,
   "release": {
    "version": "10.17.10",
    "workshopId": "3809067086",
