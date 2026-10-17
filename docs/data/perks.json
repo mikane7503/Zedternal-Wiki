@@ -3778,8 +3778,8 @@
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">한계 돌파</font>:  패링 성공 후 <font color=\"#77D914\">5초</font> 안에 제드 <font color=\"#77D914\">5마리</font>를 처치하면 최대 체력 <font color=\"#77D914\">+40</font>을 <font color=\"#77D914\">12초</font> 동안 얻습니다. 스택은 만료 후 <font color=\"#77D914\">10초</font>에 걸쳐 감소합니다.",
-     "text": "[20레벨 캡스톤] 한계 돌파:  패링 성공 후 5초 안에 제드 5마리를 처치하면 최대 체력 +40을 12초 동안 얻습니다. 스택은 만료 후 10초에 걸쳐 감소합니다.",
+     "raw": "\"<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">한계 돌파</font>: 패링 성공 후 <font color=\"#77D914\">5초</font> 안에 제드 <font color=\"#77D914\">5마리</font>를 처치하면 체력을 즉시 <font color=\"#77D914\">40</font> 회복하고 최대 체력이 <font color=\"#77D914\">40</font> 증가합니다. 효과는 스택당 <font color=\"#77D914\">15초</font> 지속되며, 만료된 스택은 <font color=\"#77D914\">10초</font>에 걸쳐 감소합니다.",
+     "text": "\"[20레벨 캡스톤] 한계 돌파: 패링 성공 후 5초 안에 제드 5마리를 처치하면 체력을 즉시 40 회복하고 최대 체력이 40 증가합니다. 효과는 스택당 15초 지속되며, 만료된 스택은 10초에 걸쳐 감소합니다.",
      "isCapstone": true
     }
    ],
@@ -3790,8 +3790,8 @@
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">한계 돌파</font>:  패링 성공 후 <font color=\"#77D914\">5초</font> 안에 제드 <font color=\"#77D914\">5마리</font>를 처치하면 최대 체력 <font color=\"#77D914\">+40</font>을 <font color=\"#77D914\">12초</font> 동안 얻습니다. 스택은 만료 후 <font color=\"#77D914\">10초</font>에 걸쳐 감소합니다.",
-     "text": "[20레벨 캡스톤] 한계 돌파:  패링 성공 후 5초 안에 제드 5마리를 처치하면 최대 체력 +40을 12초 동안 얻습니다. 스택은 만료 후 10초에 걸쳐 감소합니다.",
+     "raw": "\"<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">한계 돌파</font>: 패링 성공 후 <font color=\"#77D914\">5초</font> 안에 제드 <font color=\"#77D914\">5마리</font>를 처치하면 체력을 즉시 <font color=\"#77D914\">40</font> 회복하고 최대 체력이 <font color=\"#77D914\">40</font> 증가합니다. 효과는 스택당 <font color=\"#77D914\">15초</font> 지속되며, 만료된 스택은 <font color=\"#77D914\">10초</font>에 걸쳐 감소합니다.",
+     "text": "\"[20레벨 캡스톤] 한계 돌파: 패링 성공 후 5초 안에 제드 5마리를 처치하면 체력을 즉시 40 회복하고 최대 체력이 40 증가합니다. 효과는 스택당 15초 지속되며, 만료된 스택은 10초에 걸쳐 감소합니다.",
      "isCapstone": true
     }
    ],
@@ -4207,9 +4207,9 @@
       {
        "key": "MeleeDamageBonus",
        "label": "근접 피해량 보너스",
-       "value": 0.15,
+       "value": 0.25,
        "unit": "percent",
-       "display": "+15%"
+       "display": "+25%"
       },
       {
        "key": "ResistanceBonus",
@@ -4221,9 +4221,9 @@
       {
        "key": "ResistanceBonus",
        "label": "저항력 보너스",
-       "value": 0.08,
+       "value": 0.12,
        "unit": "percent",
-       "display": "+8%"
+       "display": "+12%"
       }
      ],
      "hasKorText": true,
@@ -8795,10 +8795,10 @@
     {
      "key": "SuperEMP",
      "name": "슈퍼 이엠피",
-     "standardDesc": "EMP 수류탄의 범위가 3배가 됩니다. 폭발 시 매트리아크 쉴드 파괴 이펙트와 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
-     "deluxeDesc": "EMP 수류탄의 범위가 6배가 됩니다. (일반 효과의 2배) 폭발 시 매트리아크 쉴드 파괴 이펙트와 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
-     "standardDescRaw": "EMP 수류탄의 범위가 3배가 됩니다. 폭발 시 매트리아크 쉴드 파괴 이펙트와 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
-     "deluxeDescRaw": "EMP 수류탄의 범위가 6배가 됩니다. (일반 효과의 2배) 폭발 시 매트리아크 쉴드 파괴 이펙트와 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
+     "standardDesc": "EMP 수류탄의 범위와 매트리아크 쉴드 파괴 이펙트 크기가 1.5배가 됩니다. 폭발 시 매트리아크 쉴드 파괴 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
+     "deluxeDesc": "EMP 수류탄의 범위와 매트리아크 쉴드 파괴 이펙트 크기가 2배가 됩니다. 폭발 시 매트리아크 쉴드 파괴 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
+     "standardDescRaw": "EMP 수류탄의 범위와 매트리아크 쉴드 파괴 이펙트 크기가 1.5배가 됩니다. 폭발 시 매트리아크 쉴드 파괴 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
+     "deluxeDescRaw": "EMP 수류탄의 범위와 매트리아크 쉴드 파괴 이펙트 크기가 2배가 됩니다. 폭발 시 매트리아크 쉴드 파괴 사운드가 재생되며, 범위 안의 제드를 강제로 밀쳐 넉다운시킵니다. 기존 전기 EMP 상태 이상은 제거되며 강제 튕김과 넉다운으로 대체됩니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -8835,10 +8835,10 @@
     {
      "key": "SuperMolotov",
      "name": "슈퍼 화염병",
-     "standardDesc": "화염병의 충격·잔류 화염 반경과 이펙트 크기가 1.5배 증가합니다. 화염이 유지되는 전체 시간을 3등분해 각 구간마다 코만도 HE 수류탄의 이펙트와 사운드가 1회씩 나타나며, 각 폭발은 HE 기본 피해의 50%를 줍니다.",
-     "deluxeDesc": "화염병의 충격·잔류 화염 반경과 이펙트 크기가 2배 증가합니다. 화염이 유지되는 전체 시간을 3등분해 각 구간마다 코만도 HE 수류탄의 이펙트와 사운드가 1회씩 나타나며, 각 폭발은 HE 기본 피해의 50%를 줍니다.",
-     "standardDescRaw": "화염병의 충격·잔류 화염 반경과 이펙트 크기가 1.5배 증가합니다. 화염이 유지되는 전체 시간을 3등분해 각 구간마다 코만도 HE 수류탄의 이펙트와 사운드가 1회씩 나타나며, 각 폭발은 HE 기본 피해의 50%를 줍니다.",
-     "deluxeDescRaw": "화염병의 충격·잔류 화염 반경과 이펙트 크기가 2배 증가합니다. 화염이 유지되는 전체 시간을 3등분해 각 구간마다 코만도 HE 수류탄의 이펙트와 사운드가 1회씩 나타나며, 각 폭발은 HE 기본 피해의 50%를 줍니다.",
+     "standardDesc": "화염병의 충격·잔류 화염 반경과 이펙트 크기는 1배로 유지됩니다. 화염이 유지되는 전체 시간 동안 코만도 HE 수류탄의 이펙트와 사운드가 균등한 간격으로 3회 나타나며, 각 폭발은 유저의 수류탄 관련 피해 배율이 적용된 HE 수류탄 최종 피해의 50%를 줍니다.",
+     "deluxeDesc": "화염병의 충격·잔류 화염 반경과 이펙트 크기는 1배로 유지됩니다. 화염이 유지되는 전체 시간 동안 코만도 HE 수류탄의 이펙트와 사운드가 균등한 간격으로 6회 나타나며, 각 폭발은 유저의 수류탄 관련 피해 배율이 적용된 HE 수류탄 최종 피해의 50%를 줍니다.",
+     "standardDescRaw": "화염병의 충격·잔류 화염 반경과 이펙트 크기는 1배로 유지됩니다. 화염이 유지되는 전체 시간 동안 코만도 HE 수류탄의 이펙트와 사운드가 균등한 간격으로 3회 나타나며, 각 폭발은 유저의 수류탄 관련 피해 배율이 적용된 HE 수류탄 최종 피해의 50%를 줍니다.",
+     "deluxeDescRaw": "화염병의 충격·잔류 화염 반경과 이펙트 크기는 1배로 유지됩니다. 화염이 유지되는 전체 시간 동안 코만도 HE 수류탄의 이펙트와 사운드가 균등한 간격으로 6회 나타나며, 각 폭발은 유저의 수류탄 관련 피해 배율이 적용된 HE 수류탄 최종 피해의 50%를 줍니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -9228,50 +9228,50 @@
    "passiveStats": [],
    "fixedStats": [],
    "valueSourceNote": null,
-   "role": "[패시브] 뉴크의 폭발·방사능 피해가 %x%% 증가합니다.",
+   "role": "[패시브] 뉴크 폭발·방사능 피해: +%x%%.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 뉴크의 폭발·방사능 피해가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "[패시브] 뉴크의 폭발·방사능 피해가 %x%% 증가합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 뉴크 폭발·방사능 피해: <font color=\"#77D914\">+%x%%</font>.",
+     "text": "[패시브] 뉴크 폭발·방사능 피해: +%x%%.",
      "isCapstone": false
     },
     {
-     "raw": "데몰리션 폭발 무기 사격 1회 또는 투척 다이너마이트마다 제드타임 없이 뉴크가 발동할 확률은 <font color=\"#77D914\">%x%%</font>입니다. 다른 투척 수류탄은 제외됩니다.",
-     "text": "데몰리션 폭발 무기 사격 1회 또는 투척 다이너마이트마다 제드타임 없이 뉴크가 발동할 확률은 %x%%입니다. 다른 투척 수류탄은 제외됩니다.",
+     "raw": "제드 타임이 아닐 때의 일반 뉴크 확률: 표시 레벨 기준 <font color=\"#77D914\">%x%%</font>. 데몰리션 폭발 무기 사격과 투척 다이너마이트에 적용되며, 다른 투척 수류탄은 제외됩니다.",
+     "text": "제드 타임이 아닐 때의 일반 뉴크 확률: 표시 레벨 기준 %x%%. 데몰리션 폭발 무기 사격과 투척 다이너마이트에 적용되며, 다른 투척 수류탄은 제외됩니다.",
      "isCapstone": false
     },
     {
-     "raw": "10레벨 - 리틀보이: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해와 폭발 반경을 2배로 강화하고 뉴크를 일으킵니다. 핵폭발 이펙트는 4.5배 크기로 사운드와 함께 재생됩니다.",
-     "text": "10레벨 - 리틀보이: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해와 폭발 반경을 2배로 강화하고 뉴크를 일으킵니다. 핵폭발 이펙트는 4.5배 크기로 사운드와 함께 재생됩니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">리틀보이</font>: 사격당 테스트 확률 <font color=\"#77D914\">50%</font>. 직격·폭발 피해와 폭발 반경이 <font color=\"#77D914\">2배</font>, 뉴크 이펙트 크기가 <font color=\"#77D914\">4.5배</font>가 되며 사운드가 재생됩니다.",
+     "text": "[10레벨 캡스톤] 리틀보이: 사격당 테스트 확률 50%. 직격·폭발 피해와 폭발 반경이 2배, 뉴크 이펙트 크기가 4.5배가 되며 사운드가 재생됩니다.",
      "isCapstone": true
     },
     {
-     "raw": "20레벨 - 차르봄바: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해를 3배, 폭발 반경을 4배로 강화하고 뉴크를 일으킵니다. 중앙 핵폭발 이펙트는 10배 크기이며 주변에 4배 크기 이펙트가 0.1초 간격으로 10번 재생됩니다. 각각 사운드를 동반합니다.",
-     "text": "20레벨 - 차르봄바: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해를 3배, 폭발 반경을 4배로 강화하고 뉴크를 일으킵니다. 중앙 핵폭발 이펙트는 10배 크기이며 주변에 4배 크기 이펙트가 0.1초 간격으로 10번 재생됩니다. 각각 사운드를 동반합니다.",
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">차르봄바</font>: 사격당 테스트 확률 <font color=\"#77D914\">50%</font>. 직격·폭발 피해 <font color=\"#77D914\">3배</font>, 폭발 반경 <font color=\"#77D914\">4배</font>입니다. 중앙 뉴크 이펙트는 <font color=\"#77D914\">10배</font> 크기이며, 주변에 <font color=\"#77D914\">4배</font> 이펙트가 <font color=\"#77D914\">0.1초</font> 간격으로 <font color=\"#77D914\">10회</font> 재생되고 사운드가 함께 납니다.",
+     "text": "[20레벨 캡스톤] 차르봄바: 사격당 테스트 확률 50%. 직격·폭발 피해 3배, 폭발 반경 4배입니다. 중앙 뉴크 이펙트는 10배 크기이며, 주변에 4배 이펙트가 0.1초 간격으로 10회 재생되고 사운드가 함께 납니다.",
      "isCapstone": true
     },
     {
-     "raw": "임시 시험 확률은 리틀보이와 차르봄바 각각 50%이며 동시 발동 확률 보정은 0.15%입니다. 열핵폭탄을 구매하면 시험 모드로 적격 사격마다 두 캡스톤을 강제 발동합니다. 중앙 차르봄바 이펙트는 일반 크기의 2배로 0.5배속 재생됩니다. 1초 후부터 폭발 중심의 반경 5~10m, 360도 무작위 지점에 리틀보이 연출이 0.2초 간격으로 총 16회 흩뿌려집니다. 각 후속 폭발의 폭발·방사능 피해는 기존 1회의 1/4로 나눠 이전 4회의 합산 기본 피해를 유지하며, 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 뉴크 배율 1.5배도 적용됩니다. 한 번에 발사된 모든 펠릿은 하나의 추첨과 핵폭발 운반체를 공유합니다. 해금 조건: 데몰리션 20레벨. 핵 추첨은 데몰리션 폭발 무기 사격과 투척 다이너마이트에만 적용됩니다. 다른 모든 투척 수류탄은 일반 뉴크·두 캡스톤·열핵폭탄 강제 발동에서 제외되며, 자체 스킬과 이펙트를 유지합니다.",
-     "text": "임시 시험 확률은 리틀보이와 차르봄바 각각 50%이며 동시 발동 확률 보정은 0.15%입니다. 열핵폭탄을 구매하면 시험 모드로 적격 사격마다 두 캡스톤을 강제 발동합니다. 중앙 차르봄바 이펙트는 일반 크기의 2배로 0.5배속 재생됩니다. 1초 후부터 폭발 중심의 반경 5~10m, 360도 무작위 지점에 리틀보이 연출이 0.2초 간격으로 총 16회 흩뿌려집니다. 각 후속 폭발의 폭발·방사능 피해는 기존 1회의 1/4로 나눠 이전 4회의 합산 기본 피해를 유지하며, 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 뉴크 배율 1.5배도 적용됩니다. 한 번에 발사된 모든 펠릿은 하나의 추첨과 핵폭발 운반체를 공유합니다. 해금 조건: 데몰리션 20레벨. 핵 추첨은 데몰리션 폭발 무기 사격과 투척 다이너마이트에만 적용됩니다. 다른 모든 투척 수류탄은 일반 뉴크·두 캡스톤·열핵폭탄 강제 발동에서 제외되며, 자체 스킬과 이펙트를 유지합니다.",
+     "raw": "두 캡스톤은 각각 <font color=\"#77D914\">50%</font> 확률로 판정하며 동시 발동은 <font color=\"#77D914\">0.15%</font>로 보정됩니다. 열핵폭탄은 테스트를 위해 두 캡스톤을 강제 발동합니다. 차르봄바 이펙트는 <font color=\"#77D914\">2배</font> 크기·<font color=\"#77D914\">0.5배</font> 속도로 재생되고, <font color=\"#77D914\">1초</font> 뒤 중앙에서 <font color=\"#77D914\">5~10m</font> 떨어진 무작위 방향에 리틀보이 이펙트 <font color=\"#77D914\">16회</font>를 <font color=\"#77D914\">0.2초</font> 간격으로 흩뿌립니다. 후속 폭발의 폭발·방사능 피해 총량은 이전 4회분과 같고 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 <font color=\"#77D914\">1.5배</font> 배율도 적용됩니다. 한 번의 사격에서 발사한 모든 펠릿은 판정과 뉴크 운반체를 공유합니다. 해금: <font color=\"#00BFFF\">데몰리션 레벨</font> <font color=\"#77D914\">20</font>. 다른 투척 수류탄은 고유 스킬과 효과를 유지합니다.",
+     "text": "두 캡스톤은 각각 50% 확률로 판정하며 동시 발동은 0.15%로 보정됩니다. 열핵폭탄은 테스트를 위해 두 캡스톤을 강제 발동합니다. 차르봄바 이펙트는 2배 크기·0.5배 속도로 재생되고, 1초 뒤 중앙에서 5~10m 떨어진 무작위 방향에 리틀보이 이펙트 16회를 0.2초 간격으로 흩뿌립니다. 후속 폭발의 폭발·방사능 피해 총량은 이전 4회분과 같고 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 1.5배 배율도 적용됩니다. 한 번의 사격에서 발사한 모든 펠릿은 판정과 뉴크 운반체를 공유합니다. 해금: 데몰리션 레벨 20. 다른 투척 수류탄은 고유 스킬과 효과를 유지합니다.",
      "isCapstone": true
     }
    ],
    "capstoneDescriptions": [
     {
-     "raw": "10레벨 - 리틀보이: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해와 폭발 반경을 2배로 강화하고 뉴크를 일으킵니다. 핵폭발 이펙트는 4.5배 크기로 사운드와 함께 재생됩니다.",
-     "text": "10레벨 - 리틀보이: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해와 폭발 반경을 2배로 강화하고 뉴크를 일으킵니다. 핵폭발 이펙트는 4.5배 크기로 사운드와 함께 재생됩니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">리틀보이</font>: 사격당 테스트 확률 <font color=\"#77D914\">50%</font>. 직격·폭발 피해와 폭발 반경이 <font color=\"#77D914\">2배</font>, 뉴크 이펙트 크기가 <font color=\"#77D914\">4.5배</font>가 되며 사운드가 재생됩니다.",
+     "text": "[10레벨 캡스톤] 리틀보이: 사격당 테스트 확률 50%. 직격·폭발 피해와 폭발 반경이 2배, 뉴크 이펙트 크기가 4.5배가 되며 사운드가 재생됩니다.",
      "isCapstone": true
     },
     {
-     "raw": "20레벨 - 차르봄바: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해를 3배, 폭발 반경을 4배로 강화하고 뉴크를 일으킵니다. 중앙 핵폭발 이펙트는 10배 크기이며 주변에 4배 크기 이펙트가 0.1초 간격으로 10번 재생됩니다. 각각 사운드를 동반합니다.",
-     "text": "20레벨 - 차르봄바: 임시 시험 확률은 사격마다 50%입니다. 직격·폭발 피해를 3배, 폭발 반경을 4배로 강화하고 뉴크를 일으킵니다. 중앙 핵폭발 이펙트는 10배 크기이며 주변에 4배 크기 이펙트가 0.1초 간격으로 10번 재생됩니다. 각각 사운드를 동반합니다.",
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">차르봄바</font>: 사격당 테스트 확률 <font color=\"#77D914\">50%</font>. 직격·폭발 피해 <font color=\"#77D914\">3배</font>, 폭발 반경 <font color=\"#77D914\">4배</font>입니다. 중앙 뉴크 이펙트는 <font color=\"#77D914\">10배</font> 크기이며, 주변에 <font color=\"#77D914\">4배</font> 이펙트가 <font color=\"#77D914\">0.1초</font> 간격으로 <font color=\"#77D914\">10회</font> 재생되고 사운드가 함께 납니다.",
+     "text": "[20레벨 캡스톤] 차르봄바: 사격당 테스트 확률 50%. 직격·폭발 피해 3배, 폭발 반경 4배입니다. 중앙 뉴크 이펙트는 10배 크기이며, 주변에 4배 이펙트가 0.1초 간격으로 10회 재생되고 사운드가 함께 납니다.",
      "isCapstone": true
     },
     {
-     "raw": "임시 시험 확률은 리틀보이와 차르봄바 각각 50%이며 동시 발동 확률 보정은 0.15%입니다. 열핵폭탄을 구매하면 시험 모드로 적격 사격마다 두 캡스톤을 강제 발동합니다. 중앙 차르봄바 이펙트는 일반 크기의 2배로 0.5배속 재생됩니다. 1초 후부터 폭발 중심의 반경 5~10m, 360도 무작위 지점에 리틀보이 연출이 0.2초 간격으로 총 16회 흩뿌려집니다. 각 후속 폭발의 폭발·방사능 피해는 기존 1회의 1/4로 나눠 이전 4회의 합산 기본 피해를 유지하며, 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 뉴크 배율 1.5배도 적용됩니다. 한 번에 발사된 모든 펠릿은 하나의 추첨과 핵폭발 운반체를 공유합니다. 해금 조건: 데몰리션 20레벨. 핵 추첨은 데몰리션 폭발 무기 사격과 투척 다이너마이트에만 적용됩니다. 다른 모든 투척 수류탄은 일반 뉴크·두 캡스톤·열핵폭탄 강제 발동에서 제외되며, 자체 스킬과 이펙트를 유지합니다.",
-     "text": "임시 시험 확률은 리틀보이와 차르봄바 각각 50%이며 동시 발동 확률 보정은 0.15%입니다. 열핵폭탄을 구매하면 시험 모드로 적격 사격마다 두 캡스톤을 강제 발동합니다. 중앙 차르봄바 이펙트는 일반 크기의 2배로 0.5배속 재생됩니다. 1초 후부터 폭발 중심의 반경 5~10m, 360도 무작위 지점에 리틀보이 연출이 0.2초 간격으로 총 16회 흩뿌려집니다. 각 후속 폭발의 폭발·방사능 피해는 기존 1회의 1/4로 나눠 이전 4회의 합산 기본 피해를 유지하며, 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 뉴크 배율 1.5배도 적용됩니다. 한 번에 발사된 모든 펠릿은 하나의 추첨과 핵폭발 운반체를 공유합니다. 해금 조건: 데몰리션 20레벨. 핵 추첨은 데몰리션 폭발 무기 사격과 투척 다이너마이트에만 적용됩니다. 다른 모든 투척 수류탄은 일반 뉴크·두 캡스톤·열핵폭탄 강제 발동에서 제외되며, 자체 스킬과 이펙트를 유지합니다.",
+     "raw": "두 캡스톤은 각각 <font color=\"#77D914\">50%</font> 확률로 판정하며 동시 발동은 <font color=\"#77D914\">0.15%</font>로 보정됩니다. 열핵폭탄은 테스트를 위해 두 캡스톤을 강제 발동합니다. 차르봄바 이펙트는 <font color=\"#77D914\">2배</font> 크기·<font color=\"#77D914\">0.5배</font> 속도로 재생되고, <font color=\"#77D914\">1초</font> 뒤 중앙에서 <font color=\"#77D914\">5~10m</font> 떨어진 무작위 방향에 리틀보이 이펙트 <font color=\"#77D914\">16회</font>를 <font color=\"#77D914\">0.2초</font> 간격으로 흩뿌립니다. 후속 폭발의 폭발·방사능 피해 총량은 이전 4회분과 같고 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 <font color=\"#77D914\">1.5배</font> 배율도 적용됩니다. 한 번의 사격에서 발사한 모든 펠릿은 판정과 뉴크 운반체를 공유합니다. 해금: <font color=\"#00BFFF\">데몰리션 레벨</font> <font color=\"#77D914\">20</font>. 다른 투척 수류탄은 고유 스킬과 효과를 유지합니다.",
+     "text": "두 캡스톤은 각각 50% 확률로 판정하며 동시 발동은 0.15%로 보정됩니다. 열핵폭탄은 테스트를 위해 두 캡스톤을 강제 발동합니다. 차르봄바 이펙트는 2배 크기·0.5배 속도로 재생되고, 1초 뒤 중앙에서 5~10m 떨어진 무작위 방향에 리틀보이 이펙트 16회를 0.2초 간격으로 흩뿌립니다. 후속 폭발의 폭발·방사능 피해 총량은 이전 4회분과 같고 피해 반경은 유지됩니다. 뉴크 폭발 피해에는 바닐라 1.5배 배율도 적용됩니다. 한 번의 사격에서 발사한 모든 펠릿은 판정과 뉴크 운반체를 공유합니다. 해금: 데몰리션 레벨 20. 다른 투척 수류탄은 고유 스킬과 효과를 유지합니다.",
      "isCapstone": true
     }
    ],
@@ -16412,8 +16412,8 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">철갑 돌진</font>:  [I] 키를 누르면 <font color=\"#77D914\">0</font>.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 <font color=\"#77D914\">12m</font> 돌진합니다. 적마다 한 번 충돌하며 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(<font color=\"#77D914\">40%</font>), 돌진 중 노란 효과(<font color=\"#77D914\">30%</font>), 푸른 성채 발동 시 파란 효과(<font color=\"#77D914\">20%</font>)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
-     "text": "[10레벨 캡스톤] 철갑 돌진:  [I] 키를 누르면 0.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 12m 돌진합니다. 적마다 한 번 충돌하며 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(40%), 돌진 중 노란 효과(30%), 푸른 성채 발동 시 파란 효과(20%)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">철갑 돌진</font>:  [I] 키를 누르면 <font color=\"#77D914\">0</font>.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 <font color=\"#77D914\">12m</font> 돌진합니다. 적마다 한 번 충돌합니다. 돌진 접촉 판정은 플레이어 충돌 반경과 높이를 각각 2배로 계산해 대미지와 넉다운 범위도 넓어집니다. 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(<font color=\"#77D914\">40%</font>), 돌진 중 노란 효과(<font color=\"#77D914\">30%</font>), 푸른 성채 발동 시 파란 효과(<font color=\"#77D914\">20%</font>)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
+     "text": "[10레벨 캡스톤] 철갑 돌진:  [I] 키를 누르면 0.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 12m 돌진합니다. 적마다 한 번 충돌합니다. 돌진 접촉 판정은 플레이어 충돌 반경과 높이를 각각 2배로 계산해 대미지와 넉다운 범위도 넓어집니다. 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(40%), 돌진 중 노란 효과(30%), 푸른 성채 발동 시 파란 효과(20%)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
      "isCapstone": true
     },
     {
@@ -16424,8 +16424,8 @@
    ],
    "capstoneDescriptions": [
     {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">철갑 돌진</font>:  [I] 키를 누르면 <font color=\"#77D914\">0</font>.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 <font color=\"#77D914\">12m</font> 돌진합니다. 적마다 한 번 충돌하며 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(<font color=\"#77D914\">40%</font>), 돌진 중 노란 효과(<font color=\"#77D914\">30%</font>), 푸른 성채 발동 시 파란 효과(<font color=\"#77D914\">20%</font>)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
-     "text": "[10레벨 캡스톤] 철갑 돌진:  [I] 키를 누르면 0.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 12m 돌진합니다. 적마다 한 번 충돌하며 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(40%), 돌진 중 노란 효과(30%), 푸른 성채 발동 시 파란 효과(20%)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">철갑 돌진</font>:  [I] 키를 누르면 <font color=\"#77D914\">0</font>.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 <font color=\"#77D914\">12m</font> 돌진합니다. 적마다 한 번 충돌합니다. 돌진 접촉 판정은 플레이어 충돌 반경과 높이를 각각 2배로 계산해 대미지와 넉다운 범위도 넓어집니다. 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(<font color=\"#77D914\">40%</font>), 돌진 중 노란 효과(<font color=\"#77D914\">30%</font>), 푸른 성채 발동 시 파란 효과(<font color=\"#77D914\">20%</font>)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
+     "text": "[10레벨 캡스톤] 철갑 돌진:  [I] 키를 누르면 0.5초 동안 위치와 시점이 고정된 채 준비 효과가 나타난 뒤 1초 동안 12m 돌진합니다. 적마다 한 번 충돌합니다. 돌진 접촉 판정은 플레이어 충돌 반경과 높이를 각각 2배로 계산해 대미지와 넉다운 범위도 넓어집니다. 살아남은 일반 제드와 쿼터파운드를 밀쳐 넘어뜨립니다. 스크레이크·플레시파운드는 벌크 업이 없으면 통과하고, 있으면 밀쳐 넘어뜨립니다. 보스는 넘어뜨릴 수 없습니다. 잡기·비틀거림·기절·넉다운으로 돌진이 중단되지 않습니다. 준비 중 파란 화면 효과(40%), 돌진 중 노란 효과(30%), 푸른 성채 발동 시 파란 효과(20%)가 나타납니다. 준비와 돌진 중 사격·재장전은 제한됩니다. 벽은 돌진을 막지만 이동 중 돌진을 단축하지 않습니다. 돌진 종료 후 재사용 대기시간은 45초이며 공용 상태 UI에서 확인할 수 있습니다.",
      "isCapstone": true
     },
     {
@@ -18091,449 +18091,45 @@
    ],
    "fixedStats": [],
    "valueSourceNote": null,
-   "role": "[패시브] 사냥꾼의 본능: 모든 피해: +%x%%.",
+   "role": "[패시브] 제드를 처치하면 %x%% 확률로 해골이 떨어집니다.",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">사냥꾼의 본능:</font> <font color=\"#00BFFF\">모든 피해</font>: <font color=\"#77D914\">+%x%%</font>.",
-     "text": "[패시브] 사냥꾼의 본능: 모든 피해: +%x%%.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 제드를 처치하면 <font color=\"#77D914\">%x%%</font> 확률로 해골이 떨어집니다.",
+     "text": "[패시브] 제드를 처치하면 %x%% 확률로 해골이 떨어집니다.",
      "isCapstone": false
     },
     {
-     "raw": "트로피 헌터: 좀비를 처치하면 확률적으로 트로피를 획득합니다. 알맞은 트로피를 모아 세트를 완성하면(최대 <font color=\"#77D914\">3개</font>) 영구적인 보너스를 획득합니다.",
-     "text": "트로피 헌터: 좀비를 처치하면 확률적으로 트로피를 획득합니다. 알맞은 트로피를 모아 세트를 완성하면(최대 3개) 영구적인 보너스를 획득합니다.",
+     "raw": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: <font color=\"#66CCFF\">Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%</font>. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
+     "text": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
      "isCapstone": false
     },
     {
-     "raw": "티어 <font color=\"#77D914\">1</font> (<font color=\"#77D914\">2</font>세트): 스웜 브레이커 (클롯+크롤러: <font color=\"#00BFFF\">이동 속도</font> <font color=\"#77D914\">+15%%</font>) / 블레이드 컬렉터 (고어패스트+스토커: <font color=\"#00BFFF\">근접 공격</font>력 <font color=\"#77D914\">+30%%</font>) / 프릭 쇼 (사이렌+허스크: <font color=\"#00BFFF\">피해 저항</font> <font color=\"#77D914\">+10%%</font>) / 샐비지 런 (EDAR+블로트: <font color=\"#00BFFF\">재장전 속도</font> <font color=\"#77D914\">+25%%</font>) / 대형 게임 (스크레이크+FP: 대형 좀비 <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+25%%</font>).",
-     "text": "티어 1 (2세트): 스웜 브레이커 (클롯+크롤러: 이동 속도 +15%%) / 블레이드 컬렉터 (고어패스트+스토커: 근접 공격력 +30%%) / 프릭 쇼 (사이렌+허스크: 피해 저항 +10%%) / 샐비지 런 (EDAR+블로트: 재장전 속도 +25%%) / 대형 게임 (스크레이크+FP: 대형 좀비 피해량 +25%%).",
-     "isCapstone": false
-    },
-    {
-     "raw": "티어 <font color=\"#77D914\">2</font> (<font color=\"#77D914\">3</font>세트): 풀 스윕 (클롯+고어패스트+크롤러: 탄창 크기 <font color=\"#77D914\">+30%%</font>) / 나이트 스토커 (스토커+사이렌+EDAR: 무기 전환 속도 <font color=\"#77D914\">+40%%</font>) / 브루트 포스 (허스크+스크레이크+FP: 모든 <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+20%%</font>).",
-     "text": "티어 2 (3세트): 풀 스윕 (클롯+고어패스트+크롤러: 탄창 크기 +30%%) / 나이트 스토커 (스토커+사이렌+EDAR: 무기 전환 속도 +40%%) / 브루트 포스 (허스크+스크레이크+FP: 모든 피해량 +20%%).",
-     "isCapstone": false
-    },
-    {
-     "raw": "티어 <font color=\"#77D914\">3</font> (<font color=\"#00BFFF\">보스</font>+): 킹 슬레이어 (<font color=\"#00BFFF\">보스</font>+FP: <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+50%%</font>, 저항 <font color=\"#77D914\">+15%%</font>, 잡기 면역) / 에이펙스 프레데터 (<font color=\"#00BFFF\">보스</font>+스크레이크: <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+40%%</font>, <font color=\"#00BFFF\">이동 속도</font> <font color=\"#77D914\">+30%%</font>, 적 <font color=\"#00BFFF\">체력</font> 확인) / 트로피 월 (<font color=\"#00BFFF\">보스</font>+아무거나: <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+30%%</font>, <font color=\"#00BFFF\">탄약</font> <font color=\"#77D914\">+50%%</font>, 재장전 <font color=\"#77D914\">+30%%</font>).",
-     "text": "티어 3 (보스+): 킹 슬레이어 (보스+FP: 피해량 +50%%, 저항 +15%%, 잡기 면역) / 에이펙스 프레데터 (보스+스크레이크: 피해량 +40%%, 이동 속도 +30%%, 적 체력 확인) / 트로피 월 (보스+아무거나: 피해량 +30%%, 탄약 +50%%, 재장전 +30%%).",
-     "isCapstone": false
-    },
-    {
-     "raw": "티어 <font color=\"#77D914\">4</font>  <font color=\"#DC143C\">예리한 눈</font>: - 전설의 사냥꾼: 보스와 보스 변형에게 피해 <font color=\"#77D914\">+75%</font>, 피해 저항 <font color=\"#77D914\">+25%</font>, 이동 속도 <font color=\"#77D914\">+50</font>%를 얻고 잡기 면역 및 체력 확인 효과를 받습니다. 최대 체력은 기본 +50이며, 레벨 20에서는 +100입니다.",
-     "text": "티어 4  예리한 눈: - 전설의 사냥꾼: 보스와 보스 변형에게 피해 +75%, 피해 저항 +25%, 이동 속도 +50%를 얻고 잡기 면역 및 체력 확인 효과를 받습니다. 최대 체력은 기본 +50이며, 레벨 20에서는 +100입니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">예리한 눈</font>: <font color=\"#00BFFF\">트로피 드롭 확률</font>이 두 배가 됩니다.",
-     "text": "[10레벨 캡스톤] 예리한 눈: 트로피 드롭 확률이 두 배가 됩니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">에이펙스 마스터</font>: 해골 드롭 확률이 <font color=\"#77D914\">0.5%p</font> 증가합니다.",
+     "text": "[10레벨 캡스톤] 에이펙스 마스터: 해골 드롭 확률이 0.5%p 증가합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">트로피 전문가</font>: <font color=\"#00BFFF\">트로피 획득 확률</font>은 <font color=\"#77D914\">5%</font>로 고정되며, 완성한 세트 보너스가 두 배가 됩니다. <font color=\"#00BFFF\">전설의 사냥꾼</font> 효과로 최대 체력 <font color=\"#77D914\">+100 HP</font>를 얻습니다.",
-     "text": "[20레벨 캡스톤] 트로피 전문가: 트로피 획득 확률은 5%로 고정되며, 완성한 세트 보너스가 두 배가 됩니다. 전설의 사냥꾼 효과로 최대 체력 +100 HP를 얻습니다.",
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">에이펙스 프레데터</font>: 해골 드롭 확률이 추가로 <font color=\"#77D914\">0.5%p</font> 증가합니다.",
+     "text": "[20레벨 캡스톤] 에이펙스 프레데터: 해골 드롭 확률이 추가로 0.5%p 증가합니다.",
      "isCapstone": true
-    },
-    {
-     "raw": "무한 사냥: <font color=\"#77D914\">3</font>세트를 완성한 후 트로피는 무한히 중첩되며 <font color=\"#77D914\">5개</font>의 슬롯에 저장됩니다. (중첩당: 클롯 <font color=\"#FFD700\">웨이브당</font> <font color=\"#77D914\">+1 도쉬</font> / 크롤러 속도 <font color=\"#77D914\">+1%%</font> / 고어패스트 <font color=\"#00BFFF\">근접 공격</font>력 <font color=\"#77D914\">+1%%</font> / 스토커 <font color=\"#00BFFF\">탄창 용량</font> <font color=\"#77D914\">+1%%</font> / 블로트 <font color=\"#00BFFF\">최대 체력</font> <font color=\"#77D914\">+1</font> / 허스크 <font color=\"#00BFFF\">받는 피해</font> <font color=\"#77D914\">-0.5%%</font> / 사이렌 <font color=\"#00BFFF\">탄약</font> <font color=\"#77D914\">+5%%</font> / EDAR <font color=\"#00BFFF\">헤드샷 피해</font> <font color=\"#77D914\">+10%%</font> / 스크레이크 방어력 <font color=\"#77D914\">+5</font> / FP 모든 <font color=\"#00BFFF\">피해량</font> <font color=\"#77D914\">+10%%</font>).",
-     "text": "무한 사냥: 3세트를 완성한 후 트로피는 무한히 중첩되며 5개의 슬롯에 저장됩니다. (중첩당: 클롯 웨이브당 +1 도쉬 / 크롤러 속도 +1%% / 고어패스트 근접 공격력 +1%% / 스토커 탄창 용량 +1%% / 블로트 최대 체력 +1 / 허스크 받는 피해 -0.5%% / 사이렌 탄약 +5%% / EDAR 헤드샷 피해 +10%% / 스크레이크 방어력 +5 / FP 모든 피해량 +10%%).",
-     "isCapstone": false
     }
    ],
    "capstoneDescriptions": [
     {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">예리한 눈</font>: <font color=\"#00BFFF\">트로피 드롭 확률</font>이 두 배가 됩니다.",
-     "text": "[10레벨 캡스톤] 예리한 눈: 트로피 드롭 확률이 두 배가 됩니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">에이펙스 마스터</font>: 해골 드롭 확률이 <font color=\"#77D914\">0.5%p</font> 증가합니다.",
+     "text": "[10레벨 캡스톤] 에이펙스 마스터: 해골 드롭 확률이 0.5%p 증가합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">트로피 전문가</font>: <font color=\"#00BFFF\">트로피 획득 확률</font>은 <font color=\"#77D914\">5%</font>로 고정되며, 완성한 세트 보너스가 두 배가 됩니다. <font color=\"#00BFFF\">전설의 사냥꾼</font> 효과로 최대 체력 <font color=\"#77D914\">+100 HP</font>를 얻습니다.",
-     "text": "[20레벨 캡스톤] 트로피 전문가: 트로피 획득 확률은 5%로 고정되며, 완성한 세트 보너스가 두 배가 됩니다. 전설의 사냥꾼 효과로 최대 체력 +100 HP를 얻습니다.",
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">에이펙스 프레데터</font>: 해골 드롭 확률이 추가로 <font color=\"#77D914\">0.5%p</font> 증가합니다.",
+     "text": "[20레벨 캡스톤] 에이펙스 프레데터: 해골 드롭 확률이 추가로 0.5%p 증가합니다.",
      "isCapstone": true
     }
    ],
-   "skills": [
-    {
-     "key": "ApexMark",
-     "name": "에이펙스 마크",
-     "standardDesc": "에이펙스 마크: 보스를 처치하면 3초 동안 모든 좀비의 트로피 드롭률이 100%로 고정됩니다.",
-     "deluxeDesc": "에이펙스 마크: 보스를 처치하면 5초 동안 모든 좀비의 트로피 드롭률이 100%로 고정됩니다.",
-     "standardDescRaw": "에이펙스 마크: <font color=\"#66CCFF\">보스</font>를 처치하면 <font color=\"#77D914\">3초</font> 동안 모든 좀비의 트로피 드롭률이 <font color=\"#77D914\">100%</font>로 고정됩니다.",
-     "deluxeDescRaw": "에이펙스 마크: <font color=\"#66CCFF\">보스</font>를 처치하면 <font color=\"#77D914\">5초</font> 동안 모든 좀비의 트로피 드롭률이 <font color=\"#77D914\">100%</font>로 고정됩니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "Duration",
-       "label": "지속시간",
-       "value": 3.0,
-       "unit": "seconds",
-       "display": "3초"
-      },
-      {
-       "key": "Duration",
-       "label": "지속시간",
-       "value": 5.0,
-       "unit": "seconds",
-       "display": "5초"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/ApexMark.png"
-    },
-    {
-     "key": "CarrionHarvest",
-     "name": "시체 수확",
-     "standardDesc": "사체 수확: 트로피를 획득할 때마다 체력을 10 회복합니다. 체력이 최대치일 경우 대신 방어력을 5 얻습니다.",
-     "deluxeDesc": "사체 수확: 트로피를 획득할 때마다 체력을 20 회복합니다. 체력이 최대치일 경우 대신 방어력을 10 얻습니다.",
-     "standardDescRaw": "사체 수확: 트로피를 획득할 때마다 <font color=\"#66CCFF\">체력</font>을 <font color=\"#77D914\">10 회</font>복합니다. <font color=\"#66CCFF\">체력</font>이 최대치일 경우 대신 방어력을 <font color=\"#77D914\">5</font> 얻습니다.",
-     "deluxeDescRaw": "사체 수확: 트로피를 획득할 때마다 <font color=\"#66CCFF\">체력</font>을 <font color=\"#77D914\">20 회</font>복합니다. <font color=\"#66CCFF\">체력</font>이 최대치일 경우 대신 방어력을 <font color=\"#77D914\">10</font> 얻습니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "HealHP",
-       "label": "치유 체력",
-       "value": 10,
-       "unit": "count",
-       "display": "10"
-      },
-      {
-       "key": "HealHP",
-       "label": "치유 체력",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      },
-      {
-       "key": "HealArmor",
-       "label": "치유 방어구",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "HealArmor",
-       "label": "치유 방어구",
-       "value": 10,
-       "unit": "count",
-       "display": "10"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/CarrionHarvest.png"
-    },
-    {
-     "key": "DiversifiedCollection",
-     "name": "다양한 컬렉션",
-     "standardDesc": "다양한 컬렉션: 인벤토리에 수집한 고유 트로피 종류 하나당 피해량이 +4% 증가합니다.",
-     "deluxeDesc": "다양한 컬렉션: 인벤토리에 수집한 고유 트로피 종류 하나당 피해량이 +8% 증가합니다.",
-     "standardDescRaw": "다양한 컬렉션: 인벤토리에 수집한 고유 트로피 종류 하나당 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+4%</font> 증가합니다.",
-     "deluxeDescRaw": "다양한 컬렉션: 인벤토리에 수집한 고유 트로피 종류 하나당 <font color=\"#66CCFF\">피해량</font>이 <font color=\"#77D914\">+8%</font> 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamagePerCategory",
-       "label": "카테고리 당 피해량",
-       "value": 0.04,
-       "unit": "percent",
-       "display": "+4%"
-      },
-      {
-       "key": "DamagePerCategory",
-       "label": "카테고리 당 피해량",
-       "value": 0.08,
-       "unit": "percent",
-       "display": "+8%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/DiversifiedCollection.png"
-    },
-    {
-     "key": "FeedingFrenzy",
-     "name": "먹이 쟁탈전",
-     "standardDesc": "먹이 광란: 트로피를 획득하면 6초 동안 발사 속도가 +30% 증가합니다.",
-     "deluxeDesc": "먹이 광란: 트로피를 획득하면 6초 동안 발사 속도가 +60% 증가합니다.",
-     "standardDescRaw": "먹이 광란: 트로피를 획득하면 <font color=\"#77D914\">6초</font> 동안 발사 속도가 <font color=\"#77D914\">+30%</font> 증가합니다.",
-     "deluxeDescRaw": "먹이 광란: 트로피를 획득하면 <font color=\"#77D914\">6초</font> 동안 발사 속도가 <font color=\"#77D914\">+60%</font> 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "FireRateBonus",
-       "label": "연사 속도 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "FireRateBonus",
-       "label": "연사 속도 보너스",
-       "value": 0.6,
-       "unit": "percent",
-       "display": "+60%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/FeedingFrenzy.png"
-    },
-    {
-     "key": "MountedTrophies",
-     "name": "장식 트로피",
-     "standardDesc": "장식된 트로피: 트로피 세트를 완성할 때마다 최대 체력이 +10, 최대 방어력이 +15 영구 증가합니다.",
-     "deluxeDesc": "장식된 트로피: 트로피 세트를 완성할 때마다 최대 체력이 +20, 최대 방어력이 +30 영구 증가합니다.",
-     "standardDescRaw": "장식된 트로피: 트로피 세트를 완성할 때마다 <font color=\"#66CCFF\">최대 체력</font>이 <font color=\"#77D914\">+10</font>, 최대 방어력이 <font color=\"#77D914\">+15</font> 영구 증가합니다.",
-     "deluxeDescRaw": "장식된 트로피: 트로피 세트를 완성할 때마다 <font color=\"#66CCFF\">최대 체력</font>이 <font color=\"#77D914\">+20</font>, 최대 방어력이 <font color=\"#77D914\">+30</font> 영구 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "HPPerSet",
-       "label": "세트 당 체력",
-       "value": 10,
-       "unit": "count",
-       "display": "10"
-      },
-      {
-       "key": "HPPerSet",
-       "label": "세트 당 체력",
-       "value": 20,
-       "unit": "count",
-       "display": "20"
-      },
-      {
-       "key": "ArmorPerSet",
-       "label": "세트 당 방어구",
-       "value": 15,
-       "unit": "count",
-       "display": "15"
-      },
-      {
-       "key": "ArmorPerSet",
-       "label": "세트 당 방어구",
-       "value": 30,
-       "unit": "count",
-       "display": "30"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/MountedTrophies.png"
-    },
-    {
-     "key": "Taxidermist",
-     "name": "박제사",
-     "standardDesc": "박제사: 20% 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 보존됩니다. 중첩 시: 20% 확률로 인벤토리의 무작위 트로피 수량이 +1 증가합니다.",
-     "deluxeDesc": "박제사: 40% 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 보존됩니다. 중첩 시: 40% 확률로 인벤토리의 무작위 트로피 수량이 +1 증가합니다.",
-     "standardDescRaw": "박제사: <font color=\"#77D914\">20%</font> 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 보존됩니다. 중첩 시: <font color=\"#77D914\">20%</font> 확률로 인벤토리의 무작위 트로피 수량이 <font color=\"#77D914\">+1</font> 증가합니다.",
-     "deluxeDescRaw": "박제사: <font color=\"#77D914\">40%</font> 확률로 세트를 완성할 때 사용된 트로피가 소비되지 않고 보존됩니다. 중첩 시: <font color=\"#77D914\">40%</font> 확률로 인벤토리의 무작위 트로피 수량이 <font color=\"#77D914\">+1</font> 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "PreserveChance",
-       "label": "보존 확률",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "PreserveChance",
-       "label": "보존 확률",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Taxidermist.png"
-    },
-    {
-     "key": "TrophyHoarder",
-     "name": "트로피 수집가",
-     "standardDesc": "트로피 수집가: 트로피 인벤토리 슬롯이 6칸으로 확장됩니다. 더 많은 트로피를 소지하여 어려운 세트를 쉽게 완성하세요.",
-     "deluxeDesc": "",
-     "standardDescRaw": "트로피 수집가: 트로피 인벤토리 슬롯이 <font color=\"#77D914\">6</font>칸으로 확장됩니다. 더 많은 트로피를 소지하여 어려운 세트를 쉽게 완성하세요.",
-     "deluxeDescRaw": "",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "ExtraSlots",
-       "label": "추가 슬롯",
-       "value": 1,
-       "unit": "count",
-       "display": "1"
-      },
-      {
-       "key": "ExtraSlots",
-       "label": "추가 슬롯",
-       "value": 1,
-       "unit": "count",
-       "display": "1"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "구 1/2 → T2도 1로 고정. Predator 트로피 무한중첩 시스템(하드코딩, 확정OP) 완화를 위한 유일한 INI 개입점",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TrophyHoarder.png"
-    },
-    {
-     "key": "TrophyMagnetism",
-     "name": "트로피 자기",
-     "standardDesc": "트로피 자석: 5m 이내에 있는 트로피가 자신에게 끌려옵니다. 트로피가 바닥에 유지되는 시간이 2배 더 길어집니다.",
-     "deluxeDesc": "트로피 자석: 10m 이내에 있는 트로피가 자신에게 끌려옵니다. 트로피가 바닥에 유지되는 시간이 2배 더 길어집니다.",
-     "standardDescRaw": "트로피 자석: <font color=\"#77D914\">5m</font> 이내에 있는 트로피가 <font color=\"#66CCFF\">자신</font>에게 끌려옵니다. 트로피가 바닥에 유지되는 시간이 <font color=\"#77D914\">2</font>배 더 길어집니다.",
-     "deluxeDescRaw": "트로피 자석: <font color=\"#77D914\">10m</font> 이내에 있는 트로피가 <font color=\"#66CCFF\">자신</font>에게 끌려옵니다. 트로피가 바닥에 유지되는 시간이 <font color=\"#77D914\">2</font>배 더 길어집니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "MagnetRange",
-       "label": "자석 사거리",
-       "value": 500.0,
-       "unit": "distance",
-       "display": "500"
-      },
-      {
-       "key": "MagnetRange",
-       "label": "자석 사거리",
-       "value": 1000.0,
-       "unit": "distance",
-       "display": "1,000"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TrophyMagnetism.png"
-    },
-    {
-     "key": "TrophyShield",
-     "name": "트로피 실드",
-     "standardDesc": "트로피 보호막: 트로피를 3개 이상 보유 시 피해 감소 8%를 얻습니다. 5개 이상 보유 시 클롯의 잡기에 면역이 됩니다.",
-     "deluxeDesc": "트로피 보호막: 트로피를 3개 이상 보유 시 피해 감소 16%를 얻습니다. 5개 이상 보유 시 클롯의 잡기에 면역이 됩니다.",
-     "standardDescRaw": "트로피 보호막: 트로피를 <font color=\"#77D914\">3개</font> 이상 보유 시 <font color=\"#66CCFF\">피해</font> 감소 <font color=\"#77D914\">8%</font>를 얻습니다. <font color=\"#77D914\">5개</font> 이상 보유 시 클롯의 잡기에 면역이 됩니다.",
-     "deluxeDescRaw": "트로피 보호막: 트로피를 <font color=\"#77D914\">3개</font> 이상 보유 시 <font color=\"#66CCFF\">피해</font> 감소 <font color=\"#77D914\">16%</font>를 얻습니다. <font color=\"#77D914\">5개</font> 이상 보유 시 클롯의 잡기에 면역이 됩니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.08,
-       "unit": "percent",
-       "display": "+8%"
-      },
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.16,
-       "unit": "percent",
-       "display": "+16%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TrophyShield.png"
-    },
-    {
-     "key": "WildHunt",
-     "name": "야생 사냥",
-     "standardDesc": "와일드 헌트: 획득하는 5번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 보너스 중복 효과를 얻습니다.",
-     "deluxeDesc": "",
-     "standardDescRaw": "와일드 헌트: 획득하는 <font color=\"#77D914\">5</font>번째 트로피는 세트를 완성하기에 가장 알맞은 카테고리로 자동 변환됩니다. 트로피 중첩 시에는 보너스 중복 효과를 얻습니다.",
-     "deluxeDescRaw": "",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "TrophyInterval",
-       "label": "트로피 간격",
-       "value": 5,
-       "unit": "seconds",
-       "display": "5초"
-      },
-      {
-       "key": "TrophyInterval",
-       "label": "트로피 간격",
-       "value": 5,
-       "unit": "seconds",
-       "display": "5초"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "구 5/3 → T2도 5로 고정. 트로피 드랍 가속 억제 (Predator 확정OP 완화)",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/WildHunt.png"
-    }
-   ],
-   "skillCount": 10,
+   "skills": [],
+   "skillCount": 0,
    "verdict": {
     "tag": "확정 OP (전체 최고 위험)",
     "note": "좀비별 '트로피' 드랍 → 3세트 완성 시 5개 슬롯에 영구 보너스가 무한 중첩되는 시스템. 완전 하드코딩이라 소스 패치 없이는 근본 수정 불가. 보조 스킬 TrophyHoarder/WildHunt만 INI로 완화 완료. 장기전(엔들리스)에서는 사실상 무적에 가까워질 수 있음 — 반드시 인지 필요.",
@@ -22394,18 +21990,18 @@
     }
    ],
    "valueSourceNote": "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 공개 빌드의 기본 INI를 읽습니다.",
-   "role": "[패시브] 엔지니어 레벨당 드론 피해가 2% 증가합니다.",
+   "role": "[패시브] 현재 드론 피해 보너스: +%x%% (엔지니어 레벨당 +2%).",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 엔지니어 레벨당 드론 피해가 <font color=\"#77D914\">2%</font> 증가합니다.",
-     "text": "[패시브] 엔지니어 레벨당 드론 피해가 2% 증가합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 현재 드론 피해 보너스: <font color=\"#77D914\">+%x%%</font> (엔지니어 레벨당 <font color=\"#77D914\">+2%</font>).",
+     "text": "[패시브] 현재 드론 피해 보너스: +%x%% (엔지니어 레벨당 +2%).",
      "isCapstone": false
     },
     {
-     "raw": "엔지니어 레벨당 드론 탄약 용량이 <font color=\"#77D914\">3%</font>, 탐지 반경이 <font color=\"#77D914\">1%</font> 증가합니다.",
-     "text": "엔지니어 레벨당 드론 탄약 용량이 3%, 탐지 반경이 1% 증가합니다.",
+     "raw": "현재 드론 탄약 용량 보너스: <font color=\"#77D914\">+%x2_1%%</font>, 탐지 반경 보너스: <font color=\"#77D914\">+%x2_2%%</font> (엔지니어 레벨당 각각 <font color=\"#77D914\">+3%</font>, <font color=\"#77D914\">+1%</font>).",
+     "text": "현재 드론 탄약 용량 보너스: +%x2_1%%, 탐지 반경 보너스: +%x2_2%% (엔지니어 레벨당 각각 +3%, +1%).",
      "isCapstone": false
     },
     {
@@ -22604,11 +22200,11 @@
  "meta": {
   "advancedPerkCount": 48,
   "basePerkCount": 10,
-  "totalSkills": 453,
+  "totalSkills": 443,
   "release": {
-   "version": "10.16.1",
+   "version": "10.17.10",
    "workshopId": "3809067086",
-   "publishedUtc": "2026-10-16 오후 1:46:30",
+   "publishedUtc": "2026-10-17 오전 8:43:55",
    "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
    "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
    "serverGameConfigDiffers": true

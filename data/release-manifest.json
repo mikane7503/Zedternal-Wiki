@@ -1,18 +1,13 @@
 {
   "schemaVersion": 1,
   "product": "Zedternal Tempered",
-  "version": "10.16.1",
+  "version": "10.17.10",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-16T13:46:30Z",
-  "releaseReportId": "ReleaseProof-v10.16.1",
-  "releaseSourceSnapshotSha256": "2aa49f08d655b68a78d474c1ebfcb2181d6b54b3c600a34506dfc4dd3d91e165",
+  "publishedUtc": "2026-10-17T08:43:55Z",
+  "releaseReportId": "ReleaseProof-v10.17.10",
+  "releaseSourceSnapshotSha256": "d69cc1d1dc8b13b8b5611df1a15a836f8c02df42517f179ef85082ef011cadd4",
   "uploadedFiles": [
-    {
-      "path": "BrewedPC/WwiseAudio/Windows/WwiseDefaultBank_ZTDroneAudio.bnk",
-      "size": 367,
-      "sha256": "48798d3d37336b50c69e80c0a2c75590615ebb0b7d2c68fe3bcf6393e7ef0e4d"
-    },
     {
       "path": "BrewedPC/ZedternalRBPerkpackage_Menus.upk",
       "size": 421998,
@@ -20,18 +15,23 @@
     },
     {
       "path": "BrewedPC/ZedternalRBPerkpackage_Resources.upk",
-      "size": 553362732,
-      "sha256": "db250f6f2d20cb2c12a3c0fda20c5f69783d18179c7581e11d7d77eb379d2b96"
+      "size": 557461143,
+      "sha256": "ddd0d5ce0209423b2b60834cbc6c122e986400a2c96afd23e0c38e0e96bf2861"
     },
     {
       "path": "BrewedPC/ZedternalTempered.u",
-      "size": 27097136,
-      "sha256": "09f67151fbafa0305c2a40f494a27ef5826cca45252d5f5f06b40b6340ee39db"
+      "size": 27541873,
+      "sha256": "f42b8fd2794aa7a1aea7511923f2b6cb94052e715eea4c205e8aede82b207175"
     },
     {
       "path": "BrewedPC/ZedternalTemperedPerkIcons.upk",
-      "size": 30629362,
-      "sha256": "46d4f0397b35502256d7af88fa17e5d219d840775327dea7651f0eee58315a15"
+      "size": 31288054,
+      "sha256": "3f813d83f7194764c2dc63b2c7e7ab2cdf95e8f0d9fcd8cb09394df5657165d7"
+    },
+    {
+      "path": "BrewedPC/WwiseAudio/Windows/WwiseDefaultBank_ZTDroneAudio.bnk",
+      "size": 367,
+      "sha256": "48798d3d37336b50c69e80c0a2c75590615ebb0b7d2c68fe3bcf6393e7ef0e4d"
     },
     {
       "path": "Localization/JPN/ZedternalReborn.jpn",
@@ -40,8 +40,8 @@
     },
     {
       "path": "Localization/JPN/ZedternalTempered.jpn",
-      "size": 606076,
-      "sha256": "fe39feca9a8746d29ed6f9927628f8cb950a790c6a8b236c09ba70f16740aa9d"
+      "size": 595840,
+      "sha256": "abdfb27fe4467ff1f9d911f5430c5153e52399c96481d8e1002d5fb3ea508d2d"
     },
     {
       "path": "Localization/KOR/ZedternalReborn.kor",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Localization/KOR/ZedternalTempered.kor",
-      "size": 620516,
-      "sha256": "69f75653d0f59e0a61e81a7a5e3df05c729962975dd66e19c0913f3ae64c2410"
+      "size": 609368,
+      "sha256": "e2133424398dac08a6e96697ab1a731621a948a246b7030ad7abd87f890bc15e"
     }
   ],
   "sourceIni": [
@@ -62,17 +62,17 @@
     },
     {
       "name": "KFZedternalReborn_Events.ini",
-      "sha256": "3ea6bc0af901efe13fe17d9d53f309bdacda2aa2db6a5e0748a57fff8aeb7709",
+      "sha256": "c7154d0a6da36a21a4adfb61c14072f71813d7c7c99146f45fa40eb3623bef50",
       "snapshotVerified": true
     },
     {
       "name": "KFZedternalReborn_Game.ini",
-      "sha256": "7864e55deb722a4ed1553536f111a3572d1b9f4488fab45925837a440fcd795d",
+      "sha256": "1716104a9be908bcba8427a9be1eb035d83a97df2e4fb1601424cf3204d37c7f",
       "snapshotVerified": true
     },
     {
       "name": "KFZedternalReborn_Upgrades.ini",
-      "sha256": "c4214970b1ae4ec3d24e02703cc9cbb562ccf6dc7a6b9a048ef2315c38aedeb2",
+      "sha256": "e014562e79bd6b2725bd45f0e16c4a889baa2e0517add26e13892b5234024f42",
       "snapshotVerified": true
     },
     {
@@ -82,12 +82,12 @@
     },
     {
       "name": "KFZedternalReborn_ZedWaves.ini",
-      "sha256": "98290c4ed8039e055725da6bb7f409d8a285169c033eed54f13e8f2934ee41d3",
+      "sha256": "6e0cb6a3c158d0a26ddbc3912ca125e5910745a1a77ea5169f738782ac38eac0",
       "snapshotVerified": true
     },
     {
       "name": "KFZedternalUnlimited.ini",
-      "sha256": "eff12290530c7c37b09dd962d469dfe4f05eaa2cbdb1f465ffc6860b74ff2577",
+      "sha256": "d1b7425db08e75f880b9e5922aeaa35a7da7470bc4a13fcd46b6bf58ed803338",
       "snapshotVerified": true
     },
     {
@@ -110,19 +110,19 @@
     },
     {
       "name": "KFZedternalReborn_Events.ini",
-      "sourceSha256": "3ea6bc0af901efe13fe17d9d53f309bdacda2aa2db6a5e0748a57fff8aeb7709",
+      "sourceSha256": "c7154d0a6da36a21a4adfb61c14072f71813d7c7c99146f45fa40eb3623bef50",
       "operatingSha256": "3ea6bc0af901efe13fe17d9d53f309bdacda2aa2db6a5e0748a57fff8aeb7709",
-      "differs": false
+      "differs": true
     },
     {
       "name": "KFZedternalReborn_Game.ini",
-      "sourceSha256": "7864e55deb722a4ed1553536f111a3572d1b9f4488fab45925837a440fcd795d",
+      "sourceSha256": "1716104a9be908bcba8427a9be1eb035d83a97df2e4fb1601424cf3204d37c7f",
       "operatingSha256": "f88075ab4efd7d7427fe8f12a89d751c11ccbd7a15b7612a2e0782cfa6925b5e",
       "differs": true
     },
     {
       "name": "KFZedternalReborn_Upgrades.ini",
-      "sourceSha256": "c4214970b1ae4ec3d24e02703cc9cbb562ccf6dc7a6b9a048ef2315c38aedeb2",
+      "sourceSha256": "e014562e79bd6b2725bd45f0e16c4a889baa2e0517add26e13892b5234024f42",
       "operatingSha256": "95419b10330c0923589a231f47dd860acf12484f6c34dbe9ebe912f64f37dd98",
       "differs": true
     },
@@ -134,14 +134,14 @@
     },
     {
       "name": "KFZedternalReborn_ZedWaves.ini",
-      "sourceSha256": "98290c4ed8039e055725da6bb7f409d8a285169c033eed54f13e8f2934ee41d3",
-      "operatingSha256": "98290c4ed8039e055725da6bb7f409d8a285169c033eed54f13e8f2934ee41d3",
+      "sourceSha256": "6e0cb6a3c158d0a26ddbc3912ca125e5910745a1a77ea5169f738782ac38eac0",
+      "operatingSha256": "6e0cb6a3c158d0a26ddbc3912ca125e5910745a1a77ea5169f738782ac38eac0",
       "differs": false
     },
     {
       "name": "KFZedternalUnlimited.ini",
-      "sourceSha256": "eff12290530c7c37b09dd962d469dfe4f05eaa2cbdb1f465ffc6860b74ff2577",
-      "operatingSha256": "f150ec67683065fe9973682bca238de53425ea85936e68df4ec8d77788839ea4",
+      "sourceSha256": "d1b7425db08e75f880b9e5922aeaa35a7da7470bc4a13fcd46b6bf58ed803338",
+      "operatingSha256": "d63606d444a3d84db1c299b08f27348ab1b68c43ff90c47a9f399ffe86e5181f",
       "differs": true
     },
     {
@@ -164,7 +164,7 @@
     },
     {
       "name": "ZedternalTempered.kor",
-      "sha256": "69f75653d0f59e0a61e81a7a5e3df05c729962975dd66e19c0913f3ae64c2410"
+      "sha256": "e2133424398dac08a6e96697ab1a731621a948a246b7030ad7abd87f890bc15e"
     }
   ]
 }
