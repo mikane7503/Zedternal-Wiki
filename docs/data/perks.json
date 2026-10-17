@@ -5972,7 +5972,12 @@
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
-   "extraSections": [],
+   "extraSections": [
+    {
+     "title": "레벨별 성공 확률",
+     "html": "<table class=\"stat-table\"><tr><th>도박꾼 레벨</th><th>잭팟도박 성공 확률</th><th>도박 성공 확률</th></tr><tr><td>1</td><td>20%</td><td>45%</td></tr><tr><td>2</td><td>21%</td><td>46%</td></tr><tr><td>3</td><td>21%</td><td>47%</td></tr><tr><td>4</td><td>22%</td><td>48%</td></tr><tr><td>5</td><td>23%</td><td>49%</td></tr><tr><td>6</td><td>23%</td><td>50%</td></tr><tr><td>7</td><td>24%</td><td>51%</td></tr><tr><td>8</td><td>24%</td><td>52%</td></tr><tr><td>9</td><td>25%</td><td>53%</td></tr><tr><td>10</td><td>26%</td><td>54%</td></tr><tr><td>11</td><td>26%</td><td>55%</td></tr><tr><td>12</td><td>27%</td><td>56%</td></tr><tr><td>13</td><td>27%</td><td>57%</td></tr><tr><td>14</td><td>28%</td><td>58%</td></tr><tr><td>15</td><td>29%</td><td>59%</td></tr><tr><td>16</td><td>29%</td><td>60%</td></tr><tr><td>17</td><td>30%</td><td>61%</td></tr><tr><td>18</td><td>30%</td><td>62%</td></tr><tr><td>19</td><td>31%</td><td>63%</td></tr><tr><td>20</td><td>32%</td><td>65%</td></tr></table><p class=\"full-info-note\">확률은 서버 코드 기준이며 인게임 선택 화면에는 표시되지 않습니다. 실패·성공 시 도쉬 변동률은 위 퍼크 설명을 따릅니다.</p>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/wavegambler.png"
   },
