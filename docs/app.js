@@ -445,6 +445,7 @@ function renderSidebar() {
   const independentPerks = DATA.advancedPerks.filter(perk =>
     !BASE_BY_KEY[perk.parentPerk] && !ADV_BY_KEY[perk.parentPerk]
     && !baseDisplayKeys.has(perk.key)
+    && !isCombinationUnlocked(perk)
   );
   for (const perk of independentPerks) {
     const children = DATA.advancedPerks
@@ -720,12 +721,9 @@ function renderAdvDetail(key) {
 }
 
 function renderPerkSummarySection(perk) {
-  const overview = perk.overviewDescriptions || [];
-  const extraLines = overview.filter(description => description.text !== (perk.role || perk.summary));
   return `
     <div class="section-title perk-section-title">1. 설명</div>
     <div class="perk-role-summary">${escapeHtml(perk.role || perk.summary || "설명이 등록되지 않았습니다.")}</div>
-    ${extraLines.map(description => `<div class="desc-line">${description.raw || escapeHtml(description.text || "")}</div>`).join("")}
   `;
 }
 

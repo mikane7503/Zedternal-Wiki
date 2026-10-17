@@ -141,7 +141,7 @@ try {
     $staged = @(& git diff --cached --name-only)
     if ($LASTEXITCODE -ne 0) { throw 'Could not inspect staged wiki changes.' }
     if ($staged.Count -gt 0) { throw 'Refusing to publish wiki with pre-staged changes; review/commit them first.' }
-    & git add -- AGENTS.md data/PERK-WIKI-UPDATE-PROTOCOL-KO.md data/build.py data/manual_base_perks.json data/manual_perk_extras.json data/manual_skill_overrides.json data/release-manifest.json `
+    & git add -- AGENTS.md data/PERK-WIKI-UPDATE-PROTOCOL-KO.md data/build.py data/manual_base_perks.json data/manual_verdicts.json data/manual_perk_extras.json data/manual_skill_overrides.json data/release-manifest.json `
         data/Sync-Tempered-Wiki.ps1 data/verify_kor_alignment.py `
         docs/data/perks.json docs/index.html docs/app.js
     if ($LASTEXITCODE -ne 0) { throw 'Could not stage generated wiki files.' }

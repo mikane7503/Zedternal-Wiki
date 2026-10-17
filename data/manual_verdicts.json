@@ -153,7 +153,7 @@
     "Taskmaster": {
       "tag": "적절",
       "note": "특이사항 없음.",
-      "grade": "A"
+      "grade": "B"
     },
     "TimeTraveler": {
       "tag": "적절 (상향 완료) / 연장계수 하드코딩 확인",
@@ -183,7 +183,7 @@
     "Wendigo": {
       "tag": "적절",
       "note": "특이사항 없음.",
-      "grade": "B"
+      "grade": "A"
     },
     "Capitalist": {
       "grade": "A"
@@ -208,6 +208,24 @@
     },
     "WaveGambler": {
       "grade": "?"
+    },
+    "Vanguard": {
+      "grade": "A"
+    },
+    "Override": {
+      "grade": "?"
+    },
+    "Fraulein": {
+      "grade": "SS"
+    },
+    "Punisher": {
+      "grade": "A"
+    },
+    "Executioner": {
+      "grade": "A"
+    },
+    "Armageddon": {
+      "grade": "S"
     }
   },
   "skillNotes": {

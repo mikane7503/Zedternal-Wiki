@@ -3531,6 +3531,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/bulwark.png"
   },
   {
@@ -3858,6 +3859,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/goliath.png"
   },
   {
@@ -4661,6 +4663,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/riot.png"
   },
   {
@@ -5233,6 +5236,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/voodoo.png"
   },
   {
@@ -5850,6 +5854,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/diablo.png"
   },
   {
@@ -5952,6 +5957,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/wavegambler.png"
   },
   {
@@ -6523,6 +6529,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/gambler.png"
   },
   {
@@ -7111,101 +7118,8 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/tycoon.png"
-  },
-  {
-   "key": "Gambit",
-   "name": "갬빗",
-   "parentPerk": "Capitalist",
-   "unlockLevel": null,
-   "unlockRequirements": [
-    {
-     "perk": "Capitalist",
-     "level": 5
-    },
-    {
-     "perk": "Gunslinger",
-     "level": 10
-    }
-   ],
-   "isCombinationUnlocked": true,
-   "isStatic": false,
-   "hasIniConfig": false,
-   "maxLevel": 20,
-   "passiveStats": [],
-   "fixedStats": [],
-   "valueSourceNote": null,
-   "role": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-   "summaryHtml": "<p>해금 조건: 자본가 레벨 5 + 건슬링거 레벨 10. 최대 레벨은 20이며, 현재 공개 코드에 등록된 구매 스킬은 0개입니다.</p>",
-   "endgame": null,
-   "descriptions": [
-    {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">판돈 상승</font>: 더 큰 보상을 주는 <font color=\"#00BFFF\">희귀 갬빗</font>이 잠금 해제됩니다. <font color=\"#00BFFF\">신화 갬빗</font>은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
-     "text": "[10레벨 캡스톤] 판돈 상승: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">잭팟</font>: 최고 보상을 주는 <font color=\"#00BFFF\">전설 갬빗</font>이 잠금 해제됩니다.",
-     "text": "[20레벨 캡스톤] 잭팟: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, <font color=\"#00BFFF\">피해량</font>, <font color=\"#FFD700\">도쉬</font>, <font color=\"#00BFFF\">이동 속도</font> 중 하나를 얻습니다.",
-     "text": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, 피해량, 도쉬, 이동 속도 중 하나를 얻습니다.",
-     "isCapstone": false
-    }
-   ],
-   "overviewDescriptions": [
-    {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, <font color=\"#00BFFF\">피해량</font>, <font color=\"#FFD700\">도쉬</font>, <font color=\"#00BFFF\">이동 속도</font> 중 하나를 얻습니다.",
-     "text": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, 피해량, 도쉬, 이동 속도 중 하나를 얻습니다.",
-     "isCapstone": false
-    }
-   ],
-   "passiveDescriptions": [
-    {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
-     "isCapstone": false
-    }
-   ],
-   "capstoneDescriptions": [
-    {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">판돈 상승</font>: 더 큰 보상을 주는 <font color=\"#00BFFF\">희귀 갬빗</font>이 잠금 해제됩니다. <font color=\"#00BFFF\">신화 갬빗</font>은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
-     "text": "[10레벨 캡스톤] 판돈 상승: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">잭팟</font>: 최고 보상을 주는 <font color=\"#00BFFF\">전설 갬빗</font>이 잠금 해제됩니다.",
-     "text": "[20레벨 캡스톤] 잭팟: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
-     "isCapstone": true
-    }
-   ],
-   "noCapstoneNote": null,
-   "skills": [],
-   "skillCount": 0,
-   "verdict": {
-    "tag": "OP 소지",
-    "note": "웨이브당 1회로 축적 속도는 제한되지만(실패해도 다음 웨이브로 넘어갈 뿐 하방 리스크는 낮음), 성장 자체에는 상한이 없고 승수 스킬(×2~×3)까지 중첩 가능. 보상값이 순수 하드코딩이라 조정 불가 — 장기전(엔들리스)에서 위험.",
-    "grade": "S"
-   },
-   "grade": "S",
-   "isPatched": false,
-   "patchNote": null,
-   "testWarning": null,
-   "recentChangeTag": null,
-   "extraSections": [],
-   "icon": "icons/gambit.png"
   },
   {
    "key": "SpecialAgent",
@@ -7693,6 +7607,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/spetsnaz.png"
   },
   {
@@ -8364,6 +8279,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/warlord.png"
   },
   {
@@ -8955,6 +8871,7 @@
     "type": "nerf"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/agony.png"
   },
   {
@@ -9244,6 +9161,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/metronome.png"
   },
   {
@@ -9261,9 +9179,22 @@
    "isStatic": false,
    "hasIniConfig": false,
    "maxLevel": 20,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "GrenadeDamage",
+     "label": "수류탄 피해량",
+     "value": 0.1,
+     "unit": "percent",
+     "display": "+10%",
+     "scaling": true,
+     "lv10": 1.0,
+     "lv20": 2.0,
+     "lv10Display": "+100%",
+     "lv20Display": "+200%"
+    }
+   ],
    "fixedStats": [],
-   "valueSourceNote": null,
+   "valueSourceNote": "레벨별 패시브는 공개 빌드의 퍼크 클래스와 연결 시스템 구현값을 기준으로 표시합니다.",
    "role": "[패시브] 수류탄 피해가 레벨당 %x%% 증가합니다.",
    "summaryHtml": null,
    "endgame": null,
@@ -9514,13 +9445,16 @@
     }
    ],
    "skillCount": 10,
-   "verdict": null,
-   "grade": null,
+   "verdict": {
+    "grade": "A"
+   },
+   "grade": "A",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/executioner.png"
   },
   {
@@ -9538,9 +9472,70 @@
    "isStatic": false,
    "hasIniConfig": false,
    "maxLevel": 20,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "ExplosiveDamage",
+     "label": "폭발 피해량",
+     "value": 0.03,
+     "unit": "percent",
+     "display": "+3%",
+     "scaling": true,
+     "lv10": 0.3,
+     "lv20": 0.6,
+     "lv10Display": "+30%",
+     "lv20Display": "+60%"
+    },
+    {
+     "key": "ScrakeDamage",
+     "label": "스크레이크 추가 피해량",
+     "value": 0.04,
+     "unit": "percent",
+     "display": "+4%",
+     "scaling": true,
+     "lv10": 0.4,
+     "lv20": 0.8,
+     "lv10Display": "+40%",
+     "lv20Display": "+80%"
+    },
+    {
+     "key": "FleshpoundDamage",
+     "label": "플레시파운드류 추가 피해량",
+     "value": 0.05,
+     "unit": "percent",
+     "display": "+5%",
+     "scaling": true,
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%"
+    },
+    {
+     "key": "ExplosionRadius",
+     "label": "폭발 반경",
+     "value": 0.02,
+     "unit": "percent",
+     "display": "+2%",
+     "scaling": true,
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%"
+    },
+    {
+     "key": "DemolitionistDamage",
+     "label": "데몰리션 무기 피해량",
+     "value": 0.04,
+     "unit": "percent",
+     "display": "+4%",
+     "scaling": true,
+     "lv10": 0.4,
+     "lv20": 0.8,
+     "lv10Display": "+40%",
+     "lv20Display": "+80%"
+    }
+   ],
    "fixedStats": [],
-   "valueSourceNote": null,
+   "valueSourceNote": "레벨별 패시브는 공개 빌드의 퍼크 클래스와 연결 시스템 구현값을 기준으로 표시합니다.",
    "role": "[패시브] 폭발 피해 %x1_1%%, 스크레이크 추가 피해 %x1_2%%",
    "summaryHtml": null,
    "endgame": null,
@@ -9801,13 +9796,16 @@
     }
    ],
    "skillCount": 10,
-   "verdict": null,
-   "grade": null,
+   "verdict": {
+    "grade": "SS"
+   },
+   "grade": "SS",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/fraulein.png"
   },
   {
@@ -10097,13 +10095,16 @@
     }
    ],
    "skillCount": 11,
-   "verdict": null,
-   "grade": null,
+   "verdict": {
+    "grade": "?"
+   },
+   "grade": "?",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/demolitionist.png"
   },
   {
@@ -10121,9 +10122,34 @@
    "isStatic": false,
    "hasIniConfig": false,
    "maxLevel": 20,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "NukeDamage",
+     "label": "뉴크 폭발·방사능 피해량",
+     "value": 0.02,
+     "unit": "percent",
+     "display": "+2%",
+     "scaling": true,
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%"
+    },
+    {
+     "key": "NukeChance",
+     "label": "일반 뉴크 발동 확률",
+     "value": 0.005,
+     "unit": "percent",
+     "display": "+0.5%",
+     "scaling": true,
+     "lv10": 0.05,
+     "lv20": 0.1,
+     "lv10Display": "+5%",
+     "lv20Display": "+10%"
+    }
+   ],
    "fixedStats": [],
-   "valueSourceNote": null,
+   "valueSourceNote": "레벨별 패시브는 공개 빌드의 퍼크 클래스와 연결 시스템 구현값을 기준으로 표시합니다.",
    "role": "[패시브] 뉴크 폭발·방사능 피해: +%x%%.",
    "summaryHtml": null,
    "endgame": null,
@@ -10334,13 +10360,16 @@
     }
    ],
    "skillCount": 7,
-   "verdict": null,
-   "grade": null,
+   "verdict": {
+    "grade": "S"
+   },
+   "grade": "S",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/armageddon.png"
   },
   {
@@ -10550,6 +10579,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/detonator.png"
   },
   {
@@ -10739,6 +10769,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/technician.png"
   },
   {
@@ -10908,6 +10939,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/hacker.png"
   },
   {
@@ -11331,6 +11363,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/archangel.png"
   },
   {
@@ -12092,6 +12125,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/parasite.png"
   },
   {
@@ -12726,6 +12760,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/hivemind.png"
   },
   {
@@ -13450,6 +13485,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/symbiote.png"
   },
   {
@@ -13729,6 +13765,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/jekyllhyde.png"
   },
   {
@@ -14307,6 +14344,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/pyrokinetic.png"
   },
   {
@@ -14956,6 +14994,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/cinder.png"
   },
   {
@@ -14981,7 +15020,20 @@
    "isStatic": false,
    "hasIniConfig": true,
    "maxLevel": 20,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "DisasterDamagePerLevel",
+     "label": "유령 단계당 재앙 피해량",
+     "value": 100.0,
+     "unit": "damage",
+     "display": "100",
+     "scaling": true,
+     "lv10": 1000.0,
+     "lv20": 2000.0,
+     "lv10Display": "1,000",
+     "lv20Display": "2,000"
+    }
+   ],
    "fixedStats": [
     {
      "key": "KillsPerStage",
@@ -15075,7 +15127,7 @@
      "capstoneLevel": null
     }
    ],
-   "valueSourceNote": null,
+   "valueSourceNote": "레벨별 패시브는 공개 빌드의 퍼크 클래스와 연결 시스템 구현값을 기준으로 표시합니다.",
    "role": "[패시브] 활성 웨이브마다 1회, 웨이브 진행도 30~70% 구간에서 최소 2초의 경고 후 무작위 재앙 하나가 생존한 모든 제드에게 발생합니다. 빙결·폭발·넉다운·화염은 Haunted 레벨당 100 피해를 주며, 폭발 피해는 2배입니다. 처치 10회마다 감시자 단계가 오르며 최대 5단계입니다.",
    "summaryHtml": null,
    "endgame": null,
@@ -15115,6 +15167,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/haunted.png"
   },
   {
@@ -15207,6 +15260,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/headhunter.png"
   },
   {
@@ -15515,6 +15569,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/timetraveler.png"
   },
   {
@@ -15903,6 +15958,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/johnwick.png"
   },
   {
@@ -16306,6 +16362,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/reaper.png"
   },
   {
@@ -16910,6 +16967,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/sas.png"
   },
   {
@@ -17414,9 +17472,9 @@
    "verdict": {
     "tag": "적절",
     "note": "특이사항 없음.",
-    "grade": "A"
+    "grade": "B"
    },
-   "grade": "A",
+   "grade": "B",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
@@ -17425,6 +17483,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/gign.png"
   },
   {
@@ -17716,6 +17775,7 @@
     "type": "nerf"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/thor.png"
   },
   {
@@ -18054,6 +18114,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/reinhardt.png"
   },
   {
@@ -18071,9 +18132,46 @@
    "isStatic": false,
    "hasIniConfig": false,
    "maxLevel": 20,
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "key": "WeaponDamage",
+     "label": "모든 무기 피해량",
+     "value": 0.01,
+     "unit": "percent",
+     "display": "+1%",
+     "scaling": true,
+     "lv10": 0.1,
+     "lv20": 0.2,
+     "lv10Display": "+10%",
+     "lv20Display": "+20%"
+    },
+    {
+     "key": "HeadshotDamage",
+     "label": "모든 무기 헤드샷 피해량",
+     "value": 0.02,
+     "unit": "percent",
+     "display": "+2%",
+     "scaling": true,
+     "lv10": 0.2,
+     "lv20": 0.4,
+     "lv10Display": "+20%",
+     "lv20Display": "+40%"
+    },
+    {
+     "key": "Penetration",
+     "label": "모든 무기 관통력",
+     "value": 0.05,
+     "unit": "percent",
+     "display": "+5%",
+     "scaling": true,
+     "lv10": 0.5,
+     "lv20": 1.0,
+     "lv10Display": "+50%",
+     "lv20Display": "+100%"
+    }
+   ],
    "fixedStats": [],
-   "valueSourceNote": null,
+   "valueSourceNote": "레벨별 패시브는 공개 빌드의 퍼크 클래스와 연결 시스템 구현값을 기준으로 표시합니다.",
    "role": "[패시브] 모든 무기의 피해가 %x%% 증가합니다.",
    "summaryHtml": null,
    "endgame": null,
@@ -18344,13 +18442,16 @@
     }
    ],
    "skillCount": 10,
-   "verdict": null,
-   "grade": null,
+   "verdict": {
+    "grade": "A"
+   },
+   "grade": "A",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/punisher.png"
   },
   {
@@ -18960,9 +19061,9 @@
    "verdict": {
     "tag": "적절",
     "note": "특이사항 없음.",
-    "grade": "B"
+    "grade": "A"
    },
-   "grade": "B",
+   "grade": "A",
    "isPatched": true,
    "patchNote": "구 0.700000",
    "testWarning": null,
@@ -18971,6 +19072,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/wendigo.png"
   },
   {
@@ -19544,6 +19646,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/cryophilite.png"
   },
   {
@@ -19647,6 +19750,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/predator.png"
   },
   {
@@ -19982,6 +20086,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/artificer.png"
   },
   {
@@ -20269,13 +20374,16 @@
     }
    ],
    "skillCount": 7,
-   "verdict": null,
-   "grade": null,
+   "verdict": {
+    "grade": "A"
+   },
+   "grade": "A",
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/vanguard.png"
   },
   {
@@ -20743,6 +20851,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/hydra.png"
   },
   {
@@ -21215,6 +21324,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/venomancer.png"
   },
   {
@@ -22071,6 +22181,7 @@
     "type": "buff"
    },
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/medusa.png"
   },
   {
@@ -22719,6 +22830,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/missingno.png"
   },
   {
@@ -23386,6 +23498,7 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
+   "rankIcons": [],
    "icon": "icons/shapeshifter.png"
   },
   {
@@ -23604,7 +23717,14 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
-   "icon": "icons/capitalist.png"
+   "rankIcons": [
+    "icons/ranks/Capitalist-rank-0.png",
+    "icons/ranks/Capitalist-rank-1.png",
+    "icons/ranks/Capitalist-rank-2.png",
+    "icons/ranks/Capitalist-rank-3.png",
+    "icons/ranks/Capitalist-rank-4.png"
+   ],
+   "icon": "icons/ranks/Capitalist-rank-4.png"
   },
   {
    "key": "Engineer",
@@ -23875,7 +23995,109 @@
    "testWarning": null,
    "recentChangeTag": null,
    "extraSections": [],
-   "icon": "icons/engineer.png"
+   "rankIcons": [
+    "icons/ranks/Engineer-rank-0.png",
+    "icons/ranks/Engineer-rank-1.png",
+    "icons/ranks/Engineer-rank-2.png",
+    "icons/ranks/Engineer-rank-3.png",
+    "icons/ranks/Engineer-rank-4.png"
+   ],
+   "icon": "icons/ranks/Engineer-rank-4.png"
+  },
+  {
+   "key": "Gambit",
+   "name": "갬빗",
+   "parentPerk": null,
+   "unlockLevel": null,
+   "unlockRequirements": [
+    {
+     "perk": "Capitalist",
+     "level": 5
+    },
+    {
+     "perk": "Gunslinger",
+     "level": 10
+    }
+   ],
+   "isCombinationUnlocked": true,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 20,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "role": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+   "summaryHtml": "<p>해금 조건: 자본가 레벨 5 + 건슬링거 레벨 10. 최대 레벨은 20이며, 현재 공개 코드에 등록된 구매 스킬은 0개입니다.</p>",
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">판돈 상승</font>: 더 큰 보상을 주는 <font color=\"#00BFFF\">희귀 갬빗</font>이 잠금 해제됩니다. <font color=\"#00BFFF\">신화 갬빗</font>은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
+     "text": "[10레벨 캡스톤] 판돈 상승: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">잭팟</font>: 최고 보상을 주는 <font color=\"#00BFFF\">전설 갬빗</font>이 잠금 해제됩니다.",
+     "text": "[20레벨 캡스톤] 잭팟: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, <font color=\"#00BFFF\">피해량</font>, <font color=\"#FFD700\">도쉬</font>, <font color=\"#00BFFF\">이동 속도</font> 중 하나를 얻습니다.",
+     "text": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, 피해량, 도쉬, 이동 속도 중 하나를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, <font color=\"#00BFFF\">피해량</font>, <font color=\"#FFD700\">도쉬</font>, <font color=\"#00BFFF\">이동 속도</font> 중 하나를 얻습니다.",
+     "text": "보상은 갬빗 퍼크 레벨에 비례해 증가하며, 피해량, 도쉬, 이동 속도 중 하나를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "text": "[패시브] 각 웨이브마다 갬빗 챌린지가 무작위로 주어집니다. 완료하면 영구적인 능력치 보너스를 얻습니다.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">판돈 상승</font>: 더 큰 보상을 주는 <font color=\"#00BFFF\">희귀 갬빗</font>이 잠금 해제됩니다. <font color=\"#00BFFF\">신화 갬빗</font>은 <font color=\"#77D914\">1%</font> 확률로 등장합니다.",
+     "text": "[10레벨 캡스톤] 판돈 상승: 더 큰 보상을 주는 희귀 갬빗이 잠금 해제됩니다. 신화 갬빗은 1% 확률로 등장합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">잭팟</font>: 최고 보상을 주는 <font color=\"#00BFFF\">전설 갬빗</font>이 잠금 해제됩니다.",
+     "text": "[20레벨 캡스톤] 잭팟: 최고 보상을 주는 전설 갬빗이 잠금 해제됩니다.",
+     "isCapstone": true
+    }
+   ],
+   "noCapstoneNote": null,
+   "skills": [],
+   "skillCount": 0,
+   "verdict": {
+    "tag": "OP 소지",
+    "note": "웨이브당 1회로 축적 속도는 제한되지만(실패해도 다음 웨이브로 넘어갈 뿐 하방 리스크는 낮음), 성장 자체에는 상한이 없고 승수 스킬(×2~×3)까지 중첩 가능. 보상값이 순수 하드코딩이라 조정 불가 — 장기전(엔들리스)에서 위험.",
+    "grade": "S"
+   },
+   "grade": "S",
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "rankIcons": [],
+   "icon": "icons/gambit.png"
   }
  ],
  "aurora": {

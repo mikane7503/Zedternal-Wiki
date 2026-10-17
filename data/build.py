@@ -194,6 +194,13 @@ PERK_ICON_FALLBACKS = {
     "SpecialAgent": "icons/spetsnaz.png",
 }
 
+ADVANCED_RANK_ICON_NAMES = {
+    # These two former sub-perks use the same five colored rank variants as
+    # the twelve base-perk icons. Their current rank is reflected in detail UI.
+    "Capitalist": "Capitalist",
+    "Engineer": "Engineer",
+}
+
 
 def skill_class_path(short, perk_key=None):
     if perk_key == "Override":
@@ -271,6 +278,25 @@ STATIC_PERK_STAT_DEFS = {
         {"index": 0, "key": "SupportDamagePerLevel", "label": "서포트 무기 피해량", "unit": "percent", "scale": 0.01},
         {"index": 1, "key": "SupportPenetrationPerLevel", "label": "서포트 무기 관통력", "unit": "percent", "scale": 0.01},
         {"index": 2, "key": "HealthPerLevel", "label": "최대 체력", "unit": "percent", "scale": 0.01},
+    ],
+    "Executioner": [
+        {"index": 0, "key": "GrenadeDamage", "label": "수류탄 피해량", "unit": "percent", "scale": 0.01},
+    ],
+    "Fraulein": [
+        {"index": 0, "key": "ExplosiveDamage", "label": "폭발 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 1, "key": "ScrakeDamage", "label": "스크레이크 추가 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 2, "key": "FleshpoundDamage", "label": "플레시파운드류 추가 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 3, "key": "ExplosionRadius", "label": "폭발 반경", "unit": "percent", "scale": 0.01},
+        {"index": 4, "key": "DemolitionistDamage", "label": "데몰리션 무기 피해량", "unit": "percent", "scale": 0.01},
+    ],
+    "Punisher": [
+        {"index": 0, "key": "WeaponDamage", "label": "모든 무기 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 1, "key": "HeadshotDamage", "label": "모든 무기 헤드샷 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 2, "key": "Penetration", "label": "모든 무기 관통력", "unit": "percent", "scale": 0.01},
+    ],
+    "Armageddon": [
+        {"index": 0, "key": "NukeDamage", "label": "뉴크 폭발·방사능 피해량", "unit": "percent", "scale": 0.01},
+        {"index": 1, "key": "NukeChance", "label": "일반 뉴크 발동 확률", "unit": "percent", "scale": 0.01},
     ],
 }
 
@@ -1921,10 +1947,32 @@ def build():
                 f"현재 공개 코드에 등록된 구매 스킬은 {len(skills)}개입니다.</p>"
             )
 
+        # These perks implement per-level passive values directly in their
+        # class/system code instead of through a Config_* INI section. Surface
+        # those exact level increments in the standard passive slider.
+        if key == "Armageddon":
+            static_perk_stats = build_static_perk_stats(key, {0: 2.0, 1: 0.5})
+        elif key in {"Executioner", "Fraulein", "Punisher"}:
+            static_perk_stats = build_static_perk_stats(key, parse_source_perk_bonus(key))
+        if key == "Haunted":
+            damage_per_level = 100.0
+            scaling_stats.append({
+                "key": "DisasterDamagePerLevel", "label": "재앙 피해량", "value": damage_per_level,
+                "unit": "damage", "display": format_value_as(damage_per_level, "damage"),
+                "scaling": True, "lv10": damage_per_level * 10, "lv20": damage_per_level * 20,
+                "lv10Display": format_value_as(damage_per_level * 10, "damage"),
+                "lv20Display": format_value_as(damage_per_level * 20, "damage"),
+            })
+        if key in {"Executioner", "Fraulein", "Punisher", "Armageddon"}:
+            scaling_stats.extend(static_perk_stats)
+
         advanced_perks.append({
             "key": key,
             "name": kor.get("UpgradeName", key),
-            "parentPerk": rule.get("parentPerk"),
+            # Gambit remains a hidden combination unlock (Capitalist 5 +
+            # Gunslinger 10) but is displayed in the combination section,
+            # not as a Capitalist family child.
+            "parentPerk": None if key == "Gambit" else rule.get("parentPerk"),
             "unlockLevel": rule.get("unlockLevel"),
             "unlockRequirements": rule.get("requirements", []),
             "isCombinationUnlocked": rule.get("isCombinationUnlocked", False),
@@ -1936,6 +1984,8 @@ def build():
             "valueSourceNote": (
                 "레벨별 효과는 현재 ZTUpgrade_Perk_JohnWick 클래스 구현을 기준으로 표시합니다."
                 if key == "JohnWick" else
+                "레벨별 패시브는 공개 빌드의 퍼크 클래스와 연결 시스템 구현값을 기준으로 표시합니다."
+                if key in {"Executioner", "Fraulein", "Punisher", "Armageddon", "Haunted"} else
                 "공개 빌드에 적용된 ZedternalTempered 퍼크 클래스의 PerkBonus 기본값을 표시합니다."
                 if key in {"Capitalist", "Goliath", "Vanguard"} else
                 "레벨당 드론 수치는 ZTEngineerDroneSystem 구현값이며, 드론 설정 수치는 공개 빌드의 기본 INI를 읽습니다."
@@ -1962,7 +2012,14 @@ def build():
             # Hand-curated extras have drifted from shipped gameplay values;
             # keep the public wiki anchored to active KOR/code-derived fields.
             "extraSections": [],
-            "icon": perk_icon_path(key, rule.get("parentPerk")),
+            "rankIcons": [
+                f"icons/ranks/{ADVANCED_RANK_ICON_NAMES[key]}-rank-{tier}.png"
+                for tier in range(5)
+            ] if key in ADVANCED_RANK_ICON_NAMES else [],
+            "icon": (
+                f"icons/ranks/{ADVANCED_RANK_ICON_NAMES[key]}-rank-4.png"
+                if key in ADVANCED_RANK_ICON_NAMES else perk_icon_path(key, rule.get("parentPerk"))
+            ),
         })
 
     advanced_perks.sort(key=lambda p: ((p["parentPerk"] or "zzz"), p["unlockLevel"] or 99))
