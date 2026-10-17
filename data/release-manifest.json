@@ -4,9 +4,9 @@
   "version": "10.17.13",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-17T12:11:35Z",
-  "releaseReportId": "ReleaseProof-v10.17.13",
-  "releaseSourceSnapshotSha256": "68be22d1dab36ea9cec1ca0bba3a696f900e72e10b1a9523e3e139cd192c2a00",
+  "publishedUtc": "2026-10-17T12:31:54Z",
+  "releaseReportId": "ReleaseProof-v10.17.13-menu-fix",
+  "releaseSourceSnapshotSha256": "d37b74be48a7372a123149cd832e07f4274643e79f4f0e27dadb7ab39999dc76",
   "uploadedFiles": [
     {
       "path": "BrewedPC/ZedternalRBPerkpackage_Menus.upk",
@@ -19,9 +19,14 @@
       "sha256": "ddd0d5ce0209423b2b60834cbc6c122e986400a2c96afd23e0c38e0e96bf2861"
     },
     {
+      "path": "BrewedPC/ZedternalReborn_Menus.upk",
+      "size": 1544485,
+      "sha256": "98f867086f0e4f6ef4fd53756a2c00cc5bd1b97928474aeed924b05bd473750a"
+    },
+    {
       "path": "BrewedPC/ZedternalTempered.u",
       "size": 27542583,
-      "sha256": "92804e6db31ae00a99389b325596e1dde7f5eea2b8d7972cd1eb0fcf7280f889"
+      "sha256": "2132bbff1e1092a2abd49b22d0b8174d3b03947ffea657834b71af82b20ecfc7"
     },
     {
       "path": "BrewedPC/ZedternalTemperedPerkIcons.upk",
