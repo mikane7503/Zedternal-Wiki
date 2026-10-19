@@ -1,13 +1,18 @@
 {
   "schemaVersion": 1,
   "product": "Zedternal Tempered",
-  "version": "10.19.9",
+  "version": "10.20.0",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-19T12:46:09Z",
-  "releaseReportId": "ReleaseProof-v10.19.9-upload",
-  "releaseSourceSnapshotSha256": "fc7ff0cae4172c0c8b0b5c903c28585422f719c60a2aa5e40f704d2fabc85168",
+  "publishedUtc": "2026-10-19T16:29:21Z",
+  "releaseReportId": "ReleaseProof-v10.20.0-upload",
+  "releaseSourceSnapshotSha256": "0d646be6d7ff923dfdfb0c7aee5895851982a29a64c40c721986ee443fc7d0a2",
   "uploadedFiles": [
+    {
+      "path": "BrewedPC/WwiseAudio/Windows/WwiseDefaultBank_ZTDroneAudio.bnk",
+      "size": 367,
+      "sha256": "48798d3d37336b50c69e80c0a2c75590615ebb0b7d2c68fe3bcf6393e7ef0e4d"
+    },
     {
       "path": "BrewedPC/ZedternalRBPerkpackage_Menus.upk",
       "size": 421998,
@@ -25,18 +30,13 @@
     },
     {
       "path": "BrewedPC/ZedternalTempered.u",
-      "size": 27887834,
-      "sha256": "3ef104298d63ac187c403844ede0144e7d95b31880393beee1177d8bba676428"
+      "size": 27885173,
+      "sha256": "2c6b1a3bace18019351c45123e36c318c97c0f657f998e684a704b63d9084082"
     },
     {
       "path": "BrewedPC/ZedternalTemperedPerkIcons.upk",
       "size": 34754534,
       "sha256": "8a8390bf9dd3addc503246c934879e5635fe807a28b259b2e4f65e9df8ecdcb3"
-    },
-    {
-      "path": "BrewedPC/WwiseAudio/Windows/WwiseDefaultBank_ZTDroneAudio.bnk",
-      "size": 367,
-      "sha256": "48798d3d37336b50c69e80c0a2c75590615ebb0b7d2c68fe3bcf6393e7ef0e4d"
     },
     {
       "path": "Localization/JPN/ZedternalReborn.jpn",

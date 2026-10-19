@@ -25005,9 +25005,9 @@
   "basePerkCount": 10,
   "totalSkills": 483,
   "release": {
-   "version": "10.19.9",
+   "version": "10.20.0",
    "workshopId": "3809067086",
-   "publishedUtc": "2026-10-19 오후 12:46:09",
+   "publishedUtc": "2026-10-19 오후 4:29:21",
    "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
    "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
    "serverGameConfigDiffers": true
