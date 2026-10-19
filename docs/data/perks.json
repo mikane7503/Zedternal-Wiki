@@ -1050,12 +1050,12 @@
    ],
    "maxLevel": 20,
    "strengths": [
-    "20레벨에서 모든 무기 피해 +40%, 최대 체력 +40 HP, 주사기·치유 다트 충전 속도 +60%",
-    "아군 치료를 이동 속도·피해 저항·피해 강화·탄약 보급으로 연결하는 활성 스킬을 보유합니다.",
-    "Fastball은 동의한 팀원을 조준 방향으로 발사하고 착지 시 피해·회복을 제공합니다."
+    "레벨당 치료량과 치유 장비 충전 속도가 증가합니다.",
+    "캡스톤 없이 12개 스킬로 치유·생존·지원 기능을 선택합니다.",
+    "Archangel(5), Gabriel(10), Michael(15), Ophanim(20)으로 전직합니다."
    ],
    "weaknesses": [],
-   "noCapstoneNote": "별도의 10·20레벨 캡스톤은 없습니다. 기본 효과는 퍼크 레벨에 따라 20레벨까지 증가합니다.",
+   "noCapstoneNote": "필드 메딕에는 별도 10·20레벨 캡스톤이 없습니다.",
    "summaryHtml": null,
    "extraSections": [],
    "rankIcons": [
@@ -1073,6 +1073,11 @@
     },
     {
      "level": 10,
+     "perk": "Gabriel",
+     "name": "가브리엘"
+    },
+    {
+     "level": 10,
      "perk": "Parasite",
      "name": "기생충"
     },
@@ -1082,12 +1087,182 @@
      "name": "하이브마인드"
     },
     {
+     "level": 15,
+     "perk": "Michael",
+     "name": "미카엘"
+    },
+    {
+     "level": 20,
+     "perk": "Ophanim",
+     "name": "오파님"
+    },
+    {
      "level": 20,
      "perk": "Symbiote",
      "name": "공생체"
     }
    ],
    "skills": [
+    {
+     "key": "PrecisionMedicine",
+     "name": "정밀 의료",
+     "standardDesc": "치료량 +10%.",
+     "deluxeDesc": "치료량 +15%.",
+     "standardDescRaw": "치료량 +10%.",
+     "deluxeDescRaw": "치료량 +15%.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
+    {
+     "key": "ChargeCircuit",
+     "name": "충전 회로",
+     "standardDesc": "치료탄 재충전 속도 +10%.",
+     "deluxeDesc": "치료탄 재충전 속도 +15%.",
+     "standardDescRaw": "치료탄 재충전 속도 +10%.",
+     "deluxeDescRaw": "치료탄 재충전 속도 +15%.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
+    {
+     "key": "EconomicalDose",
+     "name": "절약형 투약",
+     "standardDesc": "치료탄 충전량 소모 10% 감소.",
+     "deluxeDesc": "치료탄 충전량 소모 15% 감소.",
+     "standardDescRaw": "치료탄 충전량 소모 10% 감소.",
+     "deluxeDescRaw": "치료탄 충전량 소모 15% 감소.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
+    {
+     "key": "ContinuousDosing",
+     "name": "연속 투약",
+     "standardDesc": "치료탄 발사 간격 10% 감소.",
+     "deluxeDesc": "치료탄 발사 간격 15% 감소.",
+     "standardDescRaw": "치료탄 발사 간격 10% 감소.",
+     "deluxeDescRaw": "치료탄 발사 간격 15% 감소.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
+    {
+     "key": "MedicalSupplies",
+     "name": "의료 보급품",
+     "standardDesc": "주사기 재충전 속도 +15%.",
+     "deluxeDesc": "주사기 재충전 속도 +25%.",
+     "standardDescRaw": "주사기 재충전 속도 +15%.",
+     "deluxeDescRaw": "주사기 재충전 속도 +25%.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
+    {
+     "key": "FieldSuture",
+     "name": "현장 봉합",
+     "standardDesc": "주사기로 다른 아군을 치료할 때 치료량 +20%.",
+     "deluxeDesc": "주사기로 다른 아군을 치료할 때 치료량 +30%.",
+     "standardDescRaw": "주사기로 다른 아군을 치료할 때 치료량 +20%.",
+     "deluxeDescRaw": "주사기로 다른 아군을 치료할 때 치료량 +30%.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
+    {
+     "key": "PatientTransport",
+     "name": "환자 이송",
+     "standardDesc": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +5%를 얻습니다. 중첩 없이 갱신됩니다.",
+     "deluxeDesc": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +8%를 얻습니다. 중첩 없이 갱신됩니다.",
+     "standardDescRaw": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +5%를 얻습니다. 중첩 없이 갱신됩니다.",
+     "deluxeDescRaw": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +8%를 얻습니다. 중첩 없이 갱신됩니다.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
+    {
+     "key": "MedicSurvival",
+     "name": "의무병의 생존법",
+     "standardDesc": "자신의 체력이 30% 미만일 때 피해 저항 +10%.",
+     "deluxeDesc": "자신의 체력이 30% 미만일 때 피해 저항 +15%.",
+     "standardDescRaw": "자신의 체력이 30% 미만일 때 피해 저항 +10%.",
+     "deluxeDescRaw": "자신의 체력이 30% 미만일 때 피해 저항 +15%.",
+     "rawValues": [],
+     "allowsDeluxe": true,
+     "deluxeAvailable": null,
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/PhoenixPrayer.png"
+    },
     {
      "key": "AirborneAgent",
      "name": "공중 작용제",
@@ -1106,107 +1281,7 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/AirborneAgent.png"
-    },
-    {
-     "key": "BattleSurgeon",
-     "name": "전장 외과의",
-     "standardDesc": "메딕 무기의 피해가 15%, 그 외 무기의 피해가 5% 증가합니다.",
-     "deluxeDesc": "메딕 무기의 피해가 30%, 그 외 무기의 피해가 10% 증가합니다.",
-     "standardDescRaw": "<font color=\"#66CCFF\">메딕 무기</font>의 피해가 <font color=\"#77D914\">15%</font>, 그 외 무기의 피해가 <font color=\"#77D914\">5%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#66CCFF\">메딕 무기</font>의 피해가 <font color=\"#77D914\">30%</font>, 그 외 무기의 피해가 <font color=\"#77D914\">10%</font> 증가합니다.",
-     "rawValues": [],
-     "allowsDeluxe": true,
-     "deluxeAvailable": null,
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/BattleSurgeon.png"
-    },
-    {
-     "key": "AdrenalineShot",
-     "name": "아드레날린 샷",
-     "standardDesc": "팀원을 치료하면 해당 팀원의 이동 속도가 5초 동안 5% 증가합니다. 최대 4회 중첩되어 20%까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
-     "deluxeDesc": null,
-     "standardDescRaw": "팀원을 치료하면 해당 팀원의 <font color=\"#66CCFF\">이동 속도</font>가 <font color=\"#77D914\">5초</font> 동안 <font color=\"#77D914\">5%</font> 증가합니다. 최대 <font color=\"#77D914\">4회</font> 중첩되어 <font color=\"#77D914\">20%</font>까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
-     "deluxeDescRaw": null,
-     "rawValues": [],
-     "allowsDeluxe": false,
-     "deluxeAvailable": null,
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/FocusInjection.png"
-    },
-    {
-     "key": "CoagulantBooster",
-     "name": "코아굴런트 부스터",
-     "standardDesc": "팀원을 치료하면 해당 팀원에게 5초 동안 5%의 피해 저항을 부여합니다. 최대 4회 중첩되어 20%까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
-     "deluxeDesc": null,
-     "standardDescRaw": "팀원을 치료하면 해당 팀원에게 <font color=\"#77D914\">5초</font> 동안 <font color=\"#77D914\">5%</font>의 <font color=\"#66CCFF\">피해 저항</font>을 부여합니다. 최대 <font color=\"#77D914\">4회</font> 중첩되어 <font color=\"#77D914\">20%</font>까지 증가하며, 추가 치료 시 지속시간이 갱신됩니다. 자신에게는 적용되지 않습니다.",
-     "deluxeDescRaw": null,
-     "rawValues": [],
-     "allowsDeluxe": false,
-     "deluxeAvailable": null,
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/CoagulantBooster.png"
-    },
-    {
-     "key": "CombatantDoctor",
-     "name": "전투 의사",
-     "standardDesc": "부상당한 아군에게 누적 300 HP를 회복시킬 때마다 모든 무기의 탄약을 보충합니다.",
-     "deluxeDesc": "부상당한 아군에게 누적 150 HP를 회복시킬 때마다 모든 무기의 탄약을 보충합니다.",
-     "standardDescRaw": "부상당한 아군에게 누적 <font color=\"#77D914\">300</font> HP를 회복시킬 때마다 <font color=\"#66CCFF\">모든 무기</font>의 탄약을 보충합니다.",
-     "deluxeDescRaw": "부상당한 아군에게 누적 <font color=\"#77D914\">150</font> HP를 회복시킬 때마다 <font color=\"#66CCFF\">모든 무기</font>의 탄약을 보충합니다.",
-     "rawValues": [],
-     "allowsDeluxe": true,
-     "deluxeAvailable": null,
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/CombatantDoctor.png"
-    },
-    {
-     "key": "Safeguard",
-     "name": "안전 보호",
-     "standardDesc": "주사기와 치유 다트의 치유량 및 충전 속도가 20% 증가합니다.",
-     "deluxeDesc": "주사기와 치유 다트의 치유량 및 충전 속도가 40% 증가합니다.",
-     "standardDescRaw": "주사기와 치유 다트의 치유량 및 충전 속도가 <font color=\"#77D914\">20%</font> 증가합니다.",
-     "deluxeDescRaw": "주사기와 치유 다트의 치유량 및 충전 속도가 <font color=\"#77D914\">40%</font> 증가합니다.",
-     "rawValues": [],
-     "allowsDeluxe": true,
-     "deluxeAvailable": null,
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Safeguard.png"
+     "icon": "icons/skills/PhoenixPrayer.png"
     },
     {
      "key": "SymbioticHealth",
@@ -1226,7 +1301,7 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/SymbioticHealth.png"
+     "icon": "icons/skills/PhoenixPrayer.png"
     },
     {
      "key": "Zedatif",
@@ -1246,27 +1321,7 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Zedatif.png"
-    },
-    {
-     "key": "FocusInjection",
-     "name": "집중 주입",
-     "standardDesc": "아군을 치료하면 대상의 가한 피해와 피해 저항이 5초 동안 4% 증가합니다. 최대 12%까지 중첩되며, 추가 치료 시 지속시간이 갱신됩니다.",
-     "deluxeDesc": "아군을 치료하면 대상의 가한 피해와 피해 저항이 5초 동안 8% 증가합니다. 최대 24%까지 중첩되며, 추가 치료 시 지속시간이 갱신됩니다.",
-     "standardDescRaw": "아군을 치료하면 대상의 가한 피해와 피해 저항이 <font color=\"#77D914\">5초</font> 동안 <font color=\"#77D914\">4%</font> 증가합니다. 최대 <font color=\"#77D914\">12%</font>까지 중첩되며, 추가 치료 시 지속시간이 갱신됩니다.",
-     "deluxeDescRaw": "아군을 치료하면 대상의 가한 피해와 피해 저항이 <font color=\"#77D914\">5초</font> 동안 <font color=\"#77D914\">8%</font> 증가합니다. 최대 <font color=\"#77D914\">24%</font>까지 중첩되며, 추가 치료 시 지속시간이 갱신됩니다.",
-     "rawValues": [],
-     "allowsDeluxe": true,
-     "deluxeAvailable": null,
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/FocusInjection.png"
+     "icon": "icons/skills/PhoenixPrayer.png"
     },
     {
      "key": "Fastball",
@@ -1286,10 +1341,10 @@
      "disabled": false,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/Fastball.png"
+     "icon": "icons/skills/PhoenixPrayer.png"
     }
    ],
-   "skillCount": 10,
+   "skillCount": 12,
    "isPatched": false,
    "patchNote": null,
    "testWarning": null,
@@ -9916,7 +9971,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "SeekerB",
@@ -9936,7 +9991,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "SealSquealA",
@@ -9956,7 +10011,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "SealSquealB",
@@ -9976,7 +10031,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "RPGA",
@@ -9996,7 +10051,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "RPGB",
@@ -10016,7 +10071,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "ZedMK4",
@@ -10036,7 +10091,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "ZedMK5",
@@ -10056,7 +10111,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "Pulverizer",
@@ -10076,7 +10131,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "M4M320",
@@ -10096,7 +10151,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     },
     {
      "key": "M79Cluster",
@@ -10116,7 +10171,7 @@
      "deluxeAvailable": false,
      "disabledNote": null,
      "noData": false,
-     "icon": null
+     "icon": "icons/skills/OverrideWeapon.png"
     }
    ],
    "skillCount": 11,
@@ -11005,236 +11060,12 @@
    "noCapstoneNote": null,
    "skills": [
     {
-     "key": "CelestialVitality",
-     "name": "천상의 활력",
-     "standardDesc": "자신에게 적용되는 치유 효과가 15% 증가합니다.",
-     "deluxeDesc": "디럭스. 자신에게 적용되는 치유 효과가 30% 증가합니다.",
-     "standardDescRaw": "자신에게 적용되는 치유 효과가 <font color=\"#77D914\">15%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 자신에게 적용되는 치유 효과가 <font color=\"#77D914\">30%</font> 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "SelfHealBonus",
-       "label": "자신 치유 보너스",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "SelfHealBonus",
-       "label": "자신 치유 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/CelestialVitality.png"
-    },
-    {
-     "key": "DivineFortitude",
-     "name": "신성한 용기",
-     "standardDesc": "최대 체력과 최대 방어력이 10% 증가합니다.",
-     "deluxeDesc": "디럭스. 최대 체력과 최대 방어력이 20% 증가합니다.",
-     "standardDescRaw": "최대 <font color=\"#FF6666\">체력</font>과 최대 <font color=\"#4444FF\">방어력</font>이 <font color=\"#77D914\">10%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 최대 <font color=\"#FF6666\">체력</font>과 최대 <font color=\"#4444FF\">방어력</font>이 <font color=\"#77D914\">20%</font> 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "HealthBonus",
-       "label": "체력 보너스",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "HealthBonus",
-       "label": "체력 보너스",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "ArmorBonus",
-       "label": "방어구 보너스",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "ArmorBonus",
-       "label": "방어구 보너스",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/DivineFortitude.png"
-    },
-    {
-     "key": "HolyResilience",
-     "name": "신성한 회복력",
-     "standardDesc": "잃은 체력에 비례해 최대 5%의 피해 저항을 얻습니다.",
-     "deluxeDesc": "디럭스. 잃은 체력에 비례해 최대 10%의 피해 저항을 얻습니다.",
-     "standardDescRaw": "잃은 체력에 비례해 최대 <font color=\"#77D914\">5%</font>의 <font color=\"#87CEEB\">피해 저항</font>을 얻습니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 잃은 체력에 비례해 최대 <font color=\"#77D914\">10%</font>의 <font color=\"#87CEEB\">피해 저항</font>을 얻습니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "MaxResistance",
-       "label": "최대 저항력",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "MaxResistance",
-       "label": "최대 저항력",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/HolyResilience.png"
-    },
-    {
-     "key": "OverflowingGrace",
-     "name": "넘치는 은혜",
-     "standardDesc": "아군을 치유할 때마다 대상의 방어력을 1 회복시킵니다.",
-     "deluxeDesc": "아군을 치유할 때마다 대상의 방어력을 2 회복시킵니다.",
-     "standardDescRaw": "아군을 치유할 때마다 대상의 <font color=\"#4444FF\">방어력</font>을 <font color=\"#77D914\">1</font> 회복시킵니다.",
-     "deluxeDescRaw": "아군을 치유할 때마다 대상의 <font color=\"#4444FF\">방어력</font>을 <font color=\"#77D914\">2</font> 회복시킵니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "ArmorGrant",
-       "label": "방어구 부여",
-       "value": 1,
-       "unit": "count",
-       "display": "1"
-      },
-      {
-       "key": "ArmorGrant",
-       "label": "방어구 부여",
-       "value": 2,
-       "unit": "count",
-       "display": "2"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/OverflowingGrace.png"
-    },
-    {
-     "key": "PhoenixPrayer",
-     "name": "피닉스 기도",
-     "standardDesc": "웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 7%를 보너스 도쉬로 받습니다.",
-     "deluxeDesc": "디럭스. 웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 15%를 보너스 도쉬로 받습니다.",
-     "standardDescRaw": "웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 <font color=\"#77D914\">7%</font>를 보너스 도쉬로 받습니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 웨이브 종료 시, 해당 웨이브 동안 아군에게 실제로 회복한 체력의 <font color=\"#77D914\">15%</font>를 보너스 도쉬로 받습니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DoshConversion",
-       "label": "도쉬 전환",
-       "value": 0.07,
-       "unit": "percent",
-       "display": "+7%"
-      },
-      {
-       "key": "DoshConversion",
-       "label": "도쉬 전환",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/PhoenixPrayer.png"
-    },
-    {
-     "key": "SanctifiedRounds",
-     "name": "성스러운 라운드",
-     "standardDesc": "아군을 치유한 뒤 5초 동안 피해량이 10% 증가합니다.",
-     "deluxeDesc": "디럭스. 아군을 치유한 뒤 5초 동안 피해량이 20% 증가합니다.",
-     "standardDescRaw": "아군을 치유한 뒤 <font color=\"#77D914\">5초</font> 동안 <font color=\"#FF4444\">피해량</font>이 <font color=\"#77D914\">10%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> 아군을 치유한 뒤 <font color=\"#77D914\">5초</font> 동안 <font color=\"#FF4444\">피해량</font>이 <font color=\"#77D914\">20%</font> 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "Damage",
-       "label": "피해량",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "Damage",
-       "label": "피해량",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/SanctifiedRounds.png"
-    },
-    {
-     "key": "UnwaveringFaith",
-     "name": "흔들림 없는 믿음",
-     "standardDesc": "클롯의 잡기에 붙잡히지 않습니다.",
-     "deluxeDesc": "",
-     "standardDescRaw": "클롯의 잡기에 붙잡히지 않습니다.",
-     "deluxeDescRaw": "",
+     "key": "WideWings",
+     "name": "넓게 펼친 날개",
+     "standardDesc": "치유 오라 반경 +15%.",
+     "deluxeDesc": "치유 오라 반경 +25%.",
+     "standardDescRaw": "치유 오라 반경 +15%.",
+     "deluxeDescRaw": "치유 오라 반경 +25%.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -11246,53 +11077,17 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/UnwaveringFaith.png"
+     "icon": "icons/skills/Archangel_WideWings.png"
     },
     {
-     "key": "WingsOfMercy",
-     "name": "자비의 날개",
-     "standardDesc": "8m 이내에서 체력이 40% 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 10%까지, 최대 3명에게 적용됩니다.",
-     "deluxeDesc": "디럭스. 8m 이내에서 체력이 40% 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 20%까지, 최대 3명에게 적용됩니다.",
-     "standardDescRaw": "<font color=\"#77D914\">8m</font> 이내에서 체력이 <font color=\"#77D914\">40%</font> 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 <font color=\"#77D914\">10%</font>까지, 최대 3명에게 적용됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">디럭스.</font> <font color=\"#77D914\">8m</font> 이내에서 체력이 <font color=\"#77D914\">40%</font> 미만인 아군이 많을수록 이동 속도가 증가합니다. 최대 <font color=\"#77D914\">20%</font>까지, 최대 3명에게 적용됩니다.",
+     "key": "HealingChoir",
+     "name": "치유의 합창",
+     "standardDesc": "치유 오라 회복량 +10%.",
+     "deluxeDesc": "치유 오라 회복량 +15%.",
+     "standardDescRaw": "치유 오라 회복량 +10%.",
+     "deluxeDescRaw": "치유 오라 회복량 +15%.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "MaxSpeedBonus",
-       "label": "최대 속도 보너스",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "MaxSpeedBonus",
-       "label": "최대 속도 보너스",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "AllyRadiusSQ",
-       "label": "아군 범위 제곱",
-       "value": 640000.0,
-       "unit": "distance",
-       "display": "640,000"
-      },
-      {
-       "key": "HealthThreshold",
-       "label": "체력 임계값",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "MaxHurtAllies",
-       "label": "최대 부상 아군",
-       "value": 3,
-       "unit": "count",
-       "display": "3"
-      }
-     ],
+     "rawValues": [],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
@@ -11302,10 +11097,170 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/WingsOfMercy.png"
+     "icon": "icons/skills/Archangel_HealingChoir.png"
+    },
+    {
+     "key": "LifeEcho",
+     "name": "생명의 잔향",
+     "standardDesc": "치유 오라로 실제 회복한 아군이 4초간 초당 1 HP를 추가 회복합니다. 중첩 없이 갱신됩니다.",
+     "deluxeDesc": "치유 오라로 실제 회복한 아군이 4초간 초당 2 HP를 추가 회복합니다. 중첩 없이 갱신됩니다.",
+     "standardDescRaw": "치유 오라로 실제 회복한 아군이 4초간 초당 1 HP를 추가 회복합니다. 중첩 없이 갱신됩니다.",
+     "deluxeDescRaw": "치유 오라로 실제 회복한 아군이 4초간 초당 2 HP를 추가 회복합니다. 중첩 없이 갱신됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_LifeEcho.png"
+    },
+    {
+     "key": "MassRelief",
+     "name": "다수 구호",
+     "standardDesc": "치유 오라 안에 회복이 필요한 아군이 3명 이상이면 오라 회복량 +10%.",
+     "deluxeDesc": "치유 오라 안에 회복이 필요한 아군이 3명 이상이면 오라 회복량 +15%.",
+     "standardDescRaw": "치유 오라 안에 회복이 필요한 아군이 3명 이상이면 오라 회복량 +10%.",
+     "deluxeDescRaw": "치유 오라 안에 회복이 필요한 아군이 3명 이상이면 오라 회복량 +15%.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_MassRelief.png"
+    },
+    {
+     "key": "UrgentFirst",
+     "name": "위급한 자부터",
+     "standardDesc": "체력 30% 미만 아군에게 치유 오라 회복량 +20%.",
+     "deluxeDesc": "체력 30% 미만 아군에게 치유 오라 회복량 +30%.",
+     "standardDescRaw": "체력 30% 미만 아군에게 치유 오라 회복량 +20%.",
+     "deluxeDescRaw": "체력 30% 미만 아군에게 치유 오라 회복량 +30%.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_UrgentFirst.png"
+    },
+    {
+     "key": "RearLight",
+     "name": "후방까지 닿는 빛",
+     "standardDesc": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +10%.",
+     "deluxeDesc": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +15%.",
+     "standardDescRaw": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +10%.",
+     "deluxeDescRaw": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +15%.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_RearLight.png"
+    },
+    {
+     "key": "LastingMiracle",
+     "name": "지속되는 기적",
+     "standardDesc": "생명의 잔향 지속시간 +15%.",
+     "deluxeDesc": "생명의 잔향 지속시간 +25%.",
+     "standardDescRaw": "생명의 잔향 지속시간 +15%.",
+     "deluxeDescRaw": "생명의 잔향 지속시간 +25%.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_LastingMiracle.png"
+    },
+    {
+     "key": "ReliefCycle",
+     "name": "구호의 순환",
+     "standardDesc": "오라 1회에 실제 회복한 아군마다 현재 든 메딕 무기의 치료탄 충전량 1% 회복. 1회 최대 5%.",
+     "deluxeDesc": "오라 1회에 실제 회복한 아군마다 현재 든 메딕 무기의 치료탄 충전량 2% 회복. 1회 최대 10%.",
+     "standardDescRaw": "오라 1회에 실제 회복한 아군마다 현재 든 메딕 무기의 치료탄 충전량 1% 회복. 1회 최대 5%.",
+     "deluxeDescRaw": "오라 1회에 실제 회복한 아군마다 현재 든 메딕 무기의 치료탄 충전량 2% 회복. 1회 최대 10%.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_ReliefCycle.png"
+    },
+    {
+     "key": "MercyLink",
+     "name": "자비의 연결",
+     "standardDesc": "치료탄으로 실제 회복한 양의 15%를 대상 주변 2m의 다른 아군에게 회복시킵니다. 재전파와 축복 발동 없음.",
+     "deluxeDesc": "치료탄으로 실제 회복한 양의 25%를 대상 주변 3m의 다른 아군에게 회복시킵니다. 재전파와 축복 발동 없음.",
+     "standardDescRaw": "치료탄으로 실제 회복한 양의 15%를 대상 주변 2m의 다른 아군에게 회복시킵니다. 재전파와 축복 발동 없음.",
+     "deluxeDescRaw": "치료탄으로 실제 회복한 양의 25%를 대상 주변 3m의 다른 아군에게 회복시킵니다. 재전파와 축복 발동 없음.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_MercyLink.png"
+    },
+    {
+     "key": "LastRefuge",
+     "name": "마지막 피난처",
+     "standardDesc": "피해를 받아 생존한 채 체력이 30% 미만으로 내려가면 자신과 주변 4m 아군을 15 HP 회복합니다. 재사용 30초.",
+     "deluxeDesc": "피해를 받아 생존한 채 체력이 30% 미만으로 내려가면 자신과 주변 4m 아군을 25 HP 회복합니다. 재사용 30초.",
+     "standardDescRaw": "피해를 받아 생존한 채 체력이 30% 미만으로 내려가면 자신과 주변 4m 아군을 15 HP 회복합니다. 재사용 30초.",
+     "deluxeDescRaw": "피해를 받아 생존한 채 체력이 30% 미만으로 내려가면 자신과 주변 4m 아군을 25 HP 회복합니다. 재사용 30초.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Archangel_LastRefuge.png"
     }
    ],
-   "skillCount": 8,
+   "skillCount": 10,
    "verdict": {
     "tag": "적절",
     "note": "치유 특화, 이번 재조사에서 특이사항 없음.",
@@ -11319,6 +11274,295 @@
    "extraSections": [],
    "rankIcons": [],
    "icon": "icons/archangel.png"
+  },
+  {
+   "key": "Gabriel",
+   "name": "가브리엘",
+   "parentPerk": "FieldMedic",
+   "unlockLevel": 10,
+   "unlockRequirements": [
+    {
+     "perk": "FieldMedic",
+     "level": 10
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 20,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "summary": "치료탄으로 아군에게 전투의 축복을 부여하는 팀 버퍼 퍼크",
+   "role": "치료탄으로 아군에게 전투의 축복을 부여하는 팀 버퍼 퍼크",
+   "summaryHtml": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x%%</font>를 부여합니다.",
+     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x%%를 부여합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">천사의 합창</font>: 치유 대상 주변 <font color=\"#77D914\">6m</font>의 다른 아군에게 축복과 스킬 효과의 <font color=\"#77D914\">50%</font>를 전달합니다.",
+     "text": "[10레벨 캡스톤] 천사의 합창: 치유 대상 주변 6m의 다른 아군에게 축복과 스킬 효과의 50%를 전달합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">승리의 계시</font>: 전파 범위 <font color=\"#77D914\">10m</font>, 지속시간 <font color=\"#77D914\">8초</font>, 효과 <font color=\"#77D914\">100%</font>가 됩니다.",
+     "text": "[20레벨 캡스톤] 승리의 계시: 전파 범위 10m, 지속시간 8초, 효과 100%가 됩니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "직접·전파 축복은 독립적으로 합산되며 최대 <font color=\"#77D914\">2경로</font>입니다. 같은 경로는 중첩 없이 갱신하며 가장 강한 효과를 적용합니다. 재전파·자기 축복 없음.",
+     "text": "직접·전파 축복은 독립적으로 합산되며 최대 2경로입니다. 같은 경로는 중첩 없이 갱신하며 가장 강한 효과를 적용합니다. 재전파·자기 축복 없음.",
+     "isCapstone": false
+    }
+   ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x%%</font>를 부여합니다.",
+     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x%%를 부여합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "직접·전파 축복은 독립적으로 합산되며 최대 <font color=\"#77D914\">2경로</font>입니다. 같은 경로는 중첩 없이 갱신하며 가장 강한 효과를 적용합니다. 재전파·자기 축복 없음.",
+     "text": "직접·전파 축복은 독립적으로 합산되며 최대 2경로입니다. 같은 경로는 중첩 없이 갱신하며 가장 강한 효과를 적용합니다. 재전파·자기 축복 없음.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x%%</font>를 부여합니다.",
+     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x%%를 부여합니다.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">천사의 합창</font>: 치유 대상 주변 <font color=\"#77D914\">6m</font>의 다른 아군에게 축복과 스킬 효과의 <font color=\"#77D914\">50%</font>를 전달합니다.",
+     "text": "[10레벨 캡스톤] 천사의 합창: 치유 대상 주변 6m의 다른 아군에게 축복과 스킬 효과의 50%를 전달합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">승리의 계시</font>: 전파 범위 <font color=\"#77D914\">10m</font>, 지속시간 <font color=\"#77D914\">8초</font>, 효과 <font color=\"#77D914\">100%</font>가 됩니다.",
+     "text": "[20레벨 캡스톤] 승리의 계시: 전파 범위 10m, 지속시간 8초, 효과 100%가 됩니다.",
+     "isCapstone": true
+    }
+   ],
+   "noCapstoneNote": null,
+   "skills": [
+    {
+     "key": "AttackOrder",
+     "name": "공격 명령",
+     "standardDesc": "축복 대상의 무기 피해 5%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 무기 피해 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 무기 피해 5%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 무기 피해 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_AttackOrder.png"
+    },
+    {
+     "key": "PrecisionOrder",
+     "name": "정밀 사격 지시",
+     "standardDesc": "축복 대상의 헤드샷 피해 10%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 헤드샷 피해 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 헤드샷 피해 10%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 헤드샷 피해 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_PrecisionOrder.png"
+    },
+    {
+     "key": "RapidReload",
+     "name": "신속 재장전",
+     "standardDesc": "축복 대상의 재장전 속도 10%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 재장전 속도 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 재장전 속도 10%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 재장전 속도 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_RapidReload.png"
+    },
+    {
+     "key": "RapidFireOrder",
+     "name": "속사 명령",
+     "standardDesc": "축복 대상의 발사 속도 5%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 발사 속도 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 발사 속도 5%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 발사 속도 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_RapidFireOrder.png"
+    },
+    {
+     "key": "LargeFocus",
+     "name": "대형 제드 집중",
+     "standardDesc": "축복 대상의 SC·FP·QFP 피해 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 SC·FP·QFP 피해 12%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 SC·FP·QFP 피해 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 SC·FP·QFP 피해 12%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_LargeFocus.png"
+    },
+    {
+     "key": "ArmorPiercingOrder",
+     "name": "장갑 관통 지시",
+     "standardDesc": "축복 대상의 관통력 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 관통력 25%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 관통력 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 관통력 25%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_ArmorPiercingOrder.png"
+    },
+    {
+     "key": "StableFire",
+     "name": "안정 사격",
+     "standardDesc": "축복 대상의 반동 감소 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 반동 감소 25%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 반동 감소 15%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 반동 감소 25%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_StableFire.png"
+    },
+    {
+     "key": "FlankBreakthrough",
+     "name": "측면 돌파",
+     "standardDesc": "축복 대상의 이동속도 5%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "축복 대상의 이동속도 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "축복 대상의 이동속도 5%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "축복 대상의 이동속도 8%. 직접·전파 축복에 각각 적용하며 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_FlankBreakthrough.png"
+    },
+    {
+     "key": "EmergencyStimulus",
+     "name": "응급 전투 자극",
+     "standardDesc": "치유 직전 체력 40% 미만인 아군을 치료하면 해당 축복 경로에 5초간 피해 +5%. 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDesc": "치유 직전 체력 40% 미만인 아군을 치료하면 해당 축복 경로에 5초간 피해 +8%. 20레벨 전에는 전파 효과가 절반입니다.",
+     "standardDescRaw": "치유 직전 체력 40% 미만인 아군을 치료하면 해당 축복 경로에 5초간 피해 +5%. 20레벨 전에는 전파 효과가 절반입니다.",
+     "deluxeDescRaw": "치유 직전 체력 40% 미만인 아군을 치료하면 해당 축복 경로에 5초간 피해 +8%. 20레벨 전에는 전파 효과가 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_EmergencyStimulus.png"
+    },
+    {
+     "key": "FrontlineInspiration",
+     "name": "전선 고무",
+     "standardDesc": "축복 대상이 제드를 처치하면 활성 축복을 각각 1초 연장합니다. 경로별 마지막 치유 갱신 이후 최대 3초 추가. 20레벨 전에는 전파 축복의 연장량이 절반입니다.",
+     "deluxeDesc": "축복 대상이 제드를 처치하면 활성 축복을 각각 1.5초 연장합니다. 경로별 마지막 치유 갱신 이후 최대 3초 추가. 20레벨 전에는 전파 축복의 연장량이 절반입니다.",
+     "standardDescRaw": "축복 대상이 제드를 처치하면 활성 축복을 각각 1초 연장합니다. 경로별 마지막 치유 갱신 이후 최대 3초 추가. 20레벨 전에는 전파 축복의 연장량이 절반입니다.",
+     "deluxeDescRaw": "축복 대상이 제드를 처치하면 활성 축복을 각각 1.5초 연장합니다. 경로별 마지막 치유 갱신 이후 최대 3초 추가. 20레벨 전에는 전파 축복의 연장량이 절반입니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Gabriel_FrontlineInspiration.png"
+    }
+   ],
+   "skillCount": 10,
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "rankIcons": [],
+   "icon": "icons/gabriel.png"
   },
   {
    "key": "Parasite",
@@ -12718,6 +12962,564 @@
    "extraSections": [],
    "rankIcons": [],
    "icon": "icons/hivemind.png"
+  },
+  {
+   "key": "Michael",
+   "name": "미카엘",
+   "parentPerk": "FieldMedic",
+   "unlockLevel": 15,
+   "unlockRequirements": [
+    {
+     "perk": "FieldMedic",
+     "level": 15
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 20,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "summary": "자신의 무기 화력과 처치 기세를 강화하는 전투형 메딕 퍼크",
+   "role": "자신의 무기 화력과 처치 기세를 강화하는 전투형 메딕 퍼크",
+   "summaryHtml": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전사의 단련</font>: 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 재장전 속도 <font color=\"#77D914\">+%x1_2%%</font>.",
+     "text": "[패시브] 전사의 단련: 모든 무기 피해 +%x1_1%%, 재장전 속도 +%x1_2%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">전투의 기세</font>: 처치 시 <font color=\"#77D914\">4초</font>간 최대 <font color=\"#77D914\">5중첩</font>, 중첩당 피해 <font color=\"#77D914\">+4%</font>. 처치 시 지속시간 갱신, 만료 시 모두 사라집니다.",
+     "text": "[10레벨 캡스톤] 전투의 기세: 처치 시 4초간 최대 5중첩, 중첩당 피해 +4%. 처치 시 지속시간 갱신, 만료 시 모두 사라집니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">미카엘의 진군</font>: 최대 <font color=\"#77D914\">10중첩</font>. <font color=\"#77D914\">6번째</font>부터 중첩당 재장전 속도 <font color=\"#77D914\">+2%</font>. 최대 기세 보너스는 피해 <font color=\"#77D914\">+40%</font>, 재장전 속도 <font color=\"#77D914\">+10%</font>입니다.",
+     "text": "[20레벨 캡스톤] 미카엘의 진군: 최대 10중첩. 6번째부터 중첩당 재장전 속도 +2%. 최대 기세 보너스는 피해 +40%, 재장전 속도 +10%입니다.",
+     "isCapstone": true
+    }
+   ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전사의 단련</font>: 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 재장전 속도 <font color=\"#77D914\">+%x1_2%%</font>.",
+     "text": "[패시브] 전사의 단련: 모든 무기 피해 +%x1_1%%, 재장전 속도 +%x1_2%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전사의 단련</font>: 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 재장전 속도 <font color=\"#77D914\">+%x1_2%%</font>.",
+     "text": "[패시브] 전사의 단련: 모든 무기 피해 +%x1_1%%, 재장전 속도 +%x1_2%%.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">전투의 기세</font>: 처치 시 <font color=\"#77D914\">4초</font>간 최대 <font color=\"#77D914\">5중첩</font>, 중첩당 피해 <font color=\"#77D914\">+4%</font>. 처치 시 지속시간 갱신, 만료 시 모두 사라집니다.",
+     "text": "[10레벨 캡스톤] 전투의 기세: 처치 시 4초간 최대 5중첩, 중첩당 피해 +4%. 처치 시 지속시간 갱신, 만료 시 모두 사라집니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">미카엘의 진군</font>: 최대 <font color=\"#77D914\">10중첩</font>. <font color=\"#77D914\">6번째</font>부터 중첩당 재장전 속도 <font color=\"#77D914\">+2%</font>. 최대 기세 보너스는 피해 <font color=\"#77D914\">+40%</font>, 재장전 속도 <font color=\"#77D914\">+10%</font>입니다.",
+     "text": "[20레벨 캡스톤] 미카엘의 진군: 최대 10중첩. 6번째부터 중첩당 재장전 속도 +2%. 최대 기세 보너스는 피해 +40%, 재장전 속도 +10%입니다.",
+     "isCapstone": true
+    }
+   ],
+   "noCapstoneNote": null,
+   "skills": [
+    {
+     "key": "AssaultPower",
+     "name": "강습 화력",
+     "standardDesc": "자신의 모든 무기 피해 +10% 증가.",
+     "deluxeDesc": "자신의 모든 무기 피해 +16% 증가.",
+     "standardDescRaw": "자신의 모든 무기 피해 +10% 증가.",
+     "deluxeDescRaw": "자신의 모든 무기 피해 +16% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_AssaultPower.png"
+    },
+    {
+     "key": "ExploitWeakness",
+     "name": "약점 공략",
+     "standardDesc": "자신의 헤드샷 피해 +20% 증가.",
+     "deluxeDesc": "자신의 헤드샷 피해 +30% 증가.",
+     "standardDescRaw": "자신의 헤드샷 피해 +20% 증가.",
+     "deluxeDescRaw": "자신의 헤드샷 피해 +30% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_ExploitWeakness.png"
+    },
+    {
+     "key": "LargeHunt",
+     "name": "대형 사냥",
+     "standardDesc": "자신의 SC·FP·QFP 피해 +16% 증가.",
+     "deluxeDesc": "자신의 SC·FP·QFP 피해 +24% 증가.",
+     "standardDescRaw": "자신의 SC·FP·QFP 피해 +16% 증가.",
+     "deluxeDescRaw": "자신의 SC·FP·QFP 피해 +24% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_LargeHunt.png"
+    },
+    {
+     "key": "PiercingWarhead",
+     "name": "관통 탄두",
+     "standardDesc": "자신의 관통력 +30% 증가.",
+     "deluxeDesc": "자신의 관통력 +50% 증가.",
+     "standardDescRaw": "자신의 관통력 +30% 증가.",
+     "deluxeDescRaw": "자신의 관통력 +50% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_PiercingWarhead.png"
+    },
+    {
+     "key": "RapidFireTraining",
+     "name": "속사 훈련",
+     "standardDesc": "자신의 발사 속도 +10% 증가.",
+     "deluxeDesc": "자신의 발사 속도 +16% 증가.",
+     "standardDescRaw": "자신의 발사 속도 +10% 증가.",
+     "deluxeDescRaw": "자신의 발사 속도 +16% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_RapidFireTraining.png"
+    },
+    {
+     "key": "TacticalReload",
+     "name": "전술 재장전",
+     "standardDesc": "자신의 재장전 속도 +20% 증가.",
+     "deluxeDesc": "자신의 재장전 속도 +30% 증가.",
+     "standardDescRaw": "자신의 재장전 속도 +20% 증가.",
+     "deluxeDescRaw": "자신의 재장전 속도 +30% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_TacticalReload.png"
+    },
+    {
+     "key": "ExtendedMagazine",
+     "name": "확장 탄창",
+     "standardDesc": "자신의 탄창 용량 +20% 증가.",
+     "deluxeDesc": "자신의 탄창 용량 +40% 증가.",
+     "standardDescRaw": "자신의 탄창 용량 +20% 증가.",
+     "deluxeDescRaw": "자신의 탄창 용량 +40% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_ExtendedMagazine.png"
+    },
+    {
+     "key": "ReserveDepot",
+     "name": "예비 탄약고",
+     "standardDesc": "자신의 최대 휴대 탄약 +40% 증가.",
+     "deluxeDesc": "자신의 최대 휴대 탄약 +80% 증가.",
+     "standardDescRaw": "자신의 최대 휴대 탄약 +40% 증가.",
+     "deluxeDescRaw": "자신의 최대 휴대 탄약 +80% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_ReserveDepot.png"
+    },
+    {
+     "key": "RecoilControl",
+     "name": "반동 제어",
+     "standardDesc": "자신의 반동 감소 30% 감소.",
+     "deluxeDesc": "자신의 반동 감소 50% 감소.",
+     "standardDescRaw": "자신의 반동 감소 30% 감소.",
+     "deluxeDescRaw": "자신의 반동 감소 50% 감소.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_RecoilControl.png"
+    },
+    {
+     "key": "CombatMobility",
+     "name": "전투 기동",
+     "standardDesc": "자신의 이동속도 +10% 증가.",
+     "deluxeDesc": "자신의 이동속도 +16% 증가.",
+     "standardDescRaw": "자신의 이동속도 +10% 증가.",
+     "deluxeDescRaw": "자신의 이동속도 +16% 증가.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Michael_CombatMobility.png"
+    }
+   ],
+   "skillCount": 10,
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "rankIcons": [],
+   "icon": "icons/michael.png"
+  },
+  {
+   "key": "Ophanim",
+   "name": "오파님",
+   "parentPerk": "FieldMedic",
+   "unlockLevel": 20,
+   "unlockRequirements": [
+    {
+     "perk": "FieldMedic",
+     "level": 20
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 20,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "summary": "사망한 팀원을 부활시키고 전장 복귀를 강화하는 부활 전문 퍼크",
+   "role": "사망한 팀원을 부활시키고 전장 복귀를 강화하는 부활 전문 퍼크",
+   "summaryHtml": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 레벨당 증가하는 패시브 효과가 없습니다.",
+     "text": "[패시브] 레벨당 증가하는 패시브 효과가 없습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">부활의 약속</font>: 사망한 팀원을 <font color=\"#77D914\">%x%</font>초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "text": "[10레벨 캡스톤] 부활의 약속: 사망한 팀원을 %x%초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">재림</font>: 부활 시간이 <font color=\"#77D914\">%x%</font>초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "text": "[20레벨 캡스톤] 재림: 부활 시간이 %x%초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "isCapstone": true
+    }
+   ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 레벨당 증가하는 패시브 효과가 없습니다.",
+     "text": "[패시브] 레벨당 증가하는 패시브 효과가 없습니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 레벨당 증가하는 패시브 효과가 없습니다.",
+     "text": "[패시브] 레벨당 증가하는 패시브 효과가 없습니다.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">부활의 약속</font>: 사망한 팀원을 <font color=\"#77D914\">%x%</font>초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "text": "[10레벨 캡스톤] 부활의 약속: 사망한 팀원을 %x%초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">재림</font>: 부활 시간이 <font color=\"#77D914\">%x%</font>초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "text": "[20레벨 캡스톤] 재림: 부활 시간이 %x%초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "isCapstone": true
+    }
+   ],
+   "noCapstoneNote": null,
+   "skills": [
+    {
+     "key": "OmniscientGaze",
+     "name": "전지적 시선",
+     "standardDesc": "부활시킨 팀원이 5초 동안 무적이 됩니다.",
+     "deluxeDesc": "부활시킨 팀원이 10초 동안 무적이 됩니다.",
+     "standardDescRaw": "부활시킨 팀원이 5초 동안 무적이 됩니다.",
+     "deluxeDescRaw": "부활시킨 팀원이 10초 동안 무적이 됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_OmniscientGaze.png"
+    },
+    {
+     "key": "SaviorsPrivilege",
+     "name": "구원자의 특권",
+     "standardDesc": "팀원을 부활시키면 자신이 5초 동안 무적이 됩니다.",
+     "deluxeDesc": "팀원을 부활시키면 자신이 10초 동안 무적이 됩니다.",
+     "standardDescRaw": "팀원을 부활시키면 자신이 5초 동안 무적이 됩니다.",
+     "deluxeDescRaw": "팀원을 부활시키면 자신이 10초 동안 무적이 됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_SaviorsPrivilege.png"
+    },
+    {
+     "key": "AngelsWrath",
+     "name": "천사의 진노",
+     "standardDesc": "팀원이 사망하면 20초 동안 피해 +50%, 피해 저항 +25%, 이동속도 +25%를 얻습니다. 추가 사망 시 지속시간이 갱신됩니다.",
+     "deluxeDesc": "팀원이 사망하면 40초 동안 피해 +50%, 피해 저항 +25%, 이동속도 +25%를 얻습니다. 추가 사망 시 지속시간이 갱신됩니다.",
+     "standardDescRaw": "팀원이 사망하면 20초 동안 피해 +50%, 피해 저항 +25%, 이동속도 +25%를 얻습니다. 추가 사망 시 지속시간이 갱신됩니다.",
+     "deluxeDescRaw": "팀원이 사망하면 40초 동안 피해 +50%, 피해 저항 +25%, 이동속도 +25%를 얻습니다. 추가 사망 시 지속시간이 갱신됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_AngelsWrath.png"
+    },
+    {
+     "key": "BlessingOfTheDead",
+     "name": "망자의 축복",
+     "standardDesc": "팀원이 사망하면 살아 있는 팀원들이 10초 동안 피해 저항 +10%를 얻습니다. 연속 사망 시 남은 지속시간이 더해지며, 저항 수치는 중첩되지 않습니다.",
+     "deluxeDesc": "팀원이 사망하면 살아 있는 팀원들이 15초 동안 피해 저항 +15%를 얻습니다. 연속 사망 시 남은 지속시간이 더해지며, 저항 수치는 중첩되지 않습니다.",
+     "standardDescRaw": "팀원이 사망하면 살아 있는 팀원들이 10초 동안 피해 저항 +10%를 얻습니다. 연속 사망 시 남은 지속시간이 더해지며, 저항 수치는 중첩되지 않습니다.",
+     "deluxeDescRaw": "팀원이 사망하면 살아 있는 팀원들이 15초 동안 피해 저항 +15%를 얻습니다. 연속 사망 시 남은 지속시간이 더해지며, 저항 수치는 중첩되지 않습니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_BlessingOfTheDead.png"
+    },
+    {
+     "key": "SecondComing",
+     "name": "재림의 힘",
+     "standardDesc": "부활시킨 팀원이 10초 동안 피해 +30%를 얻습니다.",
+     "deluxeDesc": "부활시킨 팀원이 20초 동안 피해 +30%를 얻습니다.",
+     "standardDescRaw": "부활시킨 팀원이 10초 동안 피해 +30%를 얻습니다.",
+     "deluxeDescRaw": "부활시킨 팀원이 20초 동안 피해 +30%를 얻습니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_SecondComing.png"
+    },
+    {
+     "key": "SalvationsPrice",
+     "name": "구원의 대가",
+     "standardDesc": "부활시킨 팀원이 현재 지닌 도쉬의 10%를 이전받습니다. 해당 팀원에게서 차감하며 소수점은 버립니다.",
+     "deluxeDesc": "부활시킨 팀원이 현재 지닌 도쉬의 18%를 이전받습니다. 해당 팀원에게서 차감하며 소수점은 버립니다.",
+     "standardDescRaw": "부활시킨 팀원이 현재 지닌 도쉬의 10%를 이전받습니다. 해당 팀원에게서 차감하며 소수점은 버립니다.",
+     "deluxeDescRaw": "부활시킨 팀원이 현재 지닌 도쉬의 18%를 이전받습니다. 해당 팀원에게서 차감하며 소수점은 버립니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_SalvationsPrice.png"
+    },
+    {
+     "key": "ImmediateDeployment",
+     "name": "즉시 전장 투입",
+     "standardDesc": "부활시킨 팀원이 5초 동안 이동속도 +15%를 얻습니다.",
+     "deluxeDesc": "부활시킨 팀원이 10초 동안 이동속도 +30%를 얻습니다.",
+     "standardDescRaw": "부활시킨 팀원이 5초 동안 이동속도 +15%를 얻습니다.",
+     "deluxeDescRaw": "부활시킨 팀원이 10초 동안 이동속도 +30%를 얻습니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_ImmediateDeployment.png"
+    },
+    {
+     "key": "OpenYourEyes",
+     "name": "눈을 떠라",
+     "standardDesc": "부활 시간을 5초 단축합니다. 발을 디뎌라와 합산됩니다.",
+     "deluxeDesc": "부활 시간을 10초 단축합니다. 발을 디뎌라와 합산됩니다.",
+     "standardDescRaw": "부활 시간을 5초 단축합니다. 발을 디뎌라와 합산됩니다.",
+     "deluxeDescRaw": "부활 시간을 10초 단축합니다. 발을 디뎌라와 합산됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_OpenYourEyes.png"
+    },
+    {
+     "key": "StandOnYourFeet",
+     "name": "발을 디뎌라",
+     "standardDesc": "부활 시간을 5초 단축합니다. 눈을 떠라와 합산됩니다.",
+     "deluxeDesc": "부활 시간을 10초 단축합니다. 눈을 떠라와 합산됩니다.",
+     "standardDescRaw": "부활 시간을 5초 단축합니다. 눈을 떠라와 합산됩니다.",
+     "deluxeDescRaw": "부활 시간을 10초 단축합니다. 눈을 떠라와 합산됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_StandOnYourFeet.png"
+    },
+    {
+     "key": "KillHorzine",
+     "name": "가서 호르진을 죽여라",
+     "standardDesc": "부활시킨 팀원이 해당 매치 동안 영구 피해 +2%를 얻습니다. 부활할 때마다 중첩되며 사망과 웨이브 전환 후에도 유지됩니다.",
+     "deluxeDesc": "부활시킨 팀원이 해당 매치 동안 영구 피해 +3%를 얻습니다. 부활할 때마다 중첩되며 사망과 웨이브 전환 후에도 유지됩니다.",
+     "standardDescRaw": "부활시킨 팀원이 해당 매치 동안 영구 피해 +2%를 얻습니다. 부활할 때마다 중첩되며 사망과 웨이브 전환 후에도 유지됩니다.",
+     "deluxeDescRaw": "부활시킨 팀원이 해당 매치 동안 영구 피해 +3%를 얻습니다. 부활할 때마다 중첩되며 사망과 웨이브 전환 후에도 유지됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": "icons/skills/Ophanim_KillHorzine.png"
+    }
+   ],
+   "skillCount": 10,
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "rankIcons": [],
+   "icon": "icons/ophanim.png"
   },
   {
    "key": "Symbiote",
@@ -24199,13 +25001,13 @@
   "holdingMelee": 0.75
  },
  "meta": {
-  "advancedPerkCount": 49,
+  "advancedPerkCount": 52,
   "basePerkCount": 10,
-  "totalSkills": 449,
+  "totalSkills": 483,
   "release": {
    "version": "10.19.9",
    "workshopId": "3809067086",
-   "publishedUtc": "2026-10-19T12:46:09Z",
+   "publishedUtc": "2026-10-19 오후 12:46:09",
    "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
    "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
    "serverGameConfigDiffers": true

@@ -78,12 +78,24 @@ def main():
         for skill in perk.get("skills", []):
             if skill["key"].lower() in retired_skills:
                 failures.append(f"retired skill is listed: {perk['key']}/{skill['key']}")
-            localized = (
-                build.ci_lookup(reborn, f"WMUpgrade_Skill_{skill['key']}")
-                or build.ci_lookup(kor, f"ZTUpgrade_Skill_{skill['key']}")
-                or build.ci_lookup(kor, f"DKUpgrade_Skill_{skill['key']}")
-                or {}
-            )
+            if perk["key"] == "FieldMedic":
+                localized = next((build.ci_lookup(kor, name) for name in (
+                    f"ZTUpgrade_Skill_FieldMedic_{skill['key']}",
+                    f"DKUpgrade_Skill_FieldMedic_{skill['key']}",
+                    f"ZUTUpgrade_Skill_{skill['key']}",
+                    f"ZTUpgrade_Skill_{skill['key']}",
+                    f"DKUpgrade_Skill_{skill['key']}",
+                ) if build.ci_lookup(kor, name) is not None), {})
+                if not localized:
+                    localized = (build.ci_lookup(reborn, f"WMUpgrade_Skill_{skill['key']}")
+                                 or build.ci_lookup(kor, f"ZUTUpgrade_Skill_{skill['key']}") or {})
+            else:
+                localized = (
+                    build.ci_lookup(reborn, f"WMUpgrade_Skill_{skill['key']}")
+                    or build.ci_lookup(kor, f"ZTUpgrade_Skill_{skill['key']}")
+                    or build.ci_lookup(kor, f"DKUpgrade_Skill_{skill['key']}")
+                    or {}
+                )
             standard = localized.get("StandardSkillUpgradeDescription") or localized.get("SkillUpgradeDescription1")
             deluxe = localized.get("DeluxeSkillUpgradeDescription") or localized.get("SkillUpgradeDescription2")
             if not skill.get("allowsDeluxe", True):

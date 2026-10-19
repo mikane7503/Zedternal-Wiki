@@ -195,6 +195,15 @@ def skill_icon_path(short, perk_key=None):
         os.path.join(SKILL_ICON_DIR, "FocusInjection.png")
     ):
         return "icons/skills/FocusInjection.png"
+    # All newly redesigned medic class icons have one texture for both tiers.
+    # FieldMedic's custom catalog classes inherit Phoenix Prayer from their
+    # shared runtime superclass; keep the wiki aligned with that actual icon.
+    if perk_key == "FieldMedic" and short in MEDIC_REMAKE_FIELD_SKILLS:
+        if os.path.isfile(os.path.join(SKILL_ICON_DIR, "PhoenixPrayer.png")):
+            return "icons/skills/PhoenixPrayer.png"
+    # Override module classes share one UPK texture by design.
+    if perk_key == "Override" and os.path.isfile(os.path.join(SKILL_ICON_DIR, "OverrideWeapon.png")):
+        return "icons/skills/OverrideWeapon.png"
     if os.path.exists(os.path.join(SKILL_ICON_DIR, f"{short}.png")):
         return f"icons/skills/{short}.png"
     return None
@@ -209,6 +218,12 @@ PERK_ICON_FALLBACKS = {
     # The perk's code name remains SpecialAgent, while the shipped perk and
     # localization name/icon were renamed to Spetsnaz.
     "SpecialAgent": "icons/spetsnaz.png",
+}
+
+MEDIC_REMAKE_FIELD_SKILLS = {
+    "PrecisionMedicine", "ChargeCircuit", "EconomicalDose", "ContinuousDosing",
+    "MedicalSupplies", "FieldSuture", "PatientTransport", "MedicSurvival",
+    "AirborneAgent", "SymbioticHealth", "Zedatif", "Fastball",
 }
 
 ADVANCED_RANK_ICON_NAMES = {
@@ -257,6 +272,10 @@ def perk_icon_path(short, parent=None):
     # into docs/icons by the wiki sync. Prefer their current named assets over
     # the old generic Demolitionist fallback.
     custom_icons = {
+        "Archangel": "icons/archangel.png",
+        "Gabriel": "icons/gabriel.png",
+        "Michael": "icons/michael.png",
+        "Ophanim": "icons/ophanim.png",
         "Override": "icons/override.png",
         "Executioner": "icons/executioner.png",
         "Fraulein": "icons/fraulein.png",
@@ -810,6 +829,21 @@ def merge_runtime_perk_registrations(active, catalog_path):
             if (re.search(rf"ZTUpgrade_Perk_{key}", source, re.IGNORECASE)
                     and (key != "Override" or re.search(r"PrepareCatalog\s*\(\)", source, re.IGNORECASE))):
                 active.setdefault(key, False)
+    # The medic remake owns its advanced catalog entries at runtime. Their
+    # names and unlocks are declared in ZTMedicRemake / unlock rules, not the
+    # older static Config_SkillUpgrade roster.
+    medic_path = os.path.join(SOURCE_CLASS_DIR, "ZTMedicRemake.uc")
+    if os.path.isfile(medic_path):
+        with open(medic_path, encoding="utf-8-sig") as stream:
+            medic_source = stream.read()
+        for key in ("Gabriel", "Michael"):
+            if re.search(rf"ZTUpgrade_Perk_{key}", medic_source, re.IGNORECASE):
+                active.setdefault(key, False)
+    ophanim_path = os.path.join(SOURCE_CLASS_DIR, "ZTOphanimSystem.uc")
+    if os.path.isfile(ophanim_path):
+        with open(ophanim_path, encoding="utf-8-sig") as stream:
+            if "ZTUpgrade_Perk_Ophanim" in stream.read():
+                active.setdefault("Ophanim", False)
     return active
 
 
@@ -836,6 +870,34 @@ def merge_runtime_unlock_rules(rules):
 
 def runtime_skill_roster(key):
     """Return skill short names inserted by a perk's runtime catalog system."""
+    # Four advanced medicine perks plus the FieldMedic runtime catalog all
+    # share ZTMedicRemake's ordered class array. Group values are encoded by
+    # contiguous ranges in PrepareCatalog: 0..7 FieldMedic, 8..17 Archangel,
+    # 18..27 Gabriel, 28..37 Michael. Four inherited/retained base skills are
+    # added separately by that same catalog.
+    if key in {"FieldMedic", "Archangel", "Gabriel", "Michael"}:
+        path = os.path.join(SOURCE_CLASS_DIR, "ZTMedicRemake.uc")
+        if not os.path.isfile(path):
+            return []
+        with open(path, encoding="utf-8-sig") as stream:
+            source = stream.read()
+        roster = [None] * 38
+        for index, class_key, short in re.findall(
+            r"Skills\((\d+)\)\s*=\s*class'ZTUpgrade_Skill_(\w+?)_(\w+)'",
+            source, re.IGNORECASE
+        ):
+            roster[int(index)] = (class_key, short)
+        group_ranges = {"FieldMedic": (0, 8), "Archangel": (8, 18),
+                        "Gabriel": (18, 28), "Michael": (28, 38)}
+        start, end = group_ranges[key]
+        names = [short for item in roster[start:end] if item for class_key, short in [item]]
+        if key == "FieldMedic":
+            names.extend(re.findall(
+                r'AddSkill\("(?:ZedternalTempered\.)?ZUTUpgrade_Perk_Base_FieldMedic"\s*,\s*'
+                r'"ZedternalTempered\.(?:ZT|ZUT)Upgrade_Skill_(?:FieldMedic_)?(\w+)"\)',
+                source, re.IGNORECASE
+            ))
+        return list(dict.fromkeys(names))
     # Override's module catalog is owned by ZTOverclockSystem and its skill
     # class names have an extra Overclock_Module segment.
     if key == "Override":
@@ -1875,11 +1937,15 @@ def build():
         # but absent from the Config_SkillUpgrade registry (e.g. Gambit's
         # entire hardcoded skill set) -- run them through the exact same
         # pipeline as registry skills.
-        skill_roster = [
-            entry for entry in dk_skill_registry.get(key, [])
-            if entry[0].lower() not in retired_skill_names
-        ]
-        skill_roster += [(short, False, None) for short in runtime_skill_roster(key)]
+        medic_runtime_roster = runtime_skill_roster(key) if key in {"Archangel", "Gabriel", "Michael"} else []
+        if key in {"Archangel", "Gabriel", "Michael"}:
+            skill_roster = [(short, False, None) for short in medic_runtime_roster]
+        else:
+            skill_roster = [
+                entry for entry in dk_skill_registry.get(key, [])
+                if entry[0].lower() not in retired_skill_names
+            ]
+            skill_roster += [(short, False, None) for short in runtime_skill_roster(key)]
         if key.lower() in retired_perk_names:
             skill_roster = []
         skill_roster += [(short, False, None) for short in perk_extras.get("skills", [])]
@@ -2128,16 +2194,29 @@ def build():
         base_is_patched = bool(base_patch_note)
 
         base_skills = []
-        for short, is_disabled, disabled_note in wm_skill_registry.get(bkey, []):
+        base_skill_roster = (
+            [(short, False, None) for short in runtime_skill_roster("FieldMedic")]
+            if bkey == "FieldMedic" else wm_skill_registry.get(bkey, [])
+        )
+        for short, is_disabled, disabled_note in base_skill_roster:
             if short.lower() in retired_skill_names:
                 continue
+            base_skill_loc_candidates = [
+                f"ZTUpgrade_Skill_FieldMedic_{short}", f"DKUpgrade_Skill_FieldMedic_{short}",
+                f"ZUTUpgrade_Skill_{short}",
+                f"ZTUpgrade_Skill_{short}", f"DKUpgrade_Skill_{short}",
+            ]
             skill_section = f"DKWrapper_Skill_{short}"
-            skor = (
-                ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}")
-                or ci_lookup(kor_sections, f"ZTUpgrade_Skill_{short}")
-                or ci_lookup(kor_sections, f"DKUpgrade_Skill_{short}")
-                or {}
-            )
+            if bkey == "FieldMedic":
+                skor = next((ci_lookup(kor_sections, candidate) for candidate in base_skill_loc_candidates
+                             if ci_lookup(kor_sections, candidate)), None)
+                if skor is None:
+                    skor = (ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}")
+                            or ci_lookup(kor_sections, f"ZUTUpgrade_Skill_{short}") or {})
+            else:
+                skor = (ci_lookup(reborn_kor_sections, f"WMUpgrade_Skill_{short}")
+                        or ci_lookup(kor_sections, f"ZTUpgrade_Skill_{short}")
+                        or ci_lookup(kor_sections, f"DKUpgrade_Skill_{short}") or {})
             sini = ci_lookup(main_sections, skill_section) or []
             cost_keys = set(SKILL_COST_STATS.get(short, []))
             signed_sini = [(k, to_num(v) * (-1 if k in cost_keys else 1) if isinstance(to_num(v), (int, float)) else to_num(v))
@@ -2148,7 +2227,7 @@ def build():
 
             # Use the exact Standard/Deluxe text present in the Korean source.
             std_raw = skor.get("StandardSkillUpgradeDescription")
-            allows_deluxe = skill_allows_deluxe(short)
+            allows_deluxe = skill_allows_deluxe(short, bkey if bkey == "FieldMedic" else None)
             delx_raw = skor.get("DeluxeSkillUpgradeDescription") if allows_deluxe else None
             std_fixed = delx_fixed = False
 
@@ -2161,7 +2240,7 @@ def build():
                 "deluxeDescRaw": delx_raw,
                 "rawValues": raw_values,
                 "allowsDeluxe": allows_deluxe,
-                "deluxeAvailable": source_skill_has_deluxe(short),
+                "deluxeAvailable": source_skill_has_deluxe(short, bkey if bkey == "FieldMedic" else None),
                 "hasKorText": bool(skor),
                 "note": override.get("note"),
                 "isPatched": bool(skill_patch_note),
