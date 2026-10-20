@@ -438,8 +438,13 @@
     },
     {
      "level": 10,
-     "perk": "Warlord",
-     "name": "군벌"
+     "perk": "Jagdkommando",
+     "name": "야크트코만도"
+    },
+    {
+     "level": 15,
+     "perk": "NavySEALs",
+     "name": "NAVY SEALs"
     },
     {
      "level": 20,
@@ -1106,10 +1111,10 @@
     {
      "key": "PrecisionMedicine",
      "name": "정밀 의료",
-     "standardDesc": "치료량 +10%.",
-     "deluxeDesc": "치료량 +15%.",
-     "standardDescRaw": "치료량 +10%.",
-     "deluxeDescRaw": "치료량 +15%.",
+     "standardDesc": "필드메딕의 치료 효과가 회복하는 체력이 10% 증가합니다. 메딕 무기와 주사기의 회복량에 적용됩니다.",
+     "deluxeDesc": "필드메딕의 치료 효과가 회복하는 체력이 15% 증가합니다. 메딕 무기와 주사기의 회복량에 적용됩니다.",
+     "standardDescRaw": "필드메딕의 치료 효과가 회복하는 체력이 10% 증가합니다. 메딕 무기와 주사기의 회복량에 적용됩니다.",
+     "deluxeDescRaw": "필드메딕의 치료 효과가 회복하는 체력이 15% 증가합니다. 메딕 무기와 주사기의 회복량에 적용됩니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1126,10 +1131,10 @@
     {
      "key": "ChargeCircuit",
      "name": "충전 회로",
-     "standardDesc": "치료탄 재충전 속도 +10%.",
-     "deluxeDesc": "치료탄 재충전 속도 +15%.",
-     "standardDescRaw": "치료탄 재충전 속도 +10%.",
-     "deluxeDescRaw": "치료탄 재충전 속도 +15%.",
+     "standardDesc": "치료 다트 무기의 충전량이 10% 더 빠르게 재충전됩니다. 다트 한 발의 치료량은 바뀌지 않습니다.",
+     "deluxeDesc": "치료 다트 무기의 충전량이 15% 더 빠르게 재충전됩니다. 다트 한 발의 치료량은 바뀌지 않습니다.",
+     "standardDescRaw": "치료 다트 무기의 충전량이 10% 더 빠르게 재충전됩니다. 다트 한 발의 치료량은 바뀌지 않습니다.",
+     "deluxeDescRaw": "치료 다트 무기의 충전량이 15% 더 빠르게 재충전됩니다. 다트 한 발의 치료량은 바뀌지 않습니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1146,10 +1151,10 @@
     {
      "key": "EconomicalDose",
      "name": "절약형 투약",
-     "standardDesc": "치료탄 충전량 소모 10% 감소.",
-     "deluxeDesc": "치료탄 충전량 소모 15% 감소.",
-     "standardDescRaw": "치료탄 충전량 소모 10% 감소.",
-     "deluxeDescRaw": "치료탄 충전량 소모 15% 감소.",
+     "standardDesc": "치료 다트 한 발의 무기 충전량 소모가 10% 감소해 재충전 전까지 더 많이 발사할 수 있습니다.",
+     "deluxeDesc": "치료 다트 한 발의 무기 충전량 소모가 15% 감소해 재충전 전까지 더 많이 발사할 수 있습니다.",
+     "standardDescRaw": "치료 다트 한 발의 무기 충전량 소모가 10% 감소해 재충전 전까지 더 많이 발사할 수 있습니다.",
+     "deluxeDescRaw": "치료 다트 한 발의 무기 충전량 소모가 15% 감소해 재충전 전까지 더 많이 발사할 수 있습니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1166,10 +1171,10 @@
     {
      "key": "ContinuousDosing",
      "name": "연속 투약",
-     "standardDesc": "치료탄 발사 간격 10% 감소.",
-     "deluxeDesc": "치료탄 발사 간격 15% 감소.",
-     "standardDescRaw": "치료탄 발사 간격 10% 감소.",
-     "deluxeDescRaw": "치료탄 발사 간격 15% 감소.",
+     "standardDesc": "치료 다트 발사 사이의 대기시간이 10% 줄어 다음 다트를 더 빨리 발사할 수 있습니다.",
+     "deluxeDesc": "치료 다트 발사 사이의 대기시간이 15% 줄어 다음 다트를 더 빨리 발사할 수 있습니다.",
+     "standardDescRaw": "치료 다트 발사 사이의 대기시간이 10% 줄어 다음 다트를 더 빨리 발사할 수 있습니다.",
+     "deluxeDescRaw": "치료 다트 발사 사이의 대기시간이 15% 줄어 다음 다트를 더 빨리 발사할 수 있습니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1186,10 +1191,10 @@
     {
      "key": "MedicalSupplies",
      "name": "의료 보급품",
-     "standardDesc": "주사기 재충전 속도 +15%.",
-     "deluxeDesc": "주사기 재충전 속도 +25%.",
-     "standardDescRaw": "주사기 재충전 속도 +15%.",
-     "deluxeDescRaw": "주사기 재충전 속도 +25%.",
+     "standardDesc": "메딕 주사기가 15% 더 빠르게 재충전됩니다. 1회 사용당 치료량은 바뀌지 않습니다.",
+     "deluxeDesc": "메딕 주사기가 25% 더 빠르게 재충전됩니다. 1회 사용당 치료량은 바뀌지 않습니다.",
+     "standardDescRaw": "메딕 주사기가 15% 더 빠르게 재충전됩니다. 1회 사용당 치료량은 바뀌지 않습니다.",
+     "deluxeDescRaw": "메딕 주사기가 25% 더 빠르게 재충전됩니다. 1회 사용당 치료량은 바뀌지 않습니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1206,10 +1211,10 @@
     {
      "key": "FieldSuture",
      "name": "현장 봉합",
-     "standardDesc": "주사기로 다른 아군을 치료할 때 치료량 +20%.",
-     "deluxeDesc": "주사기로 다른 아군을 치료할 때 치료량 +30%.",
-     "standardDescRaw": "주사기로 다른 아군을 치료할 때 치료량 +20%.",
-     "deluxeDescRaw": "주사기로 다른 아군을 치료할 때 치료량 +30%.",
+     "standardDesc": "메딕 주사기로 다른 아군을 치료할 때 회복량이 20% 증가합니다. 자신을 치료할 때는 적용되지 않습니다.",
+     "deluxeDesc": "메딕 주사기로 다른 아군을 치료할 때 회복량이 30% 증가합니다. 자신을 치료할 때는 적용되지 않습니다.",
+     "standardDescRaw": "메딕 주사기로 다른 아군을 치료할 때 회복량이 20% 증가합니다. 자신을 치료할 때는 적용되지 않습니다.",
+     "deluxeDescRaw": "메딕 주사기로 다른 아군을 치료할 때 회복량이 30% 증가합니다. 자신을 치료할 때는 적용되지 않습니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1226,10 +1231,10 @@
     {
      "key": "PatientTransport",
      "name": "환자 이송",
-     "standardDesc": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +5%를 얻습니다. 중첩 없이 갱신됩니다.",
-     "deluxeDesc": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +8%를 얻습니다. 중첩 없이 갱신됩니다.",
-     "standardDescRaw": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +5%를 얻습니다. 중첩 없이 갱신됩니다.",
-     "deluxeDescRaw": "아군의 체력을 실제로 회복하면 자신이 3초간 이동속도 +8%를 얻습니다. 중첩 없이 갱신됩니다.",
+     "standardDesc": "아군의 체력을 실제로 회복하면 이동 속도가 3초간 5% 증가합니다. 다시 회복하면 지속시간만 갱신되며 중첩되지 않습니다.",
+     "deluxeDesc": "아군의 체력을 실제로 회복하면 이동 속도가 3초간 8% 증가합니다. 다시 회복하면 지속시간만 갱신되며 중첩되지 않습니다.",
+     "standardDescRaw": "아군의 체력을 실제로 회복하면 이동 속도가 3초간 5% 증가합니다. 다시 회복하면 지속시간만 갱신되며 중첩되지 않습니다.",
+     "deluxeDescRaw": "아군의 체력을 실제로 회복하면 이동 속도가 3초간 8% 증가합니다. 다시 회복하면 지속시간만 갱신되며 중첩되지 않습니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1246,10 +1251,10 @@
     {
      "key": "MedicSurvival",
      "name": "의무병의 생존법",
-     "standardDesc": "자신의 체력이 30% 미만일 때 피해 저항 +10%.",
-     "deluxeDesc": "자신의 체력이 30% 미만일 때 피해 저항 +15%.",
-     "standardDescRaw": "자신의 체력이 30% 미만일 때 피해 저항 +10%.",
-     "deluxeDescRaw": "자신의 체력이 30% 미만일 때 피해 저항 +15%.",
+     "standardDesc": "자신의 체력이 최대 체력의 30% 미만일 때 받는 피해가 10% 감소합니다.",
+     "deluxeDesc": "자신의 체력이 최대 체력의 30% 미만일 때 받는 피해가 15% 감소합니다.",
+     "standardDescRaw": "자신의 체력이 최대 체력의 30% 미만일 때 받는 피해가 10% 감소합니다.",
+     "deluxeDescRaw": "자신의 체력이 최대 체력의 30% 미만일 때 받는 피해가 15% 감소합니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -1326,10 +1331,10 @@
     {
      "key": "Fastball",
      "name": "패스트볼",
-     "standardDesc": "메딕 전용 활성 스킬: 서로 마주 본 아군을 조준하고 M을 눌러 조준 방향으로 발사합니다. 대상은 낙하 피해를 받지 않습니다. 착지 시 반경 600 안에 기본 200의 충격파 피해를 주며, 착지 속도와 이 스킬로 피해가 5% 추가 증가합니다. 대상은 체력 30과 방어구를 최대 25 회복합니다. 재사용 대기시간: 10초.",
-     "deluxeDesc": "발사력이 60% 증가하고 착지 충격파 피해 보너스가 10%가 됩니다. 착지 시 체력을 최대 80, 방어구를 최대 40 회복합니다.",
-     "standardDescRaw": "메딕 전용 활성 스킬: 서로 마주 본 아군을 조준하고 <font color=\"#FFC832\">M</font>을 눌러 조준 방향으로 발사합니다. 대상은 낙하 피해를 받지 않습니다. 착지 시 반경 <font color=\"#77D914\">600</font> 안에 기본 <font color=\"#77D914\">200</font>의 충격파 피해를 주며, 착지 속도와 이 스킬로 피해가 <font color=\"#77D914\">5%</font> 추가 증가합니다. 대상은 체력 <font color=\"#77D914\">30</font>과 방어구를 최대 <font color=\"#77D914\">25</font> 회복합니다. 재사용 대기시간: <font color=\"#77D914\">10초</font>.",
-     "deluxeDescRaw": "발사력이 <font color=\"#77D914\">60%</font> 증가하고 착지 충격파 피해 보너스가 <font color=\"#77D914\">10%</font>가 됩니다. 착지 시 체력을 최대 <font color=\"#77D914\">80</font>, 방어구를 최대 <font color=\"#77D914\">40</font> 회복합니다.",
+     "standardDesc": "가까운 아군을 조준해 M을 누르면 조준 방향으로 날려 보냅니다. 대상은 당신을 바라봐야 하며 거리는 3.5m 이내여야 합니다. 대상은 낙하 피해를 받지 않습니다. 착지하면 6m 충격파가 제드에게 기본 200 피해와 착지 속도 보너스, 스킬 피해 5%를 줍니다. 대상은 체력 30과 방어구 최대 25를 회복합니다. 재사용 대기시간: 10초.",
+     "deluxeDesc": "발사 힘이 60% 증가합니다. 착지 충격파의 스킬 피해 보너스는 10%가 되며, 대상은 체력 최대 80과 방어구 40을 회복합니다.",
+     "standardDescRaw": "가까운 아군을 조준해 <font color=\"#FFC832\">M</font>을 누르면 조준 방향으로 날려 보냅니다. 대상은 당신을 바라봐야 하며 거리는 <font color=\"#77D914\">3.5m</font> 이내여야 합니다. 대상은 낙하 피해를 받지 않습니다. 착지하면 <font color=\"#77D914\">6m</font> 충격파가 제드에게 기본 <font color=\"#77D914\">200</font> 피해와 착지 속도 보너스, 스킬 피해 <font color=\"#77D914\">5%</font>를 줍니다. 대상은 체력 <font color=\"#77D914\">30</font>과 방어구 최대 <font color=\"#77D914\">25</font>를 회복합니다. 재사용 대기시간: <font color=\"#77D914\">10초</font>.",
+     "deluxeDescRaw": "발사 힘이 <font color=\"#77D914\">60%</font> 증가합니다. 착지 충격파의 스킬 피해 보너스는 <font color=\"#77D914\">10%</font>가 되며, 대상은 체력 최대 <font color=\"#77D914\">80</font>과 방어구 <font color=\"#77D914\">40</font>을 회복합니다.",
      "rawValues": [],
      "allowsDeluxe": true,
      "deluxeAvailable": null,
@@ -7690,8 +7695,8 @@
    "icon": "icons/spetsnaz.png"
   },
   {
-   "key": "Warlord",
-   "name": "군벌",
+   "key": "Jagdkommando",
+   "name": "야크트코만도",
    "parentPerk": "Commando",
    "unlockLevel": 10,
    "unlockRequirements": [
@@ -7702,424 +7707,77 @@
    ],
    "isCombinationUnlocked": false,
    "isStatic": false,
-   "hasIniConfig": true,
+   "hasIniConfig": false,
    "maxLevel": 20,
-   "passiveStats": [
-    {
-     "key": "RifleDamage",
-     "label": "소총 피해량",
-     "value": 0.015,
-     "unit": "percent",
-     "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
-    },
-    {
-     "key": "HeadshotDamage",
-     "label": "헤드샷 피해량",
-     "value": 0.015,
-     "unit": "percent",
-     "display": "+1.5%",
-     "lv10": 0.15,
-     "lv20": 0.3,
-     "lv10Display": "+15%",
-     "lv20Display": "+30%",
-     "scaling": true
-    },
-    {
-     "key": "ReloadSpeed",
-     "label": "재장전 속도",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    },
-    {
-     "key": "RecoilReduction",
-     "label": "반동 감소",
-     "value": 0.02,
-     "unit": "percent",
-     "display": "+2%",
-     "lv10": 0.2,
-     "lv20": 0.4,
-     "lv10Display": "+20%",
-     "lv20Display": "+40%",
-     "scaling": true
-    },
-    {
-     "key": "WeaponSwitchSpeed",
-     "label": "무기 전환 속도",
-     "value": 0.02,
-     "unit": "percent",
-     "display": "+2%",
-     "lv10": 0.2,
-     "lv20": 0.4,
-     "lv10Display": "+20%",
-     "lv20Display": "+40%",
-     "scaling": true
-    },
-    {
-     "key": "AmmoCapacity",
-     "label": "탄약 용량",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
-    {
-     "key": "GrenadeCapacity",
-     "label": "수류탄 용량",
-     "value": 1,
-     "unit": "count",
-     "display": "1",
-     "lv10": 1,
-     "lv20": 1,
-     "lv10Display": "1",
-     "lv20Display": "1",
-     "scaling": false,
-     "capstoneLevel": null
-    }
-   ],
+   "passiveStats": [],
+   "fixedStats": [],
    "valueSourceNote": null,
-   "summary": "소총의 화력을 높여 사격전을 지배하는 퍼크",
-   "role": "소총의 화력을 높여 사격전을 지배하는 퍼크",
+   "summary": "모든 무기의 정밀성과 기동력을 높이고 중보스에게 지연 표식을 터트리는 사냥 퍼크",
+   "role": "모든 무기의 정밀성과 기동력을 높이고 중보스에게 지연 표식을 터트리는 사냥 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 소총 <font color=\"#00BFFF\">피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "[패시브] 소총 피해량이 %x%% 증가합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 탄퍼짐 <font color=\"#77D914\">-%x1_2%%</font>, 이동속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기 피해 +%x1_1%%, 탄퍼짐 -%x1_2%%, 이동속도 +%x1_3%%.",
      "isCapstone": false
     },
     {
-     "raw": "소총 <font color=\"#00BFFF\">헤드샷 피해</font>량이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "소총 헤드샷 피해량이 %x%% 증가합니다.",
-     "isCapstone": false
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">사냥 표식</font>: 모든 무기로 <font color=\"#00BFFF\">중보스</font>에게 실제로 입힌 피해를 대상별로 <font color=\"#77D914\">2초</font> 동안 누적한 뒤 <font color=\"#77D914\">20%</font>를 한 번에 가합니다. 누적 표식 피해가 대상의 남은 머리 또는 몸통 체력을 넘으면 즉시 발동합니다.",
+     "text": "[10레벨 캡스톤] 사냥 표식: 모든 무기로 중보스에게 실제로 입힌 피해를 대상별로 2초 동안 누적한 뒤 20%를 한 번에 가합니다. 누적 표식 피해가 대상의 남은 머리 또는 몸통 체력을 넘으면 즉시 발동합니다.",
+     "isCapstone": true
     },
     {
-     "raw": "<font color=\"#00BFFF\">재장전 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "재장전 속도가 %x%% 증가합니다.",
-     "isCapstone": false
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">죽음의 표식</font>: 표식 피해가 <font color=\"#77D914\">30%</font>로 증가합니다. 나머지 표식 규칙은 같습니다.",
+     "text": "[20레벨 캡스톤] 죽음의 표식: 표식 피해가 30%로 증가합니다. 나머지 표식 규칙은 같습니다.",
+     "isCapstone": true
     },
     {
-     "raw": "<font color=\"#00BFFF\">반동</font>이 <font color=\"#77D914\">%x%%</font> 감소합니다.",
-     "text": "반동이 %x%% 감소합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "무기 전환 속도가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "무기 전환 속도가 %x%% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#00BFFF\">탄약</font> 용량이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "탄약 용량이 %x%% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#77D914\">5 레벨</font>마다 <font color=\"#00BFFF\">수류탄</font> 용량이 <font color=\"#77D914\">+1</font>씩 증가합니다.",
-     "text": "5 레벨마다 수류탄 용량이 +1씩 증가합니다.",
+     "raw": "표식은 플레이어·대상별로 독립적입니다. 추가 타격은 2초 기한을 늘리지 않습니다. 시전자 사망 또는 웨이브·게임 종료 시 대기 중인 표식이 사라집니다.",
+     "text": "표식은 플레이어·대상별로 독립적입니다. 추가 타격은 2초 기한을 늘리지 않습니다. 시전자 사망 또는 웨이브·게임 종료 시 대기 중인 표식이 사라집니다.",
      "isCapstone": false
     }
    ],
    "overviewDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 소총 <font color=\"#00BFFF\">피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "[패시브] 소총 피해량이 %x%% 증가합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 탄퍼짐 <font color=\"#77D914\">-%x1_2%%</font>, 이동속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기 피해 +%x1_1%%, 탄퍼짐 -%x1_2%%, 이동속도 +%x1_3%%.",
      "isCapstone": false
     },
     {
-     "raw": "소총 <font color=\"#00BFFF\">헤드샷 피해</font>량이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "소총 헤드샷 피해량이 %x%% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#00BFFF\">재장전 속도</font>가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "재장전 속도가 %x%% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#00BFFF\">반동</font>이 <font color=\"#77D914\">%x%%</font> 감소합니다.",
-     "text": "반동이 %x%% 감소합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "무기 전환 속도가 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "무기 전환 속도가 %x%% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#00BFFF\">탄약</font> 용량이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "탄약 용량이 %x%% 증가합니다.",
-     "isCapstone": false
-    },
-    {
-     "raw": "<font color=\"#77D914\">5 레벨</font>마다 <font color=\"#00BFFF\">수류탄</font> 용량이 <font color=\"#77D914\">+1</font>씩 증가합니다.",
-     "text": "5 레벨마다 수류탄 용량이 +1씩 증가합니다.",
+     "raw": "표식은 플레이어·대상별로 독립적입니다. 추가 타격은 2초 기한을 늘리지 않습니다. 시전자 사망 또는 웨이브·게임 종료 시 대기 중인 표식이 사라집니다.",
+     "text": "표식은 플레이어·대상별로 독립적입니다. 추가 타격은 2초 기한을 늘리지 않습니다. 시전자 사망 또는 웨이브·게임 종료 시 대기 중인 표식이 사라집니다.",
      "isCapstone": false
     }
    ],
    "passiveDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 소총 <font color=\"#00BFFF\">피해량</font>이 <font color=\"#77D914\">%x%%</font> 증가합니다.",
-     "text": "[패시브] 소총 피해량이 %x%% 증가합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 탄퍼짐 <font color=\"#77D914\">-%x1_2%%</font>, 이동속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기 피해 +%x1_1%%, 탄퍼짐 -%x1_2%%, 이동속도 +%x1_3%%.",
      "isCapstone": false
     }
    ],
-   "capstoneDescriptions": [],
-   "noCapstoneNote": "등록된 캡스톤 효과가 없습니다.",
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">사냥 표식</font>: 모든 무기로 <font color=\"#00BFFF\">중보스</font>에게 실제로 입힌 피해를 대상별로 <font color=\"#77D914\">2초</font> 동안 누적한 뒤 <font color=\"#77D914\">20%</font>를 한 번에 가합니다. 누적 표식 피해가 대상의 남은 머리 또는 몸통 체력을 넘으면 즉시 발동합니다.",
+     "text": "[10레벨 캡스톤] 사냥 표식: 모든 무기로 중보스에게 실제로 입힌 피해를 대상별로 2초 동안 누적한 뒤 20%를 한 번에 가합니다. 누적 표식 피해가 대상의 남은 머리 또는 몸통 체력을 넘으면 즉시 발동합니다.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">죽음의 표식</font>: 표식 피해가 <font color=\"#77D914\">30%</font>로 증가합니다. 나머지 표식 규칙은 같습니다.",
+     "text": "[20레벨 캡스톤] 죽음의 표식: 표식 피해가 30%로 증가합니다. 나머지 표식 규칙은 같습니다.",
+     "isCapstone": true
+    }
+   ],
+   "noCapstoneNote": null,
    "skills": [
     {
-     "key": "ArmorPiercingProtocol",
-     "name": "장갑 관통 프로토콜",
-     "standardDesc": "소총탄의 관통력이 +40% 증가하고, 대형 ZED에게 +15% 추가 피해를 입힙니다.",
-     "deluxeDesc": "소총탄의 관통력이 +70% 증가하고, 대형 ZED에게 +25% 추가 피해를 입힙니다.",
-     "standardDescRaw": "소총탄의 <font color=\"#66CCFF\">관통력</font>이 <font color=\"#77D914\">+40%</font> 증가하고, 대형 ZED에게 <font color=\"#77D914\">+15%</font> 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "소총탄의 <font color=\"#66CCFF\">관통력</font>이 <font color=\"#77D914\">+70%</font> 증가하고, 대형 ZED에게 <font color=\"#77D914\">+25%</font> 추가 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "PenetrationBonus",
-       "label": "관통력 보너스",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "PenetrationBonus",
-       "label": "관통력 보너스",
-       "value": 0.7,
-       "unit": "percent",
-       "display": "+70%"
-      },
-      {
-       "key": "LargeZedDamage",
-       "label": "대형 제드 피해량",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "LargeZedDamage",
-       "label": "대형 제드 피해량",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/ArmorPiercingProtocol.png"
-    },
-    {
-     "key": "BattlefieldAwareness",
-     "name": "전장 인식",
-     "standardDesc": "ZED 타임 중 소총으로 적을 처치할 때마다 지속 시간이 0.15초 연장됩니다.",
-     "deluxeDesc": "ZED 타임 중 소총으로 적을 처치할 때마다 지속 시간이 0.25초 연장됩니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임 중</font> 소총으로 적을 처치할 때마다 지속 시간이 <font color=\"#77D914\">0.15초</font> 연장됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임 중</font> 소총으로 적을 처치할 때마다 지속 시간이 <font color=\"#77D914\">0.25초</font> 연장됩니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "ZedTimeExtensionAmount",
-       "label": "제드 시간 연장 량",
-       "value": 0.15,
-       "unit": "seconds",
-       "display": "0.15초"
-      },
-      {
-       "key": "ZedTimeExtensionAmount",
-       "label": "제드 시간 연장 량",
-       "value": 0.25,
-       "unit": "seconds",
-       "display": "0.25초"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 0.300000; 구 0.500000",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/BattlefieldAwareness.png"
-    },
-    {
-     "key": "DeepReserves",
-     "name": "심층 매장량",
-     "standardDesc": "코만도 또는 샤프슈터 무기의 탄창 용량이 표준 25% / 디럭스 40%, 주 무기 휴대 탄약이 표준 20% / 디럭스 35% 증가합니다. 휴대 탄약 보너스는 보조 탄약에 적용되지 않습니다.",
-     "deluxeDesc": "코만도 또는 샤프슈터 무기의 탄창 용량이 표준 25% / 디럭스 40%, 주 무기 휴대 탄약이 표준 20% / 디럭스 35% 증가합니다. 휴대 탄약 보너스는 보조 탄약에 적용되지 않습니다.",
-     "standardDescRaw": "코만도 또는 샤프슈터 무기의 <font color=\"#66CCFF\">탄창 용량</font>이 표준 <font color=\"#77D914\">25%</font> / 디럭스 <font color=\"#77D914\">40%</font>, 주 무기 <font color=\"#66CCFF\">휴대 탄약</font>이 표준 <font color=\"#77D914\">20%</font> / 디럭스 <font color=\"#77D914\">35%</font> 증가합니다. 휴대 탄약 보너스는 보조 탄약에 적용되지 않습니다.",
-     "deluxeDescRaw": "코만도 또는 샤프슈터 무기의 <font color=\"#66CCFF\">탄창 용량</font>이 표준 <font color=\"#77D914\">25%</font> / 디럭스 <font color=\"#77D914\">40%</font>, 주 무기 <font color=\"#66CCFF\">휴대 탄약</font>이 표준 <font color=\"#77D914\">20%</font> / 디럭스 <font color=\"#77D914\">35%</font> 증가합니다. 휴대 탄약 보너스는 보조 탄약에 적용되지 않습니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "MagCapacity",
-       "label": "탄창 용량",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "MagCapacity",
-       "label": "탄창 용량",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "SpareAmmo",
-       "label": "여분 탄약",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "SpareAmmo",
-       "label": "여분 탄약",
-       "value": 0.35,
-       "unit": "percent",
-       "display": "+35%"
-      }
-     ],
-     "hasKorText": true,
-     "note": "KOR 원문에는 설명 문구가 없어 보충했습니다. 실제 코드와 INI 기준: 코만도 또는 샤프슈터 퍼크 무기의 탄창 용량이 표준 +25% / 디럭스 +40% 증가합니다. 주무기 휴대 탄약은 표준 +20% / 디럭스 +35% 증가합니다.",
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/DeepReserves.png"
-    },
-    {
-     "key": "HuntersInstinct",
-     "name": "사냥꾼의 본능",
-     "standardDesc": "소총으로 적을 처치하면 8미터 이내의 주변 좀비들에게 6초 동안 표식을 남깁니다. 표식이 남은 좀비는 모든 공격으로부터 +30%의 추가 피해를 받습니다.",
-     "deluxeDesc": "소총으로 적을 처치하면 12미터 이내의 주변 좀비들에게 8초 동안 표식을 남깁니다. 표식이 남은 좀비는 모든 공격으로부터 +40%의 추가 피해를 받습니다.",
-     "standardDescRaw": "소총으로 적을 처치하면 <font color=\"#77D914\">8미터</font> 이내의 주변 좀비들에게 <font color=\"#77D914\">6초</font> 동안 표식을 남깁니다. 표식이 남은 좀비는 모든 <font color=\"#66CCFF\">공격</font>으로부터 <font color=\"#77D914\">+30%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 받습니다.",
-     "deluxeDescRaw": "소총으로 적을 처치하면 <font color=\"#77D914\">12미터</font> 이내의 주변 좀비들에게 <font color=\"#77D914\">8초</font> 동안 표식을 남깁니다. 표식이 남은 좀비는 모든 <font color=\"#66CCFF\">공격</font>으로부터 <font color=\"#77D914\">+40%</font>의 추가 <font color=\"#66CCFF\">피해</font>를 받습니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "MarkRadius",
-       "label": "표식 범위",
-       "value": 800.0,
-       "unit": "distance",
-       "display": "800"
-      },
-      {
-       "key": "MarkRadius",
-       "label": "표식 범위",
-       "value": 1200.0,
-       "unit": "distance",
-       "display": "1,200"
-      },
-      {
-       "key": "MarkDuration",
-       "label": "표식 지속시간",
-       "value": 6.0,
-       "unit": "seconds",
-       "display": "6초"
-      },
-      {
-       "key": "MarkDuration",
-       "label": "표식 지속시간",
-       "value": 8.0,
-       "unit": "seconds",
-       "display": "8초"
-      },
-      {
-       "key": "DamageBonus",
-       "label": "피해량 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "DamageBonus",
-       "label": "피해량 보너스",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/HuntersInstinct.png"
-    },
-    {
-     "key": "IronFortress",
-     "name": "철의 요새",
-     "standardDesc": "소총을 들고 있는 동안 받는 피해가 10% 감소합니다. 기본 피해가 35 이상이거나 발사 간격이 0.08초 이상인 코만도 무기도 소총으로 판정됩니다.",
-     "deluxeDesc": "소총을 들고 있는 동안 받는 피해가 20% 감소합니다. 기본 피해가 35 이상이거나 발사 간격이 0.08초 이상인 코만도 무기도 소총으로 판정됩니다.",
-     "standardDescRaw": "소총을 들고 있는 동안 받는 피해가 10% 감소합니다. 기본 피해가 35 이상이거나 발사 간격이 0.08초 이상인 코만도 무기도 소총으로 판정됩니다.",
-     "deluxeDescRaw": "소총을 들고 있는 동안 받는 피해가 20% 감소합니다. 기본 피해가 35 이상이거나 발사 간격이 0.08초 이상인 코만도 무기도 소총으로 판정됩니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "DamageReduction",
-       "label": "피해량 감소",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/IronFortress.png"
-    },
-    {
-     "key": "LuckySalvage",
-     "name": "럭키 샐비지",
-     "standardDesc": "100킬을 달성할 때마다 1% 확률로 무작위 무기를 획득합니다. 이 무기는 탄약이 약간 비어있는 상태로 주어집니다.",
-     "deluxeDesc": "100킬을 달성할 때마다 2% 확률로 무작위 무기를 획득합니다. 더 높은 등급의 무기가 나올 확률이 높으며, 탄약도 더 많이 채워진 상태로 주어집니다.",
-     "standardDescRaw": "<font color=\"#77D914\">100킬</font>을 달성할 때마다 <font color=\"#77D914\">1%</font> 확률로 무작위 무기를 획득합니다. 이 무기는 <font color=\"#66CCFF\">탄약</font>이 약간 비어있는 상태로 주어집니다.",
-     "deluxeDescRaw": "<font color=\"#77D914\">100킬</font>을 달성할 때마다 <font color=\"#77D914\">2%</font> 확률로 무작위 무기를 획득합니다. 더 높은 등급의 무기가 나올 확률이 높으며, <font color=\"#66CCFF\">탄약</font>도 더 많이 채워진 상태로 주어집니다.",
+     "key": "Jagdkommando_AR15",
+     "name": "AR-15 무기 숙련",
+     "standardDesc": "AR-15 무기의 피해가 50% 증가합니다.",
+     "deluxeDesc": "AR-15 무기의 피해가 100% 증가합니다.",
+     "standardDescRaw": "AR-15 무기의 피해가 50% 증가합니다.",
+     "deluxeDescRaw": "AR-15 무기의 피해가 100% 증가합니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -8131,32 +7789,17 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/LuckySalvage.png"
+     "icon": null
     },
     {
-     "key": "LuckyShot",
-     "name": "럭키샷",
-     "standardDesc": "소총으로 헤드샷을 맞추면 10% 확률로 탄약을 소모하지 않습니다.",
-     "deluxeDesc": "소총으로 헤드샷을 맞추면 20% 확률로 탄약을 소모하지 않습니다.",
-     "standardDescRaw": "소총으로 헤드샷을 맞추면 <font color=\"#77D914\">10%</font> 확률로 <font color=\"#66CCFF\">탄약</font>을 소모하지 않습니다.",
-     "deluxeDescRaw": "소총으로 헤드샷을 맞추면 <font color=\"#77D914\">20%</font> 확률로 <font color=\"#66CCFF\">탄약</font>을 소모하지 않습니다.",
+     "key": "Jagdkommando_Bullpup",
+     "name": "L85A2 무기 숙련",
+     "standardDesc": "L85A2 무기의 피해가 35% 증가합니다.",
+     "deluxeDesc": "L85A2 무기의 피해가 65% 증가합니다.",
+     "standardDescRaw": "L85A2 무기의 피해가 35% 증가합니다.",
+     "deluxeDescRaw": "L85A2 무기의 피해가 65% 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "LuckyChance",
-       "label": "행운 확률",
-       "value": 0.1,
-       "unit": "percent",
-       "display": "+10%"
-      },
-      {
-       "key": "LuckyChance",
-       "label": "행운 확률",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      }
-     ],
+     "rawValues": [],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
@@ -8166,46 +7809,17 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/LuckyShot.png"
+     "icon": null
     },
     {
-     "key": "SuppressiveFire",
-     "name": "진압 사격",
-     "standardDesc": "소총의 연사 속도가 +12% 증가하고 탄 퍼짐이 20% 감소합니다.",
-     "deluxeDesc": "소총의 연사 속도가 +20% 증가하고 탄 퍼짐이 35% 감소합니다.",
-     "standardDescRaw": "소총의 <font color=\"#66CCFF\">연사 속도</font>가 <font color=\"#77D914\">+12%</font> 증가하고 탄 퍼짐이 <font color=\"#77D914\">20%</font> 감소합니다.",
-     "deluxeDescRaw": "소총의 <font color=\"#66CCFF\">연사 속도</font>가 <font color=\"#77D914\">+20%</font> 증가하고 탄 퍼짐이 <font color=\"#77D914\">35%</font> 감소합니다.",
+     "key": "Jagdkommando_AK12",
+     "name": "AK-12 무기 숙련",
+     "standardDesc": "AK-12 무기의 피해가 30% 증가합니다.",
+     "deluxeDesc": "AK-12 무기의 피해가 55% 증가합니다.",
+     "standardDescRaw": "AK-12 무기의 피해가 30% 증가합니다.",
+     "deluxeDescRaw": "AK-12 무기의 피해가 55% 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "RateOfFireInv",
-       "label": "연사 속도",
-       "value": 0.1071,
-       "unit": "percent",
-       "display": "+10.71%"
-      },
-      {
-       "key": "RateOfFireInv",
-       "label": "연사 속도",
-       "value": 0.1667,
-       "unit": "percent",
-       "display": "+16.67%"
-      },
-      {
-       "key": "SpreadReduction",
-       "label": "탄퍼짐 감소",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "SpreadReduction",
-       "label": "탄퍼짐 감소",
-       "value": 0.35,
-       "unit": "percent",
-       "display": "+35%"
-      }
-     ],
+     "rawValues": [],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
@@ -8215,60 +7829,17 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/SuppressiveFire.png"
+     "icon": null
     },
     {
-     "key": "SymbioticRounds",
-     "name": "공생 라운드",
-     "standardDesc": "소총 헤드샷 처치 시 35% 확률로 1발이 탄창으로 반환됩니다. 중형 및 대형 ZED 처치 시 15% 확률로 2발의 보너스 예비 탄약이 제공됩니다.",
-     "deluxeDesc": "소총 헤드샷 처치 시 50% 확률로 탄창에 1발이 회복됩니다. 중형 및 대형 ZED 처치 시 25% 확률로 3발의 보너스 예비 탄약을 획득합니다. 탄창이 25% 미만일 때 15%의 추가 회복 확률을 얻습니다.",
-     "standardDescRaw": "소총 헤드샷 <font color=\"#FFD700\">처치 시</font> <font color=\"#77D914\">35%</font> 확률로 <font color=\"#77D914\">1발</font>이 탄창으로 반환됩니다. 중형 및 대형 ZED <font color=\"#FFD700\">처치 시</font> <font color=\"#77D914\">15%</font> 확률로 <font color=\"#77D914\">2발</font>의 보너스 <font color=\"#66CCFF\">예비 탄약</font>이 제공됩니다.",
-     "deluxeDescRaw": "소총 헤드샷 <font color=\"#FFD700\">처치 시</font> <font color=\"#77D914\">50%</font> 확률로 탄창에 <font color=\"#77D914\">1발</font>이 회복됩니다. 중형 및 대형 ZED <font color=\"#FFD700\">처치 시</font> <font color=\"#77D914\">25%</font> 확률로 <font color=\"#77D914\">3발</font>의 보너스 <font color=\"#66CCFF\">예비 탄약</font>을 획득합니다. 탄창이 <font color=\"#77D914\">25%</font> 미만일 때 <font color=\"#77D914\">15%</font>의 추가 회복 확률을 얻습니다.",
+     "key": "Jagdkommando_MKB42",
+     "name": "MKB.42(H) 무기 숙련",
+     "standardDesc": "MKB.42(H) 무기의 피해가 30% 증가합니다.",
+     "deluxeDesc": "MKB.42(H) 무기의 피해가 55% 증가합니다.",
+     "standardDescRaw": "MKB.42(H) 무기의 피해가 30% 증가합니다.",
+     "deluxeDescRaw": "MKB.42(H) 무기의 피해가 55% 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "AmmoRecoveryChance",
-       "label": "탄약 회복 확률",
-       "value": 0.35,
-       "unit": "percent",
-       "display": "+35%"
-      },
-      {
-       "key": "AmmoRecoveryChance",
-       "label": "탄약 회복 확률",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "CriticalScavengingChance",
-       "label": "치명타 노획 확률",
-       "value": 0.15,
-       "unit": "percent",
-       "display": "+15%"
-      },
-      {
-       "key": "CriticalScavengingChance",
-       "label": "치명타 노획 확률",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "BonusAmmoAmount",
-       "label": "보너스 탄약 량",
-       "value": 2,
-       "unit": "percent",
-       "display": "+200%"
-      },
-      {
-       "key": "BonusAmmoAmount",
-       "label": "보너스 탄약 량",
-       "value": 3,
-       "unit": "percent",
-       "display": "+300%"
-      }
-     ],
+     "rawValues": [],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
@@ -8278,60 +7849,17 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/SymbioticRounds.png"
+     "icon": null
     },
     {
-     "key": "ThermalDrill",
-     "name": "열 드릴",
-     "standardDesc": "동일한 대상에게 소총을 맞추면 열 스택이 쌓입니다. 스택당 해당 대상에게 입히는 소총 피해가 8%씩 증가합니다. 최대 5 스택이며 4초 동안 유지됩니다.",
-     "deluxeDesc": "동일한 대상에게 소총을 맞추면 열 스택이 쌓입니다. 스택당 해당 대상에게 입히는 소총 피해가 12%씩 증가합니다. 최대 8 스택이며 6초 동안 유지됩니다.",
-     "standardDescRaw": "동일한 대상에게 소총을 맞추면 열 스택이 쌓입니다. 스택당 해당 대상에게 입히는 소총 <font color=\"#66CCFF\">피해</font>가 <font color=\"#77D914\">8%</font>씩 증가합니다. 최대 <font color=\"#77D914\">5</font> 스택이며 <font color=\"#77D914\">4초</font> 동안 유지됩니다.",
-     "deluxeDescRaw": "동일한 대상에게 소총을 맞추면 열 스택이 쌓입니다. 스택당 해당 대상에게 입히는 소총 <font color=\"#66CCFF\">피해</font>가 <font color=\"#77D914\">12%</font>씩 증가합니다. 최대 <font color=\"#77D914\">8</font> 스택이며 <font color=\"#77D914\">6초</font> 동안 유지됩니다.",
+     "key": "Jagdkommando_SCAR",
+     "name": "SCAR-H 무기 숙련",
+     "standardDesc": "SCAR-H 무기의 피해가 25% 증가합니다.",
+     "deluxeDesc": "SCAR-H 무기의 피해가 45% 증가합니다.",
+     "standardDescRaw": "SCAR-H 무기의 피해가 25% 증가합니다.",
+     "deluxeDescRaw": "SCAR-H 무기의 피해가 45% 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.08,
-       "unit": "percent",
-       "display": "+8%"
-      },
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.12,
-       "unit": "percent",
-       "display": "+12%"
-      },
-      {
-       "key": "MaxStacks",
-       "label": "최대 스택 수",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "MaxStacks",
-       "label": "최대 스택 수",
-       "value": 8,
-       "unit": "count",
-       "display": "8"
-      },
-      {
-       "key": "StackDuration",
-       "label": "스택 지속시간",
-       "value": 4.0,
-       "unit": "seconds",
-       "display": "4초"
-      },
-      {
-       "key": "StackDuration",
-       "label": "스택 지속시간",
-       "value": 6.0,
-       "unit": "seconds",
-       "display": "6초"
-      }
-     ],
+     "rawValues": [],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
@@ -8341,26 +7869,478 @@
      "deluxeAvailable": null,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/ThermalDrill.png"
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_MG3",
+     "name": "MG3 무기 숙련",
+     "standardDesc": "MG3 무기의 피해가 25% 증가합니다.",
+     "deluxeDesc": "MG3 무기의 피해가 45% 증가합니다.",
+     "standardDescRaw": "MG3 무기의 피해가 25% 증가합니다.",
+     "deluxeDescRaw": "MG3 무기의 피해가 45% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_Stoner",
+     "name": "Stoner 63A 무기 숙련",
+     "standardDesc": "Stoner 63A 무기의 피해가 25% 증가합니다.",
+     "deluxeDesc": "Stoner 63A 무기의 피해가 45% 증가합니다.",
+     "standardDescRaw": "Stoner 63A 무기의 피해가 25% 증가합니다.",
+     "deluxeDescRaw": "Stoner 63A 무기의 피해가 45% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_Minigun",
+     "name": "Minigun 무기 숙련",
+     "standardDesc": "Minigun 무기의 피해가 25% 증가합니다.",
+     "deluxeDesc": "Minigun 무기의 피해가 45% 증가합니다.",
+     "standardDescRaw": "Minigun 무기의 피해가 25% 증가합니다.",
+     "deluxeDescRaw": "Minigun 무기의 피해가 45% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_FAMAS",
+     "name": "FAMAS 무기 숙련",
+     "standardDesc": "FAMAS 무기의 피해가 30% 증가합니다.",
+     "deluxeDesc": "FAMAS 무기의 피해가 55% 증가합니다.",
+     "standardDescRaw": "FAMAS 무기의 피해가 30% 증가합니다.",
+     "deluxeDescRaw": "FAMAS 무기의 피해가 55% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_FAL",
+     "name": "FN FAL 무기 숙련",
+     "standardDesc": "FN FAL 무기의 피해가 25% 증가합니다.",
+     "deluxeDesc": "FN FAL 무기의 피해가 45% 증가합니다.",
+     "standardDescRaw": "FN FAL 무기의 피해가 25% 증가합니다.",
+     "deluxeDescRaw": "FN FAL 무기의 피해가 45% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_M16",
+     "name": "M16 M203 무기 숙련",
+     "standardDesc": "M16 M203 무기의 피해가 30% 증가합니다.",
+     "deluxeDesc": "M16 M203 무기의 피해가 55% 증가합니다.",
+     "standardDescRaw": "M16 M203 무기의 피해가 30% 증가합니다.",
+     "deluxeDescRaw": "M16 M203 무기의 피해가 55% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_Medic401",
+     "name": "HMTech-401 무기 숙련",
+     "standardDesc": "HMTech-401 무기의 피해가 25% 증가합니다.",
+     "deluxeDesc": "HMTech-401 무기의 피해가 45% 증가합니다.",
+     "standardDescRaw": "HMTech-401 무기의 피해가 25% 증가합니다.",
+     "deluxeDescRaw": "HMTech-401 무기의 피해가 45% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_Medic501",
+     "name": "HMTech-501 무기 숙련",
+     "standardDesc": "HMTech-501 무기의 피해가 25% 증가합니다.",
+     "deluxeDesc": "HMTech-501 무기의 피해가 45% 증가합니다.",
+     "standardDescRaw": "HMTech-501 무기의 피해가 25% 증가합니다.",
+     "deluxeDescRaw": "HMTech-501 무기의 피해가 45% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Jagdkommando_Thompson",
+     "name": "Thompson 무기 숙련",
+     "standardDesc": "Thompson 무기의 피해가 35% 증가합니다.",
+     "deluxeDesc": "Thompson 무기의 피해가 65% 증가합니다.",
+     "standardDescRaw": "Thompson 무기의 피해가 35% 증가합니다.",
+     "deluxeDescRaw": "Thompson 무기의 피해가 65% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    }
+   ],
+   "skillCount": 14,
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
+   "testWarning": null,
+   "recentChangeTag": null,
+   "extraSections": [],
+   "rankIcons": [],
+   "icon": "icons/commando.png"
+  },
+  {
+   "key": "NavySEALs",
+   "name": "NAVY SEALs",
+   "parentPerk": "Commando",
+   "unlockLevel": 15,
+   "unlockRequirements": [
+    {
+     "perk": "Commando",
+     "level": 15
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "hasIniConfig": false,
+   "maxLevel": 20,
+   "passiveStats": [],
+   "fixedStats": [],
+   "valueSourceNote": null,
+   "summary": "경기관총을 강화하고 웨이브 종료 시 탄약을 보급받는 화력형 퍼크",
+   "role": "경기관총을 강화하고 웨이브 종료 시 탄약을 보급받는 화력형 퍼크",
+   "summaryHtml": null,
+   "endgame": null,
+   "descriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 반동 <font color=\"#77D914\">-%x1_2%%</font>, 재장전 속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기 피해 +%x1_1%%, 반동 -%x1_2%%, 재장전 속도 +%x1_3%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">LMG 전문가</font>: <font color=\"#00BFFF\">MG3·미니건·스토너 63A</font>의 탄창 용량 <font color=\"#77D914\">+50%</font>, 예비 탄약 <font color=\"#77D914\">+100%</font>, 무기 피해 <font color=\"#77D914\">+30%</font>, 재장전 속도 <font color=\"#77D914\">+20%</font>.",
+     "text": "[10레벨 캡스톤] LMG 전문가: MG3·미니건·스토너 63A의 탄창 용량 +50%, 예비 탄약 +100%, 무기 피해 +30%, 재장전 속도 +20%.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">웨이브 보급</font>: 웨이브를 완료하면 소지한 모든 무기의 최대 예비 탄약 중 <font color=\"#77D914\">50%</font>를 회복합니다. 보조 탄약도 포함하며 최대 보유량을 넘지 않습니다.",
+     "text": "[20레벨 캡스톤] 웨이브 보급: 웨이브를 완료하면 소지한 모든 무기의 최대 예비 탄약 중 50%를 회복합니다. 보조 탄약도 포함하며 최대 보유량을 넘지 않습니다.",
+     "isCapstone": true
+    }
+   ],
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 반동 <font color=\"#77D914\">-%x1_2%%</font>, 재장전 속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기 피해 +%x1_1%%, 반동 -%x1_2%%, 재장전 속도 +%x1_3%%.",
+     "isCapstone": false
+    }
+   ],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>, 반동 <font color=\"#77D914\">-%x1_2%%</font>, 재장전 속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기 피해 +%x1_1%%, 반동 -%x1_2%%, 재장전 속도 +%x1_3%%.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [
+    {
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">LMG 전문가</font>: <font color=\"#00BFFF\">MG3·미니건·스토너 63A</font>의 탄창 용량 <font color=\"#77D914\">+50%</font>, 예비 탄약 <font color=\"#77D914\">+100%</font>, 무기 피해 <font color=\"#77D914\">+30%</font>, 재장전 속도 <font color=\"#77D914\">+20%</font>.",
+     "text": "[10레벨 캡스톤] LMG 전문가: MG3·미니건·스토너 63A의 탄창 용량 +50%, 예비 탄약 +100%, 무기 피해 +30%, 재장전 속도 +20%.",
+     "isCapstone": true
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">웨이브 보급</font>: 웨이브를 완료하면 소지한 모든 무기의 최대 예비 탄약 중 <font color=\"#77D914\">50%</font>를 회복합니다. 보조 탄약도 포함하며 최대 보유량을 넘지 않습니다.",
+     "text": "[20레벨 캡스톤] 웨이브 보급: 웨이브를 완료하면 소지한 모든 무기의 최대 예비 탄약 중 50%를 회복합니다. 보조 탄약도 포함하며 최대 보유량을 넘지 않습니다.",
+     "isCapstone": true
+    }
+   ],
+   "noCapstoneNote": null,
+   "skills": [
+    {
+     "key": "NavySEALs_MG3Package",
+     "name": "MG3 화력 패키지",
+     "standardDesc": "MG3 무기의 피해 +20%, 탄창 용량 +20%, 예비 탄약 +40%. 디럭스 없음.",
+     "deluxeDesc": null,
+     "standardDescRaw": "MG3 무기의 피해 +20%, 탄창 용량 +20%, 예비 탄약 +40%. 디럭스 없음.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_MinigunPackage",
+     "name": "미니건 화력 패키지",
+     "standardDesc": "Minigun 무기의 피해 +20%, 탄창 용량 +20%, 예비 탄약 +40%. 디럭스 없음.",
+     "deluxeDesc": null,
+     "standardDescRaw": "Minigun 무기의 피해 +20%, 탄창 용량 +20%, 예비 탄약 +40%. 디럭스 없음.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_StonerPackage",
+     "name": "스토너 화력 패키지",
+     "standardDesc": "Stoner 63A 무기의 피해 +25%, 탄창 용량 +25%, 예비 탄약 +50%. 디럭스 없음.",
+     "deluxeDesc": null,
+     "standardDescRaw": "Stoner 63A 무기의 피해 +25%, 탄창 용량 +25%, 예비 탄약 +50%. 디럭스 없음.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_RecoilControl",
+     "name": "LMG 반동 제어",
+     "standardDesc": "MG3·미니건·스토너 63A의 반동이 10% 감소합니다.",
+     "deluxeDesc": "MG3·미니건·스토너 63A의 반동이 15% 감소합니다.",
+     "standardDescRaw": "MG3·미니건·스토너 63A의 반동이 10% 감소합니다.",
+     "deluxeDescRaw": "MG3·미니건·스토너 63A의 반동이 15% 감소합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_SpreadControl",
+     "name": "LMG 탄퍼짐 제어",
+     "standardDesc": "MG3·미니건·스토너 63A의 탄퍼짐이 10% 감소합니다.",
+     "deluxeDesc": "MG3·미니건·스토너 63A의 탄퍼짐이 15% 감소합니다.",
+     "standardDescRaw": "MG3·미니건·스토너 63A의 탄퍼짐이 10% 감소합니다.",
+     "deluxeDescRaw": "MG3·미니건·스토너 63A의 탄퍼짐이 15% 감소합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_MG3Specialist",
+     "name": "MG3 특수공격 전문가",
+     "standardDesc": "MG3 특수공격의 최종 피해가 2.5배가 됩니다.",
+     "deluxeDesc": "MG3 특수공격의 최종 피해가 4배가 됩니다.",
+     "standardDescRaw": "MG3 특수공격의 최종 피해가 2.5배가 됩니다.",
+     "deluxeDescRaw": "MG3 특수공격의 최종 피해가 4배가 됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_SafeLanding",
+     "name": "안전 착지",
+     "standardDesc": "낙사 피해가 50% 감소합니다.",
+     "deluxeDesc": "낙사 피해가 75% 감소합니다.",
+     "standardDescRaw": "낙사 피해가 50% 감소합니다.",
+     "deluxeDescRaw": "낙사 피해가 75% 감소합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_InfantryArsenal",
+     "name": "보병 무기고",
+     "standardDesc": "MG3·미니건·스토너 63A를 제외한 코만도·SWAT·샤프슈터 무기 피해가 15% 증가합니다.",
+     "deluxeDesc": "MG3·미니건·스토너 63A를 제외한 코만도·SWAT·샤프슈터 무기 피해가 25% 증가합니다.",
+     "standardDescRaw": "MG3·미니건·스토너 63A를 제외한 코만도·SWAT·샤프슈터 무기 피해가 15% 증가합니다.",
+     "deluxeDescRaw": "MG3·미니건·스토너 63A를 제외한 코만도·SWAT·샤프슈터 무기 피해가 25% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_CombatMobility",
+     "name": "전투 기동",
+     "standardDesc": "이동속도가 5% 증가합니다.",
+     "deluxeDesc": "이동속도가 8% 증가합니다.",
+     "standardDescRaw": "이동속도가 5% 증가합니다.",
+     "deluxeDescRaw": "이동속도가 8% 증가합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "NavySEALs_AssaultProtection",
+     "name": "강습 방호",
+     "standardDesc": "최대 체력 +25 HP, 최대 방어구 +20 AP.",
+     "deluxeDesc": "최대 체력 +40 HP, 최대 방어구 +30 AP.",
+     "standardDescRaw": "최대 체력 +25 HP, 최대 방어구 +20 AP.",
+     "deluxeDescRaw": "최대 체력 +40 HP, 최대 방어구 +30 AP.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": null,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
     }
    ],
    "skillCount": 10,
-   "verdict": {
-    "tag": "적절",
-    "note": "유지 판정.",
-    "grade": "B"
-   },
-   "grade": "B",
-   "isPatched": true,
-   "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000; 밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.010000; 구 0.020000",
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
    "testWarning": null,
-   "recentChangeTag": {
-    "date": "2026-07-07",
-    "type": "buff"
-   },
+   "recentChangeTag": null,
    "extraSections": [],
    "rankIcons": [],
-   "icon": "icons/warlord.png"
+   "icon": "icons/commando.png"
   },
   {
    "key": "Agony",
@@ -11062,10 +11042,10 @@
     {
      "key": "WideWings",
      "name": "넓게 펼친 날개",
-     "standardDesc": "치유 오라 반경 +15%.",
-     "deluxeDesc": "치유 오라 반경 +25%.",
-     "standardDescRaw": "치유 오라 반경 +15%.",
-     "deluxeDescRaw": "치유 오라 반경 +25%.",
+     "standardDesc": "자신의 치유 오라 반경이 15% 증가해 더 멀리 있는 아군까지 회복할 수 있습니다.",
+     "deluxeDesc": "자신의 치유 오라 반경이 25% 증가해 더 멀리 있는 아군까지 회복할 수 있습니다.",
+     "standardDescRaw": "자신의 치유 오라 반경이 15% 증가해 더 멀리 있는 아군까지 회복할 수 있습니다.",
+     "deluxeDescRaw": "자신의 치유 오라 반경이 25% 증가해 더 멀리 있는 아군까지 회복할 수 있습니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -11082,10 +11062,10 @@
     {
      "key": "HealingChoir",
      "name": "치유의 합창",
-     "standardDesc": "치유 오라 회복량 +10%.",
-     "deluxeDesc": "치유 오라 회복량 +15%.",
-     "standardDescRaw": "치유 오라 회복량 +10%.",
-     "deluxeDescRaw": "치유 오라 회복량 +15%.",
+     "standardDesc": "치유 오라가 아군에게 주는 회복량이 오라의 회복 주기마다 10% 증가합니다.",
+     "deluxeDesc": "치유 오라가 아군에게 주는 회복량이 오라의 회복 주기마다 15% 증가합니다.",
+     "standardDescRaw": "치유 오라가 아군에게 주는 회복량이 오라의 회복 주기마다 10% 증가합니다.",
+     "deluxeDescRaw": "치유 오라가 아군에게 주는 회복량이 오라의 회복 주기마다 15% 증가합니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -11142,10 +11122,10 @@
     {
      "key": "UrgentFirst",
      "name": "위급한 자부터",
-     "standardDesc": "체력 30% 미만 아군에게 치유 오라 회복량 +20%.",
-     "deluxeDesc": "체력 30% 미만 아군에게 치유 오라 회복량 +30%.",
-     "standardDescRaw": "체력 30% 미만 아군에게 치유 오라 회복량 +20%.",
-     "deluxeDescRaw": "체력 30% 미만 아군에게 치유 오라 회복량 +30%.",
+     "standardDesc": "체력이 30% 미만인 아군을 치유 오라로 회복할 때, 해당 아군에 대한 오라 회복량이 20% 증가합니다.",
+     "deluxeDesc": "체력이 30% 미만인 아군을 치유 오라로 회복할 때, 해당 아군에 대한 오라 회복량이 30% 증가합니다.",
+     "standardDescRaw": "체력이 30% 미만인 아군을 치유 오라로 회복할 때, 해당 아군에 대한 오라 회복량이 20% 증가합니다.",
+     "deluxeDescRaw": "체력이 30% 미만인 아군을 치유 오라로 회복할 때, 해당 아군에 대한 오라 회복량이 30% 증가합니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -11162,10 +11142,10 @@
     {
      "key": "RearLight",
      "name": "후방까지 닿는 빛",
-     "standardDesc": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +10%.",
-     "deluxeDesc": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +15%.",
-     "standardDescRaw": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +10%.",
-     "deluxeDescRaw": "치유 오라 반경의 바깥쪽 절반에 있는 아군에게 회복량 +15%.",
+     "standardDesc": "치유 오라 반경의 바깥쪽 절반에 있는 아군은 오라 회복량이 10% 증가합니다.",
+     "deluxeDesc": "치유 오라 반경의 바깥쪽 절반에 있는 아군은 오라 회복량이 15% 증가합니다.",
+     "standardDescRaw": "치유 오라 반경의 바깥쪽 절반에 있는 아군은 오라 회복량이 10% 증가합니다.",
+     "deluxeDescRaw": "치유 오라 반경의 바깥쪽 절반에 있는 아군은 오라 회복량이 15% 증가합니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -11299,8 +11279,8 @@
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x%%</font>를 부여합니다.",
-     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x%%를 부여합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>를 부여합니다.",
+     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x1_1%%를 부여합니다.",
      "isCapstone": false
     },
     {
@@ -11321,8 +11301,8 @@
    ],
    "overviewDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x%%</font>를 부여합니다.",
-     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x%%를 부여합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>를 부여합니다.",
+     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x1_1%%를 부여합니다.",
      "isCapstone": false
     },
     {
@@ -11333,8 +11313,8 @@
    ],
    "passiveDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x%%</font>를 부여합니다.",
-     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x%%를 부여합니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> <font color=\"#00BFFF\">전투의 축복</font>: 치료탄으로 아군을 실제 치유하면 <font color=\"#77D914\">5초</font>간 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>를 부여합니다.",
+     "text": "[패시브] 전투의 축복: 치료탄으로 아군을 실제 치유하면 5초간 무기 피해 +%x1_1%%를 부여합니다.",
      "isCapstone": false
     }
    ],
@@ -13033,10 +13013,10 @@
     {
      "key": "AssaultPower",
      "name": "강습 화력",
-     "standardDesc": "자신의 모든 무기 피해 +10% 증가.",
-     "deluxeDesc": "자신의 모든 무기 피해 +16% 증가.",
-     "standardDescRaw": "자신의 모든 무기 피해 +10% 증가.",
-     "deluxeDescRaw": "자신의 모든 무기 피해 +16% 증가.",
+     "standardDesc": "자신이 사용하는 모든 무기의 피해가 10% 증가합니다. 아군이 아닌 미카엘 본인에게 적용됩니다.",
+     "deluxeDesc": "자신이 사용하는 모든 무기의 피해가 16% 증가합니다. 아군이 아닌 미카엘 본인에게 적용됩니다.",
+     "standardDescRaw": "자신이 사용하는 모든 무기의 피해가 10% 증가합니다. 아군이 아닌 미카엘 본인에게 적용됩니다.",
+     "deluxeDescRaw": "자신이 사용하는 모든 무기의 피해가 16% 증가합니다. 아군이 아닌 미카엘 본인에게 적용됩니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13053,10 +13033,10 @@
     {
      "key": "ExploitWeakness",
      "name": "약점 공략",
-     "standardDesc": "자신의 헤드샷 피해 +20% 증가.",
-     "deluxeDesc": "자신의 헤드샷 피해 +30% 증가.",
-     "standardDescRaw": "자신의 헤드샷 피해 +20% 증가.",
-     "deluxeDescRaw": "자신의 헤드샷 피해 +30% 증가.",
+     "standardDesc": "모든 무기의 헤드샷 피해가 20% 증가합니다.",
+     "deluxeDesc": "모든 무기의 헤드샷 피해가 30% 증가합니다.",
+     "standardDescRaw": "모든 무기의 헤드샷 피해가 20% 증가합니다.",
+     "deluxeDescRaw": "모든 무기의 헤드샷 피해가 30% 증가합니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13073,10 +13053,10 @@
     {
      "key": "LargeHunt",
      "name": "대형 사냥",
-     "standardDesc": "자신의 SC·FP·QFP 피해 +16% 증가.",
-     "deluxeDesc": "자신의 SC·FP·QFP 피해 +24% 증가.",
-     "standardDescRaw": "자신의 SC·FP·QFP 피해 +16% 증가.",
-     "deluxeDescRaw": "자신의 SC·FP·QFP 피해 +24% 증가.",
+     "standardDesc": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 자신의 무기 피해가 16% 증가합니다.",
+     "deluxeDesc": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 자신의 무기 피해가 24% 증가합니다.",
+     "standardDescRaw": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 자신의 무기 피해가 16% 증가합니다.",
+     "deluxeDescRaw": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 자신의 무기 피해가 24% 증가합니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13093,10 +13073,10 @@
     {
      "key": "PiercingWarhead",
      "name": "관통 탄두",
-     "standardDesc": "자신의 관통력 +30% 증가.",
-     "deluxeDesc": "자신의 관통력 +50% 증가.",
-     "standardDescRaw": "자신의 관통력 +30% 증가.",
-     "deluxeDescRaw": "자신의 관통력 +50% 증가.",
+     "standardDesc": "자신의 무기 관통력이 30% 증가해 탄환이 더 많은 적을 관통할 수 있습니다.",
+     "deluxeDesc": "자신의 무기 관통력이 50% 증가해 탄환이 더 많은 적을 관통할 수 있습니다.",
+     "standardDescRaw": "자신의 무기 관통력이 30% 증가해 탄환이 더 많은 적을 관통할 수 있습니다.",
+     "deluxeDescRaw": "자신의 무기 관통력이 50% 증가해 탄환이 더 많은 적을 관통할 수 있습니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13113,10 +13093,10 @@
     {
      "key": "RapidFireTraining",
      "name": "속사 훈련",
-     "standardDesc": "자신의 발사 속도 +10% 증가.",
-     "deluxeDesc": "자신의 발사 속도 +16% 증가.",
-     "standardDescRaw": "자신의 발사 속도 +10% 증가.",
-     "deluxeDescRaw": "자신의 발사 속도 +16% 증가.",
+     "standardDesc": "자신의 무기 발사 속도가 10% 증가해 발사 간격이 짧아집니다.",
+     "deluxeDesc": "자신의 무기 발사 속도가 16% 증가해 발사 간격이 짧아집니다.",
+     "standardDescRaw": "자신의 무기 발사 속도가 10% 증가해 발사 간격이 짧아집니다.",
+     "deluxeDescRaw": "자신의 무기 발사 속도가 16% 증가해 발사 간격이 짧아집니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13133,10 +13113,10 @@
     {
      "key": "TacticalReload",
      "name": "전술 재장전",
-     "standardDesc": "자신의 재장전 속도 +20% 증가.",
-     "deluxeDesc": "자신의 재장전 속도 +30% 증가.",
-     "standardDescRaw": "자신의 재장전 속도 +20% 증가.",
-     "deluxeDescRaw": "자신의 재장전 속도 +30% 증가.",
+     "standardDesc": "자신의 무기 재장전 속도가 20% 증가해 재장전 시간이 줄어듭니다.",
+     "deluxeDesc": "자신의 무기 재장전 속도가 30% 증가해 재장전 시간이 줄어듭니다.",
+     "standardDescRaw": "자신의 무기 재장전 속도가 20% 증가해 재장전 시간이 줄어듭니다.",
+     "deluxeDescRaw": "자신의 무기 재장전 속도가 30% 증가해 재장전 시간이 줄어듭니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13153,10 +13133,10 @@
     {
      "key": "ExtendedMagazine",
      "name": "확장 탄창",
-     "standardDesc": "자신의 탄창 용량 +20% 증가.",
-     "deluxeDesc": "자신의 탄창 용량 +40% 증가.",
-     "standardDescRaw": "자신의 탄창 용량 +20% 증가.",
-     "deluxeDescRaw": "자신의 탄창 용량 +40% 증가.",
+     "standardDesc": "탄창 용량이 20% 증가해 적용 가능한 무기에 장전되는 탄약 수가 늘어납니다.",
+     "deluxeDesc": "탄창 용량이 40% 증가해 적용 가능한 무기에 장전되는 탄약 수가 늘어납니다.",
+     "standardDescRaw": "탄창 용량이 20% 증가해 적용 가능한 무기에 장전되는 탄약 수가 늘어납니다.",
+     "deluxeDescRaw": "탄창 용량이 40% 증가해 적용 가능한 무기에 장전되는 탄약 수가 늘어납니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13173,10 +13153,10 @@
     {
      "key": "ReserveDepot",
      "name": "예비 탄약고",
-     "standardDesc": "자신의 최대 휴대 탄약 +40% 증가.",
-     "deluxeDesc": "자신의 최대 휴대 탄약 +80% 증가.",
-     "standardDescRaw": "자신의 최대 휴대 탄약 +40% 증가.",
-     "deluxeDescRaw": "자신의 최대 휴대 탄약 +80% 증가.",
+     "standardDesc": "최대 휴대 예비 탄약이 40% 증가합니다. 탄창 용량은 바뀌지 않습니다.",
+     "deluxeDesc": "최대 휴대 예비 탄약이 80% 증가합니다. 탄창 용량은 바뀌지 않습니다.",
+     "standardDescRaw": "최대 휴대 예비 탄약이 40% 증가합니다. 탄창 용량은 바뀌지 않습니다.",
+     "deluxeDescRaw": "최대 휴대 예비 탄약이 80% 증가합니다. 탄창 용량은 바뀌지 않습니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13193,10 +13173,10 @@
     {
      "key": "RecoilControl",
      "name": "반동 제어",
-     "standardDesc": "자신의 반동 감소 30% 감소.",
-     "deluxeDesc": "자신의 반동 감소 50% 감소.",
-     "standardDescRaw": "자신의 반동 감소 30% 감소.",
-     "deluxeDescRaw": "자신의 반동 감소 50% 감소.",
+     "standardDesc": "자신의 무기 반동이 30% 감소해 연속 사격 시 조준을 유지하기 쉬워집니다.",
+     "deluxeDesc": "자신의 무기 반동이 50% 감소해 연속 사격 시 조준을 유지하기 쉬워집니다.",
+     "standardDescRaw": "자신의 무기 반동이 30% 감소해 연속 사격 시 조준을 유지하기 쉬워집니다.",
+     "deluxeDescRaw": "자신의 무기 반동이 50% 감소해 연속 사격 시 조준을 유지하기 쉬워집니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13213,10 +13193,10 @@
     {
      "key": "CombatMobility",
      "name": "전투 기동",
-     "standardDesc": "자신의 이동속도 +10% 증가.",
-     "deluxeDesc": "자신의 이동속도 +16% 증가.",
-     "standardDescRaw": "자신의 이동속도 +10% 증가.",
-     "deluxeDescRaw": "자신의 이동속도 +16% 증가.",
+     "standardDesc": "자신의 이동 속도가 10% 증가해 전투 중 더 빠르게 움직일 수 있습니다.",
+     "deluxeDesc": "자신의 이동 속도가 16% 증가해 전투 중 더 빠르게 움직일 수 있습니다.",
+     "standardDescRaw": "자신의 이동 속도가 10% 증가해 전투 중 더 빠르게 움직일 수 있습니다.",
+     "deluxeDescRaw": "자신의 이동 속도가 16% 증가해 전투 중 더 빠르게 움직일 수 있습니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -13271,13 +13251,13 @@
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">부활의 약속</font>: 사망한 팀원을 <font color=\"#77D914\">%x%</font>초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
-     "text": "[10레벨 캡스톤] 부활의 약속: 사망한 팀원을 %x%초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">부활의 약속</font>: 사망한 팀원을 <font color=\"#77D914\">%x2_1%</font>초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "text": "[10레벨 캡스톤] 부활의 약속: 사망한 팀원을 %x2_1%초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">재림</font>: 부활 시간이 <font color=\"#77D914\">%x%</font>초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
-     "text": "[20레벨 캡스톤] 재림: 부활 시간이 %x%초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">재림</font>: 부활 시간이 <font color=\"#77D914\">%x3_1%</font>초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "text": "[20레벨 캡스톤] 재림: 부활 시간이 %x3_1%초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
      "isCapstone": true
     }
    ],
@@ -13297,13 +13277,13 @@
    ],
    "capstoneDescriptions": [
     {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">부활의 약속</font>: 사망한 팀원을 <font color=\"#77D914\">%x%</font>초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
-     "text": "[10레벨 캡스톤] 부활의 약속: 사망한 팀원을 %x%초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">부활의 약속</font>: 사망한 팀원을 <font color=\"#77D914\">%x2_1%</font>초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
+     "text": "[10레벨 캡스톤] 부활의 약속: 사망한 팀원을 %x2_1%초 후 자신의 곁으로 부활시킵니다. 자신이 살아 있어야 합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">재림</font>: 부활 시간이 <font color=\"#77D914\">%x%</font>초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
-     "text": "[20레벨 캡스톤] 재림: 부활 시간이 %x%초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">재림</font>: 부활 시간이 <font color=\"#77D914\">%x3_1%</font>초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
+     "text": "[20레벨 캡스톤] 재림: 부활 시간이 %x3_1%초로 단축됩니다. 사망한 팀원은 관전 중 부활 타이머를 볼 수 있습니다. 웨이브 또는 게임 종료 시 부활 대기는 초기화됩니다.",
      "isCapstone": true
     }
    ],
@@ -20936,8 +20916,8 @@
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x%%</font>.",
-     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x%%.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>.",
+     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x1_1%%.",
      "isCapstone": false
     },
     {
@@ -20973,8 +20953,8 @@
    ],
    "overviewDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x%%</font>.",
-     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x%%.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>.",
+     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x1_1%%.",
      "isCapstone": false
     },
     {
@@ -20995,8 +20975,8 @@
    ],
    "passiveDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x%%</font>.",
-     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x%%.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 전선 보강: 지원 무기 피해 <font color=\"#77D914\">+%x1_1%%</font>.",
+     "text": "[패시브] 전선 보강: 지원 무기 피해 +%x1_1%%.",
      "isCapstone": false
     }
    ],
@@ -25001,13 +24981,13 @@
   "holdingMelee": 0.75
  },
  "meta": {
-  "advancedPerkCount": 52,
+  "advancedPerkCount": 53,
   "basePerkCount": 10,
-  "totalSkills": 483,
+  "totalSkills": 497,
   "release": {
-   "version": "10.20.0",
+   "version": "10.20.16",
    "workshopId": "3809067086",
-   "publishedUtc": "2026-10-19 오후 4:29:21",
+   "publishedUtc": "2026-10-20 오후 1:55:06",
    "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
    "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
    "serverGameConfigDiffers": true
