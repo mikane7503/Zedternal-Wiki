@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "product": "Zedternal Tempered",
-  "version": "10.21.25",
+  "version": "10.22.1",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-21T14:46:44Z",
-  "releaseReportId": "ReleaseProof-v10.21.25-upload",
+  "publishedUtc": "2026-10-21T15:11:46Z",
+  "releaseReportId": "ReleaseProof-v10.22.1-upload",
   "releaseSourceSnapshotSha256": "0838ab15ed8da9a2b958f90c0bbf76575d62fd84717622584dc99f27dfc4a84a",
   "uploadedFiles": [
     {
@@ -25,13 +25,13 @@
     },
     {
       "path": "BrewedPC/ZedternalTempered_Lobby.upk",
-      "size": 1347063,
-      "sha256": "15c98456aca065d8e7daca105574e3739b2d48f5d443300fd1ddc6b61ac3b9f4"
+      "size": 1347130,
+      "sha256": "0ea903e99aa2bb72cfdfa471ca7cac830f0e2894f79a7278b321738ca60f18b0"
     },
     {
       "path": "BrewedPC/ZedternalTempered.u",
-      "size": 28341058,
-      "sha256": "092db097d8595db1aba1ca84ddf1b597798433609758ad2ae253f8b628b1c302"
+      "size": 28333408,
+      "sha256": "fde8334f51916385646a0f202d1fa32edc40c08efd5b87abc56bb027b16f08c6"
     },
     {
       "path": "BrewedPC/ZedternalTemperedPerkIcons.upk",
@@ -50,8 +50,8 @@
     },
     {
       "path": "Localization/JPN/ZedternalTempered.jpn",
-      "size": 650840,
-      "sha256": "2fe0f58de7061461205405ac9cc03449774b4bfb49bfe464170c20b767f53c6e"
+      "size": 650874,
+      "sha256": "e4a3d7a8c9721540b96d25c0ae68b5b071e70a69658bf9f772f19238d6c8bdd0"
     },
     {
       "path": "Localization/KOR/ZedternalReborn.kor",
@@ -60,8 +60,8 @@
     },
     {
       "path": "Localization/KOR/ZedternalTempered.kor",
-      "size": 666256,
-      "sha256": "c2fe2a4bcf5d45e063d645319f7976fe9568fd858265861c3e03c87d27ec904b"
+      "size": 666290,
+      "sha256": "2dc9e9cd3aa56a400c6329cd676f2d2b0ebca4811f600e52b252bf36726eb5ee"
     }
   ],
   "sourceIni": [
@@ -174,7 +174,7 @@
     },
     {
       "name": "ZedternalTempered.kor",
-      "sha256": "c2fe2a4bcf5d45e063d645319f7976fe9568fd858265861c3e03c87d27ec904b"
+      "sha256": "2dc9e9cd3aa56a400c6329cd676f2d2b0ebca4811f600e52b252bf36726eb5ee"
     }
   ]
 }
