@@ -1,18 +1,13 @@
 {
   "schemaVersion": 1,
   "product": "Zedternal Tempered",
-  "version": "10.21.11",
+  "version": "10.21.20",
   "workshopId": "3809067086",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
-  "publishedUtc": "2026-10-21T09:37:35Z",
-  "releaseReportId": "ReleaseProof-v10.21.11-upload",
-  "releaseSourceSnapshotSha256": "3dccb12e33df014e89353797c35aa13a47b3a99f120120544ca7e2a6cd069486",
+  "publishedUtc": "2026-10-21T13:16:28Z",
+  "releaseReportId": "ReleaseProof-v10.21.20-upload",
+  "releaseSourceSnapshotSha256": "10a5425cbe06fa5d7ad0fae8f751678b64036821435abc7804dcf47c1d168178",
   "uploadedFiles": [
-    {
-      "path": "BrewedPC/WwiseAudio/Windows/WwiseDefaultBank_ZTDroneAudio.bnk",
-      "size": 367,
-      "sha256": "48798d3d37336b50c69e80c0a2c75590615ebb0b7d2c68fe3bcf6393e7ef0e4d"
-    },
     {
       "path": "BrewedPC/ZedternalRBPerkpackage_Menus.upk",
       "size": 421998,
@@ -30,13 +25,18 @@
     },
     {
       "path": "BrewedPC/ZedternalTempered.u",
-      "size": 28244933,
-      "sha256": "6c11e93a9a6e843a2e20dcbf66feaf46443bdc0a7ff8388eb8820f6ea628135f"
+      "size": 28320968,
+      "sha256": "cb5f6a49e0c915765438b197f59087138eaee0b4cadc7e06569114309fa4f10d"
     },
     {
       "path": "BrewedPC/ZedternalTemperedPerkIcons.upk",
       "size": 37025741,
       "sha256": "3a3f5f70c832ad8fde6dda90b41bf69932fd1a72103f4d1bab75c1aee365580e"
+    },
+    {
+      "path": "BrewedPC/WwiseAudio/Windows/WwiseDefaultBank_ZTDroneAudio.bnk",
+      "size": 367,
+      "sha256": "48798d3d37336b50c69e80c0a2c75590615ebb0b7d2c68fe3bcf6393e7ef0e4d"
     },
     {
       "path": "Localization/JPN/ZedternalReborn.jpn",
@@ -45,8 +45,8 @@
     },
     {
       "path": "Localization/JPN/ZedternalTempered.jpn",
-      "size": 649016,
-      "sha256": "85f81cbf0e1d612eee71d92998802511ccacf63f5e3d35df8663fb8797f8702f"
+      "size": 650320,
+      "sha256": "8e8f7dabca559950e89891326dcd8cadd8fca12384c95a159d5d9362c796d8da"
     },
     {
       "path": "Localization/KOR/ZedternalReborn.kor",
@@ -55,8 +55,8 @@
     },
     {
       "path": "Localization/KOR/ZedternalTempered.kor",
-      "size": 664318,
-      "sha256": "554e3855d691ac96faaeb7addc5138f96c306aa1c67e6f3ebd84550d2af33a43"
+      "size": 665700,
+      "sha256": "e87bae1abd362cdc68be23684a6042d7ee7e0d58fb65e93cc60012b6860cbd77"
     }
   ],
   "sourceIni": [
@@ -169,7 +169,7 @@
     },
     {
       "name": "ZedternalTempered.kor",
-      "sha256": "554e3855d691ac96faaeb7addc5138f96c306aa1c67e6f3ebd84550d2af33a43"
+      "sha256": "e87bae1abd362cdc68be23684a6042d7ee7e0d58fb65e93cc60012b6860cbd77"
     }
   ]
 }
