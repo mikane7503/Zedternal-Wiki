@@ -448,8 +448,8 @@
     },
     {
      "level": 20,
-     "perk": "Agony",
-     "name": "에고니"
+     "perk": "DeltaForce",
+     "name": "델타포스"
     }
    ],
    "skills": [
@@ -8343,8 +8343,8 @@
    "icon": "icons/commando.png"
   },
   {
-   "key": "Agony",
-   "name": "에고니",
+   "key": "DeltaForce",
+   "name": "델타포스",
    "parentPerk": "Commando",
    "unlockLevel": 20,
    "unlockRequirements": [
@@ -8355,366 +8355,77 @@
    ],
    "isCombinationUnlocked": false,
    "isStatic": false,
-   "hasIniConfig": true,
+   "hasIniConfig": false,
    "maxLevel": 20,
-   "passiveStats": [
-    {
-     "key": "MovementPerLevel",
-     "label": "레벨 당 이동",
-     "value": 0.01,
-     "unit": "percent",
-     "display": "+1%",
-     "lv10": 0.1,
-     "lv20": 0.2,
-     "lv10Display": "+10%",
-     "lv20Display": "+20%",
-     "scaling": true
-    }
-   ],
-   "fixedStats": [
-    {
-     "key": "DamagePerLevel",
-     "label": "레벨 당 피해량",
-     "value": 0.02,
-     "unit": "percent",
-     "display": "+2%",
-     "lv10": 0.02,
-     "lv20": 0.02,
-     "lv10Display": "+2%",
-     "lv20Display": "+2%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Level10Movement",
-     "label": "레벨 10 이동",
-     "value": 0.2,
-     "unit": "percent",
-     "display": "+20%",
-     "lv10": 0.2,
-     "lv20": 0.2,
-     "lv10Display": "+20%",
-     "lv20Display": "+20%",
-     "scaling": false,
-     "capstoneLevel": 10
-    },
-    {
-     "key": "Level10Damage",
-     "label": "레벨 10 피해량",
-     "value": 0.15,
-     "unit": "percent",
-     "display": "+15%",
-     "lv10": 0.15,
-     "lv20": 0.15,
-     "lv10Display": "+15%",
-     "lv20Display": "+15%",
-     "scaling": false,
-     "capstoneLevel": 10
-    },
-    {
-     "key": "HeadshotExtensionChance",
-     "label": "헤드샷 연장 확률",
-     "value": 0.1,
-     "unit": "percent",
-     "display": "+10%",
-     "lv10": 0.1,
-     "lv20": 0.1,
-     "lv10Display": "+10%",
-     "lv20Display": "+10%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "Level20Movement",
-     "label": "레벨 20 이동",
-     "value": 0.3,
-     "unit": "percent",
-     "display": "+30%",
-     "lv10": 0.3,
-     "lv20": 0.3,
-     "lv10Display": "+30%",
-     "lv20Display": "+30%",
-     "scaling": false,
-     "capstoneLevel": 20
-    },
-    {
-     "key": "Level20Damage",
-     "label": "레벨 20 피해량",
-     "value": 0.25,
-     "unit": "percent",
-     "display": "+25%",
-     "lv10": 0.25,
-     "lv20": 0.25,
-     "lv10Display": "+25%",
-     "lv20Display": "+25%",
-     "scaling": false,
-     "capstoneLevel": 20
-    },
-    {
-     "key": "HeadshotExtensionCooldown",
-     "label": "헤드샷 연장 재사용 대기시간",
-     "value": 8.0,
-     "unit": "seconds",
-     "display": "8초",
-     "lv10": 8.0,
-     "lv20": 8.0,
-     "lv10Display": "8초",
-     "lv20Display": "8초",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "CapstoneDamageBonus",
-     "label": "캡스톤 피해량 보너스",
-     "value": 0.5,
-     "unit": "percent",
-     "display": "+50%",
-     "lv10": 0.5,
-     "lv20": 0.5,
-     "lv10Display": "+50%",
-     "lv20Display": "+50%",
-     "scaling": false,
-     "capstoneLevel": null
-    },
-    {
-     "key": "KillExtensionSeconds",
-     "label": "처치 시 ZED 타임 연장",
-     "value": 2.0,
-     "unit": "seconds",
-     "display": "2초",
-     "lv10": 2.0,
-     "lv20": 2.0,
-     "lv10Display": "2초",
-     "lv20Display": "2초",
-     "scaling": false,
-     "capstoneLevel": null
-    }
-   ],
+   "passiveStats": [],
+   "fixedStats": [],
    "valueSourceNote": null,
-   "summary": "제드 타임에 공격력을 끌어올리는 고화력 퍼크",
-   "role": "제드 타임에 공격력을 끌어올리는 고화력 퍼크",
+   "summary": "중보스를 제압하고 처치로 성장하며 마지막 제드타임 연계를 끝없이 이어가는 코만도 정예 퍼크",
+   "role": "중보스를 제압하고 처치로 성장하며 마지막 제드타임 연계를 끝없이 이어가는 코만도 정예 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> ZED 타임 중 무기 피해 보너스: <font color=\"#77D914\">+%x%%</font>. 패시브 증가는 9레벨에서 멈춥니다.",
-     "text": "[패시브] ZED 타임 중 무기 피해 보너스: +%x%%. 패시브 증가는 9레벨에서 멈춥니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기의 헤드샷 피해 <font color=\"#77D914\">+%x1_1%%</font>, 연사속도 <font color=\"#77D914\">+%x1_2%%</font>, 이동속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기의 헤드샷 피해 +%x1_1%%, 연사속도 +%x1_2%%, 이동속도 +%x1_3%%.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">시간의 숙련</font>:  ZED 타임 중 실시간 속도로 이동합니다. 에고니의 ZED 타임 피해 보너스는 레벨당 패시브를 포함해 합계 <font color=\"#77D914\">+50%</font>가 됩니다.",
-     "text": "[10레벨 캡스톤]  시간의 숙련:  ZED 타임 중 실시간 속도로 이동합니다. 에고니의 ZED 타임 피해 보너스는 레벨당 패시브를 포함해 합계 +50%가 됩니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">제압 사격</font>: 중보스를 타격하면 즉시 이동속도가 <font color=\"#77D914\">25%</font> 감소합니다. 마지막 타격 <font color=\"#77D914\">1초</font> 후 해제됩니다. 보스는 제외합니다.",
+     "text": "[10레벨 캡스톤] 제압 사격: 중보스를 타격하면 즉시 이동속도가 25% 감소합니다. 마지막 타격 1초 후 해제됩니다. 보스는 제외합니다.",
      "isCapstone": true
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font>  <font color=\"#DC143C\">무한 ZED 타임</font>:  <font color=\"#77D914\">10레벨</font> 효과를 유지합니다. ZED 타임 중 제드를 처치할 때마다 남은 지속시간에 <font color=\"#77D914\">2초</font>를 더하며, 연장 횟수 제한이 없습니다.",
-     "text": "[20레벨 캡스톤]  무한 ZED 타임:  10레벨 효과를 유지합니다. ZED 타임 중 제드를 처치할 때마다 남은 지속시간에 2초를 더하며, 연장 횟수 제한이 없습니다.",
-     "isCapstone": true
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다.",
+     "text": "[20레벨 캡스톤] 끝없는 공세: ZED 타임 동안 일반 시간의 약 50% 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 2초씩 제한 없이 늘어납니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
+     "text": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
+     "isCapstone": false
     }
    ],
    "overviewDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> ZED 타임 중 무기 피해 보너스: <font color=\"#77D914\">+%x%%</font>. 패시브 증가는 9레벨에서 멈춥니다.",
-     "text": "[패시브] ZED 타임 중 무기 피해 보너스: +%x%%. 패시브 증가는 9레벨에서 멈춥니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기의 헤드샷 피해 <font color=\"#77D914\">+%x1_1%%</font>, 연사속도 <font color=\"#77D914\">+%x1_2%%</font>, 이동속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기의 헤드샷 피해 +%x1_1%%, 연사속도 +%x1_2%%, 이동속도 +%x1_3%%.",
+     "isCapstone": false
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다.",
+     "text": "[20레벨 캡스톤] 끝없는 공세: ZED 타임 동안 일반 시간의 약 50% 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 2초씩 제한 없이 늘어납니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
+     "text": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
      "isCapstone": false
     }
    ],
    "passiveDescriptions": [
     {
-     "raw": "<font color=\"#FFD700\">[패시브]</font> ZED 타임 중 무기 피해 보너스: <font color=\"#77D914\">+%x%%</font>. 패시브 증가는 9레벨에서 멈춥니다.",
-     "text": "[패시브] ZED 타임 중 무기 피해 보너스: +%x%%. 패시브 증가는 9레벨에서 멈춥니다.",
+     "raw": "<font color=\"#FFD700\">[패시브]</font> 모든 무기의 헤드샷 피해 <font color=\"#77D914\">+%x1_1%%</font>, 연사속도 <font color=\"#77D914\">+%x1_2%%</font>, 이동속도 <font color=\"#77D914\">+%x1_3%%</font>.",
+     "text": "[패시브] 모든 무기의 헤드샷 피해 +%x1_1%%, 연사속도 +%x1_2%%, 이동속도 +%x1_3%%.",
      "isCapstone": false
     }
    ],
    "capstoneDescriptions": [
     {
-     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">시간의 숙련</font>:  ZED 타임 중 실시간 속도로 이동합니다. 에고니의 ZED 타임 피해 보너스는 레벨당 패시브를 포함해 합계 <font color=\"#77D914\">+50%</font>가 됩니다.",
-     "text": "[10레벨 캡스톤]  시간의 숙련:  ZED 타임 중 실시간 속도로 이동합니다. 에고니의 ZED 타임 피해 보너스는 레벨당 패시브를 포함해 합계 +50%가 됩니다.",
-     "isCapstone": true
-    },
-    {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font>  <font color=\"#DC143C\">무한 ZED 타임</font>:  <font color=\"#77D914\">10레벨</font> 효과를 유지합니다. ZED 타임 중 제드를 처치할 때마다 남은 지속시간에 <font color=\"#77D914\">2초</font>를 더하며, 연장 횟수 제한이 없습니다.",
-     "text": "[20레벨 캡스톤]  무한 ZED 타임:  10레벨 효과를 유지합니다. ZED 타임 중 제드를 처치할 때마다 남은 지속시간에 2초를 더하며, 연장 횟수 제한이 없습니다.",
+     "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">제압 사격</font>: 중보스를 타격하면 즉시 이동속도가 <font color=\"#77D914\">25%</font> 감소합니다. 마지막 타격 <font color=\"#77D914\">1초</font> 후 해제됩니다. 보스는 제외합니다.",
+     "text": "[10레벨 캡스톤] 제압 사격: 중보스를 타격하면 즉시 이동속도가 25% 감소합니다. 마지막 타격 1초 후 해제됩니다. 보스는 제외합니다.",
      "isCapstone": true
     }
    ],
    "noCapstoneNote": null,
    "skills": [
     {
-     "key": "AcceleratedDecay",
-     "name": "가속 붕괴",
-     "standardDesc": "상처 내부의 시간을 가속시킵니다. 모든 지속 피해 효과가 +40% 더 많은 피해를 줍니다.",
-     "deluxeDesc": "상처 내부의 시간을 가속시킵니다. 모든 지속 피해 효과가 +80% 더 많은 피해를 줍니다.",
-     "standardDescRaw": "상처 내부의 시간을 가속시킵니다. 모든 지속 <font color=\"#66CCFF\">피해</font> 효과가 <font color=\"#77D914\">+40%</font> 더 많은 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "deluxeDescRaw": "상처 내부의 시간을 가속시킵니다. 모든 지속 <font color=\"#66CCFF\">피해</font> 효과가 <font color=\"#77D914\">+80%</font> 더 많은 <font color=\"#66CCFF\">피해</font>를 줍니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DoTBonus",
-       "label": "보너스",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      },
-      {
-       "key": "DoTBonus",
-       "label": "보너스",
-       "value": 0.8,
-       "unit": "percent",
-       "display": "+80%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/AcceleratedDecay.png"
-    },
-    {
-     "key": "AgonizingPresence",
-     "name": "고통스러운 존재",
-     "standardDesc": "ZED 타임 동안 가하는 공격의 비틀거림 및 넉다운 효과가 +25% 증가합니다.",
-     "deluxeDesc": "ZED 타임 동안 가하는 공격의 비틀거림 및 넉다운 효과가 +50% 증가합니다. ZED 타임이 끝난 후에도 넉다운 보너스는 +50%로 유지됩니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 가하는 <font color=\"#66CCFF\">공격</font>의 <font color=\"#FF6666\">비틀거림</font> 및 <font color=\"#FF6666\">넉다운</font> 효과가 <font color=\"#77D914\">+25%</font> 증가합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 가하는 <font color=\"#66CCFF\">공격</font>의 <font color=\"#FF6666\">비틀거림</font> 및 <font color=\"#FF6666\">넉다운</font> 효과가 <font color=\"#77D914\">+50%</font> 증가합니다. <font color=\"#FFD700\">ZED 타임</font>이 끝난 후에도 <font color=\"#FF6666\">넉다운</font> 보너스는 <font color=\"#77D914\">+50%</font>로 유지됩니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "StumbleBonus",
-       "label": "휘청임 보너스",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "StumbleBonus",
-       "label": "휘청임 보너스",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "KnockdownBonus",
-       "label": "넉다운 보너스",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      },
-      {
-       "key": "KnockdownBonus",
-       "label": "넉다운 보너스",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "KnockdownResidual",
-       "label": "넉다운 잔여",
-       "value": 0.25,
-       "unit": "percent",
-       "display": "+25%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "임팩트 남발 축소(2026-07-02), 구 0.500000; 구 1.000000; 구 0.500000; 구 1.000000; 구 0.500000",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/AgonizingPresence.png"
-    },
-    {
-     "key": "ChronoCarapace",
-     "name": "크로노-갑각",
-     "standardDesc": "ZED 타임 동안 모든 출처로부터 받는 피해가 20% 감소합니다.",
-     "deluxeDesc": "ZED 타임 동안 받는 피해가 35% 감소합니다. 지속적인 보호: ZED 타임이 끝난 후에도 3초 동안 받는 피해가 12% 감소합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 모든 출처로부터 <font color=\"#66CCFF\">받는 피해</font>가 <font color=\"#77D914\">20%</font> 감소합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 <font color=\"#66CCFF\">받는 피해</font>가 <font color=\"#77D914\">35%</font> 감소합니다. 지속적인 보호: <font color=\"#FFD700\">ZED 타임</font>이 끝난 후에도 <font color=\"#77D914\">3초</font> 동안 <font color=\"#66CCFF\">받는 피해</font>가 <font color=\"#77D914\">12%</font> 감소합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "ZedTimeDR",
-       "label": "제드 시간 피해 감소",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "ZedTimeDR",
-       "label": "제드 시간 피해 감소",
-       "value": 0.35,
-       "unit": "percent",
-       "display": "+35%"
-      },
-      {
-       "key": "LingeringDR",
-       "label": "잔류 피해 감소",
-       "value": 0.12,
-       "unit": "percent",
-       "display": "+12%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/ChronoCarapace.png"
-    },
-    {
-     "key": "EternalSuffering",
-     "name": "영원한 고통",
-     "standardDesc": "적을 시간의 느린 흐름 속에 가둡니다. 모든 공격의 속박력이 +20% 증가합니다.",
-     "deluxeDesc": "적을 시간의 느린 흐름 속에 가둡니다. 모든 공격의 속박력이 +40% 증가합니다.",
-     "standardDescRaw": "적을 시간의 느린 흐름 속에 가둡니다. 모든 <font color=\"#66CCFF\">공격</font>의 속박력이 <font color=\"#77D914\">+20%</font> 증가합니다.",
-     "deluxeDescRaw": "적을 시간의 느린 흐름 속에 가둡니다. 모든 <font color=\"#66CCFF\">공격</font>의 속박력이 <font color=\"#77D914\">+40%</font> 증가합니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "SnareBonus",
-       "label": "속박 보너스",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      },
-      {
-       "key": "SnareBonus",
-       "label": "속박 보너스",
-       "value": 0.4,
-       "unit": "percent",
-       "display": "+40%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "CC 남발 축소(2026-07-02), 구 0.400000; 구 0.800000",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/EternalSuffering.png"
-    },
-    {
-     "key": "PhantomPain",
-     "name": "환상통",
-     "standardDesc": "ZED 타임 동안 입힌 피해량을 누적합니다. 종료 시 자신을 중심으로 반경 10m 안의 제드에게 누적 피해의 10%를 폭발 피해로 줍니다(제드당 최대 300).",
-     "deluxeDesc": "ZED 타임 종료 시 자신과 마지막으로 공격한 적을 중심으로 폭발을 일으킵니다. 각 폭발은 반경 20m 안의 제드에게 누적 피해의 20%를 주며, 제드당 최대 피해는 600입니다.",
-     "standardDescRaw": "ZED 타임 동안 입힌 피해량을 누적합니다. 종료 시 자신을 중심으로 반경 10m 안의 제드에게 누적 피해의 10%를 폭발 피해로 줍니다(제드당 최대 300).",
-     "deluxeDescRaw": "ZED 타임 종료 시 자신과 마지막으로 공격한 적을 중심으로 폭발을 일으킵니다. 각 폭발은 반경 20m 안의 제드에게 누적 피해의 20%를 주며, 제드당 최대 피해는 600입니다.",
+     "key": "DeltaForce_TemporalArmor",
+     "name": "시간의 장갑",
+     "standardDesc": "ZED 타임 동안 받는 모든 피해가 30% 감소합니다.",
+     "deluxeDesc": "ZED 타임 동안 받는 모든 피해가 50% 감소합니다.",
+     "standardDescRaw": "ZED 타임 동안 받는 모든 피해가 30% 감소합니다.",
+     "deluxeDescRaw": "ZED 타임 동안 받는 모든 피해가 50% 감소합니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -8723,67 +8434,18 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
+     "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/PhantomPain.png"
+     "icon": null
     },
     {
-     "key": "PocketDimension",
-     "name": "포켓 치수",
-     "standardDesc": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 +3 증가하고, 수류탄 소지 한도가 +1개 증가합니다.",
-     "deluxeDesc": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 +5 증가하고, 수류탄 소지 한도가 +2개 증가합니다. 모든 투사체 무기는 절대 불발되지 않습니다.",
-     "standardDescRaw": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 <font color=\"#77D914\">+3</font> 증가하고, <font color=\"#66CCFF\">수류탄</font> 소지 한도가 <font color=\"#77D914\">+1개</font> 증가합니다.",
-     "deluxeDescRaw": "공생체 내부의 공간을 비틉니다. 소지 무게 한도가 <font color=\"#77D914\">+5</font> 증가하고, <font color=\"#66CCFF\">수류탄</font> 소지 한도가 <font color=\"#77D914\">+2개</font> 증가합니다. 모든 투사체 무기는 절대 불발되지 않습니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "WeightBonus",
-       "label": "중량 보너스",
-       "value": 3,
-       "unit": "count",
-       "display": "3"
-      },
-      {
-       "key": "WeightBonus",
-       "label": "중량 보너스",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "GrenadeBonus",
-       "label": "수류탄 보너스",
-       "value": 1,
-       "unit": "percent",
-       "display": "+100%"
-      },
-      {
-       "key": "GrenadeBonus",
-       "label": "수류탄 보너스",
-       "value": 2,
-       "unit": "percent",
-       "display": "+200%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/PocketDimension.png"
-    },
-    {
-     "key": "TemporalAbsolution",
-     "name": "시간적 사면",
-     "standardDesc": "ZED 타임이 종료되면, ZED 타임 중에 입었던 피해의 35%를 회복합니다.",
-     "deluxeDesc": "ZED 타임이 종료되면, ZED 타임 중에 입었던 피해의 65%를 회복합니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font>이 종료되면, <font color=\"#FFD700\">ZED 타임 중</font>에 입었던 <font color=\"#66CCFF\">피해</font>의 <font color=\"#77D914\">35%</font>를 회복합니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font>이 종료되면, <font color=\"#FFD700\">ZED 타임 중</font>에 입었던 <font color=\"#66CCFF\">피해</font>의 <font color=\"#77D914\">65%</font>를 회복합니다.",
+     "key": "DeltaForce_Intimidation",
+     "name": "위압 사격",
+     "standardDesc": "각 제드를 처음 타격할 때 10% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
+     "deluxeDesc": "각 제드를 처음 타격할 때 20% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
+     "standardDescRaw": "각 제드를 처음 타격할 때 10% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
+     "deluxeDescRaw": "각 제드를 처음 타격할 때 20% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -8792,148 +8454,382 @@
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
+     "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/TemporalAbsolution.png"
+     "icon": null
     },
     {
-     "key": "TemporalRupture",
-     "name": "시간적 파열",
-     "standardDesc": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 4% 확률로 폭발하며 파편 피해를 입힙니다.",
-     "deluxeDesc": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 7% 확률로 폭발하며 파편 피해를 입힙니다.",
-     "standardDescRaw": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 <font color=\"#77D914\">4%</font> 확률로 폭발하며 파편 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
-     "deluxeDescRaw": "시간의 스트레스가 적의 시체를 파열시킵니다. 죽은 적은 <font color=\"#77D914\">7%</font> 확률로 폭발하며 파편 <font color=\"#66CCFF\">피해</font>를 입힙니다.",
+     "key": "DeltaForce_Exposure",
+     "name": "시간적 쇠약",
+     "standardDesc": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 10% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
+     "deluxeDesc": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 17% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
+     "standardDescRaw": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 10% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
+     "deluxeDescRaw": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 17% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.04,
-       "unit": "percent",
-       "display": "+4%"
-      },
-      {
-       "key": "Chance",
-       "label": "발동 확률",
-       "value": 0.07,
-       "unit": "percent",
-       "display": "+7%"
-      }
-     ],
-     "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "260708 너프. 구 0.250000; 260708 너프. 구 0.500000",
-     "textFixed": false,
-     "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/TemporalRupture.png"
-    },
-    {
-     "key": "TemporalSiphon",
-     "name": "시간적 사이펀",
-     "standardDesc": "ZED 타임 동안 적을 처치하면 2 HP가 회복됩니다. 근접 공격 처치 시에는 4 HP가 회복됩니다.",
-     "deluxeDesc": "ZED 타임 동안 적을 처치하면 4 HP가 회복됩니다. 근접 공격 처치 시에는 8 HP가 회복됩니다.",
-     "standardDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 적을 처치하면 <font color=\"#77D914\">2 HP</font>가 회복됩니다. <font color=\"#66CCFF\">근접 공격</font> <font color=\"#FFD700\">처치 시</font>에는 <font color=\"#77D914\">4 HP</font>가 회복됩니다.",
-     "deluxeDescRaw": "<font color=\"#FFD700\">ZED 타임</font> 동안 적을 처치하면 <font color=\"#77D914\">4 HP</font>가 회복됩니다. <font color=\"#66CCFF\">근접 공격</font> <font color=\"#FFD700\">처치 시</font>에는 <font color=\"#77D914\">8 HP</font>가 회복됩니다.",
-     "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "MeleeVampire",
-       "label": "근접 흡혈",
-       "value": 4,
-       "unit": "count",
-       "display": "4"
-      },
-      {
-       "key": "MeleeVampire",
-       "label": "근접 흡혈",
-       "value": 8,
-       "unit": "count",
-       "display": "8"
-      },
-      {
-       "key": "WeapVampire",
-       "label": "무기 흡혈",
-       "value": 2,
-       "unit": "count",
-       "display": "2"
-      },
-      {
-       "key": "WeapVampire",
-       "label": "무기 흡혈",
-       "value": 4,
-       "unit": "count",
-       "display": "4"
-      }
-     ],
+     "rawValues": [],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
+     "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/TemporalSiphon.png"
+     "icon": null
     },
     {
-     "key": "WarpPhase",
-     "name": "워프 위상",
-     "standardDesc": "위상 변화: 클롯의 잡기에 당하지 않습니다. 발사하는 투사체는 사이렌의 비명에 면역이 됩니다. 은폐된 적을 +100% 더 먼 거리에서 감지합니다.",
-     "deluxeDesc": "위상 변화: 클롯의 잡기에 당하지 않습니다. 발사하는 투사체는 사이렌의 비명에 면역이 됩니다. 은폐된 적을 +200% 더 먼 거리에서 감지합니다.",
-     "standardDescRaw": "위상 변화: 클롯의 잡기에 당하지 않습니다. 발사하는 투사체는 사이렌의 비명에 면역이 됩니다. 은폐된 적을 <font color=\"#77D914\">+100%</font> 더 먼 거리에서 감지합니다.",
-     "deluxeDescRaw": "위상 변화: 클롯의 잡기에 당하지 않습니다. 발사하는 투사체는 사이렌의 비명에 면역이 됩니다. 은폐된 적을 <font color=\"#77D914\">+200%</font> 더 먼 거리에서 감지합니다.",
+     "key": "DeltaForce_CombatRecovery",
+     "name": "전투 회복",
+     "standardDesc": "ZED 타임 동안 제드를 처치할 때마다 체력을 5 HP 회복합니다. 최대 체력을 넘지 않습니다.",
+     "deluxeDesc": "ZED 타임 동안 제드를 처치할 때마다 체력을 10 HP 회복합니다. 최대 체력을 넘지 않습니다.",
+     "standardDescRaw": "ZED 타임 동안 제드를 처치할 때마다 체력을 5 HP 회복합니다. 최대 체력을 넘지 않습니다.",
+     "deluxeDescRaw": "ZED 타임 동안 제드를 처치할 때마다 체력을 10 HP 회복합니다. 최대 체력을 넘지 않습니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "CloakBonus",
-       "label": "은신 보너스",
-       "value": 1.0,
-       "unit": "percent",
-       "display": "+100%"
-      },
-      {
-       "key": "CloakBonus",
-       "label": "은신 보너스",
-       "value": 2.0,
-       "unit": "percent",
-       "display": "+200%"
-      }
-     ],
+     "rawValues": [],
      "hasKorText": true,
      "note": null,
      "isPatched": false,
      "patchNote": null,
      "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
+     "deluxeAvailable": true,
      "disabledNote": null,
      "noData": false,
-     "icon": "icons/skills/WarpPhase.png"
+     "icon": null
+    },
+    {
+     "key": "DeltaForce_HeadshotConservation",
+     "name": "정밀 탄약 보존",
+     "standardDesc": "ZED 타임 중 헤드샷 시 30% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "deluxeDesc": "ZED 타임 중 헤드샷 시 50% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "standardDescRaw": "ZED 타임 중 헤드샷 시 30% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "deluxeDescRaw": "ZED 타임 중 헤드샷 시 50% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "DeltaForce_Veteran",
+     "name": "백전노장",
+     "standardDesc": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 1% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "deluxeDesc": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 2% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "standardDescRaw": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 1% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "deluxeDescRaw": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 2% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "DeltaForce_HeadshotTraining",
+     "name": "정밀 훈련",
+     "standardDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 헤드샷 피해가 영구적으로 1% 증가합니다. 백전노장이 필요합니다.",
+     "deluxeDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 헤드샷 피해가 영구적으로 2% 증가합니다. 백전노장이 필요합니다.",
+     "standardDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 헤드샷 피해가 영구적으로 1% 증가합니다. 백전노장이 필요합니다.",
+     "deluxeDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 헤드샷 피해가 영구적으로 2% 증가합니다. 백전노장이 필요합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "DeltaForce_LargeZedTraining",
+     "name": "중보스 대응 훈련",
+     "standardDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 중보스 대상 피해가 영구적으로 1% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "deluxeDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 중보스 대상 피해가 영구적으로 2% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "standardDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 중보스 대상 피해가 영구적으로 1% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "deluxeDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 중보스 대상 피해가 영구적으로 2% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "DeltaForce_TemporalFirepower",
+     "name": "시간 화력",
+     "standardDesc": "ZED 타임 동안 모든 무기 피해가 25% 증가합니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "ZED 타임 동안 모든 무기 피해가 25% 증가합니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "DeltaForce_InstantSwitch",
+     "name": "실시간 무기 전환",
+     "standardDesc": "ZED 타임 동안 무기 교체가 일반 시간의 속도로 작동합니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "ZED 타임 동안 무기 교체가 일반 시간의 속도로 작동합니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "TemporalArmor",
+     "name": "시간의 장갑",
+     "standardDesc": "ZED 타임 동안 받는 모든 피해가 30% 감소합니다.",
+     "deluxeDesc": "ZED 타임 동안 받는 모든 피해가 50% 감소합니다.",
+     "standardDescRaw": "ZED 타임 동안 받는 모든 피해가 30% 감소합니다.",
+     "deluxeDescRaw": "ZED 타임 동안 받는 모든 피해가 50% 감소합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Intimidation",
+     "name": "위압 사격",
+     "standardDesc": "각 제드를 처음 타격할 때 10% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
+     "deluxeDesc": "각 제드를 처음 타격할 때 20% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
+     "standardDescRaw": "각 제드를 처음 타격할 때 10% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
+     "deluxeDescRaw": "각 제드를 처음 타격할 때 20% 확률로 위협하여 다른 생존 팀원에게 표적을 바꾸게 합니다. 플레이어별로 같은 제드에게 한 번만 판정하며, 다른 생존 팀원이 없으면 표적을 바꿀 수 없습니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Exposure",
+     "name": "시간적 쇠약",
+     "standardDesc": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 10% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
+     "deluxeDesc": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 17% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
+     "standardDescRaw": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 10% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
+     "deluxeDescRaw": "ZED 타임 중 타격한 제드는 이후 팀 전체로부터 받는 피해가 17% 증가합니다. ZED 타임이 끝나도 제드가 죽을 때까지 유지되며, 가장 강한 쇠약 하나만 적용됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "CombatRecovery",
+     "name": "전투 회복",
+     "standardDesc": "ZED 타임 동안 제드를 처치할 때마다 체력을 5 HP 회복합니다. 최대 체력을 넘지 않습니다.",
+     "deluxeDesc": "ZED 타임 동안 제드를 처치할 때마다 체력을 10 HP 회복합니다. 최대 체력을 넘지 않습니다.",
+     "standardDescRaw": "ZED 타임 동안 제드를 처치할 때마다 체력을 5 HP 회복합니다. 최대 체력을 넘지 않습니다.",
+     "deluxeDescRaw": "ZED 타임 동안 제드를 처치할 때마다 체력을 10 HP 회복합니다. 최대 체력을 넘지 않습니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "HeadshotConservation",
+     "name": "정밀 탄약 보존",
+     "standardDesc": "ZED 타임 중 헤드샷 시 30% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "deluxeDesc": "ZED 타임 중 헤드샷 시 50% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "standardDescRaw": "ZED 타임 중 헤드샷 시 30% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "deluxeDescRaw": "ZED 타임 중 헤드샷 시 50% 확률로 해당 발사에서 실제 소모한 탄약을 돌려받습니다. 관통·산탄을 포함해 한 발사당 한 번만 판정·반환합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "Veteran",
+     "name": "백전노장",
+     "standardDesc": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 1% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "deluxeDesc": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 2% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "standardDescRaw": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 1% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "deluxeDescRaw": "이 스킬을 획득한 뒤 제드를 100마리 처치할 때마다 이번 판 동안 모든 무기 피해가 영구적으로 2% 증가합니다. 진행도와 획득 보너스는 사망해도 유지됩니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "HeadshotTraining",
+     "name": "정밀 훈련",
+     "standardDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 헤드샷 피해가 영구적으로 1% 증가합니다. 백전노장이 필요합니다.",
+     "deluxeDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 헤드샷 피해가 영구적으로 2% 증가합니다. 백전노장이 필요합니다.",
+     "standardDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 헤드샷 피해가 영구적으로 1% 증가합니다. 백전노장이 필요합니다.",
+     "deluxeDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 헤드샷 피해가 영구적으로 2% 증가합니다. 백전노장이 필요합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "LargeZedTraining",
+     "name": "중보스 대응 훈련",
+     "standardDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 중보스 대상 피해가 영구적으로 1% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "deluxeDesc": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 중보스 대상 피해가 영구적으로 2% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "standardDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 25% 확률로 이번 판의 중보스 대상 피해가 영구적으로 1% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "deluxeDescRaw": "백전노장의 100킬 보상이 발동할 때마다 독립적으로 50% 확률로 이번 판의 중보스 대상 피해가 영구적으로 2% 증가합니다. 보스는 제외하며 백전노장이 필요합니다.",
+     "allowsDeluxe": true,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": true,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "TemporalFirepower",
+     "name": "시간 화력",
+     "standardDesc": "ZED 타임 동안 모든 무기 피해가 25% 증가합니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "ZED 타임 동안 모든 무기 피해가 25% 증가합니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
+    },
+    {
+     "key": "InstantSwitch",
+     "name": "실시간 무기 전환",
+     "standardDesc": "ZED 타임 동안 무기 교체가 일반 시간의 속도로 작동합니다.",
+     "deluxeDesc": null,
+     "standardDescRaw": "ZED 타임 동안 무기 교체가 일반 시간의 속도로 작동합니다.",
+     "deluxeDescRaw": null,
+     "allowsDeluxe": false,
+     "rawValues": [],
+     "hasKorText": true,
+     "note": null,
+     "isPatched": false,
+     "patchNote": null,
+     "textFixed": false,
+     "disabled": false,
+     "deluxeAvailable": false,
+     "disabledNote": null,
+     "noData": false,
+     "icon": null
     }
    ],
-   "skillCount": 10,
-   "verdict": {
-    "tag": "확정 OP (하드코딩 우회, 완화 완료)",
-    "note": "레벨 20에서 ZED타임 연장 횟수 제한을 '9999'로 설정해 사실상 무한 우회하도록 소스에 하드코딩되어 있음(ini로 조정 불가). 게다가 헤드샷 발동 로직이 이 횟수 제한 카운터 자체를 검사하지 않고 즉시 재발동시켜, Lv10부터 사실상 무제한 ZED타임 연장이 가능. 2026-07-05: ini로 조정 가능한 발동확률(30%→10%)과 쿨다운(3초→8초)을 대폭 축소해 빈도를 크게 낮췄으나, 근본적인 '무한 우회' 자체는 재컴파일 없이는 제거 불가.",
-    "grade": "SS"
-   },
-   "grade": "SS",
-   "isPatched": true,
-   "patchNote": "글로벌 패시브 50%축소(2026-07-02), 구 0.020000; 구 0.400000; 구 0.300000; ZED타임 무한연장 완화(2026-07-05), 구 0.300000 -- 카운터 우회 발동이라 3배 이상 축소; 구 0.600000; 구 0.500000; ZED타임 무한연장 완화(2026-07-05), 구 3.000000",
+   "skillCount": 20,
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
    "testWarning": null,
-   "recentChangeTag": {
-    "date": "2026-07-10",
-    "type": "nerf"
-   },
+   "recentChangeTag": null,
    "extraSections": [],
    "rankIcons": [],
-   "icon": "icons/agony.png"
+   "icon": "icons/commando.png"
   },
   {
    "key": "Metronome",
@@ -9936,9 +9832,9 @@
     {
      "key": "SeekerA",
      "name": "시커 강화 모듈 A",
-     "standardDesc": "시커의 탄창과 예비 탄약이 2배, 연사 속도가 2배가 됩니다. 마우스를 누르고 있으면 연속 사격합니다. 발사 시 락온한 적마다 미사일을 한 발씩 발사하며, 발사 수는 탄창 잔량을 넘지 않습니다. 락온 대상 수 제한이 사라집니다. 피해량과 폭발 반경은 30% 감소합니다. 시커 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "standardDesc": "시커의 탄창과 예비 탄약이 2배, 연사 속도가 2배가 됩니다. 마우스를 누르고 있으면 연속 사격합니다. 발사 시 락온한 적마다 미사일을 한 발씩 발사하며, 발사 수는 탄창 잔량을 넘지 않습니다. 락온 대상 수 제한이 사라집니다. 시커 사용 시 반동이 75% 감소합니다. 피해량과 폭발 반경은 30% 감소합니다. 시커 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
      "deluxeDesc": null,
-     "standardDescRaw": "시커의 탄창과 예비 탄약이 2배, 연사 속도가 2배가 됩니다. 마우스를 누르고 있으면 연속 사격합니다. 발사 시 락온한 적마다 미사일을 한 발씩 발사하며, 발사 수는 탄창 잔량을 넘지 않습니다. 락온 대상 수 제한이 사라집니다. 피해량과 폭발 반경은 30% 감소합니다. 시커 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
+     "standardDescRaw": "시커의 탄창과 예비 탄약이 2배, 연사 속도가 2배가 됩니다. 마우스를 누르고 있으면 연속 사격합니다. 발사 시 락온한 적마다 미사일을 한 발씩 발사하며, 발사 수는 탄창 잔량을 넘지 않습니다. 락온 대상 수 제한이 사라집니다. 시커 사용 시 반동이 75% 감소합니다. 피해량과 폭발 반경은 30% 감소합니다. 시커 강화 모듈 B를 나중에 구매하면 이 효과는 교체됩니다.",
      "deluxeDescRaw": null,
      "allowsDeluxe": false,
      "rawValues": [],
@@ -10076,9 +9972,9 @@
     {
      "key": "ZedMK5",
      "name": "ZED MK5 샤프슈터 모듈",
-     "standardDesc": "ZED MKIII 에너지탄 피해가 10% 증가하고, 헤드샷 피해가 추가로 30% 증가합니다. 에너지탄 공격 속도가 15% 증가합니다. 로켓 발사 간격은 기존의 2배가 됩니다. 나중에 ZED MK4 로켓 모듈을 구매하면 효과가 교체됩니다.",
+     "standardDesc": "ZED MKIII 에너지탄 피해가 10% 증가하고, 헤드샷 피해가 추가로 30% 증가합니다. 에너지탄 공격 속도가 15% 증가합니다. 연속 사격 시 로켓 발사에 필요한 에너지탄 수가 기존 6발에서 12발로 늘어납니다. 나중에 ZED MK4 로켓 모듈을 구매하면 효과가 교체됩니다.",
      "deluxeDesc": null,
-     "standardDescRaw": "ZED MKIII 에너지탄 피해가 10% 증가하고, 헤드샷 피해가 추가로 30% 증가합니다. 에너지탄 공격 속도가 15% 증가합니다. 로켓 발사 간격은 기존의 2배가 됩니다. 나중에 ZED MK4 로켓 모듈을 구매하면 효과가 교체됩니다.",
+     "standardDescRaw": "ZED MKIII 에너지탄 피해가 10% 증가하고, 헤드샷 피해가 추가로 30% 증가합니다. 에너지탄 공격 속도가 15% 증가합니다. 연속 사격 시 로켓 발사에 필요한 에너지탄 수가 기존 6발에서 12발로 늘어납니다. 나중에 ZED MK4 로켓 모듈을 구매하면 효과가 교체됩니다.",
      "deluxeDescRaw": null,
      "allowsDeluxe": false,
      "rawValues": [],
@@ -16466,8 +16362,8 @@
    ],
    "fixedStats": [],
    "valueSourceNote": "레벨별 효과는 현재 ZTUpgrade_Perk_JohnWick 클래스 구현을 기준으로 표시합니다.",
-   "summary": "[패시브] 전문 청부업자: 현재 무기 피해, 공격·발사 속도, 무기 전환 속도, 관통력 보너스는 +%x1_1%입니다.",
-   "role": "[패시브] 전문 청부업자: 현재 무기 피해, 공격·발사 속도, 무기 전환 속도, 관통력 보너스는 +%x1_1%%입니다.",
+   "summary": "헤드샷 스택을 쌓아 대미지를 획기적으로 증폭시키는 한계돌파 퍼크",
+   "role": "헤드샷 스택을 쌓아 대미지를 획기적으로 증폭시키는 한계돌파 퍼크",
    "summaryHtml": null,
    "endgame": null,
    "descriptions": [
@@ -16477,13 +16373,13 @@
      "isCapstone": false
     },
     {
-     "raw": "현재 <font color=\"#00BFFF\">재장전 속도, 반동, 이동 속도, 받는 피해</font> 보너스는 각각 <font color=\"#77D914\">%x1_1%%</font>, <font color=\"#77D914\">%x1_2%%</font>, <font color=\"#77D914\">%x1_3%%</font>, <font color=\"#77D914\">%x1_4%%</font>입니다.",
-     "text": "현재 재장전 속도, 반동, 이동 속도, 받는 피해 보너스는 각각 %x1_1%%, %x1_2%%, %x1_3%%, %x1_4%%입니다.",
+     "raw": "현재 <font color=\"#00BFFF\">재장전 속도, 반동, 이동 속도, 받는 피해</font> 보너스는 각각 <font color=\"#77D914\">%x2_1%%</font>, <font color=\"#77D914\">%x2_2%%</font>, <font color=\"#77D914\">%x2_3%%</font>, <font color=\"#77D914\">%x2_4%%</font>입니다.",
+     "text": "현재 재장전 속도, 반동, 이동 속도, 받는 피해 보너스는 각각 %x2_1%%, %x2_2%%, %x2_3%%, %x2_4%%입니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#00BFFF\">건슬링거 무기</font>의 탄창 용량은 <font color=\"#77D914\">+%x1_1%%</font>, 예비 탄약은 <font color=\"#77D914\">+%x1_2%%</font> 증가합니다.",
-     "text": "건슬링거 무기의 탄창 용량은 +%x1_1%%, 예비 탄약은 +%x1_2%% 증가합니다.",
+     "raw": "<font color=\"#00BFFF\">건슬링거 무기</font>의 탄창 용량은 <font color=\"#77D914\">+%x3_1%%</font>, 예비 탄약은 <font color=\"#77D914\">+%x3_2%%</font> 증가합니다.",
+     "text": "건슬링거 무기의 탄창 용량은 +%x3_1%%, 예비 탄약은 +%x3_2%% 증가합니다.",
      "isCapstone": false
     },
     {
@@ -16509,13 +16405,13 @@
      "isCapstone": false
     },
     {
-     "raw": "현재 <font color=\"#00BFFF\">재장전 속도, 반동, 이동 속도, 받는 피해</font> 보너스는 각각 <font color=\"#77D914\">%x1_1%%</font>, <font color=\"#77D914\">%x1_2%%</font>, <font color=\"#77D914\">%x1_3%%</font>, <font color=\"#77D914\">%x1_4%%</font>입니다.",
-     "text": "현재 재장전 속도, 반동, 이동 속도, 받는 피해 보너스는 각각 %x1_1%%, %x1_2%%, %x1_3%%, %x1_4%%입니다.",
+     "raw": "현재 <font color=\"#00BFFF\">재장전 속도, 반동, 이동 속도, 받는 피해</font> 보너스는 각각 <font color=\"#77D914\">%x2_1%%</font>, <font color=\"#77D914\">%x2_2%%</font>, <font color=\"#77D914\">%x2_3%%</font>, <font color=\"#77D914\">%x2_4%%</font>입니다.",
+     "text": "현재 재장전 속도, 반동, 이동 속도, 받는 피해 보너스는 각각 %x2_1%%, %x2_2%%, %x2_3%%, %x2_4%%입니다.",
      "isCapstone": false
     },
     {
-     "raw": "<font color=\"#00BFFF\">건슬링거 무기</font>의 탄창 용량은 <font color=\"#77D914\">+%x1_1%%</font>, 예비 탄약은 <font color=\"#77D914\">+%x1_2%%</font> 증가합니다.",
-     "text": "건슬링거 무기의 탄창 용량은 +%x1_1%%, 예비 탄약은 +%x1_2%% 증가합니다.",
+     "raw": "<font color=\"#00BFFF\">건슬링거 무기</font>의 탄창 용량은 <font color=\"#77D914\">+%x3_1%%</font>, 예비 탄약은 <font color=\"#77D914\">+%x3_2%%</font> 증가합니다.",
+     "text": "건슬링거 무기의 탄창 용량은 +%x3_1%%, 예비 탄약은 +%x3_2%% 증가합니다.",
      "isCapstone": false
     },
     {
@@ -20450,8 +20346,8 @@
      "isCapstone": false
     },
     {
-     "raw": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: <font color=\"#66CCFF\">Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%</font>. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
-     "text": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
+     "raw": "해골을 주우면 아래 트로피 중 하나의 영구 보너스를 무작위로 얻습니다: <font color=\"#66CCFF\">Skullpiercer (빨강): 헤드샷 피해 +2%; Kraber (파랑): 대형 제드 피해 +3%; EvoShield (청록): 최대 체력 +4% 및 최대 방어구 +2%; Octane (초록): 이동 속도 +1%; Spitfire (주황): 탄창 크기 +2% 및 예비 탄약 +5%.</font> Octane의 획득 확률은 다른 트로피 각각의 절반입니다.",
+     "text": "해골을 주우면 아래 트로피 중 하나의 영구 보너스를 무작위로 얻습니다: Skullpiercer (빨강): 헤드샷 피해 +2%; Kraber (파랑): 대형 제드 피해 +3%; EvoShield (청록): 최대 체력 +4% 및 최대 방어구 +2%; Octane (초록): 이동 속도 +1%; Spitfire (주황): 탄창 크기 +2% 및 예비 탄약 +5%. Octane의 획득 확률은 다른 트로피 각각의 절반입니다.",
      "isCapstone": false
     },
     {
@@ -20472,8 +20368,8 @@
      "isCapstone": false
     },
     {
-     "raw": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: <font color=\"#66CCFF\">Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%</font>. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
-     "text": "해골을 주우면 다음 보너스 중 하나를 영구히 얻습니다: Skullpiercer 헤드샷 피해 +3%%, Kraber 대형 제드 피해 +5%%, EvoShield 최대 체력 +6%%/최대 방어구 +3%%, Octane 이동 속도 +1%%, Spitfire 탄창 +4%%/예비 탄약 +8%%. Octane 해골은 20개를 얻으면 더 이상 나오지 않으며, 단발 무기는 탄창 보너스를 받지 않습니다.",
+     "raw": "해골을 주우면 아래 트로피 중 하나의 영구 보너스를 무작위로 얻습니다: <font color=\"#66CCFF\">Skullpiercer (빨강): 헤드샷 피해 +2%; Kraber (파랑): 대형 제드 피해 +3%; EvoShield (청록): 최대 체력 +4% 및 최대 방어구 +2%; Octane (초록): 이동 속도 +1%; Spitfire (주황): 탄창 크기 +2% 및 예비 탄약 +5%.</font> Octane의 획득 확률은 다른 트로피 각각의 절반입니다.",
+     "text": "해골을 주우면 아래 트로피 중 하나의 영구 보너스를 무작위로 얻습니다: Skullpiercer (빨강): 헤드샷 피해 +2%; Kraber (파랑): 대형 제드 피해 +3%; EvoShield (청록): 최대 체력 +4% 및 최대 방어구 +2%; Octane (초록): 이동 속도 +1%; Spitfire (주황): 탄창 크기 +2% 및 예비 탄약 +5%. Octane의 획득 확률은 다른 트로피 각각의 절반입니다.",
      "isCapstone": false
     }
    ],
@@ -24312,14 +24208,14 @@
     {
      "key": "Dosh",
      "label": "웨이브 생존 보상",
-     "value": 10.0,
+     "value": 15.0,
      "unit": "currency",
-     "display": "10 도쉬",
+     "display": "15 도쉬",
      "scaling": true,
-     "lv10": 100.0,
-     "lv20": 200.0,
-     "lv10Display": "100 도쉬",
-     "lv20Display": "200 도쉬"
+     "lv10": 150.0,
+     "lv20": 300.0,
+     "lv10Display": "150 도쉬",
+     "lv20Display": "300 도쉬"
     },
     {
      "key": "DoshPerKill",
@@ -24487,10 +24383,10 @@
     {
      "key": "Capitalist_EmergencyFund",
      "name": "비상 자금",
-     "standardDesc": "자본가 전용: 생존 웨이브 정산 전 잔액과 그 웨이브에 준 도쉬의 합이 500 미만이면 +75 도쉬. 웨이브 시작부터 생존해야 하며 웨이브당 1회입니다.",
-     "deluxeDesc": "자본가 전용: 생존 웨이브 정산 전 잔액과 그 웨이브에 준 도쉬의 합이 500 미만이면 +150 도쉬. 웨이브 시작부터 생존해야 하며 웨이브당 1회입니다.",
-     "standardDescRaw": "자본가 전용: 생존 웨이브 정산 전 잔액과 그 웨이브에 준 도쉬의 합이 <font color=\"#77D914\">500</font> 미만이면 <font color=\"#77D914\">+75 도쉬</font>. 웨이브 시작부터 생존해야 하며 웨이브당 <font color=\"#77D914\">1회</font>입니다.",
-     "deluxeDescRaw": "자본가 전용: 생존 웨이브 정산 전 잔액과 그 웨이브에 준 도쉬의 합이 <font color=\"#77D914\">500</font> 미만이면 <font color=\"#77D914\">+150 도쉬</font>. 웨이브 시작부터 생존해야 하며 웨이브당 <font color=\"#77D914\">1회</font>입니다.",
+     "standardDesc": "자본가 전용: 해당 웨이브에서 전투로 번 도쉬가 팀원 중 가장 적으면 성공한 웨이브 정산 시 200 도쉬를 받습니다. 공동 최하위도 적용되며 웨이브 시작 시부터 참여한 플레이어가 2명 이상이어야 합니다. 솔로는 제외됩니다. 웨이브 시작부터 생존해야 하며 웨이브당 1회입니다. 판매·양도받은 도쉬는 수입에서 제외됩니다.",
+     "deluxeDesc": "자본가 전용: 해당 웨이브에서 전투로 번 도쉬가 팀원 중 가장 적으면 성공한 웨이브 정산 시 350 도쉬를 받습니다. 공동 최하위도 적용되며 웨이브 시작 시부터 참여한 플레이어가 2명 이상이어야 합니다. 솔로는 제외됩니다. 웨이브 시작부터 생존해야 하며 웨이브당 1회입니다. 판매·양도받은 도쉬는 수입에서 제외됩니다.",
+     "standardDescRaw": "자본가 전용: 해당 웨이브에서 전투로 번 도쉬가 팀원 중 가장 적으면 성공한 웨이브 정산 시 <font color=\"#77D914\">200 도쉬</font>를 받습니다. 공동 최하위도 적용되며 웨이브 시작 시부터 참여한 플레이어가 2명 이상이어야 합니다. 솔로는 제외됩니다. 웨이브 시작부터 생존해야 하며 웨이브당 1회입니다. 판매·양도받은 도쉬는 수입에서 제외됩니다.",
+     "deluxeDescRaw": "자본가 전용: 해당 웨이브에서 전투로 번 도쉬가 팀원 중 가장 적으면 성공한 웨이브 정산 시 <font color=\"#77D914\">350 도쉬</font>를 받습니다. 공동 최하위도 적용되며 웨이브 시작 시부터 참여한 플레이어가 2명 이상이어야 합니다. 솔로는 제외됩니다. 웨이브 시작부터 생존해야 하며 웨이브당 1회입니다. 판매·양도받은 도쉬는 수입에서 제외됩니다.",
      "allowsDeluxe": true,
      "rawValues": [],
      "hasKorText": true,
@@ -24983,11 +24879,11 @@
  "meta": {
   "advancedPerkCount": 53,
   "basePerkCount": 10,
-  "totalSkills": 497,
+  "totalSkills": 507,
   "release": {
-   "version": "10.22.1",
+   "version": "10.22.20",
    "workshopId": "3809067086",
-   "publishedUtc": "2026-10-21 오후 3:11:46",
+   "publishedUtc": "2026-10-22 오전 9:35:31",
    "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3809067086",
    "dataSource": "업로드 빌드에 포함된 소스 기본값·한국어 설명·퍼크 구현",
    "serverGameConfigDiffers": true
