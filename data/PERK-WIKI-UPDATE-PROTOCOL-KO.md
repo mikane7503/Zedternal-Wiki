@@ -6,4 +6,4 @@
 
 전체 데이터 갱신은 `python data/build.py`로 수행하고 `python data/verify_kor_alignment.py` 및 전체 아이콘 경로 검사를 실행한다. 등록·해금 순서, 활성 스킬, 수치와 KOR 문자열을 점검한다. 이전 4단계 퍼크 감사 및 버전별 JSON 감사 파일은 공개 게이트가 아니며 요구하지 않는다.
 
-라이브 배포는 같은 소스와 KOR이 포함된 Workshop 빌드가 공개된 후 수행한다. GitHub Pages 배포 성공 및 라이브 버전·아이콘을 확인하고, 로컬 초안과 공개 상태를 구분한다.
+라이브 위키 배포는 Workshop 릴리스에 종속되지 않는다. 사용자가 위키 갱신을 요청하면 Ascension 코드·KOR·아이콘을 검증한 뒤 GitHub Pages에 게시하고 라이브 화면과 데이터를 확인한다. Workshop ID나 공개 버전은 확인된 값만 기록한다.

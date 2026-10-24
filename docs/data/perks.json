@@ -21062,7 +21062,7 @@
    ],
    "isCombinationUnlocked": false,
    "isStatic": false,
-   "hasIniConfig": true,
+   "hasIniConfig": false,
    "maxLevel": 20,
    "passiveStats": [
     {
@@ -21103,7 +21103,7 @@
     }
    ],
    "fixedStats": [],
-   "valueSourceNote": null,
+   "valueSourceNote": "퍼크 수치는 코드에 고정되어 있으며 INI로 변경하지 않습니다. 연사·관통·탄창 효과는 레벨당 기본 수치 기준입니다.",
    "summary": "연사와 관통을 쌓아 지속 화력을 키우는 퍼크",
    "role": "연사와 관통을 쌓아 지속 화력을 키우는 퍼크",
    "summaryHtml": null,
@@ -21171,32 +21171,10 @@
      "standardDescRaw": "모든 샷건의 직격 피해가 <font color=\"#77D914\">5%</font> 증가합니다.",
      "deluxeDescRaw": "모든 샷건의 직격 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "MaxDamageBonus",
-       "label": "최대 피해량 보너스",
-       "value": 0.3,
-       "unit": "percent",
-       "display": "+30%"
-      },
-      {
-       "key": "MaxDamageBonus",
-       "label": "최대 피해량 보너스",
-       "value": 0.6,
-       "unit": "percent",
-       "display": "+60%"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Bloodthirst.png"
+     "icon": "icons/skills/Bloodthirst.png",
+     "deluxeIcon": "icons/skills/Bloodthirst_Deluxe.png"
     },
     {
      "key": "HuntDown",
@@ -21206,39 +21184,10 @@
      "standardDescRaw": "적과의 거리가 <font color=\"#77D914\">6m</font> 이내일 때 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
      "deluxeDescRaw": "적과의 거리가 <font color=\"#77D914\">6m</font> 이내일 때 샷건 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.03,
-       "unit": "percent",
-       "display": "+3%"
-      },
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "MaxStacks",
-       "label": "최대 스택 수",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "구 0.05/0.10(5스택+50%) → 5스택+25%. CascadingMassacre와 합산 시 최대 +65%로 억제(구 +125%)",
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/HuntDown.png"
+     "icon": "icons/skills/HuntDown.png",
+     "deluxeIcon": "icons/skills/HuntDown_Deluxe.png"
     },
     {
      "key": "LernaeanImmortality",
@@ -21248,39 +21197,10 @@
      "standardDescRaw": "샷건으로 머리를 맞히면 헤드샷 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
      "deluxeDescRaw": "샷건으로 머리를 맞히면 헤드샷 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "InvulnDuration",
-       "label": "무적 지속시간",
-       "value": 3.0,
-       "unit": "seconds",
-       "display": "3초"
-      },
-      {
-       "key": "InvulnDuration",
-       "label": "무적 지속시간",
-       "value": 5.0,
-       "unit": "seconds",
-       "display": "5초"
-      },
-      {
-       "key": "DamageBoostMult",
-       "label": "피해량 증폭 배율",
-       "value": 2.0,
-       "unit": "multiplier",
-       "display": "×2"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/LernaeanImmortality.png"
+     "icon": "icons/skills/LernaeanImmortality.png",
+     "deluxeIcon": "icons/skills/LernaeanImmortality_Deluxe.png"
     },
     {
      "key": "Overkill",
@@ -21290,39 +21210,10 @@
      "standardDescRaw": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
      "deluxeDescRaw": "스크레이크, 플레시파운드, 쿼터파운드에게 주는 샷건 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "ExcessCarryMult",
-       "label": "초과 휴대 배율",
-       "value": 0.5,
-       "unit": "multiplier",
-       "display": "×0.5"
-      },
-      {
-       "key": "ExcessCarryMult",
-       "label": "초과 휴대 배율",
-       "value": 0.75,
-       "unit": "multiplier",
-       "display": "×0.75"
-      },
-      {
-       "key": "MaxStoredDamage",
-       "label": "최대 저장된 피해량",
-       "value": 500,
-       "unit": "count",
-       "display": "500"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/Overkill.png"
+     "icon": "icons/skills/Overkill.png",
+     "deluxeIcon": "icons/skills/Overkill_Deluxe.png"
     },
     {
      "key": "ApexPredator",
@@ -21332,39 +21223,10 @@
      "standardDescRaw": "보스가 아닌 적의 체력이 <font color=\"#77D914\">30%</font> 미만이면 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
      "deluxeDescRaw": "보스가 아닌 적의 체력이 <font color=\"#77D914\">30%</font> 미만이면 샷건 피해가 <font color=\"#77D914\">12%</font> 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamageBonus",
-       "label": "피해량 보너스",
-       "value": 0.5,
-       "unit": "percent",
-       "display": "+50%"
-      },
-      {
-       "key": "DamageBonus",
-       "label": "피해량 보너스",
-       "value": 1.0,
-       "unit": "percent",
-       "display": "+100%"
-      },
-      {
-       "key": "HealthThreshold",
-       "label": "체력 임계값",
-       "value": 0.2,
-       "unit": "percent",
-       "display": "+20%"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": false,
-     "patchNote": null,
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/ApexPredator.png"
+     "icon": "icons/skills/ApexPredator.png",
+     "deluxeIcon": "icons/skills/ApexPredator_Deluxe.png"
     },
     {
      "key": "CascadingMassacre",
@@ -21374,46 +21236,10 @@
      "standardDescRaw": "같은 적을 샷건으로 연속 명중할 때마다 피해가 <font color=\"#77D914\">1%</font>씩 증가합니다. 최대 <font color=\"#77D914\">5%</font>까지 누적되며, <font color=\"#77D914\">2초</font> 동안 명중하지 못하면 초기화됩니다.",
      "deluxeDescRaw": "같은 적을 샷건으로 연속 명중할 때마다 피해가 <font color=\"#77D914\">2%</font>씩 증가합니다. 최대 <font color=\"#77D914\">10%</font>까지 누적되며, <font color=\"#77D914\">2초</font> 동안 명중하지 못하면 초기화됩니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.05,
-       "unit": "percent",
-       "display": "+5%"
-      },
-      {
-       "key": "DamagePerStack",
-       "label": "스택 당 피해량",
-       "value": 0.08,
-       "unit": "percent",
-       "display": "+8%"
-      },
-      {
-       "key": "MaxStacks",
-       "label": "최대 스택 수",
-       "value": 5,
-       "unit": "count",
-       "display": "5"
-      },
-      {
-       "key": "StackDuration",
-       "label": "스택 지속시간",
-       "value": 2.0,
-       "unit": "seconds",
-       "display": "2초"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "구 0.08/0.15(5스택+75%) → 5스택+40%. HuntDown과 합산 시 Hydra FuryMode 너프(3배→1.2배) 취지 훼손 방지",
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/CascadingMassacre.png"
+     "icon": "icons/skills/CascadingMassacre.png",
+     "deluxeIcon": "icons/skills/CascadingMassacre_Deluxe.png"
     },
     {
      "key": "ReflectedFury",
@@ -21423,46 +21249,10 @@
      "standardDescRaw": "<font color=\"#77D914\">0.75초</font> 동안 사격하지 않은 뒤 발사한 샷건의 첫 명중 피해가 <font color=\"#77D914\">10%</font> 증가합니다.",
      "deluxeDescRaw": "<font color=\"#77D914\">0.75초</font> 동안 사격하지 않은 뒤 발사한 샷건의 첫 명중 피해가 <font color=\"#77D914\">15%</font> 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "DamageReflectMult",
-       "label": "피해량 반사 배율",
-       "value": 0.5,
-       "unit": "multiplier",
-       "display": "×0.5"
-      },
-      {
-       "key": "DamageReflectMult",
-       "label": "피해량 반사 배율",
-       "value": 1.0,
-       "unit": "multiplier",
-       "display": "×1"
-      },
-      {
-       "key": "Cooldown",
-       "label": "재사용 대기시간",
-       "value": 30.0,
-       "unit": "seconds",
-       "display": "30초"
-      },
-      {
-       "key": "ExplosionRadius",
-       "label": "폭발 범위",
-       "value": 400.0,
-       "unit": "distance",
-       "display": "400"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "유저 지정값 너프(2026-07-02), 구 10.000000",
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/ReflectedFury.png"
+     "icon": "icons/skills/ReflectedFury.png",
+     "deluxeIcon": "icons/skills/ReflectedFury_Deluxe.png"
     },
     {
      "key": "EndlessRampage",
@@ -21472,49 +21262,30 @@
      "standardDescRaw": "히드라의 분노가 지속되는 동안 샷건 피해가 <font color=\"#77D914\">5%</font> 증가합니다.",
      "deluxeDescRaw": "히드라의 분노가 지속되는 동안 샷건 피해가 <font color=\"#77D914\">8%</font> 증가합니다.",
      "allowsDeluxe": true,
-     "rawValues": [
-      {
-       "key": "ZedTimeExtension",
-       "label": "ZED타임 연장",
-       "value": 0.25,
-       "unit": "seconds",
-       "display": "0.25초"
-      },
-      {
-       "key": "ZedTimeExtension",
-       "label": "ZED타임 연장",
-       "value": 0.5,
-       "unit": "seconds",
-       "display": "0.5초"
-      }
-     ],
      "hasKorText": true,
-     "note": null,
-     "isPatched": true,
-     "patchNote": "ZED타임 무한연장 완화(2026-07-05), 구 0.500000; 구 1.000000",
-     "textFixed": false,
      "disabled": false,
-     "deluxeAvailable": null,
-     "disabledNote": null,
-     "noData": false,
-     "icon": "icons/skills/EndlessRampage.png"
+     "icon": "icons/skills/EndlessRampage.png",
+     "deluxeIcon": "icons/skills/EndlessRampage_Deluxe.png"
     }
    ],
    "skillCount": 8,
-   "verdict": {
-    "tag": "적절 (너프 완료)",
-    "note": "CascadingMassacre+HuntDown 스택 합산이 +125%까지 나와 패시브 너프 취지를 훼손해 +65%로 조정 완료.",
-    "grade": "S"
-   },
-   "grade": "S",
-   "isPatched": true,
-   "patchNote": "밸런스 패치(2026-07-07), 구 0.010000; 밸런스 패치(2026-07-07), 구 0.025000; 구 0.020000; 구 1.200000(+20%→+10%, 배율의 보너스분만 축소)",
+   "verdict": null,
+   "grade": null,
+   "isPatched": false,
+   "patchNote": null,
    "testWarning": null,
-   "recentChangeTag": {
-    "date": "2026-07-07",
-    "type": "buff"
-   },
-   "extraSections": [],
+   "recentChangeTag": null,
+   "extraSections": [
+    {
+     "title": "효과 범위와 발동 규칙",
+     "html": "<ul><li><strong>패시브:</strong> 연사 속도·관통력·탄창 용량은 모든 플레이어 무기에 적용됩니다. 탄창 증가량은 기본 탄창을 기준으로 계산하고 정수로 반올림합니다.</li><li><strong>히드라의 분노:</strong> 레벨 10부터 서버가 확인한 제드 처치 100회마다 10초 발동합니다. 남는 처치 수는 다음 발동까지 유지됩니다. 레벨 20부터는 히드라 레벨이 오른 뒤 90초마다 추가 발동하며, 첫 발동도 90초 후입니다.</li><li>분노 발동이 겹치면 기존 남은 시간에 10초가 더해집니다. 분노 중 탄약을 사용하는 무기는 탄약을 소모하지 않으며, 엔지니어 드론 무기는 제외됩니다.</li><li><strong>스킬:</strong> 8개 선택 스킬의 피해 효과는 샷건에만 적용됩니다. 근거리 파쇄는 6m 이내, 대형 사냥은 스크레이크·플레시파운드·쿼터파운드, 마무리 산탄은 보스가 아닌 적의 체력 30% 미만 조건을 확인합니다.</li><li>추격탄은 같은 대상에 대한 사격 단위 연속 명중을 추적하며 표준 최대 5중첩, 디럭스 최대 10중첩입니다. 대상이 바뀌거나 2초간 명중하지 않으면 초기화됩니다.</li></ul>",
+     "note": "이 항목은 Zedternal Ascension v10.24.3의 실행 코드·한국어 설명 기준으로 갱신했습니다. 사이트의 나머지 항목은 전체 데이터 출처 표기를 따릅니다."
+    },
+    {
+     "title": "아이콘 출처",
+     "html": "<p>퍼크 아이콘: <code>ZedternalAscensionPerkIcons.Perks.UI_Perk_Hydra</code></p><table class=\"stat-table\"><tr><th>스킬</th><th>표준 아이콘</th><th>디럭스 아이콘</th></tr><tr><td>강화 장약</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_Bloodthirst</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_Bloodthirst_Deluxe</code></td></tr><tr><td>근거리 파쇄</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_HuntDown</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_HuntDown_Deluxe</code></td></tr><tr><td>두개골 파쇄</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_LernaeanImmortality</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_LernaeanImmortality_Deluxe</code></td></tr><tr><td>대형 사냥</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_Overkill</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_Overkill_Deluxe</code></td></tr><tr><td>마무리 산탄</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_ApexPredator</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_ApexPredator_Deluxe</code></td></tr><tr><td>추격탄</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_CascadingMassacre</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_CascadingMassacre_Deluxe</code></td></tr><tr><td>침착한 일격</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_ReflectedFury</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_ReflectedFury_Deluxe</code></td></tr><tr><td>분노 집중</td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_EndlessRampage</code></td><td><code>ZedternalAscension_Resources.Skills.UI_Skill_EndlessRampage_Deluxe</code></td></tr></table>"
+    }
+   ],
    "rankIcons": [],
    "icon": "icons/hydra.png"
   },
