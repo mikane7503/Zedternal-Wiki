@@ -182,7 +182,7 @@ function iconImg(perk, size) {
 async function init() {
   // no-cache: revalidate with the server every load so a freshly rebuilt
   // perks.json is never masked by a stale browser-cached copy
-  const res = await fetch("data/perks.json", { cache: "no-cache" });
+  const res = await fetch("data/perks.json?revision=ascension-20261029", { cache: "no-cache" });
   DATA = await res.json();
   renderReleaseFooter();
   applyLiveAuroraData();
