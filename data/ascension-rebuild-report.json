@@ -1,0 +1,16 @@
+{
+  "missingIcons": [],
+  "missingText": [],
+  "counts": {
+    "basePerkCount": 10,
+    "advancedPerkCount": 49,
+    "totalSkills": 456,
+    "release": {
+      "version": "10.28.4",
+      "workshopId": "3826086053",
+      "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3826086053",
+      "dataSource": "운영 1번 v10.28.4 배포본·동일 빌드 SDK 소스·한국어 현지화",
+      "publicationState": "published"
+    }
+  }
+}

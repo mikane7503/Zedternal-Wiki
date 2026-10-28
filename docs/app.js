@@ -493,7 +493,7 @@ function renderReleaseFooter() {
   }
   if (release && release.publicationState === "unpublished-draft") {
     const sourceVersion = release.sourceVersion || release.version || "미게시";
-    footer.textContent = `데이터 기준: Zedternal Tempered v${sourceVersion} 로컬 소스 초안 (Workshop 공개 전) · 퍼크·스킬 설명과 기본 수치 기준`;
+    footer.textContent = `데이터 기준: Zedternal Ascension v${sourceVersion} 로컬 소스 초안 (Workshop 공개 전) · 퍼크·스킬 설명과 기본 수치 기준`;
     return;
   }
   if (!release || !release.version || release.version === "미연동") {
@@ -506,7 +506,7 @@ function renderReleaseFooter() {
   const serverNote = release.serverGameConfigDiffers
     ? " · 운영 서버의 Game INI는 공개 기본값과 다를 수 있습니다"
     : "";
-  footer.textContent = `데이터 기준: Zedternal Tempered v${release.version} 공개 빌드 (${release.workshopId})${published} · 퍼크·스킬 설명과 기본 수치 기준${serverNote}`;
+  footer.textContent = `데이터 기준: Zedternal Ascension v${release.version} 공개 빌드 (${release.workshopId})${published} · 퍼크·스킬 설명과 기본 수치 기준${serverNote}`;
 }
 
 function renderCombinationPerksBox(perks) {
@@ -732,8 +732,8 @@ function renderPassiveSection(perk) {
   const descriptions = perk.passiveDescriptions || [];
   const maxLevel = perk.maxLevel || 20;
   return `
-    <div class="section-title perk-section-title">2. 패시브</div>
-    ${stats.length ? renderSliderSection(stats, maxLevel, perk.valueSourceNote || "") : descriptions.map(description => `<div class="desc-line">${description.raw || escapeHtml(description.text || "")}</div>`).join("") || renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
+    <div class="section-title perk-section-title">2. 패시브</div><div class="tree-hint">레벨 비례 수치는 이 퍼크의 최대 레벨 기준입니다.</div>
+    ${stats.length ? renderSliderSection(stats, maxLevel, perk.valueSourceNote || "") : descriptions.map(description => `<div class="desc-line">${description.displayRaw || description.raw || escapeHtml(description.text || "")}</div>`).join("") || renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
   `;
 }
 
@@ -745,7 +745,7 @@ function renderCapstoneSection(perk) {
     <div class="empty-state perk-empty">${perk.noCapstoneNote || "별도 캡스톤 효과가 없습니다."}</div>
   `;
   const descriptionRows = descriptions.map(description =>
-    `<div class="desc-line capstone">${description.raw || escapeHtml(description.text || "")}</div>`
+    `<div class="desc-line capstone">${description.displayRaw || description.raw || escapeHtml(description.text || "")}</div>`
   ).join("");
   const statRows = fixedCapstones.map(stat => `
     <div class="capstone-stat-row"><span>${escapeHtml(stat.label)}</span><b>${escapeHtml(stat.display)}</b><small>Lv${stat.capstoneLevel}</small></div>
