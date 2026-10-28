@@ -2,7 +2,7 @@
 import json,re,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-PROJECT=ROOT.parents[1]
+PROJECT=Path(r'C:\Users\yss19\Documents\Projects\zedternal-unlimited-main')
 SOURCE=PROJECT/'Ascension_Build/SDKStage/Src/ZedternalAscension'
 values=set()
 for p in (SOURCE/'Localization/KOR').glob('*'):

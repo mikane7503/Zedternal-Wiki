@@ -77,6 +77,12 @@ const WEAPON_AURORA_STATS = [
 // 지금까지의 주요 패치 내역 요약 (최신순). 모든 커밋을 나열하진 않고,
 // 플레이어가 체감할 만한 굵직한 변경사항만 추립니다.
 const PATCH_NOTES = [
+  { date: "2026-10-29", items: [
+    "운영본 v10.28.4 기준 활성 퍼크·스킬·아이콘 전체 갱신",
+    "기존 징조를 라인하르트로 표시하고 폐기·리메이크된 퍼크와 스킬 정리",
+    "어센션 명칭·현재 창작마당 링크·운영 설정·ZT 명령어·HL2 안내 갱신",
+    "패시브 수치는 각 퍼크 최대 레벨 기준으로 표시; 미배포 변경은 운영 효과에서 제외"
+  ] },
   {
     date: "2026-10-07",
     items: [
@@ -197,22 +203,11 @@ async function init() {
 }
 
 function applyLiveAuroraData() {
-  const aurora = DATA.aurora;
-  if (!aurora) return;
-  if (aurora.damageGiven.length !== DAMAGE_GIVEN_STATS.length + WEAPON_AURORA_STATS.length ||
-      aurora.damageTaken.length !== DAMAGE_TAKEN_STATS.length - 1) {
-    console.error("Aurora labels do not match the server damage config.");
-    return;
-  }
-  DAMAGE_GIVEN_STATS.forEach((stat, index) => { stat.real = aurora.damageGiven[index]; });
-  DAMAGE_TAKEN_STATS.forEach((stat, index) => {
-    stat.real = index === DAMAGE_TAKEN_STATS.length - 1
-      ? aurora.holdingMelee
-      : aurora.damageTaken[index];
-  });
-  WEAPON_AURORA_STATS.forEach((stat, index) => {
-    stat.value = aurora.damageGiven[DAMAGE_GIVEN_STATS.length + index];
-  });
+  const aura = DATA.aurora;
+  if (!aura) return;
+  DAMAGE_GIVEN_STATS.splice(0, DAMAGE_GIVEN_STATS.length, ...(aura.generalRows || []));
+  DAMAGE_TAKEN_STATS.splice(0, DAMAGE_TAKEN_STATS.length, ...(aura.takenRows || []));
+  WEAPON_AURORA_STATS.splice(0, WEAPON_AURORA_STATS.length, ...(aura.weaponRows || []));
 }
 
 function showBaseOverview(key) {

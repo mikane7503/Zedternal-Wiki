@@ -12869,6 +12869,16 @@
  ],
  "aurora": {
   "damageGiven": [
+   0.5,
+   0.4,
+   0.4,
+   0.4,
+   0.5,
+   0.25,
+   0.85,
+   0.85,
+   0.85,
+   0.7,
    1.25,
    1.75,
    0.75,
@@ -12913,7 +12923,221 @@
    0.8,
    1.25
   ],
-  "holdingMelee": 0.75
+  "holdingMelee": 0.75,
+  "generalRows": [
+   {
+    "label": "화염 피해",
+    "real": 0.5
+   },
+   {
+    "label": "지면 화염 피해",
+    "real": 0.4
+   },
+   {
+    "label": "네이팜 피해",
+    "real": 0.4
+   },
+   {
+    "label": "폭발 피해",
+    "real": 0.4
+   },
+   {
+    "label": "폭발 파편 피해",
+    "real": 0.5
+   },
+   {
+    "label": "메딕 수류탄(독성) 피해",
+    "real": 0.25
+   },
+   {
+    "label": "베기 피해",
+    "real": 0.85
+   },
+   {
+    "label": "관통 피해",
+    "real": 0.85
+   },
+   {
+    "label": "둔기 피해",
+    "real": 0.85
+   },
+   {
+    "label": "샷건 피해",
+    "real": 0.7
+   }
+  ],
+  "weaponRows": [
+   {
+    "label": "KFDT_Freeze_FreezeThrower",
+    "value": 1.25
+   },
+   {
+    "label": "KFDT_Freeze_FreezeThrower_IceShards",
+    "value": 1.75
+   },
+   {
+    "label": "KFDT_Ballistic_CenterfireMB464",
+    "value": 0.75
+   },
+   {
+    "label": "KFDT_Ballistic_Winchester",
+    "value": 0.75
+   },
+   {
+    "label": "KFDT_Ballistic_SW500",
+    "value": 0.8
+   },
+   {
+    "label": "KFDT_Ballistic_M99",
+    "value": 0.85
+   },
+   {
+    "label": "KFDT_Ballistic_RailGun",
+    "value": 0.9
+   },
+   {
+    "label": "KFDT_Explosive_HuskCannon",
+    "value": 0.8
+   },
+   {
+    "label": "KFDT_Explosive_Pulverizer",
+    "value": 2.0
+   },
+   {
+    "label": "KFDT_EMP_HVStormCannon",
+    "value": 0.85
+   },
+   {
+    "label": "KFDT_Explosive_HRG_Kaboomstick",
+    "value": 0.85
+   },
+   {
+    "label": "KFDT_Piercing_Crossbow",
+    "value": 1.3
+   },
+   {
+    "label": "KFDT_Piercing_CompoundBowSharpImpact",
+    "value": 1.5
+   },
+   {
+    "label": "KFDT_Ballistic_M14EBR",
+    "value": 1.3
+   },
+   {
+    "label": "KFDT_Ballistic_FNFal",
+    "value": 1.2
+   },
+   {
+    "label": "KFDT_Ballistic_MG3",
+    "value": 1.1
+   },
+   {
+    "label": "KFDT_Ballistic_MG3_Alt",
+    "value": 1.3
+   },
+   {
+    "label": "KFDT_Ballistic_Stoner63A",
+    "value": 1.2
+   },
+   {
+    "label": "KFDT_Ballistic_Minigun",
+    "value": 1.2
+   },
+   {
+    "label": "KFDT_Ballistic_MKB42",
+    "value": 1.2
+   },
+   {
+    "label": "KFDT_Ballistic_MosinNagant",
+    "value": 1.2
+   },
+   {
+    "label": "KFDT_Piercing_MosinNagant",
+    "value": 1.4
+   },
+   {
+    "label": "KFDT_Bludgeon_HRG_BallisticBouncer_Shot",
+    "value": 0.7
+   },
+   {
+    "label": "KFDT_Ballistic_M4Shotgun",
+    "value": 1.2
+   },
+   {
+    "label": "KFDT_Ballistic_NailShotgun",
+    "value": 1.3
+   },
+   {
+    "label": "KFDT_Ballistic_ParasiteImplanter",
+    "value": 1.2
+   },
+   {
+    "label": "KFDT_Explosive_C4",
+    "value": 1.0
+   },
+   {
+    "label": "KFDT_Explosive_SealSqueal",
+    "value": 1.3
+   },
+   {
+    "label": "KFDT_Ballistic_SealSquealImpact",
+    "value": 2.0
+   },
+   {
+    "label": "KFDT_Explosive_GravityImploder",
+    "value": 1.3
+   },
+   {
+    "label": "KFDT_Ballistic_GravityImploderImpactAlt",
+    "value": 3.0
+   },
+   {
+    "label": "KFDT_Ballistic_MicrowaveRifle",
+    "value": 1.4
+   },
+   {
+    "label": "KFDT_Ballistic_G18",
+    "value": 1.25
+   },
+   {
+    "label": "KFDT_Bludgeon_G18Shield",
+    "value": 1.5
+   },
+   {
+    "label": "KFDT_Bludgeon_G18Shield_Impulse",
+    "value": 1.5
+   }
+  ],
+  "takenRows": [
+   {
+    "label": "허스크 자폭 피해",
+    "real": 0.9
+   },
+   {
+    "label": "플레쉬파운드 킹 가슴빔 피해",
+    "real": 0.8
+   },
+   {
+    "label": "한스 유탄 피해",
+    "real": 0.8
+   },
+   {
+    "label": "가부장 미사일 피해",
+    "real": 0.8
+   },
+   {
+    "label": "여장부 플라즈마포 피해",
+    "real": 0.8
+   },
+   {
+    "label": "허스크 화염방사기 피해",
+    "real": 1.25
+   },
+   {
+    "label": "근접무기 소지 중 전체 피해",
+    "real": 0.85
+   }
+  ]
  },
  "meta": {
   "basePerkCount": 10,

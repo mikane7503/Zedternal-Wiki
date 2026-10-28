@@ -27,6 +27,11 @@
     {
       "name": "KFZedternalReborn_Weapons.ini",
       "sha256": "292ff375c3d418f347eb70559e5f7dbfd333c63f0c079ccbf2c81ea168556754"
+    },
+    {
+      "name": "KFZedternalAscension_Local.ini",
+      "sha256": "356f796a9953f2d1cd5cb4cdc4432eb184e5cbac3f2c780ca575137e77aa26fe",
+      "note": "Personal artwork preference; not projected as gameplay balance"
     }
   ],
   "scope": "All active perks/skills, localization, icons, current operating settings and commands; unpublished changes excluded"

@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 from ascension_values import render
 ROOT=Path(__file__).resolve().parents[1]
-PROJECT=ROOT.parents[1]
+PROJECT=Path(r'C:\Users\yss19\Documents\Projects\zedternal-unlimited-main')
 SOURCE=PROJECT/'Ascension_Build/SDKStage/Src/ZedternalAscension'
 CLASSES=SOURCE/'Classes'
 OPS=Path('D:/KF2server/KFGame/Config/SV_Zedternal_Ascension_Workshop')
@@ -66,7 +66,7 @@ def icon(cls,perk=False,oldicon=None):
     return str(dest.relative_to(ROOT/'docs')).replace('\\','/')
  if oldicon and (ROOT/'docs'/oldicon).exists():return oldicon
  missing.append((cls,value));return None
-ini={p.name:read(p) for p in OPS.glob('*.ini') if p.name in ['KFZedternalAscension.ini','KFZedternalAscension_Difficulty.ini','KFZedternalReborn_Game.ini','KFZedternalReborn_Events.ini','KFZedternalReborn_Upgrades.ini','KFZedternalReborn_Weapons.ini','KFZedternalUnlimited.ini']}
+ini={p.name:read(p) for p in OPS.glob('*.ini') if p.name in ['KFZedternalAscension.ini','KFZedternalAscension_Difficulty.ini','KFZedternalReborn_Game.ini','KFZedternalReborn_Events.ini','KFZedternalReborn_Upgrades.ini','KFZedternalReborn_Weapons.ini','KFZedternalAscension_Local.ini']}
 upgrades=ini['KFZedternalReborn_Upgrades.ini'];main=ini['KFZedternalAscension.ini']
 active={m[1].split('.')[-1]:m[2].lower()=='true' for m in re.finditer(r'PerkUpgrade_Upgrade=\(PerkPath="([^"]+)",bIsStatic=(True|False)',upgrades,re.I)}
 systems='\n'.join(v for k,v in SRC.items() if k.endswith(('System','Remake','Catalog')))
@@ -137,8 +137,27 @@ for group in ['basePerks','advancedPerks']:data[group].sort(key=lambda p:(p.get(
 data['meta']=dict(basePerkCount=len(data['basePerks']),advancedPerkCount=len(data['advancedPerks']),totalSkills=sum(p['skillCount'] for group in ['basePerks','advancedPerks'] for p in data[group]),release=dict(version='10.28.4',workshopId='3826086053',workshopUrl='https://steamcommunity.com/sharedfiles/filedetails/?id=3826086053',dataSource='운영 1번 v10.28.4 배포본·동일 빌드 SDK 소스·한국어 현지화',publicationState='published'))
 # Only gameplay configuration is projected; never publish ranks/passwords.
 game=ini['KFZedternalReborn_Game.ini']
-data['aurora']['damageGiven']=[float(v) for v in re.findall(r'^Player_DamageGiven=.*?Multiplier=([\d.]+)',game,re.M)]
-data['aurora']['damageTaken']=[float(v) for v in re.findall(r'^Player_DamageTaken=.*?Multiplier=([\d.]+)',game,re.M)]
+fixed=re.findall(r'AddFixedEntry\("([^"]+)",\s*([\d.]+)f?\)',SRC['ZTConfig_FixedDamageGiven'])
+weapon=re.findall(r'^Player_DamageGiven=\(DamageType="([^"]+)",Multiplier=([\d.]+)',game,re.M)
+taken=re.findall(r'^Player_DamageTaken=\(DamageType="([^"]+)",Multiplier=([\d.]+)',game,re.M)
+app=(ROOT/'docs/app.js').read_text(encoding='utf-8')
+oldgame=read(ROOT/'KFZedternalReborn_Game.ini')
+oldgiven=re.findall(r'^Player_DamageGiven=\(DamageType="([^"]+)"',oldgame,re.M)
+oldlabels=re.findall(r'\{ label: "([^"]+)", (?:real|value):',app.split('const PATCH_NOTES')[0])
+# Label identity must follow damage type, never current INI row positions.
+labels={}
+if len(oldlabels)>=len(oldgiven)+7:
+ labels.update(dict(zip(oldgiven,oldlabels[:10]+oldlabels[17:])))
+fixedlabels=['화염 피해','지면 화염 피해','네이팜 피해','폭발 피해','폭발 파편 피해','메딕 수류탄(독성) 피해','베기 피해','관통 피해','둔기 피해','샷건 피해']
+for (t,_),label in zip(fixed,fixedlabels):labels[t]=label
+data['aurora']['generalRows']=[dict(label=labels[t],real=float(v)) for t,v in fixed]
+data['aurora']['weaponRows']=[dict(label=labels.get(t,t.split('.')[-1]),value=float(v)) for t,v in weapon]
+takenlabels=['허스크 자폭 피해','플레쉬파운드 킹 가슴빔 피해','한스 유탄 피해','가부장 미사일 피해','여장부 플라즈마포 피해','허스크 화염방사기 피해']
+data['aurora']['takenRows']=[dict(label=l,real=float(v)) for l,(t,v) in zip(takenlabels,taken)]
+melee=re.search(r'^Player_DamageTakenMultiplierWhileHoldingMelee=.*?HOE=([\d.]+)',game,re.M)
+if melee:data['aurora']['takenRows'].append(dict(label='근접무기 소지 중 전체 피해',real=float(melee[1])))
+data['aurora']['damageGiven']=[float(v) for _,v in fixed+weapon]
+data['aurora']['damageTaken']=[float(v) for _,v in taken]
 OUT.write_text(json.dumps(data,ensure_ascii=False,indent=1),encoding='utf-8')
 (ROOT/'data/ascension-rebuild-report.json').write_text(json.dumps(dict(missingIcons=missing,missingText=missingtext,counts=data['meta']),ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(dict(counts=data['meta'],missingIcons=len(missing),missingText=missingtext),ensure_ascii=True))
