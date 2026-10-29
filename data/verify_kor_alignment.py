@@ -12,6 +12,9 @@ for p in (SOURCE/'Localization/KOR').glob('*'):
    values.add(line.split('=',1)[1].strip().strip('"').replace('\\"','"'))
 d=json.loads((ROOT/'docs/data/perks.json').read_text(encoding='utf-8'))
 errors=[];skills=0
+for base in d['basePerks']:
+ if not isinstance(base.get('unlocks'),list):errors.append('Missing unlock list '+base['key'])
+ elif any(not any(a['key']==u['perk'] for a in d['advancedPerks']) for u in base['unlocks']):errors.append('Invalid unlock reference '+base['key'])
 for group in ['basePerks','advancedPerks']:
  for p in d[group]:
   if not p['descriptions']:errors.append('Empty perk '+p['key'])

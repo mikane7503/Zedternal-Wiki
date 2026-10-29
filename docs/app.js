@@ -182,7 +182,7 @@ function iconImg(perk, size) {
 async function init() {
   // no-cache: revalidate with the server every load so a freshly rebuilt
   // perks.json is never masked by a stale browser-cached copy
-  const res = await fetch("data/perks.json?revision=ascension-20261029", { cache: "no-cache" });
+  const res = await fetch("data/perks.json?revision=ascension-20261029-fix1", { cache: "no-cache" });
   DATA = await res.json();
   renderReleaseFooter();
   applyLiveAuroraData();
@@ -397,7 +397,7 @@ function renderSidebar() {
   for (const base of baseDisplayPerks) {
     const isOriginalBase = Boolean(BASE_BY_KEY[base.key]);
     const children = isOriginalBase
-      ? base.unlocks.map(unlock => ({ ...unlock, perkData: ADV_BY_KEY[unlock.perk] }))
+      ? (base.unlocks || []).map(unlock => ({ ...unlock, perkData: ADV_BY_KEY[unlock.perk] }))
       : DATA.advancedPerks
           .filter(perk => perk.parentPerk === base.key && !baseDisplayKeys.has(perk.key))
           .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0))
@@ -599,7 +599,7 @@ function renderBaseDetail(key) {
   const container = el("div", {});
 
   const grid = el("div", { class: "adv-grid" });
-  for (const u of p.unlocks) {
+  for (const u of p.unlocks || []) {
     const adv = ADV_BY_KEY[u.perk];
     if (!adv) continue;
     const card = el("div", {

@@ -237,7 +237,25 @@
     "icons/ranks/Berserker-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Bulwark",
+     "level": 5
+    },
+    {
+     "perk": "Riot",
+     "level": 10
+    },
+    {
+     "perk": "Voodoo",
+     "level": 15
+    },
+    {
+     "perk": "Diablo",
+     "level": 20
+    }
+   ]
   },
   {
    "key": "Commando",
@@ -476,7 +494,25 @@
     "icons/ranks/Commando-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "SpecialAgent",
+     "level": 5
+    },
+    {
+     "perk": "Jagdkommando",
+     "level": 10
+    },
+    {
+     "perk": "NavySEALs",
+     "level": 15
+    },
+    {
+     "perk": "DeltaForce",
+     "level": 20
+    }
+   ]
   },
   {
    "key": "Demolitionist",
@@ -697,7 +733,25 @@
     "icons/ranks/Demolitionist-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Executioner",
+     "level": 5
+    },
+    {
+     "perk": "Fraulein",
+     "level": 10
+    },
+    {
+     "perk": "Override",
+     "level": 15
+    },
+    {
+     "perk": "Armageddon",
+     "level": 20
+    }
+   ]
   },
   {
    "key": "FieldMedic",
@@ -966,7 +1020,25 @@
     "icons/ranks/FieldMedic-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Archangel",
+     "level": 5
+    },
+    {
+     "perk": "Gabriel",
+     "level": 10
+    },
+    {
+     "perk": "Michael",
+     "level": 15
+    },
+    {
+     "perk": "Ophanim",
+     "level": 20
+    }
+   ]
   },
   {
    "key": "Firebug",
@@ -1142,7 +1214,17 @@
     "icons/ranks/Firebug-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Pyrokinetic",
+     "level": 5
+    },
+    {
+     "perk": "Cinder",
+     "level": 15
+    }
+   ]
   },
   {
    "key": "Gunslinger",
@@ -1351,7 +1433,25 @@
     "icons/ranks/Gunslinger-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Headhunter",
+     "level": 5
+    },
+    {
+     "perk": "TimeTraveler",
+     "level": 10
+    },
+    {
+     "perk": "JohnWick",
+     "level": 15
+    },
+    {
+     "perk": "Reaper",
+     "level": 20
+    }
+   ]
   },
   {
    "key": "SWAT",
@@ -1590,7 +1690,25 @@
     "icons/ranks/SWAT-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Scavenger",
+     "level": 5
+    },
+    {
+     "perk": "Taskmaster",
+     "level": 10
+    },
+    {
+     "perk": "Frost",
+     "level": 15
+    },
+    {
+     "perk": "Omen",
+     "level": 20
+    }
+   ]
   },
   {
    "key": "Sharpshooter",
@@ -1784,7 +1902,25 @@
     "icons/ranks/Sharpshooter-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Punisher",
+     "level": 5
+    },
+    {
+     "perk": "Wendigo",
+     "level": 10
+    },
+    {
+     "perk": "Deathstalker",
+     "level": 15
+    },
+    {
+     "perk": "Predator",
+     "level": 20
+    }
+   ]
   },
   {
    "key": "Support",
@@ -2008,7 +2144,21 @@
     "icons/ranks/Support-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Artificer",
+     "level": 5
+    },
+    {
+     "perk": "Vanguard",
+     "level": 10
+    },
+    {
+     "perk": "Hydra",
+     "level": 15
+    }
+   ]
   },
   {
    "key": "Survivalist",
@@ -2247,7 +2397,25 @@
     "icons/ranks/Survivalist-rank-4.png"
    ],
    "extraSections": [],
-   "noCapstoneNote": "캡스톤 없음"
+   "noCapstoneNote": "캡스톤 없음",
+   "unlocks": [
+    {
+     "perk": "Venomancer",
+     "level": 5
+    },
+    {
+     "perk": "Medusa",
+     "level": 10
+    },
+    {
+     "perk": "MissingNO",
+     "level": 15
+    },
+    {
+     "perk": "Shapeshifter",
+     "level": 20
+    }
+   ]
   }
  ],
  "advancedPerks": [

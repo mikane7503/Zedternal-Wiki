@@ -133,6 +133,9 @@ for c,static in active.items():
  skills=[skill(sc,k) for sc in dict.fromkeys(rosters.get(c,[]))]
  p=dict(key=k,name=sec.get('upgradename',field(c,'UpgradeName',k)),className=c,parentPerk=req[0]['perk'] if req else prev.get('parentPerk'),unlockLevel=req[0]['level'] if len(req)==1 else None,unlockRequirements=req,isCombinationUnlocked=len(req)>1,isStatic=static,maxLevel=maxlevels.get(k,20),summary=summary,role=summary,descriptions=ds,overviewDescriptions=[d for d in ds if not d['isCapstone']],passiveDescriptions=[d for d in ds if not d['isCapstone']],capstoneDescriptions=[d for d in ds if d['isCapstone']],passiveStats=[],fixedStats=[],skills=skills,skillCount=len(skills),icon=icon(c,True,prev.get('icon')),rankIcons=prev.get('rankIcons',[]),extraSections=[],noCapstoneNote='캡스톤 없음' if not any(d['isCapstone'] for d in ds) else None)
  data['basePerks' if c.startswith('ZUTUpgrade_Perk_Base_') else 'advancedPerks'].append(p)
+for base in data['basePerks']:
+ base['unlocks']=[{'perk':p['key'],'level':p.get('unlockLevel')} for p in data['advancedPerks'] if p.get('parentPerk')==base['key'] and not p.get('isCombinationUnlocked')]
+for base in data['basePerks']:base['unlocks'].sort(key=lambda u:(u['level'] or 0,u['perk']))
 for group in ['basePerks','advancedPerks']:data[group].sort(key=lambda p:(p.get('parentPerk') or '',p.get('unlockLevel') or 0,p['key']))
 data['meta']=dict(basePerkCount=len(data['basePerks']),advancedPerkCount=len(data['advancedPerks']),totalSkills=sum(p['skillCount'] for group in ['basePerks','advancedPerks'] for p in data[group]),release=dict(version='10.28.4',workshopId='3826086053',workshopUrl='https://steamcommunity.com/sharedfiles/filedetails/?id=3826086053',dataSource='운영 1번 v10.28.4 배포본·동일 빌드 SDK 소스·한국어 현지화',publicationState='published'))
 # Only gameplay configuration is projected; never publish ranks/passwords.
