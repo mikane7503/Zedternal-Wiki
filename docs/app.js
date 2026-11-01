@@ -77,18 +77,21 @@ const WEAPON_AURORA_STATS = [
 const EVENT_WAVE_CHANCE = 0.33;
 const EVENT_MIN_WAVE = 5;
 const ASCENSION_EVENTS = [
-  { name: "VIP", weight: 0.20, active: true, description: "VIP를 보호하지 못하면 팀 전체가 사망합니다.", music: "EventMusic_VIP_Cue" },
-  { name: "어몽어스 (Amogus)", weight: 0.30, active: true, description: "플레이어 중 임포스터가 섞여 있으며, 팀을 교란합니다.", music: "EventMusic_Amogus_Cue" },
-  { name: "체인갱 (Chain Gang)", weight: 0.10, active: true, description: "팀원과 멀어지면 피해를 받으므로 함께 움직여야 합니다.", music: "EventMusic_Redacted_Cue" },
-  { name: "숙적 (Nemesis)", weight: 0.25, active: true, description: "선정된 제드 한 종류의 머리와 몸통 체력이 강화되고 붉은 표식이 표시됩니다.", music: "EventMusic_Nemesis_Cue" },
-  { name: "엑스맨 (X-Men)", weight: 0.10, active: true, description: "각 플레이어가 무작위 초능력을 얻습니다.", music: "EventMusic_XMen_Cue" },
-  { name: "경호원 결속 (Bodyguard Bond)", weight: 0.10, active: true, description: "짝과 가까이 있으면 보호받고, 멀어지면 피해가 서로 전달됩니다.", music: "EventMusic_Duel_Cue" },
-  { name: "현상금 게시판 (Bounty Board)", weight: 0.20, active: true, description: "각자의 제드 처치 목표를 모두 완수하면 팀 보상을 받습니다.", music: "EventMusic_Duel_Cue" },
-  { name: "황금 제드 릴레이 (Golden Zed Relay)", weight: 0.15, active: true, description: "황금 제드 처치자는 전리품을 줍지 못하며, 다른 팀원이 회수해야 합니다.", music: "EventMusic_Highlander_Cue" },
-  { name: "Shifting Waves", weight: 0.20, active: true, description: "제드 수가 1.4배가 되고 남은 제드 수 75%·50%·25% 지점에서 동시 출현 한도가 일시적으로 급증합니다.", music: "EventMusic_ShiftingWaves_Cue" },
-  { name: "Transit Horde", weight: 0.20, active: true, description: "진행 중 두 차례 호드가 활성 스폰 지점에서 추가로 쏟아집니다.", music: "EventMusic_RAGE_Cue" },
-  { name: "뜨거운 감자 (Hot Potato)", weight: 0.00, active: false, reason: "INI 0 및 자동 추첨 제외", description: "폭탄이 터지기 전에 다른 플레이어에게 넘겨야 합니다.", music: "EventMusic_CostumeParty_Cue" },
-  { name: "검열 (Redacted)", weight: 0.00, active: false, reason: "INI 가중치 0", description: "HUD 정보를 숨깁니다.", music: "EventMusic_Redacted_Cue" },
+  { name: "VIP", weight: 0.20, active: true, description: "VIP를 보호하지 못하면 모두 사망합니다.", music: "EventMusic_VIP_Cue" },
+  { name: "어몽어스 (Amogus)", weight: 0.30, active: true, description: "팀원 사이에 임포스터가 섞여 있습니다.", music: "EventMusic_Amogus_Cue" },
+  { name: "체인갱 (Chain Gang)", weight: 0.10, active: true, description: "팀원 곁에 있지 않으면 피해를 입습니다.", music: "EventMusic_Redacted_Cue" },
+  { name: "숙적 (Nemesis)", weight: 0.25, active: true, description: "제드 한 종류가 강화되고 붉은 표식으로 표시됩니다.", music: "EventMusic_Nemesis_Cue" },
+  { name: "엑스맨 (X-Men)", weight: 0.10, active: true, description: "각 플레이어가 무작위 초능력을 받습니다.", music: "EventMusic_XMen_Cue" },
+  { name: "경호원 결속 (Bodyguard Bond)", weight: 0.10, active: true, description: "짝과 가까우면 보호받지만 멀어지면 상대가 피해를 받습니다.", music: "EventMusic_BodyguardBond_Cue" },
+  { name: "현상금 게시판 (Bounty Board)", weight: 0.20, active: true, description: "각자의 현상금 목표를 모두 완료하면 팀 보상을 받습니다.", music: "EventMusic_Duel_Cue" },
+  { name: "황금 제드 릴레이 (Golden Zed Relay)", weight: 0.15, active: true, description: "황금 제드를 처치한 사람은 전리품을 줍지 못하며 팀원이 회수해야 합니다.", music: "EventMusic_Highlander_Cue" },
+  { name: "Shifting Waves", weight: 0.20, active: true, description: "제드 총수 1.4배. 남은 수 75%·50%·25%에서 동시 출현 한도가 순서대로 1.5배·2배·1.5배가 됩니다.", music: "EventMusic_ShiftingWaves_Cue" },
+  { name: "Transit Horde", weight: 0.20, active: true, description: "원래 웨이브 제드를 1/3·2/3 처치하면 인원당 30마리의 호드가 두 차례 등장합니다.", music: "EventMusic_RAGE_Cue" },
+  { name: "Imbalance", weight: 0.15, active: true, description: "무작위 Trash 또는 Elite 한 종류가 비밀로 선정됩니다. 해당 종류가 웨이브의 30%를 차지하며, Trash 선정 시 총수 +20%·동시 출현 한도 +25%, Elite 선정 시 총수 -30%입니다. 중보스 비중은 유지됩니다.", music: "EventMusic_Imbalance_Cue" },
+  { name: "Juggernaut", weight: 0.15, active: true, description: "제드 총수 -40%·동시 출현 한도 -30%. 일반 스폰의 절반이 SC·FP·QFP가 됩니다.", music: "EventMusic_Juggernaut_Cue" },
+  { name: "Dreadnought", weight: 0.15, active: true, description: "제드 총수와 동시 출현 한도 -70%. 25초 후 서로 다른 보스 2마리가 체력·피해량 -30%로 등장하며 다른 보스 추가 스폰은 중단됩니다.", music: "EventMusic_Dreadnought_Cue" },
+  { name: "뜨거운 감자 (Hot Potato)", weight: 0.00, active: false, reason: "자동 추첨 제외; 관리자 호출 전용", description: "폭탄이 터지기 전에 다른 플레이어에게 넘기세요.", music: "EventMusic_Duel_Cue" },
+  { name: "검열 (Redacted)", weight: 0.00, active: false, reason: "INI 가중치 0", description: "모든 HUD 정보가 숨겨집니다.", music: "EventMusic_Redacted_Cue" },
   { name: "결투 (Duel)", weight: 0.00, active: false, reason: "INI 가중치 0", description: "각 플레이어는 지정된 제드 종류에만 피해를 줄 수 있습니다.", music: "EventMusic_Duel_Cue" },
 ];
 
