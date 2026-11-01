@@ -399,7 +399,7 @@ function renderSidebar() {
     const children = isOriginalBase
       ? (base.unlocks || []).map(unlock => ({ ...unlock, perkData: ADV_BY_KEY[unlock.perk] }))
       : DATA.advancedPerks
-          .filter(perk => perk.parentPerk === base.key && !baseDisplayKeys.has(perk.key))
+          .filter(perk => perk.parentPerk === base.key && !baseDisplayKeys.has(perk.key) && !isCombinationUnlocked(perk))
           .sort((a, b) => (a.unlockLevel || 0) - (b.unlockLevel || 0))
           .map(perk => ({ level: perk.unlockLevel, perk: perk.key, perkData: perk }));
     const isOpen = base.key === OPEN_BASE_KEY || base.key === SELECTED_ADV_KEY
@@ -418,7 +418,14 @@ function renderSidebar() {
     item.appendChild(header);
 
     const body = el("div", { class: "accordion-body" });
-    for (const u of children) {
+    const descendants = [...children];
+    for (let i = 0; i < descendants.length; i++) {
+      const parent = descendants[i];
+      for (const child of DATA.advancedPerks.filter(p => p.parentPerk === parent.perk && !isCombinationUnlocked(p))) {
+        if (!descendants.some(p => p.perk === child.key)) descendants.push({perk: child.key, level: child.unlockLevel, perkData: child, branchParent: parent.perkData.name});
+      }
+    }
+    for (const u of descendants) {
       const adv = u.perkData;
       if (!adv) continue;
       const row = el("div", {
@@ -426,7 +433,7 @@ function renderSidebar() {
         "data-advkey": adv.key,
       }, [
         iconImg(adv, "sm"),
-        el("span", { class: "lvl", text: `Lv${u.level}` }),
+        el("span", { class: "lvl", text: u.branchParent ? `${u.branchParent} Lv${u.level}` : `Lv${u.level}` }),
         el("span", { class: "name", text: adv.name }),
       ]);
       if (adv.grade) row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(adv.grade) }));
@@ -726,9 +733,11 @@ function renderPassiveSection(perk) {
   const stats = perk.passiveStats || [];
   const descriptions = perk.passiveDescriptions || [];
   const maxLevel = perk.maxLevel || 20;
+  const levelDescriptions = descriptions.some(d => d.levelValues);
+  const levelControl = levelDescriptions ? `<div class="level-slider-row"><label for="levelSlider">퍼크 레벨</label><input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}"><span id="lvlValLabel">Lv ${maxLevel}</span></div>` : "";
   return `
-    <div class="section-title perk-section-title">2. 패시브</div><div class="tree-hint">레벨 비례 수치는 이 퍼크의 최대 레벨 기준입니다.</div>
-    ${stats.length ? renderSliderSection(stats, maxLevel, perk.valueSourceNote || "") : descriptions.map(description => `<div class="desc-line">${description.displayRaw || description.raw || escapeHtml(description.text || "")}</div>`).join("") || renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
+    <div class="section-title perk-section-title">2. 패시브</div><div class="tree-hint">슬라이더로 선택한 퍼크 레벨의 효과를 비교할 수 있습니다.</div>
+    ${levelControl}${stats.length ? renderSliderSection(stats, maxLevel, perk.valueSourceNote || "") : descriptions.map(description => `<div class="desc-line" ${description.levelValues ? `data-level-values="${escapeHtml(JSON.stringify(description.levelValues))}"` : ""}>${description.displayRaw || description.raw || escapeHtml(description.text || "")}</div>`).join("") || renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
   `;
 }
 
@@ -813,6 +822,7 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
 function onLevelSlide(e) {
   const lvl = Number(e.target.value);
   document.getElementById("lvlValLabel").textContent = `Lv ${lvl}`;
+  document.querySelectorAll("#mainArea [data-level-values]").forEach(row => { row.innerHTML = JSON.parse(row.dataset.levelValues)[lvl - 1]; });
   const rankIcon = document.querySelector("#mainArea img[data-rank-icons]");
   if (rankIcon) {
     try {

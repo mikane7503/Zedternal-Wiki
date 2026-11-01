@@ -164,3 +164,7 @@ data['aurora']['damageTaken']=[float(v) for _,v in taken]
 OUT.write_text(json.dumps(data,ensure_ascii=False,indent=1),encoding='utf-8')
 (ROOT/'data/ascension-rebuild-report.json').write_text(json.dumps(dict(missingIcons=missing,missingText=missingtext,counts=data['meta']),ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(dict(counts=data['meta'],missingIcons=len(missing),missingText=missingtext),ensure_ascii=True))
+
+# Keep level comparison and capstone classification in generated output.
+import runpy
+runpy.run_path(str(ROOT / "data/repair_progression.py"), run_name="__main__")
