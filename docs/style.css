@@ -87,7 +87,7 @@ body {
   flex-wrap: wrap;
 }
 
-.patch-notes-btn {
+.event-list-btn {
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text);
@@ -97,7 +97,7 @@ body {
   cursor: pointer;
   white-space: nowrap;
 }
-.patch-notes-btn:hover { background: var(--bg-card-hover); border-color: var(--cyan); }
+.event-list-btn:hover { background: var(--bg-card-hover); border-color: var(--cyan); }
 
 .search-wrap { position: relative; }
 
@@ -245,13 +245,20 @@ body {
   border-radius: 4px;
 }
 
-.patch-note-group { margin-bottom: 18px; }
-.patch-note-date {
-  font-weight: 700;
-  color: var(--gold);
-  font-size: 13px;
-  margin-bottom: 6px;
-}
+.event-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; background: rgba(16,18,24,.6); }
+.event-table { width: 100%; min-width: 980px; border-collapse: collapse; font-size: 13px; }
+.event-table th, .event-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+.event-table thead th { position: sticky; top: 0; background: #20232d; color: var(--text-dim); font-size: 11px; white-space: nowrap; }
+.event-table tbody tr:last-child th, .event-table tbody tr:last-child td { border-bottom: 0; }
+.event-table tbody tr:hover { background: rgba(255,255,255,.035); }
+.event-table th[scope="row"] { color: var(--text); white-space: nowrap; }
+.event-table .event-number { color: var(--cyan); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.event-table code { color: #d5c7ff; font-size: 11px; white-space: nowrap; }
+.event-status { display: inline-block; min-width: 48px; text-align: center; border-radius: 999px; padding: 2px 7px; font-size: 11px; font-weight: 700; }
+.event-status.active { color: var(--green); background: rgba(119,217,20,.12); }
+.event-status.inactive { color: var(--text-dim); background: rgba(154,160,180,.12); }
+.event-reason { display: block; margin-top: 4px; color: var(--text-dim); font-size: 10px; white-space: nowrap; }
+.event-row.is-inactive { opacity: .78; }
 
 .ba-row {
   display: flex;
@@ -708,7 +715,7 @@ body {
   }
   .search-wrap { grid-column: 1 / -1; grid-row: 1; width: 100%; }
   #searchBox { width: 100%; min-height: 42px; font-size: 16px; }
-  .patch-notes-btn { grid-column: 1; grid-row: 2; min-height: 40px; padding: 7px 10px; }
+  .event-list-btn { grid-column: 1; grid-row: 2; min-height: 40px; padding: 7px 10px; }
   .legend { grid-column: 2; grid-row: 2; justify-content: flex-end; gap: 4px; }
   .legend .grade-badge { min-width: 31px; text-align: center; padding: 2px 5px; }
 

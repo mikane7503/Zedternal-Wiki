@@ -5,7 +5,7 @@ let OPEN_BASE_KEY = null;
 let SELECTED_ADV_KEY = null;
 let AURORA_VIEW = false;
 let AURORA_MODE = null;
-let PATCH_NOTES_VIEW = false;
+let EVENT_LIST_VIEW = false;
 let SEARCH_INDEX = [];
 let SEARCH_RESULTS = [];
 let SEARCH_ACTIVE_IDX = -1;
@@ -74,85 +74,22 @@ const WEAPON_AURORA_STATS = [
   { label: "G18 실드(임펄스)", value: 4.0 },
 ];
 
-// 지금까지의 주요 패치 내역 요약 (최신순). 모든 커밋을 나열하진 않고,
-// 플레이어가 체감할 만한 굵직한 변경사항만 추립니다.
-const PATCH_NOTES = [
-  { date: "2026-10-29", items: [
-    "운영본 v10.28.4 기준 활성 퍼크·스킬·아이콘 전체 갱신",
-    "기존 징조를 라인하르트로 표시하고 폐기·리메이크된 퍼크와 스킬 정리",
-    "어센션 명칭·현재 창작마당 링크·운영 설정·ZT 명령어·HL2 안내 갱신",
-    "패시브 수치는 각 퍼크 최대 레벨 기준으로 표시; 미배포 변경은 운영 효과에서 제외"
-  ] },
-  {
-    date: "2026-10-07",
-    items: [
-      "서포트 전직에 뱅가드 추가, 기술자 해금을 Support 5로 옮기고 뱅가드 10·히드라 15 순으로 정렬",
-      "뱅가드 기본 효과·10/20레벨 캡스톤과 7종 스킬을 최신 소스 기준으로 등록",
-      "자본가 전직 표시명을 도박꾼/딜러/타이쿤으로 정리하고, 5/10/15레벨 해금 설명을 갱신",
-      "유령 감시자 이미지 예고를 재앙 발동 10초 전부터 시작하도록 수정",
-    ],
-  },
-  {
-    date: "2026-10-05",
-    items: [
-      "퍼크 트리를 운영 서버 KFZedternalUnlimited.ini의 활성 PerkUnlockRules 43개 기준으로 재작성",
-      "자본가 전직을 도박꾼 Lv10, 웨이브 도박꾼 Lv5, 타이쿤 Lv15로 동기화하고 비활성 규칙 퍼크를 목록에서 제외",
-      "유령·지킬 & 하이드의 숨겨진 퍼크 해금 조건을 운영 INI에 맞춤",
-      "자본가와 엔지니어를 베이스 퍼크와 같은 목록 형식으로 표시하고 정적 퍼크 문구 제거",
-      "현재 장착 무기에 적용 중인 보너스 요약과 전체 누적 능력치 패널 추가 (ToggleStats 또는 mutate stats)",
-      "지킬 & 하이드의 이동·재장전 패시브를 레벨당 +1%, Lv20 +20%로 수정",
-      "기술자(아티피서)를 서포트 무기별 숙련 단계와 현재 6종 스킬 기준으로 갱신",
-      "웬디고의 첫 사격·레벨 10/20 매복 보너스, 격리, 트로피 사냥 수치를 최신 구현과 동기화",
-    ],
-  },
-  {
-    date: "2026-10-01",
-    items: [
-      "사이트 데이터 기준을 ZedternalTempered 소스와 SV_Zedternal_Tempered 운영 설정으로 전환",
-      "퍼크, 스킬, 피해 오로라 수치를 운영 INI에서 생성하도록 변경",
-    ],
-  },
-  {
-    date: "2026-07-10",
-    items: [
-      "베이스 퍼크(10종)에도 전직 퍼크와 동일한 스킬 목록(표준/디럭스 설명, 비활성화 스킬 표시) 추가",
-      "전직 퍼크 상세페이지에 잘못 표시되던 '베이스 퍼크' 라벨을 '전직 퍼크'로 수정",
-      "무기 밸런스 오로라에 신규 무기 다수 반영, 강한 버프/너프 항목 색상 강조",
-      "제드 웨이브 스폰 비율 조정 — 30웨이브까지 잡제드:중보스 비율이 점진적으로 8:2에 수렴하도록 튜닝",
-      "어고니 / 버서커 / 프로스트 너프, 웬디고 버프 반영",
-    ],
-  },
-  {
-    date: "2026-07-07",
-    items: [
-      "모든 퍼크 설명란을 정체성 중심의 짧고 명확한 문구로 전면 간소화 (레벨20 풀스킬 장문 설명 삭제)",
-      "최근 버프/너프 태그 위치를 등급 배지 옆으로 이동",
-      "메트로놈 · 심비오트 심화 매커니즘 상세 설명 추가",
-      "방어구/저항력 용어 통일, 대규모 밸런스 패치 반영",
-      "손상/반동/탄퍼짐 마스터 상한 완화 및 서버 사이드 ini 동기화",
-    ],
-  },
-  {
-    date: "2026-07-06",
-    items: [
-      "패시브 수치 표시 회귀 버그 수정, 파이어버그·데몰리션리스트 등급 조정",
-      "매니악 재장전 속도 너프, 갬블러·타이쿤 밸런스 조정",
-    ],
-  },
-  {
-    date: "2026-07-05",
-    items: [
-      "밸런스 오로라(피해량 배율) 수치를 서버 최신값으로 동기화",
-      "ZED타임 연장 계열 스킬 전반 너프",
-      "4개 베이스 퍼크의 Lv15/20 전직 퍼크 슬롯 재배치",
-    ],
-  },
-  {
-    date: "2026-07-04",
-    items: [
-      "초반(1~3웨이브)이 쉽고 11~25웨이브가 밋밋했던 난이도 곡선 개선, 26웨이브 이후 급격한 난이도 상승 완화",
-    ],
-  },
+const EVENT_WAVE_CHANCE = 0.33;
+const EVENT_MIN_WAVE = 5;
+const ASCENSION_EVENTS = [
+  { name: "VIP", weight: 0.20, active: true, description: "VIP를 보호하지 못하면 팀 전체가 사망합니다.", music: "EventMusic_VIP_Cue" },
+  { name: "어몽어스 (Amogus)", weight: 0.30, active: true, description: "플레이어 중 임포스터가 섞여 있으며, 팀을 교란합니다.", music: "EventMusic_Amogus_Cue" },
+  { name: "체인갱 (Chain Gang)", weight: 0.10, active: true, description: "팀원과 멀어지면 피해를 받으므로 함께 움직여야 합니다.", music: "EventMusic_Redacted_Cue" },
+  { name: "숙적 (Nemesis)", weight: 0.25, active: true, description: "선정된 제드 한 종류의 머리와 몸통 체력이 강화되고 붉은 표식이 표시됩니다.", music: "EventMusic_Nemesis_Cue" },
+  { name: "엑스맨 (X-Men)", weight: 0.10, active: true, description: "각 플레이어가 무작위 초능력을 얻습니다.", music: "EventMusic_XMen_Cue" },
+  { name: "경호원 결속 (Bodyguard Bond)", weight: 0.10, active: true, description: "짝과 가까이 있으면 보호받고, 멀어지면 피해가 서로 전달됩니다.", music: "EventMusic_Duel_Cue" },
+  { name: "현상금 게시판 (Bounty Board)", weight: 0.20, active: true, description: "각자의 제드 처치 목표를 모두 완수하면 팀 보상을 받습니다.", music: "EventMusic_Duel_Cue" },
+  { name: "황금 제드 릴레이 (Golden Zed Relay)", weight: 0.15, active: true, description: "황금 제드 처치자는 전리품을 줍지 못하며, 다른 팀원이 회수해야 합니다.", music: "EventMusic_Highlander_Cue" },
+  { name: "Shifting Waves", weight: 0.20, active: true, description: "제드 수가 1.4배가 되고 남은 제드 수 75%·50%·25% 지점에서 동시 출현 한도가 일시적으로 급증합니다.", music: "EventMusic_ShiftingWaves_Cue" },
+  { name: "Transit Horde", weight: 0.20, active: true, description: "진행 중 두 차례 호드가 활성 스폰 지점에서 추가로 쏟아집니다.", music: "EventMusic_RAGE_Cue" },
+  { name: "뜨거운 감자 (Hot Potato)", weight: 0.00, active: false, reason: "INI 0 및 자동 추첨 제외", description: "폭탄이 터지기 전에 다른 플레이어에게 넘겨야 합니다.", music: "EventMusic_CostumeParty_Cue" },
+  { name: "검열 (Redacted)", weight: 0.00, active: false, reason: "INI 가중치 0", description: "HUD 정보를 숨깁니다.", music: "EventMusic_Redacted_Cue" },
+  { name: "결투 (Duel)", weight: 0.00, active: false, reason: "INI 가중치 0", description: "각 플레이어는 지정된 제드 종류에만 피해를 줄 수 있습니다.", music: "EventMusic_Duel_Cue" },
 ];
 
 function el(tag, attrs = {}, children = []) {
@@ -189,7 +126,7 @@ async function init() {
   ADV_BY_KEY = Object.fromEntries(DATA.advancedPerks.map(p => [p.key, p]));
   BASE_BY_KEY = Object.fromEntries(DATA.basePerks.map(p => [p.key, p]));
 
-  document.getElementById("patchNotesBtn").addEventListener("click", showPatchNotes);
+  document.getElementById("eventListBtn").addEventListener("click", showEventList);
 
   renderSidebar();
   renderMainArea();
@@ -214,7 +151,7 @@ function showBaseOverview(key) {
   OPEN_BASE_KEY = key;
   SELECTED_ADV_KEY = null;
   AURORA_VIEW = false;
-  PATCH_NOTES_VIEW = false;
+  EVENT_LIST_VIEW = false;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
@@ -230,7 +167,7 @@ function selectAdv(key) {
   OPEN_BASE_KEY = BASE_BY_KEY[ancestor.parentPerk] ? ancestor.parentPerk : ancestor.key;
   SELECTED_ADV_KEY = key;
   AURORA_VIEW = false;
-  PATCH_NOTES_VIEW = false;
+  EVENT_LIST_VIEW = false;
   renderSidebar();
   renderMainArea();
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
@@ -239,7 +176,7 @@ function selectAdv(key) {
 function showAurora(mode) {
   AURORA_VIEW = true;
   AURORA_MODE = mode;
-  PATCH_NOTES_VIEW = false;
+  EVENT_LIST_VIEW = false;
   OPEN_BASE_KEY = null;
   SELECTED_ADV_KEY = null;
   renderSidebar();
@@ -247,8 +184,8 @@ function showAurora(mode) {
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
 }
 
-function showPatchNotes() {
-  PATCH_NOTES_VIEW = true;
+function showEventList() {
+  EVENT_LIST_VIEW = true;
   AURORA_VIEW = false;
   OPEN_BASE_KEY = null;
   SELECTED_ADV_KEY = null;
@@ -257,24 +194,39 @@ function showPatchNotes() {
   document.getElementById("mainArea").scrollIntoView({ behavior: "instant", block: "start" });
 }
 
-function renderPatchNotesDetail() {
-  const groups = PATCH_NOTES.map(g => `
-    <div class="patch-note-group">
-      <div class="patch-note-date">${g.date}</div>
-      <ul class="strengths">${g.items.map(i => `<li>${escapeHtml(i)}</li>`).join("")}</ul>
-    </div>
-  `).join("");
+function renderEventListDetail() {
+  const activeWeightTotal = ASCENSION_EVENTS.filter(event => event.active).reduce((sum, event) => sum + event.weight, 0);
+  const rows = ASCENSION_EVENTS.map(event => {
+    const poolShare = event.active ? (event.weight / activeWeightTotal) * 100 : 0;
+    const perWaveChance = EVENT_WAVE_CHANCE * poolShare;
+    return `
+      <tr class="event-row ${event.active ? "is-active" : "is-inactive"}">
+        <td><span class="event-status ${event.active ? "active" : "inactive"}">${event.active ? "활성" : "비활성"}</span>${event.reason ? `<span class="event-reason">${escapeHtml(event.reason)}</span>` : ""}</td>
+        <th scope="row">${escapeHtml(event.name)}</th>
+        <td class="event-number">${perWaveChance.toFixed(2)}%</td>
+        <td class="event-number">${poolShare.toFixed(2)}%</td>
+        <td class="event-number">${event.weight.toFixed(2)}</td>
+        <td>${escapeHtml(event.description)}</td>
+        <td><code>${escapeHtml(event.music)}</code></td>
+      </tr>`;
+  }).join("");
   return `
     <div class="detail-header">
-      <div class="ba-icon lg">🧾</div>
+      <div class="ba-icon lg">🎭</div>
       <div class="detail-titles">
-        <h2>패치 노트</h2>
+        <h2>어센션 이벤트 목록</h2>
       </div>
     </div>
     <div class="aurora-note">
-      <div class="aurora-note-main">지금까지의 주요 변경사항을 최신순으로 정리했습니다. 사소한 수치 조정까지 전부 담지는 않았습니다.</div>
+      <div class="aurora-note-main">웨이브 ${EVENT_MIN_WAVE}부터 매 웨이브 ${Math.round(EVENT_WAVE_CHANCE * 100)}% 확률로 이벤트를 판정합니다. 판정에 성공하면 활성 이벤트를 INI 가중치 비율로 하나 선택합니다. 현재 활성 가중치 총합은 ${activeWeightTotal.toFixed(2)}이며, 웨이브당 확률은 2인 이상 기준입니다.</div>
+      <div class="aurora-note-sub">INI 값은 확률 자체가 아니라 상대 가중치입니다. 솔로에서는 다인 전용 이벤트가 추첨 풀에서 빠져 이벤트 간 비율이 달라집니다. 비활성 이벤트는 자동 추첨 확률 0%입니다. 삭제된 과거 이벤트는 현재 카탈로그에 없어 표에서 제외했습니다.</div>
     </div>
-    ${groups}
+    <div class="event-table-wrap">
+      <table class="event-table">
+        <thead><tr><th>상태</th><th>이벤트</th><th>웨이브당 확률</th><th>활성 이벤트 중 비율</th><th>INI 가중치</th><th>간단 설명</th><th>연결 BGM</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
   `;
 }
 
@@ -563,8 +515,8 @@ function renderMainArea() {
   const main = document.getElementById("mainArea");
   main.innerHTML = "";
 
-  if (PATCH_NOTES_VIEW) {
-    main.innerHTML = renderPatchNotesDetail();
+  if (EVENT_LIST_VIEW) {
+    main.innerHTML = renderEventListDetail();
     wireDetailEvents(main);
     return;
   }

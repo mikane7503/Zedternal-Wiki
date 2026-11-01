@@ -1,9 +1,7 @@
-# 위키 KOR 기반 업데이트 기준
+# 위키 작업 지침
 
-퍼크 위키는 사용자가 확정한 KOR 현지화를 기준으로 전체 활성 퍼크와 구매 가능 스킬을 갱신한다. KOR 설명과 이름을 그대로 반영하고, 코드에 맞춰 검증된 수치와 효과를 보존한다.
+2026-11-01 사용자 지시로 이 위치의 이전 위키 규칙을 폐기했다.
+현행 규칙: `C:/Users/yss19/Documents/Projects/zedternal-unlimited-main/Docs/WIKI-UPDATE-PROTOCOL-KO.md`
+변경 대기 기록: `C:/Users/yss19/Documents/Projects/zedternal-unlimited-main/Docs/WIKI-PENDING-CHANGES-KO.md`
 
-퍼크·등급·스킬 아이콘은 프로젝트의 `Tempered_Build/Icons/` 자료 및 SDK UPK의 실제 export에서 적절히 매칭한다. 아이콘 경로와 파일 존재를 확인한다.
-
-전체 데이터 갱신은 `python data/build.py`로 수행하고 `python data/verify_kor_alignment.py` 및 전체 아이콘 경로 검사를 실행한다. 등록·해금 순서, 활성 스킬, 수치와 KOR 문자열을 점검한다. 이전 4단계 퍼크 감사 및 버전별 JSON 감사 파일은 공개 게이트가 아니며 요구하지 않는다.
-
-라이브 위키 배포는 Workshop 릴리스에 종속되지 않는다. 사용자가 위키 갱신을 요청하면 Ascension 코드·KOR·아이콘을 검증한 뒤 GitHub Pages에 게시하고 라이브 화면과 데이터를 확인한다. Workshop ID나 공개 버전은 확인된 값만 기록한다.
+코드 변경 시 변경 부분만 기록한다. 위키 수정 요청 시 기록된 부분과 요청 범위만 반영하고 Vercel 배포한다. 현재 HTML/CSS·위키 형식·다섯 항목 구성을 유지하며 긴 검증 절차를 추가하지 않는다.
