@@ -73,7 +73,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "최대 체력",
+     "key": "HealthFlat",
+     "value": 5.0,
+     "baseValue": 0,
+     "unit": "HP",
+     "display": "+5HP",
+     "levelValues": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      90.0,
+      95.0,
+      100.0
+     ]
+    },
+    {
+     "label": "근접 공격·연사 속도",
+     "key": "AttackSpeed",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    },
+    {
+     "label": "버서커 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -330,7 +421,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "ZED 타임 연장 횟수",
+     "key": "ZedTimeResets",
+     "value": 0,
+     "baseValue": 0,
+     "unit": "회",
+     "display": "2레벨마다 +1회 (최대 6회)",
+     "levelValues": [
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+     ]
+    },
+    {
+     "label": "재장전 속도",
+     "key": "ReloadRate",
+     "value": 1.5,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+1.5%",
+     "levelValues": [
+      1.5,
+      3.0,
+      4.5,
+      6.0,
+      7.5,
+      9.0,
+      10.5,
+      12.0,
+      13.5,
+      15.0,
+      16.5,
+      18.0,
+      19.5,
+      21.0,
+      22.5,
+      24.0,
+      25.5,
+      27.0,
+      28.5,
+      30.0
+     ]
+    },
+    {
+     "label": "코만도 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -569,7 +751,68 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "수류탄 피해",
+     "key": "GrenadeDamage",
+     "value": 5.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+5%",
+     "levelValues": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      90.0,
+      95.0,
+      100.0
+     ]
+    },
+    {
+     "label": "데몰리셔니스트 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -826,7 +1069,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "최대 체력",
+     "key": "Health",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "HP",
+     "display": "+2HP",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    },
+    {
+     "label": "주사기·다트 충전 속도",
+     "key": "HealRate",
+     "value": 3.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+3%",
+     "levelValues": [
+      3.0,
+      6.0,
+      9.0,
+      12.0,
+      15.0,
+      18.0,
+      21.0,
+      24.0,
+      27.0,
+      30.0,
+      33.0,
+      36.0,
+      39.0,
+      42.0,
+      45.0,
+      48.0,
+      51.0,
+      54.0,
+      57.0,
+      60.0
+     ]
+    },
+    {
+     "label": "모든 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -1095,7 +1429,68 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "화염·폭발·독·음파 저항",
+     "key": "Defense",
+     "value": 1.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+1%",
+     "levelValues": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0,
+      12.0,
+      13.0,
+      14.0,
+      15.0,
+      16.0,
+      17.0,
+      18.0,
+      19.0,
+      20.0
+     ]
+    },
+    {
+     "label": "파이어버그 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -1299,7 +1694,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "이동 속도",
+     "key": "MoveSpeed",
+     "value": 1.5,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+1.5%",
+     "levelValues": [
+      1.5,
+      3.0,
+      4.5,
+      6.0,
+      7.5,
+      9.0,
+      10.5,
+      12.0,
+      13.5,
+      15.0,
+      16.5,
+      18.0,
+      19.5,
+      21.0,
+      22.5,
+      24.0,
+      25.5,
+      27.0,
+      28.5,
+      30.0
+     ]
+    },
+    {
+     "label": "헤드샷 피해",
+     "key": "HeadshotDamage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    },
+    {
+     "label": "건슬링거 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -1526,7 +2012,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "최대 방어구",
+     "key": "Armor",
+     "value": 5.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+5%",
+     "levelValues": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      90.0,
+      95.0,
+      100.0
+     ]
+    },
+    {
+     "label": "탄창 용량",
+     "key": "MagSize",
+     "value": 5.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+5%",
+     "levelValues": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      90.0,
+      95.0,
+      100.0
+     ]
+    },
+    {
+     "label": "SWAT 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -1783,7 +2360,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "반동 감소",
+     "key": "Recoil",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    },
+    {
+     "label": "헤드샷 피해",
+     "key": "DamageHead",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    },
+    {
+     "label": "샤프슈터 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -1995,7 +2663,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "비틀거림·넉다운 위력",
+     "key": "StoppingPower",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    },
+    {
+     "label": "관통력",
+     "key": "Penetration",
+     "value": 10.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+10%",
+     "levelValues": [
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      60.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0,
+      110.0,
+      120.0,
+      130.0,
+      140.0,
+      150.0,
+      160.0,
+      170.0,
+      180.0,
+      190.0,
+      200.0
+     ]
+    },
+    {
+     "label": "서포트 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -2233,7 +2992,98 @@
     }
    ],
    "capstoneDescriptions": [],
-   "passiveStats": [],
+   "passiveStats": [
+    {
+     "label": "휴대 중량",
+     "key": "WeightPerLevel",
+     "value": 1.0,
+     "baseValue": 0,
+     "unit": "",
+     "display": "+1",
+     "levelValues": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      9.0,
+      10.0,
+      11.0,
+      12.0,
+      13.0,
+      14.0,
+      15.0,
+      16.0,
+      17.0,
+      18.0,
+      19.0,
+      20.0
+     ]
+    },
+    {
+     "label": "예비 탄약",
+     "key": "SpareAmmo",
+     "value": 5.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+5%",
+     "levelValues": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0,
+      65.0,
+      70.0,
+      75.0,
+      80.0,
+      85.0,
+      90.0,
+      95.0,
+      100.0
+     ]
+    },
+    {
+     "label": "모든 무기 피해",
+     "key": "Damage",
+     "value": 2.0,
+     "baseValue": 0,
+     "unit": "%",
+     "display": "+2%",
+     "levelValues": [
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+     ]
+    }
+   ],
    "fixedStats": [],
    "skills": [
     {
@@ -6843,7 +7693,7 @@
     {
      "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다.",
      "text": "[20레벨 캡스톤] 끝없는 공세: ZED 타임 동안 일반 시간의 약 50% 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 2초씩 제한 없이 늘어납니다.",
-     "isCapstone": false,
+     "isCapstone": true,
      "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다."
     },
     {
@@ -6883,12 +7733,6 @@
      ]
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다.",
-     "text": "[20레벨 캡스톤] 끝없는 공세: ZED 타임 동안 일반 시간의 약 50% 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 2초씩 제한 없이 늘어납니다.",
-     "isCapstone": false,
-     "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다."
-    },
-    {
      "raw": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
      "text": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
      "isCapstone": false,
@@ -6925,12 +7769,6 @@
      ]
     },
     {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다.",
-     "text": "[20레벨 캡스톤] 끝없는 공세: ZED 타임 동안 일반 시간의 약 50% 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 2초씩 제한 없이 늘어납니다.",
-     "isCapstone": false,
-     "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다."
-    },
-    {
      "raw": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
      "text": "모든 무기에 적용됩니다. 영구 훈련 보상은 이번 판 동안 유지되며 사망해도 사라지지 않습니다. 쇠약은 제드마다 가장 강한 효과 하나만 적용되고 해당 제드가 죽을 때까지 팀 전체에 적용됩니다.",
      "isCapstone": false,
@@ -6943,6 +7781,12 @@
      "text": "[10레벨 캡스톤] 제압 사격: 중보스를 타격하면 즉시 이동속도가 25% 감소합니다. 마지막 타격 1초 후 해제됩니다. 보스는 제외합니다.",
      "isCapstone": true,
      "displayRaw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">제압 사격</font>: 중보스를 타격하면 즉시 이동속도가 <font color=\"#77D914\">25%</font> 감소합니다. 마지막 타격 <font color=\"#77D914\">1초</font> 후 해제됩니다. 보스는 제외합니다."
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다.",
+     "text": "[20레벨 캡스톤] 끝없는 공세: ZED 타임 동안 일반 시간의 약 50% 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 2초씩 제한 없이 늘어납니다.",
+     "isCapstone": true,
+     "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">끝없는 공세</font>: ZED 타임 동안 일반 시간의 약 <font color=\"#77D914\">50%</font> 속도로 이동하고 사격합니다. 기존 ZED 타임 연장 횟수를 모두 사용한 뒤부터 본인이 제드를 처치할 때마다 남은 시간이 <font color=\"#77D914\">2초</font>씩 제한 없이 늘어납니다."
     }
    ],
    "passiveStats": [],
@@ -14649,7 +15493,7 @@
     {
      "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다.",
      "text": "[20레벨 캡스톤] 20레벨 — 끊임없는 사격: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 30%(총 50%) 증가합니다. M14 EBR·FN FAL의 반동이 50% 감소하고 총탄 피해가 20% 추가로 증가합니다.",
-     "isCapstone": false,
+     "isCapstone": true,
      "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다."
     }
    ],
@@ -14737,12 +15581,6 @@
       "모든 무기의 관통력이 레벨당 <font color=\"#77D914\">95%</font> 증가합니다.",
       "모든 무기의 관통력이 레벨당 <font color=\"#77D914\">100%</font> 증가합니다."
      ]
-    },
-    {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다.",
-     "text": "[20레벨 캡스톤] 20레벨 — 끊임없는 사격: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 30%(총 50%) 증가합니다. M14 EBR·FN FAL의 반동이 50% 감소하고 총탄 피해가 20% 추가로 증가합니다.",
-     "isCapstone": false,
-     "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다."
     }
    ],
    "passiveDescriptions": [
@@ -14829,12 +15667,6 @@
       "모든 무기의 관통력이 레벨당 <font color=\"#77D914\">95%</font> 증가합니다.",
       "모든 무기의 관통력이 레벨당 <font color=\"#77D914\">100%</font> 증가합니다."
      ]
-    },
-    {
-     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다.",
-     "text": "[20레벨 캡스톤] 20레벨 — 끊임없는 사격: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 30%(총 50%) 증가합니다. M14 EBR·FN FAL의 반동이 50% 감소하고 총탄 피해가 20% 추가로 증가합니다.",
-     "isCapstone": false,
-     "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다."
     }
    ],
    "capstoneDescriptions": [
@@ -14843,6 +15675,12 @@
      "text": "[10레벨 캡스톤] 10레벨 — DMR 전문가: M14 EBR·FN FAL의 총탄 피해가 50%, 탄창 최대 용량이 10발, 예비 탄약 용량이 20% 증가합니다. M14 EBR의 발사 속도가 20% 증가합니다.",
      "isCapstone": true,
      "displayRaw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font> <font color=\"#DC143C\">10레벨 — <font color=\"#DC143C\">DMR 전문가</font></font>: M14 EBR·FN FAL의 총탄 피해가 <font color=\"#77D914\">50%</font>, 탄창 최대 용량이 10발, 예비 탄약 용량이 <font color=\"#77D914\">20%</font> 증가합니다. M14 EBR의 발사 속도가 <font color=\"#77D914\">20%</font> 증가합니다."
+    },
+    {
+     "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다.",
+     "text": "[20레벨 캡스톤] 20레벨 — 끊임없는 사격: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 30%(총 50%) 증가합니다. M14 EBR·FN FAL의 반동이 50% 감소하고 총탄 피해가 20% 추가로 증가합니다.",
+     "isCapstone": true,
+     "displayRaw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#DC143C\">20레벨 — <font color=\"#DC143C\">끊임없는 사격</font></font>: 발사 버튼을 누르고 있으면 M14 EBR이 자동사격하며 발사 속도가 추가로 <font color=\"#77D914\">30%</font>(총 <font color=\"#77D914\">50%</font>) 증가합니다. M14 EBR·FN FAL의 반동이 <font color=\"#77D914\">50%</font> 감소하고 총탄 피해가 <font color=\"#77D914\">20%</font> 추가로 증가합니다."
     }
    ],
    "passiveStats": [],
@@ -16287,10 +17125,10 @@
      ]
     },
     {
-     "raw": "숙련은 <font color=\"#77D914\">1레벨</font>부터 시작합니다. 서포트 무기로 <font color=\"#77D914\">50회</font> 처치할 때마다 숙련도 1단계를 얻고, 단계마다 피해가 <font color=\"#77D914\">+0.8%</font> 증가합니다. 숙련 상한은 기술자 레벨당 <font color=\"#77D914\">5단계</font>입니다. <font color=\"#77D914\">10레벨</font>부터는 숙련도 <font color=\"#77D914\">10단계</font>마다 관통력 <font color=\"#77D914\">+5%</font>, 재장전 속도 <font color=\"#77D914\">+2%</font>도 얻습니다.",
+     "raw": "숙련은 <font color=\"#77D914\">1레벨</font>부터 시작합니다. 서포트 무기로 <font color=\"#77D914\">50회</font> 처치할 때마다 숙련도 1단계를 얻고, 단계마다 피해가 <font color=\"#77D914\">+0.8%</font> 증가합니다. 숙련 상한은 기술자 레벨당 <font color=\"#77D914\">5단계</font>입니다. ",
      "text": "숙련은 1레벨부터 시작합니다. 서포트 무기로 50회 처치할 때마다 숙련도 1단계를 얻고, 단계마다 피해가 +0.8% 증가합니다. 숙련 상한은 기술자 레벨당 5단계입니다. 10레벨부터는 숙련도 10단계마다 관통력 +5%, 재장전 속도 +2%도 얻습니다.",
      "isCapstone": false,
-     "displayRaw": "숙련은 <font color=\"#77D914\">1레벨</font>부터 시작합니다. 서포트 무기로 <font color=\"#77D914\">50회</font> 처치할 때마다 숙련도 1단계를 얻고, 단계마다 피해가 <font color=\"#77D914\">+0.8%</font> 증가합니다. 숙련 상한은 기술자 레벨당 <font color=\"#77D914\">5단계</font>입니다. <font color=\"#77D914\">10레벨</font>부터는 숙련도 <font color=\"#77D914\">10단계</font>마다 관통력 <font color=\"#77D914\">+5%</font>, 재장전 속도 <font color=\"#77D914\">+2%</font>도 얻습니다."
+     "displayRaw": "숙련은 <font color=\"#77D914\">1레벨</font>부터 시작합니다. 서포트 무기로 <font color=\"#77D914\">50회</font> 처치할 때마다 숙련도 1단계를 얻고, 단계마다 피해가 <font color=\"#77D914\">+0.8%</font> 증가합니다. 숙련 상한은 기술자 레벨당 <font color=\"#77D914\">5단계</font>입니다. "
     },
     {
      "raw": "숙련도는 이번 게임 동안 서포트 무기 종류별로 기록되며 무기 교체와 사망 후에도 유지됩니다. 일반형과 프레셔스형은 같은 기록을 공유합니다. 다른 무기에는 적용되지 않으며 현재 상한을 넘긴 처치는 저장되지 않습니다.",
@@ -16300,6 +17138,11 @@
     }
    ],
    "capstoneDescriptions": [
+    {
+     "raw": "10레벨부터는 숙련도 <font color=\"#77D914\">10단계</font>마다 관통력 <font color=\"#77D914\">+5%</font>, 재장전 속도 <font color=\"#77D914\">+2%</font>도 얻습니다.",
+     "displayRaw": "10레벨부터는 숙련도 <font color=\"#77D914\">10단계</font>마다 관통력 <font color=\"#77D914\">+5%</font>, 재장전 속도 <font color=\"#77D914\">+2%</font>도 얻습니다.",
+     "isCapstone": true
+    },
     {
      "raw": "<font color=\"#C77DFF\">[20레벨 캡스톤]</font> <font color=\"#77D914\">20레벨</font> - <font color=\"#DC143C\">걸작</font>: 현재 숙련도를 유지하며 상한을 <font color=\"#77D914\">100단계</font>로 확장합니다. 단계마다 피해 <font color=\"#77D914\">+1.2%</font>, 관통력 <font color=\"#77D914\">+1%</font>를 얻고, 10레벨의 재장전 보너스도 유지됩니다. 숙련도 10단계마다 탄창 용량 +1발, 휴대 탄약 +3발을 얻습니다. 100단계에서 피해 <font color=\"#77D914\">+120%</font>, 관통력 <font color=\"#77D914\">+100%</font>, 재장전 속도 <font color=\"#77D914\">+20%</font>, 탄창 +10발, 휴대 탄약 +30발입니다.",
      "text": "[20레벨 캡스톤] 20레벨 - 걸작: 현재 숙련도를 유지하며 상한을 100단계로 확장합니다. 단계마다 피해 +1.2%, 관통력 +1%를 얻고, 10레벨의 재장전 보너스도 유지됩니다. 숙련도 10단계마다 탄창 용량 +1발, 휴대 탄약 +3발을 얻습니다. 100단계에서 피해 +120%, 관통력 +100%, 재장전 속도 +20%, 탄창 +10발, 휴대 탄약 +30발입니다.",
@@ -16512,8 +17355,30 @@
     {
      "raw": "최대 방어구 <font color=\"#77D914\">+%x%%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
      "text": "최대 방어구 +%x%% 요새 대형: (최대 +40%)이며 캡스톤 방어구 보너스에 추가됩니다.",
-     "isCapstone": true,
-     "displayRaw": "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다."
+     "isCapstone": false,
+     "displayRaw": "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+     "levelValues": [
+      "최대 방어구 <font color=\"#77D914\">+2%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+4%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+6%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+8%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+10%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+12%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+14%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+16%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+18%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+20%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+22%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+24%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+26%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+28%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+30%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+32%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+34%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+36%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+38%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다."
+     ]
     },
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">강화 진형</font>: 최대 방어구가 <font color=\"#77D914\">50%</font> 증가합니다. 방어구가 남아 있으면 받는 피해가 <font color=\"#77D914\">40%</font> 감소합니다.",
@@ -16620,6 +17485,34 @@
      ]
     },
     {
+     "raw": "최대 방어구 <font color=\"#77D914\">+%x%%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+     "text": "최대 방어구 +%x%% 요새 대형: (최대 +40%)이며 캡스톤 방어구 보너스에 추가됩니다.",
+     "isCapstone": false,
+     "displayRaw": "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+     "levelValues": [
+      "최대 방어구 <font color=\"#77D914\">+2%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+4%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+6%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+8%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+10%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+12%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+14%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+16%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+18%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+20%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+22%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+24%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+26%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+28%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+30%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+32%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+34%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+36%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+38%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다."
+     ]
+    },
+    {
      "raw": "서포터 <font color=\"#77D914\">10</font>레벨에 해금되며, 뱅가드의 최대 레벨은 <font color=\"#77D914\">20</font>입니다. 무기 효과는 서포트 무기의 사격에만 적용되며 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
      "text": "서포터 10레벨에 해금되며, 뱅가드의 최대 레벨은 20입니다. 무기 효과는 서포트 무기의 사격에만 적용되며 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
      "isCapstone": false,
@@ -16712,6 +17605,34 @@
      ]
     },
     {
+     "raw": "최대 방어구 <font color=\"#77D914\">+%x%%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+     "text": "최대 방어구 +%x%% 요새 대형: (최대 +40%)이며 캡스톤 방어구 보너스에 추가됩니다.",
+     "isCapstone": false,
+     "displayRaw": "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+     "levelValues": [
+      "최대 방어구 <font color=\"#77D914\">+2%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+4%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+6%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+8%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+10%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+12%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+14%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+16%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+18%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+20%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+22%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+24%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+26%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+28%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+30%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+32%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+34%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+36%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+38%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
+      "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다."
+     ]
+    },
+    {
      "raw": "서포터 <font color=\"#77D914\">10</font>레벨에 해금되며, 뱅가드의 최대 레벨은 <font color=\"#77D914\">20</font>입니다. 무기 효과는 서포트 무기의 사격에만 적용되며 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
      "text": "서포터 10레벨에 해금되며, 뱅가드의 최대 레벨은 20입니다. 무기 효과는 서포트 무기의 사격에만 적용되며 무기 강타에는 적용되지 않습니다. 체력과 방어구 보너스는 기본값을 기준으로 합니다.",
      "isCapstone": false,
@@ -16719,12 +17640,6 @@
     }
    ],
    "capstoneDescriptions": [
-    {
-     "raw": "최대 방어구 <font color=\"#77D914\">+%x%%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다.",
-     "text": "최대 방어구 +%x%% 요새 대형: (최대 +40%)이며 캡스톤 방어구 보너스에 추가됩니다.",
-     "isCapstone": true,
-     "displayRaw": "최대 방어구 <font color=\"#77D914\">+40%</font> <font color=\"#DC143C\">요새 대형</font>: (최대 <font color=\"#77D914\">+40%</font>)이며 캡스톤 방어구 보너스에 추가됩니다."
-    },
     {
      "raw": "<font color=\"#C77DFF\">[10레벨 캡스톤]</font>  <font color=\"#DC143C\">강화 진형</font>: 최대 방어구가 <font color=\"#77D914\">50%</font> 증가합니다. 방어구가 남아 있으면 받는 피해가 <font color=\"#77D914\">40%</font> 감소합니다.",
      "text": "[10레벨 캡스톤]  강화 진형: 최대 방어구가 50% 증가합니다. 방어구가 남아 있으면 받는 피해가 40% 감소합니다.",
@@ -18949,6 +19864,99 @@
    "rankIcons": [],
    "extraSections": [],
    "noCapstoneNote": null
+  },
+  {
+   "key": "WaveGambler",
+   "name": "도박꾼",
+   "className": "ZTUpgrade_Perk_WaveGambler",
+   "parentPerk": "Capitalist",
+   "unlockLevel": 5,
+   "unlockRequirements": [
+    {
+     "perk": "Capitalist",
+     "level": 5
+    }
+   ],
+   "isCombinationUnlocked": false,
+   "isStatic": false,
+   "maxLevel": 20,
+   "summary": "웨이브마다 보유 도쉬를 걸고 큰 보상을 노리는 도박 퍼크",
+   "descriptions": [
+    {
+     "raw": "<font color=\"#77D914\">1레벨</font>부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "text": "1레벨부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "잭팟도박: 현재 도쉬의 <font color=\"#77D914\">100%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">50%</font>를 잃습니다.",
+     "text": "잭팟도박: 현재 도쉬의 100%를 추가로 얻거나, 실패하면 50%를 잃습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "도박: 현재 도쉬의 <font color=\"#77D914\">15%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">15%</font>를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "text": "도박: 현재 도쉬의 15%를 추가로 얻거나, 실패하면 15%를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 <font color=\"#77D914\">20레벨</font>. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "text": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 20레벨. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "isCapstone": false
+    }
+   ],
+   "passiveStats": [],
+   "fixedStats": [],
+   "skills": [],
+   "skillCount": 0,
+   "icon": "icons/wavegambler.png",
+   "rankIcons": [],
+   "extraSections": [],
+   "passiveDescriptions": [
+    {
+     "raw": "<font color=\"#77D914\">1레벨</font>부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "text": "1레벨부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "잭팟도박: 현재 도쉬의 <font color=\"#77D914\">100%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">50%</font>를 잃습니다.",
+     "text": "잭팟도박: 현재 도쉬의 100%를 추가로 얻거나, 실패하면 50%를 잃습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "도박: 현재 도쉬의 <font color=\"#77D914\">15%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">15%</font>를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "text": "도박: 현재 도쉬의 15%를 추가로 얻거나, 실패하면 15%를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 <font color=\"#77D914\">20레벨</font>. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "text": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 20레벨. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "isCapstone": false
+    }
+   ],
+   "capstoneDescriptions": [],
+   "noCapstoneNote": "별도 캡스톤 효과가 없습니다.",
+   "overviewDescriptions": [
+    {
+     "raw": "<font color=\"#77D914\">1레벨</font>부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "text": "1레벨부터 매 웨이브 완료 후 상점 시간에 잭팟도박, 도박, 스킵 중 하나를 선택합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "잭팟도박: 현재 도쉬의 <font color=\"#77D914\">100%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">50%</font>를 잃습니다.",
+     "text": "잭팟도박: 현재 도쉬의 100%를 추가로 얻거나, 실패하면 50%를 잃습니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "도박: 현재 도쉬의 <font color=\"#77D914\">15%</font>를 추가로 얻거나, 실패하면 <font color=\"#FF6666\">15%</font>를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "text": "도박: 현재 도쉬의 15%를 추가로 얻거나, 실패하면 15%를 잃습니다. 스킵은 도쉬를 유지합니다.",
+     "isCapstone": false
+    },
+    {
+     "raw": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 <font color=\"#77D914\">20레벨</font>. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "text": "레벨이 높아질수록 성공 확률이 증가합니다. 별도의 스탯 보너스는 없습니다. 최대 20레벨. 다음 웨이브 시작까지 선택하지 않으면 스킵합니다.",
+     "isCapstone": false
+    }
+   ],
+   "role": "웨이브마다 보유 도쉬를 걸고 큰 보상을 노리는 도박 퍼크"
   }
  ],
  "aurora": {
@@ -19225,7 +20233,7 @@
  },
  "meta": {
   "basePerkCount": 10,
-  "advancedPerkCount": 49,
+  "advancedPerkCount": 50,
   "totalSkills": 456,
   "release": {
    "version": "10.28.4",

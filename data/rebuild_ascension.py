@@ -74,7 +74,7 @@ for oldcls,newcls in re.findall(r'MigratePerkName\("(\w+)"\s*,\s*"(\w+)"',system
  if oldcls in active:active[newcls]=active.pop(oldcls)
 active.pop('ZTUpgrade_Perk_Daredevil',None)
 for cls,static in re.findall(r'EnsurePerk\("[^".]+\.(\w+)"\s*,\s*(true|false)',systems,re.I):active[cls]=static.lower()=='true'
-for cls in ['ZTUpgrade_Perk_Override','ZTUpgrade_Perk_Armageddon','ZTUpgrade_Perk_Gilgamesh','ZTUpgrade_Perk_Gabriel','ZTUpgrade_Perk_Michael','ZTUpgrade_Perk_Ophanim']:active.setdefault(cls,False)
+for cls in ['ZTUpgrade_Perk_WaveGambler','ZTUpgrade_Perk_Override','ZTUpgrade_Perk_Armageddon','ZTUpgrade_Perk_Gilgamesh','ZTUpgrade_Perk_Gabriel','ZTUpgrade_Perk_Michael','ZTUpgrade_Perk_Ophanim']:active.setdefault(cls,False)
 retired={'Agony','Parasite','Hivemind','Symbiote','Wishmaster','Domain','Possessor','Speedster','Fastball','Goalkeeper','Gambler','Tycoon'}
 active={c:v for c,v in active.items() if c in SRC and key(c) not in retired and field(c,'bContentReady','true').lower()!='false'}
 maxlevels={key(c.split('.')[-1]):int(n) for c,n in re.findall(r'PerkMaxLevels=\(PerkPath="([^"]+)",MaxLevel=(\d+)',main)}

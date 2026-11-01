@@ -222,7 +222,12 @@ function showBaseOverview(key) {
 
 function selectAdv(key) {
   const adv = ADV_BY_KEY[key];
-  OPEN_BASE_KEY = adv.parentPerk;
+  let ancestor = adv;
+  const seen = new Set();
+  while (ADV_BY_KEY[ancestor.parentPerk] && !seen.has(ancestor.key)) {
+    seen.add(ancestor.key); ancestor = ADV_BY_KEY[ancestor.parentPerk];
+  }
+  OPEN_BASE_KEY = BASE_BY_KEY[ancestor.parentPerk] ? ancestor.parentPerk : ancestor.key;
   SELECTED_ADV_KEY = key;
   AURORA_VIEW = false;
   PATCH_NOTES_VIEW = false;
@@ -418,13 +423,19 @@ function renderSidebar() {
     item.appendChild(header);
 
     const body = el("div", { class: "accordion-body" });
-    const descendants = [...children];
-    for (let i = 0; i < descendants.length; i++) {
-      const parent = descendants[i];
-      for (const child of DATA.advancedPerks.filter(p => p.parentPerk === parent.perk && !isCombinationUnlocked(p))) {
-        if (!descendants.some(p => p.perk === child.key)) descendants.push({perk: child.key, level: child.unlockLevel, perkData: child, branchParent: parent.perkData.name});
+    const descendants = [];
+    const visited = new Set();
+    function appendBranch(entries, depth = 0) {
+      for (const entry of entries) {
+        if (visited.has(entry.perk) || !entry.perkData) continue;
+        visited.add(entry.perk); descendants.push({...entry, depth});
+        const branches = DATA.advancedPerks.filter(p => p.parentPerk === entry.perk && !isCombinationUnlocked(p))
+          .sort((a,b) => (a.unlockLevel || 0) - (b.unlockLevel || 0))
+          .map(p => ({perk:p.key,level:p.unlockLevel,perkData:p,branchParent:entry.perkData.name}));
+        appendBranch(branches, depth + 1);
       }
     }
+    appendBranch(children);
     for (const u of descendants) {
       const adv = u.perkData;
       if (!adv) continue;
@@ -436,6 +447,7 @@ function renderSidebar() {
         el("span", { class: "lvl", text: u.branchParent ? `${u.branchParent} Lv${u.level}` : `Lv${u.level}` }),
         el("span", { class: "name", text: adv.name }),
       ]);
+      if (u.depth) { row.style.marginLeft = `${u.depth * 16}px`; row.dataset.branchParent = adv.parentPerk; }
       if (adv.grade) row.appendChild(el("span", { class: "grade-badge-wrap", html: gradeBadge(adv.grade) }));
       row.addEventListener("click", (e) => { e.stopPropagation(); selectAdv(adv.key); });
       body.appendChild(row);
@@ -734,7 +746,7 @@ function renderPassiveSection(perk) {
   const descriptions = perk.passiveDescriptions || [];
   const maxLevel = perk.maxLevel || 20;
   const levelDescriptions = descriptions.some(d => d.levelValues);
-  const levelControl = levelDescriptions ? `<div class="level-slider-row"><label for="levelSlider">퍼크 레벨</label><input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}"><span id="lvlValLabel">Lv ${maxLevel}</span></div>` : "";
+  const levelControl = levelDescriptions && !stats.length ? `<div class="level-slider-row"><label for="levelSlider">퍼크 레벨</label><input id="levelSlider" type="range" min="1" max="${maxLevel}" value="${maxLevel}"><span id="lvlValLabel">Lv ${maxLevel}</span></div>` : "";
   return `
     <div class="section-title perk-section-title">2. 패시브</div><div class="tree-hint">슬라이더로 선택한 퍼크 레벨의 효과를 비교할 수 있습니다.</div>
     ${levelControl}${stats.length ? renderSliderSection(stats, maxLevel, perk.valueSourceNote || "") : descriptions.map(description => `<div class="desc-line" ${description.levelValues ? `data-level-values="${escapeHtml(JSON.stringify(description.levelValues))}"` : ""}>${description.displayRaw || description.raw || escapeHtml(description.text || "")}</div>`).join("") || renderSliderSection(stats, maxLevel, perk.valueSourceNote || "")}
@@ -803,7 +815,7 @@ function renderSliderSection(passiveStats, maxLevel, sourceNote = "") {
   if (!passiveStats.length) return '<div class="empty-state" style="padding:10px">등록된 패시브 수치 없음</div>';
   const rows = passiveStats.map(s => {
     const signClass = s.value < 0 ? "stat-neg" : s.value > 0 ? "stat-pos" : "";
-    return `<tr data-perlevel="${s.value}" data-base="${s.baseValue || 0}" data-cap-level="${s.capstoneLevelBonus || 0}" data-cap-bonus="${s.capstoneBonus || 0}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(statTotal(s, maxLevel), s.unit)}</td></tr>`;
+    return `<tr data-stat-level-values="${escapeHtml(JSON.stringify(s.levelValues || []))}" data-perlevel="${s.value}" data-base="${s.baseValue || 0}" data-cap-level="${s.capstoneLevelBonus || 0}" data-cap-bonus="${s.capstoneBonus || 0}" data-unit="${s.unit}"><td>${escapeHtml(s.label)}</td><td class="${signClass}">${s.display}</td><td class="live-val ${signClass}">${formatByUnit(statTotal(s, maxLevel), s.unit)}</td></tr>`;
   }).join("");
   return `
     <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px">레벨 슬라이더에서 선택한 단계의 누적 수치를 표시합니다. ${sourceNote ? escapeHtml(sourceNote) : "수치는 마지막 공개 빌드의 기본 INI와 퍼크 구현 기준입니다."}</div>
@@ -833,12 +845,13 @@ function onLevelSlide(e) {
   }
   document.querySelectorAll("#mainArea table tr[data-perlevel]").forEach(row => {
     const perLevel = Number(row.dataset.perlevel);
-    const value = statTotal({value: perLevel, baseValue: Number(row.dataset.base || 0), capstoneLevelBonus: Number(row.dataset.capLevel || 0), capstoneBonus: Number(row.dataset.capBonus || 0)}, lvl);
+    const value = statTotal({levelValues: JSON.parse(row.dataset.statLevelValues || "[]"), value: perLevel, baseValue: Number(row.dataset.base || 0), capstoneLevelBonus: Number(row.dataset.capLevel || 0), capstoneBonus: Number(row.dataset.capBonus || 0)}, lvl);
     row.querySelector(".live-val").textContent = formatByUnit(value, row.dataset.unit);
   });
 }
 
 function statTotal(stat, level) {
+  if (stat.levelValues && stat.levelValues.length) return stat.levelValues[level - 1];
   return (stat.baseValue || 0) + stat.value * level + (stat.capstoneLevelBonus && level >= stat.capstoneLevelBonus ? stat.capstoneBonus || 0 : 0);
 }
 
